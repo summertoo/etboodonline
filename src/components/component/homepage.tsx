@@ -15,17 +15,20 @@ export function Homepage() {
       // "https://detask.walrus.site",
       // "https://lyy.walrus.site",
       // "https://etboodbooks.walrus.site",
-      "comingsoon",
-      "comingsoon",
-      "comingsoon",
-      "https://write3.walrus.site/",
+      "comingsoon!",
+      "comingsoon!",
+      "comingsoon!",
+      "https://write.wal.app/",
+      "comingsoon!",
+      "https://www.etboodonline.com/dyj/",
+
       // 添加更多的 URL 到数组中
     ];
 
     // 根据参数选择要跳转的 URL
     const selectedUrl = urls[param];
 
-    if (selectedUrl != "comingsoon") {
+    if (selectedUrl != "comingsoon!") {
       window.location.href = selectedUrl;
     } else {
       // 处理参数无效或无对应 URL 的情况
@@ -36,7 +39,7 @@ export function Homepage() {
   function handleCkContactNow() {
     // window.location.href = 'mailto:etbood@gmail.com';
     // window.open('mailto:etbood@gmail.com');
-    alert("mailto:etbood@gmail.com")
+    alert("etbood@gmail.com")
   }
 
   function handleCkContactNow2() {
@@ -48,7 +51,7 @@ export function Homepage() {
   return (
     <div className="max-w-7xl mx-auto px-4">
       <header className="py-6 flex justify-between items-center bg-white text-black">
-        <h1 className="text-3xl font-bold">最典科技 ZD Tech </h1>
+        <h1 className="text-3xl font-bold">Write ZD Tech </h1>
         <nav>
           <ul className="flex space-x-4">
             <li>
@@ -146,6 +149,13 @@ export function Homepage() {
           Games&Apps and Others.
         </p>
         <div className="grid grid-cols-2 gap-8">
+          <Card className="border-black hover:bg-blue-200" >
+            <CardContent className="p-5 nowColor" onClick={() => handleClick(5)}>
+              <PieChartIcon className="text-black h-8 w-8" />
+              <h4 className="font-semibold text-lg text-black">Legion Management</h4>
+              <p>Game Legion Management</p>
+            </CardContent>
+          </Card>
           <Card className="border-black hover:bg-blue-200">
             <CardContent className="p-5 nowColor" onClick={() => handleClick(0)}>
               <BriefcaseIcon className="text-black h-8 w-8" />
@@ -174,6 +184,14 @@ export function Homepage() {
               <p>A platform for novel authors to upload novels</p>
             </CardContent>
           </Card>
+          <Card className="border-black hover:bg-blue-200" >
+            <CardContent className="p-5 nowColor" onClick={() => handleClick(4)}>
+              <PieChartIcon className="text-black h-8 w-8" />
+              <h4 className="font-semibold text-lg text-black">Creator</h4>
+              <p>Creator</p>
+            </CardContent>
+          </Card>
+
         </div>
       </section>
       <section className="py-20">
@@ -213,7 +231,7 @@ export function Homepage() {
         <h3 className="text-3xl font-bold text-center text-black mb-6">Subscribe Newsletter</h3>
         <div className="flex justify-center">
           <Input className="mr-4" placeholder="Enter your email address..." type="email" />
-          <Button className="bg-black text-white" onClick={() => handleCkContactNow2()}>
+          <Button className="bg-black text-white" onClick={() => handleCkContactNow()}>
             Contact Now
           </Button>
         </div>
@@ -254,7 +272,7 @@ export function Homepage() {
           </div>
         </div>
         <div className="text-center mt-8">
-          <p className="text-black">Copyright © 2024 ZD tech</p>
+          <p className="text-black">Copyright © 2025 ZD tech</p>
         </div>
       </footer>
     </div>
