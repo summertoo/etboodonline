@@ -38,9 +38,9 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Hello!Book",
-    description: "Hello!Book is a novel website in the form of dAapp, which gathers interactive novels created by combining AI or live action",
-    liveUrl: "comingsoon!",
+    title: "DeTask",
+    description: "A platform for creators to manage their tasks and collaborate with others.",
+    liveUrl: "https://detask.etboodonline.com/",
     githubUrl: "", // 假设的GitHub链接，实际项目中请替换为正确的链接
     icon: "smartphone"
   },
@@ -54,9 +54,9 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Creator",
-    description: "Creator",
-    liveUrl: "comingsoon!",
+    title: "Hand Battle",
+    description: "A game where players can battle with their hands.",
+    liveUrl: "https://handbattle.etboodonline.com/!",
     githubUrl: "", // 假设的GitHub链接，实际项目中请替换为正确的链接
     icon: "pie-chart"
   },
