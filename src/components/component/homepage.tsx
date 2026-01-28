@@ -9,31 +9,100 @@ import { Input } from "@/components/ui/input"
 import startrek from "../../imgs/detask9.png"
 import "./homepage.css"
 
+// 项目数据数组
+const projectsData = [
+  {
+    id: 1,
+    title: "Are You Okay?",
+    description: "A Decentralized Check-In Triggered Timed Transfer DApp On Sui Network",
+    liveUrl: "https://ruok3.vercel.app/",
+    githubUrl: "https://github.com/summertoo/ruok", // 假设的GitHub链接，实际项目中请替换为正确的链接
+    icon: "pie-chart"
+  },
+
+  {
+    id: 0,
+    title: "SparkSpace",
+    description: "A creative publishing and trading platform that allows app developers, game developers, and teams to list their creative ideas and game resources.",
+    liveUrl: "https://sparkspace.wal.app",
+    githubUrl: "https://github.com/etboodXJ/DeGameTropicalIsLand", // 假设的GitHub链接，实际项目中请替换为正确的链接
+    icon: "briefcase"
+  },
+  {
+    id: 6,
+    title: "Mini Soccer",
+    description: "Mini Soccer is a game that allows players to play soccer in the metaverse.",
+    liveUrl: "https://soccerdemo.edgeone.app/",
+    githubUrl: "", // 假设的GitHub链接，实际项目中请替换为正确的链接
+    icon: "bar-chart"
+  },
+  {
+    id: 2,
+    title: "Hello!Book",
+    description: "Hello!Book is a novel website in the form of dAapp, which gathers interactive novels created by combining AI or live action",
+    liveUrl: "comingsoon!",
+    githubUrl: "", // 假设的GitHub链接，实际项目中请替换为正确的链接
+    icon: "smartphone"
+  },
+  {
+    id: 3,
+    title: "Sui Write3",
+    description: "A platform for novel authors to upload novels",
+    liveUrl: "comingsoon!",
+    githubUrl: "https://github.com/etboodXJ/SuiWrite3", // 假设的GitHub链接，实际项目中请替换为正确的链接
+    icon: "pie-chart"
+  },
+  {
+    id: 4,
+    title: "Creator",
+    description: "Creator",
+    liveUrl: "comingsoon!",
+    githubUrl: "", // 假设的GitHub链接，实际项目中请替换为正确的链接
+    icon: "pie-chart"
+  },
+  {
+    id: 5,
+    title: "Legion Management",
+    description: "Game Legion Management",
+    liveUrl: "https://www.etboodonline.com/dyj/",
+    githubUrl: "", // 假设的GitHub链接，实际项目中请替换为正确的链接
+    icon: "pie-chart"
+  },
+
+];
+
+// 贡献数据数组
+const contributionsData = [
+  {
+    id: 0,
+    title: "Sui Best Practices",
+    description: "Contributed to the Sui Best Practices repository with code improvements and documentation",
+    projectUrl: "https://github.com/majoson-chen/sui-best-practices",
+    contributionUrl: "https://github.com/majoson-chen/sui-best-practices/pull/16",
+    icon: "briefcase"
+  }
+];
+
 export function Homepage() {
-  function handleClick(param: number): void {
-    const urls: any = [
-      // "https://detask.walrus.site",
-      // "https://lyy.walrus.site",
-      // "https://etboodbooks.walrus.site",
-      "comingsoon!",
-      "comingsoon!",
-      "comingsoon!",
-      "https://write.wal.app/",
-      "comingsoon!",
-      "https://www.etboodonline.com/dyj/",
-
-      // 添加更多的 URL 到数组中
-    ];
-
-    // 根据参数选择要跳转的 URL
-    const selectedUrl = urls[param];
-
-    if (selectedUrl != "comingsoon!") {
-      window.location.href = selectedUrl;
+  function handleClick(projectId: number): void {
+    const project = projectsData.find(p => p.id === projectId);
+    if (project) {
+      if (project.liveUrl !== "comingsoon!") {
+        window.location.href = project.liveUrl;
+      } else {
+        alert("Coming soon!");
+      }
     } else {
-      // 处理参数无效或无对应 URL 的情况
-      alert("coming soon!")
+      alert("Project not found!");
     }
+  }
+
+  function handleGitHubClick(githubUrl: string): void {
+    window.open(githubUrl, '_blank');
+  }
+
+  function handleContributionClick(contributionUrl: string): void {
+    window.open(contributionUrl, '_blank');
   }
 
   function handleCkContactNow() {
@@ -149,54 +218,71 @@ export function Homepage() {
           Games&Apps and Others.
         </p>
         <div className="grid grid-cols-2 gap-8">
-          <Card className="border-black hover:bg-blue-200" >
-            <CardContent className="p-5 nowColor" onClick={() => handleClick(5)}>
-              <PieChartIcon className="text-black h-8 w-8" />
-              <h4 className="font-semibold text-lg text-black">Legion Management</h4>
-              <p>Game Legion Management</p>
-            </CardContent>
-          </Card>
-          <Card className="border-black hover:bg-blue-200">
-            <CardContent className="p-5 nowColor" onClick={() => handleClick(0)}>
-              <BriefcaseIcon className="text-black h-8 w-8" />
-              <h4 className="font-semibold text-lg text-black">DeTask</h4>
-              <p>DeTask is a decentralized job search and communication platform</p>
-            </CardContent>
-          </Card>
-          <Card className="border-black hover:bg-blue-200">
-            <CardContent className="p-5 nowColor" onClick={() => handleClick(1)}>
-              <BarChartIcon className="text-black h-8 w-8" />
-              <h4 className="font-semibold text-lg text-black">Paradise</h4>
-              <p>Paradise is a dAapp game center that includes various forms of dApp games</p>
-            </CardContent>
-          </Card>
-          <Card className="border-black hover:bg-blue-200" >
-            <CardContent className="p-5 nowColor" onClick={() => handleClick(2)}>
-              <SmartphoneIcon className="text-black h-8 w-8" />
-              <h4 className="font-semibold text-lg text-black">Hello!Book</h4>
-              <p>Hello!Book is a novel website in the form of dAapp, which gathers interactive novels created by combining AI or live action</p>
-            </CardContent>
-          </Card>
-          <Card className="border-black hover:bg-blue-200" >
-            <CardContent className="p-5 nowColor" onClick={() => handleClick(3)}>
-              <PieChartIcon className="text-black h-8 w-8" />
-              <h4 className="font-semibold text-lg text-black">Sui Write3</h4>
-              <p>A platform for novel authors to upload novels</p>
-            </CardContent>
-          </Card>
-          <Card className="border-black hover:bg-blue-200" >
-            <CardContent className="p-5 nowColor" onClick={() => handleClick(4)}>
-              <PieChartIcon className="text-black h-8 w-8" />
-              <h4 className="font-semibold text-lg text-black">Creator</h4>
-              <p>Creator</p>
-            </CardContent>
-          </Card>
-
+          {projectsData.map((project) => (
+            <Card key={project.id} className="border-black hover:bg-blue-200" >
+              <CardContent className="p-5 nowColor" >
+                {project.icon === "briefcase" && <BriefcaseIcon className="text-black h-8 w-8" />}
+                {project.icon === "bar-chart" && <BarChartIcon className="text-black h-8 w-8" />}
+                {project.icon === "smartphone" && <SmartphoneIcon className="text-black h-8 w-8" />}
+                {(project.icon === "pie-chart") && <PieChartIcon className="text-black h-8 w-8" />}
+                <h4 className="font-semibold text-lg text-black">{project.title}</h4>
+                <p>{project.description}</p>
+                <div className="flex space-x-2 mt-2">
+                  {project.liveUrl !== "comingsoon!" ? (
+                    <Button variant="outline" size="sm" onClick={() => handleClick(project.id)} title={project.liveUrl}>
+                      Visit
+                    </Button>
+                  ) : (
+                    <Button variant="outline" size="sm" onClick={() => handleClick(project.id)} title={project.liveUrl}>
+                      Coming Soon
+                    </Button>
+                  )}
+                  {project.githubUrl && project.githubUrl !== "" && (
+                    <Button variant="outline" size="sm" onClick={() => handleGitHubClick(project.githubUrl)} title={project.githubUrl}>
+                      GitHub
+                    </Button>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+      <section className="py-20">
+        <h3 className="text-3xl font-bold text-center text-black mb-6">Open Source Contributions</h3>
+        <p className="mb-6 text-black text-center">
+          Contributions to the community.
+        </p>
+        <div className="grid grid-cols-2 gap-8">
+          {contributionsData.map((contribution) => (
+            <Card key={contribution.id} className="border-black hover:bg-blue-200" >
+              <CardContent className="p-5 nowColor" >
+                {contribution.icon === "briefcase" && <BriefcaseIcon className="text-black h-8 w-8" />}
+                {contribution.icon === "bar-chart" && <BarChartIcon className="text-black h-8 w-8" />}
+                {contribution.icon === "smartphone" && <SmartphoneIcon className="text-black h-8 w-8" />}
+                {(contribution.icon === "pie-chart") && <PieChartIcon className="text-black h-8 w-8" />}
+                <h4 className="font-semibold text-lg text-black">{contribution.title}</h4>
+                <p>{contribution.description}</p>
+                <div className="flex space-x-2 mt-2">
+                  {contribution.projectUrl && contribution.projectUrl !== "" && (
+                    <Button variant="outline" size="sm" onClick={() => window.open(contribution.projectUrl, '_blank')} title={contribution.projectUrl}>
+                      Project
+                    </Button>
+                  )}
+                  {contribution.contributionUrl && contribution.contributionUrl !== "" && (
+                    <Button variant="outline" size="sm" onClick={() => handleContributionClick(contribution.contributionUrl)} title={contribution.contributionUrl}>
+                      My Contributions
+                    </Button>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
       <section className="py-20">
         <h3 className="text-3xl font-bold text-center text-black mb-6">
-          2025 is a great interstellar departure
+          2026 is a great interstellar departure
         </h3>
         <div className="flex justify-center">
           <img
@@ -272,7 +358,7 @@ export function Homepage() {
           </div>
         </div>
         <div className="text-center mt-8">
-          <p className="text-black">Copyright © 2025 ZD tech</p>
+          <p className="text-black">Copyright © 2026 ZD tech</p>
         </div>
       </footer>
     </div>
