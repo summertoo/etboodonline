@@ -1,3 +1,447 @@
-.nowColor{
-    color: #bd0f60;
+.nowColor {
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+}
+
+/* 流动背景动画 */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 网格背景动画 */
+@keyframes gridMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+/* 发光脉冲动画 */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  }
+  50% {
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff, 0 0 80px #00f0ff;
+  }
+}
+
+/* 扫描线动画 */
+@keyframes scanLine {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 200%;
+  }
+}
+
+/* 赛博容器 */
+.cyber-container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 25%, #0a1a2e 50%, #0a0a0a 100%);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  overflow: hidden;
+}
+
+/* 网格背景 */
+.cyber-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 10s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 赛博头部 */
+.cyber-header {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+}
+
+.cyber-header h1 {
+  background: linear-gradient(90deg, #00f0ff, #ff00ff, #00f0ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 3s linear infinite;
+}
+
+/* 赛博导航链接 */
+.cyber-nav a {
+  color: #00f0ff !important;
+  position: relative;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cyber-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00f0ff, #ff00ff);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+.cyber-nav a:hover {
+  color: #ff00ff !important;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+.cyber-nav a:hover::after {
+  width: 100%;
+}
+
+/* 英雄区域 */
+.cyber-hero {
+  position: relative;
+  background: radial-gradient(ellipse at center, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.cyber-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00f0ff, #ff00ff, #00f0ff, transparent);
+  animation: scanLine 4s linear infinite;
+}
+
+.cyber-hero h2 {
+  background: linear-gradient(135deg, #00f0ff 0%, #ff00ff 50%, #00f0ff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 3s linear infinite;
+  text-shadow: none;
+}
+
+/* 赛博按钮 */
+.cyber-button {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(255, 0, 255, 0.2));
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
+.cyber-button:hover {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.4), rgba(255, 0, 255, 0.4));
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(255, 0, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* 赛博卡片 */
+.cyber-card {
+  background: rgba(10, 10, 20, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 强制覆盖所有可能的白色背景 */
+.cyber-card,
+.cyber-card > div,
+.cyber-card [class*="CardContent"],
+.cyber-card [class*="p-"] {
+  background: transparent !important;
+  color: #b8b8b8 !important;
+}
+
+.cyber-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00f0ff, #ff00ff, #00f0ff);
+  background-size: 200% auto;
+  animation: gradientFlow 3s linear infinite;
+}
+
+.cyber-card:hover {
+  border-color: #00f0ff;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.3),
+              0 0 60px rgba(255, 0, 255, 0.2),
+              inset 0 0 30px rgba(0, 240, 255, 0.1);
+  transform: translateY(-5px) scale(1.02);
+}
+
+.cyber-card h4 {
+  color: #00f0ff !important;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.cyber-card p {
+  color: #c8d0d8 !important;
+  line-height: 1.6;
+}
+
+.cyber-card p,
+.cyber-card .text-gray-500,
+.cyber-card .text-black {
+  color: #c8d0d8 !important;
+}
+
+/* 赛博图标 */
+.cyber-icon {
+  color: #00f0ff;
+  filter: drop-shadow(0 0 8px #00f0ff);
+  transition: all 0.3s ease;
+}
+
+.cyber-card:hover .cyber-icon {
+  color: #ff00ff;
+  filter: drop-shadow(0 0 15px #ff00ff);
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* 赛博小按钮 */
+.cyber-button-small {
+  background: transparent;
+  border: 1px solid #00f0ff;
+  color: #00f0ff;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cyber-button-small:hover {
+  background: rgba(0, 240, 255, 0.2);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+}
+
+/* 赛博输入框 */
+.cyber-input {
+  background: rgba(10, 10, 20, 0.7);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: #00f0ff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cyber-input:focus {
+  outline: none;
+  border-color: #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.cyber-input::placeholder {
+  color: rgba(0, 240, 255, 0.5);
+}
+
+/* 赛博页脚 */
+.cyber-footer {
+  background: rgba(10, 10, 20, 0.9);
+  border-top: 1px solid rgba(0, 240, 255, 0.3);
+}
+
+.cyber-footer h5 {
+  color: #00f0ff;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.cyber-footer p,
+.cyber-footer li {
+  color: #b8b8b8;
+}
+
+.cyber-footer li:hover {
+  color: #00f0ff;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+/* 赛博标题 */
+.cyber-title {
+  background: linear-gradient(135deg, #00f0ff 0%, #ff00ff 50%, #00f0ff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 3s linear infinite;
+}
+
+/* 赛博副标题 */
+.cyber-subtitle {
+  color: #c8d0d8;
+  font-weight: 300;
+}
+
+/* 强制覆盖所有section的背景颜色 */
+section {
+  background: transparent !important;
+}
+
+/* 覆盖所有可能的白色背景和文本 */
+.cyber-container section,
+.cyber-container .text-black,
+.cyber-container .text-white,
+.cyber-container .text-gray-900,
+.cyber-container .text-gray-800,
+.cyber-container .text-gray-700 {
+  background: transparent !important;
+  color: #c8d0d8 !important;
+}
+
+/* 英雄区域文本 */
+.cyber-hero h2,
+.cyber-hero p {
+  color: #c8d0d8 !important;
+}
+
+/* 例外：赛博风格的颜色保持原样 */
+.cyber-container .cyber-title,
+.cyber-container .cyber-nav a,
+.cyber-container .cyber-button,
+.cyber-container .cyber-button-small,
+.cyber-container .cyber-input,
+.cyber-container .cyber-icon,
+.cyber-container .cyber-card h4,
+.cyber-container .cyber-footer h5,
+.cyber-container .cyber-header h1 {
+  color: inherit !important;
+}
+
+/* 粒子容器 */
+#particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* 浮动粒子效果 */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-250vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00f0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00f0ff;
+  animation: float 15s linear infinite;
+}
+
+/* 图片区域 */
+.cyber-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cyber-image-container img {
+  border: 2px solid rgba(0, 240, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cyber-image-container img:hover {
+  border-color: #00f0ff;
+  box-shadow: 0 0 50px rgba(0, 240, 255, 0.5);
+}
+
+/* 测试imonial区域 */
+.cyber-testimonial {
+  background: rgba(10, 10, 20, 0.9);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 15px;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 10, 20, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f0ff, #ff00ff);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff00ff, #00f0ff);
 }

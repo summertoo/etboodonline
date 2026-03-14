@@ -72,7 +72,28 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script> -->
   <div id="root"></div>
+  <div id="particles-container"></div>
   <script type="module" src="/src/main.tsx"></script>
+  <script>
+    // 创建浮动粒子效果
+    function createParticles() {
+      const container = document.getElementById('particles-container');
+      if (!container) return;
+
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = (100 + Math.random() * 20) + '%'; // 从视口下方开始
+        particle.style.animationDelay = Math.random() * 15 + 's';
+        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+        container.appendChild(particle);
+      }
+    }
+
+    // 页面加载后创建粒子
+    window.addEventListener('load', createParticles);
+  </script>
 </body>
 
 </html>

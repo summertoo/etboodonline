@@ -83,6 +83,41 @@ const contributionsData = [
   }
 ];
 
+// 网页游戏数据数组
+const webGamesData = [
+  {
+    id: 1,
+    title: "Hand Battle",
+    description: "A game where players can battle with their hands.",
+    liveUrl: "https://handbattle.etboodonline.com/",
+    githubUrl: "",
+    icon: "pie-chart",
+    image: ""
+  },
+  {
+    id: 2,
+    title: "Mini Soccer",
+    description: "Mini Soccer is a game that allows players to play soccer in the metaverse.",
+    liveUrl: "https://soccerdemo.edgeone.app/",
+    githubUrl: "",
+    icon: "bar-chart",
+    image: ""
+  }
+];
+
+// Roblox游戏数据数组
+const robloxDatasData = [
+  {
+    id: 1,
+    title: "Legion Management",
+    description: "Game Legion Management",
+    liveUrl: "https://www.etboodonline.com/dyj/",
+    githubUrl: "",
+    icon: "pie-chart",
+    image: ""
+  }
+];
+
 export function Homepage() {
   function handleClick(projectId: number): void {
     const project = projectsData.find(p => p.id === projectId);
@@ -118,52 +153,52 @@ export function Homepage() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
-      <header className="py-6 flex justify-between items-center bg-white text-black">
+    <div className="max-w-7xl mx-auto px-4 cyber-container">
+      <header className="py-6 flex justify-between items-center cyber-header">
         <h1 className="text-3xl font-bold">Write ZD Tech </h1>
-        <nav>
+        <nav className="cyber-nav">
           <ul className="flex space-x-4">
             <li>
-              <a className="text-black hover:text-yellow-700" href="#">
+              <a href="#">
                 Home
               </a>
             </li>
             <li>
-              <a className="text-black hover:text-yellow-700" href="#">
+              <a href="#">
                 What We Do
               </a>
             </li>
             <li>
-              <a className="text-black hover:text-yellow-700" href="#">
+              <a href="#">
                 Service
               </a>
             </li>
             <li>
-              <a className="text-black hover:text-yellow-700" href="#">
+              <a href="#">
                 Project
               </a>
             </li>
             <li>
-              <a className="text-black hover:text-yellow-700" href="#">
+              <a href="#">
                 Blog
               </a>
             </li>
             <li>
-              <a className="text-black hover:text-yellow-700" href="#">
+              <a href="#">
                 Contact
               </a>
             </li>
           </ul>
         </nav>
       </header>
-      <section className="text-center py-20">
-        <h2 className="text-4xl font-bold text-black mb-4">
+      <section className="text-center py-20 cyber-hero">
+        <h2 className="text-4xl font-bold mb-4 cyber-title">
           Integrated portal website
         </h2>
-        <p className="mb-6 text-black">
+        <p className="mb-6 cyber-subtitle">
           ZD Technology is a team that provides various aspects of DAPP development, such as web3 applications and games, and provides technical services to a wide range of users
         </p>
-        <Button className="bg-black text-white" onClick={() => handleCkContactNow()}>
+        <Button className="cyber-button" onClick={() => handleCkContactNow()}>
           Contact Now
         </Button>
       </section>
@@ -213,32 +248,32 @@ export function Homepage() {
         </div>
       </section> */}
       <section className="py-20">
-        <h3 className="text-3xl font-bold text-center text-black mb-6">The following ZD product matrix list will have more products in the future</h3>
-        <p className="mb-6 text-black text-center">
+        <h3 className="text-3xl font-bold text-center mb-6 cyber-title">The following ZD product matrix list will have more products in the future</h3>
+        <p className="mb-6 text-center cyber-subtitle">
           Games&Apps and Others.
         </p>
         <div className="grid grid-cols-2 gap-8">
           {projectsData.map((project) => (
-            <Card key={project.id} className="border-black hover:bg-blue-200" >
-              <CardContent className="p-5 nowColor" >
-                {project.icon === "briefcase" && <BriefcaseIcon className="text-black h-8 w-8" />}
-                {project.icon === "bar-chart" && <BarChartIcon className="text-black h-8 w-8" />}
-                {project.icon === "smartphone" && <SmartphoneIcon className="text-black h-8 w-8" />}
-                {(project.icon === "pie-chart") && <PieChartIcon className="text-black h-8 w-8" />}
-                <h4 className="font-semibold text-lg text-black">{project.title}</h4>
+            <Card key={project.id} className="cyber-card" >
+              <CardContent className="p-5" >
+                {project.icon === "briefcase" && <BriefcaseIcon className="cyber-icon h-8 w-8" />}
+                {project.icon === "bar-chart" && <BarChartIcon className="cyber-icon h-8 w-8" />}
+                {project.icon === "smartphone" && <SmartphoneIcon className="cyber-icon h-8 w-8" />}
+                {(project.icon === "pie-chart") && <PieChartIcon className="cyber-icon h-8 w-8" />}
+                <h4 className="font-semibold text-lg">{project.title}</h4>
                 <p>{project.description}</p>
                 <div className="flex space-x-2 mt-2">
                   {project.liveUrl !== "comingsoon!" ? (
-                    <Button variant="outline" size="sm" onClick={() => handleClick(project.id)} title={project.liveUrl}>
+                    <Button className="cyber-button-small" onClick={() => handleClick(project.id)} title={project.liveUrl}>
                       Visit
                     </Button>
                   ) : (
-                    <Button variant="outline" size="sm" onClick={() => handleClick(project.id)} title={project.liveUrl}>
+                    <Button className="cyber-button-small" onClick={() => handleClick(project.id)} title={project.liveUrl}>
                       Coming Soon
                     </Button>
                   )}
                   {project.githubUrl && project.githubUrl !== "" && (
-                    <Button variant="outline" size="sm" onClick={() => handleGitHubClick(project.githubUrl)} title={project.githubUrl}>
+                    <Button className="cyber-button-small" onClick={() => handleGitHubClick(project.githubUrl)} title={project.githubUrl}>
                       GitHub
                     </Button>
                   )}
@@ -249,28 +284,28 @@ export function Homepage() {
         </div>
       </section>
       <section className="py-20">
-        <h3 className="text-3xl font-bold text-center text-black mb-6">Open Source Contributions</h3>
-        <p className="mb-6 text-black text-center">
+        <h3 className="text-3xl font-bold text-center mb-6 cyber-title">Open Source Contributions</h3>
+        <p className="mb-6 text-center cyber-subtitle">
           Contributions to the community.
         </p>
         <div className="grid grid-cols-2 gap-8">
           {contributionsData.map((contribution) => (
-            <Card key={contribution.id} className="border-black hover:bg-blue-200" >
-              <CardContent className="p-5 nowColor" >
-                {contribution.icon === "briefcase" && <BriefcaseIcon className="text-black h-8 w-8" />}
-                {contribution.icon === "bar-chart" && <BarChartIcon className="text-black h-8 w-8" />}
-                {contribution.icon === "smartphone" && <SmartphoneIcon className="text-black h-8 w-8" />}
-                {(contribution.icon === "pie-chart") && <PieChartIcon className="text-black h-8 w-8" />}
-                <h4 className="font-semibold text-lg text-black">{contribution.title}</h4>
+            <Card key={contribution.id} className="cyber-card" >
+              <CardContent className="p-5" >
+                {contribution.icon === "briefcase" && <BriefcaseIcon className="cyber-icon h-8 w-8" />}
+                {contribution.icon === "bar-chart" && <BarChartIcon className="cyber-icon h-8 w-8" />}
+                {contribution.icon === "smartphone" && <SmartphoneIcon className="cyber-icon h-8 w-8" />}
+                {(contribution.icon === "pie-chart") && <PieChartIcon className="cyber-icon h-8 w-8" />}
+                <h4 className="font-semibold text-lg">{contribution.title}</h4>
                 <p>{contribution.description}</p>
                 <div className="flex space-x-2 mt-2">
                   {contribution.projectUrl && contribution.projectUrl !== "" && (
-                    <Button variant="outline" size="sm" onClick={() => window.open(contribution.projectUrl, '_blank')} title={contribution.projectUrl}>
+                    <Button className="cyber-button-small" onClick={() => window.open(contribution.projectUrl, '_blank')} title={contribution.projectUrl}>
                       Project
                     </Button>
                   )}
                   {contribution.contributionUrl && contribution.contributionUrl !== "" && (
-                    <Button variant="outline" size="sm" onClick={() => handleContributionClick(contribution.contributionUrl)} title={contribution.contributionUrl}>
+                    <Button className="cyber-button-small" onClick={() => handleContributionClick(contribution.contributionUrl)} title={contribution.contributionUrl}>
                       My Contributions
                     </Button>
                   )}
@@ -281,10 +316,88 @@ export function Homepage() {
         </div>
       </section>
       <section className="py-20">
-        <h3 className="text-3xl font-bold text-center text-black mb-6">
+        <h3 className="text-3xl font-bold text-center mb-6 cyber-title">网页游戏</h3>
+        <p className="mb-6 text-center cyber-subtitle">
+          Browser-based games for everyone to enjoy.
+        </p>
+        <div className="grid grid-cols-2 gap-8">
+          {webGamesData.map((game) => (
+            <Card key={game.id} className="cyber-card" >
+              <CardContent className="p-5" >
+                {game.image && (
+                  <img
+                    src={game.image}
+                    alt={game.title}
+                    className="w-full h-48 object-cover rounded mb-4"
+                  />
+                )}
+                {game.icon === "briefcase" && <BriefcaseIcon className="cyber-icon h-8 w-8" />}
+                {game.icon === "bar-chart" && <BarChartIcon className="cyber-icon h-8 w-8" />}
+                {game.icon === "smartphone" && <SmartphoneIcon className="cyber-icon h-8 w-8" />}
+                {(game.icon === "pie-chart") && <PieChartIcon className="cyber-icon h-8 w-8" />}
+                <h4 className="font-semibold text-lg">{game.title}</h4>
+                <p>{game.description}</p>
+                <div className="flex space-x-2 mt-2">
+                  {game.liveUrl && game.liveUrl !== "" && (
+                    <Button className="cyber-button-small" onClick={() => window.open(game.liveUrl, '_blank')} title={game.liveUrl}>
+                      Visit
+                    </Button>
+                  )}
+                  {game.githubUrl && game.githubUrl !== "" && (
+                    <Button className="cyber-button-small" onClick={() => handleGitHubClick(game.githubUrl)} title={game.githubUrl}>
+                      GitHub
+                    </Button>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+      <section className="py-20">
+        <h3 className="text-3xl font-bold text-center mb-6 cyber-title">Roblox游戏</h3>
+        <p className="mb-6 text-center cyber-subtitle">
+          Roblox platform games and experiences.
+        </p>
+        <div className="grid grid-cols-2 gap-8">
+          {robloxDatasData.map((game) => (
+            <Card key={game.id} className="cyber-card" >
+              <CardContent className="p-5" >
+                {game.image && (
+                  <img
+                    src={game.image}
+                    alt={game.title}
+                    className="w-full h-48 object-cover rounded mb-4"
+                  />
+                )}
+                {game.icon === "briefcase" && <BriefcaseIcon className="cyber-icon h-8 w-8" />}
+                {game.icon === "bar-chart" && <BarChartIcon className="cyber-icon h-8 w-8" />}
+                {game.icon === "smartphone" && <SmartphoneIcon className="cyber-icon h-8 w-8" />}
+                {(game.icon === "pie-chart") && <PieChartIcon className="cyber-icon h-8 w-8" />}
+                <h4 className="font-semibold text-lg">{game.title}</h4>
+                <p>{game.description}</p>
+                <div className="flex space-x-2 mt-2">
+                  {game.liveUrl && game.liveUrl !== "" && (
+                    <Button className="cyber-button-small" onClick={() => window.open(game.liveUrl, '_blank')} title={game.liveUrl}>
+                      Visit
+                    </Button>
+                  )}
+                  {game.githubUrl && game.githubUrl !== "" && (
+                    <Button className="cyber-button-small" onClick={() => handleGitHubClick(game.githubUrl)} title={game.githubUrl}>
+                      GitHub
+                    </Button>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+      <section className="py-20">
+        <h3 className="text-3xl font-bold text-center mb-6 cyber-title">
           2026 is a great interstellar departure
         </h3>
-        <div className="flex justify-center">
+        <div className="flex justify-center cyber-image-container">
           <img
             alt="Agency"
             height="300"
@@ -297,16 +410,16 @@ export function Homepage() {
           />
         </div>
       </section>
-      <section className="py-20 bg-black">
-        <h3 className="text-3xl font-bold text-center text-white mb-6">What our happy client say</h3>
+      <section className="py-20 cyber-testimonial">
+        <h3 className="text-3xl font-bold text-center mb-6 cyber-title">What our happy client say</h3>
         <div className="flex justify-center items-center">
           {/* <Avatar>
             <AvatarImage alt="Matthew Paul" src="/placeholder.svg?height=48&width=48" />
             <AvatarFallback>MP</AvatarFallback>
           </Avatar> */}
           <div className="ml-4">
-            <p className="font-semibold text-white">Matthew Paul</p>
-            <p className="text-white">
+            <p className="font-semibold cyber-title">Matthew Paul</p>
+            <p className="cyber-subtitle">
               Perfect, very good job! Thank you for the amazing design and work. Really impressed with the high quality
               and quick turnaround time. Highly recommend.
             </p>
@@ -314,26 +427,26 @@ export function Homepage() {
         </div>
       </section>
       <section className="py-20">
-        <h3 className="text-3xl font-bold text-center text-black mb-6">Subscribe Newsletter</h3>
+        <h3 className="text-3xl font-bold text-center mb-6 cyber-title">Subscribe Newsletter</h3>
         <div className="flex justify-center">
-          <Input className="mr-4" placeholder="Enter your email address..." type="email" />
-          <Button className="bg-black text-white" onClick={() => handleCkContactNow()}>
+          <Input className="mr-4 cyber-input" placeholder="Enter your email address..." type="email" />
+          <Button className="cyber-button" onClick={() => handleCkContactNow()}>
             Contact Now
           </Button>
         </div>
       </section>
-      <footer className="py-10">
+      <footer className="py-10 cyber-footer">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
-            <h5 className="font-bold text-black mb-2">ZD Studio</h5>
-            <p className="text-black">
+            <h5 className="font-bold mb-2">ZD Studio</h5>
+            <p className="cyber-subtitle">
               Leading digital agency with solid design and development expertise. We build readymade websites, mobile
               applications, and elaborate online business services.
             </p>
           </div>
           <div>
-            <h5 className="font-bold text-black mb-2">What We Do</h5>
-            <ul className="text-black">
+            <h5 className="font-bold mb-2">What We Do</h5>
+            <ul className="cyber-subtitle">
               <li>Web Design</li>
               <li>App Design</li>
               <li>Social Media Manage</li>
@@ -341,15 +454,15 @@ export function Homepage() {
             </ul>
           </div>
           <div>
-            <h5 className="font-bold text-black mb-2">Company</h5>
-            <ul className="text-black">
+            <h5 className="font-bold mb-2">Company</h5>
+            <ul className="cyber-subtitle">
               <li>About Us</li>
               <li>Career</li>
               <li>Become Investor</li>
             </ul>
           </div>
-          <div className="text-black">
-            <h5 className="font-bold text-black mb-2">Support</h5>
+          <div className="cyber-subtitle">
+            <h5 className="font-bold mb-2">Support</h5>
             <ul>
               <li>FAQ</li>
               <li>Policy</li>
@@ -358,7 +471,7 @@ export function Homepage() {
           </div>
         </div>
         <div className="text-center mt-8">
-          <p className="text-black">Copyright © 2026 ZD tech</p>
+          <p className="cyber-subtitle">Copyright © 2026 ZD tech</p>
         </div>
       </footer>
     </div>
