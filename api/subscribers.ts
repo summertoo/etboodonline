@@ -14,7 +14,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const secret = process.env.ADMIN_SECRET;
 
   if (!secret || token !== secret) {
-    return res.status(401).json({ error: "Unauthorized" });
+    return res.status(401).json({
+      error: "Unauthorized",
+      debug: {
+        hasSecret: !!secret,
+        secretLength: secret?.length ?? 0,
+        tokenLength: token?.length ?? 0,
+        hasAuthHeader: !!req.headers.authorization,
+      },
+    });
   }
 
   try {
