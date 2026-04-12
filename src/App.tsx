@@ -1,43 +1,26 @@
-import { ConnectButton } from "@mysten/dapp-kit";
-import { Box, Container, Flex, Heading } from "@radix-ui/themes";
-import { WalletStatus } from "./WalletStatus";
-import { Homepage } from "./components/component/homepage";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Homepage } from "./components/component/homepage"
+import WhatWeDo from "./pages/WhatWeDo"
+import Service from "./pages/Service"
+import Project from "./pages/Project"
+import Blog from "./pages/Blog"
+import Contact from "./pages/Contact"
 
 import './app/globals.css'
 
 function App() {
   return (
-    <>
-      {/* <Flex
-        position="sticky"
-        px="4"
-        py="2"
-        justify="between"
-        style={{
-          borderBottom: "1px solid var(--gray-a2)",
-        }}
-      >
-        <Box>
-          <Heading>dApp Starter Template</Heading>
-        </Box>
-
-        <Box>
-          <ConnectButton />
-        </Box>
-      </Flex>
-      <Container>
-        <Container
-          mt="5"
-          pt="2"
-          px="4"
-          style={{ background: "var(--gray-a2)", minHeight: 500 }}
-        >
-          <WalletStatus />
-        </Container>
-      </Container> */}
-      <Homepage />
-    </>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/what-we-do" element={<WhatWeDo />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

@@ -3,6 +3,7 @@
  * @see https://v0.dev/t/DIVjXAkZ0I6
  */
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { CardContent, Card } from "@/components/ui/card"
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
@@ -20,15 +21,6 @@ const projectsData = [
     githubUrl: "https://github.com/summertoo/ruok", // 假设的GitHub链接，实际项目中请替换为正确的链接
     icon: "pie-chart"
   },
-
-  {
-    id: 0,
-    title: "SparkSpace",
-    description: "A creative publishing and trading platform that allows app developers, game developers, and teams to list their creative ideas and game resources.",
-    liveUrl: "https://sparkspace.wal.app",
-    githubUrl: "https://github.com/etboodXJ/DeGameTropicalIsLand", // 假设的GitHub链接，实际项目中请替换为正确的链接
-    icon: "briefcase"
-  },
   {
     id: 6,
     title: "Mini Soccer",
@@ -36,14 +28,6 @@ const projectsData = [
     liveUrl: "https://soccerdemo.edgeone.app/",
     githubUrl: "", // 假设的GitHub链接，实际项目中请替换为正确的链接
     icon: "bar-chart"
-  },
-  {
-    id: 2,
-    title: "DeTask",
-    description: "A platform for creators to manage their tasks and collaborate with others.",
-    liveUrl: "https://detask.etboodonline.com/",
-    githubUrl: "", // 假设的GitHub链接，实际项目中请替换为正确的链接
-    icon: "smartphone"
   },
   {
     id: 3,
@@ -176,36 +160,12 @@ export function Homepage() {
         <h1 className="text-3xl font-bold">Write ZD Tech </h1>
         <nav className="cyber-nav">
           <ul className="flex space-x-4">
-            <li>
-              <a href="#">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                What We Do
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Service
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Project
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Contact
-              </a>
-            </li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/what-we-do">What We Do</Link></li>
+            <li><Link to="/service">Service</Link></li>
+            <li><Link to="/project">Project</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
       </header>
