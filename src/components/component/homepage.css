@@ -1,131 +1,91 @@
-.nowColor {
-  color: #00f0ff;
-  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+/* ===== Cyber Minimal — Light & Clean ===== */
+
+/* Palette tokens */
+:root {
+  --cyber-primary: #0ea5e9;      /* sky-500 */
+  --cyber-secondary: #8b5cf6;    /* violet-500 */
+  --cyber-bg: #f8fafc;           /* slate-50 */
+  --cyber-surface: #ffffff;
+  --cyber-text: #1e293b;         /* slate-800 */
+  --cyber-muted: #64748b;        /* slate-500 */
+  --cyber-border: #e2e8f0;       /* slate-200 */
+  --cyber-accent-light: rgba(14, 165, 233, 0.08);
 }
 
-/* 流动背景动画 */
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* 网格背景动画 */
-@keyframes gridMove {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(50px);
-  }
-}
-
-/* 发光脉冲动画 */
-@keyframes glowPulse {
-  0%, 100% {
-    box-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
-  }
-  50% {
-    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff, 0 0 80px #00f0ff;
-  }
-}
-
-/* 扫描线动画 */
-@keyframes scanLine {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 200%;
-  }
-}
-
-/* 赛博容器 */
+/* Container */
 .cyber-container {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 25%, #0a1a2e 50%, #0a0a0a 100%);
-  background-size: 400% 400%;
-  animation: gradientFlow 15s ease infinite;
+  background: var(--cyber-bg);
+  color: var(--cyber-text);
   overflow: hidden;
 }
 
-/* 网格背景 */
+/* Subtle grid background */
 .cyber-container::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-image:
-    linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: gridMove 10s linear infinite;
+    linear-gradient(rgba(14, 165, 233, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
   pointer-events: none;
   z-index: 0;
 }
 
-/* 赛博头部 */
+/* Header */
 .cyber-header {
-  background: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 240, 255, 0.3);
-  box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--cyber-border);
 }
 
 .cyber-header h1 {
-  background: linear-gradient(90deg, #00f0ff, #ff00ff, #00f0ff);
-  background-size: 200% auto;
+  background: linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientFlow 3s linear infinite;
 }
 
-/* 赛博导航链接 */
+/* Nav */
 .cyber-nav a {
-  color: #00f0ff !important;
-  position: relative;
-  transition: all 0.3s ease;
+  color: var(--cyber-muted) !important;
   text-decoration: none;
+  position: relative;
+  transition: color 0.25s ease;
+  font-weight: 500;
 }
 
 .cyber-nav a::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: -4px;
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #00f0ff, #ff00ff);
-  transition: width 0.3s ease;
-  box-shadow: 0 0 10px #00f0ff;
+  background: linear-gradient(90deg, var(--cyber-primary), var(--cyber-secondary));
+  border-radius: 1px;
+  transition: width 0.25s ease;
 }
 
 .cyber-nav a:hover {
-  color: #ff00ff !important;
-  text-shadow: 0 0 10px #ff00ff;
+  color: var(--cyber-primary) !important;
 }
 
 .cyber-nav a:hover::after {
   width: 100%;
 }
 
-/* 英雄区域 */
+/* Hero */
 .cyber-hero {
   position: relative;
-  background: radial-gradient(ellipse at center, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  border-radius: 20px;
-  overflow: hidden;
+  z-index: 1;
+  background: linear-gradient(135deg, var(--cyber-accent-light), rgba(139, 92, 246, 0.06));
+  border: 1px solid var(--cyber-border);
+  border-radius: 16px;
 }
 
 .cyber-hero::before {
@@ -135,75 +95,72 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #00f0ff, #ff00ff, #00f0ff, transparent);
-  animation: scanLine 4s linear infinite;
+  background: linear-gradient(90deg, transparent, var(--cyber-primary), var(--cyber-secondary), transparent);
+  border-radius: 16px 16px 0 0;
 }
 
-.cyber-hero h2 {
-  background: linear-gradient(135deg, #00f0ff 0%, #ff00ff 50%, #00f0ff 100%);
-  background-size: 200% auto;
+/* Titles */
+.cyber-title {
+  background: linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientFlow 3s linear infinite;
-  text-shadow: none;
 }
 
-/* 赛博按钮 */
+.cyber-subtitle {
+  color: var(--cyber-muted);
+  font-weight: 400;
+}
+
+/* Buttons */
 .cyber-button {
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(255, 0, 255, 0.2));
-  border: 2px solid #00f0ff;
-  color: #00f0ff;
-  padding: 12px 30px;
-  font-size: 1rem;
+  background: linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary));
+  border: none;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  overflow: hidden;
-}
-
-.cyber-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.4), transparent);
-  transition: left 0.5s ease;
-}
-
-.cyber-button:hover::before {
-  left: 100%;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cyber-button:hover {
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.4), rgba(255, 0, 255, 0.4));
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(255, 0, 255, 0.3);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
 }
 
-/* 赛博卡片 */
+/* Card buttons — override shadcn defaults */
+.cyber-card .cyber-button-small,
+button.cyber-button-small {
+  background: transparent !important;
+  border: 1px solid var(--cyber-border) !important;
+  color: var(--cyber-muted) !important;
+  padding: 6px 18px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+}
+
+.cyber-card .cyber-button-small:hover,
+button.cyber-button-small:hover {
+  background: var(--cyber-accent-light) !important;
+  border-color: var(--cyber-primary) !important;
+  color: var(--cyber-primary) !important;
+}
+
+/* Cards */
 .cyber-card {
-  background: rgba(10, 10, 20, 0.7) !important;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  border-radius: 15px;
-  transition: all 0.4s ease;
+  background: var(--cyber-surface) !important;
+  border: 1px solid var(--cyber-border);
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   position: relative;
   overflow: hidden;
-}
-
-/* 强制覆盖所有可能的白色背景 */
-.cyber-card,
-.cyber-card > div,
-.cyber-card [class*="CardContent"],
-.cyber-card [class*="p-"] {
-  background: transparent !important;
-  color: #b8b8b8 !important;
 }
 
 .cyber-card::before {
@@ -212,128 +169,124 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #00f0ff, #ff00ff, #00f0ff);
-  background-size: 200% auto;
-  animation: gradientFlow 3s linear infinite;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyber-primary), var(--cyber-secondary));
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
 .cyber-card:hover {
-  border-color: #00f0ff;
-  box-shadow: 0 0 30px rgba(0, 240, 255, 0.3),
-              0 0 60px rgba(255, 0, 255, 0.2),
-              inset 0 0 30px rgba(0, 240, 255, 0.1);
-  transform: translateY(-5px) scale(1.02);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.1);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+.cyber-card:hover::before {
+  opacity: 1;
+}
+
+/* Override forced dark card styles */
+.cyber-card,
+.cyber-card > div,
+.cyber-card [class*="CardContent"],
+.cyber-card [class*="p-"] {
+  background: transparent !important;
+  color: var(--cyber-text) !important;
 }
 
 .cyber-card h4 {
-  color: #00f0ff !important;
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  color: var(--cyber-text) !important;
+  font-weight: 600;
 }
 
 .cyber-card p {
-  color: #c8d0d8 !important;
+  color: var(--cyber-muted) !important;
   line-height: 1.6;
 }
 
 .cyber-card p,
 .cyber-card .text-gray-500,
 .cyber-card .text-black {
-  color: #c8d0d8 !important;
+  color: var(--cyber-muted) !important;
 }
 
-/* 赛博图标 */
+/* Icons */
 .cyber-icon {
-  color: #00f0ff;
-  filter: drop-shadow(0 0 8px #00f0ff);
-  transition: all 0.3s ease;
+  color: var(--cyber-primary);
+  transition: color 0.25s ease;
 }
 
 .cyber-card:hover .cyber-icon {
-  color: #ff00ff;
-  filter: drop-shadow(0 0 15px #ff00ff);
-  animation: glowPulse 2s ease-in-out infinite;
+  color: var(--cyber-secondary);
 }
 
-/* 赛博小按钮 */
-.cyber-button-small {
-  background: transparent;
-  border: 1px solid #00f0ff;
-  color: #00f0ff;
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.cyber-button-small:hover {
-  background: rgba(0, 240, 255, 0.2);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
-}
-
-/* 赛博输入框 */
+/* Input */
 .cyber-input {
-  background: rgba(10, 10, 20, 0.7);
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  color: #00f0ff;
+  background: var(--cyber-surface);
+  border: 1px solid var(--cyber-border);
+  color: var(--cyber-text);
   padding: 12px 20px;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cyber-input:focus {
   outline: none;
-  border-color: #00f0ff;
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+  border-color: var(--cyber-primary);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.12);
 }
 
 .cyber-input::placeholder {
-  color: rgba(0, 240, 255, 0.5);
+  color: var(--cyber-muted);
 }
 
-/* 赛博页脚 */
+/* Footer */
 .cyber-footer {
-  background: rgba(10, 10, 20, 0.9);
-  border-top: 1px solid rgba(0, 240, 255, 0.3);
+  background: var(--cyber-surface);
+  border-top: 1px solid var(--cyber-border);
 }
 
 .cyber-footer h5 {
-  color: #00f0ff;
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  color: var(--cyber-text);
 }
 
 .cyber-footer p,
 .cyber-footer li {
-  color: #b8b8b8;
+  color: var(--cyber-muted);
+}
+
+.cyber-footer li {
+  transition: color 0.2s ease;
+  cursor: pointer;
 }
 
 .cyber-footer li:hover {
-  color: #00f0ff;
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  color: var(--cyber-primary);
 }
 
-/* 赛博标题 */
-.cyber-title {
-  background: linear-gradient(135deg, #00f0ff 0%, #ff00ff 50%, #00f0ff 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientFlow 3s linear infinite;
+/* Testimonial */
+.cyber-testimonial {
+  background: var(--cyber-surface);
+  border: 1px solid var(--cyber-border);
+  border-radius: 12px;
 }
 
-/* 赛博副标题 */
-.cyber-subtitle {
-  color: #c8d0d8;
-  font-weight: 300;
+/* Image container */
+.cyber-image-container img {
+  border: 1px solid var(--cyber-border);
+  border-radius: 12px;
+  transition: box-shadow 0.25s ease;
 }
 
-/* 强制覆盖所有section的背景颜色 */
+.cyber-image-container img:hover {
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.12);
+}
+
+/* Section overrides */
 section {
   background: transparent !important;
 }
 
-/* 覆盖所有可能的白色背景和文本 */
 .cyber-container section,
 .cyber-container .text-black,
 .cyber-container .text-white,
@@ -341,16 +294,15 @@ section {
 .cyber-container .text-gray-800,
 .cyber-container .text-gray-700 {
   background: transparent !important;
-  color: #c8d0d8 !important;
+  color: var(--cyber-text) !important;
 }
 
-/* 英雄区域文本 */
 .cyber-hero h2,
 .cyber-hero p {
-  color: #c8d0d8 !important;
+  color: var(--cyber-text) !important;
 }
 
-/* 例外：赛博风格的颜色保持原样 */
+/* Preserve styled element colors */
 .cyber-container .cyber-title,
 .cyber-container .cyber-nav a,
 .cyber-container .cyber-button,
@@ -363,85 +315,20 @@ section {
   color: inherit !important;
 }
 
-/* 粒子容器 */
-#particles-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 1000;
-  overflow: hidden;
-}
-
-/* 浮动粒子效果 */
-@keyframes float {
-  0% {
-    transform: translateY(0) translateX(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-250vh) translateX(50px);
-    opacity: 0;
-  }
-}
-
-.particle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: #00f0ff;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #00f0ff;
-  animation: float 15s linear infinite;
-}
-
-/* 图片区域 */
-.cyber-image-container {
-  position: relative;
-  display: inline-block;
-}
-
-.cyber-image-container img {
-  border: 2px solid rgba(0, 240, 255, 0.3);
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.cyber-image-container img:hover {
-  border-color: #00f0ff;
-  box-shadow: 0 0 50px rgba(0, 240, 255, 0.5);
-}
-
-/* 测试imonial区域 */
-.cyber-testimonial {
-  background: rgba(10, 10, 20, 0.9);
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  border-radius: 15px;
-}
-
-/* 滚动条样式 */
+/* Scrollbar — minimal */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(10, 10, 20, 0.8);
+  background: var(--cyber-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00f0ff, #ff00ff);
-  border-radius: 5px;
+  background: var(--cyber-border);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #ff00ff, #00f0ff);
+  background: var(--cyber-muted);
 }

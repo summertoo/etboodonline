@@ -2,3 +2,12 @@ dist/
 node_modules/
 build/
 node_modules
+.openclaw/
+AGENTS.md
+SOUL.md
+IDENTITY.md
+USER.md
+TOOLS.md
+HEARTBEAT.md
+MEMORY.md
+memory/
