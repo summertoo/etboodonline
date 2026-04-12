@@ -11,4 +11,8 @@ TOOLS.md
 HEARTBEAT.md
 MEMORY.md
 memory/
+rsa/
+*.pem
+*.key
 doc/
+rsa/
