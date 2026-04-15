@@ -373,23 +373,19 @@ html {
 }
 
 /* Page enter animation */
-@keyframes pageIn {
-  0% {
+@keyframes flyIn {
+  from {
     opacity: 0;
-    transform: translateY(30px) scale(0.98);
+    transform: translateY(24px);
   }
-  60% {
+  to {
     opacity: 1;
-    transform: translateY(-4px) scale(1.01);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
-.animate-page-in {
-  animation: pageIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.fly-in {
+  animation: flyIn 0.4s ease-out;
 }
 
 /* Card hover lift */

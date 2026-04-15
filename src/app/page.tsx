@@ -207,7 +207,7 @@ export default function Homepage() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 cyber-container">
+    <div className="max-w-7xl mx-auto px-4 cyber-container fly-in">
       <Navbar />
 
       {/* ─── Hero ─────────────────────────────────────── */}

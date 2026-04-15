@@ -41,7 +41,7 @@ const projects = [
 
 export default function Project() {
   return (
-    <div className="max-w-7xl mx-auto px-4 cyber-container">
+    <div className="max-w-7xl mx-auto px-4 cyber-container fly-in">
       <Navbar />
 
       <section className="text-center py-20 cyber-hero">
