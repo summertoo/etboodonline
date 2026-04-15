@@ -28,12 +28,6 @@ function useScrollReveal(threshold = 0.15) {
 // ─── Data ────────────────────────────────────────────────
 const robloxGames = [
   {
-    id: 1, title: "Legion Management",
-    description: "Build and command your legion in this strategic Roblox experience.",
-    liveUrl: "https://www.etboodonline.com/dyj/",
-    status: "live" as const,
-  },
-  {
     id: 2, title: "Apex Mind",
     description: "A challenging mind-bending puzzle experience on Roblox.",
     liveUrl: "https://www.roblox.com/games/126170387607652",
@@ -451,7 +445,6 @@ export default function Homepage() {
           <div>
             <h5 className="font-bold mb-2">Games</h5>
             <ul className="cyber-subtitle text-sm space-y-1">
-              <li>Legion Management</li>
               <li>Apex Mind</li>
               <li>LOBSTER BUMP</li>
               <li>WARLORD SAGA</li>
