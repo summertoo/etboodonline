@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom"
-import { Button } from "@/components/ui/button"
-import { CardContent, Card } from "@/components/ui/card"
-import "../components/component/homepage.css"
+import type { Metadata } from "next";
+import { Button } from "@/components/ui/button";
+import { CardContent, Card } from "@/components/ui/card";
+import Navbar from "@/components/Navbar";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Browse ZD Tech's portfolio of decentralized applications, blockchain games, and creative tools built on the Sui network.",
+};
 
 const projects = [
   {
@@ -31,26 +37,12 @@ const projects = [
     desc: "Game Legion Management.",
     url: "https://www.etboodonline.com/dyj/",
   },
-]
+];
 
 export default function Project() {
   return (
     <div className="max-w-7xl mx-auto px-4 cyber-container">
-      <header className="py-6 flex justify-between items-center cyber-header">
-        <Link to="/" className="text-3xl font-bold" style={{ textDecoration: "none" }}>
-          <h1>Write ZD Tech</h1>
-        </Link>
-        <nav className="cyber-nav">
-          <ul className="flex space-x-4">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/what-we-do">What We Do</Link></li>
-            <li><Link to="/service">Service</Link></li>
-            <li><Link to="/project">Project</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </nav>
-      </header>
+      <Navbar />
 
       <section className="text-center py-20 cyber-hero">
         <h2 className="text-4xl font-bold mb-4 cyber-title">Projects</h2>
@@ -68,13 +60,19 @@ export default function Project() {
                 <p className="mb-4">{p.desc}</p>
                 <div className="flex space-x-2">
                   {p.url && (
-                    <Button className="cyber-button-small" onClick={() => window.open(p.url, "_blank")}>Visit</Button>
+                    <a href={p.url} target="_blank" rel="noopener noreferrer">
+                      <Button className="cyber-button-small">Visit</Button>
+                    </a>
                   )}
                   {p.github && (
-                    <Button className="cyber-button-small" onClick={() => window.open(p.github, "_blank")}>GitHub</Button>
+                    <a href={p.github} target="_blank" rel="noopener noreferrer">
+                      <Button className="cyber-button-small">GitHub</Button>
+                    </a>
                   )}
                   {p.comingSoon && !p.url && (
-                    <Button className="cyber-button-small" onClick={() => alert("Coming soon!")}>Coming Soon</Button>
+                    <Button className="cyber-button-small" disabled>
+                      Coming Soon
+                    </Button>
                   )}
                 </div>
               </CardContent>
@@ -84,8 +82,8 @@ export default function Project() {
       </section>
 
       <footer className="py-10 cyber-footer text-center">
-        <p className="cyber-subtitle">Copyright © 2026 ZD tech</p>
+        <p className="cyber-subtitle">Copyright &copy; 2026 ZD Tech</p>
       </footer>
     </div>
-  )
+  );
 }

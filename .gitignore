@@ -1,7 +1,7 @@
 dist/
 node_modules/
 build/
-node_modules
+.next/
 .openclaw/
 AGENTS.md
 SOUL.md
@@ -15,4 +15,15 @@ rsa/
 *.pem
 *.key
 doc/
+docs/
 rsa/
+skills/
+tools/
+videos/
+data/
+scripts/
+game-library-data/
+examples/
+.backup-vite/
+*.skill
+next-env.d.ts
