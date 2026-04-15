@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Building decentralized applications, Web3 games, and creative tools on the Sui blockchain.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/detask9.png",
         width: 1200,
         height: 630,
         alt: "ZD Tech - Web3 Development Studio",
@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     title: "ZD Tech - Web3 Development Studio",
     description:
       "Building decentralized applications, Web3 games, and creative tools on Sui.",
+    images: ["/detask9.png"],
   },
   robots: {
     index: true,
