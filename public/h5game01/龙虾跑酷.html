@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>龙虾跑酷</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background-color: #050505;
+            overflow: hidden;
+            touch-action: none;
+        }
+
+        .neon-text {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+        }
+
+        .neon-text-pink {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #f0f, 0 0 30px #f0f, 0 0 40px #f0f;
+        }
+
+        .btn-difficulty {
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-difficulty:active {
+            transform: scale(0.95);
+        }
+
+        .scanline {
+            width: 100%;
+            height: 100px;
+            z-index: 10;
+            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 100%);
+            opacity: 0.1;
+            position: absolute;
+            bottom: 100%;
+            animation: scanline 10s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes scanline {
+            0%   { bottom: 100%; }
+            100% { bottom: -100%; }
+        }
+
+        .crt::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%),
+                        linear-gradient(90deg, rgba(255,0,0,0.06), rgba(0,255,0,0.02), rgba(0,0,255,0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        #game-canvas { image-rendering: pixelated; }
+    </style>
+</head>
+<body class="h-screen w-screen flex flex-col items-center justify-center text-white select-none">
+
+    <div class="crt absolute inset-0 pointer-events-none z-50"></div>
+    <div class="scanline"></div>
+
+    <div class="relative w-full max-w-md h-full max-h-[900px] flex flex-col bg-gray-900 shadow-2xl overflow-hidden border-x border-gray-800">
+
+        <!-- Header -->
+        <div class="absolute top-0 left-0 w-full p-4 z-30 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
+            <h1 class="text-2xl font-bold font-['Orbitron'] tracking-widest text-cyan-400 neon-text">龙虾跑酷</h1>
+            <div class="text-right">
+                <div class="text-xs text-gray-400">SCORE</div>
+                <div id="score-display" class="text-2xl font-bold text-yellow-400 font-['Orbitron']">0000</div>
+            </div>
+        </div>
+
+        <canvas id="game-canvas" class="block w-full h-full bg-gray-950"></canvas>
+
+        <!-- Main Menu -->
+        <div id="menu-screen" class="absolute inset-0 flex flex-col items-center justify-center z-40 bg-black/90 backdrop-blur-sm">
+            <div class="text-center mb-8 animate-pulse">
+                <h2 class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 font-['Orbitron'] mb-2">龙虾跑酷</h2>
+                <p class="text-cyan-200 text-sm tracking-[0.5em]">选择难度开始</p>
+            </div>
+            <div class="grid grid-cols-1 gap-3 w-3/4 max-w-xs">
+                <button onclick="startGame('easy')"   class="btn-difficulty py-3 px-6 border border-green-500  text-green-400  rounded hover:bg-green-500/20  hover:text-white font-bold tracking-wider">非常简单</button>
+                <button onclick="startGame('normal')" class="btn-difficulty py-3 px-6 border border-blue-500   text-blue-400   rounded hover:bg-blue-500/20   hover:text-white font-bold tracking-wider">有点困难</button>
+                <button onclick="startGame('hard')"   class="btn-difficulty py-3 px-6 border border-orange-500 text-orange-400 rounded hover:bg-orange-500/20 hover:text-white font-bold tracking-wider">地狱模式</button>
+                <button onclick="startGame('boss')"   class="btn-difficulty py-3 px-6 border border-red-600   text-red-500    rounded bg-red-900/10 hover:bg-red-600/40 hover:text-white font-bold tracking-wider shadow-[0_0_15px_rgba(220,38,38,0.5)]">☠ 最终BOSS ☠</button>
+            </div>
+            <div class="mt-8 text-xs text-gray-500">点击屏幕跳跃 / 双击二段跳</div>
+        </div>
+
+        <!-- Game Over -->
+        <div id="game-over-screen" class="hidden absolute inset-0 flex flex-col items-center justify-center z-50 bg-red-900/90 backdrop-blur-md">
+            <h2 class="text-5xl font-black text-white neon-text-pink font-['Orbitron'] mb-2 transform -rotate-6">GAME OVER</h2>
+            <div class="bg-black/50 p-6 rounded-lg border border-red-500/50 text-center mb-8 w-64">
+                <div class="text-gray-400 text-sm mb-1">最终得分</div>
+                <div id="final-score" class="text-4xl font-bold text-yellow-400 font-['Orbitron']">0</div>
+            </div>
+            <button onclick="resetGame()" class="group relative px-8 py-4 bg-transparent overflow-hidden rounded-none border-2 border-white text-white shadow-2xl transition-all hover:bg-white hover:text-black">
+                <span class="relative z-10 font-bold text-xl tracking-widest">重新开始</span>
+            </button>
+        </div>
+
+        <!-- HUD Hint -->
+        <div id="hud-hint" class="absolute bottom-10 w-full text-center pointer-events-none opacity-0 transition-opacity duration-500 z-30">
+            <span class="bg-black/50 text-cyan-300 px-3 py-1 rounded text-sm border border-cyan-500/30">点击跳跃</span>
+        </div>
+    </div>
+
+<script>
+// ─────────────────────────────────────────────
+//  SPRITE SYSTEM
+//  占位：用离屏 canvas 绘制像素风龙虾角色
+//  等美术图到位后，只需替换 loadSprites() 里的
+//  Image src，其余代码完全不用动
+// ─────────────────────────────────────────────
+
+const SPRITE_SIZE = 96; // 每帧尺寸（美术图 96x96）
+
+// 动作定义：帧列表 + 每帧持续tick数
+const ACTION = {
+    run:         { frames: ['run_0','run_1','run_2','run_3','run_4'], speed: 6 },
+    jump:        { frames: ['jump'],          speed: 99 },
+    double_jump: { frames: ['double_jump'],   speed: 99 },
+    fall:        { frames: ['fall'],          speed: 99 },
+    dead:        { frames: ['dead'],          speed: 99 },
+};
+
+// 精灵图集：key -> HTMLImageElement 或离屏canvas
+const sprites = {};
+
+// ── 占位绘制函数（美术图到位后删掉这整块，换成 new Image()）──
+function createPlaceholderSprite(name) {
+    const c = document.createElement('canvas');
+    c.width = SPRITE_SIZE;
+    c.height = SPRITE_SIZE;
+    const x = c.getContext('2d');
+
+    // 颜色主题
+    const bodyColor  = '#ff4444';
+    const shellColor = '#cc2200';
+    const eyeColor   = '#ffff00';
+    const clawColor  = '#ff6666';
+
+    // 根据动作名决定姿势偏移
+    const poses = {
+        run_0:       { legL: -4, legR:  4, bodyY: 0,  clawY: 0  },
+        run_1:       { legL:  0, legR:  0, bodyY:-2,  clawY:-1  },
+        run_2:       { legL:  4, legR: -4, bodyY: 0,  clawY: 0  },
+        run_3:       { legL:  0, legR:  0, bodyY:-1,  clawY:-1  },
+        jump:        { legL: -6, legR: -6, bodyY:-4,  clawY:-3  },
+        double_jump: { legL: -8, legR: -8, bodyY:-6,  clawY:-5  },
+        fall:        { legL:  6, legR:  6, bodyY: 2,  clawY: 1  },
+        dead:        { legL:  8, legR: -8, bodyY: 4,  clawY: 2  },
+    };
+
+    const p = poses[name] || poses['run_0'];
+
+    // 脚底对齐底部（留1px）
+    const baseY = SPRITE_SIZE - 2;
+
+    // 腿
+    x.fillStyle = shellColor;
+    x.fillRect(14 + p.legL, baseY - 10, 5, 10); // 左腿
+    x.fillRect(29 + p.legR, baseY - 10, 5, 10); // 右腿
+
+    // 身体
+    x.fillStyle = bodyColor;
+    x.fillRect(10, baseY - 28 + p.bodyY, 28, 18);
+
+    // 壳纹理
+    x.fillStyle = shellColor;
+    x.fillRect(12, baseY - 26 + p.bodyY, 24,  3);
+    x.fillRect(12, baseY - 21 + p.bodyY, 24,  3);
+    x.fillRect(12, baseY - 16 + p.bodyY, 24,  3);
+
+    // 头
+    x.fillStyle = bodyColor;
+    x.fillRect(13, baseY - 38 + p.bodyY, 22, 12);
+
+    // 眼睛
+    x.fillStyle = eyeColor;
+    x.fillRect(15, baseY - 36 + p.bodyY, 4, 4);
+    x.fillRect(29, baseY - 36 + p.bodyY, 4, 4);
+    x.fillStyle = '#000';
+    x.fillRect(16, baseY - 35 + p.bodyY, 2, 2);
+    x.fillRect(30, baseY - 35 + p.bodyY, 2, 2);
+
+    // 触须
+    x.strokeStyle = shellColor;
+    x.lineWidth = 1;
+    x.beginPath(); x.moveTo(17, baseY - 38 + p.bodyY); x.lineTo(8,  baseY - 46 + p.bodyY); x.stroke();
+    x.beginPath(); x.moveTo(31, baseY - 38 + p.bodyY); x.lineTo(40, baseY - 46 + p.bodyY); x.stroke();
+
+    // 钳子
+    x.fillStyle = clawColor;
+    x.fillRect(4,  baseY - 30 + p.bodyY + p.clawY, 8, 6);  // 左钳
+    x.fillRect(36, baseY - 30 + p.bodyY + p.clawY, 8, 6);  // 右钳
+    x.fillStyle = shellColor;
+    x.fillRect(4,  baseY - 30 + p.bodyY + p.clawY, 4, 3);
+    x.fillRect(40, baseY - 30 + p.bodyY + p.clawY, 4, 3);
+
+    // dead 状态：画X眼
+    if (name === 'dead') {
+        x.strokeStyle = '#fff';
+        x.lineWidth = 2;
+        x.beginPath(); x.moveTo(15, baseY-36+p.bodyY); x.lineTo(19, baseY-32+p.bodyY); x.stroke();
+        x.beginPath(); x.moveTo(19, baseY-36+p.bodyY); x.lineTo(15, baseY-32+p.bodyY); x.stroke();
+        x.beginPath(); x.moveTo(29, baseY-36+p.bodyY); x.lineTo(33, baseY-32+p.bodyY); x.stroke();
+        x.beginPath(); x.moveTo(33, baseY-36+p.bodyY); x.lineTo(29, baseY-32+p.bodyY); x.stroke();
+    }
+
+    return c;
+}
+
+// ── 加载精灵（美术图模式）──
+const FRAME_FILES = {
+    run_0:       'imgs/1跑步.png',
+    run_1:       'imgs/2跑步.png',
+    run_2:       'imgs/3跑步.png',
+    run_3:       'imgs/4跑步.png',
+    run_4:       'imgs/5跑步.png',
+    jump:        'imgs/起跳.png',
+    double_jump: 'imgs/二段跳.png',
+    fall:        'imgs/下落.png',
+    dead:        'imgs/死亡.png',
+};
+
+function loadSprites() {
+    Object.entries(FRAME_FILES).forEach(([name, src]) => {
+        const img = new Image();
+        img.src = src;
+        sprites[name] = img;
+    });
+}
+loadSprites();
+
+// ── 动画状态机 ──
+const anim = {
+    current: 'run',
+    frameIdx: 0,
+    tick: 0,
+
+    setState(name) {
+        if (this.current === name) return;
+        this.current = name;
+        this.frameIdx = 0;
+        this.tick = 0;
+    },
+
+    update() {
+        const act = ACTION[this.current];
+        this.tick++;
+        if (this.tick >= act.speed) {
+            this.tick = 0;
+            this.frameIdx = (this.frameIdx + 1) % act.frames.length;
+        }
+    },
+
+    currentSprite() {
+        const act = ACTION[this.current];
+        return sprites[act.frames[this.frameIdx]];
+    }
+};
+
+// ─────────────────────────────────────────────
+//  AUDIO
+// ─────────────────────────────────────────────
+
+// BGM
+const bgm = new Audio('音乐.mp3');
+bgm.loop   = true;
+bgm.volume = 0.5;
+
+function bgmPlay()  { bgm.play().catch(() => {}); }
+function bgmStop()  { bgm.pause(); bgm.currentTime = 0; }
+
+let synth, noiseSynth;
+let audioInitialized = false;
+
+async function initAudio() {
+    if (audioInitialized) return;
+    await Tone.start();
+    synth = new Tone.PolySynth(Tone.Synth, {
+        oscillator: { type: 'square' },
+        envelope: { attack: 0.01, decay: 0.1, sustain: 0.1, release: 0.1 }
+    }).toDestination();
+    synth.volume.value = -10;
+    noiseSynth = new Tone.NoiseSynth({
+        noise: { type: 'pink' },
+        envelope: { attack: 0.005, decay: 0.3, sustain: 0 }
+    }).toDestination();
+    audioInitialized = true;
+}
+
+const playJumpSound       = () => audioInitialized && synth.triggerAttackRelease(['C5','E5'], '16n');
+const playDoubleJumpSound = () => audioInitialized && synth.triggerAttackRelease(['G5','B5'], '16n');
+const playCrashSound      = () => audioInitialized && noiseSynth.triggerAttackRelease('8n');
+
+// ─────────────────────────────────────────────
+//  GAME CORE
+// ─────────────────────────────────────────────
+const canvas = document.getElementById('game-canvas');
+const ctx    = canvas.getContext('2d');
+
+const DIFFICULTY = {
+    easy:   { speed:  5, spawnRate: 120, obsSize: 30, color: '#4ade80' },
+    normal: { speed:  8, spawnRate:  90, obsSize: 40, color: '#60a5fa' },
+    hard:   { speed: 12, spawnRate:  60, obsSize: 50, color: '#fb923c' },
+    boss:   { speed: 16, spawnRate:  40, obsSize: 60, color: '#f87171' },
+};
+
+let gameState = {
+    isRunning: false, isGameOver: false,
+    score: 0, speed: 0, frames: 0,
+    difficulty: 'easy', width: 0, height: 0
+};
+
+const player = {
+    x: 50, y: 0,
+    width: 30, height: 40,   // 碰撞盒略高，匹配角色比例
+    dy: 0, jumpForce: 13, gravity: 0.6,
+    grounded: false, jumps: 0, maxJumps: 2,
+    trail: []
+};
+
+let obstacles = [], particles = [], bgOffset = 0;
+
+// 背景图
+const bgImage = new Image();
+bgImage.src = 'imgs/bg.jpg';
+
+// ── Resize ──
+function resize() {
+    const c = canvas.parentElement;
+    canvas.width  = c.clientWidth;
+    canvas.height = c.clientHeight;
+    gameState.width  = canvas.width;
+    gameState.height = canvas.height;
+    if (!gameState.isRunning) {
+        player.y = gameState.height - 100 - player.height;
+    }
+}
+window.addEventListener('resize', resize);
+resize();
+
+// ── Input ──
+function handleInput(e) {
+    if (e.type === 'keydown' && e.code !== 'Space') return;
+    if (e.type === 'touchstart') e.preventDefault();
+    if (gameState.isGameOver || !gameState.isRunning) return;
+
+    if (player.jumps < player.maxJumps) {
+        player.dy = -player.jumpForce;
+        player.jumps++;
+        player.grounded = false;
+        createParticles(player.x + player.width / 2, player.y + player.height, 5, '#0ff');
+        if (player.jumps === 1) playJumpSound();
+        else playDoubleJumpSound();
+    }
+}
+window.addEventListener('keydown', handleInput);
+canvas.addEventListener('touchstart', handleInput, { passive: false });
+canvas.addEventListener('mousedown',  handleInput);
+
+// ── Game Flow ──
+function startGame(difficulty) {
+    initAudio();
+    gameState.difficulty = difficulty;
+    gameState.speed      = DIFFICULTY[difficulty].speed;
+    gameState.score      = 0;
+    gameState.frames     = 0;
+    gameState.isRunning  = true;
+    gameState.isGameOver = false;
+
+    player.y       = gameState.height - 100 - player.height;
+    player.dy      = 0;
+    player.jumps   = 0;
+    player.grounded = true;
+    player.trail   = [];
+
+    obstacles = [];
+    particles = [];
+
+    anim.setState('run');
+    bgmPlay();
+
+    document.getElementById('menu-screen').classList.add('hidden');
+    document.getElementById('game-over-screen').classList.add('hidden');
+    document.getElementById('score-display').innerText = '0000';
+
+    const hint = document.getElementById('hud-hint');
+    hint.style.opacity = '1';
+    setTimeout(() => hint.style.opacity = '0', 2000);
+
+    requestAnimationFrame(gameLoop);
+}
+
+function resetGame() {
+    bgmStop();
+    document.getElementById('game-over-screen').classList.add('hidden');
+    document.getElementById('menu-screen').classList.remove('hidden');
+}
+
+function gameOver() {
+    gameState.isRunning  = false;
+    gameState.isGameOver = true;
+    anim.setState('dead');
+    bgmStop();
+    playCrashSound();
+    document.getElementById('final-score').innerText = Math.floor(gameState.score);
+    document.getElementById('game-over-screen').classList.remove('hidden');
+}
+
+// ── Spawn ──
+function spawnObstacle() {
+    const s    = DIFFICULTY[gameState.difficulty];
+    const size = s.obsSize + Math.random() * 20;
+    let yPos   = gameState.height - 100 - size;
+    let type   = 'ground';
+    if (gameState.difficulty !== 'easy' && Math.random() > 0.7) {
+        yPos -= (40 + Math.random() * 60);
+        type = 'air';
+    }
+    obstacles.push({ x: gameState.width, y: yPos, width: size, height: size, type, color: s.color });
+}
+
+function createParticles(x, y, count, color) {
+    for (let i = 0; i < count; i++) {
+        particles.push({
+            x, y,
+            vx: (Math.random() - 0.5) * 5,
+            vy: (Math.random() - 0.5) * 5,
+            life: 1.0, color
+        });
+    }
+}
+
+// ── Update ──
+function update() {
+    if (!gameState.isRunning) return;
+
+    gameState.frames++;
+    gameState.score += 0.1;
+    document.getElementById('score-display').innerText =
+        Math.floor(gameState.score).toString().padStart(4, '0');
+
+    if (gameState.frames % 600 === 0) gameState.speed += 0.5;
+
+    // Physics
+    player.dy += player.gravity;
+    player.y  += player.dy;
+
+    const floorY = gameState.height - 100;
+    if (player.y + player.height > floorY) {
+        player.y       = floorY - player.height;
+        player.dy      = 0;
+        player.jumps   = 0;
+        player.grounded = true;
+    }
+
+    // ── 动作状态切换 ──
+    if (player.grounded) {
+        anim.setState('run');
+    } else if (player.dy < 0) {
+        anim.setState(player.jumps === 1 ? 'jump' : 'double_jump');
+    } else {
+        anim.setState('fall');
+    }
+    anim.update();
+
+    // Trail
+    if (gameState.frames % 3 === 0) {
+        player.trail.push({ x: player.x, y: player.y, alpha: 0.5 });
+    }
+    player.trail.forEach(t => { t.x -= gameState.speed; t.alpha -= 0.05; });
+    player.trail = player.trail.filter(t => t.alpha > 0);
+
+    // 跑步时脚底尘土粒子
+    if (player.grounded && gameState.frames % 4 === 0) {
+        for (let i = 0; i < 2; i++) {
+            particles.push({
+                x: player.x + player.width / 2 + (Math.random() - 0.5) * 10,
+                y: player.y + player.height,
+                vx: (Math.random() - 0.7) * 2,
+                vy: -(Math.random() * 1.5),
+                life: 0.6 + Math.random() * 0.3,
+                color: `hsl(${20 + Math.random()*20}, 80%, 55%)`,
+                size: 2 + Math.random() * 2
+            });
+        }
+    }
+
+    // Obstacles
+    const spawnRate = Math.max(30, DIFFICULTY[gameState.difficulty].spawnRate - gameState.score / 100);
+    if (gameState.frames % Math.floor(spawnRate) === 0) spawnObstacle();
+
+    for (let i = obstacles.length - 1; i >= 0; i--) {
+        const obs = obstacles[i];
+        obs.x -= gameState.speed;
+
+        if (
+            player.x              < obs.x + obs.width  &&
+            player.x + player.width  > obs.x           &&
+            player.y              < obs.y + obs.height  &&
+            player.y + player.height > obs.y
+        ) {
+            createParticles(player.x, player.y, 20, '#f00');
+            gameOver();
+        }
+
+        if (obs.x + obs.width < 0) {
+            obstacles.splice(i, 1);
+            gameState.score += 10;
+        }
+    }
+
+    // Particles
+    particles.forEach(p => {
+        p.x  += p.vx;
+        p.y  += p.vy;
+        p.vy += 0.1; // 重力下坠
+        p.life -= 0.03;
+    });
+    particles = particles.filter(p => p.life > 0);
+}
+
+// ── Draw ──
+function draw() {
+    ctx.fillStyle = '#050505';
+    ctx.fillRect(0, 0, gameState.width, gameState.height);
+
+    // 背景图无限滚动
+    if (bgImage.complete && bgImage.naturalWidth > 0) {
+        const scale = gameState.height / bgImage.naturalHeight;
+        const drawW = Math.ceil(bgImage.naturalWidth * scale) + 1; // +1 消除接缝细线
+        bgOffset = (bgOffset - gameState.speed * 0.6) % drawW;
+        for (let x = bgOffset - drawW; x < gameState.width; x += drawW) {
+            ctx.drawImage(bgImage, Math.floor(x), 0, drawW, gameState.height);
+        }
+        // 整体压暗，让障碍物更显眼
+        ctx.fillStyle = 'rgba(0,0,0,0.01)';
+        ctx.fillRect(0, 0, gameState.width, gameState.height);
+    } else {
+        ctx.strokeStyle = 'rgba(0,255,255,0.2)';
+        ctx.lineWidth = 1;
+        bgOffset = (bgOffset - gameState.speed) % 40;
+        for (let x = bgOffset; x < gameState.width; x += 40) {
+            ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, gameState.height); ctx.stroke();
+        }
+    }
+
+    // Floor
+    const floorY = gameState.height - 100;
+    ctx.fillStyle = '#111';
+    ctx.fillRect(0, floorY, gameState.width, 100);
+    ctx.strokeStyle = '#0ff';
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(0, floorY); ctx.lineTo(gameState.width, floorY); ctx.stroke();
+
+    let floorOffset = (gameState.frames * gameState.speed) % 100;
+    for (let x = -floorOffset; x < gameState.width; x += 100) {
+        ctx.beginPath(); ctx.moveTo(x, floorY); ctx.lineTo(x - 50, gameState.height); ctx.stroke();
+    }
+
+    // Trail已移除，改用脚底跑步粒子（在update里生成）
+
+    // ── 绘制角色精灵 ──
+    // 脚底对齐碰撞盒底部，左右居中
+    const sp  = anim.currentSprite();
+    const drawX = player.x - (SPRITE_SIZE - player.width)  / 2;
+    const drawY = player.y - (SPRITE_SIZE - player.height);
+
+    ctx.shadowBlur  = 12;
+    ctx.shadowColor = '#0ff';
+    if (sp) ctx.drawImage(sp, drawX, drawY, SPRITE_SIZE, SPRITE_SIZE);
+    ctx.shadowBlur = 0;
+
+    // Obstacles
+    obstacles.forEach(obs => {
+        ctx.shadowBlur  = 10;
+        ctx.shadowColor = obs.color;
+        ctx.fillStyle   = obs.color;
+        if (obs.type === 'air') {
+            ctx.beginPath();
+            ctx.moveTo(obs.x + obs.width / 2, obs.y);
+            ctx.lineTo(obs.x + obs.width, obs.y + obs.height);
+            ctx.lineTo(obs.x, obs.y + obs.height);
+            ctx.closePath();
+            ctx.fill();
+        } else {
+            ctx.fillRect(obs.x, obs.y, obs.width, obs.height);
+        }
+        ctx.shadowBlur  = 0;
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth   = 3;
+        ctx.strokeRect(obs.x, obs.y, obs.width, obs.height);
+    });
+
+    // Particles
+    particles.forEach(p => {
+        ctx.globalAlpha = p.life;
+        ctx.fillStyle   = p.color;
+        const sz = p.size || 4;
+        ctx.fillRect(p.x, p.y, sz, sz);
+        ctx.globalAlpha = 1;
+    });
+}
+
+function gameLoop() {
+    update();
+    draw();
+    if (gameState.isRunning) requestAnimationFrame(gameLoop);
+}
+
+resize();
+draw();
+</script>
+</body>
+</html>

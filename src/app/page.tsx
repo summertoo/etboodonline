@@ -83,6 +83,12 @@ const projectsData = [
 
 const webGamesData = [
   {
+    id: 0, title: "🦞 龙虾跑酷 (Lobster Run)",
+    description: "A fun lobster parkour H5 game - run, jump, and dodge obstacles!",
+    liveUrl: "/h5game01/龙虾跑酷.html",
+    isNew: true,
+  },
+  {
     id: 1, title: "Hand Battle",
     description: "A game where players can battle with their hands.",
     liveUrl: "https://handbattle.etboodonline.com/",
@@ -334,9 +340,16 @@ export default function Homepage() {
             <RevealSection key={game.id} delay={i * 100}>
               <Card className="cyber-card h-full">
                 <CardContent className="p-5">
-                  <h4 className="font-semibold text-lg mb-2">{game.title}</h4>
+                  <div className="flex items-center gap-2 mb-2">
+                    <h4 className="font-semibold text-lg">{game.title}</h4>
+                    {game.isNew && (
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-[rgba(14,165,233,0.1)] text-[var(--cyber-primary)] font-bold">
+                        NEW
+                      </span>
+                    )}
+                  </div>
                   <p className="text-sm mb-3">{game.description}</p>
-                  <a href={game.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <a href={game.liveUrl} target={game.liveUrl.startsWith("/") ? "_self" : "_blank"} rel="noopener noreferrer">
                     <Button className="cyber-button-small">Play Now</Button>
                   </a>
                 </CardContent>
