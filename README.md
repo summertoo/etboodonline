@@ -96,6 +96,7 @@ New site object ID: 0x2571e2fe504cc0c93d6a44fc419c02917402e5031ee34ca26f6e747f42
 ⚠️ wal.app only supports sites deployed on mainnet.
 
 
+# sample
 
 https://write.wal.app
 
