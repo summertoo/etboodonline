@@ -101,6 +101,34 @@ const robloxDatasData = [
     icon: "pie-chart",
     image: "",
   },
+  {
+    id: 2,
+    title: "Apex Mind",
+    description: "Independent developer Roblox game experience",
+    liveUrl: "https://www.roblox.com/games/126170387607652",
+    githubUrl: "",
+    icon: "pie-chart",
+    image: "",
+  },
+  {
+    id: 3,
+    title: "LOBSTER BUMP",
+    description: "Independent developer Roblox game experience",
+    liveUrl: "https://www.roblox.com/games/102614376416074",
+    githubUrl: "",
+    icon: "pie-chart",
+    image: "",
+  },
+  {
+    id: 4,
+    title: "WARLORD SAGA",
+    description: "Independent developer Roblox game experience",
+    liveUrl: "",
+    githubUrl: "",
+    icon: "pie-chart",
+    image: "",
+    comingSoon: true,
+  },
 ];
 
 // SVG Icons
@@ -336,14 +364,18 @@ export default function Homepage() {
                 <h4 className="font-semibold text-lg">{game.title}</h4>
                 <p>{game.description}</p>
                 <div className="flex space-x-2 mt-2">
-                  {game.liveUrl && (
+                  {game.liveUrl && game.liveUrl !== "" ? (
                     <Button
                       className="cyber-button-small"
                       onClick={() => window.open(game.liveUrl, "_blank")}
                     >
                       Visit
                     </Button>
-                  )}
+                  ) : game.comingSoon ? (
+                    <Button className="cyber-button-small" disabled>
+                      Coming Soon
+                    </Button>
+                  ) : null}
                 </div>
               </CardContent>
             </Card>
