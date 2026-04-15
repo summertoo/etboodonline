@@ -55,23 +55,18 @@ const projectsData = [
     githubUrl: "https://github.com/summertoo/ruok",
   },
   {
-    id: 2, title: "Mini Soccer",
-    description: "Mini Soccer is a game that allows players to play soccer in the metaverse.",
-    liveUrl: "https://soccerdemo.edgeone.app/",
-    githubUrl: "",
-  },
-  {
-    id: 3, title: "Sui Write3",
+    id: 2, title: "Sui Write3",
     description: "A platform for novel authors to upload novels on Sui blockchain.",
     liveUrl: "",
     githubUrl: "https://github.com/etboodXJ/SuiWrite3",
     comingSoon: true,
   },
   {
-    id: 4, title: "Hand Battle",
+    id: 3, title: "Hand Battle",
     description: "A game where players can battle with their hands.",
-    liveUrl: "https://handbattle.etboodonline.com/",
+    liveUrl: "",
     githubUrl: "",
+    comingSoon: true,
   },
 ];
 
@@ -83,12 +78,7 @@ const webGamesData = [
     isNew: true,
   },
   {
-    id: 1, title: "Hand Battle",
-    description: "A game where players can battle with their hands.",
-    liveUrl: "https://handbattle.etboodonline.com/",
-  },
-  {
-    id: 2, title: "Mini Soccer",
+    id: 1, title: "Mini Soccer",
     description: "Mini Soccer is a game that allows players to play soccer in the metaverse.",
     liveUrl: "https://soccerdemo.edgeone.app/",
   },

@@ -26,17 +26,7 @@ const projects = [
     desc: "A platform for novel authors to upload novels.",
     github: "https://github.com/etboodXJ/SuiWrite3",
     comingSoon: true,
-  },
-  {
-    title: "Hand Battle",
-    desc: "A game where players can battle with their hands.",
-    url: "https://handbattle.etboodonline.com/",
-  },
-  {
-    title: "Legion Management",
-    desc: "Game Legion Management.",
-    url: "https://www.etboodonline.com/dyj/",
-  },
+  }
 ];
 
 export default function Project() {
