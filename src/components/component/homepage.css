@@ -372,6 +372,26 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Page enter animation */
+@keyframes pageIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-page-in {
+  animation: pageIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 /* Card hover lift */
 .cyber-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;

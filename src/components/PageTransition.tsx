@@ -5,30 +5,21 @@ import { useEffect, useState } from "react";
 
 export default function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [displayChildren, setDisplayChildren] = useState(children);
-  const [stage, setStage] = useState<"enter" | "exit">("enter");
+  const [animKey, setAnimKey] = useState(pathname);
+  const [animClass, setAnimClass] = useState("");
 
   useEffect(() => {
-    // Trigger exit animation
-    setStage("exit");
-
-    const timer = setTimeout(() => {
-      setDisplayChildren(children);
-      setStage("enter");
-    }, 200); // match exit duration
-
-    return () => clearTimeout(timer);
-  }, [pathname, children]);
+    // Trigger bounce-in animation on route change
+    setAnimClass("");
+    requestAnimationFrame(() => {
+      setAnimKey(pathname);
+      setAnimClass("animate-page-in");
+    });
+  }, [pathname]);
 
   return (
-    <div
-      style={{
-        opacity: stage === "enter" ? 1 : 0,
-        transform: stage === "enter" ? "translateY(0)" : "translateY(12px)",
-        transition: "opacity 0.25s ease, transform 0.25s ease",
-      }}
-    >
-      {displayChildren}
+    <div key={animKey} className={animClass}>
+      {children}
     </div>
   );
 }
