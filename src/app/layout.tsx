@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "@/components/component/homepage.css";
 import { Providers } from "./providers";
-import PageTransition from "@/components/PageTransition";
 
 export const metadata: Metadata = {
   title: {
@@ -117,9 +116,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Providers>
-          <PageTransition>{children}</PageTransition>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
