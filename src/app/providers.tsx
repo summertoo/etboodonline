@@ -12,6 +12,7 @@ import {
 } from "@mysten/dapp-kit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Theme } from "@radix-ui/themes";
+import { LangProvider } from "@/components/LangProvider";
 
 const queryClient = new QueryClient();
 
@@ -27,7 +28,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
     <Theme appearance="dark">
       <QueryClientProvider client={queryClient}>
         <SuiClientProvider networks={networkConfig} defaultNetwork="devnet">
-          <WalletProvider autoConnect>{children}</WalletProvider>
+          <WalletProvider autoConnect>
+            <LangProvider>{children}</LangProvider>
+          </WalletProvider>
         </SuiClientProvider>
       </QueryClientProvider>
     </Theme>
