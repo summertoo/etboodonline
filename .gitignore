@@ -27,3 +27,4 @@ examples/
 .backup-vite/
 *.skill
 next-env.d.ts
+tsconfig.tsbuildinfo
