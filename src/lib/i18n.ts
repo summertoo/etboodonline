@@ -129,6 +129,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     "articles.title": "📝 Articles & Tutorials",
     "articles.subtitle": "Technical writings and blockchain tutorials.",
     "articles.read": "Read →",
+
+    // Novels
+    "novels.title": "📚 Creative Writing",
+    "novels.subtitle": "Fiction and creative works.",
+    "novels.read": "Read Novel →",
   },
 
   zh: {
@@ -259,5 +264,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "articles.title": "📝 技术文章",
     "articles.subtitle": "技术分享与区块链教程。",
     "articles.read": "阅读 →",
+
+    // Novels
+    "novels.title": "📚 创作小说",
+    "novels.subtitle": "原创小说与文学创作。",
+    "novels.read": "阅读小说 →",
   },
 };

@@ -269,6 +269,43 @@ export default function Homepage() {
         </div>
       </section>
 
+      {/* Novels */}
+      <section className="py-20">
+        <RevealSection>
+          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">{t("novels.title")}</h3>
+          <p className="mb-10 text-center cyber-subtitle">{t("novels.subtitle")}</p>
+        </RevealSection>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            {
+              icon: "👨‍💻",
+              title: "码农穿越平民世界",
+              desc: lang === "zh"
+                ? "一个程序员意外穿越到平民世界，用代码思维解决古代生活难题的故事。连载于番茄小说。"
+                : "A web novel about a coder who transmigrates to the common people's world. Serialized on Fanqie Novel.",
+              platform: "番茄小说",
+              url: "https://fanqienovel.com/page/7516472366981975102",
+            },
+          ].map((novel, i) => (
+            <RevealSection key={i} delay={i * 100}>
+              <Card className="cyber-card h-full">
+                <CardContent className="p-5">
+                  <div className="text-3xl mb-3">{novel.icon}</div>
+                  <h4 className="font-semibold text-lg mb-2">{novel.title}</h4>
+                  <p className="text-sm mb-3">{novel.desc}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-[var(--cyber-muted)]">📖 {novel.platform}</span>
+                    <a href={novel.url} target="_blank" rel="noopener noreferrer">
+                      <Button className="cyber-button-small">{t("novels.read")}</Button>
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            </RevealSection>
+          ))}
+        </div>
+      </section>
+
       {/* Banner */}
       <RevealSection>
         <section className="py-16">
