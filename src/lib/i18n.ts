@@ -124,6 +124,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dapp.miniSoccer": "Mini Soccer",
     "dapp.suiWrite3": "Sui Write3",
     "dapp.handBattle": "Hand Battle",
+
+    // Articles
+    "articles.title": "📝 Articles & Tutorials",
+    "articles.subtitle": "Technical writings and blockchain tutorials.",
+    "articles.read": "Read →",
   },
 
   zh: {
@@ -249,5 +254,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dapp.miniSoccer": "Mini Soccer",
     "dapp.suiWrite3": "Sui Write3",
     "dapp.handBattle": "Hand Battle",
+
+    // Articles
+    "articles.title": "📝 技术文章",
+    "articles.subtitle": "技术分享与区块链教程。",
+    "articles.read": "阅读 →",
   },
 };

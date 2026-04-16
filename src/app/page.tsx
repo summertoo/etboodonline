@@ -75,7 +75,7 @@ function RobloxCard({ title, descKey, liveUrl, status, index, t }: {
 
 // ─── Main Page ───────────────────────────────────────────
 export default function Homepage() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [subEmail, setSubEmail] = useState("");
   const [subStatus, setSubStatus] = useState<"idle" | "loading" | "ok" | "dup" | "error">("idle");
 
@@ -220,6 +220,43 @@ export default function Homepage() {
               </CardContent>
             </Card>
           </RevealSection>
+        </div>
+      </section>
+
+      {/* Articles */}
+      <section className="py-20">
+        <RevealSection>
+          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">{t("articles.title")}</h3>
+          <p className="mb-10 text-center cyber-subtitle">{t("articles.subtitle")}</p>
+        </RevealSection>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            {
+              icon: "📖",
+              title: "从0基础开始写 Sui MOVE 应用&游戏实战系列",
+              desc: lang === "zh"
+                ? "在登链社区连载的 Sui Move 开发系列教程，从零基础到实战项目。"
+                : "A Sui Move development tutorial series on LearnBlockchain, from beginner to real-world projects.",
+              platform: "LearnBlockchain",
+              url: "https://learnblockchain.cn/column/47",
+            },
+          ].map((article, i) => (
+            <RevealSection key={i} delay={i * 100}>
+              <Card className="cyber-card h-full">
+                <CardContent className="p-5">
+                  <div className="text-3xl mb-3">{article.icon}</div>
+                  <h4 className="font-semibold text-lg mb-2">{article.title}</h4>
+                  <p className="text-sm mb-3">{article.desc}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-[var(--cyber-muted)]">📌 {article.platform}</span>
+                    <a href={article.url} target="_blank" rel="noopener noreferrer">
+                      <Button className="cyber-button-small">{t("articles.read")}</Button>
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            </RevealSection>
+          ))}
         </div>
       </section>
 
