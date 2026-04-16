@@ -240,6 +240,15 @@ export default function Homepage() {
               platform: "LearnBlockchain",
               url: "https://learnblockchain.cn/column/47",
             },
+            {
+              icon: "🚀",
+              title: "星航计划 DeTask 找活网 Web3 DApp 应用开发",
+              desc: lang === "zh"
+                ? "星航计划实战项目，从零开发 Web3 去中心化任务平台 DApp。"
+                : "Star Voyage project: building a decentralized task platform DApp on Web3.",
+              platform: "LearnBlockchain",
+              url: "https://learnblockchain.cn/column/43",
+            },
           ].map((article, i) => (
             <RevealSection key={i} delay={i * 100}>
               <Card className="cyber-card h-full">
