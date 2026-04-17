@@ -175,6 +175,35 @@ export default function Homepage() {
         </div>
       </section>
 
+      {/* OPC Network */}
+      <section className="py-20">
+        <RevealSection>
+          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">{t("opc.title")}</h3>
+          <p className="mb-10 text-center cyber-subtitle">{t("opc.subtitle")}</p>
+        </RevealSection>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <RevealSection delay={0}>
+            <Card className="cyber-card h-full">
+              <CardContent className="p-5">
+                <div className="text-3xl mb-3">🔗</div>
+                <h4 className="font-semibold text-lg mb-2">OPC Hub</h4>
+                <p className="text-sm mb-3">
+                  {lang === "zh"
+                    ? "开源一人公司（One Person Company）协作网络核心仓库，提供身份认证、任务协作、信任体系等基础设施。"
+                    : "Core repository for the Open Person Company collaborative network, providing identity, task collaboration, and trust infrastructure."}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-[var(--cyber-muted)]">⚡ {lang === "zh" ? "核心项目" : "Core Project"}</span>
+                  <a href="https://github.com/summertoo/opc-hub" target="_blank" rel="noopener noreferrer">
+                    <Button className="cyber-button-small">{t("opc.visit")}</Button>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </RevealSection>
+        </div>
+      </section>
+
       {/* Web Games */}
       <section className="py-20">
         <RevealSection>

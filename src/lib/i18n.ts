@@ -134,6 +134,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     "novels.title": "📚 Creative Writing",
     "novels.subtitle": "Fiction and creative works.",
     "novels.read": "Read Novel →",
+
+    // OPC Network
+    "opc.title": "🌐 OPC Network",
+    "opc.subtitle": "Open Person Company collaborative network projects.",
+    "opc.visit": "GitHub →",
   },
 
   zh: {
@@ -269,5 +274,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "novels.title": "📚 创作小说",
     "novels.subtitle": "原创小说与文学创作。",
     "novels.read": "阅读小说 →",
+
+    // OPC Network
+    "opc.title": "🌐 开源一人公司（OPC）协作网络",
+    "opc.subtitle": "开源一人公司协作网络相关项目集合。",
+    "opc.visit": "GitHub →",
   },
 };
