@@ -102,13 +102,13 @@ export default function Homepage() {
     { id: 1, titleKey: "dapp.areYouOkay", descKey: "dapp.ruokDesc", liveUrl: "https://ruok3.vercel.app/", githubUrl: "https://github.com/summertoo/ruok" },
     { id: 2, titleKey: "dapp.miniSoccer", descKey: "game.miniSoccerDesc", liveUrl: "https://soccerdemo.edgeone.app/", githubUrl: "" },
     { id: 3, titleKey: "dapp.suiWrite3", descKey: "dapp.write3Desc", liveUrl: "", githubUrl: "https://github.com/etboodXJ/SuiWrite3", comingSoon: true },
-    { id: 4, titleKey: "dapp.handBattle", descKey: "game.handBattleDesc", liveUrl: "https://handbattle.etboodonline.com/", githubUrl: "" },
+    // { id: 4, titleKey: "dapp.handBattle", descKey: "game.handBattleDesc", liveUrl: "https://handbattle.etboodonline.com/", githubUrl: "" },
   ];
 
   const webGames = [
     { id: 0, title: "🦞 龙虾跑酷 (Lobster Run)", descKey: "game.lobsterRunDesc", liveUrl: "/h5game01/龙虾跑酷.html", isNew: true },
-    { id: 1, title: "Hand Battle", descKey: "game.handBattleDesc", liveUrl: "https://handbattle.etboodonline.com/" },
-    { id: 2, title: "Mini Soccer", descKey: "game.miniSoccerDesc", liveUrl: "https://soccerdemo.edgeone.app/" },
+    // { id: 1, title: "Hand Battle", descKey: "game.handBattleDesc", liveUrl: "https://handbattle.etboodonline.com/" },
+    { id: 1, title: "Mini Soccer", descKey: "game.miniSoccerDesc", liveUrl: "https://soccerdemo.edgeone.app/" },
   ];
 
   return (
