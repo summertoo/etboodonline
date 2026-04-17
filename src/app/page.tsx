@@ -201,6 +201,44 @@ export default function Homepage() {
               </CardContent>
             </Card>
           </RevealSection>
+          <RevealSection delay={100}>
+            <Card className="cyber-card h-full">
+              <CardContent className="p-5">
+                <div className="text-3xl mb-3">🎨</div>
+                <h4 className="font-semibold text-lg mb-2">创意空间 (DeGame Tropical Island)</h4>
+                <p className="text-sm mb-3">
+                  {lang === "zh"
+                    ? "提供创意空间，为创作者提供创意支持，激发灵感与协作。"
+                    : "A creative space providing inspiration and support for creators to collaborate and innovate."}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-[var(--cyber-muted)]">💡 {lang === "zh" ? "创意工具" : "Creative Tool"}</span>
+                  <a href="https://github.com/etboodXJ/DeGameTropicalIsLand" target="_blank" rel="noopener noreferrer">
+                    <Button className="cyber-button-small">{t("opc.visit")}</Button>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </RevealSection>
+          <RevealSection delay={200}>
+            <Card className="cyber-card h-full">
+              <CardContent className="p-5">
+                <div className="text-3xl mb-3">🤖</div>
+                <h4 className="font-semibold text-lg mb-2">OC Network (原创角色网络)</h4>
+                <p className="text-sm mb-3">
+                  {lang === "zh"
+                    ? "原创角色网络，为创作者提供私有 AI 智能体，赋能角色创作与互动。"
+                    : "Original Character network providing private AI agents for creators, empowering character creation and interaction."}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-[var(--cyber-muted)]">🧠 {lang === "zh" ? "AI 智能体" : "AI Agent"}</span>
+                  <a href="https://github.com/etboodXJ/ocnetwork" target="_blank" rel="noopener noreferrer">
+                    <Button className="cyber-button-small">{t("opc.visit")}</Button>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </RevealSection>
         </div>
       </section>
 
