@@ -13,7 +13,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     // Hero
     "hero.title": "ZD Tech Studio",
     "hero.subtitle": "Building Web3 games, DApps & creative tools on Sui",
-    "hero.tagline": "Independent game developer • Roblox creator • Blockchain builder",
+    "hero.tagline":
+      "Independent game developer • Roblox creator • Blockchain builder",
     "hero.contact": "Contact Now",
     "hero.viewGames": "View Games ↓",
 
@@ -54,7 +55,8 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Footer
     "footer.about": "ZD Tech",
-    "footer.aboutDesc": "Independent game developer & Web3 builder. Creating experiences on Roblox and Sui blockchain.",
+    "footer.aboutDesc":
+      "Independent game developer & Web3 builder. Creating experiences on Roblox and Sui blockchain.",
     "footer.games": "Games",
     "footer.projects": "Projects",
     "footer.connect": "Connect",
@@ -62,13 +64,17 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // What We Do
     "whatwedo.title": "What We Do",
-    "whatwedo.subtitle": "We build decentralized applications, web3 games, and creative tools on cutting-edge blockchain technology.",
+    "whatwedo.subtitle":
+      "We build decentralized applications, web3 games, and creative tools on cutting-edge blockchain technology.",
     "whatwedo.dappTitle": "DApp Development",
-    "whatwedo.dappDesc": "Full-stack decentralized application development on Sui Network, from smart contracts to frontend interfaces.",
+    "whatwedo.dappDesc":
+      "Full-stack decentralized application development on Sui Network, from smart contracts to frontend interfaces.",
     "whatwedo.gameTitle": "Web3 Games",
-    "whatwedo.gameDesc": "Browser-based and Roblox games with blockchain integration, NFT assets, and play-to-earn mechanics.",
+    "whatwedo.gameDesc":
+      "Browser-based and Roblox games with blockchain integration, NFT assets, and play-to-earn mechanics.",
     "whatwedo.consultTitle": "Technical Consulting",
-    "whatwedo.consultDesc": "Architecture design, code review, and technical guidance for blockchain projects and teams.",
+    "whatwedo.consultDesc":
+      "Architecture design, code review, and technical guidance for blockchain projects and teams.",
 
     // Service
     "service.title": "Our Services",
@@ -76,11 +82,14 @@ export const translations: Record<Lang, Record<string, string>> = {
     "service.s1Title": "Smart Contract Development",
     "service.s1Desc": "Secure, audited Move smart contracts on Sui Network.",
     "service.s2Title": "Frontend & UI/UX",
-    "service.s2Desc": "Modern React-based interfaces with wallet integration and responsive design.",
+    "service.s2Desc":
+      "Modern React-based interfaces with wallet integration and responsive design.",
     "service.s3Title": "Game Development",
-    "service.s3Desc": "Browser games, Roblox experiences, and blockchain-powered game economies.",
+    "service.s3Desc":
+      "Browser games, Roblox experiences, and blockchain-powered game economies.",
     "service.s4Title": "DevOps & Deployment",
-    "service.s4Desc": "CI/CD pipelines, Vercel deployment, and infrastructure management.",
+    "service.s4Desc":
+      "CI/CD pipelines, Vercel deployment, and infrastructure management.",
 
     // Project
     "project.title": "Projects",
@@ -104,20 +113,29 @@ export const translations: Record<Lang, Record<string, string>> = {
     "contact.sent": "Thanks! We'll get back to you soon.",
 
     // Roblox game descriptions
-    "game.apexMindDesc": "A challenging mind-bending puzzle experience on Roblox.",
-    "game.lobsterBumpDesc": "Bump, compete, and dominate in this fast-paced Roblox game.",
-    "game.warlordSagaDesc": "An epic saga of warlords battling for supremacy. Coming soon.",
-    "game.lobsterRunDesc": "A fun lobster parkour H5 game - run, jump, and dodge obstacles!",
+    "game.apexMindDesc":
+      "A challenging mind-bending puzzle experience on Roblox.",
+    "game.lobsterBumpDesc":
+      "Bump, compete, and dominate in this fast-paced Roblox game.",
+    "game.warlordSagaDesc":
+      "An epic saga of warlords battling for supremacy. Coming soon.",
+    "game.lobsterRunDesc":
+      "A fun lobster parkour H5 game - run, jump, and dodge obstacles!",
     "game.handBattleDesc": "A game where players can battle with their hands.",
-    "game.miniSoccerDesc": "Mini Soccer is a game that allows players to play soccer in the metaverse.",
+    "game.miniSoccerDesc":
+      "Mini Soccer is a game that allows players to play soccer in the metaverse.",
+    "game.comingSoonDesc": "Coming soon. Stay tuned!",
 
     // DApp descriptions
-    "dapp.ruokDesc": "A Decentralized Check-In Triggered Timed Transfer DApp On Sui Network",
-    "dapp.write3Desc": "A platform for novel authors to upload novels on Sui blockchain.",
+    "dapp.ruokDesc":
+      "A Decentralized Check-In Triggered Timed Transfer DApp On Sui Network",
+    "dapp.write3Desc":
+      "A platform for novel authors to upload novels on Sui blockchain.",
 
     // Open Source
     "os.suiBP": "Sui Best Practices",
-    "os.suiBPDesc": "Contributed to the Sui Best Practices repository with code improvements and documentation",
+    "os.suiBPDesc":
+      "Contributed to the Sui Best Practices repository with code improvements and documentation",
 
     // DApps section projects
     "dapp.areYouOkay": "Are You Okay?",
@@ -194,7 +212,8 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Footer
     "footer.about": "ZD Tech",
-    "footer.aboutDesc": "独立游戏开发者与 Web3 建设者，在 Roblox 和 Sui 区块链上创造体验。",
+    "footer.aboutDesc":
+      "独立游戏开发者与 Web3 建设者，在 Roblox 和 Sui 区块链上创造体验。",
     "footer.games": "游戏",
     "footer.projects": "项目",
     "footer.connect": "联系",
@@ -202,13 +221,17 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // What We Do
     "whatwedo.title": "我们做什么",
-    "whatwedo.subtitle": "我们在前沿区块链技术上构建去中心化应用、Web3 游戏和创意工具。",
+    "whatwedo.subtitle":
+      "我们在前沿区块链技术上构建去中心化应用、Web3 游戏和创意工具。",
     "whatwedo.dappTitle": "DApp 开发",
-    "whatwedo.dappDesc": "在 Sui 网络上进行全栈去中心化应用开发，从智能合约到前端界面。",
+    "whatwedo.dappDesc":
+      "在 Sui 网络上进行全栈去中心化应用开发，从智能合约到前端界面。",
     "whatwedo.gameTitle": "Web3 游戏",
-    "whatwedo.gameDesc": "基于浏览器和 Roblox 的游戏，集成区块链、NFT 资产和 Play-to-Earn 机制。",
+    "whatwedo.gameDesc":
+      "基于浏览器和 Roblox 的游戏，集成区块链、NFT 资产和 Play-to-Earn 机制。",
     "whatwedo.consultTitle": "技术咨询",
-    "whatwedo.consultDesc": "为区块链项目和团队提供架构设计、代码审查和技术指导。",
+    "whatwedo.consultDesc":
+      "为区块链项目和团队提供架构设计、代码审查和技术指导。",
 
     // Service
     "service.title": "我们的服务",
@@ -250,6 +273,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.lobsterRunDesc": "有趣的龙虾跑酷 H5 游戏 — 奔跑、跳跃、躲避障碍！",
     "game.handBattleDesc": "用手势对战的趣味游戏。",
     "game.miniSoccerDesc": "在元宇宙中踢足球的游戏。",
+    "game.comingSoonDesc": "即将上线，敬请期待！",
 
     // DApp descriptions
     "dapp.ruokDesc": "基于 Sui 网络的去中心化签到触发定时转账 DApp",
