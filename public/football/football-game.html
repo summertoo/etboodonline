@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>点球大战</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1a472a;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:sans-serif;overflow:hidden;user-select:none}
+canvas{display:block;border-radius:8px;box-shadow:0 0 40px rgba(0,0,0,.5);cursor:crosshair}
+#ov{position:fixed;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;z-index:50}
+.bx{background:rgba(0,0,0,.78);color:#fff;padding:40px 50px;border-radius:16px;text-align:center;backdrop-filter:blur(8px)}
+.bx h1{font-size:34px;margin-bottom:10px}
+.bx p{font-size:17px;color:#ccc;margin-bottom:20px;line-height:1.7}
+.bx button{background:#4CAF50;color:#fff;border:none;padding:13px 36px;font-size:19px;border-radius:8px;cursor:pointer;margin:6px}
+.bx button:hover{background:#66BB6A;transform:scale(1.05)}
+.bx .share{background:#2196F3}
+.bx .share:hover{background:#42A5F5}
+#hud{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.7);color:#fff;padding:7px 26px;border-radius:30px;font-size:19px;z-index:40;display:none}
+#msg{position:fixed;top:42%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:46px;font-weight:bold;text-shadow:0 4px 12px rgba(0,0,0,.6);opacity:0;transition:opacity .3s;z-index:40;pointer-events:none}
+#dw{position:fixed;bottom:50px;left:50%;transform:translateX(-50%);display:none;flex-direction:column;align-items:center;z-index:40}
+#dw .lb{color:#fff;font-size:21px;font-weight:bold;margin-bottom:12px;text-shadow:0 2px 8px rgba(0,0,0,.5);animation:pu 1s infinite}
+@keyframes pu{0%,100%{opacity:1}50%{opacity:.55}}
+#db{display:flex;gap:14px}
+#db button{padding:13px 26px;font-size:17px;border:2px solid #fff;border-radius:12px;cursor:pointer;color:#fff;font-weight:bold;min-width:96px}
+#db button:hover{transform:scale(1.1)}
+.bl{background:rgba(33,150,243,.8)}
+.bc{background:rgba(76,175,80,.8)}
+.br{background:rgba(255,152,0,.8)}
+#shootBtns{position:fixed;bottom:50px;left:50%;transform:translateX(-50%);display:none;flex-direction:column;align-items:center;z-index:40}
+#shootBtns .lb{color:#fff;font-size:21px;font-weight:bold;margin-bottom:12px;text-shadow:0 2px 8px rgba(0,0,0,.5);animation:pu 1s infinite}
+#sb{display:flex;gap:14px}
+#sb button{padding:13px 26px;font-size:17px;border:2px solid #fff;border-radius:12px;cursor:pointer;color:#fff;font-weight:bold;min-width:96px}
+#sb button:hover{transform:scale(1.1)}
+</style></head><body>
+<canvas id="c"></canvas>
+<div id="hud"></div>
+<div id="msg"></div>
+<div id="dw"><div class="lb">🧤 选择扑救方向！</div><div id="db">
+<button class="bl" onclick="defend(-1)">⬅ 左扑</button>
+<button class="bc" onclick="defend(0)">⬆ 中路</button>
+<button class="br" onclick="defend(1)">➡ 右扑</button>
+</div></div>
+<div id="shootBtns"><div class="lb">⚽ 选择射门方向！</div><div id="sb">
+<button class="bl" onclick="playerShoot(-1)">⬅ 射左</button>
+<button class="bc" onclick="playerShoot(0)">⬆ 射中</button>
+<button class="br" onclick="playerShoot(1)">➡ 射右</button>
+</div></div>
+<div id="ov"><div class="bx" id="ovBox"><h1>⚽ 点球大战</h1>
+<p>射门：选择射门方向，再控制力度<br>守门：选择扑救方向拦截对方<br>小心场上的干扰！共 5 轮</p>
+<button onclick="startGame()">开始比赛</button></div></div>
+<script>
+const cv=document.getElementById('c'),cx=cv.getContext('2d');
+const ov=document.getElementById('ov'),ovBox=document.getElementById('ovBox');
+const hud=document.getElementById('hud'),msgEl=document.getElementById('msg');
+const dw=document.getElementById('dw'),shootBtns=document.getElementById('shootBtns');
+
+let W,H,sc;
+function resize(){
+  const mw=Math.min(innerWidth-20,800),mh=Math.min(innerHeight-20,600),r=800/600;
+  if(mw/mh>r){H=mh;W=H*r}else{W=mw;H=W/r}
+  cv.width=W;cv.height=H;sc=W/800;
+}
+resize();addEventListener('resize',resize);
+
+const GY=100,GW=320,GH=140,GX=(800-GW)/2,BX0=400,BY0=480,ROUNDS=5;
+// Zone target X positions: left, center, right
+const ZONE_X=[ GX+GW*0.17, GX+GW*0.5, GX+GW*0.83 ];
+const ZONE_Y=GY+GH*0.5;
+
+let state='menu',pScore=0,aScore=0,round=0,pTurn=true;
+let ball={x:0,y:0,z:0,vx:0,vy:0,vz:0,r:16,rot:0};
+let kp={x:400,y:GY+GH/2,diveDir:0,diveP:0};
+let power=0,pDir=1,showPow=false;
+let frame=0;
+let particles=[],distractions=[];
+
+// Pre-determined outcome for current kick
+let shotZone=0;    // -1,0,1 where ball goes
+let saveZone=0;    // -1,0,1 where keeper dives
+let outcome='';    // 'goal','saved','miss'
+
+function S(v){return v*sc}
+
+// --- Distractions ---
+function spawnDistraction(){
+  if(Math.random()<0.5){
+    const fl=Math.random()<0.5;
+    distractions.push({type:'bird',x:fl?-40:840,y:80+Math.random()*200,
+      vx:fl?(1.5+Math.random()*2):-(1.5+Math.random()*2),wing:0,wingDir:1});
+  }else{
+    const fl=Math.random()<0.5;
+    distractions.push({type:'rabbit',x:fl?-30:830,y:350+Math.random()*120,
+      vx:fl?(2+Math.random()*2.5):-(2+Math.random()*2.5),hop:0,hopDir:1});
+  }
+}
+function updateDistractions(){
+  if(frame%90===0&&(state==='idle'||state==='shoot_pick'||state==='powering'||state==='defend_wait')&&Math.random()<0.6)spawnDistraction();
+  distractions=distractions.filter(d=>{
+    d.x+=d.vx;
+    if(d.type==='bird'){d.wing+=d.wingDir*0.15;if(Math.abs(d.wing)>1)d.wingDir*=-1;}
+    if(d.type==='rabbit'){d.hop+=d.hopDir*0.08;if(d.hop>1){d.hop=1;d.hopDir=-1;}if(d.hop<0){d.hop=0;d.hopDir=1;}}
+    return d.x>-60&&d.x<860;
+  });
+}
+function drawBird(d){
+  const x=S(d.x),y=S(d.y);
+  cx.fillStyle='#5D4037';cx.beginPath();cx.ellipse(x,y,S(12),S(7),0,0,Math.PI*2);cx.fill();
+  cx.fillStyle='#FF8F00';cx.beginPath();cx.moveTo(x+S(12),y);cx.lineTo(x+S(18),y-S(2));cx.lineTo(x+S(12),y+S(2));cx.fill();
+  cx.fillStyle='#333';cx.beginPath();cx.arc(x+S(6),y-S(2),S(2),0,Math.PI*2);cx.fill();
+  cx.fillStyle='#795548';
+  cx.save();cx.translate(x-S(4),y-S(4));cx.rotate(d.wing*0.6);cx.fillRect(-S(2),-S(12),S(14),S(8));cx.restore();
+  cx.save();cx.translate(x-S(4),y+S(2));cx.rotate(-d.wing*0.4);cx.fillRect(-S(2),0,S(12),S(6));cx.restore();
+}
+function drawRabbit(d){
+  const x=S(d.x),hy=S(d.y-d.hop*25);
+  cx.fillStyle='#E0E0E0';cx.beginPath();cx.ellipse(x,hy,S(14),S(10),0,0,Math.PI*2);cx.fill();
+  cx.beginPath();cx.arc(x+S(10),hy-S(8),S(7),0,Math.PI*2);cx.fill();
+  cx.fillStyle='#F48FB1';
+  cx.beginPath();cx.ellipse(x+S(4),hy-S(22),S(3),S(10),-.2,0,Math.PI*2);cx.fill();
+  cx.beginPath();cx.ellipse(x+S(10),hy-S(20),S(3),S(9),.2,0,Math.PI*2);cx.fill();
+  cx.fillStyle='#333';cx.beginPath();cx.arc(x+S(14),hy-S(10),S(2),0,Math.PI*2);cx.fill();
+  cx.fillStyle='#fff';cx.beginPath();cx.arc(x-S(14),hy+S(2),S(5),0,Math.PI*2);cx.fill();
+  if(d.hop>0.5){cx.fillStyle='#BDBDBD';cx.fillRect(x-S(8),hy+S(6),S(6),S(8));cx.fillRect(x+S(2),hy+S(6),S(6),S(8));}
+}
+function drawDistractions(){distractions.forEach(d=>{if(d.type==='bird')drawBird(d);else drawRabbit(d);});}
+
+// --- Particles ---
+function spawnP(x,y,col,n){for(let i=0;i<n;i++)particles.push({x,y,vx:(Math.random()-.5)*8,vy:(Math.random()-.5)*8,r:2+Math.random()*4,life:1,col,dec:.02+Math.random()*.02});}
+function updateP(){particles=particles.filter(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.1;p.life-=p.dec;return p.life>0;});}
+function drawP(){particles.forEach(p=>{cx.globalAlpha=p.life;cx.fillStyle=p.col;cx.beginPath();cx.arc(S(p.x),S(p.y),S(p.r),0,Math.PI*2);cx.fill();});cx.globalAlpha=1;}
+
+// --- Drawing ---
+function drawField(){
+  const sg=cx.createLinearGradient(0,0,0,S(200));sg.addColorStop(0,'#1a237e');sg.addColorStop(1,'#42a5f5');
+  cx.fillStyle=sg;cx.fillRect(0,0,W,S(200));
+  cx.fillStyle='#263238';cx.fillRect(0,S(40),W,S(120));
+  for(let i=0;i<80;i++){const px=(i/80)*W,py=S(60+Math.sin(i*.7)*20+Math.random()*30);cx.fillStyle=['#e53935','#1e88e5','#fdd835','#43a047','#ff9800','#fff'][i%6];cx.beginPath();cx.arc(px,py,S(4+Math.random()*3),0,Math.PI*2);cx.fill();}
+  const gg=cx.createLinearGradient(0,S(160),0,H);gg.addColorStop(0,'#2e7d32');gg.addColorStop(.3,'#388e3c');gg.addColorStop(1,'#1b5e20');
+  cx.fillStyle=gg;cx.fillRect(0,S(160),W,H-S(160));
+  cx.globalAlpha=.08;for(let i=0;i<12;i++){if(i%2===0){cx.fillStyle='#fff';cx.fillRect(0,S(160+i*38),W,S(38));}}cx.globalAlpha=1;
+  cx.fillStyle='#fff';cx.beginPath();cx.arc(S(BX0),S(BY0-20),S(3),0,Math.PI*2);cx.fill();
+}
+function drawGoal(){
+  const gx=S(GX),gy=S(GY),gw=S(GW),gh=S(GH);
+  cx.fillStyle='rgba(200,200,200,.15)';cx.fillRect(gx,gy,gw,gh);
+  cx.strokeStyle='rgba(255,255,255,.2)';cx.lineWidth=1;
+  for(let x=gx;x<=gx+gw;x+=S(20)){cx.beginPath();cx.moveTo(x,gy);cx.lineTo(x,gy+gh);cx.stroke();}
+  for(let y=gy;y<=gy+gh;y+=S(20)){cx.beginPath();cx.moveTo(gx,y);cx.lineTo(gx+gw,y);cx.stroke();}
+  cx.strokeStyle='#fff';cx.lineWidth=S(6);cx.lineCap='round';
+  cx.beginPath();cx.moveTo(gx,gy+gh);cx.lineTo(gx,gy);cx.lineTo(gx+gw,gy);cx.lineTo(gx+gw,gy+gh);cx.stroke();
+}
+function drawKeeper(){
+  const dive=kp.diveP,dir=kp.diveDir;
+  cx.save();cx.translate(S(kp.x),S(kp.y));
+  if(dive>0&&dir!==0){cx.rotate(dir*dive*.8);cx.translate(dir*dive*S(120),0);}
+  const hw=S(25),hh=S(40);
+  cx.fillStyle='#ff9800';cx.fillRect(-hw,-hh,hw*2,hh*1.2);
+  cx.fillStyle='#212121';cx.fillRect(-hw,-hh+hh*1.2,hw*2,hh*.5);
+  cx.fillStyle='#ffcc80';cx.beginPath();cx.arc(0,-hh-S(12),S(14),0,Math.PI*2);cx.fill();
+  cx.fillStyle='#76ff03';
+  if(dive>0&&dir!==0){cx.fillRect(-hw-S(20),-hh-S(10),S(20),S(16));cx.fillRect(hw,-hh-S(10),S(20),S(16));}
+  else{cx.fillRect(-hw-S(10),-hh+S(5),S(14),S(14));cx.fillRect(hw-S(4),-hh+S(5),S(14),S(14));}
+  cx.restore();
+}
+function drawBall(){
+  const bx=S(ball.x),by=S(ball.y-ball.z),br=S(ball.r*(1+ball.z*.001));
+  cx.fillStyle='rgba(0,0,0,.3)';cx.beginPath();cx.ellipse(S(ball.x),S(ball.y)+S(2),br*.8,br*.3,0,0,Math.PI*2);cx.fill();
+  const bg=cx.createRadialGradient(bx-br*.3,by-br*.3,br*.1,bx,by,br);bg.addColorStop(0,'#fff');bg.addColorStop(.7,'#e0e0e0');bg.addColorStop(1,'#bdbdbd');
+  cx.fillStyle=bg;cx.beginPath();cx.arc(bx,by,br,0,Math.PI*2);cx.fill();
+  cx.fillStyle='#333';[0,72,144,216,288].forEach(a=>{const r=(a*Math.PI/180)+ball.rot;cx.beginPath();cx.arc(bx+Math.cos(r)*br*.5,by+Math.sin(r)*br*.5,br*.15,0,Math.PI*2);cx.fill();});
+}
+function drawPowerBar(){
+  if(!showPow)return;
+  const bw=S(200),bh=S(16),bx=(W-bw)/2,by=H-S(40);
+  cx.fillStyle='rgba(0,0,0,.5)';cx.fillRect(bx-S(2),by-S(2),bw+S(4),bh+S(4));
+  const g=cx.createLinearGradient(bx,0,bx+bw,0);g.addColorStop(0,'#4CAF50');g.addColorStop(.5,'#FFC107');g.addColorStop(1,'#f44336');
+  cx.fillStyle=g;cx.fillRect(bx,by,bw*power,bh);
+  cx.strokeStyle='#fff';cx.lineWidth=2;cx.strokeRect(bx,by,bw,bh);
+  cx.fillStyle='#fff';cx.font=S(14)+'px sans-serif';cx.textAlign='center';cx.fillText('\u529b\u5ea6',W/2,by-S(8));
+}
+function drawHint(){
+  cx.fillStyle='rgba(0,0,0,.5)';cx.font='bold '+S(18)+'px sans-serif';cx.textAlign='center';
+  if(state==='shoot_pick')cx.fillText('\u26bd \u4f60\u7684\u56de\u5408 \u2014 \u9009\u62e9\u5c04\u95e8\u65b9\u5411\uff01',W/2,H-S(100));
+  else if(state==='powering')cx.fillText('\u70b9\u51fb\u786e\u8ba4\u529b\u5ea6\uff01',W/2,H-S(100));
+  else if(state==='defend_wait')cx.fillText('\u5bf9\u65b9\u5c04\u95e8\uff0c\u9009\u62e9\u6251\u6551\u65b9\u5411\uff01',W/2,H-S(100));
+}
+
+// --- Logic ---
+function resetBall(){ball.x=BX0;ball.y=BY0;ball.z=0;ball.vx=0;ball.vy=0;ball.vz=0;ball.rot=0;}
+function resetKp(){kp.x=400;kp.y=GY+GH/2;kp.diveDir=0;kp.diveP=0;}
+function showMsg(t,dur){msgEl.textContent=t;msgEl.style.opacity=1;setTimeout(()=>msgEl.style.opacity=0,dur||1500);}
+function updateHud(){hud.style.display='block';hud.innerHTML='\u7b2c '+(Math.min(round+1,ROUNDS))+'/'+ROUNDS+'\u8f6e | \ud83d\udfe2 \u4f60 '+pScore+' : '+aScore+' AI \ud83d\udd34';}
+
+function launchBall(targetZone,pow){
+  // Ball flies toward the zone target X
+  const tx=ZONE_X[targetZone+1]; // -1->0, 0->1, 1->2
+  const ty=ZONE_Y;
+  const dx=tx-ball.x,dy=ty-ball.y,dist=Math.sqrt(dx*dx+dy*dy);
+  const spd=8+pow*12;
+  ball.vx=(dx/dist)*spd;ball.vy=(dy/dist)*spd;ball.vz=3+pow*4;
+  // Slight random wobble for visual variety (doesn't affect outcome)
+  ball.vx+=(Math.random()-.5)*0.5;
+}
+
+function determineOutcome(shot,save){
+  // Miss chance based on power: >90% power has 15% miss chance
+  if(power>0.9&&Math.random()<0.15)return 'miss';
+  if(shot===save)return 'saved';
+  return 'goal';
+}
+
+// PLAYER SHOOT FLOW: pick direction -> power bar -> launch
+window.playerShoot=function(dir){
+  shootBtns.style.display='none';
+  shotZone=dir;
+  // AI keeper picks a direction
+  const diff=Math.min(.25+round*.07,.6);
+  if(Math.random()<diff){saveZone=dir;} // AI guesses right
+  else{const opts=[-1,0,1].filter(d=>d!==dir);saveZone=opts[Math.floor(Math.random()*opts.length)];}
+  // Now show power bar
+  state='powering';showPow=true;power=0;pDir=1;
+};
+
+function confirmPower(){
+  showPow=false;
+  outcome=determineOutcome(shotZone,saveZone);
+  kp.diveDir=saveZone;
+  if(outcome==='miss'){
+    // Shoot wide
+    const missX=Math.random()<0.5?GX-30:GX+GW+30;
+    const dx=missX-ball.x,dy=(GY+GH/2)-ball.y,dist=Math.sqrt(dx*dx+dy*dy);
+    const spd=8+power*12;
+    ball.vx=(dx/dist)*spd;ball.vy=(dy/dist)*spd;ball.vz=5+power*5;
+  }else{
+    launchBall(shotZone,power);
+  }
+  state='flying';
+}
+
+// AI SHOOT FLOW: show defend buttons -> player picks -> launch
+function aiShootPhase(){
+  showMsg('\ud83e\udde4 \u5bf9\u65b9\u5c04\u95e8\uff01',1200);
+  state='defend_wait';
+  dw.style.display='flex';
+}
+
+window.defend=function(dir){
+  dw.style.display='none';
+  saveZone=dir;
+  kp.diveDir=dir;
+  // AI picks shot direction
+  const r=Math.random();
+  if(r<0.35)shotZone=-1;
+  else if(r<0.7)shotZone=1;
+  else shotZone=0;
+  power=0.5+Math.random()*0.4;
+  outcome=determineOutcome(shotZone,saveZone);
+  if(outcome==='miss'){
+    const missX=Math.random()<0.5?GX-30:GX+GW+30;
+    const dx=missX-ball.x,dy=(GY+GH/2)-ball.y,dist=Math.sqrt(dx*dx+dy*dy);
+    const spd=14;
+    ball.vx=(dx/dist)*spd;ball.vy=(dy/dist)*spd;ball.vz=6;
+  }else{
+    launchBall(shotZone,power);
+  }
+  state='flying';
+};
+
+function onBallArrived(){
+  if(outcome==='goal'){
+    if(pTurn)pScore++;else aScore++;
+    showMsg('\u26bd \u8fdb\u7403\uff01',1800);spawnP(ball.x,ball.y,'#ffd700',30);spawnP(ball.x,ball.y,'#ff5722',20);
+  }else if(outcome==='saved'){
+    showMsg('\ud83e\udde4 \u6251\u6551\uff01',1800);spawnP(ball.x,ball.y,'#2196f3',15);
+  }else{
+    showMsg('\ud83d\ude05 \u6253\u504f\u4e86\uff01',1800);
+  }
+  updateHud();
+  setTimeout(()=>{
+    if(!pTurn)round++;
+    pTurn=!pTurn;
+    if(round>=ROUNDS){endGame();return;}
+    resetBall();resetKp();state='idle';
+    if(pTurn){setTimeout(()=>{state='shoot_pick';shootBtns.style.display='flex';},500);}
+    else{setTimeout(aiShootPhase,800);}
+  },2000);
+}
+
+function startGame(){
+  pScore=0;aScore=0;round=0;pTurn=true;
+  particles=[];distractions=[];
+  resetBall();resetKp();
+  ov.style.display='none';hud.style.display='block';
+  updateHud();
+  state='shoot_pick';shootBtns.style.display='flex';
+}
+window.startGame=startGame;
+
+function endGame(){
+  state='gameover';
+  let t,m;
+  if(pScore>aScore){t='\ud83c\udfc6 \u4f60\u8d62\u4e86\uff01';m=pScore+' : '+aScore+'\uff0c\u6f02\u4eae\u7684\u80dc\u5229\uff01';}
+  else if(pScore<aScore){t='\ud83d\ude22 \u4f60\u8f93\u4e86';m=pScore+' : '+aScore+'\uff0c\u4e0b\u6b21\u52a0\u6cb9\uff01';}
+  else{t='\ud83e\udd1d \u5e73\u5c40\uff01';m=pScore+' : '+aScore+'\uff0c\u52bf\u5747\u529b\u654c\uff01';}
+  setTimeout(()=>{
+    spawnP(400,300,'#ffd700',50);
+    ovBox.innerHTML='<h1>'+t+'</h1><p>'+m+'</p><button onclick="startGame()">\u518d\u6765\u4e00\u5c40</button> <button class="share" onclick="shareResult()">\ud83d\udce4 \u5206\u4eab\u6311\u6218</button>';
+    ov.style.display='flex';
+  },1500);
+}
+
+window.shareResult=function(){
+  const w=pScore>aScore?'\u83b7\u80dc':pScore<aScore?'\u60dc\u8d25':'\u6218\u5e73';
+  const txt='\u26bd \u6211\u5728\u70b9\u7403\u5927\u6218\u4e2d\u4ee5 '+pScore+':'+aScore+' '+w+'\uff01\u4f60\u80fd\u6253\u8d25\u6211\u5417\uff1f\u6765\u6311\u6218 \u2192';
+  if(navigator.share){navigator.share({title:'\u70b9\u7403\u5927\u6218',text:txt}).catch(()=>{});}
+  else{navigator.clipboard.writeText(txt).then(()=>showMsg('\u5df2\u590d\u5236\u5206\u4eab\u6587\u6848\uff01',2000)).catch(()=>showMsg('\u590d\u5236\u5931\u8d25',1500));}
+};
+
+// --- Input (power bar confirm) ---
+cv.addEventListener('mousedown',()=>{if(state==='powering')confirmPower();});
+cv.addEventListener('touchstart',e=>{e.preventDefault();if(state==='powering')confirmPower();},{passive:false});
+
+// --- Update ---
+function update(){
+  frame++;
+  if(state==='powering'){power+=pDir*.018;if(power>=1){power=1;pDir=-1;}if(power<=0){power=0;pDir=1;}}
+  if(state==='flying'){
+    ball.x+=ball.vx;ball.y+=ball.vy;ball.z+=ball.vz;ball.vz-=.15;
+    if(ball.z<0)ball.z=0;ball.vx*=.99;ball.vy*=.99;ball.rot+=.1;
+    if(kp.diveP<1)kp.diveP+=.04;
+    // Ball reached goal line or went off screen
+    if(ball.y<=GY+GH||ball.y<GY-50||ball.x<50||ball.x>750){
+      state='result';onBallArrived();
+    }
+  }
+  updateP();updateDistractions();
+}
+
+function render(){
+  cx.clearRect(0,0,W,H);
+  drawField();drawGoal();drawDistractions();drawKeeper();drawBall();drawPowerBar();drawP();drawHint();
+}
+
+function loop(){if(state!=='menu'&&state!=='gameover')update();render();requestAnimationFrame(loop);}
+loop();
+
+</script></body></html>

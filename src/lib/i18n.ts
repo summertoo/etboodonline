@@ -121,6 +121,8 @@ export const translations: Record<Lang, Record<string, string>> = {
       "An epic saga of warlords battling for supremacy. Coming soon.",
     "game.lobsterRunDesc":
       "A fun lobster parkour H5 game - run, jump, and dodge obstacles!",
+    "game.footballDesc":
+      "Football Shootout & Goalkeeper H5 Game - Shoot Accurately, Defend Ruthlessly!",
     "game.handBattleDesc": "A game where players can battle with their hands.",
     "game.miniSoccerDesc":
       "Mini Soccer is a game that allows players to play soccer in the metaverse.",
@@ -271,6 +273,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.lobsterBumpDesc": "碰撞、竞争、称霸，体验快节奏的 Roblox 游戏。",
     "game.warlordSagaDesc": "领主争霸的史诗传奇，即将上线。",
     "game.lobsterRunDesc": "有趣的龙虾跑酷 H5 游戏 — 奔跑、跳跃、躲避障碍！",
+    "game.footballDesc": "足球射门&守门 H5 游戏 — 射门要准，防守要狠！",
     "game.handBattleDesc": "用手势对战的趣味游戏。",
     "game.miniSoccerDesc": "在元宇宙中踢足球的游戏。",
     "game.comingSoonDesc": "即将上线，敬请期待！",

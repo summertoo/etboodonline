@@ -209,6 +209,14 @@ export default function Homepage() {
       liveUrl: "",
       isUpcoming: true,
     },
+    {
+      id: 3,
+      title: " FootBall Game",
+      descKey: "game.footballDesc",
+      liveUrl: "/football/football-game.html",
+      isNew: true,
+    },
+
   ];
 
   return (
