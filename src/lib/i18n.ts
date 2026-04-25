@@ -159,6 +159,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     "opc.title": "🌐 OPC Network",
     "opc.subtitle": "Open Person Company collaborative network projects.",
     "opc.visit": "GitHub →",
+
+    // Stable Gateway
+    "gateway.title": "🚉 Stable Gateway",
+    "gateway.subtitle": "Recommended stable access points and tools.",
+    "gateway.visit": "Visit →",
   },
 
   zh: {
@@ -306,5 +311,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "opc.title": "🌐 开源一人公司（OPC）协作网络",
     "opc.subtitle": "开源一人公司协作网络相关项目集合。",
     "opc.visit": "GitHub →",
+
+    // Stable Gateway
+    "gateway.title": "🚉 稳定的中转站",
+    "gateway.subtitle": "推荐稳定可用的 AI 接入与中转工具。",
+    "gateway.visit": "立即访问 →",
   },
 };

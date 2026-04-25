@@ -456,6 +456,51 @@ export default function Homepage() {
         </div>
       </section>
 
+      {/* Stable Gateway */}
+      <section className="py-20">
+        <RevealSection>
+          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+            {t("gateway.title")}
+          </h3>
+          <p className="mb-10 text-center cyber-subtitle">
+            {t("gateway.subtitle")}
+          </p>
+        </RevealSection>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <RevealSection delay={0}>
+            <Card className="cyber-card h-full">
+              <CardContent className="p-5">
+                <div className="text-3xl mb-3">⭐</div>
+                <h4 className="font-semibold text-lg mb-2">
+                  {lang === "zh"
+                    ? "站长推荐：支持 GPT-5.4 / 5.5 的稳定中转站"
+                    : "Editor's Pick: Stable Gateway Supporting GPT-5.4 / 5.5"}
+                </h4>
+                <p className="text-sm mb-3">
+                  {lang === "zh"
+                    ? "一个稳定可用的 AI API 中转站，支持 GPT-5.4 / 5.5，适合开发、测试与日常调用。"
+                    : "A stable AI API gateway supporting GPT-5.4 / 5.5, suitable for development, testing, and daily use."}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-[var(--cyber-muted)]">
+                    🚀 {lang === "zh" ? "站长推荐" : "Recommended"}
+                  </span>
+                  <a
+                    href="https://api.gavinhub.online/register?aff=vGbL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="cyber-button-small">
+                      {t("gateway.visit")}
+                    </Button>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </RevealSection>
+        </div>
+      </section>
+
       {/* Web Games */}
       <section className="py-20">
         <RevealSection>
