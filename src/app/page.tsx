@@ -633,6 +633,16 @@ export default function Homepage() {
               platform: "番茄小说",
               url: "https://fanqienovel.com/page/7516472366981975102",
             },
+            {
+              icon: "⚔️",
+              title: "群雄战记：中华英雄传",
+              desc:
+                lang === "zh"
+                  ? "群雄战记：中华英雄传 - 重温经典武侠，群雄逐鹿的江湖故事。第二章更新中。"
+                  : "Chronicles of Heroes: Chinese Legends - Relive classic wuxia tales of heroes contending for supremacy. Chapter 2 updated.",
+              platform: "番茄小说",
+              url: "https://fanqienovel.com/page/7631541666125450302",
+            },
           ].map((novel, i) => (
             <RevealSection key={i} delay={i * 100}>
               <Card className="cyber-card h-full">
