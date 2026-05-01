@@ -87,14 +87,34 @@ export const translations: Record<Lang, Record<string, string>> = {
     "service.s3Title": "Game Development",
     "service.s3Desc":
       "Browser games, Roblox experiences, and blockchain-powered game economies.",
-    "service.s4Title": "DevOps & Deployment",
+    "service.s4Title": "Web & Mini Programs",
     "service.s4Desc":
-      "CI/CD pipelines, Vercel deployment, and infrastructure management.",
+      "Websites, WeChat mini programs, and official account development.",
 
     // Project
     "project.title": "Projects",
-    "project.subtitle": "Our portfolio of DApps, games, and tools.",
+    "project.subtitle": "Explore our portfolio of games, DApps, tools, and creative works.",
     "project.comingSoon": "Coming Soon",
+    "project.search": "Search projects...",
+    "project.all": "All",
+    "project.filter": "Filter",
+    "project.category.game": "Games",
+    "project.category.roblox": "Roblox Games",
+    "project.category.webgame": "Web Games",
+    "project.category.dapp": "DApps",
+    "project.category.tool": "Tools",
+    "project.category.article": "Articles",
+    "project.category.novel": "Novels",
+    "project.platform.roblox": "Roblox",
+    "project.platform.web": "Web",
+    "project.live": "● Live",
+    "project.soon": "◌ Soon",
+    "project.new": "NEW",
+    "project.play": "Play →",
+    "project.visit": "Visit →",
+    "project.github": "GitHub →",
+    "project.read": "Read →",
+    "project.noResults": "No projects found. Try a different search or filter.",
 
     // Blog
     "blog.title": "Blog",
@@ -119,6 +139,8 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Bump, compete, and dominate in this fast-paced Roblox game.",
     "game.warlordSagaDesc":
       "An epic saga of warlords battling for supremacy. Coming soon.",
+    "game.warlordHeroesDesc":
+      "Three Kingdoms strategy game - Released with first level gameplay available. Experience the legendary stories of Chinese heroes.",
     "game.lobsterRunDesc":
       "A fun lobster parkour H5 game - run, jump, and dodge obstacles!",
     "game.footballDesc":
@@ -249,13 +271,33 @@ export const translations: Record<Lang, Record<string, string>> = {
     "service.s2Desc": "基于 React 的现代界面，集成钱包功能和响应式设计。",
     "service.s3Title": "游戏开发",
     "service.s3Desc": "浏览器游戏、Roblox 体验和区块链驱动的游戏经济系统。",
-    "service.s4Title": "DevOps 与部署",
-    "service.s4Desc": "CI/CD 流水线、Vercel 部署和基础设施管理。",
+    "service.s4Title": "网页与小程序",
+    "service.s4Desc": "企业官网、微信小程序和公众号开发。",
 
     // Project
     "project.title": "项目展示",
-    "project.subtitle": "我们的 DApp、游戏和工具作品集。",
+    "project.subtitle": "探索我们的游戏、DApp、工具和创意作品集。",
     "project.comingSoon": "即将上线",
+    "project.search": "搜索项目...",
+    "project.all": "全部",
+    "project.filter": "筛选",
+    "project.category.game": "游戏",
+    "project.category.roblox": "Roblox游戏",
+    "project.category.webgame": "网页游戏",
+    "project.category.dapp": "DApp",
+    "project.category.tool": "工具",
+    "project.category.article": "文章",
+    "project.category.novel": "小说",
+    "project.platform.roblox": "Roblox",
+    "project.platform.web": "网页",
+    "project.live": "● 已上线",
+    "project.soon": "◌ 即将上线",
+    "project.new": "新",
+    "project.play": "立即游玩 →",
+    "project.visit": "访问 →",
+    "project.github": "GitHub →",
+    "project.read": "阅读 →",
+    "project.noResults": "未找到匹配的项目。请尝试其他搜索词或筛选条件。",
 
     // Blog
     "blog.title": "博客",
@@ -277,6 +319,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.apexMindDesc": "在 Roblox 上挑战烧脑益智体验。",
     "game.lobsterBumpDesc": "碰撞、竞争、称霸，体验快节奏的 Roblox 游戏。",
     "game.warlordSagaDesc": "领主争霸的史诗传奇，即将上线。",
+    "game.warlordHeroesDesc": "三国题材策略游戏 — 已发布，开放第一关卡基本玩法。体验中华英雄的传奇故事。",
     "game.lobsterRunDesc": "有趣的龙虾跑酷 H5 游戏 — 奔跑、跳跃、躲避障碍！",
     "game.footballDesc": "足球射门&守门 H5 游戏 — 射门要准，防守要狠！",
     "game.handBattleDesc": "用手势对战的趣味游戏。",

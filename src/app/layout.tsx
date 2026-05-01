@@ -5,43 +5,58 @@ import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: {
-    default: "ZD Tech - Web3 Development Studio | DApps & Games on Sui",
+    default: "ZD Tech - 自媒体工作室 | 游戏开发 · 应用创作 · 内容创作",
     template: "%s | ZD Tech",
   },
   description:
-    "ZD Tech builds innovative decentralized applications, Web3 games, and creative tools on the Sui blockchain. Explore our projects including Are You Okay?, Hand Battle, and more.",
+    "ZD Tech 是一家专注于自媒体内容创作、游戏开发和应用开发的创意工作室。我们开发 Web3 应用、Roblox 游戏、网页游戏，同时创作网络小说和技术教程。",
   keywords: [
     "ZD Tech",
     "etboodonline",
+    "自媒体工作室",
+    "游戏开发",
+    "应用开发",
+    "内容创作",
+    "网络小说",
+    "技术教程",
     "Sui blockchain",
     "Web3 development",
     "DApp development",
-    "blockchain games",
-    "Move language",
-    "decentralized applications",
+    "Roblox games",
+    "网页游戏",
+    "码农穿越平民世界",
+    "群雄战记",
+    "番茄小说",
+    "move programming",
+    "去中心化应用",
+    "自媒体游戏",
+    "游戏应用",
+    "content creator",
+    "game developer",
+    "app developer",
   ],
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "zh_CN",
     url: "https://www.etboodonline.com",
     siteName: "ZD Tech",
-    title: "ZD Tech - Web3 Development Studio",
+    title: "ZD Tech - 自媒体工作室 | 游戏开发 · 应用创作 · 内容创作",
     description:
-      "Building decentralized applications, Web3 games, and creative tools on the Sui blockchain.",
+      "专注于自媒体内容创作、游戏开发和应用开发的创意工作室。开发 Web3 应用、Roblox 游戏、网页游戏，创作网络小说和技术教程。",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ZD Tech - Web3 Development Studio",
+        alt: "ZD Tech - 自媒体工作室",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZD Tech - Web3 Development Studio",
+    title: "ZD Tech - 自媒体工作室 | 游戏开发 · 应用创作 · 内容创作",
     description:
-      "Building decentralized applications, Web3 games, and creative tools on Sui.",
+      "专注于自媒体内容创作、游戏开发和应用开发的创意工作室。",
     images: ["/og-image.png"],
   },
   robots: {
@@ -64,31 +79,62 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "ZD Tech",
-    alternateName: "etboodonline",
+    alternateName: ["etboodonline", "自媒体工作室"],
     url: "https://www.etboodonline.com",
     description:
-      "ZD Tech is a Web3 development studio specializing in decentralized applications, blockchain games, and creative tools on the Sui network.",
+      "ZD Tech 是一家专注于自媒体内容创作、游戏开发和应用开发的创意工作室。我们开发 Web3 去中心化应用、Roblox 游戏、网页游戏，同时创作网络小说和技术教程。",
     knowsAbout: [
-      "Sui blockchain development",
-      "Move programming language",
-      "Web3 game development",
-      "Decentralized application development",
-      "Smart contract development",
+      "自媒体内容创作",
+      "游戏开发",
+      "Roblox 游戏开发",
+      "网页游戏开发",
+      "Web3 应用开发",
+      "DApp 开发",
+      "Sui 区块链开发",
+      "网络小说创作",
+      "技术教程写作",
+      "应用开发",
     ],
     sameAs: ["https://github.com/etboodXJ"],
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "etbood@gmail.com",
+      contactType: "customer service",
+      availableLanguage: ["Chinese", "English"],
+    },
   };
 
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "ZD Tech",
+    name: "ZD Tech - 自媒体工作室",
     url: "https://www.etboodonline.com",
     description:
-      "ZD Tech - Web3 Development Studio building DApps and games on Sui",
+      "ZD Tech - 专注于自媒体内容创作、游戏开发和应用开发的创意工作室",
+    publisher: {
+      "@type": "Organization",
+      name: "ZD Tech",
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://www.etboodonline.com/project?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const creatorJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: "ZD Tech 作品集",
+    author: {
+      "@type": "Organization",
+      name: "ZD Tech",
+    },
+    description: "包含游戏、应用、网络小说和技术教程的创意作品集",
   };
 
   return (
-    <html lang="en">
+    <html lang="zh-CN">
       <head>
         {/* Google Analytics */}
         <script
@@ -113,6 +159,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(creatorJsonLd) }}
         />
       </head>
       <body>

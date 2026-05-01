@@ -6,11 +6,10 @@ import { useLang } from "@/components/LangProvider";
 
 const navKeys = [
   { href: "/", labelKey: "nav.home" },
-  { href: "/what-we-do", labelKey: "nav.whatWeDo" },
-  { href: "/service", labelKey: "nav.service" },
   { href: "/project", labelKey: "nav.project" },
+  { href: "/service", labelKey: "nav.service" },
   { href: "/blog", labelKey: "nav.blog" },
-  { href: "/contact", labelKey: "nav.contact" },
+  { href: "/what-we-do", labelKey: "nav.whatWeDo" },
 ];
 
 export default function Navbar() {

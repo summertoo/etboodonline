@@ -1,15 +1,16 @@
-/* ===== Cyber Minimal — Light & Clean ===== */
+/* ===== Media Creator Style — Warm & Vibrant ===== */
 
-/* Palette tokens */
+/* Palette tokens - Media Creator / Influencer style */
 :root {
-  --cyber-primary: #0ea5e9;      /* sky-500 */
-  --cyber-secondary: #8b5cf6;    /* violet-500 */
-  --cyber-bg: #f8fafc;           /* slate-50 */
+  --cyber-primary: #f97316;      /* orange-500 - warm and energetic */
+  --cyber-secondary: #fb7185;    /* rose-400 - vibrant and creative */
+  --cyber-tertiary: #a855f7;     /* purple-500 - for games */
+  --cyber-bg: #fefce8;            /* yellow-50 - warm background */
   --cyber-surface: #ffffff;
   --cyber-text: #1e293b;         /* slate-800 */
   --cyber-muted: #64748b;        /* slate-500 */
-  --cyber-border: #e2e8f0;       /* slate-200 */
-  --cyber-accent-light: rgba(14, 165, 233, 0.08);
+  --cyber-border: #fed7aa;       /* orange-200 - warm border */
+  --cyber-accent-light: rgba(249, 115, 22, 0.08);
 }
 
 /* Container */

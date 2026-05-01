@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
 
-// ─── Scroll animation hook ───────────────────────────────
 function useScrollReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -51,58 +50,97 @@ function RevealSection({
   );
 }
 
-// ─── Roblox Card ─────────────────────────────────────────
-function RobloxCard({
+function encodeImagePrompt(prompt: string) {
+  return encodeURIComponent(prompt);
+}
+
+function ProjectCard({
   title,
+  titleKey,
+  desc,
   descKey,
+  imagePrompt,
   liveUrl,
+  githubUrl,
   status,
   index,
   t,
 }: {
-  title: string;
-  descKey: string;
-  liveUrl: string;
-  status: "live" | "coming";
+  title?: string;
+  titleKey?: string;
+  desc?: string;
+  descKey?: string;
+  imagePrompt: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  status?: "live" | "coming" | "new";
   index: number;
   t: (k: string) => string;
 }) {
-  const isLive = status === "live";
+  const displayTitle = title || (titleKey ? t(titleKey) : "");
+  const displayDesc = desc || (descKey ? t(descKey) : "");
+  const isLive = status !== "coming";
+  const isNew = status === "new";
+
   return (
     <RevealSection delay={index * 120}>
-      <Card className="cyber-card group cursor-pointer relative overflow-hidden">
-        <div
-          className="absolute top-0 left-0 right-0 h-1"
-          style={{
-            background: isLive
-              ? "linear-gradient(90deg, #0ea5e9, #8b5cf6, #0ea5e9)"
-              : "linear-gradient(90deg, #64748b, #94a3b8, #64748b)",
-            backgroundSize: "200% 100%",
-            animation: isLive ? "shimmer 3s linear infinite" : "none",
-          }}
-        />
-        <CardContent className="p-6">
-          <div className="flex items-start justify-between mb-3">
-            <h4 className="font-bold text-lg">{title}</h4>
-            <span
-              className={`text-xs px-2 py-1 rounded-full font-medium ${isLive ? "bg-[rgba(14,165,233,0.1)] text-[var(--cyber-primary)]" : "bg-gray-100 text-gray-500"}`}
-            >
-              {isLive ? t("roblox.live") : t("roblox.soon")}
-            </span>
-          </div>
-          <p className="text-sm mb-4">{t(descKey)}</p>
-          <div className="flex space-x-2">
-            {isLive ? (
-              <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-                <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]">
-                  {t("roblox.play")}
-                </Button>
-              </a>
-            ) : (
-              <Button className="cyber-button-small" disabled>
-                {t("roblox.comingSoon")}
-              </Button>
-            )}
+      <Card className="cyber-card group cursor-pointer relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <CardContent className="p-5">
+          <div className="flex items-start gap-4">
+            <div className="w-16 h-16 rounded-xl overflow-hidden shadow-md flex-shrink-0">
+              <img
+                src={`https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=${encodeImagePrompt(imagePrompt)}&image_size=square_hd`}
+                alt={displayTitle}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = "none";
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.style.backgroundColor = "#fed7aa";
+                    parent.style.display = "flex";
+                    parent.style.alignItems = "center";
+                    parent.style.justifyContent = "center";
+                    parent.innerHTML = '<span class="text-3xl">💼</span>';
+                  }
+                }}
+              />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-2">
+                <h4 className="font-semibold text-lg truncate">{displayTitle}</h4>
+                {isNew && (
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-[rgba(249,115,22,0.1)] text-[var(--cyber-primary)] font-bold flex-shrink-0">
+                    NEW
+                  </span>
+                )}
+                {!isLive && (
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 font-medium flex-shrink-0">
+                    COMING SOON
+                  </span>
+                )}
+              </div>
+              <p className="text-sm mb-3 cyber-subtitle line-clamp-2">{displayDesc}</p>
+              <div className="flex flex-wrap gap-2">
+                {isLive && liveUrl ? (
+                  <a href={liveUrl} target={liveUrl.startsWith("/") ? "_self" : "_blank"} rel="noopener noreferrer">
+                    <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]">
+                      {t("dapps.visit")}
+                    </Button>
+                  </a>
+                ) : !isLive ? (
+                  <Button className="cyber-button-small" disabled>
+                    {t("project.comingSoon")}
+                  </Button>
+                ) : null}
+                {githubUrl && (
+                  <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Button className="cyber-button-small">{t("dapps.github")}</Button>
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>
@@ -110,7 +148,96 @@ function RobloxCard({
   );
 }
 
-// ─── Main Page ───────────────────────────────────────────
+function GameCard({
+  title,
+  descKey,
+  imagePrompt,
+  liveUrl,
+  status,
+  platform,
+  index,
+  t,
+  lang,
+}: {
+  title: string;
+  descKey: string;
+  imagePrompt: string;
+  liveUrl: string;
+  status: "live" | "coming" | "new";
+  platform?: "roblox" | "web";
+  index: number;
+  t: (k: string) => string;
+  lang: string;
+}) {
+  const isLive = status === "live" || status === "new";
+  const isNew = status === "new";
+
+  return (
+    <RevealSection delay={index * 120}>
+      <Card className="cyber-card group cursor-pointer relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <CardContent className="p-5">
+          <div className="flex items-start gap-4">
+            <div className="w-16 h-16 rounded-xl overflow-hidden shadow-md flex-shrink-0">
+              <img
+                src={`https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=${encodeImagePrompt(imagePrompt)}&image_size=square_hd`}
+                alt={title}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = "none";
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.style.backgroundColor = "#fed7aa";
+                    parent.style.display = "flex";
+                    parent.style.alignItems = "center";
+                    parent.style.justifyContent = "center";
+                    parent.innerHTML = '<span class="text-3xl">🎮</span>';
+                  }
+                }}
+              />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-2 flex-wrap">
+                <h4 className="font-semibold text-lg truncate">{title}</h4>
+                {platform && (
+                  <span className={`text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0 ${
+                    platform === "roblox" ? "bg-red-100 text-red-700" : "bg-cyan-100 text-cyan-700"
+                  }`}>
+                    {platform === "roblox" ? "Roblox" : (lang === "zh" ? "网页" : "Web")}
+                  </span>
+                )}
+                {isNew && (
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-[rgba(249,115,22,0.1)] text-[var(--cyber-primary)] font-bold flex-shrink-0">
+                    NEW
+                  </span>
+                )}
+                {!isLive && (
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 font-medium flex-shrink-0">
+                    COMING SOON
+                  </span>
+                )}
+              </div>
+              <p className="text-sm mb-3 cyber-subtitle">{t(descKey)}</p>
+              {isLive ? (
+                <a href={liveUrl} target={liveUrl.startsWith("/") ? "_self" : "_blank"} rel="noopener noreferrer">
+                  <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]">
+                    {t("webgames.playNow")}
+                  </Button>
+                </a>
+              ) : (
+                <Button className="cyber-button-small" disabled>
+                  {t("roblox.comingSoon")}
+                </Button>
+              )}
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </RevealSection>
+  );
+}
+
 export default function Homepage() {
   const { t, lang } = useLang();
   const [subEmail, setSubEmail] = useState("");
@@ -139,91 +266,143 @@ export default function Homepage() {
 
   const robloxGames = [
     {
-      id: 2,
+      id: 1,
       title: "Apex Mind",
       descKey: "game.apexMindDesc",
+      imagePrompt: "futuristic mind puzzle game logo with glowing blue neural network, Roblox 3D icon style, cyberpunk aesthetic, minimalist square emblem",
       liveUrl: "https://www.roblox.com/games/126170387607652",
       status: "live" as const,
+      platform: "roblox" as const,
+    },
+    {
+      id: 2,
+      title: "LOBSTER BUMP",
+      descKey: "game.lobsterBumpDesc",
+      imagePrompt: "cartoon red lobster bumping game logo, Roblox style icon, playful underwater theme, vibrant colors, square emblem",
+      liveUrl: "https://www.roblox.com/games/102614376416074",
+      status: "live" as const,
+      platform: "roblox" as const,
     },
     {
       id: 3,
-      title: "LOBSTER BUMP",
-      descKey: "game.lobsterBumpDesc",
-      liveUrl: "https://www.roblox.com/games/102614376416074",
-      status: "live" as const,
-    },
-    {
-      id: 4,
       title: "WARLORD SAGA",
       descKey: "game.warlordSagaDesc",
+      imagePrompt: "epic fantasy warlord battle logo, ancient Chinese warfare theme, dramatic warrior emblem, Roblox style square icon",
       liveUrl: "",
       status: "coming" as const,
+      platform: "roblox" as const,
     },
   ];
 
-  const projects = [
+  const webGames = [
+    {
+      id: 1,
+      title: "🦞 龙虾跑酷 (Lobster Run)",
+      descKey: "game.lobsterRunDesc",
+      imagePrompt: "cute red lobster running through obstacles, 2D platformer game logo, cartoon ocean background, square icon design",
+      liveUrl: "/h5game01/龙虾跑酷.html",
+      status: "new" as const,
+      platform: "web" as const,
+    },
+    {
+      id: 2,
+      title: "Mini Soccer",
+      descKey: "game.miniSoccerDesc",
+      imagePrompt: "mini soccer game logo, stylized football players, neon sports field, cyberpunk style square icon",
+      liveUrl: "https://soccerdemo.edgeone.app/",
+      status: "live" as const,
+      platform: "web" as const,
+    },
+    {
+      id: 3,
+      title: "🏮 群雄战记：中华英雄传",
+      descKey: "game.warlordHeroesDesc",
+      imagePrompt: "ancient Chinese Three Kingdoms heroes logo, traditional Chinese architecture, warrior emblem, square game icon",
+      liveUrl: "https://games.soonjy.com/public/gameLobby/?projectId=69cb5b0280d0cf54f562a136&inviteCode=1BBDC0C1",
+      status: "new" as const,
+      platform: "web" as const,
+    },
+    {
+      id: 4,
+      title: "FootBall Game",
+      descKey: "game.footballDesc",
+      imagePrompt: "football shootout game logo, goalkeeper diving save, striker kicking ball, dramatic sports square icon",
+      liveUrl: "/football/football-game.html",
+      status: "new" as const,
+      platform: "web" as const,
+    },
+  ];
+
+  const dapps = [
     {
       id: 1,
       titleKey: "dapp.areYouOkay",
       descKey: "dapp.ruokDesc",
+      imagePrompt: "decentralized check-in DApp logo, Sui blockchain wallet icon, secure transfer emblem, blue and purple square logo",
       liveUrl: "https://ruok3.vercel.app/",
       githubUrl: "https://github.com/summertoo/ruok",
+      status: "live" as const,
     },
     {
       id: 2,
       titleKey: "dapp.miniSoccer",
       descKey: "game.miniSoccerDesc",
+      imagePrompt: "mini soccer game logo, stylized football players, neon sports field, cyberpunk style square icon",
       liveUrl: "https://soccerdemo.edgeone.app/",
       githubUrl: "",
+      status: "live" as const,
     },
     {
       id: 3,
       titleKey: "dapp.suiWrite3",
       descKey: "dapp.write3Desc",
+      imagePrompt: "novel writing platform logo, digital manuscript pages, Sui blockchain symbol, web3 publishing square icon",
       liveUrl: "",
       githubUrl: "https://github.com/etboodXJ/SuiWrite3",
-      comingSoon: true,
+      status: "coming" as const,
     },
-    // { id: 4, titleKey: "dapp.handBattle", descKey: "game.handBattleDesc", liveUrl: "https://handbattle.etboodonline.com/", githubUrl: "" },
   ];
 
-  const webGames = [
-    {
-      id: 0,
-      title: "🦞 龙虾跑酷 (Lobster Run)",
-      descKey: "game.lobsterRunDesc",
-      liveUrl: "/h5game01/龙虾跑酷.html",
-      isNew: true,
-    },
-    // { id: 1, title: "Hand Battle", descKey: "game.handBattleDesc", liveUrl: "https://handbattle.etboodonline.com/" },
+  const tools = [
     {
       id: 1,
-      title: "Mini Soccer",
-      descKey: "game.miniSoccerDesc",
-      liveUrl: "https://soccerdemo.edgeone.app/",
+      title: "OPC Hub",
+      desc:
+        lang === "zh"
+          ? "开源一人公司协作网络核心仓库，提供身份认证、任务协作、信任体系等基础设施。"
+          : "Core repository for the Open Person Company collaborative network, providing identity, task collaboration, and trust infrastructure.",
+      imagePrompt: "open source collaboration network logo, interconnected nodes, one person company concept, blue and purple square emblem",
+      githubUrl: "https://github.com/summertoo/opc-hub",
+      status: "live" as const,
     },
     {
       id: 2,
-      title: "🏮 群雄战记：中华英雄传",
-      descKey: "game.comingSoonDesc",
-      liveUrl: "",
-      isUpcoming: true,
+      title: "创意空间 (DeGame Tropical Island)",
+      desc:
+        lang === "zh"
+          ? "提供创意空间，为创作者提供创意支持，激发灵感与协作。"
+          : "A creative space providing inspiration and support for creators to collaborate and innovate.",
+      imagePrompt: "tropical island creative workspace logo, palm trees, white sand beach, creative tools emblem, square icon",
+      githubUrl: "https://github.com/etboodXJ/DeGameTropicalIsLand",
+      status: "live" as const,
     },
     {
       id: 3,
-      title: " FootBall Game",
-      descKey: "game.footballDesc",
-      liveUrl: "/football/football-game.html",
-      isNew: true,
+      title: "OC Network (原创角色网络)",
+      desc:
+        lang === "zh"
+          ? "原创角色网络，为创作者提供私有 AI 智能体，赋能角色创作与互动。"
+          : "Original Character network providing private AI agents for creators, empowering character creation and interaction.",
+      imagePrompt: "original character AI network logo, anime-style characters, AI brain visualization, purple and blue square icon",
+      githubUrl: "https://github.com/etboodXJ/ocnetwork",
+      status: "live" as const,
     },
-
   ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 cyber-container fly-in">
       <Navbar />
 
-      {/* Hero */}
       <section className="text-center py-24 cyber-hero relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           {[...Array(12)].map((_, i) => (
@@ -243,7 +422,7 @@ export default function Homepage() {
           <h2
             className="text-5xl md:text-6xl font-bold mb-6"
             style={{
-              background: "linear-gradient(135deg, #0ea5e9, #8b5cf6, #06b6d4)",
+              background: "linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary))",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -278,7 +457,6 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* Roblox Games */}
       <section id="roblox-games" className="py-20">
         <RevealSection>
           <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
@@ -290,218 +468,22 @@ export default function Homepage() {
         </RevealSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {robloxGames.map((game, i) => (
-            <RobloxCard
+            <GameCard
               key={game.id}
               title={game.title}
               descKey={game.descKey}
+              imagePrompt={game.imagePrompt}
               liveUrl={game.liveUrl}
               status={game.status}
+              platform={game.platform}
               index={i}
               t={t}
+              lang={lang}
             />
           ))}
         </div>
       </section>
 
-      {/* DApps & Projects */}
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("dapps.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("dapps.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((p, i) => (
-            <RevealSection key={p.id} delay={i * 100}>
-              <Card className="cyber-card h-full">
-                <CardContent className="p-5">
-                  <h4 className="font-semibold text-lg mb-2">
-                    {t(p.titleKey)}
-                  </h4>
-                  <p className="text-sm mb-3">{t(p.descKey)}</p>
-                  <div className="flex space-x-2">
-                    {p.liveUrl && !p.comingSoon ? (
-                      <a
-                        href={p.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Button className="cyber-button-small">
-                          {t("dapps.visit")}
-                        </Button>
-                      </a>
-                    ) : p.comingSoon ? (
-                      <Button className="cyber-button-small" disabled>
-                        {t("project.comingSoon")}
-                      </Button>
-                    ) : null}
-                    {p.githubUrl && (
-                      <a
-                        href={p.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Button className="cyber-button-small">
-                          {t("dapps.github")}
-                        </Button>
-                      </a>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            </RevealSection>
-          ))}
-        </div>
-      </section>
-
-      {/* OPC Network */}
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("opc.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("opc.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <RevealSection delay={0}>
-            <Card className="cyber-card h-full">
-              <CardContent className="p-5">
-                <div className="text-3xl mb-3">🔗</div>
-                <h4 className="font-semibold text-lg mb-2">OPC Hub</h4>
-                <p className="text-sm mb-3">
-                  {lang === "zh"
-                    ? "开源一人公司（One Person Company）协作网络核心仓库，提供身份认证、任务协作、信任体系等基础设施。"
-                    : "Core repository for the Open Person Company collaborative network, providing identity, task collaboration, and trust infrastructure."}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[var(--cyber-muted)]">
-                    ⚡ {lang === "zh" ? "核心项目" : "Core Project"}
-                  </span>
-                  <a
-                    href="https://github.com/summertoo/opc-hub"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button className="cyber-button-small">
-                      {t("opc.visit")}
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          </RevealSection>
-          <RevealSection delay={100}>
-            <Card className="cyber-card h-full">
-              <CardContent className="p-5">
-                <div className="text-3xl mb-3">🎨</div>
-                <h4 className="font-semibold text-lg mb-2">
-                  创意空间 (DeGame Tropical Island)
-                </h4>
-                <p className="text-sm mb-3">
-                  {lang === "zh"
-                    ? "提供创意空间，为创作者提供创意支持，激发灵感与协作。"
-                    : "A creative space providing inspiration and support for creators to collaborate and innovate."}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[var(--cyber-muted)]">
-                    💡 {lang === "zh" ? "创意工具" : "Creative Tool"}
-                  </span>
-                  <a
-                    href="https://github.com/etboodXJ/DeGameTropicalIsLand"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button className="cyber-button-small">
-                      {t("opc.visit")}
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          </RevealSection>
-          <RevealSection delay={200}>
-            <Card className="cyber-card h-full">
-              <CardContent className="p-5">
-                <div className="text-3xl mb-3">🤖</div>
-                <h4 className="font-semibold text-lg mb-2">
-                  OC Network (原创角色网络)
-                </h4>
-                <p className="text-sm mb-3">
-                  {lang === "zh"
-                    ? "原创角色网络，为创作者提供私有 AI 智能体，赋能角色创作与互动。"
-                    : "Original Character network providing private AI agents for creators, empowering character creation and interaction."}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[var(--cyber-muted)]">
-                    🧠 {lang === "zh" ? "AI 智能体" : "AI Agent"}
-                  </span>
-                  <a
-                    href="https://github.com/etboodXJ/ocnetwork"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button className="cyber-button-small">
-                      {t("opc.visit")}
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Stable Gateway */}
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("gateway.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("gateway.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <RevealSection delay={0}>
-            <Card className="cyber-card h-full">
-              <CardContent className="p-5">
-                <div className="text-3xl mb-3">⭐</div>
-                <h4 className="font-semibold text-lg mb-2">
-                  {lang === "zh"
-                    ? "站长推荐：支持 GPT-5.4 / 5.5 的稳定中转站"
-                    : "Editor's Pick: Stable Gateway Supporting GPT-5.4 / 5.5"}
-                </h4>
-                <p className="text-sm mb-3">
-                  {lang === "zh"
-                    ? "一个稳定可用的 AI API 中转站，支持 GPT-5.4 / 5.5，适合开发、测试与日常调用。"
-                    : "A stable AI API gateway supporting GPT-5.4 / 5.5, suitable for development, testing, and daily use."}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[var(--cyber-muted)]">
-                    🚀 {lang === "zh" ? "站长推荐" : "Recommended"}
-                  </span>
-                  <a
-                    href="https://api.gavinhub.online/register?aff=vGbL"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button className="cyber-button-small">
-                      {t("gateway.visit")}
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* Web Games */}
       <section className="py-20">
         <RevealSection>
           <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
@@ -513,46 +495,103 @@ export default function Homepage() {
         </RevealSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {webGames.map((game, i) => (
-            <RevealSection key={game.id} delay={i * 100}>
-              <Card className="cyber-card h-full">
-                <CardContent className="p-5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <h4 className="font-semibold text-lg">{game.title}</h4>
-                    {game.isNew && (
-                      <span className="text-xs px-2 py-0.5 rounded-full bg-[rgba(14,165,233,0.1)] text-[var(--cyber-primary)] font-bold">
-                        NEW
-                      </span>
-                    )}
-                    {game.isUpcoming && (
-                      <span className="text-xs px-2 py-0.5 rounded-full bg-[rgba(234,179,8,0.1)] text-yellow-500 font-bold">
-                        COMING SOON
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-sm mb-3">{t(game.descKey)}</p>
-                  {game.isUpcoming ? (
-                    <Button className="cyber-button-small" disabled>
-                      {t("project.comingSoon")}
-                    </Button>
-                  ) : (
-                    <a
-                      href={game.liveUrl}
-                      target={game.liveUrl.startsWith("/") ? "_self" : "_blank"}
-                      rel="noopener noreferrer"
-                    >
-                      <Button className="cyber-button-small">
-                        {t("webgames.playNow")}
-                      </Button>
-                    </a>
-                  )}
-                </CardContent>
-              </Card>
-            </RevealSection>
+            <GameCard
+              key={game.id}
+              title={game.title}
+              descKey={game.descKey}
+              imagePrompt={game.imagePrompt}
+              liveUrl={game.liveUrl}
+              status={game.status}
+              platform={game.platform}
+              index={i}
+              t={t}
+              lang={lang}
+            />
           ))}
         </div>
       </section>
 
-      {/* Open Source */}
+      <section className="py-20">
+        <RevealSection>
+          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+            {t("dapps.title")}
+          </h3>
+          <p className="mb-10 text-center cyber-subtitle">
+            {t("dapps.subtitle")}
+          </p>
+        </RevealSection>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {dapps.map((dapp, i) => (
+            <ProjectCard
+              key={dapp.id}
+              titleKey={dapp.titleKey}
+              descKey={dapp.descKey}
+              imagePrompt={dapp.imagePrompt}
+              liveUrl={dapp.liveUrl}
+              githubUrl={dapp.githubUrl}
+              status={dapp.status}
+              index={i}
+              t={t}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="py-20">
+        <RevealSection>
+          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+            {t("opc.title")}
+          </h3>
+          <p className="mb-10 text-center cyber-subtitle">
+            {t("opc.subtitle")}
+          </p>
+        </RevealSection>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {tools.map((tool, i) => (
+            <ProjectCard
+              key={tool.id}
+              title={tool.title}
+              desc={tool.desc}
+              imagePrompt={tool.imagePrompt}
+              githubUrl={tool.githubUrl}
+              status={tool.status}
+              index={i}
+              t={t}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="py-20">
+        <RevealSection>
+          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+            {t("gateway.title")}
+          </h3>
+          <p className="mb-10 text-center cyber-subtitle">
+            {t("gateway.subtitle")}
+          </p>
+        </RevealSection>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <ProjectCard
+            title={
+              lang === "zh"
+                ? "站长推荐：支持 GPT-5.4 / 5.5 的稳定中转站"
+                : "Editor's Pick: Stable Gateway Supporting GPT-5.4 / 5.5"
+            }
+            desc={
+              lang === "zh"
+                ? "一个稳定可用的 AI API 中转站，支持 GPT-5.4 / 5.5，适合开发、测试与日常调用。"
+                : "A stable AI API gateway supporting GPT-5.4 / 5.5, suitable for development, testing, and daily use."
+            }
+            imagePrompt="AI API gateway logo, data flowing through secure tunnel, GPT neural network abstract, professional tech square icon"
+            liveUrl="https://api.gavinhub.online/register?aff=vGbL"
+            status="live"
+            index={0}
+            t={t}
+          />
+        </div>
+      </section>
+
       <section className="py-20">
         <RevealSection>
           <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
@@ -563,160 +602,19 @@ export default function Homepage() {
           </p>
         </RevealSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <RevealSection delay={0}>
-            <Card className="cyber-card h-full">
-              <CardContent className="p-5">
-                <h4 className="font-semibold text-lg mb-2">{t("os.suiBP")}</h4>
-                <p className="text-sm mb-3">{t("os.suiBPDesc")}</p>
-                <div className="flex space-x-2">
-                  <a
-                    href="https://github.com/majoson-chen/sui-best-practices"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button className="cyber-button-small">
-                      {t("opensource.project")}
-                    </Button>
-                  </a>
-                  <a
-                    href="https://github.com/majoson-chen/sui-best-practices/pull/16"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button className="cyber-button-small">
-                      {t("opensource.myPR")}
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          </RevealSection>
+          <ProjectCard
+            titleKey="os.suiBP"
+            descKey="os.suiBPDesc"
+            imagePrompt="Sui blockchain best practices logo, code editor with Move language, developer documentation square icon"
+            liveUrl="https://github.com/majoson-chen/sui-best-practices"
+            githubUrl="https://github.com/majoson-chen/sui-best-practices/pull/16"
+            status="live"
+            index={0}
+            t={t}
+          />
         </div>
       </section>
 
-      {/* Articles */}
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("articles.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("articles.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[
-            {
-              icon: "📖",
-              title: "从0基础开始写 Sui MOVE 应用&游戏实战系列",
-              desc:
-                lang === "zh"
-                  ? "在登链社区连载的 Sui Move 开发系列教程，从零基础到实战项目。"
-                  : "A Sui Move development tutorial series on LearnBlockchain, from beginner to real-world projects.",
-              platform: "LearnBlockchain",
-              url: "https://learnblockchain.cn/column/47",
-            },
-            {
-              icon: "🚀",
-              title: "星航计划 DeTask 找活网 Web3 DApp 应用开发",
-              desc:
-                lang === "zh"
-                  ? "星航计划实战项目，从零开发 Web3 去中心化任务平台 DApp。"
-                  : "Star Voyage project: building a decentralized task platform DApp on Web3.",
-              platform: "LearnBlockchain",
-              url: "https://learnblockchain.cn/column/43",
-            },
-          ].map((article, i) => (
-            <RevealSection key={i} delay={i * 100}>
-              <Card className="cyber-card h-full">
-                <CardContent className="p-5">
-                  <div className="text-3xl mb-3">{article.icon}</div>
-                  <h4 className="font-semibold text-lg mb-2">
-                    {article.title}
-                  </h4>
-                  <p className="text-sm mb-3">{article.desc}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-[var(--cyber-muted)]">
-                      📌 {article.platform}
-                    </span>
-                    <a
-                      href={article.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button className="cyber-button-small">
-                        {t("articles.read")}
-                      </Button>
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            </RevealSection>
-          ))}
-        </div>
-      </section>
-
-      {/* Novels */}
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("novels.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("novels.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[
-            {
-              icon: "👨‍💻",
-              title: "码农穿越平民世界",
-              desc:
-                lang === "zh"
-                  ? "一个程序员意外穿越到平民世界，用代码思维解决古代生活难题的故事。连载于番茄小说。"
-                  : "A web novel about a coder who transmigrates to the common people's world. Serialized on Fanqie Novel.",
-              platform: "番茄小说",
-              url: "https://fanqienovel.com/page/7516472366981975102",
-            },
-            {
-              icon: "⚔️",
-              title: "群雄战记：中华英雄传",
-              desc:
-                lang === "zh"
-                  ? "群雄战记：中华英雄传 - 重温经典武侠，群雄逐鹿的江湖故事。第二章更新中。"
-                  : "Chronicles of Heroes: Chinese Legends - Relive classic wuxia tales of heroes contending for supremacy. Chapter 2 updated.",
-              platform: "番茄小说",
-              url: "https://fanqienovel.com/page/7631541666125450302",
-            },
-          ].map((novel, i) => (
-            <RevealSection key={i} delay={i * 100}>
-              <Card className="cyber-card h-full">
-                <CardContent className="p-5">
-                  <div className="text-3xl mb-3">{novel.icon}</div>
-                  <h4 className="font-semibold text-lg mb-2">{novel.title}</h4>
-                  <p className="text-sm mb-3">{novel.desc}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-[var(--cyber-muted)]">
-                      📖 {novel.platform}
-                    </span>
-                    <a
-                      href={novel.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button className="cyber-button-small">
-                        {t("novels.read")}
-                      </Button>
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            </RevealSection>
-          ))}
-        </div>
-      </section>
-
-      {/* Banner */}
       <RevealSection>
         <section className="py-16">
           <div className="flex justify-center cyber-image-container">
@@ -736,7 +634,6 @@ export default function Homepage() {
         </section>
       </RevealSection>
 
-      {/* Newsletter */}
       <RevealSection>
         <section className="py-20">
           <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
@@ -785,7 +682,6 @@ export default function Homepage() {
         </section>
       </RevealSection>
 
-      {/* Footer */}
       <footer className="py-10 cyber-footer">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
@@ -804,7 +700,6 @@ export default function Homepage() {
             <h5 className="font-bold mb-2">{t("footer.projects")}</h5>
             <ul className="cyber-subtitle text-sm space-y-1">
               <li>Are You Okay?</li>
-              <li>Hand Battle</li>
               <li>Sui Write3</li>
             </ul>
           </div>
