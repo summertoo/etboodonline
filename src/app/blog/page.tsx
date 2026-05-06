@@ -54,6 +54,16 @@ export default function Blog() {
       platform: "番茄小说",
       url: "https://fanqienovel.com/page/7631541666125450302",
     },
+    {
+      id: "mulan-first-battle",
+      title: "群雄战记·英灵殿·花木兰第一战",
+      desc:
+        lang === "zh"
+          ? "群雄战记世界观下的短篇故事，聚焦花木兰的第一场战斗与英灵觉醒。发布于番茄小说。"
+          : "A short story in the Warlord Chronicles universe, focused on Hua Mulan's first battle and heroic awakening. Published on Fanqie Novel.",
+      platform: "番茄小说",
+      url: "https://fanqienovel.com/main/writer/preview-short/7636763598840152600",
+    },
   ];
 
   return (
