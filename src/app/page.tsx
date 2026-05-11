@@ -397,6 +397,17 @@ export default function Homepage() {
       githubUrl: "https://github.com/etboodXJ/ocnetwork",
       status: "live" as const,
     },
+    {
+      id: 4,
+      title: "稳定中转站 (FreeModel)",
+      desc:
+        lang === "zh"
+          ? "稳定可用的 AI 中转服务，新用户首月赠送 300U，邀请一位新人双方各送 5U。适合模型调用、API 测试与日常开发接入。"
+          : "A stable AI relay service for model access and API integration. New users get 300 USDT credit in the first month, and both inviter and invitee receive 5 USDT per referral.",
+      imagePrompt: "AI relay gateway logo, neon network hub, stable API routing, blue purple futuristic badge, square icon",
+      liveUrl: "https://freemodel.dev/invite/FRE-70703524",
+      status: "new" as const,
+    },
   ];
 
   return (
