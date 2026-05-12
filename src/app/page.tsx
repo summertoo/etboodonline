@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { CardContent, Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
+import { projects } from "@/data/projects";
 
 function useScrollReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -50,16 +51,12 @@ function RevealSection({
   );
 }
 
-function encodeImagePrompt(prompt: string) {
-  return encodeURIComponent(prompt);
-}
-
 function ProjectCard({
   title,
   titleKey,
   desc,
   descKey,
-  imagePrompt,
+  logoUrl,
   liveUrl,
   githubUrl,
   status,
@@ -70,7 +67,7 @@ function ProjectCard({
   titleKey?: string;
   desc?: string;
   descKey?: string;
-  imagePrompt: string;
+  logoUrl: string;
   liveUrl?: string;
   githubUrl?: string;
   status?: "live" | "coming" | "new";
@@ -89,7 +86,7 @@ function ProjectCard({
           <div className="flex items-start gap-4">
             <div className="w-16 h-16 rounded-xl overflow-hidden shadow-md flex-shrink-0">
               <img
-                src={`https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=${encodeImagePrompt(imagePrompt)}&image_size=square_hd`}
+                src={logoUrl}
                 alt={displayTitle}
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -109,7 +106,9 @@ function ProjectCard({
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-2">
-                <h4 className="font-semibold text-lg truncate">{displayTitle}</h4>
+                <h4 className="font-semibold text-lg truncate">
+                  {displayTitle}
+                </h4>
                 {isNew && (
                   <span className="text-xs px-2 py-0.5 rounded-full bg-[rgba(249,115,22,0.1)] text-[var(--cyber-primary)] font-bold flex-shrink-0">
                     NEW
@@ -121,10 +120,16 @@ function ProjectCard({
                   </span>
                 )}
               </div>
-              <p className="text-sm mb-3 cyber-subtitle line-clamp-2">{displayDesc}</p>
+              <p className="text-sm mb-3 cyber-subtitle line-clamp-2">
+                {displayDesc}
+              </p>
               <div className="flex flex-wrap gap-2">
                 {isLive && liveUrl ? (
-                  <a href={liveUrl} target={liveUrl.startsWith("/") ? "_self" : "_blank"} rel="noopener noreferrer">
+                  <a
+                    href={liveUrl}
+                    target={liveUrl.startsWith("/") ? "_self" : "_blank"}
+                    rel="noopener noreferrer"
+                  >
                     <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]">
                       {t("dapps.visit")}
                     </Button>
@@ -136,7 +141,9 @@ function ProjectCard({
                 ) : null}
                 {githubUrl && (
                   <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Button className="cyber-button-small">{t("dapps.github")}</Button>
+                    <Button className="cyber-button-small">
+                      {t("dapps.github")}
+                    </Button>
                   </a>
                 )}
               </div>
@@ -151,7 +158,7 @@ function ProjectCard({
 function GameCard({
   title,
   descKey,
-  imagePrompt,
+  logoUrl,
   liveUrl,
   status,
   platform,
@@ -161,7 +168,7 @@ function GameCard({
 }: {
   title: string;
   descKey: string;
-  imagePrompt: string;
+  logoUrl: string;
   liveUrl: string;
   status: "live" | "coming" | "new";
   platform?: "roblox" | "web";
@@ -179,7 +186,7 @@ function GameCard({
           <div className="flex items-start gap-4">
             <div className="w-16 h-16 rounded-xl overflow-hidden shadow-md flex-shrink-0">
               <img
-                src={`https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=${encodeImagePrompt(imagePrompt)}&image_size=square_hd`}
+                src={logoUrl}
                 alt={title}
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -201,10 +208,18 @@ function GameCard({
               <div className="flex items-center gap-2 mb-2 flex-wrap">
                 <h4 className="font-semibold text-lg truncate">{title}</h4>
                 {platform && (
-                  <span className={`text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0 ${
-                    platform === "roblox" ? "bg-red-100 text-red-700" : "bg-cyan-100 text-cyan-700"
-                  }`}>
-                    {platform === "roblox" ? "Roblox" : (lang === "zh" ? "网页" : "Web")}
+                  <span
+                    className={`text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0 ${
+                      platform === "roblox"
+                        ? "bg-red-100 text-red-700"
+                        : "bg-cyan-100 text-cyan-700"
+                    }`}
+                  >
+                    {platform === "roblox"
+                      ? "Roblox"
+                      : lang === "zh"
+                        ? "网页"
+                        : "Web"}
                   </span>
                 )}
                 {isNew && (
@@ -220,7 +235,11 @@ function GameCard({
               </div>
               <p className="text-sm mb-3 cyber-subtitle">{t(descKey)}</p>
               {isLive ? (
-                <a href={liveUrl} target={liveUrl.startsWith("/") ? "_self" : "_blank"} rel="noopener noreferrer">
+                <a
+                  href={liveUrl}
+                  target={liveUrl.startsWith("/") ? "_self" : "_blank"}
+                  rel="noopener noreferrer"
+                >
                   <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]">
                     {t("webgames.playNow")}
                   </Button>
@@ -264,151 +283,36 @@ export default function Homepage() {
     }
   }
 
-  const robloxGames = [
-    {
-      id: 1,
-      title: "Apex Mind",
-      descKey: "game.apexMindDesc",
-      imagePrompt: "futuristic mind puzzle game logo with glowing blue neural network, Roblox 3D icon style, cyberpunk aesthetic, minimalist square emblem",
-      liveUrl: "https://www.roblox.com/games/126170387607652",
-      status: "live" as const,
-      platform: "roblox" as const,
-    },
-    {
-      id: 2,
-      title: "LOBSTER BUMP",
-      descKey: "game.lobsterBumpDesc",
-      imagePrompt: "cartoon red lobster bumping game logo, Roblox style icon, playful underwater theme, vibrant colors, square emblem",
-      liveUrl: "https://www.roblox.com/games/102614376416074",
-      status: "live" as const,
-      platform: "roblox" as const,
-    },
-    {
-      id: 3,
-      title: "WARLORD SAGA",
-      descKey: "game.warlordSagaDesc",
-      imagePrompt: "epic fantasy warlord battle logo, ancient Chinese warfare theme, dramatic warrior emblem, Roblox style square icon",
-      liveUrl: "",
-      status: "coming" as const,
-      platform: "roblox" as const,
-    },
-  ];
-
-  const webGames = [
-    {
-      id: 1,
-      title: "🦞 龙虾跑酷 (Lobster Run)",
-      descKey: "game.lobsterRunDesc",
-      imagePrompt: "cute red lobster running through obstacles, 2D platformer game logo, cartoon ocean background, square icon design",
-      liveUrl: "/h5game01/龙虾跑酷.html",
-      status: "new" as const,
-      platform: "web" as const,
-    },
-    {
-      id: 2,
-      title: "Mini Soccer",
-      descKey: "game.miniSoccerDesc",
-      imagePrompt: "mini soccer game logo, stylized football players, neon sports field, cyberpunk style square icon",
-      liveUrl: "https://soccerdemo.edgeone.app/",
-      status: "live" as const,
-      platform: "web" as const,
-    },
-    {
-      id: 3,
-      title: "🏮 群雄战记：中华英雄传",
-      descKey: "game.warlordHeroesDesc",
-      imagePrompt: "ancient Chinese Three Kingdoms heroes logo, traditional Chinese architecture, warrior emblem, square game icon",
-      liveUrl: "https://games.soonjy.com/public/gameLobby/?projectId=69cb5b0280d0cf54f562a136&inviteCode=1BBDC0C1",
-      status: "new" as const,
-      platform: "web" as const,
-    },
-    {
-      id: 4,
-      title: "FootBall Game",
-      descKey: "game.footballDesc",
-      imagePrompt: "football shootout game logo, goalkeeper diving save, striker kicking ball, dramatic sports square icon",
-      liveUrl: "/football/football-game.html",
-      status: "new" as const,
-      platform: "web" as const,
-    },
-  ];
-
-  const dapps = [
-    {
-      id: 1,
-      titleKey: "dapp.areYouOkay",
-      descKey: "dapp.ruokDesc",
-      imagePrompt: "decentralized check-in DApp logo, Sui blockchain wallet icon, secure transfer emblem, blue and purple square logo",
-      liveUrl: "https://ruok3.vercel.app/",
-      githubUrl: "https://github.com/summertoo/ruok",
-      status: "live" as const,
-    },
-    {
-      id: 2,
-      titleKey: "dapp.miniSoccer",
-      descKey: "game.miniSoccerDesc",
-      imagePrompt: "mini soccer game logo, stylized football players, neon sports field, cyberpunk style square icon",
-      liveUrl: "https://soccerdemo.edgeone.app/",
-      githubUrl: "",
-      status: "live" as const,
-    },
-    {
-      id: 3,
-      titleKey: "dapp.suiWrite3",
-      descKey: "dapp.write3Desc",
-      imagePrompt: "novel writing platform logo, digital manuscript pages, Sui blockchain symbol, web3 publishing square icon",
-      liveUrl: "",
-      githubUrl: "https://github.com/etboodXJ/SuiWrite3",
-      status: "coming" as const,
-    },
-  ];
-
-  const tools = [
-    {
-      id: 1,
-      title: "OPC Hub",
-      desc:
-        lang === "zh"
-          ? "开源一人公司协作网络核心仓库，提供身份认证、任务协作、信任体系等基础设施。"
-          : "Core repository for the Open Person Company collaborative network, providing identity, task collaboration, and trust infrastructure.",
-      imagePrompt: "open source collaboration network logo, interconnected nodes, one person company concept, blue and purple square emblem",
-      githubUrl: "https://github.com/summertoo/opc-hub",
-      status: "live" as const,
-    },
-    {
-      id: 2,
-      title: "创意空间 (DeGame Tropical Island)",
-      desc:
-        lang === "zh"
-          ? "提供创意空间，为创作者提供创意支持，激发灵感与协作。"
-          : "A creative space providing inspiration and support for creators to collaborate and innovate.",
-      imagePrompt: "tropical island creative workspace logo, palm trees, white sand beach, creative tools emblem, square icon",
-      githubUrl: "https://github.com/etboodXJ/DeGameTropicalIsLand",
-      status: "live" as const,
-    },
-    {
-      id: 3,
-      title: "OC Network (原创角色网络)",
-      desc:
-        lang === "zh"
-          ? "原创角色网络，为创作者提供私有 AI 智能体，赋能角色创作与互动。"
-          : "Original Character network providing private AI agents for creators, empowering character creation and interaction.",
-      imagePrompt: "original character AI network logo, anime-style characters, AI brain visualization, purple and blue square icon",
-      githubUrl: "https://github.com/etboodXJ/ocnetwork",
-      status: "live" as const,
-    },
-    {
-      id: 4,
-      title: "稳定中转站 (FreeModel)",
-      desc:
-        lang === "zh"
-          ? "稳定可用的 AI 中转服务，新用户首月赠送 300U，邀请一位新人双方各送 5U。适合模型调用、API 测试与日常开发接入。"
-          : "A stable AI relay service for model access and API integration. New users get 300 USDT credit in the first month, and both inviter and invitee receive 5 USDT per referral.",
-      imagePrompt: "AI relay gateway logo, neon network hub, stable API routing, blue purple futuristic badge, square icon",
-      liveUrl: "https://freemodel.dev/invite/FRE-70703524",
-      status: "new" as const,
-    },
-  ];
+  const robloxGames = useMemo(
+    () => projects.filter((p) => p.platform === "roblox"),
+    [],
+  );
+  const webGames = useMemo(
+    () => projects.filter((p) => p.category === "webgame"),
+    [],
+  );
+  const dapps = useMemo(
+    () => projects.filter((p) => p.category === "dapp"),
+    [],
+  );
+  const tools = useMemo(
+    () =>
+      projects.filter(
+        (p) =>
+          p.category === "tool" &&
+          p.id !== "stable-gateway" &&
+          p.id !== "sui-best-practices",
+      ),
+    [],
+  );
+  const stableGateway = useMemo(
+    () => projects.find((p) => p.id === "stable-gateway"),
+    [],
+  );
+  const suiBestPractices = useMemo(
+    () => projects.find((p) => p.id === "sui-best-practices"),
+    [],
+  );
 
   return (
     <div className="max-w-7xl mx-auto px-4 cyber-container fly-in">
@@ -433,7 +337,8 @@ export default function Homepage() {
           <h2
             className="text-5xl md:text-6xl font-bold mb-6"
             style={{
-              background: "linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary))",
+              background:
+                "linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary))",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -449,22 +354,6 @@ export default function Homepage() {
           <p className="mb-8 text-sm cyber-subtitle opacity-70">
             {t("hero.tagline")}
           </p>
-          <div className="flex justify-center gap-4">
-            <Button
-              className="cyber-button"
-              onClick={() => window.open("mailto:etbood@gmail.com")}
-            >
-              {t("hero.contact")}
-            </Button>
-            <a href="#roblox-games">
-              <Button
-                variant="outline"
-                className="cyber-button-small border-[var(--cyber-primary)] text-[var(--cyber-primary)]"
-              >
-                {t("hero.viewGames")}
-              </Button>
-            </a>
-          </div>
         </div>
       </section>
 
@@ -481,10 +370,10 @@ export default function Homepage() {
           {robloxGames.map((game, i) => (
             <GameCard
               key={game.id}
-              title={game.title}
+              title={game.title!}
               descKey={game.descKey}
-              imagePrompt={game.imagePrompt}
-              liveUrl={game.liveUrl}
+              logoUrl={game.logoUrl}
+              liveUrl={game.liveUrl!}
               status={game.status}
               platform={game.platform}
               index={i}
@@ -508,10 +397,10 @@ export default function Homepage() {
           {webGames.map((game, i) => (
             <GameCard
               key={game.id}
-              title={game.title}
+              title={game.title!}
               descKey={game.descKey}
-              imagePrompt={game.imagePrompt}
-              liveUrl={game.liveUrl}
+              logoUrl={game.logoUrl}
+              liveUrl={game.liveUrl!}
               status={game.status}
               platform={game.platform}
               index={i}
@@ -537,7 +426,7 @@ export default function Homepage() {
               key={dapp.id}
               titleKey={dapp.titleKey}
               descKey={dapp.descKey}
-              imagePrompt={dapp.imagePrompt}
+              logoUrl={dapp.logoUrl}
               liveUrl={dapp.liveUrl}
               githubUrl={dapp.githubUrl}
               status={dapp.status}
@@ -563,7 +452,7 @@ export default function Homepage() {
               key={tool.id}
               title={tool.title}
               desc={tool.desc}
-              imagePrompt={tool.imagePrompt}
+              logoUrl={tool.logoUrl}
               githubUrl={tool.githubUrl}
               status={tool.status}
               index={i}
@@ -583,23 +472,25 @@ export default function Homepage() {
           </p>
         </RevealSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <ProjectCard
-            title={
-              lang === "zh"
-                ? "站长推荐：支持 GPT-5.4 / 5.5 的稳定中转站"
-                : "Editor's Pick: Stable Gateway Supporting GPT-5.4 / 5.5"
-            }
-            desc={
-              lang === "zh"
-                ? "一个稳定可用的 AI API 中转站，支持 GPT-5.4 / 5.5，适合开发、测试与日常调用。"
-                : "A stable AI API gateway supporting GPT-5.4 / 5.5, suitable for development, testing, and daily use."
-            }
-            imagePrompt="AI API gateway logo, data flowing through secure tunnel, GPT neural network abstract, professional tech square icon"
-            liveUrl="https://api.gavinhub.online/register?aff=vGbL"
-            status="live"
-            index={0}
-            t={t}
-          />
+          {stableGateway && (
+            <ProjectCard
+              title={
+                lang === "zh"
+                  ? "站长推荐：支持 GPT-5.4 / 5.5 的稳定中转站"
+                  : "Editor's Pick: Stable Gateway Supporting GPT-5.4 / 5.5"
+              }
+              desc={
+                lang === "zh"
+                  ? "一个稳定可用的 AI API 中转站，支持 GPT-5.4 / 5.5，适合开发、测试与日常调用。"
+                  : "A stable AI API gateway supporting GPT-5.4 / 5.5, suitable for development, testing, and daily use."
+              }
+              logoUrl={stableGateway.logoUrl}
+              liveUrl={stableGateway.liveUrl}
+              status={stableGateway.status}
+              index={0}
+              t={t}
+            />
+          )}
         </div>
       </section>
 
@@ -613,16 +504,18 @@ export default function Homepage() {
           </p>
         </RevealSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <ProjectCard
-            titleKey="os.suiBP"
-            descKey="os.suiBPDesc"
-            imagePrompt="Sui blockchain best practices logo, code editor with Move language, developer documentation square icon"
-            liveUrl="https://github.com/majoson-chen/sui-best-practices"
-            githubUrl="https://github.com/majoson-chen/sui-best-practices/pull/16"
-            status="live"
-            index={0}
-            t={t}
-          />
+          {suiBestPractices && (
+            <ProjectCard
+              titleKey={suiBestPractices.titleKey}
+              descKey={suiBestPractices.descKey}
+              logoUrl={suiBestPractices.logoUrl}
+              liveUrl={suiBestPractices.liveUrl}
+              githubUrl="https://github.com/majoson-chen/sui-best-practices/pull/16"
+              status={suiBestPractices.status}
+              index={0}
+              t={t}
+            />
+          )}
         </div>
       </section>
 
@@ -692,6 +585,126 @@ export default function Homepage() {
           )}
         </section>
       </RevealSection>
+
+      {/* News */}
+      <section className="py-20">
+        <RevealSection>
+          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+            {t("news.title")}
+          </h3>
+          <p className="mb-10 text-center cyber-subtitle">
+            {t("news.subtitle")}
+          </p>
+        </RevealSection>
+        <div className="max-w-4xl mx-auto space-y-4">
+          <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-lg">🤖</span>
+              <div>
+                <h4 className="font-semibold">
+                  {lang === "zh" ? "AI HOT 日报 · 2026-05-12 速览" : "AI HOT Daily · 2026-05-12"}
+                </h4>
+                <p className="text-xs text-[var(--cyber-muted)]">
+                  {lang === "zh" ? "AI 与科技行业最新动态" : "Latest AI and tech industry updates"}
+                </p>
+              </div>
+            </div>
+            <div className="space-y-3 text-sm">
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [模型发布]" : "📌 [Model Releases]"}
+                </p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>
+                    {lang === "zh"
+                      ? "Thinking Machines 发布原生多模态交互模型（前 OpenAI CTO Mira 创立），200ms 粒度实时响应音视频"
+                      : "Thinking Machines launches multimodal interactive model (founded by ex-OpenAI CTO Mira), real-time audio/video at 200ms granularity"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "AntLingAGI 发布 Ring-2.6-1T 万亿参数推理模型，OpenRouter 免费到 5/15"
+                      : "AntLingAGI releases Ring-2.6-1T trillion-parameter reasoning model, free on OpenRouter until 5/15"}
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [产品更新]" : "📌 [Product Updates]"}
+                </p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>
+                    {lang === "zh"
+                      ? "OpenAI 推出 Daybreak 网络安全防御系统"
+                      : "OpenAI launches Daybreak cybersecurity defense system"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Anthropic 在 AWS 上线 Claude 平台，同时开源金融 AI 全栈模板（10 Agent + 11 MCP 连接器）"
+                      : "Anthropic launches Claude on AWS (self-operated), open-sources finance AI full-stack template (10 Agents + 11 MCP connectors)"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Replit 上线并行代理（同时跑 10 个 Agent）"
+                      : "Replit launches parallel agents (10 concurrent agents)"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Claude Code v2.1.139 新增 Agent 视图和 /goal 命令"
+                      : "Claude Code v2.1.139 adds Agent view and /goal command"}
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [行业大事]" : "📌 [Industry News]"}
+                </p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>
+                    {lang === "zh"
+                      ? "Anthropic 估值 5 天 +2000 亿美元（链上 1.4 万亿），年收入 12 个月增长 1400%"
+                      : "Anthropic valuation +$200B in 5 days (on-chain $1.4T), revenue up 1400% in 12 months"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "中国首例 AI 代写种草笔记案宣判，赔平台 10 万"
+                      : "China\'s first AI-generated content lawsuit rules against defendant, fined ¥100K"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "npm 遭大规模供应链投毒（TanStack/Mistral 等 160+ 包），窃取云密钥"
+                      : "npm hit by massive supply chain attack (160+ packages including TanStack/Mistral), stealing cloud keys"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "谷歌披露黑客用 AI 挖漏洞成功利用"
+                      : "Google discloses hackers successfully exploited vulnerabilities with AI"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "菲尔兹奖得主 Gowers 实测 GPT-5.5 Pro：17 分钟产出论文级成果，警告数学博士生面临危机"
+                      : "Fields Medalist Gowers tests GPT-5.5 Pro: produces paper-level results in 17 mins, warns math PhDs face disruption"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Cognition AI 总部首度公开：18 个月做到 $4.45 亿年化营收"
+                      : "Cognition AI HQ revealed: $445M ARR in 18 months"}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-4 p-3 rounded-lg bg-[rgba(14,165,233,0.05)] border border-[rgba(14,165,233,0.1)]">
+              <p className="text-xs font-semibold text-[var(--cyber-primary)]">
+                {lang === "zh" ? "💡 一句判断" : "💡 Key Takeaway"}
+              </p>
+              <p className="text-xs mt-1">
+                {lang === "zh"
+                  ? "Anthropic 今天最值得关注：估值火箭 + AWS 落地 + 开源金融模板 → 从模型公司往企业 AI 基础设施 + 行业标准制定者方向加速转型。"
+                  : "Anthropic today: skyrocketing valuation + AWS launch + open-source finance template → accelerating from a model company into enterprise AI infrastructure + industry standard setter."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <footer className="py-10 cyber-footer">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

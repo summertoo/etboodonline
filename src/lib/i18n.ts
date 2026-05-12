@@ -186,6 +186,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "gateway.title": "🚉 Stable Gateway",
     "gateway.subtitle": "Recommended stable access points and tools.",
     "gateway.visit": "Visit →",
+
+    // News
+    "news.title": "📰 Latest News",
+    "news.subtitle": "AI and tech industry highlights.",
   },
 
   zh: {
@@ -359,5 +363,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "gateway.title": "🚉 稳定的中转站",
     "gateway.subtitle": "推荐稳定可用的 AI 接入与中转工具。",
     "gateway.visit": "立即访问 →",
+
+    // News
+    "news.title": "📰 最新动态",
+    "news.subtitle": "AI 与科技行业每日速览。",
   },
 };
