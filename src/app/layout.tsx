@@ -135,7 +135,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" suppressHydrationWarning>
       <head />
       <body>
         {/* Google Analytics */}
