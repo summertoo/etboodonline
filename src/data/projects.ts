@@ -1,0 +1,213 @@
+export type Category = "all" | "roblox" | "webgame" | "dapp" | "tool" | "article" | "novel";
+export type Status = "live" | "coming" | "new";
+export type Platform = "roblox" | "web";
+
+export interface Project {
+  id: string;
+  title?: string;
+  titleKey?: string;
+  desc?: string;
+  descKey: string;
+  category: Exclude<Category, "all">;
+  platform?: Platform;
+  status: Status;
+  logoUrl: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  platformLabel?: string;
+}
+
+export const projects: Project[] = [
+  {
+    id: "roblox-apex-mind",
+    title: "Apex Mind",
+    descKey: "game.apexMindDesc",
+    category: "roblox",
+    platform: "roblox",
+    status: "live",
+    logoUrl: "/avatars/apex-mind.png",
+    liveUrl: "https://www.roblox.com/games/126170387607652",
+  },
+  {
+    id: "roblox-lobster-bump",
+    title: "LOBSTER BUMP",
+    descKey: "game.lobsterBumpDesc",
+    category: "roblox",
+    platform: "roblox",
+    status: "live",
+    logoUrl: "/avatars/lobster-bump.png",
+    liveUrl: "https://www.roblox.com/games/102614376416074",
+  },
+  {
+    id: "roblox-warlord-saga",
+    title: "WARLORD SAGA",
+    descKey: "game.warlordSagaDesc",
+    category: "roblox",
+    platform: "roblox",
+    status: "coming",
+    logoUrl: "/avatars/warlord-saga.png",
+  },
+  {
+    id: "web-lobster-run",
+    title: "🦞 龙虾跑酷 (Lobster Run)",
+    descKey: "game.lobsterRunDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/lobster-run.png",
+    liveUrl: "/h5game01/龙虾跑酷.html",
+  },
+  {
+    id: "web-mini-soccer",
+    title: "Mini Soccer",
+    descKey: "game.miniSoccerDesc",
+    category: "webgame",
+    platform: "web",
+    status: "live",
+    logoUrl: "/avatars/mini-soccer.png",
+    liveUrl: "https://soccerdemo.edgeone.app/",
+  },
+  {
+    id: "web-warlord-heroes",
+    title: "🏮 群雄战记：中华英雄传",
+    descKey: "game.warlordHeroesDesc",
+    category: "webgame",
+    platform: "web",
+    status: "live",
+    logoUrl: "/avatars/warlord-heroes.png",
+    liveUrl: "https://games.soonjy.com/public/gameLobby/?projectId=69cb5b0280d0cf54f562a136&inviteCode=1BBDC0C1",
+  },
+  {
+    id: "web-football",
+    title: "FootBall Game",
+    descKey: "game.footballDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/football-game.png",
+    liveUrl: "/football/football-game.html",
+  },
+  {
+    id: "dapp-ruok",
+    title: "Are You Okay?",
+    titleKey: "dapp.areYouOkay",
+    descKey: "dapp.ruokDesc",
+    category: "dapp",
+    status: "live",
+    logoUrl: "/avatars/are-you-okay.png",
+    liveUrl: "https://ruok3.vercel.app/",
+    githubUrl: "https://github.com/summertoo/ruok",
+  },
+  {
+    id: "dapp-sui-write3",
+    title: "Sui Write3",
+    titleKey: "dapp.suiWrite3",
+    descKey: "dapp.write3Desc",
+    category: "dapp",
+    status: "coming",
+    logoUrl: "/avatars/sui-write3.png",
+    githubUrl: "https://github.com/etboodXJ/SuiWrite3",
+  },
+  {
+    id: "opc-hub",
+    title: "OPC Hub",
+    descKey: "dapp.ruokDesc",
+    category: "tool",
+    status: "live",
+    logoUrl: "/avatars/opc-hub.png",
+    githubUrl: "https://github.com/summertoo/opc-hub",
+  },
+  {
+    id: "creative-space",
+    title: "创意空间 (DeGame Tropical Island)",
+    descKey: "dapp.ruokDesc",
+    category: "tool",
+    status: "live",
+    logoUrl: "/avatars/degame-tropical-island.png",
+    githubUrl: "https://github.com/etboodXJ/DeGameTropicalIsLand",
+  },
+  {
+    id: "oc-network",
+    title: "OC Network (原创角色网络)",
+    descKey: "dapp.ruokDesc",
+    category: "tool",
+    status: "live",
+    logoUrl: "/avatars/oc-network.png",
+    githubUrl: "https://github.com/etboodXJ/ocnetwork",
+  },
+  {
+    id: "sui-best-practices",
+    title: "Sui Best Practices",
+    titleKey: "os.suiBP",
+    descKey: "os.suiBPDesc",
+    category: "tool",
+    status: "live",
+    logoUrl: "/avatars/sui-best-practices.png",
+    githubUrl: "https://github.com/majoson-chen/sui-best-practices",
+  },
+  {
+    id: "stable-gateway",
+    descKey: "dapp.ruokDesc",
+    category: "tool",
+    status: "live",
+    logoUrl: "/avatars/stable-gateway.png",
+    liveUrl: "https://api.gavinhub.online/register?aff=vGbL",
+  },
+  {
+    id: "free-model",
+    descKey: "freeModel.desc",
+    category: "tool",
+    status: "new",
+    logoUrl: "/avatars/free-model.png",
+    liveUrl: "https://freemodel.dev/invite/FRE-70703524",
+  },
+  {
+    id: "article-sui-move-series",
+    title: "从0基础开始写 Sui MOVE 应用&游戏实战系列",
+    descKey: "dapp.ruokDesc",
+    category: "article",
+    status: "live",
+    logoUrl: "/avatars/sui-move-series.png",
+    liveUrl: "https://learnblockchain.cn/column/47",
+    platformLabel: "登链社区",
+  },
+  {
+    id: "article-detask",
+    title: "星航计划 DeTask 找活网 Web3 DApp 应用开发",
+    descKey: "dapp.ruokDesc",
+    category: "article",
+    status: "live",
+    logoUrl: "/avatars/detask-tutorial.png",
+    liveUrl: "https://learnblockchain.cn/column/43",
+    platformLabel: "登链社区",
+  },
+  {
+    id: "novel-coder-transmigrate",
+    title: "码农穿越平民世界",
+    descKey: "dapp.ruokDesc",
+    category: "novel",
+    status: "live",
+    logoUrl: "/avatars/coder-transmigrates.png",
+    liveUrl: "https://fanqienovel.com/page/7516472366981975102",
+    platformLabel: "番茄小说 · 360章",
+  },
+  {
+    id: "novel-warlord-heroes",
+    title: "群雄战记：中华英雄传",
+    descKey: "dapp.ruokDesc",
+    category: "novel",
+    status: "live",
+    logoUrl: "/avatars/warlord-heroes-novel.png",
+    liveUrl: "https://fanqienovel.com/page/7631541666125450302",
+    platformLabel: "番茄小说 · 连载中",
+  },
+];
+
+export function getProjectById(id: string): Project | undefined {
+  return projects.find((p) => p.id === id);
+}
+
+export function getProjectsByCategory(category: Category): Project[] {
+  if (category === "all") return projects;
+  return projects.filter((p) => p.category === category);
+}
