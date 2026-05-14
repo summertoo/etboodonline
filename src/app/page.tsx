@@ -301,12 +301,17 @@ export default function Homepage() {
         (p) =>
           p.category === "tool" &&
           p.id !== "stable-gateway" &&
-          p.id !== "sui-best-practices",
+          p.id !== "sui-best-practices" &&
+          p.id !== "free-model",
       ),
     [],
   );
   const stableGateway = useMemo(
     () => projects.find((p) => p.id === "stable-gateway"),
+    [],
+  );
+  const freeModel = useMemo(
+    () => projects.find((p) => p.id === "free-model"),
     [],
   );
   const suiBestPractices = useMemo(
@@ -488,6 +493,17 @@ export default function Homepage() {
               liveUrl={stableGateway.liveUrl}
               status={stableGateway.status}
               index={0}
+              t={t}
+            />
+          )}
+          {freeModel && (
+            <ProjectCard
+              title={t("freeModel.title")}
+              desc={t("freeModel.desc")}
+              logoUrl={freeModel.logoUrl}
+              liveUrl={freeModel.liveUrl}
+              status={freeModel.status}
+              index={1}
               t={t}
             />
           )}
@@ -701,6 +717,71 @@ export default function Homepage() {
                   ? "Anthropic 今天最值得关注：估值火箭 + AWS 落地 + 开源金融模板 → 从模型公司往企业 AI 基础设施 + 行业标准制定者方向加速转型。"
                   : "Anthropic today: skyrocketing valuation + AWS launch + open-source finance template → accelerating from a model company into enterprise AI infrastructure + industry standard setter."}
               </p>
+            </div>
+          </div>
+
+          <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-lg">🏛️</span>
+              <div>
+                <h4 className="font-semibold">
+                  {lang === "zh" ? "📰 2026年5月14日 新闻概要" : "📰 News Summary · May 14, 2026"}
+                </h4>
+                <p className="text-xs text-[var(--cyber-muted)]">
+                  {lang === "zh" ? "中美关系、市场动态、科技AI、国际及新能源" : "China-US relations, markets, tech AI, international & new energy"}
+                </p>
+              </div>
+            </div>
+            <div className="space-y-3 text-sm">
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [中美关系]" : "📌 [China-US Relations]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "习近平与特朗普在北京人民大会堂举行会谈" : "Xi Jinping meets Trump at the Great Hall of the People in Beijing"}</li>
+                  <li>{lang === "zh" ? "习近平指出：中美经贸关系的本质是互利共赢，贸易战没有赢家" : "Xi: China-US economic ties are mutually beneficial, no winner in trade war"}</li>
+                  <li>{lang === "zh" ? "双方经贸团队已达成总体平衡积极的成果" : "Both sides economic teams reached balanced and positive outcomes"}</li>
+                  <li>{lang === "zh" ? "习近平：让2026年成为中美关系继往开来的历史性、标志性年份" : "Xi: Make 2026 a historic, landmark year for China-US relations"}</li>
+                  <li>{lang === "zh" ? "特朗普：中美两国有着美好的未来" : "Trump: China and the US have a beautiful future together"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [市场动态]" : "📌 [Market Moves]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "A股下跌：创业板指跌超2%，沪指跌0.95%，深成指跌1.58%" : "A-shares fall: ChiNext down 2%+, Shanghai -0.95%, Shenzhen -1.58%"}</li>
+                  <li>{lang === "zh" ? "成交放量：沪深两市成交额连续第24个交易日突破2万亿" : "Trading volume: Shanghai & Shenzhen exceed 2 trillion for 24 consecutive trading days"}</li>
+                  <li>{lang === "zh" ? "南向资金：净卖出额达50亿港元" : "Southbound flows: net selling reaches HK$5 billion"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [科技与AI]" : "📌 [Tech & AI]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "阿里发布财报：企业级Agent平台悟空开始规模化放量" : "Alibaba earnings: enterprise Agent platform Wukong begins scaling"}</li>
+                  <li>{lang === "zh" ? "生成式AI爆发：移动应用内购收入3年增长超32倍" : "GenAI boom: mobile in-app purchase revenue up 32x in 3 years"}</li>
+                  <li>{lang === "zh" ? "台积电预测：到2030年全球芯片市场规模将超过1.5万亿美元" : "TSMC predicts global chip market to exceed $1.5T by 2030"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [国际动态]" : "📌 [International]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "欧佩克下调2026年全球石油需求增长预测" : "OPEC cuts 2026 global oil demand growth forecast"}</li>
+                  <li>{lang === "zh" ? "欧盟对华聚酯纺粘无纺布征收45.6%-50.0%反倾销税" : "EU imposes 45.6%-50.0% anti-dumping duties on Chinese PET spunbond"}</li>
+                  <li>{lang === "zh" ? "韩国政府警告外汇市场过度波动，密切关注三星罢工风险" : "Korea warns of FX market volatility, monitors Samsung strike risk"}</li>
+                  <li>{lang === "zh" ? "花旗计划今年扩增亚洲主经纪业务人力10%" : "Citi plans to expand Asia prime brokerage headcount by 10%"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [新能源]" : "📌 [New Energy]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "SHEIN 2025年光伏装机容量同比增长66.8%，绿色电力使用比例超85%" : "SHEIN 2025 solar capacity up 66.8% YoY, green electricity over 85%"}</li>
+                  <li>{lang === "zh" ? "电池级碳酸锂价格下跌1750元/吨，报196150元/吨" : "Battery-grade lithium carbonate price drops RMB 1,750/ton to RMB 196,150/ton"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [其他]" : "📌 [Others]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "openEuler 宇航级嵌入式星载操作系统首次在商业卫星实现在轨运行" : "openEuler aerospace-grade embedded OS debuts on commercial satellite in orbit"}</li>
+                  <li>{lang === "zh" ? "小米已注册多款新车关联商标：XIAOMI YU7、YU7 GT、SU7" : "Xiaomi registers multiple new car trademarks: YU7, YU7 GT, SU7"}</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
