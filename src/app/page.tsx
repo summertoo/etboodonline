@@ -319,25 +319,34 @@ export default function Homepage() {
     [],
   );
 
+function FloatingParticles() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+  return (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      {[...Array(12)].map((_, i) => (
+        <div
+          key={i}
+          className="absolute w-1 h-1 rounded-full bg-[var(--cyber-primary)] opacity-20"
+          style={{
+            left: `${10 + Math.random() * 80}%`,
+            top: `${20 + Math.random() * 60}%`,
+            animation: `float ${6 + Math.random() * 8}s ease-in-out infinite`,
+            animationDelay: `${Math.random() * 5}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
   return (
     <div className="max-w-7xl mx-auto px-4 cyber-container fly-in">
       <Navbar />
 
       <section className="text-center py-24 cyber-hero relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(12)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 rounded-full bg-[var(--cyber-primary)] opacity-20"
-              style={{
-                left: `${10 + Math.random() * 80}%`,
-                top: `${20 + Math.random() * 60}%`,
-                animation: `float ${6 + Math.random() * 8}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 5}s`,
-              }}
-            />
-          ))}
-        </div>
+        <FloatingParticles />
         <div className="relative z-10">
           <h2
             className="text-5xl md:text-6xl font-bold mb-6"
