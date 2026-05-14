@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import "@/components/component/homepage.css";
 import { Providers } from "./providers";
@@ -135,13 +136,17 @@ export default function RootLayout({
 
   return (
     <html lang="zh-CN">
-      <head>
+      <head />
+      <body>
         {/* Google Analytics */}
-        <script
+        <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-MPXWZKWM9W"
+          strategy="afterInteractive"
         />
-        <script
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -152,26 +157,31 @@ export default function RootLayout({
           }}
         />
         {/* Google AdSense */}
-        <script
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9035468310087485"
           crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
         {/* JSON-LD Structured Data */}
-        <script
+        <Script
+          id="schema-org"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <script
+        <Script
+          id="website-schema"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-        <script
+        <Script
+          id="creativework-schema"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(creatorJsonLd) }}
         />
-      </head>
-      <body>
         <Providers>{children}</Providers>
       </body>
     </html>
