@@ -622,6 +622,91 @@ function FloatingParticles() {
           </p>
         </RevealSection>
         <div className="max-w-4xl mx-auto space-y-4">
+          {/* 2026-05-16 新闻 */}
+          <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-lg">📡</span>
+              <div>
+                <h4 className="font-semibold">
+                  {lang === "zh" ? "新闻简报 · 2026-05-16" : "News Brief · May 16, 2026"}
+                </h4>
+                <p className="text-xs text-[var(--cyber-muted)]">
+                  {lang === "zh" ? "AI科技、汽车出行、航天产业、财经消费、能源、民生监管" : "AI & Tech, Auto, Aerospace, Finance, Energy, Regulation"}
+                </p>
+              </div>
+            </div>
+            <div className="space-y-3 text-sm">
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "🤖 [AI & 科技]" : "🤖 [AI & Tech]"}
+                </p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "OpenAI 再次重组高管团队：布罗克曼正式接管产品，ChatGPT、Codex 及开发者 API 整合为一个核心产品团队" : "OpenAI restructures leadership: Brockman takes over products, ChatGPT/Codex/API merged into one core team"}</li>
+                  <li>{lang === "zh" ? "上海电信率先发布 Token 资费套餐：1元=25万额度点，支持话费支付，可调用30余款主流大模型" : "Shanghai Telecom launches Token pricing plan: ¥1=250K credits, phone bill payment, 30+ models available"}</li>
+                  <li>{lang === "zh" ? "虚拟动点加入 OpenLET 具身智能开源数据集工作委员会，与百度智能云、北大等9家单位共建生态" : "Virtual Point joins OpenLET embodied AI open-source dataset committee with Baidu Cloud, PKU and 9 others"}</li>
+                  <li>{lang === "zh" ? "蔚来高管解读神玑 NX9031 智驾芯片：5nm 制程，装车量已破 25 万片" : "NIO exec explains NX9031 self-driving chip: 5nm, 250K+ units deployed"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "🚗 [汽车出行]" : "🚗 [Auto & Mobility]"}
+                </p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "华为鸿蒙智行首款旗舰 MPV 智界 V9 上市，售价 38.98—51.98 万元，搭载896线激光雷达" : "Huawei Harmony Intelligent V9 MPV launched: ¥389.8K–519.8K, 896-line LiDAR"}</li>
+                  <li>{lang === "zh" ? "蔚来乐道 L80 上市，售价 24.28 万起，BaaS 电池租用 15.68 万起" : "NIO ONVO L80 launched: from ¥242.8K, BaaS from ¥156.8K"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "🚀 [航天 & 产业]" : "🚀 [Aerospace & Industry]"}
+                </p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "SpaceX 拟推万亿火星薪酬方案 + 1拆5拆股，B类股10倍投票权确保马斯克控制权" : "SpaceX proposes trillion-dollar Mars compensation plan + 5:1 stock split"}</li>
+                  <li>{lang === "zh" ? "波音称中国之行非常成功，收获 200 架飞机初步承诺" : "Boeing: China trip very successful, 200 aircraft preliminary commitments"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "💰 [财经 & 消费]" : "💰 [Finance & Consumer]"}
+                </p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "贵州茅台四款产品提价，公斤飞天 2989→3119 元/瓶" : "Moutai raises prices on 4 products: 1L Feitian ¥2989→3119"}</li>
+                  <li>{lang === "zh" ? "国内品牌金饰克价跌破 1400 元，周生生 1390 元/克" : "Domestic gold jewelry below ¥1400/g, Chow Sang Sang ¥1390/g"}</li>
+                  <li>{lang === "zh" ? "国内航线燃油附加费今起上调" : "Domestic flight fuel surcharges raised starting today"}</li>
+                  <li>{lang === "zh" ? "FF 获 2500 万美元新融资，加速 EAI 战略落地" : "Faraday Future secures $25M new funding, accelerating EAI strategy"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "🏭 [产业 & 能源]" : "🏭 [Industry & Energy]"}
+                </p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "国内首笔！数据中心接入虚拟电厂参与电力现货市场交易 — 算电协同从概念到落地" : "China\u0027s first: data centers join virtual power plant for spot market trading — compute-electricity synergy realized"}</li>
+                  <li>{lang === "zh" ? "海信与印尼国家投资部门战略合作签约，覆盖全领域产业与技术" : "Hisense signs strategic cooperation with Indonesia\u0027s national investment authority"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "🏥 [民生 & 监管]" : "🏥 [Public & Regulation]"}
+                </p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "国家医保局约谈老百姓、养天和、益丰、河南张仲景等4家连锁药房，针对化妆品串换药品违规使用医保基金" : "NHSA summons 4 pharmacy chains over swapping cosmetics for drugs to misuse medical insurance funds"}</li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-4 p-3 rounded-lg bg-[rgba(14,165,233,0.05)] border border-[rgba(14,165,233,0.1)]">
+              <p className="text-xs font-semibold text-[var(--cyber-primary)]">
+                {lang === "zh" ? "📊 今日关键信号" : "📊 Key Signal Today"}
+              </p>
+              <p className="text-xs mt-1">
+                {lang === "zh"
+                  ? "数据中心首次接入虚拟电厂参与现货交易 — \"算电协同\"从概念到落地的标志性事件，与甄来电售电业务方向高度契合，值得关注跟进。"
+                  : "First data center integration with virtual power plant for spot trading — a landmark event for compute-electricity synergy, highly relevant to power sales business direction."}
+              </p>
+            </div>
+          </div>
+
+          {/* 2026-05-14 新闻 */}
           <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-lg">🤖</span>
