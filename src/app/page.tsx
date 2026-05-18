@@ -881,6 +881,48 @@ function FloatingParticles() {
         </div>
       </section>
 
+      {/* 2026-05-18 AI 速报 */}
+      <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-lg">🤖</span>
+          <div>
+            <h4 className="font-semibold">
+              {lang === "zh" ? "🤖 AI 今日速报 · 2026-05-18" : "🤖 AI Daily · May 18, 2026"}
+            </h4>
+            <p className="text-xs text-[var(--cyber-muted)]">
+              {lang === "zh" ? "产品发布 · 论文研究 · 行业观点" : "Product Releases · Research · Industry Insights"}
+            </p>
+          </div>
+        </div>
+        <div className="space-y-3 text-sm">
+          <div>
+            <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布]" : "📌 [Product Releases]"}</p>
+            <ul className="ml-4 space-y-1 list-disc">
+              <li>{lang === "zh" ? "Grok Imagine 正式上线：Elon Musk 宣布向所有用户开放文生图功能" : "Grok Imagine launches: Elon Musk opens image generation to all X users"}</li>
+              <li>{lang === "zh" ? "ChatGPT 手机端集成 Codex：Greg Brockman 宣布手机端可直接调用 Codex 完成项目构建" : "ChatGPT mobile integrates Codex: users can build projects directly on phone"}</li>
+              <li>{lang === "zh" ? "Zerostack 1.0.0 发布：纯 Rust 编程代理工具，受 Unix 哲学启发" : "Zerostack 1.0.0: Pure Rust programming agent, Unix philosophy inspired"}</li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [论文研究]" : "📌 [Research]"}</p>
+            <ul className="ml-4 space-y-1 list-disc">
+              <li>{lang === "zh" ? "Claude 5 天攻破 Apple M5 内核：Anthropic 团队构建首个 M5 芯片远程利用链" : "Claude breaks Apple M5 in 5 days: first remote exploit chain for M5 chip"}</li>
+              <li>{lang === "zh" ? "LLM 智能体记忆重写机制存缺陷：研究显示记忆流式更新后性能从 100% 降至 54%" : "LLM agent memory rewrite has flaws: performance drops from 100% to 54% with memory"}</li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业观点]" : "📌 [Industry Insights]"}</p>
+            <ul className="ml-4 space-y-1 list-disc">
+              <li>{lang === "zh" ? "微信读书数据可视化工具开源：yao-weread-skill 生成本地报告，26 种图表" : "WeChat Reading data tool open-sourced: local reports with 26 charts"}</li>
+              <li>{lang === "zh" ? "Anthropic CEO：软件即将免费化，职业结构面临巨变" : "Anthropic CEO: Software will become free, professions will change drastically"}</li>
+              <li>{lang === "zh" ? "微软 AI CEO：18 个月内 AI 将自动化所有白领工作" : "Microsoft AI CEO: AI will automate all white-collar jobs in 18 months"}</li>
+              <li>{lang === "zh" ? "GBrain 开源：Garry Tan 的 8 层个人 AI 知识系统，实现终身记忆" : "GBrain open-sourced: Garry Tan's 8-layer AI knowledge system for lifelong memory"}</li>
+              <li>{lang === "zh" ? "Gary Marcus：生成式 AI 幻觉问题严重，'世界模型'和'神经符号 AI'是替代路径" : "Gary Marcus: GenAI hallucination is serious, world models & neuro-symbolic AI as alternatives"}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <footer className="py-10 cyber-footer">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
