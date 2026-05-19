@@ -8,6 +8,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "nav.service": "Service",
     "nav.project": "Project",
     "nav.blog": "Blog",
+    "nav.novels": "Novels",
     "nav.contact": "Contact",
 
     // Hero
@@ -201,6 +202,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "nav.service": "服务",
     "nav.project": "项目",
     "nav.blog": "博客",
+    "nav.novels": "小说",
     "nav.contact": "联系",
 
     // Hero
