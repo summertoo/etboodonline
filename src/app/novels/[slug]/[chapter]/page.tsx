@@ -24,38 +24,32 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
   const novel = getNovelBySlug(params.slug);
   const chapter = getChapterByNumber(params.slug, chapterNumber);
 
-  const [displayMode, setDisplayMode] = useState<DisplayMode>(() => {
-    if (typeof window !== "undefined") {
-      return (localStorage.getItem("reader-mode") as DisplayMode) || "zh";
-    }
-    return "zh";
-  });
-
-  const [fontSize, setFontSize] = useState<number>(() => {
-    if (typeof window !== "undefined") {
-      return parseInt(localStorage.getItem("reader-font-size") || "18", 10);
-    }
-    return 18;
-  });
-
-  const [theme, setTheme] = useState<ThemeMode>(() => {
-    if (typeof window !== "undefined") {
-      return (localStorage.getItem("reader-theme") as ThemeMode) || "light";
-    }
-    return "light";
-  });
+  const [displayMode, setDisplayMode] = useState<DisplayMode>("zh");
+  const [fontSize, setFontSize] = useState<number>(18);
+  const [theme, setTheme] = useState<ThemeMode>("light");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("reader-mode", displayMode);
-  }, [displayMode]);
+    const savedMode = localStorage.getItem("reader-mode") as DisplayMode;
+    const savedFontSize = localStorage.getItem("reader-font-size");
+    const savedTheme = localStorage.getItem("reader-theme") as ThemeMode;
+    if (savedMode) setDisplayMode(savedMode);
+    if (savedFontSize) setFontSize(parseInt(savedFontSize, 10));
+    if (savedTheme) setTheme(savedTheme);
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
-    localStorage.setItem("reader-font-size", fontSize.toString());
-  }, [fontSize]);
+    if (mounted) localStorage.setItem("reader-mode", displayMode);
+  }, [displayMode, mounted]);
 
   useEffect(() => {
-    localStorage.setItem("reader-theme", theme);
-  }, [theme]);
+    if (mounted) localStorage.setItem("reader-font-size", fontSize.toString());
+  }, [fontSize, mounted]);
+
+  useEffect(() => {
+    if (mounted) localStorage.setItem("reader-theme", theme);
+  }, [theme, mounted]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -74,10 +68,20 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
       ? novel.chapters[currentIndex + 1]
       : null;
 
+  const parseInlineFormatting = (text: string) => {
+    const parts = text.split(/(\*[^*]+\*)/g);
+    return parts.map((part, i) => {
+      if (part.startsWith("*") && part.endsWith("*")) {
+        return <em key={i}>{part.slice(1, -1)}</em>;
+      }
+      return part;
+    });
+  };
+
   const renderContent = (content: string[]) => {
     return content.map((paragraph, index) => (
       <p key={index} className="mb-6 leading-relaxed">
-        {paragraph}
+        {parseInlineFormatting(paragraph)}
       </p>
     ));
   };
@@ -98,10 +102,10 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
     return pairs.map((pair, index) => (
       <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8">
         <div className={`${textClass}`}>
-          <p className="mb-0 leading-relaxed">{pair.zh}</p>
+          <p className="mb-0 leading-relaxed">{parseInlineFormatting(pair.zh)}</p>
         </div>
         <div className={`${mutedClass}`}>
-          <p className="mb-0 leading-relaxed">{pair.en}</p>
+          <p className="mb-0 leading-relaxed">{parseInlineFormatting(pair.en)}</p>
         </div>
       </div>
     ));
@@ -130,7 +134,7 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
                   className={`text-sm ${
                     theme === "dark"
                       ? "border-gray-600 text-gray-300 hover:bg-gray-800"
-                      : "border-[var(--cyber-border)] hover:bg-white"
+                      : "border-[var(--cyber-border)] text-gray-700 hover:bg-white hover:text-[var(--cyber-primary)]"
                   }`}
                 >
                   {lang === "zh" ? "← 返回目录" : "← Contents"}
@@ -226,7 +230,7 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
 
         {/* Chapter Title */}
         <div className="py-12 border-b" style={{ borderColor: theme === "dark" ? "#374151" : "var(--cyber-border)" }}>
-          <p className={`text-sm ${mutedClass} mb-4 text-center`}>
+          <p className={`text-lg md:text-xl font-medium ${mutedClass} mb-6 text-center`}>
             {lang === "zh" ? novel.title.zh : novel.title.en}
           </p>
           {displayMode === "both" ? (
@@ -299,7 +303,7 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
                   className={`${
                     theme === "dark"
                       ? "border-gray-600 text-gray-300 hover:bg-gray-800"
-                      : "border-[var(--cyber-border)] hover:bg-white"
+                      : "border-[var(--cyber-border)] text-gray-700 hover:bg-white hover:text-[var(--cyber-primary)]"
                   }`}
                 >
                   ← {lang === "zh" ? "上一章" : "Previous"}
@@ -315,7 +319,7 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
                 className={`${
                   theme === "dark"
                     ? "border-gray-600 text-gray-300 hover:bg-gray-800"
-                    : "border-[var(--cyber-border)] hover:bg-white"
+                    : "border-[var(--cyber-border)] text-gray-700 hover:bg-white hover:text-[var(--cyber-primary)]"
                 }`}
               >
                 {lang === "zh" ? "目录" : "Contents"}
