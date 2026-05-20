@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLang } from "@/components/LangProvider";
@@ -20,8 +21,16 @@ export default function Navbar() {
 
   return (
     <header className="py-6 flex justify-between items-center cyber-header">
-      <Link href="/" className="text-3xl font-bold" style={{ textDecoration: "none" }}>
-        <h1>ZD Tech</h1>
+      <Link href="/" className="flex items-center gap-3" style={{ textDecoration: "none" }}>
+        <Image
+          src="/avatars/logo.png"
+          alt="ZD Tech Logo"
+          width={40}
+          height={40}
+          className="rounded-lg"
+          priority
+        />
+        <h1 className="text-3xl font-bold">ZD Tech</h1>
       </Link>
       <nav className="cyber-nav flex items-center gap-4" aria-label="Main navigation">
         <ul className="flex space-x-1">
