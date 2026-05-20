@@ -61,9 +61,6 @@ export const novels: Novel[] = [
         },
         content: {
           zh: [
-            "｛脑子寄存处｝",
-            "｛时间与空间寄存处，此处是唯一存档点｝",
-            "各位读者请安心寄存存档。以下是正文开始：",
             "\"我这就穿越了？\"",
             "\"还他娘的穿越成了一位工厂的职工？\"",
             "工厂车间里，姜海仔细观察着周围的环境。",
@@ -129,9 +126,6 @@ export const novels: Novel[] = [
             "这个介绍也够简短的，评价也是令人无语。"
           ],
           en: [
-            "{Mind Deposit Box}",
-            "{Time & Space Deposit Box — This is your only save point}",
-            "Rest easy, dear readers. Your saves are secure. Now, let the story begin.",
             "*I just... transmigrated?*",
             "*And I transmigrated into a goddamn factory worker?*",
             "Inside a factory workshop, Jiang Hai took in his surroundings with careful, disbelieving eyes.",

@@ -13,9 +13,9 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Hero
     "hero.title": "ZD Tech Studio",
-    "hero.subtitle": "Building Web3 games, DApps & creative tools on Sui",
+    "hero.subtitle": "Self-media + Games + Apps — Bilingual novels, web games & creative tools",
     "hero.tagline":
-      "Independent game developer • Roblox creator • Blockchain builder",
+      "Web Games • Bilingual Novels • DApps • Roblox",
     "hero.contact": "Contact Now",
     "hero.viewGames": "View Games ↓",
 
@@ -207,8 +207,8 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Hero
     "hero.title": "ZD Tech 工作室",
-    "hero.subtitle": "在 Sui 上构建 Web3 游戏、DApp 和创意工具",
-    "hero.tagline": "独立游戏开发者 • Roblox 创作者 • 区块链建设者",
+    "hero.subtitle": "自媒体 + 游戏 + 应用 — 双语小说、网页游戏与创意工具",
+    "hero.tagline": "网页游戏 • 双语小说 • DApp • Roblox",
     "hero.contact": "联系我们",
     "hero.viewGames": "查看游戏 ↓",
 
