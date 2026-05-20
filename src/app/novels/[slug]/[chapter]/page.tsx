@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
-import { getNovelBySlug, getChapterByNumber } from "@/data/novels";
+import { getNovelBySlug } from "@/data/novels";
+import type { ChapterMeta } from "@/data/novels";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -15,6 +16,11 @@ interface ChapterReaderPageProps {
   };
 }
 
+interface ChapterContent {
+  zh: string[];
+  en: string[];
+}
+
 type DisplayMode = "zh" | "en" | "both";
 type ThemeMode = "light" | "dark";
 
@@ -22,13 +28,37 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
   const { t, lang } = useLang();
   const chapterNumber = parseInt(params.chapter, 10);
   const novel = getNovelBySlug(params.slug);
-  const chapter = getChapterByNumber(params.slug, chapterNumber);
+  const chapterMeta: ChapterMeta | undefined = novel?.chapters.find(
+    (c) => c.number === chapterNumber
+  );
 
+  const [chapterContent, setChapterContent] = useState<ChapterContent | null>(null);
+  const [loading, setLoading] = useState(true);
   const [displayMode, setDisplayMode] = useState<DisplayMode>("zh");
   const [fontSize, setFontSize] = useState<number>(18);
   const [theme, setTheme] = useState<ThemeMode>("light");
   const [mounted, setMounted] = useState(false);
 
+  // Load chapter content from API
+  useEffect(() => {
+    if (!params.slug || !params.chapter) return;
+    setLoading(true);
+    fetch(`/api/novels/${params.slug}/${params.chapter}`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Not found");
+        return res.json();
+      })
+      .then((data: ChapterContent) => {
+        setChapterContent(data);
+        setLoading(false);
+      })
+      .catch(() => {
+        setChapterContent(null);
+        setLoading(false);
+      });
+  }, [params.slug, params.chapter]);
+
+  // Load reader preferences from localStorage
   useEffect(() => {
     const savedMode = localStorage.getItem("reader-mode") as DisplayMode;
     const savedFontSize = localStorage.getItem("reader-font-size");
@@ -57,7 +87,7 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
     }
   }, [chapterNumber]);
 
-  if (!novel || !chapter) {
+  if (!novel || !chapterMeta) {
     notFound();
   }
 
@@ -87,8 +117,9 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
   };
 
   const renderBilingualContent = () => {
-    const zhContent = chapter.content.zh;
-    const enContent = chapter.content.en;
+    if (!chapterContent) return null;
+    const zhContent = chapterContent.zh;
+    const enContent = chapterContent.en;
     const maxLength = Math.max(zhContent.length, enContent.length);
     const pairs: { zh: string; en: string }[] = [];
 
@@ -237,13 +268,13 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
               <div className="text-center">
                 <h1 className={`text-2xl md:text-3xl font-bold mb-2 ${textClass}`}>
-                  {chapter.title.zh}
+                  {chapterMeta.title.zh}
                 </h1>
                 <p className="text-xs text-[var(--cyber-muted)]">🇨🇳 中文</p>
               </div>
               <div className="text-center">
                 <h1 className={`text-2xl md:text-3xl font-bold mb-2 ${mutedClass}`}>
-                  {chapter.title.en}
+                  {chapterMeta.title.en}
                 </h1>
                 <p className="text-xs text-[var(--cyber-muted)]">🇺🇸 English</p>
               </div>
@@ -251,12 +282,12 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
           ) : (
             <div className="text-center">
               <h1 className={`text-3xl font-bold mb-3 ${textClass}`}>
-                {displayMode === "zh" ? chapter.title.zh : chapter.title.en}
+                {displayMode === "zh" ? chapterMeta.title.zh : chapterMeta.title.en}
               </h1>
             </div>
           )}
           <p className={`text-sm ${mutedClass} mt-6 text-center`}>
-            {chapter.publishDate} · {chapter.wordCount}{" "}
+            {chapterMeta.publishDate} · {chapterMeta.wordCount}{" "}
             {lang === "zh" ? "字" : "words"}
           </p>
         </div>
@@ -266,7 +297,19 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
           className={`py-12 ${bgClass}`}
           style={{ fontSize: `${fontSize}px`, lineHeight: "1.9" }}
         >
-          {displayMode === "both" ? (
+          {loading ? (
+            <div className="text-center py-20">
+              <p className={mutedClass}>
+                {lang === "zh" ? "加载中..." : "Loading..."}
+              </p>
+            </div>
+          ) : !chapterContent ? (
+            <div className="text-center py-20">
+              <p className={mutedClass}>
+                {lang === "zh" ? "章节内容未找到" : "Chapter content not found"}
+              </p>
+            </div>
+          ) : displayMode === "both" ? (
             <div>
               <div className="hidden md:block">
                 <div className="grid grid-cols-2 gap-8 md:gap-12 mb-8 pb-4 border-b" style={{ borderColor: theme === "dark" ? "#374151" : "var(--cyber-border)" }}>
@@ -283,7 +326,7 @@ export default function ChapterReaderPage({ params }: ChapterReaderPageProps) {
           ) : (
             <div className={textClass}>
               {renderContent(
-                displayMode === "zh" ? chapter.content.zh : chapter.content.en
+                displayMode === "zh" ? chapterContent.zh : chapterContent.en
               )}
             </div>
           )}

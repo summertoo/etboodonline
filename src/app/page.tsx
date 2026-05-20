@@ -373,7 +373,7 @@ function FloatingParticles() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/novels">
               <Button className="cyber-button text-base px-8 py-3">
-                {lang === "zh" ? "📚 双语小说" : "📚 Bilingual Novels"}
+                {lang === "zh" ? "📚 双鱼小说" : "📚 Bilingual Novels"}
               </Button>
             </Link>
             <Link href="/project">
@@ -389,7 +389,7 @@ function FloatingParticles() {
       <section className="py-20">
         <RevealSection>
           <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {lang === "zh" ? "📚 双语小说 · 中英对照阅读" : "📚 Bilingual Novels · Side-by-Side Reading"}
+            {lang === "zh" ? "📚 双鱼小说 ∙ 中英对照阅读" : "📚 Bilingual Novels · Side-by-Side Reading"}
           </h3>
           <p className="mb-10 text-center cyber-subtitle max-w-2xl mx-auto">
             {lang === "zh"
@@ -1022,7 +1022,7 @@ function FloatingParticles() {
             <p className="cyber-subtitle text-sm">{t("footer.aboutDesc")}</p>
           </div>
           <div>
-            <h5 className="font-bold mb-2">{lang === "zh" ? "双语小说" : "Novels"}</h5>
+            <h5 className="font-bold mb-2">{lang === "zh" ? "双鱼小说" : "Novels"}</h5>
             <ul className="cyber-subtitle text-sm space-y-1">
               <li>{lang === "zh" ? "码农穿越平民世界" : "Coder Transmigrates"}</li>
               <li>{lang === "zh" ? "群雄战记：中华英雄传" : "Warlord Saga"}</li>
