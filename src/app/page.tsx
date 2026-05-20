@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
 import { projects } from "@/data/projects";
 import { novels } from "@/data/novels";
+import { newsList } from "@/data/news";
 import Link from "next/link";
 
 function useScrollReveal(threshold = 0.15) {
@@ -565,6 +566,44 @@ function FloatingParticles() {
               t={t}
             />
           ))}
+        </div>
+      </section>
+
+      {/* AI News */}
+      <section className="py-20">
+        <RevealSection>
+          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+            {lang === "zh" ? "📰 AI 新闻速递" : "📰 AI News Flash"}
+          </h3>
+          <p className="mb-10 text-center cyber-subtitle">
+            {lang === "zh"
+              ? "每日精选 AI 行业最热动态"
+              : "Daily curated picks of the hottest AI industry updates"}
+          </p>
+        </RevealSection>
+        <div className="space-y-3 max-w-3xl mx-auto">
+          {newsList[0]?.items.slice(0, 4).map((item, i) => (
+            <RevealSection key={i} delay={i * 80}>
+              <div className="p-4 rounded-lg border border-[var(--cyber-border)] hover:border-[var(--cyber-primary)] transition-colors">
+                <h4 className="font-semibold text-sm mb-1">
+                  {i + 1}. {lang === "zh" ? item.title.zh : item.title.en}
+                </h4>
+                <p className="text-sm cyber-subtitle line-clamp-2">
+                  {lang === "zh" ? item.description.zh : item.description.en}
+                </p>
+              </div>
+            </RevealSection>
+          ))}
+        </div>
+        <div className="text-center mt-6">
+          <Link href="/news">
+            <Button
+              variant="outline"
+              className="cyber-button-small border-[var(--cyber-border)]"
+            >
+              {lang === "zh" ? "查看更多新闻 →" : "More News →"}
+            </Button>
+          </Link>
         </div>
       </section>
 
