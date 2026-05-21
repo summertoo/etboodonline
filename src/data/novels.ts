@@ -44,7 +44,7 @@ export const novels: NovelMeta[] = [
       { zh: "穿越", en: "Transmigration" },
     ],
     status: "ongoing",
-    totalChapters: 1,
+    totalChapters: 2,
     chapters: [
       {
         id: "chapter-1",
@@ -55,6 +55,16 @@ export const novels: NovelMeta[] = [
         },
         publishDate: "2026-05-19",
         wordCount: 1330,
+      },
+      {
+        id: "chapter-2",
+        number: 2,
+        title: {
+          zh: "第二章 食堂",
+          en: "Chapter 2 The Cafeteria",
+        },
+        publishDate: "2026-05-21",
+        wordCount: 1250,
       },
     ],
   },

@@ -1,28 +1,22 @@
 import { NextResponse } from "next/server";
-import chapterData from "@/data/chapters.json";
-
-interface ChapterContent {
-  zh: string[];
-  en: string[];
-}
-
-type NovelChapters = Record<string, ChapterContent>;
-type AllChapters = Record<string, NovelChapters>;
-
-const data = chapterData as AllChapters;
+import { getChapter } from "@/data/chapters";
 
 export async function GET(
   request: Request,
   { params }: { params: { slug: string; chapter: string } }
 ) {
   const { slug, chapter } = params;
-  const novelChapters = data[slug];
-  if (!novelChapters) {
-    return NextResponse.json({ error: "Novel not found" }, { status: 404 });
+  const chapterNum = parseInt(chapter, 10);
+
+  if (isNaN(chapterNum)) {
+    return NextResponse.json({ error: "Invalid chapter number" }, { status: 400 });
   }
-  const chapterContent = novelChapters[chapter];
+
+  const chapterContent = await getChapter(slug, chapterNum);
+
   if (!chapterContent) {
     return NextResponse.json({ error: "Chapter not found" }, { status: 404 });
   }
+
   return NextResponse.json(chapterContent);
 }
