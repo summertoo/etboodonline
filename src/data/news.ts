@@ -12,6 +12,84 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-05-21",
+    date: "2026-05-21",
+    title: {
+      zh: "AI HOT 日报 · 2026-05-21",
+      en: "AI HOT Daily · 2026-05-21",
+    },
+    summary: {
+      zh: "Qwen3.7智能体发布，原生4K视频生成模型Kling亮相，GPT-5预告将至，腾讯马维斯AI助手全平台上线，SpaceX与Anthropic合作提供AI算力。",
+      en: "Qwen3.7 agent released, native 4K video generation model Kling unveiled, GPT-5 teaser drops, Tencent's Maverick AI assistant goes cross-platform, SpaceX partners with Anthropic for AI compute.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: { zh: "Qwen3.7：智能体前沿多模态模型发布", en: "Qwen3.7: Frontier Multimodal Agent Model Released" },
+        description: {
+          zh: "Qwen Studio推出Qwen3.7，整合聊天、图像视频理解、图像生成、文档处理、网页搜索、工具调用及工件生成等能力，推动多模态交互向更自主方向发展。",
+          en: "Qwen Studio launched Qwen3.7, integrating chat, image/video understanding, image generation, document processing, web search, tool calling, and artifact generation — pushing multimodal interaction toward greater autonomy.",
+        },
+      },
+      {
+        title: { zh: "Kling AI 推出全球首个原生4K视频生成模型", en: "Kling AI Launches World's First Native 4K Video Generation Model" },
+        description: {
+          zh: "Kling AI正式推出全球首个原生4K视频生成模型，一键生成真4K画质视频，已获好莱坞团队、动画工作室等采用，原生4K从底层生成避免传统放大技术的角色变形问题。",
+          en: "Kling AI officially launched the world's first native 4K video generation model, generating true 4K quality in one click, already adopted by Hollywood teams and animation studios — native 4K generation avoids character distortion from traditional upscaling.",
+        },
+      },
+      {
+        title: { zh: "GPT-5 即将发布", en: "GPT-5 Is Coming Soon" },
+        description: {
+          zh: "ChatGPT官方X账号发推预告：GPT-5即将发布，引发AI社区广泛关注。",
+          en: "ChatGPT's official X account tweeted a teaser: GPT-5 is coming soon, sparking widespread attention in the AI community.",
+        },
+      },
+      {
+        title: { zh: "腾讯「马维斯」AI助手全平台上线", en: "Tencent 'Maverick' AI Assistant Launches Cross-Platform" },
+        description: {
+          zh: "腾讯发布操作系统层级AI助手「马维斯」，支持Windows、Mac和安卓平台，具备文档归类解析、图片识别处理、系统维护等功能，可调度不同模型处理任务，部分功能支持离线使用。",
+          en: "Tencent released OS-level AI assistant 'Maverick', supporting Windows, Mac, and Android, with document classification, image recognition, system maintenance, and the ability to orchestrate different models — partially available offline.",
+        },
+      },
+      {
+        title: { zh: "SpaceX与Anthropic合作提供大规模AI算力", en: "SpaceX Partners with Anthropic for Massive AI Compute" },
+        description: {
+          zh: "Elon Musk表示SpaceX正大规模提供AI算力服务，正与其他公司进行类似合作讨论，预计未来通过轨道数据中心以极高规模提供服务。",
+          en: "Elon Musk stated that SpaceX is providing AI compute services at scale, with similar partnership discussions underway with other companies, and expects to deliver at extreme scale via orbital data centers in the future.",
+        },
+      },
+      {
+        title: { zh: "OpenAI模型证伪离散几何核心猜想", en: "OpenAI Model Disproves Core Conjecture in Discrete Geometry" },
+        description: {
+          zh: "OpenAI的AI模型成功解决了数学界悬而未决逾80年的「单元距离问题」，推翻了离散几何领域的核心猜想，被视为AI驱动数学研究的里程碑事件。",
+          en: "OpenAI's AI model successfully solved the 'unit distance problem' — unsolved for over 80 years — disproving a core conjecture in discrete geometry, regarded as a milestone in AI-driven mathematical research.",
+        },
+      },
+      {
+        title: { zh: "孙正义豪赌OpenAI超600亿美元引发质疑", en: "Son's $60B+ OpenAI Bet Sparks Internal Doubts" },
+        description: {
+          zh: "软银对OpenAI投资承诺已超600亿美元，内部担忧孙正义过度信任奥尔特曼，且软银虽持股超10%却无董事会席位，缺乏决策影响力。",
+          en: "SoftBank's investment commitment to OpenAI has exceeded $60 billion, with internal concerns over Son's excessive trust in Altman — SoftBank holds over 10% equity but has no board seat, lacking decision-making influence.",
+        },
+      },
+      {
+        title: { zh: "Meta万人重组：裁员与AI转型并举", en: "Meta's 10,000-Person Restructuring: Layoffs Meet AI Pivot" },
+        description: {
+          zh: "Meta计划削减约8000个岗位，同时约7000名员工将被调配至新的AI相关职位，重点将资源集中于AI基础设施、基础模型构建及AI商业化。",
+          en: "Meta plans to cut about 8,000 positions while reassigning around 7,000 employees to new AI-related roles, concentrating resources on AI infrastructure, foundation model development, and AI commercialization.",
+        },
+      },
+      {
+        title: { zh: "微软内部示警：GitHub面临生存级风险", en: "Microsoft Warns Internally: GitHub Faces Existential Risk" },
+        description: {
+          zh: "微软内部警告GitHub面临「生存级风险」——Cursor、Claude Code等AI编程工具兴起，削弱了将代码上传至GitHub的必要性。微软已要求部分团队停用Claude Code，转向GitHub Copilot CLI。",
+          en: "Microsoft internally warned GitHub faces an 'existential risk' — the rise of AI coding tools like Cursor and Claude Code reduces the need to upload code to GitHub. Microsoft has directed some teams to stop using Claude Code and switch to GitHub Copilot CLI.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-05-20",
     date: "2026-05-20",
     title: {
