@@ -44,7 +44,7 @@ export const novels: NovelMeta[] = [
       { zh: "穿越", en: "Transmigration" },
     ],
     status: "ongoing",
-    totalChapters: 3,
+    totalChapters: 4,
     chapters: [
       {
         id: "chapter-1",
@@ -75,6 +75,16 @@ export const novels: NovelMeta[] = [
         },
         publishDate: "2026-05-22",
         wordCount: 1300,
+      },
+      {
+        id: "chapter-4",
+        number: 4,
+        title: {
+          zh: "第四章 新手岛",
+          en: "Chapter 4 Novice Island",
+        },
+        publishDate: "2026-05-23",
+        wordCount: 1350,
       },
     ],
   },
