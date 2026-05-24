@@ -1,0 +1,155 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { supabase } from "@/lib/supabase";
+
+interface AuthModalProps {
+  open: boolean;
+  onClose: () => void;
+  onLogin: (nickname: string) => void;
+}
+
+export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
+  const [tab, setTab] = useState<"login" | "register">("login");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [nickname, setNickname] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    setError("");
+  }, [tab, open]);
+
+  if (!open) return null;
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    try {
+      if (tab === "register") {
+        const { data, error: signUpError } = await supabase.auth.signUp({
+          email,
+          password,
+          options: { data: { nickname: nickname || email.split("@")[0] } },
+        });
+        if (signUpError) {
+          if (signUpError.message.includes("already registered")) {
+            setError("该邮箱已注册，请登录");
+          } else {
+            setError(signUpError.message);
+          }
+          return;
+        }
+        if (data.user?.identities?.length === 0) {
+          setError("该邮箱已注册，请登录");
+          return;
+        }
+        // If email confirmation is disabled, session is returned directly
+        if (data.session) {
+          const nick = data.user?.user_metadata?.nickname || email.split("@")[0];
+          onLogin(nick);
+          onClose();
+        } else {
+          setError("注册成功！请查看邮箱确认。");
+        }
+      } else {
+        const { data, error: loginError } = await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
+        if (loginError) {
+          setError("邮箱或密码错误");
+          return;
+        }
+        // Fetch nickname from profiles table
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("nickname")
+          .eq("id", data.user.id)
+          .single();
+        const nick = profile?.nickname || email.split("@")[0];
+        onLogin(nick);
+        onClose();
+      }
+    } catch (err) {
+      setError("操作失败，请重试");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50" onClick={onClose}>
+      <div className="bg-white rounded-xl p-6 w-full max-w-md mx-4 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+        {/* Tabs */}
+        <div className="flex mb-6 border-b border-gray-200">
+          <button
+            className={`flex-1 pb-3 text-sm font-medium transition-colors ${tab === "login" ? "text-[var(--cyber-primary)] border-b-2 border-[var(--cyber-primary)]" : "text-gray-400"}`}
+            onClick={() => setTab("login")}
+          >
+            登录
+          </button>
+          <button
+            className={`flex-1 pb-3 text-sm font-medium transition-colors ${tab === "register" ? "text-[var(--cyber-primary)] border-b-2 border-[var(--cyber-primary)]" : "text-gray-400"}`}
+            onClick={() => setTab("register")}
+          >
+            注册
+          </button>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="email"
+            placeholder="邮箱"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--cyber-primary)]"
+          />
+          <input
+            type="password"
+            placeholder="密码"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            minLength={6}
+            className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--cyber-primary)]"
+          />
+          {tab === "register" && (
+            <input
+              type="text"
+              placeholder="昵称（可选）"
+              value={nickname}
+              onChange={(e) => setNickname(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--cyber-primary)]"
+            />
+          )}
+
+          {error && (
+            <p className={`text-sm ${error.includes("成功") ? "text-green-600" : "text-red-500"}`}>
+              {error}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full py-2.5 rounded-lg text-sm font-medium text-white bg-[var(--cyber-primary)] hover:opacity-90 disabled:opacity-50 transition-all"
+          >
+            {loading ? "处理中..." : tab === "login" ? "登录" : "注册"}
+          </button>
+        </form>
+
+        <button
+          onClick={onClose}
+          className="mt-4 w-full py-2 text-sm text-gray-400 hover:text-gray-600"
+        >
+          关闭
+        </button>
+      </div>
+    </div>
+  );
+}

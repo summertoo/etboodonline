@@ -10,6 +10,7 @@ import { projects } from "@/data/projects";
 import { novels } from "@/data/novels";
 import { newsList } from "@/data/news";
 import Link from "next/link";
+import FeedbackForm from "@/components/FeedbackForm";
 
 function useScrollReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -1053,6 +1054,8 @@ function FloatingParticles() {
           </div>
         </div>
       </section>
+
+      <FeedbackForm lang={lang} />
 
       <footer className="py-10 cyber-footer">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
