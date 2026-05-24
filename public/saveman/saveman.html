@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>井下救人</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #2c3e50;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 游戏主容器 */
+        #gameContainer {
+            width: 800px;
+            height: 600px;
+            border: 4px solid #8b4513;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            background: #34495e;
+        }
+
+        /* 游戏画布 */
+        #gameCanvas {
+            display: block;
+            background: #1a232e;
+        }
+
+        /* UI面板 */
+        .ui-panel {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px #000;
+            z-index: 10;
+        }
+
+        /* 弹窗通用样式 */
+        .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 360px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 3px solid #f39c12;
+            border-radius: 15px;
+            text-align: center;
+            color: #fff;
+            z-index: 100;
+            display: none;
+        }
+
+        .modal h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .modal p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .modal button {
+            padding: 12px 30px;
+            font-size: 18px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .modal button:hover {
+            background: #2ecc71;
+        }
+
+        /* 失败弹窗颜色 */
+        #failModal {
+            border-color: #e74c3c;
+        }
+
+        #failModal button {
+            background: #e74c3c;
+        }
+
+        #failModal button:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- UI显示 -->
+        <div class="ui-panel">
+            <div>分数: <span id="score">0</span></div>
+            <div>时间: <span id="time">60</span> 秒</div>
+        </div>
+
+        <!-- 游戏画布 -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <!-- 胜利弹窗 -->
+        <div id="winModal" class="modal">
+            <h2>🎉 胜利 🎉</h2>
+            <p>所有人员已成功救出！</p>
+            <p>最终得分: <span id="winScore">0</span></p>
+            <button onclick="restartGame()">重新开始</button>
+        </div>
+
+        <!-- 失败弹窗 -->
+        <div id="failModal" class="modal">
+            <h2>⚠️ 失败 ⚠️</h2>
+            <p>时间结束，救援失败！</p>
+            <p>最终得分: <span id="failScore">0</span></p>
+            <button onclick="restartGame()">重新尝试</button>
+        </div>
+    </div>
+
+    <script>
+        // 获取DOM元素
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreEl = document.getElementById('score');
+        const timeEl = document.getElementById('time');
+        const winModal = document.getElementById('winModal');
+        const failModal = document.getElementById('failModal');
+        const winScoreEl = document.getElementById('winScore');
+        const failScoreEl = document.getElementById('failScore');
+
+        // ===================== 游戏核心配置 =====================
+        const game = {
+            score: 0,
+            time: 60,
+            timer: null,
+            isPlaying: true,
+            totalPeople: 5,  // 本关被困人员总数
+            savedPeople: 0    // 已救出人数
+        };
+
+        // 机械臂配置
+        const arm = {
+            x: canvas.width / 2,   // 旋转中心点X
+            y: 80,                 // 旋转中心点Y
+            length: 100,           // 初始长度
+            maxLength: 450,        // 最大伸长长度
+            angle: 0,              // 摆动角度
+            angleSpeed: 0.03,      // 摆动速度
+            extendSpeed: 8,        // 伸长速度
+            retractSpeed: 12,      // 收回速度
+            isExtending: false,    // 是否正在伸长
+            isRetracting: false,  // 是否正在收回
+            grabTarget: null       // 抓取到的目标
+        };
+
+        // 游戏目标数组（人员、箱子、石头）
+        const targets = [];
+
+        // ===================== 初始化游戏目标 =====================
+        function initTargets() {
+            targets.length = 0;
+            
+            // 生成5个被困人员（核心目标）
+            for (let i = 0; i < game.totalPeople; i++) {
+                targets.push({
+                    x: Math.random() * (canvas.width - 40) + 20,
+                    y: Math.random() * 350 + 200,
+                    type: 'person',
+                    size: 30,
+                    points: 1000,
+                    collected: false
+                });
+            }
+
+            // 生成8个箱子
+            for (let i = 0; i < 8; i++) {
+                targets.push({
+                    x: Math.random() * (canvas.width - 30) + 15,
+                    y: Math.random() * 350 + 200,
+                    type: 'box',
+                    size: 22,
+                    points: 20,
+                    collected: false
+                });
+            }
+
+            // 生成12个石头
+            for (let i = 0; i < 12; i++) {
+                targets.push({
+                    x: Math.random() * (canvas.width - 25) + 12,
+                    y: Math.random() * 350 + 200,
+                    type: 'stone',
+                    size: 18,
+                    points: 5,
+                    collected: false
+                });
+            }
+        }
+
+        // ===================== 游戏绘制函数 =====================
+        function drawGame() {
+            if (!game.isPlaying) return;
+            
+            // 清空画布
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制矿井顶部
+            ctx.fillStyle = '#8b4513';
+            ctx.fillRect(0, 0, canvas.width, 100);
+
+            // 机械臂自动摆动
+            arm.angle += arm.angleSpeed;
+            if (arm.angle > Math.PI / 3 || arm.angle < -Math.PI / 3) {
+                arm.angleSpeed *= -1;
+            }
+
+            // 计算机械臂端点坐标
+            const endX = arm.x + Math.cos(arm.angle) * arm.length;
+            const endY = arm.y + Math.sin(arm.angle) * arm.length;
+
+            // 绘制机械臂绳索
+            ctx.strokeStyle = '#f39c12';
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.moveTo(arm.x, arm.y);
+            ctx.lineTo(endX, endY);
+            ctx.stroke();
+
+            // 绘制抓斗
+            ctx.fillStyle = '#ecf0f1';
+            ctx.beginPath();
+            ctx.arc(endX, endY, 12, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 绘制所有游戏目标
+            targets.forEach(target => {
+                if (target.collected) return;
+
+                switch (target.type) {
+                    case 'person':
+                        ctx.fillStyle = '#ff6b6b';
+                        break;
+                    case 'box':
+                        ctx.fillStyle = '#feca57';
+                        break;
+                    case 'stone':
+                        ctx.fillStyle = '#a4b0be';
+                        break;
+                }
+
+                ctx.beginPath();
+                ctx.arc(target.x, target.y, target.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            // 机械臂伸长逻辑
+            if (arm.isExtending) {
+                if (arm.length < arm.maxLength) {
+                    arm.length += arm.extendSpeed;
+                    checkGrab(endX, endY);
+                } else {
+                    startRetract();
+                }
+            }
+
+            // 机械臂收回逻辑
+            if (arm.isRetracting) {
+                if (arm.length > 100) {
+                    arm.length -= arm.retractSpeed;
+                    // 带动抓取目标移动
+                    if (arm.grabTarget) {
+                        arm.grabTarget.x = endX;
+                        arm.grabTarget.y = endY;
+                    }
+                } else {
+                    // 收回完成
+                    arm.isRetracting = false;
+                    if (arm.grabTarget) {
+                        collectTarget(arm.grabTarget);
+                        arm.grabTarget = null;
+                    }
+                }
+            }
+
+            requestAnimationFrame(drawGame);
+        }
+
+        // ===================== 抓取检测 =====================
+        function checkGrab(x, y) {
+            if (arm.grabTarget) return;
+
+            targets.forEach(target => {
+                if (target.collected) return;
+
+                // 碰撞检测
+                const dx = x - target.x;
+                const dy = y - target.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < target.size + 8) {
+                    arm.grabTarget = target;
+                    startRetract();
+                }
+            });
+        }
+
+        // 开始收回机械臂
+        function startRetract() {
+            arm.isExtending = false;
+            arm.isRetracting = true;
+        }
+
+        // 收集目标 + 加分
+        function collectTarget(target) {
+            target.collected = true;
+            game.score += target.points;
+            scoreEl.textContent = game.score;
+
+            // 统计救出的人员
+            if (target.type === 'person') {
+                game.savedPeople++;
+                // 检查是否全部人员救出
+                if (game.savedPeople === game.totalPeople) {
+                    gameWin();
+                }
+            }
+        }
+
+        // ===================== 游戏倒计时 =====================
+        function startTimer() {
+            game.timer = setInterval(() => {
+                game.time--;
+                timeEl.textContent = game.time;
+
+                if (game.time <= 0) {
+                    gameFail();
+                }
+            }, 1000);
+        }
+
+        // ===================== 游戏胜利 =====================
+        function gameWin() {
+            game.isPlaying = false;
+            clearInterval(game.timer);
+            winScoreEl.textContent = game.score;
+            winModal.style.display = 'block';
+        }
+
+        // ===================== 游戏失败 =====================
+        function gameFail() {
+            game.isPlaying = false;
+            clearInterval(game.timer);
+            failScoreEl.textContent = game.score;
+            failModal.style.display = 'block';
+        }
+
+        // ===================== 重新开始游戏 =====================
+        function restartGame() {
+            // 重置所有数据
+            game.score = 0;
+            game.time = 60;
+            game.savedPeople = 0;
+            game.isPlaying = true;
+            
+            arm.length = 100;
+            arm.angle = 0;
+            arm.isExtending = false;
+            arm.isRetracting = false;
+            arm.grabTarget = null;
+
+            // 重置UI
+            scoreEl.textContent = 0;
+            timeEl.textContent = 60;
+            winModal.style.display = 'none';
+            failModal.style.display = 'none';
+
+            // 重新初始化
+            initTargets();
+            clearInterval(game.timer);
+            startTimer();
+            drawGame();
+        }
+
+        // ===================== 控制：点击/空格发射抓斗 =====================
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' && !arm.isExtending && !arm.isRetracting && game.isPlaying) {
+                arm.isExtending = true;
+            }
+        });
+
+        canvas.addEventListener('click', () => {
+            if (!arm.isExtending && !arm.isRetracting && game.isPlaying) {
+                arm.isExtending = true;
+            }
+        });
+
+        // ===================== 启动游戏 =====================
+        initTargets();
+        drawGame();
+        startTimer();
+    </script>
+</body>
+</html>

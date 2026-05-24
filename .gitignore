@@ -28,3 +28,7 @@ examples/
 *.skill
 next-env.d.ts
 tsconfig.tsbuildinfo
+plan/
+result/
+doc/
+docs/
