@@ -165,6 +165,20 @@ export const newsList: NewsItem[] = [
           en: "NVIDIA open-sourced LongLive 2.0, the first end-to-end long video generation infrastructure supporting 4-bit quantization, achieving 45.7 FPS generation speed.",
         },
       },
+      {
+        title: { zh: "NVIDIA 扩散语言模型实现光速级文本生成", en: "NVIDIA Diffusion LM Achieves Light-Speed Text Generation" },
+        description: {
+          zh: "NVIDIA 发布 Nemotron-Labs 扩散语言模型，通过扩散架构大幅提升文本生成速度，在延迟和吞吐量方面优于传统自回归模型。",
+          en: "NVIDIA released Nemotron-Labs, a diffusion language model that dramatically improves text generation speed through diffusion architecture, outperforming traditional autoregressive models in latency and throughput.",
+        },
+      },
+      {
+        title: { zh: "飞书-Claude Code 桥接开源项目", en: "Feishu-Claude Code Bridge Open-Sourced" },
+        description: {
+          zh: "开源项目 feishu-claude-code-bridge 实现飞书与本地 Claude Code CLI 双向连接，可从飞书消息直接指挥 Claude Code 执行任务，Claude 也能读写飞书文档。",
+          en: "The feishu-claude-code-bridge open-source project enables bidirectional connection between Feishu and local Claude Code CLI — tasks can be commanded directly from Feishu messages, and Claude can read/write Feishu documents.",
+        },
+      },
     ],
   },
 ];
