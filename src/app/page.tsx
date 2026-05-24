@@ -754,6 +754,55 @@ function FloatingParticles() {
           </p>
         </RevealSection>
         <div className="max-w-4xl mx-auto space-y-4">
+          {/* 2026-05-24 AI Daily */}
+          <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-lg">🤖</span>
+              <div>
+                <h4 className="font-semibold">
+                  {lang === "zh" ? "🤖 AI 今日速报 · 2026-05-24" : "🤖 AI Daily · May 24, 2026"}
+                </h4>
+                <p className="text-xs text-[var(--cyber-muted)]">
+                  {lang === "zh" ? "产品发布 · 行业动态 · 论文研究 · 技巧观点" : "Product Releases · Industry · Research · Tips"}
+                </p>
+              </div>
+            </div>
+            <div className="space-y-3 text-sm">
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Product Releases]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "StepAudio 2.5 实时语音发布" : "StepAudio 2.5 real-time voice"}</li>
+                  <li>{lang === "zh" ? "Models.dev：开源 AI 模型数据库" : "Models.dev: open-source AI model DB"}</li>
+                  <li>{lang === "zh" ? "Replit Agent + Squidler 全自动化 QA" : "Replit Agent + Squidler automated QA"}</li>
+                  <li>{lang === "zh" ? "Claude Code v2.1.150 版本更新" : "Claude Code v2.1.150 released"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "微软：AI 使用成本高于人工工资" : "Microsoft: AI costs exceed human wages"}</li>
+                  <li>{lang === "zh" ? "Anthropic 融资超 300 亿美元，估值反超 OpenAI" : "Anthropic raises $30B+ surpasses OpenAI"}</li>
+                  <li>{lang === "zh" ? "74% CEO 因 AI 冻结或缩减招聘" : "74% of CEOs freeze hiring due to AI"}</li>
+                  <li>{lang === "zh" ? "Mistral AI 收购 Emmi AI，加码工业 AI" : "Mistral AI acquires Emmi AI"}</li>
+                  <li>{lang === "zh" ? "Kling AI 亮相戛纳" : "Kling AI debuts at Cannes"}</li>
+                  <li>{lang === "zh" ? "Google 扩大与新加坡 AI 安全合作" : "Google expands AI safety in Singapore"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [论文研究]" : "📌 [Research]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "NVIDIA 扩散语言模型实现光速文本生成" : "NVIDIA diffusion LM achieves light-speed text"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [技巧与观点]" : "📌 [Tips & Views]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "飞书-Claude Code 桥接开源" : "Feishu-Claude Code bridge open-sourced"}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           {/* 2026-05-18 AI Daily - Newest */}
           <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
             <div className="flex items-center gap-3 mb-4">
