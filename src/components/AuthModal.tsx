@@ -82,8 +82,8 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50" onClick={onClose}>
-      <div className="bg-white rounded-xl p-6 w-full max-w-md mx-4 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+      <div className="bg-white rounded-xl p-6 w-full max-w-md mx-4 shadow-2xl">
         {/* Tabs */}
         <div className="flex mb-6 border-b border-gray-200">
           <button
@@ -107,7 +107,7 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--cyber-primary)]"
+            className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm text-gray-900 focus:outline-none focus:border-[var(--cyber-primary)]"
           />
           <input
             type="password"
@@ -116,7 +116,7 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
             onChange={(e) => setPassword(e.target.value)}
             required
             minLength={6}
-            className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--cyber-primary)]"
+            className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm text-gray-900 focus:outline-none focus:border-[var(--cyber-primary)]"
           />
           {tab === "register" && (
             <input
@@ -124,7 +124,7 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
               placeholder="昵称（可选）"
               value={nickname}
               onChange={(e) => setNickname(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--cyber-primary)]"
+              className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm text-gray-900 focus:outline-none focus:border-[var(--cyber-primary)]"
             />
           )}
 
