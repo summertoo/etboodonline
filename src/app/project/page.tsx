@@ -101,37 +101,43 @@ export default function ProjectPage() {
 
     if ((p.category === "roblox" || p.category === "webgame") && p.liveUrl) {
       return (
-        <a
-          href={p.liveUrl}
-          target={p.liveUrl.startsWith("/") ? "_self" : "_blank"}
-          rel="noopener noreferrer"
-        >
-          <Button className="cyber-button-small">{t("project.play")}</Button>
-        </a>
+        <Button className="cyber-button-small" asChild>
+          <a
+            href={p.liveUrl}
+            target={p.liveUrl.startsWith("/") ? "_self" : "_blank"}
+            rel="noopener noreferrer"
+          >
+            {t("project.play")}
+          </a>
+        </Button>
       );
     }
 
     if (p.category === "article" || p.category === "novel") {
       return (
-        <a href={p.liveUrl} target="_blank" rel="noopener noreferrer">
-          <Button className="cyber-button-small">{t("project.read")}</Button>
-        </a>
+        <Button className="cyber-button-small" asChild>
+          <a href={p.liveUrl} target="_blank" rel="noopener noreferrer">
+            {t("project.read")}
+          </a>
+        </Button>
       );
     }
 
     return (
       <div className="flex flex-wrap gap-2">
         {p.liveUrl && (
-          <a href={p.liveUrl} target="_blank" rel="noopener noreferrer">
-            <Button className="cyber-button-small">{t("project.visit")}</Button>
-          </a>
+          <Button className="cyber-button-small" asChild>
+            <a href={p.liveUrl} target="_blank" rel="noopener noreferrer">
+              {t("project.visit")}
+            </a>
+          </Button>
         )}
         {p.githubUrl && (
-          <a href={p.githubUrl} target="_blank" rel="noopener noreferrer">
-            <Button className="cyber-button-small">
+          <Button className="cyber-button-small" asChild>
+            <a href={p.githubUrl} target="_blank" rel="noopener noreferrer">
               {t("project.github")}
-            </Button>
-          </a>
+            </a>
+          </Button>
         )}
       </div>
     );

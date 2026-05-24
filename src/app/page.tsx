@@ -128,26 +128,26 @@ function ProjectCard({
               </p>
               <div className="flex flex-wrap gap-2">
                 {isLive && liveUrl ? (
-                  <a
-                    href={liveUrl}
-                    target={liveUrl.startsWith("/") ? "_self" : "_blank"}
-                    rel="noopener noreferrer"
-                  >
-                    <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]">
+                  <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]" asChild>
+                    <a
+                      href={liveUrl}
+                      target={liveUrl.startsWith("/") ? "_self" : "_blank"}
+                      rel="noopener noreferrer"
+                    >
                       {t("dapps.visit")}
-                    </Button>
-                  </a>
+                    </a>
+                  </Button>
                 ) : !isLive ? (
                   <Button className="cyber-button-small" disabled>
                     {t("project.comingSoon")}
                   </Button>
                 ) : null}
                 {githubUrl && (
-                  <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Button className="cyber-button-small">
+                  <Button className="cyber-button-small" asChild>
+                    <a href={githubUrl} target="_blank" rel="noopener noreferrer">
                       {t("dapps.github")}
-                    </Button>
-                  </a>
+                    </a>
+                  </Button>
                 )}
               </div>
             </div>
@@ -238,15 +238,15 @@ function GameCard({
               </div>
               <p className="text-sm mb-3 cyber-subtitle">{t(descKey)}</p>
               {isLive ? (
-                <a
-                  href={liveUrl}
-                  target={liveUrl.startsWith("/") ? "_self" : "_blank"}
-                  rel="noopener noreferrer"
-                >
-                  <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]">
+                <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]" asChild>
+                  <a
+                    href={liveUrl}
+                    target={liveUrl.startsWith("/") ? "_self" : "_blank"}
+                    rel="noopener noreferrer"
+                  >
                     {t("webgames.playNow")}
-                  </Button>
-                </a>
+                  </a>
+                </Button>
               ) : (
                 <Button className="cyber-button-small" disabled>
                   {t("roblox.comingSoon")}

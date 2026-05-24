@@ -161,7 +161,7 @@ export const projects: Project[] = [
     category: "tool",
     status: "live",
     logoUrl: "/avatars/stable-gateway.png",
-    liveUrl: "https://api.gavinhub.online/register?aff=vGbL",
+    liveUrl: "https://moligate.com/sign-up?aff=vGbL",
   },
   {
     id: "free-model",
