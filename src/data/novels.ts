@@ -44,7 +44,7 @@ export const novels: NovelMeta[] = [
       { zh: "穿越", en: "Transmigration" },
     ],
     status: "ongoing",
-    totalChapters: 5,
+    totalChapters: 6,
     chapters: [
       {
         id: "chapter-1",
@@ -95,6 +95,16 @@ export const novels: NovelMeta[] = [
         },
         publishDate: "2026-05-24",
         wordCount: 1100,
+      },
+      {
+        id: "chapter-6",
+        number: 6,
+        title: {
+          zh: "第六章 岛上搜索",
+          en: "Chapter 6 Island Search",
+        },
+        publishDate: "2026-05-25",
+        wordCount: 1050,
       },
     ],
   },
