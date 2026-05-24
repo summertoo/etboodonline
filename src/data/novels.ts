@@ -44,7 +44,7 @@ export const novels: NovelMeta[] = [
       { zh: "穿越", en: "Transmigration" },
     ],
     status: "ongoing",
-    totalChapters: 4,
+    totalChapters: 5,
     chapters: [
       {
         id: "chapter-1",
@@ -85,6 +85,16 @@ export const novels: NovelMeta[] = [
         },
         publishDate: "2026-05-23",
         wordCount: 1350,
+      },
+      {
+        id: "chapter-5",
+        number: 5,
+        title: {
+          zh: "第五章 岛上抓螃蟹",
+          en: "Chapter 5 Crab Catching on the Island",
+        },
+        publishDate: "2026-05-24",
+        wordCount: 1100,
       },
     ],
   },
