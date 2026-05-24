@@ -165,18 +165,75 @@ export const newsList: NewsItem[] = [
           en: "NVIDIA open-sourced LongLive 2.0, the first end-to-end long video generation infrastructure supporting 4-bit quantization, achieving 45.7 FPS generation speed.",
         },
       },
+    ],
+  },
+  {
+    id: "2026-05-24",
+    date: "2026-05-24",
+    title: {
+      zh: "🤖 AI 今日速报 · 2026-05-24",
+      en: "🤖 AI Daily · May 24, 2026",
+    },
+    summary: {
+      zh: "StepAudio 2.5 实时语音发布、Models.dev 开源模型数据库上线、Anthropic 估值突破 9000 亿美元、NVIDIA 扩散语言模型实现光速文本生成。",
+      en: "StepAudio 2.5 real-time voice, Models.dev open-source AI model DB, Anthropic valued at $900B+, NVIDIA diffusion LM achieves light-speed text generation.",
+    },
+    category: "ai-daily",
+    items: [
       {
-        title: { zh: "NVIDIA 扩散语言模型实现光速级文本生成", en: "NVIDIA Diffusion LM Achieves Light-Speed Text Generation" },
+        title: { zh: "StepAudio 2.5 实时语音发布", en: "StepAudio 2.5 Real-Time Voice Released" },
         description: {
-          zh: "NVIDIA 发布 Nemotron-Labs 扩散语言模型，通过扩散架构大幅提升文本生成速度，在延迟和吞吐量方面优于传统自回归模型。",
-          en: "NVIDIA released Nemotron-Labs, a diffusion language model that dramatically improves text generation speed through diffusion architecture, outperforming traditional autoregressive models in latency and throughput.",
+          zh: "阶跃星辰发布 StepAudio 2.5 Realtime 实时语音模型，能深度理解用户语速、语气、停顿等副语言特征，支持通过 API 接入自定义人格。",
+          en: "StepAudio 2.5 Realtime voice model understands speech rate, tone, pauses, supports custom personalities via API.",
         },
       },
       {
-        title: { zh: "飞书-Claude Code 桥接开源项目", en: "Feishu-Claude Code Bridge Open-Sourced" },
+        title: { zh: "Models.dev：开源 AI 模型数据库", en: "Models.dev: Open-Source AI Model Database" },
         description: {
-          zh: "开源项目 feishu-claude-code-bridge 实现飞书与本地 Claude Code CLI 双向连接，可从飞书消息直接指挥 Claude Code 执行任务，Claude 也能读写飞书文档。",
-          en: "The feishu-claude-code-bridge open-source project enables bidirectional connection between Feishu and local Claude Code CLI — tasks can be commanded directly from Feishu messages, and Claude can read/write Feishu documents.",
+          zh: "Models.dev 上线，专门收录 AI 模型的规格、定价及功能信息，便于开发者查询和比较。",
+          en: "Models.dev launched, a database of AI model specs, pricing, and features for developers.",
+        },
+      },
+      {
+        title: { zh: "Replit Agent + Squidler 全自动化 AI QA", en: "Replit Agent + Squidler Automated QA" },
+        description: {
+          zh: "Replit Agent 与 Squidler 集成，用户用自然语言描述功能，Replit Agent 构建，Squidler 自动测试并反馈修复。",
+          en: "Replit Agent + Squidler: natural language to automated build-test-fix pipeline.",
+        },
+      },
+      {
+        title: { zh: "微软：AI 使用成本高于人工工资", en: "Microsoft: AI Costs Exceed Human Wages" },
+        description: {
+          zh: "微软报告指出 AI tokens+agents 使用模式，综合开销已超过雇佣人类员工完成同类任务的费用。",
+          en: "Microsoft reported AI usage costs now exceed hiring humans for comparable tasks.",
+        },
+      },
+      {
+        title: { zh: "Anthropic 估值反超 OpenAI", en: "Anthropic Surpasses OpenAI in Valuation" },
+        description: {
+          zh: "Anthropic 即将完成超 300 亿美元融资，估值突破 9000 亿美元，正式超越 OpenAI。",
+          en: "Anthropic raising $30B+ at $900B+ valuation, surpassing OpenAI.",
+        },
+      },
+      {
+        title: { zh: "Mistral AI 收购 Emmi AI", en: "Mistral AI Acquires Emmi AI" },
+        description: {
+          zh: "Mistral AI 收购物理 AI 先驱 Emmi AI，整合物理仿真与数字孪生技术，服务航空航天、汽车行业。",
+          en: "Mistral AI acquired Emmi AI for physics simulation and digital twin expertise.",
+        },
+      },
+      {
+        title: { zh: "NVIDIA 扩散语言模型光速文本生成", en: "NVIDIA Diffusion LM Light-Speed Text" },
+        description: {
+          zh: "NVIDIA 发布 Nemotron-Labs 扩散语言模型，扩散架构大幅提升文本生成速度。",
+          en: "NVIDIA released Nemotron-Labs diffusion LM, outperforming autoregressive models.",
+        },
+      },
+      {
+        title: { zh: "飞书-Claude Code 桥接开源", en: "Feishu-Claude Code Bridge Open-Sourced" },
+        description: {
+          zh: "开源项目实现飞书与 Claude Code CLI 双向连接，可从飞书消息指挥 Claude Code。",
+          en: "Bidirectional bridge between Feishu and local Claude Code CLI.",
         },
       },
     ],
