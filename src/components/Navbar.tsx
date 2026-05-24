@@ -18,6 +18,12 @@ const navKeys = [
   { href: "/what-we-do", labelKey: "nav.whatWeDo" },
 ];
 
+function getUserNickname(user: any): string {
+  if (user?.user_metadata?.nickname) return user.user_metadata.nickname;
+  if (user?.user_metadata?.player_name) return user.user_metadata.player_name;
+  return user?.email?.split("@")[0] || "用户";
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const { lang, toggleLang, t } = useLang();
@@ -28,33 +34,19 @@ export default function Navbar() {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session?.user) {
-        supabase
-          .from("profiles")
-          .select("nickname")
-          .eq("id", session.user.id)
-          .single()
-          .then(({ data }) => {
-            setUser({
-              id: session.user.id,
-              nickname: data?.nickname || session.user.email?.split("@")[0] || "用户",
-            });
-          });
+        setUser({
+          id: session.user.id,
+          nickname: getUserNickname(session.user),
+        });
       }
     });
 
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       if (session?.user) {
-        supabase
-          .from("profiles")
-          .select("nickname")
-          .eq("id", session.user.id)
-          .single()
-          .then(({ data }) => {
-            setUser({
-              id: session.user.id,
-              nickname: data?.nickname || session.user.email?.split("@")[0] || "用户",
-            });
-          });
+        setUser({
+          id: session.user.id,
+          nickname: getUserNickname(session.user),
+        });
       } else {
         setUser(null);
       }
@@ -62,8 +54,8 @@ export default function Navbar() {
     return () => listener?.subscription.unsubscribe();
   }, []);
 
-  function handleLogin(nickname: string) {
-    setUser({ id: "", nickname });
+  function handleLogin(nickname: string, _userId: string) {
+    setUser({ id: _userId, nickname });
     setAuthOpen(false);
   }
 

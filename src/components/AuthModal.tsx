@@ -6,7 +6,7 @@ import { supabase } from "@/lib/supabase";
 interface AuthModalProps {
   open: boolean;
   onClose: () => void;
-  onLogin: (nickname: string) => void;
+  onLogin: (nickname: string, userId: string) => void;
 }
 
 export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
@@ -22,6 +22,15 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
   }, [tab, open]);
 
   if (!open) return null;
+
+  function getNick(user: any, fallback: string) {
+    // 1. Try user_metadata.nickname (set during signup)
+    if (user?.user_metadata?.nickname) return user.user_metadata.nickname;
+    // 2. Try user_metadata.player_name (set by game app)
+    if (user?.user_metadata?.player_name) return user.user_metadata.player_name;
+    // 3. Fallback to email prefix
+    return fallback;
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -47,10 +56,10 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
           setError("该邮箱已注册，请登录");
           return;
         }
-        // If email confirmation is disabled, session is returned directly
+        if (!data.user) { setError("注册失败，请重试"); return; }
         if (data.session) {
-          const nick = data.user?.user_metadata?.nickname || email.split("@")[0];
-          onLogin(nick);
+          const nick = getNick(data.user, email.split("@")[0]);
+          onLogin(nick, data.user.id);
           onClose();
         } else {
           setError("注册成功！请查看邮箱确认。");
@@ -64,14 +73,9 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
           setError("邮箱或密码错误");
           return;
         }
-        // Fetch nickname from profiles table
-        const { data: profile } = await supabase
-          .from("profiles")
-          .select("nickname")
-          .eq("id", data.user.id)
-          .single();
-        const nick = profile?.nickname || email.split("@")[0];
-        onLogin(nick);
+        if (!data.user) { setError("登录失败，请重试"); return; }
+        const nick = getNick(data.user, email.split("@")[0]);
+        onLogin(nick, data.user.id);
         onClose();
       }
     } catch (err) {
