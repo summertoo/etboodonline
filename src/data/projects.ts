@@ -88,6 +88,16 @@ export const projects: Project[] = [
     liveUrl: "/football/football-game.html",
   },
   {
+    id: "web-save-man",
+    title: "Save Man - Mine Rescue",
+    descKey: "game.saveManDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/save-man.png",
+    liveUrl: "/saveman/saveman.html",
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",

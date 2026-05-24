@@ -148,6 +148,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.footballDesc":
       "Football Shootout & Goalkeeper H5 Game - Shoot Accurately, Defend Ruthlessly!",
     "game.handBattleDesc": "A game where players can battle with their hands.",
+    "game.saveManDesc":
+      "Use the rescue claw to save trapped miners from the mine! Click to drop the claw and pull them up.",
     "game.miniSoccerDesc":
       "Mini Soccer is a game that allows players to play soccer in the metaverse.",
     "game.comingSoonDesc": "Coming soon. Stay tuned!",
@@ -333,6 +335,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.lobsterRunDesc": "有趣的龙虾跑酷 H5 游戏 — 奔跑、跳跃、躲避障碍！",
     "game.footballDesc": "足球射门&守门 H5 游戏 — 射门要准，防守要狠！",
     "game.handBattleDesc": "用手势对战的趣味游戏。",
+    "game.saveManDesc": "操控救援抓斗，从矿井中救出被困人员！点击释放抓斗，将他们拉上来。",
     "game.miniSoccerDesc": "在元宇宙中踢足球的游戏。",
     "game.comingSoonDesc": "即将上线，敬请期待！",
 
