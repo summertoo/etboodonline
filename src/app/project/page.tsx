@@ -104,7 +104,7 @@ export default function ProjectPage() {
         <Button className="cyber-button-small" asChild>
           <a
             href={p.liveUrl}
-            target={p.liveUrl.startsWith("/") ? "_self" : "_blank"}
+            target={p.liveUrl.startsWith("http") ? "_blank" : "_self"}
             rel="noopener noreferrer"
           >
             {t("project.play")}

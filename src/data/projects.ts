@@ -26,7 +26,7 @@ export const projects: Project[] = [
     platform: "roblox",
     status: "live",
     logoUrl: "/avatars/apex-mind.png",
-    liveUrl: "https://www.roblox.com/games/126170387607652",
+    liveUrl: "roblox://placeId=126170387607652",
   },
   {
     id: "roblox-lobster-bump",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     platform: "roblox",
     status: "live",
     logoUrl: "/avatars/lobster-bump.png",
-    liveUrl: "https://www.roblox.com/games/102614376416074",
+    liveUrl: "roblox://placeId=102614376416074",
   },
   {
     id: "roblox-warlord-saga",

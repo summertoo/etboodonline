@@ -131,7 +131,7 @@ function ProjectCard({
                   <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]" asChild>
                     <a
                       href={liveUrl}
-                      target={liveUrl.startsWith("/") ? "_self" : "_blank"}
+                      target={liveUrl.startsWith("http") ? "_blank" : "_self"}
                       rel="noopener noreferrer"
                     >
                       {t("dapps.visit")}
@@ -241,7 +241,7 @@ function GameCard({
                 <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]" asChild>
                   <a
                     href={liveUrl}
-                    target={liveUrl.startsWith("/") ? "_self" : "_blank"}
+                    target={liveUrl.startsWith("http") ? "_blank" : "_self"}
                     rel="noopener noreferrer"
                   >
                     {t("webgames.playNow")}
