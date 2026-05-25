@@ -400,7 +400,7 @@ function FloatingParticles() {
           </p>
         </RevealSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {novels.slice(0, 2).map((novel, i) => (
+          {novels.slice(0, 3).map((novel, i) => (
             <RevealSection key={novel.id} delay={i * 120}>
               <Card className="cyber-card group cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <CardContent className="p-5">

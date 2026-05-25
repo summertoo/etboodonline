@@ -143,6 +143,31 @@ export const novels: NovelMeta[] = [
       },
     ],
   },
+  {
+    id: "xunfu",
+    slug: "xunfu",
+    title: { zh: "寻夫", en: "Seeking the Husband" },
+    author: "奇异世界环游",
+    coverImage: "/novels/xunfu.jpg",
+    synopsis: {
+      zh: "八十八岁潮汕阿嬷叶淑柔守着老屋和一箱侨批等了一辈子。世人皆道她苦等远赴泰国的丈夫，却无人知晓箱中家书的字迹在六十二年前便已悄然改变。当负债的孙子决定远赴泰国寻亲，一段跨越山海、横跨半生的温柔谎言，终于缓缓浮出水面。",
+      en: "Eighty-eight-year-old Chaoshan grandmother Ye Shurou has spent a lifetime with a box of overseas letters. The world thinks she's waiting for her husband who went to Thailand—but the handwriting changed sixty-two years ago. When her grandson seeks family in Thailand, a gentle lie spanning decades finally emerges.",
+    },
+    tags: [
+      { zh: "短篇", en: "Short Story" },
+      { zh: "潮汕", en: "Chaoshan" },
+      { zh: "温情", en: "Heartwarming" },
+    ],
+    status: "completed",
+    totalChapters: 1,
+    chapters: [{
+      id: "chapter-1",
+      number: 1,
+      title: { zh: "全文", en: "Full Story" },
+      publishDate: "2026-05-25",
+      wordCount: 18000,
+    }],
+  },
 ];
 
 export function getNovelBySlug(slug: string): NovelMeta | undefined {
