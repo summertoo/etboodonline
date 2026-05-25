@@ -12,6 +12,63 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-05-25",
+    date: "2026-05-25",
+    title: {
+      zh: "AI HOT 日报 · 2026-05-25",
+      en: "AI HOT Daily · May 25, 2026",
+    },
+    summary: {
+      zh: "Luma Agents 规模化广告生成、TrapDoor 供应链攻击窃取 AI 开发者凭证、DeepSeek 旗舰模型永久 75% 折扣、Codex 自我优化提示词框架。",
+      en: "Luma Agents scales UGC ads, TrapDoor supply chain attack steals AI dev credentials, DeepSeek 75% permanent discount, Codex self-optimizing prompt framework.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: { zh: "Luma Agents 实现规模化 UGC 广告生成", en: "Luma Agents Achieves Scalable UGC Ad Generation" },
+        description: {
+          zh: "Luma AI 发布 Luma Agents 规模化广告生成功能，设定简报和风格后自动构建每条 UGC 风格广告，实现真实感广告的规模化生产。",
+          en: "Luma AI launched Luma Agents for scalable ad generation — define the brief and style, and agents build each UGC-style ad automatically.",
+        },
+      },
+      {
+        title: { zh: "OpenClaw 2026.5.22 发布", en: "OpenClaw 2026.5.22 Released" },
+        description: {
+          zh: "OpenClaw 新版优化 Gateway 启动路径，/models 响应时间降至约 5 毫秒，npm 包提供锁定依赖项，Windows 安装路径更安全。",
+          en: "OpenClaw update optimizes Gateway startup, reduces /models response time to ~5ms, provides locked dependencies, and improves Windows install security.",
+        },
+      },
+      {
+        title: { zh: "TrapDoor 供应链攻击窃取 AI 开发者凭证", en: "TrapDoor Supply Chain Attack Targets AI Developers" },
+        description: {
+          zh: "名为 TrapDoor 的协调供应链攻击同时袭击 npm、PyPI 和 Crates.io，涉及 34 个恶意包，通过伪装 Pull Request 注入被操纵的 CLAUDE.md 和 .cursorrules 文件，窃取加密货币、AI 开发者的钱包和云凭证。",
+          en: "TrapDoor supply chain attack hit npm, PyPI, and Crates.io with 34 malicious packages, injecting poisoned CLAUDE.md and .cursorrules files via fake PRs to steal crypto wallets and cloud credentials.",
+        },
+      },
+      {
+        title: { zh: "DeepSeek 旗舰模型永久 75% 折扣", en: "DeepSeek Flagship Model Gets Permanent 75% Discount" },
+        description: {
+          zh: "DeepSeek 将对其旗舰 AI 模型实施永久性 75% 折扣，大幅降低使用成本。",
+          en: "DeepSeek is implementing a permanent 75% discount on its flagship AI model.",
+        },
+      },
+      {
+        title: { zh: "Codex 自我优化提示词框架", en: "Codex Self-Optimizing Prompt Framework" },
+        description: {
+          zh: "Greg Brockman 发布结构化提示词框架，指导 Codex 自动分析历史记录以识别并固化重复工作流，筛选至少出现两次的任务，创建技能、子智能体或自动化工具。",
+          en: "Greg Brockman released a structured prompt framework guiding Codex to analyze history, identify repeatable workflows, and create skills/sub-agents/tools.",
+        },
+      },
+      {
+        title: { zh: "Claude Code 自动模式：多任务并行技巧", en: "Claude Code Auto Mode: Parallel Multi-Tasking" },
+        description: {
+          zh: "Boris Cherny 分享使用 Claude Code 的头号技巧：使用自动模式，不再弹出权限提示，实现多 Claude 会话并行处理。",
+          en: "Boris Cherny's top tip: use auto mode in Claude Code for no permission prompts and parallel multi-session processing.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-05-21",
     date: "2026-05-21",
     title: {

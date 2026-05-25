@@ -715,6 +715,44 @@ function FloatingParticles() {
           </p>
         </RevealSection>
         <div className="max-w-4xl mx-auto space-y-4">
+          {/* 2026-05-25 AI HOT Daily */}
+          <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-lg">🔥</span>
+              <div>
+                <h4 className="font-semibold">
+                  {lang === "zh" ? "AI HOT 日报 · 2026-05-25" : "AI HOT Daily · May 25, 2026"}
+                </h4>
+                <p className="text-xs text-[var(--cyber-muted)]">
+                  {lang === "zh" ? "产品发布 · 行业动态 · 技巧与观点" : "Product Releases · Industry · Tips & Views"}
+                </p>
+              </div>
+            </div>
+            <div className="space-y-3 text-sm">
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Product Releases]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "Luma Agents 规模化 UGC 广告生成" : "Luma Agents scales UGC ad generation"}</li>
+                  <li>{lang === "zh" ? "OpenClaw 2026.5.22 发布" : "OpenClaw 2026.5.22 released"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "TrapDoor 供应链攻击窃取 AI 开发者凭证" : "TrapDoor attack steals AI dev credentials"}</li>
+                  <li>{lang === "zh" ? "DeepSeek 旗舰模型永久 75% 折扣" : "DeepSeek 75% permanent discount"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [技巧与观点]" : "📌 [Tips & Views]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "Codex 自我优化提示词框架" : "Codex self-optimizing prompt framework"}</li>
+                  <li>{lang === "zh" ? "Claude Code 自动模式多任务并行" : "Claude Code auto mode multi-tasking"}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           {/* 2026-05-24 AI Daily */}
           <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
             <div className="flex items-center gap-3 mb-4">
