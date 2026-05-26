@@ -1103,6 +1103,21 @@ function FloatingParticles() {
               </li>
             </ul>
           </div>
+          <div>
+            <h5 className="font-bold mb-2">友情链接</h5>
+            <ul className="cyber-subtitle text-sm space-y-1">
+              <li>
+                <a
+                  href="https://etboodnovel.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[var(--cyber-primary)] transition-colors"
+                >
+                  双鱼小说
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="text-center mt-8">
           <p className="cyber-subtitle text-sm">{t("footer.copyright")}</p>
