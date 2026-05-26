@@ -8,13 +8,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     "nav.service": "Service",
     "nav.project": "Project",
     "nav.blog": "Blog",
-    "nav.novels": "Novels",
     "nav.news": "News",
     "nav.contact": "Contact",
 
     // Hero
     "hero.title": "ZD Tech Studio",
-    "hero.subtitle": "Self-media + Games + Apps — Bilingual novels, web games & creative tools",
     "hero.tagline":
       "Web Games • Bilingual Novels • DApps • Roblox",
     "hero.contact": "Contact Now",
@@ -106,7 +104,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     "project.category.dapp": "DApps",
     "project.category.tool": "Tools",
     "project.category.article": "Articles",
-    "project.category.novel": "Novels",
     "project.platform.roblox": "Roblox",
     "project.platform.web": "Web",
     "project.live": "● Live",
@@ -177,9 +174,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     "articles.read": "Read →",
 
     // Novels
-    "novels.title": "📚 Creative Writing",
-    "novels.subtitle": "Fiction and creative works.",
-    "novels.read": "Read Novel →",
 
     // OPC Network
     "opc.title": "🌐 OPC Network",
@@ -205,7 +199,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     "nav.service": "服务",
     "nav.project": "项目",
     "nav.blog": "博客",
-    "nav.novels": "小说",
     "nav.news": "新闻",
     "nav.contact": "联系",
 
@@ -299,7 +292,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     "project.category.dapp": "DApp",
     "project.category.tool": "工具",
     "project.category.article": "文章",
-    "project.category.novel": "小说",
     "project.platform.roblox": "Roblox",
     "project.platform.web": "网页",
     "project.live": "● 已上线",
@@ -359,9 +351,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     "articles.read": "阅读 →",
 
     // Novels
-    "novels.title": "📚 创作小说",
-    "novels.subtitle": "原创小说与文学创作。",
-    "novels.read": "阅读小说 →",
 
     // OPC Network
     "opc.title": "🌐 开源一人公司（OPC）协作网络",

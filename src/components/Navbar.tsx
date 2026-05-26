@@ -13,7 +13,6 @@ const navKeys = [
   { href: "/project", labelKey: "nav.project" },
   { href: "/service", labelKey: "nav.service" },
   { href: "/blog", labelKey: "nav.blog" },
-  { href: "/novels", labelKey: "nav.novels" },
   { href: "/news", labelKey: "nav.news" },
   { href: "/what-we-do", labelKey: "nav.whatWeDo" },
 ];
