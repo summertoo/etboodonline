@@ -1,16 +1,16 @@
-/* ===== Media Creator Style — Warm & Vibrant ===== */
+/* ===== Media Creator Style — Pink & Vibrant ===== */
 
 /* Palette tokens - Media Creator / Influencer style */
 :root {
-  --cyber-primary: #f97316;      /* orange-500 - warm and energetic */
-  --cyber-secondary: #fb7185;    /* rose-400 - vibrant and creative */
+  --cyber-primary: #ec4899;      /* pink-500 - pink and romantic */
+  --cyber-secondary: #f472b6;    /* pink-400 - soft pink */
   --cyber-tertiary: #a855f7;     /* purple-500 - for games */
-  --cyber-bg: #fefce8;            /* yellow-50 - warm background */
+  --cyber-bg: #fff1f2;           /* rose-50 - pink background */
   --cyber-surface: #ffffff;
   --cyber-text: #1e293b;         /* slate-800 */
   --cyber-muted: #64748b;        /* slate-500 */
-  --cyber-border: #fed7aa;       /* orange-200 - warm border */
-  --cyber-accent-light: rgba(249, 115, 22, 0.08);
+  --cyber-border: #fecdd3;       /* rose-300 - pink border */
+  --cyber-accent-light: rgba(236, 72, 153, 0.08);
 }
 
 /* Container */
@@ -131,7 +131,7 @@
 
 .cyber-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.3);
 }
 
 /* Card buttons — override shadcn defaults */
@@ -180,8 +180,8 @@ button.cyber-button-small:hover {
 
 .cyber-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.1);
-  border-color: rgba(14, 165, 233, 0.3);
+  box-shadow: 0 8px 30px rgba(236, 72, 153, 0.1);
+  border-color: rgba(236, 72, 153, 0.3);
 }
 
 .cyber-card:hover::before {
@@ -236,7 +236,7 @@ button.cyber-button-small:hover {
 .cyber-input:focus {
   outline: none;
   border-color: var(--cyber-primary);
-  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.12);
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.12);
 }
 
 .cyber-input::placeholder {
@@ -282,7 +282,7 @@ button.cyber-button-small:hover {
 }
 
 .cyber-image-container img:hover {
-  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.12);
+  box-shadow: 0 8px 30px rgba(236, 72, 153, 0.12);
 }
 
 /* Section overrides */
@@ -396,6 +396,6 @@ html {
 
 .cyber-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(14, 165, 233, 0.12);
-  border-color: rgba(14, 165, 233, 0.4);
+  box-shadow: 0 12px 40px rgba(236, 72, 153, 0.12);
+  border-color: rgba(236, 72, 153, 0.4);
 }
