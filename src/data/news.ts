@@ -12,6 +12,84 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-05-26",
+    date: "2026-05-26",
+    title: {
+      zh: "AI HOT 日报 · 2026-05-26",
+      en: "AI HOT Daily · May 26, 2026",
+    },
+    summary: {
+      zh: "苹果1.2T参数Google模型重塑Siri、GPT-5.6曝光150万tokens上下文、华为昇腾1.58-bit端侧模型、Grok Build Beta发布、Anthropic联合创始人出席教皇通谕发布会。",
+      en: "Apple 1.2T Google model to reshape Siri, GPT-5.6 leaks 1.5M token context, Huawei Ascend 1.58-bit edge model, Grok Build Beta, Anthropic co-founder at Pope encyclical.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: { zh: "华为昇腾 1.58-bit 端侧大模型 BitCPM-CANN", en: "Huawei Ascend 1.58-bit Edge Model BitCPM-CANN" },
+        description: {
+          zh: "面壁智能联合清华等开源中国首个基于华为昇腾训练的 1.58-bit 端侧大模型 BitCPM-CANN，突破国产芯片端侧部署。",
+          en: "BitCPM-CANN, China first 1.58-bit edge model trained on Huawei Ascend chips, open-sourced by consortium including Tsinghua.",
+        },
+      },
+      {
+        title: { zh: "Grok Build Beta 向 SuperGrok 开放", en: "Grok Build Beta Opens to SuperGrok" },
+        description: {
+          zh: "xAI 发布 Grok Build Beta 版，支持 Plan Mode、通过 Imagine 生成图像视频、CLI 构建自动化编排器。",
+          en: "xAI launched Grok Build Beta with Plan Mode, image-video generation via Imagine, and CLI automation.",
+        },
+      },
+      {
+        title: { zh: "Qwen3.7-Max 隐式缓存上线", en: "Qwen3.7-Max Implicit Cache Launched" },
+        description: {
+          zh: "阿里通义千问 Qwen3.7-Max 隐式缓存功能上线，自动启用无需设置，开箱即用更快更便宜。",
+          en: "Alibaba Qwen3.7-Max implicit caching launched, auto-enabled for faster and cheaper inference.",
+        },
+      },
+      {
+        title: { zh: "苹果定制 1.2T 参数 Google 模型重塑 Siri", en: "Apple Customizes 1.2T Google Model for Siri" },
+        description: {
+          zh: "苹果为下一代 Siri 使用定制版 1.2T 参数 Google 大模型，显著大于 Gemini 3.5 Flash 的 300B，简单查询预期本地运行。",
+          en: "Apple using customized 1.2T-parameter Google model for next-gen Siri, larger than Gemini 3.5 Flash 300B.",
+        },
+      },
+      {
+        title: { zh: "教皇通谕警告 AI 风险", en: "Pope Warns of AI Risks in Encyclical" },
+        description: {
+          zh: "教皇里奥十四世在首份重要通谕中警告 AI 驱动战争风险、对劳动的影响，呼吁建立法律伦理框架。",
+          en: "Pope Leo XIV warned of AI-driven warfare and labor impacts, calling for legal and ethical frameworks.",
+        },
+      },
+      {
+        title: { zh: "GPT-5.6 曝光：150 万 tokens 上下文", en: "GPT-5.6 Leaked: 1.5M Token Context" },
+        description: {
+          zh: "OpenAI 未官宣的 GPT-5.6 模型（内部代号 iris-alpha）被发现，支持 150 万 token 上下文，90 万 token 时仍流畅响应，预计六月发布。",
+          en: "Unannounced GPT-5.6 (codename iris-alpha) supports 1.5M token context, responds smoothly at 900K tokens, expected June release.",
+        },
+      },
+      {
+        title: { zh: "华为 “韬定律” 逻辑折叠芯片技术", en: "Huawei “Tao Law” Logic Folding Chip Tech" },
+        description: {
+          zh: "何庭波在 ISCAS 2026 提出逻辑折叠技术，不依赖新光刻工艺提升芯片性能，晶体管密度提升 53%，能效提高 41%。",
+          en: "He Tingbo proposed LogicFolding at ISCAS 2026, boosting transistor density by 53% and energy efficiency by 41%.",
+        },
+      },
+      {
+        title: { zh: "Chris Olah 在教皇通谕发布会发言", en: "Chris Olah Speaks at Pope Encyclical" },
+        description: {
+          zh: "Anthropic 联合创始人 Olah 出席梵蒂冈 AI 通谕发布会，指出前沿 AI 实验室面临商业、研究和地缘政治压力，需要外部监督。",
+          en: "Anthropic co-founder Olah noted frontier AI labs face commercial, research, and geopolitical pressures requiring external oversight.",
+        },
+      },
+      {
+        title: { zh: "AI 智能体术语辨析：Harness vs Scaffold", en: "AI Agent Terms: Harness vs Scaffold" },
+        description: {
+          zh: "Hugging Face 发文厘清 AI 智能体术语：模型本身无记忆无循环，Scaffolding 定义行为，Harness 负责执行控制循环。",
+          en: "Hugging Face clarifies AI agent terms: models have no memory-loops, Scaffolding defines behavior, Harness controls execution loops.",
+        },
+      },
+    ],
+  },
+    {
     id: "2026-05-25",
     date: "2026-05-25",
     title: {
