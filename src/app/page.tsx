@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
 import { projects } from "@/data/projects";
-import { novels } from "@/data/novels";
 import { newsList } from "@/data/news";
 import Link from "next/link";
 import FeedbackForm from "@/components/FeedbackForm";
@@ -372,98 +371,9 @@ function FloatingParticles() {
           <p className="mb-8 text-sm cyber-subtitle opacity-70">
             {t("hero.tagline")}
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/novels">
-              <Button className="cyber-button text-base px-8 py-3">
-                {lang === "zh" ? "📚 双鱼小说" : "📚 Bilingual Novels"}
-              </Button>
-            </Link>
-            <Link href="/project">
-              <Button className="cyber-button-small text-base px-8 py-3 border-[var(--cyber-border)]">
-                {lang === "zh" ? "🎮 所有项目" : "🎮 All Projects"}
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Bilingual Novels - Featured Section */}
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {lang === "zh" ? "📚 双鱼小说 ∙ 中英对照阅读" : "📚 Bilingual Novels · Side-by-Side Reading"}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle max-w-2xl mx-auto">
-            {lang === "zh"
-              ? "原创网络小说，支持中英双语段落对照阅读。左中文右英文，轻松学语言，享受好故事。"
-              : "Original web novels with paragraph-aligned bilingual reading. Chinese on the left, English on the right — learn a language while enjoying great stories."}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {novels.slice(0, 3).map((novel, i) => (
-            <RevealSection key={novel.id} delay={i * 120}>
-              <Card className="cyber-card group cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                <CardContent className="p-5">
-                  <div className="flex gap-4">
-                    <div className="w-20 h-28 rounded-lg overflow-hidden shadow-md flex-shrink-0 bg-gradient-to-br from-orange-100 to-rose-100 flex items-center justify-center">
-                      <span className="text-4xl">📖</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-semibold text-lg line-clamp-1">
-                          {lang === "zh" ? novel.title.zh : novel.title.en}
-                        </h4>
-                        <span
-                          className={`text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0 ml-2 ${
-                            novel.status === "ongoing"
-                              ? "bg-green-100 text-green-700"
-                              : "bg-gray-100 text-gray-600"
-                          }`}
-                        >
-                          {novel.status === "ongoing"
-                            ? lang === "zh"
-                              ? "连载中"
-                              : "Ongoing"
-                            : lang === "zh"
-                              ? "已完结"
-                              : "Completed"}
-                        </span>
-                      </div>
-                      <p className="text-sm mb-3 cyber-subtitle line-clamp-2">
-                        {lang === "zh" ? novel.synopsis.zh : novel.synopsis.en}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs text-[var(--cyber-muted)]">
-                          {lang === "zh"
-                            ? `共 ${novel.totalChapters} 章`
-                            : `${novel.totalChapters} chapters`}
-                        </span>
-                        <Link href={`/novels/${novel.slug}`}>
-                          <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]">
-                            {lang === "zh" ? "开始阅读" : "Read"}
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </RevealSection>
-          ))}
-        </div>
-        <div className="text-center mt-8">
-          <Link href="/novels">
-            <Button
-              variant="outline"
-              className="cyber-button-small border-[var(--cyber-border)]"
-            >
-              {lang === "zh" ? "查看全部小说 →" : "View All Novels →"}
-            </Button>
-          </Link>
-        </div>
-      </section>
-
-      {/* Web Games - First */}
       <section className="py-20">
         <RevealSection>
           <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
@@ -1161,13 +1071,6 @@ function FloatingParticles() {
           <div>
             <h5 className="font-bold mb-2">{t("footer.about")}</h5>
             <p className="cyber-subtitle text-sm">{t("footer.aboutDesc")}</p>
-          </div>
-          <div>
-            <h5 className="font-bold mb-2">{lang === "zh" ? "双鱼小说" : "Novels"}</h5>
-            <ul className="cyber-subtitle text-sm space-y-1">
-              <li>{lang === "zh" ? "码农穿越平民世界" : "Coder Transmigrates"}</li>
-              <li>{lang === "zh" ? "群雄战记：中华英雄传" : "Warlord Saga"}</li>
-            </ul>
           </div>
           <div>
             <h5 className="font-bold mb-2">{t("footer.games")}</h5>
