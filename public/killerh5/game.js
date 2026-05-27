@@ -12,6 +12,13 @@ class AssassinGame {
         
         this.initElements();
         this.bindEvents();
+        
+        // 页面加载完成后开始预加载图片
+        if (document.readyState === 'complete') {
+            this.preloadImages();
+        } else {
+            window.addEventListener('load', () => this.preloadImages());
+        }
     }
 
     initElements() {
@@ -712,7 +719,4 @@ class AssassinGame {
 }
 
 // 初始化游戏
-let game;
-window.onload = () => {
-    game = new AssassinGame();
-};
+window.game = new AssassinGame();

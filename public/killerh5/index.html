@@ -82,13 +82,6 @@
     <script src="lang.js"></script>
     <script src="game.js"></script>
     <script>
-        // 页面加载完成后开始预加载图片
-        window.addEventListener('load', function() {
-            if (window.game) {
-                window.game.preloadImages();
-            }
-        });
-
         function switchLang(lang) {
             Lang.setLanguage(lang);
             document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
