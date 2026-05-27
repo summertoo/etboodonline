@@ -98,6 +98,16 @@ export const projects: Project[] = [
     liveUrl: "/saveman/saveman.html",
   },
   {
+    id: "web-killer-h5",
+    title: "🗡️ 暗杀 (Assassin)",
+    descKey: "game.killerH5Desc",
+    category: "webgame",
+    platform: "web",
+    status: "live",
+    logoUrl: "/avatars/killer-h5.png",
+    liveUrl: "/killerh5/index.html",
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暗杀 - Assassin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- 语言切换 -->
+        <div id="lang-switch">
+            <button id="btn-zh" class="active" onclick="switchLang('zh')">中文</button>
+            <button id="btn-en" onclick="switchLang('en')">EN</button>
+        </div>
+
+        <!-- 开始界面 -->
+        <div id="start-screen" class="screen active">
+            <h1 id="game-title">暗杀</h1>
+            <p class="intro" id="game-intro">扮演刺客，完成各种暗杀目标</p>
+            <button id="start-btn" class="btn">开始游戏</button>
+        </div>
+
+        <!-- 游戏界面 -->
+        <div id="game-screen" class="screen">
+            <div id="hud">
+                <div id="hud-top">
+                    <div class="hud-item">
+                        <span id="lbl-score">分数</span><span id="score">100</span>
+                    </div>
+                    <div class="hud-item">
+                        <span id="lbl-level">关卡</span><span id="level">1</span>
+                    </div>
+                    <div class="hud-item">
+                        <span id="lbl-gold">金币</span><span id="gold">0</span>
+                    </div>
+                </div>
+                <div id="timer-bar-container">
+                    <div id="timer-bar" style="width: 100%">30</div>
+                </div>
+            </div>
+
+            <div id="scene-container">
+                <div id="background-layer"></div>
+                <div id="character-layer"></div>
+                <div id="item-layer"></div>
+            </div>
+
+            <div id="action-panel">
+                <div id="message-box">做出你的选择...</div>
+                <div id="buttons">
+                    <button id="skip-btn" class="action-btn">跳过场景</button>
+                </div>
+                <div id="target-list"></div>
+            </div>
+        </div>
+
+        <!-- 结束界面 -->
+        <div id="end-screen" class="screen">
+            <h1 id="end-title">游戏结束</h1>
+            <p><span id="lbl-final-score">最终分数</span>: <span id="final-score">0</span></p>
+            <p><span id="lbl-total-gold">总金币</span>: <span id="final-gold">0</span></p>
+            <p><span id="lbl-completed">完成关卡</span>: <span id="final-level">0</span></p>
+            <button id="restart-btn" class="btn">重新开始</button>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="lang.js"></script>
+    <script src="game.js"></script>
+    <script>
+        function switchLang(lang) {
+            Lang.setLanguage(lang);
+            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            
+            // 更新界面文字
+            document.getElementById('game-title').textContent = Lang.get('title');
+            document.getElementById('game-intro').textContent = Lang.get('intro');
+            document.getElementById('start-btn').textContent = Lang.get('start');
+            document.getElementById('restart-btn').textContent = Lang.get('restart');
+            document.getElementById('lbl-score').textContent = Lang.get('score');
+            document.getElementById('lbl-level').textContent = Lang.get('level');
+            document.getElementById('lbl-gold').textContent = Lang.get('gold');
+            document.getElementById('skip-btn').textContent = Lang.get('skip');
+            document.getElementById('lbl-final-score').textContent = Lang.get('finalScore');
+            document.getElementById('lbl-total-gold').textContent = Lang.get('totalGold');
+            document.getElementById('lbl-completed').textContent = Lang.get('completedLevel');
+            
+            // 更新游戏中的选项
+            if (window.game) {
+                window.game.updateLanguage();
+            }
+        }
+    </script>
+</body>
+</html>

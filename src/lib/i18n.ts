@@ -149,6 +149,8 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Use the rescue claw to save trapped miners from the mine! Click to drop the claw and pull them up.",
     "game.miniSoccerDesc":
       "Mini Soccer is a game that allows players to play soccer in the metaverse.",
+    "game.killerH5Desc":
+      "Assassin H5 Game - Analyze the scene, identify targets, use props wisely, and become a legendary assassin!",
     "game.comingSoonDesc": "Coming soon. Stay tuned!",
 
     // DApp descriptions
@@ -329,6 +331,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.handBattleDesc": "用手势对战的趣味游戏。",
     "game.saveManDesc": "操控救援抓斗，从矿井中救出被困人员！点击释放抓斗，将他们拉上来。",
     "game.miniSoccerDesc": "在元宇宙中踢足球的游戏。",
+    "game.killerH5Desc": "暗杀H5游戏 — 分析场景，识别目标，合理利用道具，成为传奇刺客！",
     "game.comingSoonDesc": "即将上线，敬请期待！",
 
     // DApp descriptions
