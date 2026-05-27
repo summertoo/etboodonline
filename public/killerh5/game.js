@@ -16,6 +16,7 @@ class AssassinGame {
 
     initElements() {
         this.screens = {
+            loading: document.getElementById('loading-screen'),
             start: document.getElementById('start-screen'),
             game: document.getElementById('game-screen'),
             end: document.getElementById('end-screen')
@@ -31,7 +32,9 @@ class AssassinGame {
             itemLayer: document.getElementById('item-layer'),
             messageBox: document.getElementById('message-box'),
             targetList: document.getElementById('target-list'),
-            skipBtn: document.getElementById('skip-btn')
+            skipBtn: document.getElementById('skip-btn'),
+            loadingBar: document.getElementById('loading-bar'),
+            loadingPercent: document.getElementById('loading-percent')
         };
     }
 
@@ -39,6 +42,84 @@ class AssassinGame {
         document.getElementById('start-btn').addEventListener('click', () => this.startGame());
         document.getElementById('restart-btn').addEventListener('click', () => this.restartGame());
         document.getElementById('skip-btn').addEventListener('click', () => this.skipScene());
+    }
+
+    // 预加载所有游戏图片
+    preloadImages() {
+        const images = [];
+        
+        // 添加背景图片
+        GameConfig.backgrounds.forEach(bg => {
+            images.push({ src: bg, type: 'background' });
+        });
+        
+        // 添加角色图片 - 目标
+        GameConfig.targets.forEach(char => {
+            images.push({ src: char.image, type: 'target', id: char.id });
+        });
+        
+        // 添加角色图片 - 守护者
+        GameConfig.guardians.forEach(char => {
+            images.push({ src: char.image, type: 'guardian', id: char.id });
+        });
+        
+        // 添加角色图片 - 平民
+        GameConfig.civilians.forEach(char => {
+            images.push({ src: char.image, type: 'civilian', id: char.id });
+        });
+        
+        // 添加特殊NPC图片
+        GameConfig.specialNPC.forEach(char => {
+            images.push({ src: char.image, type: 'special', id: char.id });
+        });
+        
+        // 添加道具图片
+        GameConfig.items.forEach(item => {
+            images.push({ src: item.image, type: 'item', id: item.id });
+        });
+        
+        // 添加刺客图片
+        images.push({ src: GameConfig.assassin.image, type: 'assassin', id: 'assassin' });
+        
+        let loadedCount = 0;
+        const totalCount = images.length;
+        
+        const updateProgress = () => {
+            loadedCount++;
+            const percent = Math.round((loadedCount / totalCount) * 100);
+            this.elements.loadingBar.style.width = percent + '%';
+            this.elements.loadingPercent.textContent = percent + '%';
+            
+            // 更新加载文本
+            const loadingText = document.getElementById('loading-text');
+            if (percent < 30) {
+                loadingText.textContent = Lang.current === 'zh' ? '正在准备暗杀任务...' : 'Preparing assassination mission...';
+            } else if (percent < 60) {
+                loadingText.textContent = Lang.current === 'zh' ? '正在加载角色资源...' : 'Loading character assets...';
+            } else if (percent < 90) {
+                loadingText.textContent = Lang.current === 'zh' ? '正在加载场景背景...' : 'Loading scene backgrounds...';
+            } else {
+                loadingText.textContent = Lang.current === 'zh' ? '即将开始游戏...' : 'Starting game...';
+            }
+            
+            // 全部加载完成
+            if (loadedCount >= totalCount) {
+                setTimeout(() => this.onPreloadComplete(), 300);
+            }
+        };
+        
+        // 逐个加载图片
+        images.forEach(img => {
+            const image = new Image();
+            image.onload = updateProgress;
+            image.onerror = updateProgress; // 即使加载失败也继续
+            image.src = img.src;
+        });
+    }
+
+    // 预加载完成，进入开始界面
+    onPreloadComplete() {
+        this.showScreen('start');
     }
 
     // 更新语言

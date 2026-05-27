@@ -80,7 +80,14 @@ const Lang = {
             
             // 正确答案
             correctAnswerSkip: "跳过场景",
-            correctAnswerKill: "刺杀{name}"
+            correctAnswerKill: "刺杀{name}",
+            
+            // Loading
+            loadingTitle: "加载中...",
+            loadingPrepare: "正在准备暗杀任务...",
+            loadingCharacters: "正在加载角色资源...",
+            loadingBackgrounds: "正在加载场景背景...",
+            loadingStart: "即将开始游戏...",
         },
         
         en: {
@@ -160,7 +167,14 @@ const Lang = {
             
             // Correct answers
             correctAnswerSkip: "Skip scene",
-            correctAnswerKill: "Assassinate {name}"
+            correctAnswerKill: "Assassinate {name}",
+            
+            // Loading
+            loadingTitle: "Loading...",
+            loadingPrepare: "Preparing assassination mission...",
+            loadingCharacters: "Loading character assets...",
+            loadingBackgrounds: "Loading scene backgrounds...",
+            loadingStart: "Starting game...",
         }
     },
     

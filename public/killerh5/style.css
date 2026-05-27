@@ -463,3 +463,64 @@ h1 {
         height: 90vh;
     }
 }
+
+/* Loading 界面样式 */
+#loading-screen {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.loading-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.loading-spinner {
+    width: 80px;
+    height: 80px;
+    border: 6px solid rgba(233, 69, 96, 0.2);
+    border-top-color: #e94560;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-content h2 {
+    font-size: 36px;
+    color: #e94560;
+    margin: 0;
+}
+
+.loading-content p {
+    font-size: 18px;
+    color: #aaa;
+    margin: 0;
+}
+
+.loading-progress {
+    width: 300px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #444;
+}
+
+#loading-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #e94560 0%, #ff6b6b 100%);
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+#loading-percent {
+    font-size: 24px;
+    color: #ffd700;
+    font-weight: bold;
+}
