@@ -12,6 +12,91 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-05-27",
+    date: "2026-05-27",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-05-27",
+      en: "🤖 AI HOT Daily · May 27, 2026",
+    },
+    summary: {
+      zh: "谷歌 AlphaProof Nexus 攻克数学难题、MiniCPM5-1B 开源、Qwen3.7-Max 成第二大编程模型、MiMo 大幅降价、Claude Code 安全插件、OpenRouter 获投 1.13 亿美元。",
+      en: "Google AlphaProof Nexus solves math problems, MiniCPM5-1B open-sourced, Qwen3.7-Max #2 coding model, MiMo price cut, Claude Code security plugin, OpenRouter $113M funding.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: { zh: "谷歌 AlphaProof Nexus 攻克 2 道悬置 56 年数学难题", en: "Google AlphaProof Nexus Solves 56-Year Math Problems" },
+        description: {
+          zh: "谷歌 AI 框架 AlphaProof Nexus 成功攻克两道悬置 56 年的数学难题，展示 AI 在数学发现领域的突破性进展。",
+          en: "Google's AI framework AlphaProof Nexus solved two math problems that had remained unsolved for 56 years.",
+        },
+      },
+      {
+        title: { zh: "面壁智能开源 MiniCPM5-1B：超越所有 2B 以下模型", en: "MiniCPM5-1B Open-Sourced: Beats All <2B Models" },
+        description: {
+          zh: "面壁智能开源 MiniCPM5-1B，仅 1B 参数在 AA-Index 榜单超越所有 2B 以下模型，支持手机和浏览器运行。",
+          en: "MiniCPM5-1B has only 1B parameters but outperforms all models under 2B on AA-Index, runs on phone and browser.",
+        },
+      },
+      {
+        title: { zh: "Qwen3.7-Max 成为全球第二大 AI 编程模型", en: "Qwen3.7-Max Now #2 Global AI Coding Model" },
+        description: {
+          zh: "Qwen3.7-Max 在 Code Arena 上得分 1541，仅次于 Claude，专为生产环境打造，可运行 35 小时任务。",
+          en: "Qwen3.7-Max scores 1541 on Code Arena, second only to Claude, built for production with 35-hour task capability.",
+        },
+      },
+      {
+        title: { zh: "小米 MiMo 2.5 Pro 大幅降价，与 DeepSeek V4 Pro 同价", en: "MiMo 2.5 Pro Price Drop: Matches DeepSeek V4 Pro" },
+        description: {
+          zh: "小米 MiMo-V2.5 系列 API 价格永久下调最高 99%，现与 DeepSeek V4 Pro 同价，token 套餐升级 5-8 倍。",
+          en: "MiMo-V2.5 API prices dropped up to 99%, now priced same as DeepSeek V4 Pro with 5-8x more tokens.",
+        },
+      },
+      {
+        title: { zh: "Claude Code 推出安全漏洞识别插件", en: "Claude Code Releases Security Vulnerability Plugin" },
+        description: {
+          zh: "Claude Code 发布安全指导插件，可在编写代码时帮助识别和修复漏洞。",
+          en: "Claude Code released a security guidance plugin to help identify and fix vulnerabilities while coding.",
+        },
+      },
+      {
+        title: { zh: "OpenRouter 完成 1.13 亿美元 B 轮融资", en: "OpenRouter Raises $113M Series B" },
+        description: {
+          zh: "OpenRouter 完成 1.13 亿美元 B 轮融资，周处理量从 5 万亿增长到 25 万亿 token。",
+          en: "OpenRouter raised $113M in Series B, weekly token processing grew from 5T to 25T.",
+        },
+      },
+      {
+        title: { zh: "Claude Mythos 解决 OpenAI Erdős 猜想", en: "Claude Mythos Solves OpenAI's Erdős Conjecture" },
+        description: {
+          zh: "Claude Mythos 在周末解决了 OpenAI 提出的 Erdős 单位距离猜想问题，给出简洁证明。",
+          en: "Claude Mythos solved OpenAI's Erdős unit distance conjecture over the weekend with an elegant proof.",
+        },
+      },
+      {
+        title: { zh: "Kling AI 驱动《大卫之家》实现多项行业首创", en: "Kling AI Powers 'The House of David' Industry Firsts" },
+        description: {
+          zh: "Kling AI 实现多项行业首创：首次在完整剧集中使用 AI 生成场景，首个原生 4K 模型。",
+          en: "Kling AI achieved industry firsts: first AI-generated scenes in a finished series, first native 4K model.",
+        },
+      },
+      {
+        title: { zh: "Runway Project Luxo：AI 视频跨越恐怖谷", en: "Runway Project Luxo: AI Video Crosses Uncanny Valley" },
+        description: {
+          zh: "Runway 研究发现 AI 生成视频已跨越「恐怖谷」，观众开始关注故事本身而非技术瑕疵。",
+          en: "Runway research found AI-generated video has crossed the 'uncanny valley' — audiences now focus on story, not tech flaws.",
+        },
+      },
+      {
+        title: { zh: "SenseNova-U1 全训练代码开源", en: "SenseNova-U1 Full Training Code Open-Sourced" },
+        description: {
+          zh: "商汤 OpenSenseNova 开源 SenseNova-U1 完整训练代码库，支持多模态多任务训练。",
+          en: "SenseNova-U1 full training code open-sourced, supports multimodal multi-task training.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-05-26",
     date: "2026-05-26",
     title: {

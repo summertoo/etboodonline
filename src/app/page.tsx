@@ -625,52 +625,41 @@ function FloatingParticles() {
           </p>
         </RevealSection>
         <div className="max-w-4xl mx-auto space-y-4">
-          {/* 2026-05-26 AI HOT Daily */}
+          {/* 2026-05-27 AI HOT Daily */}
           <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-lg">🔥</span>
               <div>
                 <h4 className="font-semibold">
-                  {lang === "zh" ? "AI HOT 日报 · 2026-05-26" : "AI HOT Daily · May 26, 2026"}
+                  {lang === "zh" ? "AI HOT 日报 · 2026-05-27" : "AI HOT Daily · May 27, 2026"}
                 </h4>
                 <p className="text-xs text-[var(--cyber-muted)]">
-                  {lang === "zh" ? "模型发布 · 产品更新 · 行业动态 · 技巧与观点" : "Model Release · Products · Industry · Tips"}
+                  {lang === "zh" ? "模型发布 · 产品更新 · 行业动态 · 论文研究" : "Model Releases · Products · Industry · Research"}
                 </p>
               </div>
             </div>
             <div className="space-y-3 text-sm">
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [模型发布/更新]" : "📌 [Model Release]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [模型发布/更新]" : "📌 [Model Releases]"}</p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "华为昇臉 1.58-bit 端侧大模型 BitCPM-CANN" : "Huawei Ascend 1.58-bit edge model BitCPM-CANN"}</li>
+                  <li>{lang === "zh" ? "谷歌 AlphaProof Nexus 攻克 2 道悬置 56 年数学难题" : "Google AlphaProof Nexus solves 56-year math problems"}</li>
+                  <li>{lang === "zh" ? "面壁智能 MiniCPM5-1B 开源：1B 参数超越所有 2B 以下模型" : "MiniCPM5-1B: 1B params beats all <2B models"}</li>
+                  <li>{lang === "zh" ? "Qwen3.7-Max 成为全球第二大 AI 编程模型" : "Qwen3.7-Max now #2 global AI coding model"}</li>
                 </ul>
               </div>
               <div>
                 <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Product Releases]"}</p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "Grok Build Beta 向 SuperGrok 开放" : "Grok Build Beta opens to SuperGrok"}</li>
-                  <li>{lang === "zh" ? "Qwen3.7-Max 隐式缓存上线" : "Qwen3.7-Max implicit cache launched"}</li>
+                  <li>{lang === "zh" ? "小米 MiMo 2.5 Pro 大幅降价，与 DeepSeek V4 Pro 同价" : "MiMo 2.5 Pro price drop: matches DeepSeek V4 Pro"}</li>
+                  <li>{lang === "zh" ? "Claude Code 推出安全漏洞识别插件" : "Claude Code security vulnerability plugin"}</li>
                 </ul>
               </div>
               <div>
                 <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}</p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "苹果定制 1.2T 参数 Google 模型重塑 Siri" : "Apple 1.2T Google model reshapes Siri"}</li>
-                  <li>{lang === "zh" ? "教皇通讹警告 AI 风险" : "Pope encyclical warns of AI risks"}</li>
-                  <li>{lang === "zh" ? "GPT-5.6 曝光：150 万 tokens 上下文" : "GPT-5.6 leaked: 1.5M token context"}</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [论文研究]" : "📌 [Research]"}</p>
-                <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "华为何廷波 “韬定律” 逻辑折叠芯片技术" : "Huawei “Tao Law” Logic Folding chip tech"}</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [技巧与观点]" : "📌 [Tips & Views]"}</p>
-                <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "Chris Olah 教皇通讹发布会发言" : "Chris Olah at Pope encyclical"}</li>
-                  <li>{lang === "zh" ? "AI 智能体术语辨析：Harness vs Scaffold" : "AI agent terms: Harness vs Scaffold"}</li>
+                  <li>{lang === "zh" ? "OpenRouter 完成 1.13 亿美元 B 轮融资" : "OpenRouter raises $113M Series B"}</li>
+                  <li>{lang === "zh" ? "Claude Mythos 解决 OpenAI Erdős 猜想" : "Claude Mythos solves OpenAI's Erdős Conjecture"}</li>
+                  <li>{lang === "zh" ? "Runway Project Luxo：AI 视频跨越恐怖谷" : "Runway: AI video crosses uncanny valley"}</li>
                 </ul>
               </div>
             </div>
