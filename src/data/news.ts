@@ -12,6 +12,91 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-05-28",
+    date: "2026-05-28",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-05-28",
+      en: "🤖 AI HOT Daily · May 28, 2026",
+    },
+    summary: {
+      zh: "Runway MCP 服务器发布、Claude Code v2.1.152 重大更新、FastVideo Dreamverse 7秒生成视频、Cognition 估值 260 亿美元、阿里云入选 Omdia 领导者、Qwen3.5 推理达 580 tokens/秒。",
+      en: "Runway MCP server, Claude Code v2.1.152, FastVideo 7s video, Cognition $26B, Alibaba Cloud leader, Qwen3.5 580 tps.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: { zh: "Runway 推出 Model Context Protocol 服务器", en: "Runway Launches MCP Server" },
+        description: {
+          zh: "Runway 正式推出 MCP 服务器，允许 Claude、ChatGPT、Cursor 等 AI 智能体直接生成图像与视频，接入 Gen-4.5、Seedance 2.0、Kling 3.0 等模型。",
+          en: "Runway released MCP server enabling AI agents to generate images and videos directly, integrating Gen-4.5, Seedance 2.0, Kling 3.0.",
+        },
+      },
+      {
+        title: { zh: "Claude Code v2.1.152 重大更新", en: "Claude Code v2.1.152 Major Update" },
+        description: {
+          zh: "/code-review --fix 可直接应用审查建议到工作目录；技能支持 disallowed-tools；新增 /reload-skills 命令。",
+          en: "/code-review --fix now applies suggestions directly; skills support disallowed-tools; new /reload-skills command.",
+        },
+      },
+      {
+        title: { zh: "FastVideo Dreamverse 开源：7 秒生成 30 秒 1080p 视频", en: "FastVideo Dreamverse: 7s for 30s 1080p Video" },
+        description: {
+          zh: "Sky Computing Lab 开源 FastVideo Dreamverse，基于单张 NVIDIA B200 GPU 和 LTX-2 模型实现实时视频生成。",
+          en: "Sky Computing Lab open-sourced FastVideo Dreamverse: 7 seconds to generate 30s 1080p video on single B200 GPU.",
+        },
+      },
+      {
+        title: { zh: "Cognition 成为全球最大独立智能体实验室", en: "Cognition: Largest Independent Agent Lab" },
+        description: {
+          zh: "Cognition 完成超 10 亿美元融资，估值达 260 亿美元，年化收入 4.92 亿美元，企业使用量增长超 10 倍。",
+          en: "Cognition raised $1B+ at $26B valuation, $492M ARR, enterprise usage grew 10x+.",
+        },
+      },
+      {
+        title: { zh: "阿里云入选 Omdia 智能体 AI 市场雷达领导者", en: "Alibaba Cloud Named Omdia Agent AI Leader" },
+        description: {
+          zh: "阿里云被 Omdia 评为智能体 AI 市场雷达领导者，首个将整个平台围绕智能体范式构建的云服务商。",
+          en: "Alibaba Cloud recognized as Agent AI market leader by Omdia, first cloud platform built around agent paradigm.",
+        },
+      },
+      {
+        title: { zh: "Qwen3.5 推理速度达 580 tokens/秒", en: "Qwen3.5 Inference: 580 tokens/sec" },
+        description: {
+          zh: "Qwen3.5 在 TokenSpeed 推理引擎上达到 580 tokens/秒，采用 FlashAttention-4 优化。",
+          en: "Qwen3.5 achieves 580 tps on TokenSpeed engine with FlashAttention-4 optimization.",
+        },
+      },
+      {
+        title: { zh: "ITBench-AA 基准测试：所有模型得分低于 50%", en: "ITBench-AA: All Models Below 50%" },
+        description: {
+          zh: "首个智能体企业 IT 任务基准测试显示，所有前沿大模型得分均未超过 50%，Claude Opus 4.7 以 47% 领先。",
+          en: "First agent IT benchmark shows all frontier models below 50%, Claude Opus 4.7 leads at 47%.",
+        },
+      },
+      {
+        title: { zh: "Anthropic 发布 AI 智能体零信任安全框架", en: "Anthropic Zero-Trust Security Framework" },
+        description: {
+          zh: "Anthropic 发布企业部署 AI 智能体的安全框架，指出漏洞利用周期从数月压缩至数小时，提出三层零信任架构。",
+          en: "Anthropic released zero-trust security framework for enterprise AI agents, vulnerability exploitation compressed from months to hours.",
+        },
+      },
+      {
+        title: { zh: "OpenCode 与 MiMo V2.5 限时免费开放", en: "OpenCode + MiMo V2.5 Free Tier" },
+        description: {
+          zh: "OpenCode 联合 MiMo V2.5 推出限时免费：1M 上下文、推理、文本、图像。",
+          en: "OpenCode x MiMo V2.5 free tier: 1M context, reasoning, text, image.",
+        },
+      },
+      {
+        title: { zh: "Perplexity 开源 Unigram 分词器", en: "Perplexity Open-Sources Unigram Tokenizer" },
+        description: {
+          zh: "Perplexity 开源重新构建的 Unigram 分词器，可将 CPU 占用降低 5-6 倍。",
+          en: "Perplexity open-sourced Unigram tokenizer, reducing CPU usage by 5-6x.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-05-27",
     date: "2026-05-27",
     title: {

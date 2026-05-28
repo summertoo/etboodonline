@@ -631,35 +631,35 @@ function FloatingParticles() {
               <span className="text-lg">🔥</span>
               <div>
                 <h4 className="font-semibold">
-                  {lang === "zh" ? "AI HOT 日报 · 2026-05-27" : "AI HOT Daily · May 27, 2026"}
+                  {lang === "zh" ? "AI HOT 日报 · 2026-05-28" : "AI HOT Daily · May 28, 2026"}
                 </h4>
                 <p className="text-xs text-[var(--cyber-muted)]">
-                  {lang === "zh" ? "模型发布 · 产品更新 · 行业动态 · 论文研究" : "Model Releases · Products · Industry · Research"}
+                  {lang === "zh" ? "产品发布 · 行业动态 · 论文研究" : "Product Releases · Industry · Research"}
                 </p>
               </div>
             </div>
             <div className="space-y-3 text-sm">
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [模型发布/更新]" : "📌 [Model Releases]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Model Releases]"}</p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "谷歌 AlphaProof Nexus 攻克 2 道悬置 56 年数学难题" : "Google AlphaProof Nexus solves 56-year math problems"}</li>
-                  <li>{lang === "zh" ? "面壁智能 MiniCPM5-1B 开源：1B 参数超越所有 2B 以下模型" : "MiniCPM5-1B: 1B params beats all <2B models"}</li>
-                  <li>{lang === "zh" ? "Qwen3.7-Max 成为全球第二大 AI 编程模型" : "Qwen3.7-Max now #2 global AI coding model"}</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Product Releases]"}</p>
-                <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "小米 MiMo 2.5 Pro 大幅降价，与 DeepSeek V4 Pro 同价" : "MiMo 2.5 Pro price drop: matches DeepSeek V4 Pro"}</li>
-                  <li>{lang === "zh" ? "Claude Code 推出安全漏洞识别插件" : "Claude Code security vulnerability plugin"}</li>
+                  <li>{lang === "zh" ? "Runway 推出 MCP 服务器" : "Runway MCP server"}</li>
+                  <li>{lang === "zh" ? "Claude Code v2.1.152 更新" : "Claude Code v2.1.152"}</li>
+                  <li>{lang === "zh" ? "FastVideo Dreamverse 开源" : "FastVideo Dreamverse"}</li>
                 </ul>
               </div>
               <div>
                 <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}</p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "OpenRouter 完成 1.13 亿美元 B 轮融资" : "OpenRouter raises $113M Series B"}</li>
-                  <li>{lang === "zh" ? "Claude Mythos 解决 OpenAI Erdős 猜想" : "Claude Mythos solves OpenAI's Erdős Conjecture"}</li>
-                  <li>{lang === "zh" ? "Runway Project Luxo：AI 视频跨越恐怖谷" : "Runway: AI video crosses uncanny valley"}</li>
+                  <li>{lang === "zh" ? "Cognition 估值 260 亿美元" : "Cognition $26B"}</li>
+                  <li>{lang === "zh" ? "阿里云入选 Omdia 领导者" : "Alibaba Cloud Omdia leader"}</li>
+                  <li>{lang === "zh" ? "英伟达台湾年投资 1500 亿美元" : "NVIDIA Taiwan $150B yearly"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [论文研究]" : "📌 [Research]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "Qwen3.5 推理达 580 tokens/秒" : "Qwen3.5: 580 tps"}</li>
+                  <li>{lang === "zh" ? "ITBench-AA：所有模型低于 50%" : "ITBench-AA: all below 50%"}</li>
                 </ul>
               </div>
             </div>
