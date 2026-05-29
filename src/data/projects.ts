@@ -1,4 +1,11 @@
-export type Category = "all" | "roblox" | "webgame" | "dapp" | "tool" | "article" | "novel";
+export type Category =
+  | "all"
+  | "roblox"
+  | "webgame"
+  | "dapp"
+  | "tool"
+  | "article"
+  | "novel";
 export type Status = "live" | "coming" | "new";
 export type Platform = "roblox" | "web";
 
@@ -75,7 +82,8 @@ export const projects: Project[] = [
     platform: "web",
     status: "live",
     logoUrl: "/avatars/warlord-heroes.png",
-    liveUrl: "https://games.soonjy.com/public/gameLobby/?projectId=69cb5b0280d0cf54f562a136&inviteCode=1BBDC0C1",
+    liveUrl:
+      "https://games.soonjy.com/public/gameLobby/?projectId=69cb5b0280d0cf54f562a136&inviteCode=1BBDC0C1",
   },
   {
     id: "web-football",
@@ -106,6 +114,16 @@ export const projects: Project[] = [
     status: "live",
     logoUrl: "/avatars/killer-h5.png",
     liveUrl: "/killerh5/index.html",
+  },
+  {
+    id: "web-swim",
+    title: "🏊 百米自由泳 (Swim Race)",
+    descKey: "game.swimDesc",
+    category: "webgame",
+    platform: "web",
+    status: "live",
+    logoUrl: "/avatars/swimming.png",
+    liveUrl: "/swim/index.html",
   },
   {
     id: "dapp-ruok",

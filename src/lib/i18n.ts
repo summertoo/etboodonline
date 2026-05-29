@@ -13,8 +13,7 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Hero
     "hero.title": "ZD Tech Studio",
-    "hero.tagline":
-      "Web Games • Bilingual Novels • DApps • Roblox",
+    "hero.tagline": "Web Games • Bilingual Novels • DApps • Roblox",
     "hero.contact": "Contact Now",
     "hero.viewGames": "View Games ↓",
 
@@ -60,6 +59,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "footer.games": "Games",
     "footer.projects": "Projects",
     "footer.connect": "Connect",
+    "footer.friendLinks": "Links",
+    "footer.shuangyuNovel": "Shuangyu Novel",
     "footer.copyright": "Copyright © 2026 ZD Tech",
 
     // What We Do
@@ -93,7 +94,8 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Project
     "project.title": "Projects",
-    "project.subtitle": "Explore our portfolio of games, DApps, tools, and creative works.",
+    "project.subtitle":
+      "Explore our portfolio of games, DApps, tools, and creative works.",
     "project.comingSoon": "Coming Soon",
     "project.search": "Search projects...",
     "project.all": "All",
@@ -151,6 +153,8 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Mini Soccer is a game that allows players to play soccer in the metaverse.",
     "game.killerH5Desc":
       "Assassin H5 Game - Analyze the scene, identify targets, use props wisely, and become a legendary assassin!",
+    "game.swimDesc":
+      "100m Freestyle Swimming Race - Sprint, dash, collect power-ups, and win the championship!",
     "game.comingSoonDesc": "Coming soon. Stay tuned!",
 
     // DApp descriptions
@@ -187,7 +191,38 @@ export const translations: Record<Lang, Record<string, string>> = {
     "gateway.subtitle": "Recommended stable access points and tools.",
     "gateway.visit": "Visit →",
     "freeModel.title": "Free Model - AI API Gateway",
-    "freeModel.desc": "Another stable AI API gateway option, providing access to various models at competitive rates.",
+    "freeModel.desc":
+      "Another stable AI API gateway option, providing access to various models at competitive rates.",
+
+    // Auth
+    "nav.login": "Login",
+    "nav.logout": "Logout",
+    "nav.user": "User",
+    "auth.login": "Login",
+    "auth.register": "Register",
+    "auth.email": "Email",
+    "auth.password": "Password",
+    "auth.nickname": "Nickname (optional)",
+    "auth.processing": "Processing...",
+    "auth.close": "Close",
+    "auth.error.emailRegistered":
+      "This email is already registered, please login.",
+    "auth.error.registerFailed": "Registration failed, please try again.",
+    "auth.error.registerSuccess":
+      "Registration successful! Please check your email to confirm.",
+    "auth.error.loginFailed": "Incorrect email or password.",
+    "auth.error.loginFailed2": "Login failed, please try again.",
+    "auth.error.unknown": "Operation failed, please try again.",
+
+    // Confirm
+    "confirm.title": "Email Confirmation",
+    "confirm.verifying": "Verifying...",
+    "confirm.failed": "Confirmation failed: ",
+    "confirm.success": "Email confirmed successfully! Please return to login.",
+    "confirm.invalidLink":
+      "Invalid confirmation link. Make sure you clicked the full link from the email.",
+    "confirm.invalid": "Invalid confirmation link",
+    "confirm.backHome": "Back to Home",
 
     // News
     "news.title": "📰 Latest News",
@@ -253,6 +288,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "footer.games": "游戏",
     "footer.projects": "项目",
     "footer.connect": "联系",
+    "footer.friendLinks": "友情链接",
+    "footer.shuangyuNovel": "双鱼小说",
     "footer.copyright": "Copyright © 2026 ZD Tech",
 
     // What We Do
@@ -325,13 +362,17 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.apexMindDesc": "在 Roblox 上挑战烧脑益智体验。",
     "game.lobsterBumpDesc": "碰撞、竞争、称霸，体验快节奏的 Roblox 游戏。",
     "game.warlordSagaDesc": "领主争霸的史诗传奇，即将上线。",
-    "game.warlordHeroesDesc": "三国题材策略游戏 — 已发布，开放第一关卡基本玩法。体验中华英雄的传奇故事。",
+    "game.warlordHeroesDesc":
+      "三国题材策略游戏 — 已发布，开放第一关卡基本玩法。体验中华英雄的传奇故事。",
     "game.lobsterRunDesc": "有趣的龙虾跑酷 H5 游戏 — 奔跑、跳跃、躲避障碍！",
     "game.footballDesc": "足球射门&守门 H5 游戏 — 射门要准，防守要狠！",
     "game.handBattleDesc": "用手势对战的趣味游戏。",
-    "game.saveManDesc": "操控救援抓斗，从矿井中救出被困人员！点击释放抓斗，将他们拉上来。",
+    "game.saveManDesc":
+      "操控救援抓斗，从矿井中救出被困人员！点击释放抓斗，将他们拉上来。",
     "game.miniSoccerDesc": "在元宇宙中踢足球的游戏。",
-    "game.killerH5Desc": "暗杀H5游戏 — 分析场景，识别目标，合理利用道具，成为传奇刺客！",
+    "game.killerH5Desc":
+      "暗杀H5游戏 — 分析场景，识别目标，合理利用道具，成为传奇刺客！",
+    "game.swimDesc": "百米自由泳比赛 — 极速冲刺，收集道具，勇夺冠军！",
     "game.comingSoonDesc": "即将上线，敬请期待！",
 
     // DApp descriptions
@@ -365,7 +406,35 @@ export const translations: Record<Lang, Record<string, string>> = {
     "gateway.subtitle": "推荐稳定可用的 AI 接入与中转工具。",
     "gateway.visit": "立即访问 →",
     "freeModel.title": "Free Model - AI API 中转站",
-    "freeModel.desc": "另一个稳定可用的 AI API 中转站，提供多种模型的接入，价格优惠。",
+    "freeModel.desc":
+      "另一个稳定可用的 AI API 中转站，提供多种模型的接入，价格优惠。",
+
+    // Auth
+    "nav.login": "登录",
+    "nav.logout": "退出登录",
+    "nav.user": "用户",
+    "auth.login": "登录",
+    "auth.register": "注册",
+    "auth.email": "邮箱",
+    "auth.password": "密码",
+    "auth.nickname": "昵称（可选）",
+    "auth.processing": "处理中...",
+    "auth.close": "关闭",
+    "auth.error.emailRegistered": "该邮箱已注册，请登录",
+    "auth.error.registerFailed": "注册失败，请重试",
+    "auth.error.registerSuccess": "注册成功！请查看邮箱确认。",
+    "auth.error.loginFailed": "邮箱或密码错误",
+    "auth.error.loginFailed2": "登录失败，请重试",
+    "auth.error.unknown": "操作失败，请重试",
+
+    // Confirm
+    "confirm.title": "邮箱确认",
+    "confirm.verifying": "确认中...",
+    "confirm.failed": "确认失败：",
+    "confirm.success": "邮箱确认成功！请返回登录。",
+    "confirm.invalidLink": "确认链接无效，请确保点击的是完整邮件链接",
+    "confirm.invalid": "无效的确认链接",
+    "confirm.backHome": "返回首页",
 
     // News
     "news.title": "📰 最新动态",

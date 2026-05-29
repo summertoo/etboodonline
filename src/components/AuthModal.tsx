@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
+import { useLang } from "@/components/LangProvider";
 
 interface AuthModalProps {
   open: boolean;
@@ -10,6 +11,7 @@ interface AuthModalProps {
 }
 
 export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
+  const { t } = useLang();
   const [tab, setTab] = useState<"login" | "register">("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -46,40 +48,47 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
         });
         if (signUpError) {
           if (signUpError.message.includes("already registered")) {
-            setError("该邮箱已注册，请登录");
+            setError(t("auth.error.emailRegistered"));
           } else {
             setError(signUpError.message);
           }
           return;
         }
         if (data.user?.identities?.length === 0) {
-          setError("该邮箱已注册，请登录");
+          setError(t("auth.error.emailRegistered"));
           return;
         }
-        if (!data.user) { setError("注册失败，请重试"); return; }
+        if (!data.user) {
+          setError(t("auth.error.registerFailed"));
+          return;
+        }
         if (data.session) {
           const nick = getNick(data.user, email.split("@")[0]);
           onLogin(nick, data.user.id);
           onClose();
         } else {
-          setError("注册成功！请查看邮箱确认。");
+          setError(t("auth.error.registerSuccess"));
         }
       } else {
-        const { data, error: loginError } = await supabase.auth.signInWithPassword({
-          email,
-          password,
-        });
+        const { data, error: loginError } =
+          await supabase.auth.signInWithPassword({
+            email,
+            password,
+          });
         if (loginError) {
-          setError("邮箱或密码错误");
+          setError(t("auth.error.loginFailed"));
           return;
         }
-        if (!data.user) { setError("登录失败，请重试"); return; }
+        if (!data.user) {
+          setError(t("auth.error.loginFailed2"));
+          return;
+        }
         const nick = getNick(data.user, email.split("@")[0]);
         onLogin(nick, data.user.id);
         onClose();
       }
     } catch (err) {
-      setError("操作失败，请重试");
+      setError(t("auth.error.unknown"));
     } finally {
       setLoading(false);
     }
@@ -94,20 +103,20 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
             className={`flex-1 pb-3 text-sm font-medium transition-colors ${tab === "login" ? "text-[var(--cyber-primary)] border-b-2 border-[var(--cyber-primary)]" : "text-gray-400"}`}
             onClick={() => setTab("login")}
           >
-            登录
+            {t("auth.login")}
           </button>
           <button
             className={`flex-1 pb-3 text-sm font-medium transition-colors ${tab === "register" ? "text-[var(--cyber-primary)] border-b-2 border-[var(--cyber-primary)]" : "text-gray-400"}`}
             onClick={() => setTab("register")}
           >
-            注册
+            {t("auth.register")}
           </button>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="email"
-            placeholder="邮箱"
+            placeholder={t("auth.email")}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -115,7 +124,7 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
           />
           <input
             type="password"
-            placeholder="密码"
+            placeholder={t("auth.password")}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -125,7 +134,7 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
           {tab === "register" && (
             <input
               type="text"
-              placeholder="昵称（可选）"
+              placeholder={t("auth.nickname")}
               value={nickname}
               onChange={(e) => setNickname(e.target.value)}
               className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm text-gray-900 focus:outline-none focus:border-[var(--cyber-primary)]"
@@ -133,7 +142,9 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
           )}
 
           {error && (
-            <p className={`text-sm ${error.includes("成功") ? "text-green-600" : "text-red-500"}`}>
+            <p
+              className={`text-sm ${error.includes(t("auth.error.registerSuccess")) ? "text-green-600" : "text-red-500"}`}
+            >
               {error}
             </p>
           )}
@@ -143,7 +154,11 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
             disabled={loading}
             className="w-full py-2.5 rounded-lg text-sm font-medium text-white bg-[var(--cyber-primary)] hover:opacity-90 disabled:opacity-50 transition-all"
           >
-            {loading ? "处理中..." : tab === "login" ? "登录" : "注册"}
+            {loading
+              ? t("auth.processing")
+              : tab === "login"
+                ? t("auth.login")
+                : t("auth.register")}
           </button>
         </form>
 
@@ -151,7 +166,7 @@ export default function AuthModal({ open, onClose, onLogin }: AuthModalProps) {
           onClick={onClose}
           className="mt-4 w-full py-2 text-sm text-gray-400 hover:text-gray-600"
         >
-          关闭
+          {t("auth.close")}
         </button>
       </div>
     </div>

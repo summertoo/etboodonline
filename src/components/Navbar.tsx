@@ -20,14 +20,16 @@ const navKeys = [
 function getUserNickname(user: any): string {
   if (user?.user_metadata?.nickname) return user.user_metadata.nickname;
   if (user?.user_metadata?.player_name) return user.user_metadata.player_name;
-  return user?.email?.split("@")[0] || "用户";
+  return user?.email?.split("@")[0] || "User";
 }
 
 export default function Navbar() {
   const pathname = usePathname();
   const { lang, toggleLang, t } = useLang();
   const [authOpen, setAuthOpen] = useState(false);
-  const [user, setUser] = useState<{ id: string; nickname: string } | null>(null);
+  const [user, setUser] = useState<{ id: string; nickname: string } | null>(
+    null,
+  );
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -40,16 +42,18 @@ export default function Navbar() {
       }
     });
 
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (session?.user) {
-        setUser({
-          id: session.user.id,
-          nickname: getUserNickname(session.user),
-        });
-      } else {
-        setUser(null);
-      }
-    });
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        if (session?.user) {
+          setUser({
+            id: session.user.id,
+            nickname: getUserNickname(session.user),
+          });
+        } else {
+          setUser(null);
+        }
+      },
+    );
     return () => listener?.subscription.unsubscribe();
   }, []);
 
@@ -66,7 +70,11 @@ export default function Navbar() {
   return (
     <>
       <header className="py-6 flex justify-between items-center cyber-header">
-        <Link href="/" className="flex items-center gap-3" style={{ textDecoration: "none" }}>
+        <Link
+          href="/"
+          className="flex items-center gap-3"
+          style={{ textDecoration: "none" }}
+        >
           <Image
             src="/avatars/logo.png"
             alt="ZD Tech Logo"
@@ -77,7 +85,10 @@ export default function Navbar() {
           />
           <h1 className="text-3xl font-bold">ZD Tech</h1>
         </Link>
-        <nav className="cyber-nav flex items-center gap-4" aria-label="Main navigation">
+        <nav
+          className="cyber-nav flex items-center gap-4"
+          aria-label="Main navigation"
+        >
           <ul className="flex space-x-1">
             {navKeys.map((item) => {
               const isActive = pathname === item.href;
@@ -116,7 +127,7 @@ export default function Navbar() {
                     onClick={handleLogout}
                     className="w-full px-4 py-2 text-sm text-gray-600 hover:text-red-500 text-left"
                   >
-                    退出登录
+                    {t("nav.logout")}
                   </button>
                 </div>
               )}
@@ -126,7 +137,7 @@ export default function Navbar() {
               onClick={() => setAuthOpen(true)}
               className="px-3 py-1.5 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-[var(--cyber-primary)] hover:bg-[var(--cyber-primary)] hover:text-white transition-all duration-200"
             >
-              登录
+              {t("nav.login")}
             </button>
           )}
 
@@ -140,7 +151,11 @@ export default function Navbar() {
         </nav>
       </header>
 
-      <AuthModal open={authOpen} onClose={() => setAuthOpen(false)} onLogin={handleLogin} />
+      <AuthModal
+        open={authOpen}
+        onClose={() => setAuthOpen(false)}
+        onLogin={handleLogin}
+      />
     </>
   );
 }

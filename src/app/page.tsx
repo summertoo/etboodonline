@@ -128,7 +128,10 @@ function ProjectCard({
               </p>
               <div className="flex flex-wrap gap-2">
                 {isLive && liveUrl ? (
-                  <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]" asChild>
+                  <Button
+                    className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]"
+                    asChild
+                  >
                     <a
                       href={liveUrl}
                       target={liveUrl.startsWith("http") ? "_blank" : "_self"}
@@ -144,7 +147,11 @@ function ProjectCard({
                 ) : null}
                 {githubUrl && (
                   <Button className="cyber-button-small" asChild>
-                    <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {t("dapps.github")}
                     </a>
                   </Button>
@@ -238,7 +245,10 @@ function GameCard({
               </div>
               <p className="text-sm mb-3 cyber-subtitle">{t(descKey)}</p>
               {isLive ? (
-                <Button className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]" asChild>
+                <Button
+                  className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]"
+                  asChild
+                >
                   <a
                     href={liveUrl}
                     target={liveUrl.startsWith("http") ? "_blank" : "_self"}
@@ -322,27 +332,27 @@ export default function Homepage() {
     [],
   );
 
-function FloatingParticles() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
-  return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      {[...Array(12)].map((_, i) => (
-        <div
-          key={i}
-          className="absolute w-1 h-1 rounded-full bg-[var(--cyber-primary)] opacity-20"
-          style={{
-            left: `${10 + Math.random() * 80}%`,
-            top: `${20 + Math.random() * 60}%`,
-            animation: `float ${6 + Math.random() * 8}s ease-in-out infinite`,
-            animationDelay: `${Math.random() * 5}s`,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
+  function FloatingParticles() {
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => setMounted(true), []);
+    if (!mounted) return null;
+    return (
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 rounded-full bg-[var(--cyber-primary)] opacity-20"
+            style={{
+              left: `${10 + Math.random() * 80}%`,
+              top: `${20 + Math.random() * 60}%`,
+              animation: `float ${6 + Math.random() * 8}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 5}s`,
+            }}
+          />
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 cyber-container fly-in">
@@ -631,36 +641,82 @@ function FloatingParticles() {
               <span className="text-lg">🔥</span>
               <div>
                 <h4 className="font-semibold">
-                  {lang === "zh" ? "AI HOT 日报 · 2026-05-29" : "AI HOT Daily · May 29, 2026"}
+                  {lang === "zh"
+                    ? "AI HOT 日报 · 2026-05-29"
+                    : "AI HOT Daily · May 29, 2026"}
                 </h4>
                 <p className="text-xs text-[var(--cyber-muted)]">
-                  {lang === "zh" ? "模型发布 · 融资动态 · 行业热点" : "Model Releases · Funding · Industry"}
+                  {lang === "zh"
+                    ? "模型发布 · 融资动态 · 行业热点"
+                    : "Model Releases · Funding · Industry"}
                 </p>
               </div>
             </div>
             <div className="space-y-3 text-sm">
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [模型发布/更新]" : "📌 [Model Releases]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [模型发布/更新]" : "📌 [Model Releases]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "Claude Opus 4.8 发布：编码/推理全面升级" : "Claude Opus 4.8: coding/reasoning upgrade"}</li>
-                  <li>{lang === "zh" ? "Grok Build 0.1 API 公测" : "Grok Build 0.1 API public beta"}</li>
-                  <li>{lang === "zh" ? "Claude Code 动态工作流：并行数百子智能体" : "Claude Code dynamic workflows: parallel agents"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "Claude Opus 4.8 发布：编码/推理全面升级"
+                      : "Claude Opus 4.8: coding/reasoning upgrade"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Grok Build 0.1 API 公测"
+                      : "Grok Build 0.1 API public beta"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Claude Code 动态工作流：并行数百子智能体"
+                      : "Claude Code dynamic workflows: parallel agents"}
+                  </li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [融资动态]" : "📌 [Funding]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [融资动态]" : "📌 [Funding]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "Anthropic 650 亿美元 H 轮，估值 9650 亿美元" : "Anthropic $65B Series H at $965B valuation"}</li>
-                  <li>{lang === "zh" ? "DeepSeek 计划科创板 IPO，估值 3500 亿人民币" : "DeepSeek plans STAR Market IPO at ¥350B"}</li>
-                  <li>{lang === "zh" ? "OpenRouter 1.13 亿美元 B 轮融资" : "OpenRouter $113M Series B"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "Anthropic 650 亿美元 H 轮，估值 9650 亿美元"
+                      : "Anthropic $65B Series H at $965B valuation"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "DeepSeek 计划科创板 IPO，估值 3500 亿人民币"
+                      : "DeepSeek plans STAR Market IPO at ¥350B"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "OpenRouter 1.13 亿美元 B 轮融资"
+                      : "OpenRouter $113M Series B"}
+                  </li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业热点]" : "📌 [Industry]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [行业热点]" : "📌 [Industry]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "Qwen3.7-Max 登顶 OpenRouter 热门榜" : "Qwen3.7-Max tops OpenRouter"}</li>
-                  <li>{lang === "zh" ? "SIA 框架：AI 递归自我改进，性能提升 56%" : "SIA: recursive self-improvement +56%"}</li>
-                  <li>{lang === "zh" ? "英伟达 Polar 框架让 Codex 跑分暴涨 595%" : "NVIDIA Polar boosts Codex 595%"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "Qwen3.7-Max 登顶 OpenRouter 热门榜"
+                      : "Qwen3.7-Max tops OpenRouter"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "SIA 框架：AI 递归自我改进，性能提升 56%"
+                      : "SIA: recursive self-improvement +56%"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "英伟达 Polar 框架让 Codex 跑分暴涨 595%"
+                      : "NVIDIA Polar boosts Codex 595%"}
+                  </li>
                 </ul>
               </div>
             </div>
@@ -672,35 +728,77 @@ function FloatingParticles() {
               <span className="text-lg">🔥</span>
               <div>
                 <h4 className="font-semibold">
-                  {lang === "zh" ? "AI HOT 日报 · 2026-05-28" : "AI HOT Daily · May 28, 2026"}
+                  {lang === "zh"
+                    ? "AI HOT 日报 · 2026-05-28"
+                    : "AI HOT Daily · May 28, 2026"}
                 </h4>
                 <p className="text-xs text-[var(--cyber-muted)]">
-                  {lang === "zh" ? "产品发布 · 行业动态 · 论文研究" : "Product Releases · Industry · Research"}
+                  {lang === "zh"
+                    ? "产品发布 · 行业动态 · 论文研究"
+                    : "Product Releases · Industry · Research"}
                 </p>
               </div>
             </div>
             <div className="space-y-3 text-sm">
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Model Releases]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Model Releases]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "Runway 推出 MCP 服务器" : "Runway MCP server"}</li>
-                  <li>{lang === "zh" ? "Claude Code v2.1.152 更新" : "Claude Code v2.1.152"}</li>
-                  <li>{lang === "zh" ? "FastVideo Dreamverse 开源" : "FastVideo Dreamverse"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "Runway 推出 MCP 服务器"
+                      : "Runway MCP server"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Claude Code v2.1.152 更新"
+                      : "Claude Code v2.1.152"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "FastVideo Dreamverse 开源"
+                      : "FastVideo Dreamverse"}
+                  </li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "Cognition 估值 260 亿美元" : "Cognition $26B"}</li>
-                  <li>{lang === "zh" ? "阿里云入选 Omdia 领导者" : "Alibaba Cloud Omdia leader"}</li>
-                  <li>{lang === "zh" ? "英伟达台湾年投资 1500 亿美元" : "NVIDIA Taiwan $150B yearly"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "Cognition 估值 260 亿美元"
+                      : "Cognition $26B"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "阿里云入选 Omdia 领导者"
+                      : "Alibaba Cloud Omdia leader"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "英伟达台湾年投资 1500 亿美元"
+                      : "NVIDIA Taiwan $150B yearly"}
+                  </li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [论文研究]" : "📌 [Research]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [论文研究]" : "📌 [Research]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "Qwen3.5 推理达 580 tokens/秒" : "Qwen3.5: 580 tps"}</li>
-                  <li>{lang === "zh" ? "ITBench-AA：所有模型低于 50%" : "ITBench-AA: all below 50%"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "Qwen3.5 推理达 580 tokens/秒"
+                      : "Qwen3.5: 580 tps"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "ITBench-AA：所有模型低于 50%"
+                      : "ITBench-AA: all below 50%"}
+                  </li>
                 </ul>
               </div>
             </div>
@@ -712,33 +810,69 @@ function FloatingParticles() {
               <span className="text-lg">🔥</span>
               <div>
                 <h4 className="font-semibold">
-                  {lang === "zh" ? "AI HOT 日报 · 2026-05-25" : "AI HOT Daily · May 25, 2026"}
+                  {lang === "zh"
+                    ? "AI HOT 日报 · 2026-05-25"
+                    : "AI HOT Daily · May 25, 2026"}
                 </h4>
                 <p className="text-xs text-[var(--cyber-muted)]">
-                  {lang === "zh" ? "产品发布 · 行业动态 · 技巧与观点" : "Product Releases · Industry · Tips & Views"}
+                  {lang === "zh"
+                    ? "产品发布 · 行业动态 · 技巧与观点"
+                    : "Product Releases · Industry · Tips & Views"}
                 </p>
               </div>
             </div>
             <div className="space-y-3 text-sm">
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Product Releases]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh"
+                    ? "📌 [产品发布/更新]"
+                    : "📌 [Product Releases]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "Luma Agents 规模化 UGC 广告生成" : "Luma Agents scales UGC ad generation"}</li>
-                  <li>{lang === "zh" ? "OpenClaw 2026.5.22 发布" : "OpenClaw 2026.5.22 released"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "Luma Agents 规模化 UGC 广告生成"
+                      : "Luma Agents scales UGC ad generation"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "OpenClaw 2026.5.22 发布"
+                      : "OpenClaw 2026.5.22 released"}
+                  </li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "TrapDoor 供应链攻击窃取 AI 开发者凭证" : "TrapDoor attack steals AI dev credentials"}</li>
-                  <li>{lang === "zh" ? "DeepSeek 旗舰模型永久 75% 折扣" : "DeepSeek 75% permanent discount"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "TrapDoor 供应链攻击窃取 AI 开发者凭证"
+                      : "TrapDoor attack steals AI dev credentials"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "DeepSeek 旗舰模型永久 75% 折扣"
+                      : "DeepSeek 75% permanent discount"}
+                  </li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [技巧与观点]" : "📌 [Tips & Views]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [技巧与观点]" : "📌 [Tips & Views]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "Codex 自我优化提示词框架" : "Codex self-optimizing prompt framework"}</li>
-                  <li>{lang === "zh" ? "Claude Code 自动模式多任务并行" : "Claude Code auto mode multi-tasking"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "Codex 自我优化提示词框架"
+                      : "Codex self-optimizing prompt framework"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Claude Code 自动模式多任务并行"
+                      : "Claude Code auto mode multi-tasking"}
+                  </li>
                 </ul>
               </div>
             </div>
@@ -750,49 +884,110 @@ function FloatingParticles() {
               <span className="text-lg">🤖</span>
               <div>
                 <h4 className="font-semibold">
-                  {lang === "zh" ? "🤖 AI 今日速报 · 2026-05-24" : "🤖 AI Daily · May 24, 2026"}
+                  {lang === "zh"
+                    ? "🤖 AI 今日速报 · 2026-05-24"
+                    : "🤖 AI Daily · May 24, 2026"}
                 </h4>
                 <p className="text-xs text-[var(--cyber-muted)]">
-                  {lang === "zh" ? "产品发布 · 行业动态 · 论文研究 · 技巧观点" : "Product Releases · Industry · Research · Tips"}
+                  {lang === "zh"
+                    ? "产品发布 · 行业动态 · 论文研究 · 技巧观点"
+                    : "Product Releases · Industry · Research · Tips"}
                 </p>
               </div>
             </div>
             <div className="space-y-3 text-sm">
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Product Releases]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh"
+                    ? "📌 [产品发布/更新]"
+                    : "📌 [Product Releases]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "StepAudio 2.5 实时语音发布" : "StepAudio 2.5 real-time voice"}</li>
-                  <li>{lang === "zh" ? "Models.dev：开源 AI 模型数据库" : "Models.dev: open-source AI model DB"}</li>
-                  <li>{lang === "zh" ? "Replit Agent + Squidler 全自动化 QA" : "Replit Agent + Squidler automated QA"}</li>
-                  <li>{lang === "zh" ? "Claude Code v2.1.150 版本更新" : "Claude Code v2.1.150 released"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "StepAudio 2.5 实时语音发布"
+                      : "StepAudio 2.5 real-time voice"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Models.dev：开源 AI 模型数据库"
+                      : "Models.dev: open-source AI model DB"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Replit Agent + Squidler 全自动化 QA"
+                      : "Replit Agent + Squidler automated QA"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Claude Code v2.1.150 版本更新"
+                      : "Claude Code v2.1.150 released"}
+                  </li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "微软：AI 使用成本高于人工工资" : "Microsoft: AI costs exceed human wages"}</li>
-                  <li>{lang === "zh" ? "Anthropic 融资超 300 亿美元，估值反超 OpenAI" : "Anthropic raises $30B+ surpasses OpenAI"}</li>
-                  <li>{lang === "zh" ? "74% CEO 因 AI 冻结或缩减招聘" : "74% of CEOs freeze hiring due to AI"}</li>
-                  <li>{lang === "zh" ? "Mistral AI 收购 Emmi AI，加码工业 AI" : "Mistral AI acquires Emmi AI"}</li>
-                  <li>{lang === "zh" ? "Kling AI 亮相戛纳" : "Kling AI debuts at Cannes"}</li>
-                  <li>{lang === "zh" ? "Google 扩大与新加坡 AI 安全合作" : "Google expands AI safety in Singapore"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "微软：AI 使用成本高于人工工资"
+                      : "Microsoft: AI costs exceed human wages"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Anthropic 融资超 300 亿美元，估值反超 OpenAI"
+                      : "Anthropic raises $30B+ surpasses OpenAI"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "74% CEO 因 AI 冻结或缩减招聘"
+                      : "74% of CEOs freeze hiring due to AI"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Mistral AI 收购 Emmi AI，加码工业 AI"
+                      : "Mistral AI acquires Emmi AI"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Kling AI 亮相戛纳"
+                      : "Kling AI debuts at Cannes"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Google 扩大与新加坡 AI 安全合作"
+                      : "Google expands AI safety in Singapore"}
+                  </li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [论文研究]" : "📌 [Research]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [论文研究]" : "📌 [Research]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "NVIDIA 扩散语言模型实现光速文本生成" : "NVIDIA diffusion LM achieves light-speed text"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "NVIDIA 扩散语言模型实现光速文本生成"
+                      : "NVIDIA diffusion LM achieves light-speed text"}
+                  </li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [技巧与观点]" : "📌 [Tips & Views]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [技巧与观点]" : "📌 [Tips & Views]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "飞书-Claude Code 桥接开源" : "Feishu-Claude Code bridge open-sourced"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "飞书-Claude Code 桥接开源"
+                      : "Feishu-Claude Code bridge open-sourced"}
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -836,7 +1031,7 @@ function FloatingParticles() {
             </ul>
           </div>
           <div>
-            <h5 className="font-bold mb-2">友情链接</h5>
+            <h5 className="font-bold mb-2">{t("footer.friendLinks")}</h5>
             <ul className="cyber-subtitle text-sm space-y-1">
               <li>
                 <a
@@ -845,7 +1040,7 @@ function FloatingParticles() {
                   rel="noopener noreferrer"
                   className="hover:text-[var(--cyber-primary)] transition-colors"
                 >
-                  双鱼小说
+                  {t("footer.shuangyuNovel")}
                 </a>
               </li>
             </ul>
