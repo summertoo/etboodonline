@@ -12,6 +12,56 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-05-29",
+    date: "2026-05-29",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-05-29",
+      en: "🤖 AI HOT Daily · May 29, 2026",
+    },
+    summary: {
+      zh: "Claude Opus 4.8 发布、Anthropic 650 亿美元 H 轮融资估值 9650 亿美元、Claude Code 动态工作流、Grok Build 0.1 API 公测、DeepSeek 计划科创板 IPO、Qwen3.7-Max 登顶 OpenRouter。",
+      en: "Claude Opus 4.8, Anthropic $65B Series H at $965B, Claude Code dynamic workflows, Grok Build 0.1 API, DeepSeek IPO, Qwen3.7-Max tops OpenRouter.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: { zh: "Claude Opus 4.8 发布", en: "Claude Opus 4.8 Released" },
+        description: {
+          zh: "Anthropic 发布 Claude Opus 4.8，编码/推理/智能体技能全面升级，代码错误漏检率降低 75%，价格不变。",
+          en: "Anthropic released Claude Opus 4.8 with coding/reasoning/agent upgrades, 75% fewer missed code errors, same price.",
+        },
+      },
+      {
+        title: { zh: "Anthropic 650 亿美元 H 轮融资", en: "Anthropic $65B Series H" },
+        description: {
+          zh: "Anthropic 完成 650 亿美元 H 轮融资，估值 9650 亿美元，年化收入突破 470 亿美元。",
+          en: "Anthropic closed $65B Series H at $965B valuation, $47B ARR.",
+        },
+      },
+      {
+        title: { zh: "Claude Code 动态工作流", en: "Claude Code Dynamic Workflows" },
+        description: {
+          zh: "Claude Code 推出动态工作流功能，可并行运行数十到数百个子智能体完成复杂任务。",
+          en: "Claude Code dynamic workflows runs dozens to hundreds of parallel sub-agents for complex tasks.",
+        },
+      },
+      {
+        title: { zh: "Grok Build 0.1 API 公测", en: "Grok Build 0.1 API Beta" },
+        description: {
+          zh: "xAI 编码模型 Grok Build 0.1 上线，推理速度超 100 tokens/秒，定价输入 $1/m、输出 $2/m。",
+          en: "xAI's Grok Build 0.1 available: 100+ tps, $1/$2 per million tokens.",
+        },
+      },
+      {
+        title: { zh: "SIA 框架：AI 递归自我改进", en: "SIA: Recursive Self-Improvement" },
+        description: {
+          zh: "hexoai 开源 SIA 框架，AI 智能体可自主更新模型权重，LawBench 性能提升 56.6%。",
+          en: "hexoai open-sourced SIA: agents update own weights, LawBench +56.6%.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-05-28",
     date: "2026-05-28",
     title: {
