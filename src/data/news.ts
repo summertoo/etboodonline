@@ -12,6 +12,56 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-05-30",
+    date: "2026-05-30",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-05-30",
+      en: "🤖 AI HOT Daily · May 30, 2026",
+    },
+    summary: {
+      zh: "OpenAI 实时翻译模型支持 70+ 语言、阶跃星辰 Step 3.7 Flash 发布、Codex 支持 Windows 计算机使用、Kog 团队 3000 tokens/s 推理速度、中央网信办推动全民 AI 素养。",
+      en: "OpenAI realtime translator 70+ languages, StepFun Step 3.7 Flash, Codex Windows support, Kog 3000 tps inference, China AI literacy push.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: { zh: "OpenAI 实时翻译模型：70+ 语言", en: "OpenAI Realtime Translator: 70+ Languages" },
+        description: {
+          zh: "OpenAI 推出 gpt-realtime-translate，支持 70+ 种输入语言和 13 种输出语言的实时语音翻译。",
+          en: "OpenAI launched gpt-realtime-translate: realtime voice translation for 70+ input and 13 output languages.",
+        },
+      },
+      {
+        title: { zh: "阶跃星辰 Step 3.7 Flash 发布", en: "StepFun Step 3.7 Flash Released" },
+        description: {
+          zh: "阶跃星辰发布开源的 Step 3.7 Flash，198B MoE 架构，11B 活跃参数，在 ClawEval 和 SimpleVQA 排名第一。",
+          en: "StepFun released open-source Step 3.7 Flash, 198B MoE, 11B active params, #1 on ClawEval and SimpleVQA.",
+        },
+      },
+      {
+        title: { zh: "Codex 支持 Windows 计算机使用", en: "Codex Now Supports Windows" },
+        description: {
+          zh: "Codex 计算机使用功能登陆 Windows，可在 Windows 电脑上直接执行操作，ChatGPT 移动端可远程引导。",
+          en: "Codex computer use now on Windows, ChatGPT mobile app can remotely steer tasks on Windows PC.",
+        },
+      },
+      {
+        title: { zh: "Kog 团队实现 3000 tokens/s 推理", en: "Kog Team: 3,000 tokens/sec Inference" },
+        description: {
+          zh: "Kog 团队在 8× AMD MI300X GPU 上达到 3000 tokens/s 推理速度，比常规快 10-30 倍。",
+          en: "Kog team achieves 3,000 tps on 8x AMD MI300X GPUs, 10-30x faster than normal.",
+        },
+      },
+      {
+        title: { zh: "中央网信办：提升全民 AI 素养", en: "China: National AI Literacy Push" },
+        description: {
+          zh: "中央网信办等四部门联合印发工作要点，要求提升全民人工智能素养，加快 AI 人才培育。",
+          en: "Four Chinese govt departments issued guidelines to improve nationwide AI literacy and talent cultivation.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-05-29",
     date: "2026-05-29",
     title: {

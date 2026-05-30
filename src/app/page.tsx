@@ -635,6 +635,46 @@ export default function Homepage() {
           </p>
         </RevealSection>
         <div className="max-w-4xl mx-auto space-y-4">
+          {/* 2026-05-30 AI HOT Daily */}
+          <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-lg">🔥</span>
+              <div>
+                <h4 className="font-semibold">
+                  {lang === "zh" ? "AI HOT 日报 · 2026-05-30" : "AI HOT Daily · May 30, 2026"}
+                </h4>
+                <p className="text-xs text-[var(--cyber-muted)]">
+                  {lang === "zh" ? "模型发布 · 产品更新 · 行业动态" : "Model Releases · Products · Industry"}
+                </p>
+              </div>
+            </div>
+            <div className="space-y-3 text-sm">
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [模型发布/更新]" : "📌 [Model Releases]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "OpenAI 实时翻译模型：70+ 语言" : "OpenAI realtime translator"}</li>
+                  <li>{lang === "zh" ? "阶跃星辰 Step 3.7 Flash 发布" : "StepFun Step 3.7 Flash"}</li>
+                  <li>{lang === "zh" ? "Kog 团队 3000 tokens/s 推理" : "Kog 3000 tps inference"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Product Releases]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "Codex 支持 Windows 计算机使用" : "Codex Windows support"}</li>
+                  <li>{lang === "zh" ? "OpenRouter Guardrails 安全工具" : "OpenRouter Guardrails"}</li>
+                  <li>{lang === "zh" ? "ControlFoley 开源视频音效生成" : "ControlFoley open-sourced"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "中央网信办：提升全民 AI 素养" : "China AI literacy push"}</li>
+                  <li>{lang === "zh" ? "Cursor 开发者报告：人均代码量 +139%" : "Cursor report: code output +139%"}</li>
+                  <li>{lang === "zh" ? "Adam's Law：高频词 Prompt 效果更好" : "Adam's Law: high-frequency prompts"}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
           {/* 2026-05-29 AI HOT Daily */}
           <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
             <div className="flex items-center gap-3 mb-4">
