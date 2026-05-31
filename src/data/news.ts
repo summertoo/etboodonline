@@ -12,6 +12,56 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-05-31",
+    date: "2026-05-31",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-05-31",
+      en: "🤖 AI HOT Daily · May 31, 2026",
+    },
+    summary: {
+      zh: "Google Nano Banana 系列正式发布、xAI 放弃 JAX 转向自研训练框架、阿里云 & Qwen 成 UEFA 全球 AI 合作伙伴、GitHub Copilot token 计费引争议、软银 750 亿欧元法国 AI 数据中心。",
+      en: "Google Nano Banana GA, xAI drops JAX for custom C framework, Alibaba Cloud & Qwen UEFA partnership, GitHub Copilot token billing controversy, SoftBank €75B France AI data centers.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: { zh: "Google Nano Banana Pro/2 正式发布", en: "Google Nano Banana Pro & 2 Released" },
+        description: {
+          zh: "Nano Banana Pro (gemini-3-pro-image) 和 Nano Banana 2 (gemini-3.1-flash-image) 正式发布，可通过 Gemini API 投入生产。",
+          en: "Nano Banana Pro and Nano Banana 2 are now GA and available via Gemini API for production use.",
+        },
+      },
+      {
+        title: { zh: "xAI 放弃 JAX，自研 C 训练框架", en: "xAI Drops JAX for Custom C Framework" },
+        description: {
+          zh: "xAI 放弃 JAX GPU 堆栈（MFU 低于 10%），转向用 Grok Build 编写 C 训练框架。NVIDIA JAX 团队两年 996 投入 xAI 宣告失败。",
+          en: "xAI abandoned JAX GPU stack (MFU <10%), pivoting to a C training framework via Grok Build. NVIDIA JAX team's 2-year effort with xAI failed.",
+        },
+      },
+      {
+        title: { zh: "阿里云 & Qwen 成 UEFA 全球 AI 合作伙伴", en: "Alibaba Cloud & Qwen: UEFA AI Partner" },
+        description: {
+          zh: "阿里云和 Qwen 成为 UEFA 官方 AI、云计算与电商合作伙伴，覆盖 2027-2033 赛季男子俱乐部赛事及 EURO 2028。",
+          en: "Alibaba Cloud and Qwen named UEFA's official AI, cloud and e-commerce partner for 2027-2033 men's club competitions and EURO 2028.",
+        },
+      },
+      {
+        title: { zh: "GitHub Copilot token 计费引争议", en: "GitHub Copilot Token Billing Sparks Outcry" },
+        description: {
+          zh: "GitHub Copilot 改为按 token 计量计费，引发开发者广泛不满，「黄金时代似乎正在终结」。",
+          en: "GitHub Copilot switched to token-based billing, sparking developer backlash — 'the golden age seems to be ending.'",
+        },
+      },
+      {
+        title: { zh: "软银 750 亿欧元投资法国 AI 数据中心", en: "SoftBank €75B France AI Data Centers" },
+        description: {
+          zh: "软银计划投资高达 750 亿欧元（约 870 亿美元），在法国建设 AI 数据中心。",
+          en: "SoftBank plans to invest up to €75 billion (~$87B) in AI data centers in France.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-05-30",
     date: "2026-05-30",
     title: {

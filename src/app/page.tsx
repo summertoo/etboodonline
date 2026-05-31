@@ -635,6 +635,44 @@ export default function Homepage() {
           </p>
         </RevealSection>
         <div className="max-w-4xl mx-auto space-y-4">
+          {/* 2026-05-31 AI HOT Daily */}
+          <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-lg">🔥</span>
+              <div>
+                <h4 className="font-semibold">
+                  {lang === "zh" ? "AI HOT 日报 · 2026-05-31" : "AI HOT Daily · May 31, 2026"}
+                </h4>
+                <p className="text-xs text-[var(--cyber-muted)]">
+                  {lang === "zh" ? "模型发布 · 产品更新 · 行业动态" : "Model Releases · Products · Industry"}
+                </p>
+              </div>
+            </div>
+            <div className="space-y-3 text-sm">
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [模型发布/更新]" : "📌 [Model Releases]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "Google Nano Banana Pro/2 正式发布" : "Google Nano Banana Pro & 2 GA"}</li>
+                  <li>{lang === "zh" ? "xAI 放弃 JAX GPU，自研 C 训练框架" : "xAI drops JAX, builds C framework"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Product Releases]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "NVIDIA 或将发布 ARM 笔记本芯片 N1X" : "NVIDIA may launch ARM notebook chip N1X"}</li>
+                  <li>{lang === "zh" ? "Tiny-vLLM：C/CUDA 推理引擎开源" : "Tiny-vLLM: C/CUDA inference engine open-sourced"}</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}</p>
+                <ul className="ml-4 space-y-1 list-disc">
+                  <li>{lang === "zh" ? "阿里云 & Qwen 成 UEFA 全球 AI 合作伙伴" : "Alibaba & Qwen partner with UEFA"}</li>
+                  <li>{lang === "zh" ? "软银 750 亿欧元投资法国 AI 数据中心" : "SoftBank €75B France AI investment"}</li>
+                  <li>{lang === "zh" ? "GitHub Copilot token 计费模式引争议" : "GitHub Copilot token billing controversy"}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
           {/* 2026-05-30 AI HOT Daily */}
           <div className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white">
             <div className="flex items-center gap-3 mb-4">
