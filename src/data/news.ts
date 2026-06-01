@@ -12,6 +12,56 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-01",
+    date: "2026-06-01",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-01",
+      en: "🤖 AI HOT Daily · Jun 1, 2026",
+    },
+    summary: {
+      zh: "OpenAI 进军机器人领域并启动招聘、苹果 WWDC 将推 Gemini 蒸馏模型本地运行、特斯拉 FSD 全球首次横穿加拿大全程零干预、DeepSeek V4 Flash 上线 OpenCode Zen。",
+      en: "OpenAI enters robotics with hiring push, Apple WWDC to feature Gemini-distilled on-device models, Tesla FSD completes first coast-to-coast Canada drive zero-intervention, DeepSeek V4 Flash on OpenCode Zen.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: { zh: "OpenAI 进军机器人领域", en: "OpenAI Enters Robotics" },
+        description: {
+          zh: "OpenAI 成立 OpenAI Robotics 团队，由 Aditya Ramesh 领导，招聘全栈硬件/系统/ML 工程师，短期支持技术工人，长期愿景为全民个人机器人。",
+          en: "OpenAI launched its Robotics team led by Aditya Ramesh, hiring hardware/systems/ML engineers for short-term infrastructure and long-term personal robots for everyone.",
+        },
+      },
+      {
+        title: { zh: "苹果 WWDC：Gemini 蒸馏模型本地运行", en: "Apple WWDC: Gemini-Distilled On-Device Models" },
+        description: {
+          zh: "苹果 Siri 及设备端 AI 升级将在 iPhone 芯片本地运行 Gemini 蒸馏小模型，复杂查询路由至 Google Cloud，采用 Nvidia 机密计算。",
+          en: "Apple's Siri and on-device AI upgrade runs Gemini-distilled models locally on iPhone chips, routing complex queries to Google Cloud with Nvidia confidential computing.",
+        },
+      },
+      {
+        title: { zh: "特斯拉 FSD 横穿加拿大零干预", en: "Tesla FSD Cross-Canada Zero-Intervention" },
+        description: {
+          zh: "特斯拉 FSD V14.3.3 完成全球首次全程零干预横穿加拿大，温哥华至哈利法克斯 6051 公里，4 天 21 小时无系统退出。",
+          en: "Tesla FSD V14.3.3 completed the world's first fully autonomous cross-Canada drive: Vancouver to Halifax, 6,051km, 4 days 21h, zero disengagements.",
+        },
+      },
+      {
+        title: { zh: "DeepSeek V4 Flash 上线 OpenCode Zen", en: "DeepSeek V4 Flash on OpenCode Zen" },
+        description: {
+          zh: "DeepSeek V4 Flash 现已上线 OpenCode Zen，为开发者提供新的模型选择。",
+          en: "DeepSeek V4 Flash is now available on OpenCode Zen, offering developers a new model option.",
+        },
+      },
+      {
+        title: { zh: "OpenAI 发布生物防御工具 Rosalind", en: "OpenAI Releases Biodefense Tool Rosalind" },
+        description: {
+          zh: "OpenAI 发布生物防御 AI 工具 Rosalind，旨在帮助世界在生物防御领域抢占先机。",
+          en: "OpenAI released Rosalind, an AI biodefense tool designed to help the world get ahead in biodefense.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-05-31",
     date: "2026-05-31",
     title: {
