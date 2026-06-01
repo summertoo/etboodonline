@@ -358,11 +358,11 @@ export default function Homepage() {
     <div className="max-w-7xl mx-auto px-4 cyber-container fly-in">
       <Navbar />
 
-      <section className="text-center py-24 cyber-hero relative overflow-hidden">
+      <section className="text-center py-16 md:py-24 cyber-hero relative overflow-hidden">
         <FloatingParticles />
         <div className="relative z-10">
           <h2
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 px-2"
             style={{
               background:
                 "linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary))",
@@ -667,6 +667,14 @@ export default function Homepage() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="text-center mt-6">
+          <Link
+            href="/news"
+            className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:text-[var(--cyber-primary)] hover:border-[var(--cyber-primary)] transition-all duration-300"
+          >
+            {lang === "zh" ? "查看更多 →" : "View All →"}
+          </Link>
         </div>
       </section>
 
