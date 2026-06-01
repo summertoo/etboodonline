@@ -13,6 +13,8 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Hero
     "hero.title": "ZD Tech Studio",
+    "hero.subtitle":
+      "Self-media + Games + Apps — Bilingual Novels, Web Games & Creative Tools",
     "hero.tagline": "Web Games • Bilingual Novels • DApps • Roblox",
     "hero.contact": "Contact Now",
     "hero.viewGames": "View Games ↓",
@@ -106,6 +108,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "project.category.dapp": "DApps",
     "project.category.tool": "Tools",
     "project.category.article": "Articles",
+    "project.category.novel": "Novels",
     "project.platform.roblox": "Roblox",
     "project.platform.web": "Web",
     "project.live": "● Live",
@@ -180,6 +183,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "articles.read": "Read →",
 
     // Novels
+    "novels.read": "Read →",
 
     // OPC Network
     "opc.title": "🌐 OPC Network",
@@ -331,6 +335,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "project.category.dapp": "DApp",
     "project.category.tool": "工具",
     "project.category.article": "文章",
+    "project.category.novel": "小说",
     "project.platform.roblox": "Roblox",
     "project.platform.web": "网页",
     "project.live": "● 已上线",
@@ -395,6 +400,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "articles.read": "阅读 →",
 
     // Novels
+    "novels.read": "阅读 →",
 
     // OPC Network
     "opc.title": "🌐 开源一人公司（OPC）协作网络",

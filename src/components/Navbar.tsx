@@ -86,19 +86,34 @@ export default function Navbar() {
           <h1 className="text-3xl font-bold">ZD Tech</h1>
         </Link>
         {/* Mobile hamburger */}
-          <button
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
+        <button
+          className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {menuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+            {menuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
 
         <nav
           className="cyber-nav hidden md:flex items-center gap-4"
@@ -111,10 +126,8 @@ export default function Navbar() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                      isActive
-                        ? "text-[var(--cyber-primary)] bg-[rgba(14,165,233,0.08)]"
-                        : ""
+                    className={`cyber-nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                      isActive ? "is-active text-[var(--cyber-hover-pink)]" : ""
                     }`}
                     style={{ textDecoration: "none" }}
                   >
@@ -158,68 +171,71 @@ export default function Navbar() {
 
           <button
             onClick={toggleLang}
-            className="px-3 py-1.5 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:text-[var(--cyber-primary)] hover:border-[var(--cyber-primary)] transition-all duration-200"
+            className="px-3 py-1.5 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:text-[var(--cyber-hover-pink)] hover:border-[var(--cyber-hover-pink)] transition-all duration-200"
             title={lang === "en" ? "切换到中文" : "Switch to English"}
           >
             {lang === "en" ? "中" : "EN"}
           </button>
         </nav>
 
-      {/* Mobile menu dropdown */}
-      {menuOpen && (
-        <div className="md:hidden w-full mt-3 pt-3 border-t border-[var(--cyber-border)]">
-          <ul className="flex flex-col gap-1">
-            {navKeys.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setMenuOpen(false)}
-                    className={`block px-3 py-2 rounded-lg text-sm font-medium transition-all ${
-                      isActive
-                        ? "text-[var(--cyber-primary)] bg-[rgba(14,165,233,0.08)]"
-                        : ""
-                    }`}
-                    style={{ textDecoration: "none" }}
+        {/* Mobile menu dropdown */}
+        {menuOpen && (
+          <div className="md:hidden w-full mt-3 pt-3 border-t border-[var(--cyber-border)]">
+            <ul className="flex flex-col gap-1">
+              {navKeys.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setMenuOpen(false)}
+                      className={`block px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                        isActive
+                          ? "is-active text-[var(--cyber-hover-pink)]"
+                          : ""
+                      }`}
+                      style={{ textDecoration: "none" }}
+                    >
+                      {t(item.labelKey)}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="flex items-center gap-3 mt-3 pt-3 border-t border-[var(--cyber-border)]">
+              {user ? (
+                <>
+                  <span className="w-6 h-6 rounded-full bg-[var(--cyber-primary)] text-white flex items-center justify-center text-xs font-bold">
+                    {user.nickname.charAt(0)}
+                  </span>
+                  <span className="text-sm font-medium">{user.nickname}</span>
+                  <button
+                    onClick={handleLogout}
+                    className="ml-auto px-3 py-1 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-red-500 hover:bg-red-50 transition-all"
                   >
-                    {t(item.labelKey)}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-          <div className="flex items-center gap-3 mt-3 pt-3 border-t border-[var(--cyber-border)]">
-            {user ? (
-              <>
-                <span className="w-6 h-6 rounded-full bg-[var(--cyber-primary)] text-white flex items-center justify-center text-xs font-bold">
-                  {user.nickname.charAt(0)}
-                </span>
-                <span className="text-sm font-medium">{user.nickname}</span>
+                    {t("nav.logout")}
+                  </button>
+                </>
+              ) : (
                 <button
-                  onClick={handleLogout}
-                  className="ml-auto px-3 py-1 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-red-500 hover:bg-red-50 transition-all"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setAuthOpen(true);
+                  }}
+                  className="px-3 py-1.5 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-[var(--cyber-primary)] hover:bg-[var(--cyber-primary)] hover:text-white transition-all"
                 >
-                  {t("nav.logout")}
+                  {t("nav.login")}
                 </button>
-              </>
-            ) : (
+              )}
               <button
-                onClick={() => { setMenuOpen(false); setAuthOpen(true); }}
-                className="px-3 py-1.5 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-[var(--cyber-primary)] hover:bg-[var(--cyber-primary)] hover:text-white transition-all"
+                onClick={toggleLang}
+                className="px-3 py-1.5 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:text-[var(--cyber-hover-pink)] hover:border-[var(--cyber-hover-pink)] transition-all"
               >
-                {t("nav.login")}
+                {lang === "en" ? "中" : "EN"}
               </button>
-            )}
-            <button
-              onClick={toggleLang}
-              className="px-3 py-1.5 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:text-[var(--cyber-primary)] hover:border-[var(--cyber-primary)] transition-all"
-            >
-              {lang === "en" ? "中" : "EN"}
-            </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
       </header>
 
       <AuthModal

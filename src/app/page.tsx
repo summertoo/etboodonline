@@ -129,7 +129,7 @@ function ProjectCard({
               <div className="flex flex-wrap gap-2">
                 {isLive && liveUrl ? (
                   <Button
-                    className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]"
+                    className="cyber-button-small group-hover:border-[var(--cyber-hover-pink)] group-hover:text-[var(--cyber-hover-pink)]"
                     asChild
                   >
                     <a
@@ -246,7 +246,7 @@ function GameCard({
               <p className="text-sm mb-3 cyber-subtitle">{t(descKey)}</p>
               {isLive ? (
                 <Button
-                  className="cyber-button-small group-hover:border-[var(--cyber-primary)] group-hover:text-[var(--cyber-primary)]"
+                  className="cyber-button-small group-hover:border-[var(--cyber-hover-pink)] group-hover:text-[var(--cyber-hover-pink)]"
                   asChild
                 >
                   <a
@@ -641,28 +641,62 @@ export default function Homepage() {
               <span className="text-lg">🔥</span>
               <div>
                 <h4 className="font-semibold">
-                  {lang === "zh" ? "AI HOT 日报 · 2026-06-01" : "AI HOT Daily · Jun 1, 2026"}
+                  {lang === "zh"
+                    ? "AI HOT 日报 · 2026-06-01"
+                    : "AI HOT Daily · Jun 1, 2026"}
                 </h4>
                 <p className="text-xs text-[var(--cyber-muted)]">
-                  {lang === "zh" ? "模型发布 · 产品更新 · 行业动态" : "Model Releases · Products · Industry"}
+                  {lang === "zh"
+                    ? "模型发布 · 产品更新 · 行业动态"
+                    : "Model Releases · Products · Industry"}
                 </p>
               </div>
             </div>
             <div className="space-y-3 text-sm">
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [产品发布/更新]" : "📌 [Product Releases]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh"
+                    ? "📌 [产品发布/更新]"
+                    : "📌 [Product Releases]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "DeepSeek V4 Flash 上线 OpenCode Zen" : "DeepSeek V4 Flash on OpenCode Zen"}</li>
-                  <li>{lang === "zh" ? "OpenAI 发布生物防御工具 Rosalind" : "OpenAI biodefense tool Rosalind"}</li>
-                  <li>{lang === "zh" ? "Claude Code v2.1.159 基础设施更新" : "Claude Code v2.1.159 infra update"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "DeepSeek V4 Flash 上线 OpenCode Zen"
+                      : "DeepSeek V4 Flash on OpenCode Zen"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "OpenAI 发布生物防御工具 Rosalind"
+                      : "OpenAI biodefense tool Rosalind"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "Claude Code v2.1.159 基础设施更新"
+                      : "Claude Code v2.1.159 infra update"}
+                  </li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-[var(--cyber-primary)] mb-1">{lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}</p>
+                <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                  {lang === "zh" ? "📌 [行业动态]" : "📌 [Industry]"}
+                </p>
                 <ul className="ml-4 space-y-1 list-disc">
-                  <li>{lang === "zh" ? "OpenAI 成立机器人团队，启动招聘" : "OpenAI Robotics team launched"}</li>
-                  <li>{lang === "zh" ? "苹果 WWDC：Gemini 蒸馏模型本地运行" : "Apple WWDC: Gemini-distilled on-device"}</li>
-                  <li>{lang === "zh" ? "特斯拉 FSD 横穿加拿大全程零干预" : "Tesla FSD cross-Canada zero-intervention"}</li>
+                  <li>
+                    {lang === "zh"
+                      ? "OpenAI 成立机器人团队，启动招聘"
+                      : "OpenAI Robotics team launched"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "苹果 WWDC：Gemini 蒸馏模型本地运行"
+                      : "Apple WWDC: Gemini-distilled on-device"}
+                  </li>
+                  <li>
+                    {lang === "zh"
+                      ? "特斯拉 FSD 横穿加拿大全程零干预"
+                      : "Tesla FSD cross-Canada zero-intervention"}
+                  </li>
                 </ul>
               </div>
             </div>
@@ -671,7 +705,7 @@ export default function Homepage() {
         <div className="text-center mt-6">
           <Link
             href="/news"
-            className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:text-[var(--cyber-primary)] hover:border-[var(--cyber-primary)] transition-all duration-300"
+            className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:text-[var(--cyber-hover-pink)] hover:border-[var(--cyber-hover-pink)] transition-all duration-300"
           >
             {lang === "zh" ? "查看更多 →" : "View All →"}
           </Link>
@@ -700,7 +734,7 @@ export default function Homepage() {
               <li>
                 <a
                   href="mailto:etbood@gmail.com"
-                  className="hover:text-[var(--cyber-primary)] transition-colors"
+                  className="hover:text-[var(--cyber-hover-pink)] transition-colors"
                 >
                   Email
                 </a>
@@ -710,7 +744,7 @@ export default function Homepage() {
                   href="https://github.com/etboodXJ"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[var(--cyber-primary)] transition-colors"
+                  className="hover:text-[var(--cyber-hover-pink)] transition-colors"
                 >
                   GitHub
                 </a>
@@ -725,7 +759,7 @@ export default function Homepage() {
                   href="https://etboodnovel.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[var(--cyber-primary)] transition-colors"
+                  className="hover:text-[var(--cyber-hover-pink)] transition-colors"
                 >
                   {t("footer.shuangyuNovel")}
                 </a>
