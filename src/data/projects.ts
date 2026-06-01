@@ -126,6 +126,16 @@ export const projects: Project[] = [
     liveUrl: "/swim/index.html",
   },
   {
+    id: "web-zombie-siege",
+    title: "🧟 降临：僵尸围城 (Skyfall Zombie Siege)",
+    descKey: "game.zombieSiegeDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/zombiesiege.png",
+    liveUrl: "/zombiesiege/shotdemo01.html",
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",

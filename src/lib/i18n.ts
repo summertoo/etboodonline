@@ -378,6 +378,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.killerH5Desc":
       "暗杀H5游戏 — 分析场景，识别目标，合理利用道具，成为传奇刺客！",
     "game.swimDesc": "百米自由泳比赛 — 极速冲刺，收集道具，勇夺冠军！",
+    "game.zombieSiegeDesc": "在末日丧尸围城中生存下来！守卫基地，升级武器，击退无尽尸潮。",
     "game.comingSoonDesc": "即将上线，敬请期待！",
 
     // DApp descriptions
