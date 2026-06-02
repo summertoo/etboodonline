@@ -9,7 +9,6 @@ import AuthModal from "./AuthModal";
 import { supabase } from "@/lib/supabase";
 
 const navKeys = [
-  { href: "/me", labelKey: "nav.me" },
   { href: "/", labelKey: "nav.home" },
   { href: "/project", labelKey: "nav.project" },
   { href: "/service", labelKey: "nav.service" },
@@ -31,7 +30,8 @@ export default function Navbar() {
   const [user, setUser] = useState<{ id: string; nickname: string } | null>(
     null,
   );
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -58,14 +58,23 @@ export default function Navbar() {
     return () => listener?.subscription.unsubscribe();
   }, []);
 
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setUserMenuOpen(false);
+  }, [pathname]);
+
   function handleLogin(nickname: string, _userId: string) {
     setUser({ id: _userId, nickname });
     setAuthOpen(false);
+    setUserMenuOpen(false);
+    setMobileMenuOpen(false);
   }
 
   async function handleLogout() {
     await supabase.auth.signOut();
     setUser(null);
+    setUserMenuOpen(false);
+    setMobileMenuOpen(false);
   }
 
   return (
@@ -89,7 +98,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMobileMenuOpen((open) => !open)}
           aria-label="Toggle menu"
         >
           <svg
@@ -98,7 +107,7 @@ export default function Navbar() {
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            {menuOpen ? (
+            {mobileMenuOpen ? (
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -142,7 +151,7 @@ export default function Navbar() {
           {user ? (
             <div className="relative">
               <button
-                onClick={() => setMenuOpen(!menuOpen)}
+                onClick={() => setUserMenuOpen((open) => !open)}
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[var(--cyber-border)] text-sm font-medium hover:border-[var(--cyber-primary)] transition-all"
               >
                 <span className="w-6 h-6 rounded-full bg-[var(--cyber-primary)] text-white flex items-center justify-center text-xs font-bold">
@@ -150,8 +159,16 @@ export default function Navbar() {
                 </span>
                 <span>{user.nickname}</span>
               </button>
-              {menuOpen && (
-                <div className="absolute right-0 mt-2 w-36 bg-white rounded-lg shadow-lg border border-gray-100 py-1 z-50">
+              {userMenuOpen && (
+                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-1 z-50">
+                  <Link
+                    href="/me"
+                    onClick={() => setUserMenuOpen(false)}
+                    className="block w-full px-4 py-2 text-sm text-gray-700 hover:text-[var(--cyber-primary)]"
+                    style={{ textDecoration: "none" }}
+                  >
+                    {t("nav.me")}
+                  </Link>
                   <button
                     onClick={handleLogout}
                     className="w-full px-4 py-2 text-sm text-gray-600 hover:text-red-500 text-left"
@@ -180,7 +197,7 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile menu dropdown */}
-        {menuOpen && (
+        {mobileMenuOpen && (
           <div className="md:hidden w-full mt-3 pt-3 border-t border-[var(--cyber-border)]">
             <ul className="flex flex-col gap-1">
               {navKeys.map((item) => {
@@ -189,7 +206,7 @@ export default function Navbar() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      onClick={() => setMenuOpen(false)}
+                      onClick={() => setMobileMenuOpen(false)}
                       className={`block px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                         isActive
                           ? "is-active text-[var(--cyber-hover-pink)]"
@@ -210,9 +227,17 @@ export default function Navbar() {
                     {user.nickname.charAt(0)}
                   </span>
                   <span className="text-sm font-medium">{user.nickname}</span>
+                  <Link
+                    href="/me"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="ml-auto px-3 py-1 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-[var(--cyber-primary)] hover:bg-[var(--cyber-primary)] hover:text-white transition-all"
+                    style={{ textDecoration: "none" }}
+                  >
+                    {t("nav.me")}
+                  </Link>
                   <button
                     onClick={handleLogout}
-                    className="ml-auto px-3 py-1 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-red-500 hover:bg-red-50 transition-all"
+                    className="px-3 py-1 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-red-500 hover:bg-red-50 transition-all"
                   >
                     {t("nav.logout")}
                   </button>
@@ -220,7 +245,7 @@ export default function Navbar() {
               ) : (
                 <button
                   onClick={() => {
-                    setMenuOpen(false);
+                    setMobileMenuOpen(false);
                     setAuthOpen(true);
                   }}
                   className="px-3 py-1.5 text-xs font-semibold rounded-md border border-[var(--cyber-border)] text-[var(--cyber-primary)] hover:bg-[var(--cyber-primary)] hover:text-white transition-all"
