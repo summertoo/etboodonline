@@ -12,6 +12,101 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-02",
+    date: "2026-06-02",
+    title: {
+      zh: "📰 AI HOT 日报 · 2026-06-02",
+      en: "📰 AI HOT Daily · Jun 2, 2026",
+    },
+    summary: {
+      zh: "MiniMax M3、Composer 2.5 与 Qwen3.7-Plus 带来新一轮模型更新；OpenAI 与 Codex 登陆 AWS，ChatGPT 补齐长文编辑，Perplexity 推出 Search as Code；Anthropic 提交保密 S-1，OpenAI 启动密歇根 Stargate 数据中心。",
+      en: "MiniMax M3, Composer 2.5, and Qwen3.7-Plus lead the latest model wave; OpenAI and Codex land on AWS, ChatGPT adds long-form editing, and Perplexity ships Search as Code; Anthropic files a confidential S-1 and OpenAI kicks off the Michigan Stargate data center.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "MiniMax M3 发布，主打超长上下文与编码能力",
+          en: "MiniMax M3 Debuts with Long Context and Strong Coding",
+        },
+        description: {
+          zh: "MiniMax M3 采用原生多模态设计，支持超长上下文，并以更低计算成本提升长文本和编程任务表现。",
+          en: "MiniMax M3 pairs native multimodality with ultra-long context, aiming to improve coding and long-context tasks at lower compute cost.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI 上线 Composer 2.5",
+          en: "xAI Launches Composer 2.5",
+        },
+        description: {
+          zh: "Composer 2.5 已在 Grok Build 可用，主打更快的编程体验和更强的长任务处理能力。",
+          en: "Composer 2.5 is now available in Grok Build, focusing on faster coding workflows and stronger long-running task execution.",
+        },
+      },
+      {
+        title: {
+          zh: "Qwen3.7-Plus 强化多模态智能体能力",
+          en: "Qwen3.7-Plus Expands Multimodal Agent Features",
+        },
+        description: {
+          zh: "Qwen Studio 继续扩展聊天、图像理解、视频理解、文档处理、网页搜索和工具调用的一体化能力。",
+          en: "Qwen Studio keeps expanding its all-in-one stack across chat, vision, video, documents, web search, and tool use.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 与 Codex 现已可在 AWS 使用",
+          en: "OpenAI and Codex Are Now Available on AWS",
+        },
+        description: {
+          zh: "企业可以通过现有 AWS 环境接入 OpenAI 前沿模型与 Codex，减少采购和部署链路的切换成本。",
+          en: "Enterprises can now access OpenAI frontier models and Codex inside existing AWS workflows, lowering deployment friction.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT 增加长文编辑与保存功能",
+          en: "ChatGPT Adds Long-Form Editing and Save Support",
+        },
+        description: {
+          zh: "ChatGPT 现在支持更大的编辑空间和资料库保存，适合长文写作、整理和后续继续加工。",
+          en: "ChatGPT now offers a roomier editor plus library saving, making long-form drafting and later continuation easier.",
+        },
+      },
+      {
+        title: {
+          zh: "Perplexity 推出 Search as Code",
+          en: "Perplexity Introduces Search as Code",
+        },
+        description: {
+          zh: "Perplexity 将搜索能力直接开放给代码调用，降低智能体在复杂检索场景中的编排成本。",
+          en: "Perplexity is exposing search as code-first infrastructure, reducing orchestration overhead for agent-style retrieval.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 保密提交 S-1 草案",
+          en: "Anthropic Confidentially Files an S-1 Draft",
+        },
+        description: {
+          zh: "Anthropic 已向 SEC 保密提交上市申请草案，为后续 IPO 预留操作空间。",
+          en: "Anthropic has confidentially filed an S-1 draft with the SEC, preserving the option for a future IPO.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 启动密歇根 Stargate 数据中心",
+          en: "OpenAI Starts the Michigan Stargate Data Center",
+        },
+        description: {
+          zh: "OpenAI 在密歇根推进 1GW 级别的 Stargate 数据中心建设，继续加码 AI 基础设施。",
+          en: "OpenAI has kicked off construction for its 1GW Stargate data center in Michigan, deepening its AI infrastructure push.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-01",
     date: "2026-06-01",
     title: {
