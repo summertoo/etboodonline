@@ -136,6 +136,16 @@ export const projects: Project[] = [
     liveUrl: "/zombiesiege/shotdemo01.html",
   },
   {
+    id: "web-grandpa-farm",
+    title: "爷爷的农场 (Grandpa's Desert Farm)",
+    descKey: "game.grandpaFarmDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/grandpafarm.png",
+    liveUrl: "https://farmdemo-one.vercel.app/",
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",

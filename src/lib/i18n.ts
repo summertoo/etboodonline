@@ -161,6 +161,9 @@ export const translations: Record<Lang, Record<string, string>> = {
       "100m Freestyle Swimming Race - Sprint, dash, collect power-ups, and win the championship!",
     "game.comingSoonDesc": "Coming soon. Stay tuned!",
 
+    "game.grandpaFarmDesc":
+      "Build up Grandpa's desert farm, plant crops, and turn a quiet patch of sand into a thriving oasis.",
+
     // DApp descriptions
     "dapp.ruokDesc":
       "A Decentralized Check-In Triggered Timed Transfer DApp On Sui Network",
@@ -448,5 +451,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     // News
     "news.title": "📰 最新动态",
     "news.subtitle": "AI 与科技行业每日速览。",
+    "game.grandpaFarmDesc":
+      "经营爷爷的沙漠农场，种植作物、慢慢扩建，把一片荒地变成生机勃勃的绿洲。",
   },
 };
