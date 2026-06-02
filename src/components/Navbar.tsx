@@ -9,6 +9,7 @@ import AuthModal from "./AuthModal";
 import { supabase } from "@/lib/supabase";
 
 const navKeys = [
+  { href: "/me", labelKey: "nav.me" },
   { href: "/", labelKey: "nav.home" },
   { href: "/project", labelKey: "nav.project" },
   { href: "/service", labelKey: "nav.service" },

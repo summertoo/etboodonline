@@ -4,6 +4,7 @@ export const translations: Record<Lang, Record<string, string>> = {
   en: {
     // Navbar
     "nav.home": "Home",
+    "nav.me": "My",
     "nav.whatWeDo": "What We Do",
     "nav.service": "Service",
     "nav.project": "Project",
@@ -236,6 +237,7 @@ export const translations: Record<Lang, Record<string, string>> = {
   zh: {
     // Navbar
     "nav.home": "首页",
+    "nav.me": "我的",
     "nav.whatWeDo": "关于我们",
     "nav.service": "服务",
     "nav.project": "项目",

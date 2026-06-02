@@ -1,22 +1,53 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CardContent, Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
+import AuthModal from "@/components/AuthModal";
+import ProjectActions from "@/components/ProjectActions";
 import {
   projects,
   type Category,
   type Status,
   type Project,
 } from "@/data/projects";
+import { fetchProjectSocialStats, type ProjectSocialStat } from "@/lib/social";
+import { supabase } from "@/lib/supabase";
 
 export default function ProjectPage() {
   const { t, lang } = useLang();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<Category>("all");
+  const [authOpen, setAuthOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [socialStats, setSocialStats] = useState<Record<string, ProjectSocialStat>>({});
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setIsLoggedIn(!!session?.user);
+    });
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setIsLoggedIn(!!session?.user);
+    });
+
+    return () => listener.subscription.unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    fetchProjectSocialStats(projects.map((project) => project.id))
+      .then((stats) => {
+        const nextStats = stats.reduce<Record<string, ProjectSocialStat>>((acc, item) => {
+          acc[item.project_id] = item;
+          return acc;
+        }, {});
+        setSocialStats(nextStats);
+      })
+      .catch(() => {});
+  }, [isLoggedIn]);
 
   const categories: { value: Category; labelKey: string }[] = [
     { value: "all", labelKey: "project.all" },
@@ -255,6 +286,12 @@ export default function ProjectPage() {
                         </p>
                       )}
                       {getActionButton(project)}
+                      <ProjectActions
+                        projectId={project.id}
+                        initialStat={socialStats[project.id]}
+                        isLoggedIn={isLoggedIn}
+                        onRequireLogin={() => setAuthOpen(true)}
+                      />
                     </div>
                   </div>
                 </CardContent>
@@ -267,6 +304,14 @@ export default function ProjectPage() {
       <footer className="py-10 cyber-footer text-center">
         <p className="cyber-subtitle">{t("footer.copyright")}</p>
       </footer>
+      <AuthModal
+        open={authOpen}
+        onClose={() => setAuthOpen(false)}
+        onLogin={() => {
+          setAuthOpen(false);
+          setIsLoggedIn(true);
+        }}
+      />
     </div>
   );
 }

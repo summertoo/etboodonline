@@ -7,9 +7,12 @@ import { Input } from "@/components/ui/input";
 import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
 import { projects } from "@/data/projects";
-import { newsList } from "@/data/news";
 import Link from "next/link";
 import FeedbackForm from "@/components/FeedbackForm";
+import AuthModal from "@/components/AuthModal";
+import ProjectActions from "@/components/ProjectActions";
+import { fetchProjectSocialStats, type ProjectSocialStat } from "@/lib/social";
+import { supabase } from "@/lib/supabase";
 
 function useScrollReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -55,6 +58,7 @@ function RevealSection({
 }
 
 function ProjectCard({
+  id,
   title,
   titleKey,
   desc,
@@ -65,7 +69,11 @@ function ProjectCard({
   status,
   index,
   t,
+  socialStat,
+  isLoggedIn,
+  onRequireLogin,
 }: {
+  id: string;
   title?: string;
   titleKey?: string;
   desc?: string;
@@ -76,6 +84,9 @@ function ProjectCard({
   status?: "live" | "coming" | "new";
   index: number;
   t: (k: string) => string;
+  socialStat?: ProjectSocialStat;
+  isLoggedIn: boolean;
+  onRequireLogin: () => void;
 }) {
   const displayTitle = title || (titleKey ? t(titleKey) : "");
   const displayDesc = desc || (descKey ? t(descKey) : "");
@@ -157,6 +168,12 @@ function ProjectCard({
                   </Button>
                 )}
               </div>
+              <ProjectActions
+                projectId={id}
+                initialStat={socialStat}
+                isLoggedIn={isLoggedIn}
+                onRequireLogin={onRequireLogin}
+              />
             </div>
           </div>
         </CardContent>
@@ -166,6 +183,7 @@ function ProjectCard({
 }
 
 function GameCard({
+  id,
   title,
   descKey,
   logoUrl,
@@ -175,7 +193,11 @@ function GameCard({
   index,
   t,
   lang,
+  socialStat,
+  isLoggedIn,
+  onRequireLogin,
 }: {
+  id: string;
   title: string;
   descKey: string;
   logoUrl: string;
@@ -185,6 +207,9 @@ function GameCard({
   index: number;
   t: (k: string) => string;
   lang: string;
+  socialStat?: ProjectSocialStat;
+  isLoggedIn: boolean;
+  onRequireLogin: () => void;
 }) {
   const isLive = status === "live" || status === "new";
   const isNew = status === "new";
@@ -245,23 +270,31 @@ function GameCard({
               </div>
               <p className="text-sm mb-3 cyber-subtitle">{t(descKey)}</p>
               {isLive ? (
-                <Button
-                  className="cyber-button-small group-hover:border-[var(--cyber-hover-pink)] group-hover:text-[var(--cyber-hover-pink)]"
-                  asChild
-                >
-                  <a
-                    href={liveUrl}
-                    target={liveUrl.startsWith("http") ? "_blank" : "_self"}
-                    rel="noopener noreferrer"
+                <div className="flex flex-wrap gap-2">
+                  <Button
+                    className="cyber-button-small group-hover:border-[var(--cyber-hover-pink)] group-hover:text-[var(--cyber-hover-pink)]"
+                    asChild
                   >
-                    {t("webgames.playNow")}
-                  </a>
-                </Button>
+                    <a
+                      href={liveUrl}
+                      target={liveUrl.startsWith("http") ? "_blank" : "_self"}
+                      rel="noopener noreferrer"
+                    >
+                      {t("webgames.playNow")}
+                    </a>
+                  </Button>
+                </div>
               ) : (
                 <Button className="cyber-button-small" disabled>
                   {t("roblox.comingSoon")}
                 </Button>
               )}
+              <ProjectActions
+                projectId={id}
+                initialStat={socialStat}
+                isLoggedIn={isLoggedIn}
+                onRequireLogin={onRequireLogin}
+              />
             </div>
           </div>
         </CardContent>
@@ -273,9 +306,36 @@ function GameCard({
 export default function Homepage() {
   const { t, lang } = useLang();
   const [subEmail, setSubEmail] = useState("");
+  const [authOpen, setAuthOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [socialStats, setSocialStats] = useState<Record<string, ProjectSocialStat>>({});
   const [subStatus, setSubStatus] = useState<
     "idle" | "loading" | "ok" | "dup" | "error"
   >("idle");
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setIsLoggedIn(!!session?.user);
+    });
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setIsLoggedIn(!!session?.user);
+    });
+
+    return () => listener.subscription.unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    fetchProjectSocialStats(projects.map((project) => project.id))
+      .then((stats) => {
+        const nextStats = stats.reduce<Record<string, ProjectSocialStat>>((acc, item) => {
+          acc[item.project_id] = item;
+          return acc;
+        }, {});
+        setSocialStats(nextStats);
+      })
+      .catch(() => {});
+  }, [isLoggedIn]);
 
   async function handleSubscribe() {
     const email = subEmail.trim();
@@ -397,6 +457,7 @@ export default function Homepage() {
           {webGames.map((game, i) => (
             <GameCard
               key={game.id}
+              id={game.id}
               title={game.title!}
               descKey={game.descKey}
               logoUrl={game.logoUrl}
@@ -406,6 +467,9 @@ export default function Homepage() {
               index={i}
               t={t}
               lang={lang}
+              socialStat={socialStats[game.id]}
+              isLoggedIn={isLoggedIn}
+              onRequireLogin={() => setAuthOpen(true)}
             />
           ))}
         </div>
@@ -425,6 +489,7 @@ export default function Homepage() {
           {robloxGames.map((game, i) => (
             <GameCard
               key={game.id}
+              id={game.id}
               title={game.title!}
               descKey={game.descKey}
               logoUrl={game.logoUrl}
@@ -434,6 +499,9 @@ export default function Homepage() {
               index={i}
               t={t}
               lang={lang}
+              socialStat={socialStats[game.id]}
+              isLoggedIn={isLoggedIn}
+              onRequireLogin={() => setAuthOpen(true)}
             />
           ))}
         </div>
@@ -452,6 +520,7 @@ export default function Homepage() {
           {dapps.map((dapp, i) => (
             <ProjectCard
               key={dapp.id}
+              id={dapp.id}
               titleKey={dapp.titleKey}
               descKey={dapp.descKey}
               logoUrl={dapp.logoUrl}
@@ -460,6 +529,9 @@ export default function Homepage() {
               status={dapp.status}
               index={i}
               t={t}
+              socialStat={socialStats[dapp.id]}
+              isLoggedIn={isLoggedIn}
+              onRequireLogin={() => setAuthOpen(true)}
             />
           ))}
         </div>
@@ -478,6 +550,7 @@ export default function Homepage() {
           {tools.map((tool, i) => (
             <ProjectCard
               key={tool.id}
+              id={tool.id}
               title={tool.title}
               desc={tool.desc}
               logoUrl={tool.logoUrl}
@@ -485,6 +558,9 @@ export default function Homepage() {
               status={tool.status}
               index={i}
               t={t}
+              socialStat={socialStats[tool.id]}
+              isLoggedIn={isLoggedIn}
+              onRequireLogin={() => setAuthOpen(true)}
             />
           ))}
         </div>
@@ -501,6 +577,7 @@ export default function Homepage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {stableGateway && (
             <ProjectCard
+              id={stableGateway.id}
               title={
                 lang === "zh"
                   ? "站长推荐：支持 GPT-5.4 / 5.5 的稳定中转站"
@@ -516,10 +593,14 @@ export default function Homepage() {
               status={stableGateway.status}
               index={0}
               t={t}
+              socialStat={socialStats[stableGateway.id]}
+              isLoggedIn={isLoggedIn}
+              onRequireLogin={() => setAuthOpen(true)}
             />
           )}
           {freeModel && (
             <ProjectCard
+              id={freeModel.id}
               title={t("freeModel.title")}
               desc={t("freeModel.desc")}
               logoUrl={freeModel.logoUrl}
@@ -527,6 +608,9 @@ export default function Homepage() {
               status={freeModel.status}
               index={1}
               t={t}
+              socialStat={socialStats[freeModel.id]}
+              isLoggedIn={isLoggedIn}
+              onRequireLogin={() => setAuthOpen(true)}
             />
           )}
         </div>
@@ -544,6 +628,7 @@ export default function Homepage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {suiBestPractices && (
             <ProjectCard
+              id={suiBestPractices.id}
               titleKey={suiBestPractices.titleKey}
               descKey={suiBestPractices.descKey}
               logoUrl={suiBestPractices.logoUrl}
@@ -552,6 +637,9 @@ export default function Homepage() {
               status={suiBestPractices.status}
               index={0}
               t={t}
+              socialStat={socialStats[suiBestPractices.id]}
+              isLoggedIn={isLoggedIn}
+              onRequireLogin={() => setAuthOpen(true)}
             />
           )}
         </div>
@@ -713,6 +801,14 @@ export default function Homepage() {
       </section>
 
       <FeedbackForm lang={lang} />
+      <AuthModal
+        open={authOpen}
+        onClose={() => setAuthOpen(false)}
+        onLogin={() => {
+          setAuthOpen(false);
+          setIsLoggedIn(true);
+        }}
+      />
 
       <footer className="py-10 cyber-footer">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
