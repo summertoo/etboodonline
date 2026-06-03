@@ -17,6 +17,30 @@ export interface SiteUpdateItem {
 
 export const siteUpdates: SiteUpdateItem[] = [
   {
+    id: "2026-06-03-admin-dashboard-and-launch-tracking",
+    date: "2026-06-03",
+    title: {
+      zh: "后台统计面板与启动次数追踪上线",
+      en: "Admin Dashboard and Launch Tracking Added",
+    },
+    summary: {
+      zh: "新增项目启动次数统计，并完成独立后台查看界面。",
+      en: "Added project launch tracking and a standalone admin dashboard for reviewing stats.",
+    },
+    details: {
+      zh: [
+        "项目主按钮点击会写入数据库，用于统计每个游戏或项目的启动次数。",
+        "新增管理员专用统计 RPC，可查看点击、点赞、收藏与留言明细。",
+        "完成独立 React/Vite 后台，支持登录后查看各项目数据。",
+      ],
+      en: [
+        "Project launch buttons now write click records to the database for per-project usage tracking.",
+        "Added an admin-only dashboard RPC for clicks, likes, favorites, and comment details.",
+        "Built a standalone React/Vite admin panel for reviewing project metrics after sign-in.",
+      ],
+    },
+  },
+  {
     id: "2026-06-03-comment-limit",
     date: "2026-06-03",
     title: {
