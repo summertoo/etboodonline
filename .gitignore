@@ -34,3 +34,5 @@ doc/
 docs/
 .env.local
 node_modules/
+supabase/
+
