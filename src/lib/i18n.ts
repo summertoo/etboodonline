@@ -1,4 +1,4 @@
-export type Lang = "en" | "zh";
+﻿export type Lang = "en" | "zh";
 
 export const translations: Record<Lang, Record<string, string>> = {
   en: {
@@ -15,8 +15,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     // Hero
     "hero.title": "ZD Tech Studio",
     "hero.subtitle":
-      "Self-media + Games + Apps — Bilingual Novels, Web Games & Creative Tools",
-    "hero.tagline": "Web Games • Bilingual Novels • DApps • Roblox",
+      "A showcase for web games, Roblox experiences, DApps, and practical tools.",
+    "hero.tagline": "Play projects, browse updates, and interact with likes, favorites, and comments.",
     "hero.contact": "Contact Now",
     "hero.viewGames": "View Games ↓",
 
@@ -250,8 +250,8 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Hero
     "hero.title": "ZD Tech 工作室",
-    "hero.subtitle": "自媒体 + 游戏 + 应用 — 双语小说、网页游戏与创意工具",
-    "hero.tagline": "网页游戏 • 双语小说 • DApp • Roblox",
+    "hero.subtitle": "聚合网页游戏、Roblox 作品、DApp 与实用工具的创作站点。",
+    "hero.tagline": "可以试玩项目、浏览更新，并进行点赞、收藏与留言互动。",
     "hero.contact": "联系我们",
     "hero.viewGames": "查看游戏 ↓",
 
