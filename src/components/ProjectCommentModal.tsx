@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Button } from "@/components/ui/button";
+import { useLang } from "@/components/LangProvider";
+import { supabase } from "@/lib/supabase";
 import {
   createProjectComment,
   fetchProjectComments,
@@ -25,13 +28,29 @@ export default function ProjectCommentModal({
   onClose,
   onRequireLogin,
 }: ProjectCommentModalProps) {
+  const { lang } = useLang();
+  const maxCommentsPerUser = 5;
   const [loading, setLoading] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [content, setContent] = useState("");
   const [comments, setComments] = useState<ProjectCommentRecord[]>([]);
+  const [mounted, setMounted] = useState(false);
+  const [currentUserId, setCurrentUserId] = useState<string | null>(null);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
+
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setCurrentUserId(session?.user?.id ?? null);
+    });
+
+    setSubmitError(null);
     setLoading(true);
     fetchProjectComments(projectId)
       .then((items) => setComments(items))
@@ -39,13 +58,27 @@ export default function ProjectCommentModal({
       .finally(() => setLoading(false));
   }, [open, projectId]);
 
-  if (!open) return null;
+  if (!open || !mounted) return null;
+
+  const myCommentCount = currentUserId
+    ? comments.filter((comment) => comment.user_id === currentUserId).length
+    : 0;
+  const reachedLimit = myCommentCount >= maxCommentsPerUser;
 
   async function handleSubmit() {
     const trimmed = content.trim();
+    setSubmitError(null);
     if (!trimmed) return;
     if (!isLoggedIn) {
       onRequireLogin?.();
+      return;
+    }
+    if (reachedLimit) {
+      setSubmitError(
+        lang === "zh"
+          ? "当前项目下最多只能留言 5 条。"
+          : "You can post up to 5 comments per project.",
+      );
       return;
     }
 
@@ -55,19 +88,41 @@ export default function ProjectCommentModal({
       if (result.success && result.comment) {
         setComments((prev) => [result.comment!, ...prev]);
         setContent("");
+        setSubmitError(null);
+        return;
       }
+
+      if (result.error === "comment_limit_reached") {
+        setSubmitError(
+          lang === "zh"
+            ? "当前项目下最多只能留言 5 条。"
+            : "You can post up to 5 comments per project.",
+        );
+      } else {
+        setSubmitError(
+          lang === "zh"
+            ? "留言提交失败，请稍后再试。"
+            : "Failed to post comment. Please try again later.",
+        );
+      }
+    } catch {
+      setSubmitError(
+        lang === "zh"
+          ? "留言提交失败，请稍后再试。"
+          : "Failed to post comment. Please try again later.",
+      );
     } finally {
       setSubmitting(false);
     }
   }
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/45 px-4">
       <div className="w-full max-w-2xl rounded-2xl border border-[var(--cyber-border)] bg-white shadow-2xl">
         <div className="flex items-center justify-between border-b border-[var(--cyber-border)] px-6 py-4">
           <div>
             <h3 className="text-lg font-semibold text-[var(--cyber-text)]">
-              Comments
+              {lang === "zh" ? "留言" : "Comments"}
             </h3>
             <p className="text-sm text-[var(--cyber-muted)]">{projectTitle}</p>
           </div>
@@ -76,7 +131,7 @@ export default function ProjectCommentModal({
             onClick={onClose}
             className="text-sm text-[var(--cyber-muted)] hover:text-[var(--cyber-primary)]"
           >
-            Close
+            {lang === "zh" ? "关闭" : "Close"}
           </button>
         </div>
 
@@ -89,10 +144,15 @@ export default function ProjectCommentModal({
               maxLength={300}
               placeholder={
                 isLoggedIn
-                  ? "Leave a short comment..."
-                  : "Sign in to leave a comment..."
+                  ? lang === "zh"
+                    ? "写下你的留言..."
+                    : "Leave a short comment..."
+                  : lang === "zh"
+                    ? "登录后即可留言..."
+                    : "Sign in to leave a comment..."
               }
-              className="w-full rounded-xl border border-[var(--cyber-border)] px-4 py-3 text-sm text-[var(--cyber-text)] outline-none transition focus:border-[var(--cyber-primary)]"
+              className="w-full rounded-xl border border-[var(--cyber-border)] bg-white px-4 py-3 text-sm text-[var(--cyber-text)] outline-none transition focus:border-[var(--cyber-primary)]"
+              style={{ colorScheme: "light" }}
             />
             <div className="flex items-center justify-between gap-3">
               <span className="text-xs text-[var(--cyber-muted)]">
@@ -103,24 +163,53 @@ export default function ProjectCommentModal({
                 size="sm"
                 className="cyber-button-small"
                 onClick={handleSubmit}
-                disabled={submitting || !content.trim()}
+                disabled={submitting || !content.trim() || reachedLimit}
               >
-                {submitting ? "Posting..." : "Post"}
+                {submitting
+                  ? lang === "zh"
+                    ? "提交中..."
+                    : "Posting..."
+                  : lang === "zh"
+                    ? "留言"
+                    : "Post"}
               </Button>
             </div>
             {!isLoggedIn && (
               <p className="text-xs text-[var(--cyber-muted)]">
-                Sign in is required only when posting. Existing comments can be viewed directly.
+                {lang === "zh"
+                  ? "查看留言不需要登录，只有发布留言时才需要登录。"
+                  : "Sign in is required only when posting. Existing comments can be viewed directly."}
+              </p>
+            )}
+            {isLoggedIn && (
+              <p className="text-xs text-[var(--cyber-muted)]">
+                {lang === "zh"
+                  ? `你在这个项目下已留言 ${myCommentCount}/${maxCommentsPerUser} 条。`
+                  : `You have posted ${myCommentCount}/${maxCommentsPerUser} comments for this project.`}
+              </p>
+            )}
+            {isLoggedIn && reachedLimit && (
+              <p className="text-xs font-medium text-rose-500">
+                {lang === "zh"
+                  ? "当前项目下最多只能留言 5 条。"
+                  : "You can post up to 5 comments per project."}
+              </p>
+            )}
+            {submitError && (
+              <p className="text-xs font-medium text-rose-500">
+                {submitError}
               </p>
             )}
           </div>
 
           <div className="max-h-[320px] space-y-3 overflow-y-auto pr-1">
             {loading ? (
-              <p className="text-sm text-[var(--cyber-muted)]">Loading comments...</p>
+              <p className="text-sm text-[var(--cyber-muted)]">
+                {lang === "zh" ? "正在加载留言..." : "Loading comments..."}
+              </p>
             ) : comments.length === 0 ? (
               <p className="text-sm text-[var(--cyber-muted)]">
-                No comments yet.
+                {lang === "zh" ? "还没有留言。" : "No comments yet."}
               </p>
             ) : (
               comments.map((comment) => (
@@ -145,6 +234,7 @@ export default function ProjectCommentModal({
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
