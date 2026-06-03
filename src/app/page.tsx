@@ -392,7 +392,12 @@ export default function Homepage() {
     () => projects.find((p) => p.id === "sui-best-practices"),
     [],
   );
-  const homepageNews = useMemo(() => newsList.slice(0, 1), []);
+  // 首页只显示最近1天的新闻（当天日期）
+  const today = new Date().toISOString().split('T')[0];
+  const homepageNews = useMemo(() => 
+    newsList.filter(news => news.date === today).slice(0, 1), 
+    []
+  );
 
   function FloatingParticles() {
     const [mounted, setMounted] = useState(false);

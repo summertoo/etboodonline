@@ -12,6 +12,141 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-03",
+    date: "2026-06-03",
+    title: {
+      zh: "📰 AI HOT 日报 · 2026-06-03",
+      en: "📰 AI HOT Daily · Jun 3, 2026",
+    },
+    summary: {
+      zh: "微软发布首款高级推理模型MAI-Thinking-1，Claude Code新增动态工作流，Codex发布Python SDK，Alphabet拟融资800亿美元，Anthropic提交IPO申请，SK海力士计划五年产能翻倍。",
+      en: "Microsoft releases MAI-Thinking-1 reasoning model, Claude Code adds dynamic workflows, Codex launches Python SDK, Alphabet to raise $80B, Anthropic files IPO, SK Hynix to double wafer capacity.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "微软发布首款高级推理AI模型MAI-Thinking-1",
+          en: "Microsoft Releases MAI-Thinking-1 Reasoning Model",
+        },
+        description: {
+          zh: "微软在Build 2026上发布首款高级推理AI模型MAI-Thinking-1，定位中等规模，在关键软件工程基准测试中达到领先水平，完全从头使用干净数据训练。",
+          en: "Microsoft unveiled MAI-Thinking-1 at Build 2026, its first advanced reasoning AI model positioned as medium-sized, achieving leading performance on key software engineering benchmarks with clean training data.",
+        },
+      },
+      {
+        title: {
+          zh: "Holo3.1：快速本地计算机使用智能体",
+          en: "Holo3.1: Fast Local Computer Use Agent",
+        },
+        description: {
+          zh: "Holo3.1是基于Qwen模型家族的计算机使用智能体，提供0.8B、4B、9B和35B-A3B四种尺寸。在AndroidWorld基准测试中，35B-A3B模型得分从67%提升至79.3%。",
+          en: "Holo3.1 is a computer-use agent based on the Qwen model family, available in four sizes: 0.8B, 4B, 9B, and 35B-A3B. The 35B-A3B model improved from 67% to 79.3% on AndroidWorld benchmark.",
+        },
+      },
+      {
+        title: {
+          zh: "阶跃星辰Step 3.7 Flash发布，专为高效推理设计",
+          en: "StepFun Step 3.7 Flash Released for Efficient Reasoning",
+        },
+        description: {
+          zh: "阶跃星辰发布Step 3.7 Flash，196B MoE架构，采用多矩阵分解注意力机制，使KV-cache成本仅为DeepSeek模型的约22%，已通过Fireworks AI提供。",
+          en: "StepFun released Step 3.7 Flash with 196B MoE architecture, using multi-matrix factorization attention reducing KV-cache cost to ~22% of DeepSeek, available via Fireworks AI.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code新增动态工作流功能",
+          en: "Claude Code Adds Dynamic Workflows",
+        },
+        description: {
+          zh: "Claude Code新增动态工作流功能，允许模型在运行时即兴创建和协调多智能体框架来处理复杂任务，适用于研究、安全分析、代码审查等场景。",
+          en: "Claude Code introduced dynamic workflows, allowing models to spontaneously create and coordinate multi-agent frameworks for complex tasks like research, security analysis, and code review.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI Codex发布Python SDK",
+          en: "OpenAI Codex Launches Python SDK",
+        },
+        description: {
+          zh: "OpenAI Codex发布Python SDK，可直接嵌入应用，复用Codex登录态，相当于直接内置顶级编程和绘图智能体。",
+          en: "OpenAI released Codex Python SDK, embeddable directly into applications with Codex login state reuse, essentially embedding a top-tier coding and image generation agent.",
+        },
+      },
+      {
+        title: {
+          zh: "Alphabet拟融资800亿美元，Anthropic提交IPO申请",
+          en: "Alphabet to Raise $80B, Anthropic Files IPO",
+        },
+        description: {
+          zh: "Alphabet宣布拟通过股权融资800亿美元用于扩展AI基础设施。Anthropic已秘密提交IPO申请，在上市竞赛中领先于OpenAI。",
+          en: "Alphabet announced $80B equity financing for AI infrastructure expansion. Anthropic confidentially filed IPO application, leading OpenAI in the上市 race.",
+        },
+      },
+      {
+        title: {
+          zh: "SK海力士计划未来五年晶圆产能翻倍",
+          en: "SK Hynix to Double Wafer Capacity in 5 Years",
+        },
+        description: {
+          zh: "SK海力士会长崔泰源宣布，计划在未来五年内将整体晶圆产能提高一倍，以应对AI普及带来的持续存储供应短缺，预测供需紧张可能延续至2030年。",
+          en: "SK Hynix Chairman Choi Tae-ung announced plans to double wafer capacity within five years to meet AI-driven storage demand, predicting supply tightness through 2030.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic扩展Project Glasswing计划至约150个新组织",
+          en: "Anthropic Expands Project Glasswing to ~150 Organizations",
+        },
+        description: {
+          zh: "Anthropic将Project Glasswing计划扩展至约150个新组织，分布于十五个国家，覆盖电力、水务、医疗、通信等关键基础设施行业。",
+          en: "Anthropic expanded Project Glasswing to ~150 new organizations across 15 countries, covering critical infrastructure sectors like power, water, healthcare, and communications.",
+        },
+      },
+      {
+        title: {
+          zh: "微软开源Adaptive Spec-driven Scoring评估框架",
+          en: "Microsoft Open-Sources Adaptive Spec-driven Scoring",
+        },
+        description: {
+          zh: "微软开源发布Adaptive Spec-driven Scoring框架，开发者可通过文本描述快速生成AI行为测试，用于模型评估与回归测试。",
+          en: "Microsoft open-sourced Adaptive Spec-driven Scoring framework, enabling developers to quickly generate AI behavior tests via text descriptions for model evaluation and regression testing.",
+        },
+      },
+      {
+        title: {
+          zh: "商汤开源SenseNova-Skills AI办公技能套件",
+          en: "SenseTime Open-Sources SenseNova-Skills",
+        },
+        description: {
+          zh: "商汤开源AI办公技能套件SenseNova-Skills，提供四大核心功能：图像信息图表生成、数据分析、PPT创建以及深度研究。",
+          en: "SenseTime open-sourced SenseNova-Skills AI office toolkit with four core features: image infographics, data analysis, PPT creation, and deep research.",
+        },
+      },
+      {
+        title: {
+          zh: "GitHub Copilot应用：智能体原生的桌面体验",
+          en: "GitHub Copilot App: Agent-Native Desktop Experience",
+        },
+        description: {
+          zh: "GitHub在Build 2026大会上发布Copilot应用，定位为智能体原生的桌面体验，让AI智能体能够以用户习惯的方式进行工作。",
+          en: "GitHub unveiled Copilot app at Build 2026, positioned as an agent-native desktop experience enabling AI agents to work in ways users are already familiar with.",
+        },
+      },
+      {
+        title: {
+          zh: "微软Aurora天气预报速度超传统超算数千倍",
+          en: "Microsoft Aurora Weather Forecast 1000x Faster Than Supercomputers",
+        },
+        description: {
+          zh: "微软研究实验室的Aurora天气预报系统速度比传统超级计算机快数千倍，展示AI在科学发现领域的突破性进展。",
+          en: "Microsoft Research's Aurora weather forecasting system is thousands of times faster than traditional supercomputers, demonstrating breakthrough progress in AI-driven scientific discovery.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-02",
     date: "2026-06-02",
     title: {
