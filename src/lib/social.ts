@@ -129,3 +129,18 @@ export async function createProjectComment(projectId: string, content: string) {
     comment?: ProjectCommentRecord;
   };
 }
+
+export async function recordProjectClick(
+  projectId: string,
+  targetUrl: string,
+  sourcePage: string,
+) {
+  const { data, error } = await supabase.rpc("record_project_click", {
+    p_project_id: projectId,
+    p_target_url: targetUrl,
+    p_source_page: sourcePage,
+  });
+
+  if (error) throw error;
+  return data as { success: boolean; error?: string };
+}

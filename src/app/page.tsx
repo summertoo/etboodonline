@@ -13,6 +13,7 @@ import FeedbackForm from "@/components/FeedbackForm";
 import AuthModal from "@/components/AuthModal";
 import ProjectActions from "@/components/ProjectActions";
 import SiteUpdateNotice from "@/components/SiteUpdateNotice";
+import TrackedProjectButton from "@/components/TrackedProjectButton";
 import { fetchProjectSocialStats, type ProjectSocialStat } from "@/lib/social";
 import { supabase } from "@/lib/supabase";
 
@@ -141,18 +142,14 @@ function ProjectCard({
               </p>
               <div className="flex flex-wrap gap-2">
                 {isLive && liveUrl ? (
-                  <Button
+                  <TrackedProjectButton
+                    projectId={id}
+                    href={liveUrl}
+                    sourcePage="home"
                     className="cyber-button-small group-hover:border-[var(--cyber-hover-pink)] group-hover:text-[var(--cyber-hover-pink)]"
-                    asChild
                   >
-                    <a
-                      href={liveUrl}
-                      target={liveUrl.startsWith("http") ? "_blank" : "_self"}
-                      rel="noopener noreferrer"
-                    >
-                      {t("dapps.visit")}
-                    </a>
-                  </Button>
+                    {t("dapps.visit")}
+                  </TrackedProjectButton>
                 ) : !isLive ? (
                   <Button className="cyber-button-small" disabled>
                     {t("project.comingSoon")}
@@ -274,18 +271,14 @@ function GameCard({
               <p className="text-sm mb-3 cyber-subtitle">{t(descKey)}</p>
               {isLive ? (
                 <div className="flex flex-wrap gap-2">
-                  <Button
+                  <TrackedProjectButton
+                    projectId={id}
+                    href={liveUrl}
+                    sourcePage="home"
                     className="cyber-button-small group-hover:border-[var(--cyber-hover-pink)] group-hover:text-[var(--cyber-hover-pink)]"
-                    asChild
                   >
-                    <a
-                      href={liveUrl}
-                      target={liveUrl.startsWith("http") ? "_blank" : "_self"}
-                      rel="noopener noreferrer"
-                    >
-                      {t("webgames.playNow")}
-                    </a>
-                  </Button>
+                    {t("webgames.playNow")}
+                  </TrackedProjectButton>
                 </div>
               ) : (
                 <Button className="cyber-button-small" disabled>

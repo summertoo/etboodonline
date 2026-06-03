@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
 import AuthModal from "@/components/AuthModal";
 import ProjectActions from "@/components/ProjectActions";
+import TrackedProjectButton from "@/components/TrackedProjectButton";
 import {
   projects,
   type Category,
@@ -132,36 +133,43 @@ export default function ProjectPage() {
 
     if ((p.category === "roblox" || p.category === "webgame") && p.liveUrl) {
       return (
-        <Button className="cyber-button-small" asChild>
-          <a
-            href={p.liveUrl}
-            target={p.liveUrl.startsWith("http") ? "_blank" : "_self"}
-            rel="noopener noreferrer"
-          >
-            {t("project.play")}
-          </a>
-        </Button>
+        <TrackedProjectButton
+          projectId={p.id}
+          href={p.liveUrl}
+          sourcePage="project"
+          className="cyber-button-small"
+        >
+          {t("project.play")}
+        </TrackedProjectButton>
       );
     }
 
     if (p.category === "article" || p.category === "novel") {
       return (
-        <Button className="cyber-button-small" asChild>
-          <a href={p.liveUrl} target="_blank" rel="noopener noreferrer">
-            {t("project.read")}
-          </a>
-        </Button>
+        <TrackedProjectButton
+          projectId={p.id}
+          href={p.liveUrl!}
+          sourcePage="project"
+          className="cyber-button-small"
+          target="_blank"
+        >
+          {t("project.read")}
+        </TrackedProjectButton>
       );
     }
 
     return (
       <div className="flex flex-wrap gap-2">
         {p.liveUrl && (
-          <Button className="cyber-button-small" asChild>
-            <a href={p.liveUrl} target="_blank" rel="noopener noreferrer">
-              {t("project.visit")}
-            </a>
-          </Button>
+          <TrackedProjectButton
+            projectId={p.id}
+            href={p.liveUrl}
+            sourcePage="project"
+            className="cyber-button-small"
+            target={p.liveUrl.startsWith("http") ? "_blank" : "_self"}
+          >
+            {t("project.visit")}
+          </TrackedProjectButton>
         )}
         {p.githubUrl && (
           <Button className="cyber-button-small" asChild>
