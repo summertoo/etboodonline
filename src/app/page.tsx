@@ -171,6 +171,7 @@ function ProjectCard({
               </div>
               <ProjectActions
                 projectId={id}
+                projectTitle={displayTitle}
                 initialStat={socialStat}
                 isLoggedIn={isLoggedIn}
                 onRequireLogin={onRequireLogin}
@@ -292,6 +293,7 @@ function GameCard({
               )}
               <ProjectActions
                 projectId={id}
+                projectTitle={title}
                 initialStat={socialStat}
                 isLoggedIn={isLoggedIn}
                 onRequireLogin={onRequireLogin}

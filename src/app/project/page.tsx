@@ -288,6 +288,7 @@ export default function ProjectPage() {
                       {getActionButton(project)}
                       <ProjectActions
                         projectId={project.id}
+                        projectTitle={project.title || t(project.titleKey || "")}
                         initialStat={socialStats[project.id]}
                         isLoggedIn={isLoggedIn}
                         onRequireLogin={() => setAuthOpen(true)}

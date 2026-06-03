@@ -52,6 +52,13 @@ export default function MePage() {
     return projects.filter((project) => favorites.has(project.id));
   }, [centerData]);
 
+  const commentedProjects = useMemo(() => {
+    const commented = new Set(
+      centerData?.comments.map((item) => item.project_id) || [],
+    );
+    return projects.filter((project) => commented.has(project.id));
+  }, [centerData]);
+
   async function handleCheckin() {
     setSubmitting(true);
     try {
@@ -306,6 +313,38 @@ export default function MePage() {
               ) : (
                 <p className="text-sm cyber-subtitle">
                   {lang === "zh" ? "暂无积分流水。" : "No credit logs yet."}
+                </p>
+              )}
+            </CardContent>
+          </Card>
+          <Card className="cyber-card lg:col-span-3">
+            <CardHeader>
+              <CardTitle>{lang === "zh" ? "我的留言" : "My Comments"}</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {centerData?.comments.length ? (
+                centerData.comments.map((item) => {
+                  const project = commentedProjects.find(
+                    (entry) => entry.id === item.project_id,
+                  );
+                  return (
+                    <div
+                      key={`${item.id}-${item.created_at}`}
+                      className="rounded-lg border border-[var(--cyber-border)] p-4"
+                    >
+                      <p className="font-medium">
+                        {project?.title || project?.titleKey || item.project_id}
+                      </p>
+                      <p className="mt-1 text-sm cyber-subtitle">{item.content}</p>
+                      <p className="mt-2 text-xs cyber-subtitle">
+                        {new Date(item.created_at).toLocaleString()}
+                      </p>
+                    </div>
+                  );
+                })
+              ) : (
+                <p className="text-sm cyber-subtitle">
+                  {lang === "zh" ? "暂无留言记录。" : "No comments yet."}
                 </p>
               )}
             </CardContent>

@@ -8,6 +8,15 @@ export interface ProjectSocialStat {
   favorited_by_me: boolean;
 }
 
+export interface ProjectCommentRecord {
+  id: number;
+  project_id: string;
+  content: string;
+  created_at: string;
+  user_id: string;
+  nickname: string | null;
+}
+
 export interface CenterProjectRecord {
   project_id: string;
   created_at: string;
@@ -40,6 +49,7 @@ export interface CenterData {
   today_checked_in: boolean;
   likes: CenterProjectRecord[];
   favorites: CenterProjectRecord[];
+  comments: ProjectCommentRecord[];
   credit_logs: CreditLogRecord[];
   recent_checkins: CheckinRecord[];
 }
@@ -94,5 +104,28 @@ export async function dailyCheckin() {
     points_awarded: number;
     new_balance: number;
     error?: string;
+  };
+}
+
+export async function fetchProjectComments(projectId: string) {
+  const { data, error } = await supabase.rpc("get_project_comments", {
+    p_project_id: projectId,
+  });
+
+  if (error) throw error;
+  return (data || []) as ProjectCommentRecord[];
+}
+
+export async function createProjectComment(projectId: string, content: string) {
+  const { data, error } = await supabase.rpc("create_project_comment", {
+    p_project_id: projectId,
+    p_content: content,
+  });
+
+  if (error) throw error;
+  return data as {
+    success: boolean;
+    error?: string;
+    comment?: ProjectCommentRecord;
   };
 }
