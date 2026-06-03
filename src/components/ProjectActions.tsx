@@ -143,12 +143,18 @@ export default function ProjectActions({
         <div className="flex items-center gap-2 rounded-full border border-white/50 bg-white/20 px-2 py-1 shadow-sm backdrop-blur">
           <ActionIcon
             active={stat.liked_by_me}
-            colorClass="border-rose-200 bg-rose-50 text-rose-500"
+            colorClass="border-[rgb(240,93,167)] bg-white text-[rgb(240,93,167)]"
             onClick={handleLike}
             disabled={loading !== null}
             label="Like"
           >
-            <svg viewBox="0 0 24 24" className="h-4 w-4" fill={stat.liked_by_me ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8">
+            <svg
+              viewBox="0 0 24 24"
+              className="h-4 w-4"
+              fill={stat.liked_by_me ? "rgb(240,93,167)" : "none"}
+              stroke={stat.liked_by_me ? "rgb(240,93,167)" : "currentColor"}
+              strokeWidth="1.8"
+            >
               <path d="M12 20.5s-7-4.35-9.25-8.6C1.14 8.87 2.03 5.5 5.4 4.57c2.02-.55 4.07.21 5.34 1.9 1.27-1.69 3.32-2.45 5.34-1.9 3.37.93 4.26 4.3 2.65 7.33C19 16.15 12 20.5 12 20.5Z" />
             </svg>
           </ActionIcon>
@@ -160,12 +166,18 @@ export default function ProjectActions({
         <div className="flex items-center gap-2 rounded-full border border-white/50 bg-white/20 px-2 py-1 shadow-sm backdrop-blur">
           <ActionIcon
             active={stat.favorited_by_me}
-            colorClass="border-amber-200 bg-amber-50 text-amber-500"
+            colorClass="border-[rgb(236,191,2)] bg-white text-[rgb(236,191,2)]"
             onClick={handleFavorite}
             disabled={loading !== null}
             label="Favorite"
           >
-            <svg viewBox="0 0 24 24" className="h-4 w-4" fill={stat.favorited_by_me ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8">
+            <svg
+              viewBox="0 0 24 24"
+              className="h-4 w-4"
+              fill={stat.favorited_by_me ? "rgb(236,191,2)" : "none"}
+              stroke={stat.favorited_by_me ? "rgb(236,191,2)" : "currentColor"}
+              strokeWidth="1.8"
+            >
               <path d="m12 3.75 2.62 5.31 5.86.85-4.24 4.13 1 5.84L12 17.12l-5.24 2.76 1-5.84-4.24-4.13 5.86-.85L12 3.75Z" />
             </svg>
           </ActionIcon>
