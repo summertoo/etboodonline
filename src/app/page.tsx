@@ -12,6 +12,7 @@ import Link from "next/link";
 import FeedbackForm from "@/components/FeedbackForm";
 import AuthModal from "@/components/AuthModal";
 import ProjectActions from "@/components/ProjectActions";
+import SiteUpdateNotice from "@/components/SiteUpdateNotice";
 import { fetchProjectSocialStats, type ProjectSocialStat } from "@/lib/social";
 import { supabase } from "@/lib/supabase";
 
@@ -425,6 +426,7 @@ export default function Homepage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 cyber-container fly-in">
+      <SiteUpdateNotice />
       <Navbar />
 
       <section className="text-center py-16 md:py-24 cyber-hero relative overflow-hidden">

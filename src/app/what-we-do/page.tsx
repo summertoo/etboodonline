@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { latestSiteUpdates } from "@/data/updates";
 
 export default function WhatWeDo() {
   const { t, lang } = useLang();
@@ -33,6 +34,49 @@ export default function WhatWeDo() {
               <div className="text-4xl mb-4">{item.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{t(item.titleKey)}</h3>
               <p className="cyber-subtitle">{t(item.descKey)}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-16">
+        <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+          {lang === "zh" ? "历史修改记录" : "Change History"}
+        </h3>
+        <p className="mb-10 text-center cyber-subtitle">
+          {lang === "zh"
+            ? "记录网站近期做过的功能更新与页面调整。"
+            : "A running log of recent feature updates and site changes."}
+        </p>
+        <div className="max-w-4xl mx-auto space-y-4">
+          {latestSiteUpdates.map((item) => (
+            <div
+              key={item.id}
+              className="rounded-2xl border border-[var(--cyber-border)] bg-white p-6"
+            >
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                <h4 className="text-xl font-semibold text-[var(--cyber-text)]">
+                  {lang === "zh" ? item.title.zh : item.title.en}
+                </h4>
+                <span className="text-sm text-[var(--cyber-muted)]">
+                  {item.date}
+                </span>
+              </div>
+              <p className="mt-3 text-sm leading-7 text-[var(--cyber-muted)]">
+                {lang === "zh" ? item.summary.zh : item.summary.en}
+              </p>
+              <ul className="mt-4 space-y-2">
+                {(lang === "zh" ? item.details.zh : item.details.en).map(
+                  (detail, index) => (
+                    <li
+                      key={`${item.id}-${index}`}
+                      className="rounded-xl bg-[var(--cyber-accent-light)] px-4 py-3 text-sm text-[var(--cyber-text)]"
+                    >
+                      {detail}
+                    </li>
+                  ),
+                )}
+              </ul>
             </div>
           ))}
         </div>
