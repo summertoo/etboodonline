@@ -17,6 +17,30 @@ export interface SiteUpdateItem {
 
 export const siteUpdates: SiteUpdateItem[] = [
   {
+    id: "2026-06-04-hotdance-game",
+    date: "2026-06-04",
+    title: {
+      zh: "网页游戏《热舞团》已接入站点",
+      en: "Hot Dance Crew Added to the Web Games Lineup",
+    },
+    summary: {
+      zh: "新网页节奏游戏《热舞团》已加入首页与项目页，并带有关卡、双语界面和排行榜玩法。",
+      en: "The new rhythm web game Hot Dance Crew is now listed on the homepage and project page, with stage progression, bilingual UI, and leaderboard gameplay.",
+    },
+    details: {
+      zh: [
+        "新增《热舞团》网页游戏入口，归类到 Web Games。",
+        "游戏支持 100 级关卡、命中特效、中英文切换与排行榜。",
+        "首页网页游戏区与项目页筛选列表已同步显示该游戏。",
+      ],
+      en: [
+        "Added Hot Dance Crew as a new web game entry.",
+        "The game includes 100 stages, hit effects, bilingual UI, and a leaderboard.",
+        "It now appears in both the homepage web games section and the project listing.",
+      ],
+    },
+  },
+  {
     id: "2026-06-04-hot-news",
     date: "2026-06-04",
     title: {

@@ -146,6 +146,16 @@ export const projects: Project[] = [
     liveUrl: "https://farmdemo-one.vercel.app/",
   },
   {
+    id: "web-hotdance",
+    title: "热舞团 (Hot Dance Crew)",
+    descKey: "game.hotDanceDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/hotdance.png",
+    liveUrl: "/hotdance/hotdance.html",
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",

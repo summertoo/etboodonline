@@ -163,6 +163,8 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     "game.grandpaFarmDesc":
       "Build up Grandpa's desert farm, plant crops, and turn a quiet patch of sand into a thriving oasis.",
+    "game.hotDanceDesc":
+      "A stage-based rhythm web game with falling arrows, combos, arc explosions, bilingual UI, and a top-10 leaderboard.",
 
     // DApp descriptions
     "dapp.ruokDesc":
@@ -385,6 +387,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.swimDesc": "百米自由泳比赛 — 极速冲刺，收集道具，勇夺冠军！",
     "game.zombieSiegeDesc": "在末日丧尸围城中生存下来！守卫基地，升级武器，击退无尽尸潮。",
     "game.comingSoonDesc": "即将上线，敬请期待！",
+    "game.hotDanceDesc":
+      "100 级节奏闯关网页游戏，跟随下落箭头打出连击，触发电弧爆炸，并冲击前十排行榜。",
 
     // DApp descriptions
     "dapp.ruokDesc": "基于 Sui 网络的去中心化签到触发定时转账 DApp",

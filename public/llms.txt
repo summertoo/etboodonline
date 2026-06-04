@@ -1,0 +1,35 @@
+# ZD Tech
+
+> ZD Tech is an independent creative studio publishing browser games, Roblox games, Sui/Web3 apps, creative tools, and bilingual news updates.
+
+## Canonical Site
+
+- https://www.etboodonline.com/
+
+## Main Sections
+
+- Home: https://www.etboodonline.com/
+- Projects: https://www.etboodonline.com/project
+- News: https://www.etboodonline.com/news
+- Blog: https://www.etboodonline.com/blog
+- Contact: https://www.etboodonline.com/contact
+
+## Featured Experiences
+
+- Hot Dance Crew: https://www.etboodonline.com/hotdance/hotdance.html
+- Project directory: https://www.etboodonline.com/project
+
+## Topics
+
+- Browser games
+- Roblox games
+- HTML5 mini games
+- Sui blockchain development
+- Web3 DApps
+- Creative tools
+- AI news
+- Hot topics
+
+## Contact
+
+- Email: etbood@gmail.com

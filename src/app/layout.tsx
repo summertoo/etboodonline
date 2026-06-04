@@ -1,144 +1,71 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import "./globals.css";
 import "@/components/component/homepage.css";
 import { Providers } from "./providers";
+import "./globals.css";
+import {
+  organizationJsonLd,
+  sectionListJsonLd,
+  siteConfig,
+  websiteJsonLd,
+} from "@/lib/seo";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "ZD Tech - 自媒体工作室 | 游戏开发 · 应用创作 · 内容创作",
+    default: siteConfig.defaultTitle,
     template: "%s | ZD Tech",
   },
-  description:
-    "ZD Tech 是一家专注于自媒体内容创作、游戏开发和应用开发的创意工作室。我们开发 Web3 应用、Roblox 游戏、网页游戏，同时创作网络小说和技术教程。",
-  keywords: [
-    "ZD Tech",
-    "etboodonline",
-    "自媒体工作室",
-    "游戏开发",
-    "应用开发",
-    "内容创作",
-    "网络小说",
-    "技术教程",
-    "Sui blockchain",
-    "Web3 development",
-    "DApp development",
-    "Roblox games",
-    "网页游戏",
-    "码农穿越平民世界",
-    "群雄战记",
-    "番茄小说",
-    "move programming",
-    "去中心化应用",
-    "自媒体游戏",
-    "游戏应用",
-    "content creator",
-    "game developer",
-    "app developer",
-  ],
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  alternates: {
+    canonical: siteConfig.url,
+  },
   openGraph: {
     type: "website",
-    locale: "zh_CN",
-    url: "https://www.etboodonline.com",
-    siteName: "ZD Tech",
-    title: "ZD Tech - 自媒体工作室 | 游戏开发 · 应用创作 · 内容创作",
-    description:
-      "专注于自媒体内容创作、游戏开发和应用开发的创意工作室。开发 Web3 应用、Roblox 游戏、网页游戏，创作网络小说和技术教程。",
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: siteConfig.defaultTitle,
+    description: siteConfig.description,
     images: [
       {
-        url: "/og-image.png",
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "ZD Tech - 自媒体工作室",
+        alt: "ZD Tech preview image",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZD Tech - 自媒体工作室 | 游戏开发 · 应用创作 · 内容创作",
-    description:
-      "专注于自媒体内容创作、游戏开发和应用开发的创意工作室。",
-    images: ["/og-image.png"],
+    title: siteConfig.defaultTitle,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
   },
-  alternates: {
-    canonical: "https://www.etboodonline.com",
-  },
-  metadataBase: new URL("https://www.etboodonline.com"),
+  category: "technology",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "ZD Tech",
-    alternateName: ["etboodonline", "自媒体工作室"],
-    url: "https://www.etboodonline.com",
-    description:
-      "ZD Tech 是一家专注于自媒体内容创作、游戏开发和应用开发的创意工作室。我们开发 Web3 去中心化应用、Roblox 游戏、网页游戏，同时创作网络小说和技术教程。",
-    knowsAbout: [
-      "自媒体内容创作",
-      "游戏开发",
-      "Roblox 游戏开发",
-      "网页游戏开发",
-      "Web3 应用开发",
-      "DApp 开发",
-      "Sui 区块链开发",
-      "网络小说创作",
-      "技术教程写作",
-      "应用开发",
-    ],
-    sameAs: ["https://github.com/etboodXJ"],
-    contactPoint: {
-      "@type": "ContactPoint",
-      email: "etbood@gmail.com",
-      contactType: "customer service",
-      availableLanguage: ["Chinese", "English"],
-    },
-  };
-
-  const websiteJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "ZD Tech - 自媒体工作室",
-    url: "https://www.etboodonline.com",
-    description:
-      "ZD Tech - 专注于自媒体内容创作、游戏开发和应用开发的创意工作室",
-    publisher: {
-      "@type": "Organization",
-      name: "ZD Tech",
-    },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://www.etboodonline.com/project?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
-  };
-
-  const creatorJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    name: "ZD Tech 作品集",
-    author: {
-      "@type": "Organization",
-      name: "ZD Tech",
-    },
-    description: "包含游戏、应用、网络小说和技术教程的创意作品集",
-  };
-
+}>) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <head />
       <body>
-        {/* Google Analytics */}
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-MPXWZKWM9W"
@@ -156,31 +83,35 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Google AdSense */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9035468310087485"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-        {/* JSON-LD Structured Data */}
         <Script
           id="schema-org"
           type="application/ld+json"
           strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
         />
         <Script
           id="website-schema"
           type="application/ld+json"
           strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
         />
         <Script
-          id="creativework-schema"
+          id="section-list-schema"
           type="application/ld+json"
           strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(creatorJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(sectionListJsonLd),
+          }}
         />
         <Providers>{children}</Providers>
       </body>
