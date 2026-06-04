@@ -122,20 +122,22 @@ function ProjectCard({
               />
             </div>
             <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2 mb-2">
-                <h4 className="font-semibold text-lg truncate">
+              <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-center">
+                <h4 className="w-full min-w-0 text-base font-semibold leading-6 break-words sm:w-auto sm:text-lg sm:truncate">
                   {displayTitle}
                 </h4>
-                {isNew && (
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-[rgba(249,115,22,0.1)] text-[var(--cyber-primary)] font-bold flex-shrink-0">
-                    NEW
-                  </span>
-                )}
-                {!isLive && (
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 font-medium flex-shrink-0">
-                    COMING SOON
-                  </span>
-                )}
+                <div className="flex flex-wrap items-center gap-2">
+                  {isNew && (
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-[rgba(249,115,22,0.1)] text-[var(--cyber-primary)] font-bold flex-shrink-0">
+                      NEW
+                    </span>
+                  )}
+                  {!isLive && (
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 font-medium flex-shrink-0">
+                      COMING SOON
+                    </span>
+                  )}
+                </div>
               </div>
               <p className="text-sm mb-3 cyber-subtitle line-clamp-2">
                 {displayDesc}
@@ -241,7 +243,9 @@ function GameCard({
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-2 flex-wrap">
-                <h4 className="font-semibold text-lg truncate">{title}</h4>
+                <h4 className="w-full font-semibold text-base leading-6 break-words sm:w-auto sm:text-lg sm:truncate">
+                  {title}
+                </h4>
                 {platform && (
                   <span
                     className={`text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0 ${

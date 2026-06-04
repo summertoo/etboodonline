@@ -269,7 +269,7 @@ export default function ProjectPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex flex-wrap items-center gap-2 mb-2">
-                        <h4 className="font-semibold text-lg truncate flex-1 min-w-0">
+                        <h4 className="w-full min-w-0 font-semibold text-base leading-6 break-words sm:w-auto sm:flex-1 sm:text-lg sm:truncate">
                           {project.title || t(project.titleKey || "")}
                         </h4>
                         {getStatusBadge(project.status)}
