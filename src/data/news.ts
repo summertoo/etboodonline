@@ -12,6 +12,101 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-04",
+    date: "2026-06-04",
+    title: {
+      zh: "AI HOT 日报 · 2026-06-04",
+      en: "AI HOT Daily · Jun 4, 2026",
+    },
+    summary: {
+      zh: "Grok Imagine 1.5 预览版发布，MiniMax M3 在 1M token 解码上大幅提速，Miso One 开源语音模型亮相，Meta 将 WhatsApp Business AI 智能体推向全球，微软与 OpenAI 竞争进一步公开化，欧盟启动技术主权计划，ChatGPT 月活突破 10 亿。",
+      en: "Grok Imagine 1.5 enters preview, MiniMax M3 sharply improves 1M-token decoding, the open-source voice model Miso One debuts, Meta rolls out WhatsApp Business AI agents globally, Microsoft and OpenAI move into more direct competition, the EU launches a tech sovereignty plan, and ChatGPT monthly active users pass 1 billion.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Grok Imagine 1.5 预览版发布",
+          en: "Grok Imagine 1.5 Preview Released",
+        },
+        description: {
+          zh: "Grok Imagine 1.5 预览版已经开放体验，xAI 继续把图像生成能力推进到更完整的 API 产品线中。",
+          en: "Grok Imagine 1.5 preview is now available, extending xAI's image generation capability into a broader API-facing product line.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniMax M3 在 1M token 解码上提速 15.6 倍",
+          en: "MiniMax M3 Gets 15.6x Faster at 1M-Token Decoding",
+        },
+        description: {
+          zh: "MiniMax 表示 M3 在超长上下文解码效率上继续提升，重点强化了大上下文推理与实际部署可用性。",
+          en: "MiniMax says M3 significantly improves ultra-long-context decoding efficiency, pushing practical deployment for large-context reasoning further forward.",
+        },
+      },
+      {
+        title: {
+          zh: "Miso One 开源语音模型亮相",
+          en: "Miso One Open-Source Voice Model Debuts",
+        },
+        description: {
+          zh: "Miso One 以 8B 参数和低延迟为卖点，支持一次语音克隆，并主打本地部署场景下的语音生成能力。",
+          en: "Miso One emphasizes its 8B scale, low latency, one-shot voice cloning, and support for local deployment in speech generation workflows.",
+        },
+      },
+      {
+        title: {
+          zh: "Ideogram v4 支持 2K 输出与 JSON 提示",
+          en: "Ideogram v4 Adds 2K Output and JSON Prompt Support",
+        },
+        description: {
+          zh: "Ideogram v4 发布后，图像分辨率、文字渲染和结构化提示能力都进一步增强，适合更规范的设计生成流程。",
+          en: "Ideogram v4 raises output resolution, strengthens text rendering, and adds structured JSON prompting for more controlled design workflows.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 将 WhatsApp Business AI 智能体全球上线",
+          en: "Meta Rolls Out WhatsApp Business AI Agents Globally",
+        },
+        description: {
+          zh: "Meta 面向商家的 WhatsApp Business AI 智能体已开始全球铺开，企业端 AI 客服与自动化运营继续升温。",
+          en: "Meta has started a global rollout of its WhatsApp Business AI agents, accelerating AI-powered support and automation for merchants.",
+        },
+      },
+      {
+        title: {
+          zh: "微软与 OpenAI 的竞争进一步公开化",
+          en: "Microsoft and OpenAI Competition Becomes More Public",
+        },
+        description: {
+          zh: "随着微软强化自有 AI 能力，两家公司从深度合作逐步走向更明显的正面竞争，生态关系继续重组。",
+          en: "As Microsoft strengthens its own AI stack, its relationship with OpenAI is shifting from tight partnership toward more visible head-to-head competition.",
+        },
+      },
+      {
+        title: {
+          zh: "欧盟启动技术主权计划",
+          en: "EU Launches a Tech Sovereignty Plan",
+        },
+        description: {
+          zh: "欧盟公布新计划，重点推动芯片、AI 和云基础设施的本土能力建设，降低对外部供应链的依赖。",
+          en: "The EU has unveiled a new plan to strengthen domestic capability in chips, AI, and cloud infrastructure while reducing reliance on outside supply chains.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT 月活突破 10 亿",
+          en: "ChatGPT Monthly Active Users Pass 1 Billion",
+        },
+        description: {
+          zh: "市场统计显示 ChatGPT 月活规模继续扩大，达到 10 亿级别，说明通用 AI 产品渗透率仍在快速上升。",
+          en: "Market estimates put ChatGPT monthly active users above 1 billion, showing that mass-market adoption of general AI products is still accelerating.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-03",
     date: "2026-06-03",
     title: {
