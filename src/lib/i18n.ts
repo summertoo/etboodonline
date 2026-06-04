@@ -234,7 +234,7 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // News
     "news.title": "📰 Latest News",
-    "news.subtitle": "AI and tech industry highlights.",
+    "news.subtitle": "Hot topics, AI daily briefings, and tech updates.",
   },
 
   zh: {
@@ -450,7 +450,7 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // News
     "news.title": "📰 最新动态",
-    "news.subtitle": "AI 与科技行业每日速览。",
+    "news.subtitle": "热点资讯、AI 日报与科技动态精选。",
     "game.grandpaFarmDesc":
       "经营爷爷的沙漠农场，种植作物、慢慢扩建，把一片荒地变成生机勃勃的绿洲。",
   },

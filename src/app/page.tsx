@@ -6,7 +6,7 @@ import { CardContent, Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
-import { newsList } from "@/data/news";
+import { newsCategoryMeta, newsList } from "@/data/news";
 import { projects } from "@/data/projects";
 import Link from "next/link";
 import FeedbackForm from "@/components/FeedbackForm";
@@ -388,7 +388,16 @@ export default function Homepage() {
     () => projects.find((p) => p.id === "sui-best-practices"),
     [],
   );
-  const homepageNews = useMemo(() => newsList.slice(0, 1), []);
+  const homepageNews = useMemo(() => {
+    if (newsList.length === 0) return [];
+
+    const latestDate = newsList.reduce(
+      (latest, item) => (item.date > latest ? item.date : latest),
+      newsList[0].date,
+    );
+
+    return newsList.filter((item) => item.date === latestDate);
+  }, []);
 
   function FloatingParticles() {
     const [mounted, setMounted] = useState(false);
@@ -721,46 +730,55 @@ export default function Homepage() {
           </p>
         </RevealSection>
         <div className="max-w-4xl mx-auto space-y-4">
-          {homepageNews.map((news) => (
-            <div
-              key={news.id}
-              className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-xs font-bold tracking-wide text-[var(--cyber-primary)]">
-                  NEWS
-                </span>
-                <div>
-                  <h4 className="font-semibold">
-                    {lang === "zh" ? news.title.zh : news.title.en}
-                  </h4>
-                  <p className="text-xs text-[var(--cyber-muted)]">
-                    {news.date}
-                  </p>
-                </div>
-              </div>
-              <p className="text-sm cyber-subtitle leading-relaxed mb-4">
-                {lang === "zh" ? news.summary.zh : news.summary.en}
-              </p>
-              <div className="space-y-3">
-                {news.items.slice(0, 4).map((item, index) => (
-                  <div
-                    key={`${news.id}-${index}`}
-                    className="p-4 rounded-lg border border-[var(--cyber-border)]"
+          {homepageNews.map((news) => {
+            const categoryMeta = newsCategoryMeta[news.category];
+
+            return (
+              <div
+                key={news.id}
+                className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <span
+                    className={`rounded-full px-2.5 py-1 text-xs font-bold tracking-wide ${categoryMeta.badgeClassName}`}
                   >
-                    <p className="font-semibold text-[var(--cyber-primary)] mb-1">
-                      {index + 1}. {lang === "zh" ? item.title.zh : item.title.en}
-                    </p>
-                    <p className="text-sm cyber-subtitle leading-relaxed">
-                      {lang === "zh"
-                        ? item.description.zh
-                        : item.description.en}
+                    {lang === "zh"
+                      ? categoryMeta.label.zh
+                      : categoryMeta.label.en}
+                  </span>
+                  <div>
+                    <h4 className="font-semibold">
+                      {lang === "zh" ? news.title.zh : news.title.en}
+                    </h4>
+                    <p className="text-xs text-[var(--cyber-muted)]">
+                      {news.date}
                     </p>
                   </div>
-                ))}
+                </div>
+                <p className="text-sm cyber-subtitle leading-relaxed mb-4">
+                  {lang === "zh" ? news.summary.zh : news.summary.en}
+                </p>
+                <div className="space-y-3">
+                  {news.items.slice(0, 4).map((item, index) => (
+                    <div
+                      key={`${news.id}-${index}`}
+                      className="p-4 rounded-lg border border-[var(--cyber-border)]"
+                    >
+                      <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                        {index + 1}.{" "}
+                        {lang === "zh" ? item.title.zh : item.title.en}
+                      </p>
+                      <p className="text-sm cyber-subtitle leading-relaxed">
+                        {lang === "zh"
+                          ? item.description.zh
+                          : item.description.en}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
         <div className="text-center mt-6">
           <Link

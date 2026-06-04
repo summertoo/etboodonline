@@ -1,16 +1,130 @@
+export type NewsCategory = "ai-daily" | "hot-news";
+
 export interface NewsItem {
   id: string;
   date: string;
   title: { zh: string; en: string };
   summary: { zh: string; en: string };
-  category: string;
+  category: NewsCategory;
   items: {
     title: { zh: string; en: string };
     description: { zh: string; en: string };
   }[];
 }
 
+export const newsCategoryMeta: Record<
+  NewsCategory,
+  {
+    label: { zh: string; en: string };
+    badgeClassName: string;
+  }
+> = {
+  "ai-daily": {
+    label: { zh: "AI 日报", en: "AI Daily" },
+    badgeClassName: "bg-orange-50 text-orange-700",
+  },
+  "hot-news": {
+    label: { zh: "热点新闻", en: "Hot News" },
+    badgeClassName: "bg-rose-50 text-rose-700",
+  },
+};
+
 export const newsList: NewsItem[] = [
+  {
+    id: "2026-06-04-hot",
+    date: "2026-06-04",
+    title: {
+      zh: "热点快报 · 2026-06-04",
+      en: "Hot News Brief · Jun 4, 2026",
+    },
+    summary: {
+      zh: "全球半导体市场冲向 10 万亿元级，中国“水上电梯”进入调试，卢拉强调外贸主动权，宇树机器人登上《美国达人秀》，高考考场设备管理再提醒，健康体重管理持续升温，存储芯片价格上涨，中国球员李昊炎签约巴萨青训。",
+      en: "Global semiconductors are pushing toward a 10-trillion-yuan scale, China's 'water elevator' enters testing, Lula stresses trade flexibility, a Unitree robot appears on America's Got Talent, exam-device rules tighten, healthy weight management stays in focus, memory prices keep rising, and Chinese prospect Li Haoyan signs with Barcelona's youth system.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "全球半导体市场冲向 10 万亿元级",
+          en: "Global Semiconductor Market Eyes a 10-Trillion-Yuan Scale",
+        },
+        description: {
+          zh: "受 AI 和数据中心需求拉动，机构预计 2026 年全球半导体市场规模有望突破 1.5 万亿美元。",
+          en: "Driven by AI and data-center demand, forecasts say the global semiconductor market could top $1.5 trillion in 2026.",
+        },
+      },
+      {
+        title: {
+          zh: "中国“水上电梯”进入调试阶段",
+          en: "China's 'Water Elevator' Enters Testing",
+        },
+        description: {
+          zh: "平陆运河全线通水后进入调试，关键船闸和枢纽工程刷新多项世界纪录。",
+          en: "China's Pinglu Canal moved into testing after full water access, with major locks and hubs setting multiple world records.",
+        },
+      },
+      {
+        title: {
+          zh: "卢拉重申外贸不只看美国",
+          en: "Lula Reiterates That Brazil's Trade Is Not Limited to the U.S.",
+        },
+        description: {
+          zh: "巴西总统卢拉表示，如果美国不买，巴西就卖给愿意买的国家，强调对外合作要保留主动空间。",
+          en: "Brazil's president Lula said if the U.S. will not buy, Brazil will sell to countries that will, underscoring a flexible trade stance.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树机器人登上《美国达人秀》晋级",
+          en: "Unitree Robot Advances on America's Got Talent",
+        },
+        description: {
+          zh: "中国机器人在节目中完成高难度表演并获得通过，再次把国产机器人带到国际公众视野。",
+          en: "A Chinese Unitree robot delivered a high-difficulty performance on America's Got Talent and advanced to the next round.",
+        },
+      },
+      {
+        title: {
+          zh: "高考再提醒：带手机进考场也算作弊",
+          en: "Gaokao Warning: Bringing a Phone into the Exam Hall Counts as Cheating",
+        },
+        description: {
+          zh: "教育部门强调，无论是否使用，手机、智能手表、智能眼镜等带入考场都将被认定为作弊。",
+          en: "Education authorities warned that bringing phones, smartwatches, or smart glasses into exam halls counts as cheating, even if they are not used.",
+        },
+      },
+      {
+        title: {
+          zh: "“体重管理年”强调长期健康习惯",
+          en: "National Weight Management Push Focuses on Long-Term Habits",
+        },
+        description: {
+          zh: "讨论焦点正从单纯减肥转向可持续的饮食、运动和生活方式管理。",
+          en: "The discussion is shifting from simple weight loss to sustainable diet, exercise, and lifestyle management.",
+        },
+      },
+      {
+        title: {
+          zh: "存储芯片价格继续走高",
+          en: "Memory Chip Prices Keep Climbing",
+        },
+        description: {
+          zh: "DRAM 和 NAND 价格持续上涨，AI 与数据中心需求继续推高行业景气度。",
+          en: "DRAM and NAND prices continue to rise as AI and data-center demand keeps lifting the memory industry's outlook.",
+        },
+      },
+      {
+        title: {
+          zh: "李昊炎签约巴萨 U15 梯队",
+          en: "Li Haoyan Signs with Barcelona's U15 Team",
+        },
+        description: {
+          zh: "14 岁中国球员李昊炎正式加入巴萨 U15 梯队，成为中国球员进入巴萨青训体系的重要节点。",
+          en: "Chinese teenager Li Haoyan officially joined Barcelona's U15 side, marking a notable milestone for Chinese youth football.",
+        },
+      },
+    ],
+  },
   {
     id: "2026-06-04",
     date: "2026-06-04",

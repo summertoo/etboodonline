@@ -5,7 +5,7 @@ import { CardContent, Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
-import { newsList } from "@/data/news";
+import { newsCategoryMeta, newsList } from "@/data/news";
 
 export default function NewsPage() {
   const { t, lang } = useLang();
@@ -17,12 +17,12 @@ export default function NewsPage() {
 
       <section className="text-center py-20 cyber-hero">
         <h2 className="text-4xl font-bold mb-4 cyber-title">
-          {lang === "zh" ? "📰 AI 新闻资讯" : "📰 AI News & Updates"}
+          {lang === "zh" ? "📰 新闻与热点" : "📰 News & Hot Topics"}
         </h2>
         <p className="mb-8 cyber-subtitle max-w-2xl mx-auto">
           {lang === "zh"
-            ? "追踪 AI 行业最新动态，每日精选最热门的模型发布、产品更新和行业趋势。"
-            : "Tracking the latest AI industry developments — daily curated picks of model releases, product updates, and industry trends."}
+            ? "汇总 AI 日报、科技动态与综合热点，按日期持续更新。"
+            : "Curated AI daily briefings, tech updates, and broader hot topics, refreshed by date."}
         </p>
       </section>
 
@@ -31,25 +31,30 @@ export default function NewsPage() {
           {newsList.map((news) => {
             const isExpanded = expandedId === news.id;
             const displayItems = isExpanded ? news.items : news.items.slice(0, 4);
+            const categoryMeta = newsCategoryMeta[news.category];
 
             return (
               <Card key={news.id} className="cyber-card overflow-hidden">
                 <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="mb-4 flex items-start justify-between gap-4">
                     <div>
-                      <h3 className="text-xl font-bold cyber-title mb-1">
+                      <h3 className="mb-1 text-xl font-bold cyber-title">
                         {lang === "zh" ? news.title.zh : news.title.en}
                       </h3>
                       <p className="text-sm text-[var(--cyber-muted)]">
                         {news.date}
                       </p>
                     </div>
-                    <span className="text-xs px-3 py-1 rounded-full bg-orange-50 text-orange-700 font-medium">
-                      AI Daily
+                    <span
+                      className={`rounded-full px-3 py-1 text-xs font-medium ${categoryMeta.badgeClassName}`}
+                    >
+                      {lang === "zh"
+                        ? categoryMeta.label.zh
+                        : categoryMeta.label.en}
                     </span>
                   </div>
 
-                  <p className="cyber-subtitle mb-6 text-sm leading-relaxed">
+                  <p className="mb-6 text-sm leading-relaxed cyber-subtitle">
                     {lang === "zh" ? news.summary.zh : news.summary.en}
                   </p>
 
@@ -57,12 +62,12 @@ export default function NewsPage() {
                     {displayItems.map((item, i) => (
                       <div
                         key={i}
-                        className="p-4 rounded-lg border border-[var(--cyber-border)] hover:border-[var(--cyber-primary)] transition-colors"
+                        className="rounded-lg border border-[var(--cyber-border)] p-4 transition-colors hover:border-[var(--cyber-primary)]"
                       >
-                        <h4 className="font-semibold text-sm mb-1">
+                        <h4 className="mb-1 text-sm font-semibold">
                           {i + 1}. {lang === "zh" ? item.title.zh : item.title.en}
                         </h4>
-                        <p className="text-sm cyber-subtitle leading-relaxed">
+                        <p className="text-sm leading-relaxed cyber-subtitle">
                           {lang === "zh" ? item.description.zh : item.description.en}
                         </p>
                       </div>
@@ -70,7 +75,7 @@ export default function NewsPage() {
                   </div>
 
                   {news.items.length > 4 && (
-                    <div className="text-center mt-4">
+                    <div className="mt-4 text-center">
                       <Button
                         variant="outline"
                         className="cyber-button-small border-[var(--cyber-border)]"
@@ -81,8 +86,8 @@ export default function NewsPage() {
                             ? "收起"
                             : "Collapse"
                           : lang === "zh"
-                            ? `查看全部 ${news.items.length} 条 →`
-                            : `View all ${news.items.length} items →`}
+                            ? `查看全部 ${news.items.length} 条`
+                            : `View all ${news.items.length} items`}
                       </Button>
                     </div>
                   )}
@@ -93,7 +98,7 @@ export default function NewsPage() {
         </div>
       </section>
 
-      <footer className="py-10 cyber-footer text-center">
+      <footer className="py-10 text-center cyber-footer">
         <p className="cyber-subtitle">{t("footer.copyright")}</p>
       </footer>
     </div>

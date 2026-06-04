@@ -17,6 +17,30 @@ export interface SiteUpdateItem {
 
 export const siteUpdates: SiteUpdateItem[] = [
   {
+    id: "2026-06-04-hot-news",
+    date: "2026-06-04",
+    title: {
+      zh: "综合热点新闻栏目已接入",
+      en: "General Hot News Feed Added",
+    },
+    summary: {
+      zh: "首页与新闻页新增综合热点分类，并自动显示最新日期的热点与 AI 新闻。",
+      en: "Added a general hot-news category and made the homepage/news page show the latest dated hot and AI updates together.",
+    },
+    details: {
+      zh: [
+        "根据 2026-06-04 热点内容精选整理 8 条综合新闻，并去掉外链。",
+        "首页新闻栏改为按最新日期聚合显示，可同时看到当天热点新闻与 AI 日报。",
+        "新闻页新增分类标识，区分 Hot News 与 AI Daily。",
+      ],
+      en: [
+        "Curated 8 general-interest hot news items from the 2026-06-04 source and removed external links.",
+        "Homepage news now groups entries by the latest date so hot news and AI daily updates appear together.",
+        "The news page now distinguishes Hot News and AI Daily with separate category badges.",
+      ],
+    },
+  },
+  {
     id: "2026-06-03-admin-dashboard-and-launch-tracking",
     date: "2026-06-03",
     title: {
