@@ -61,16 +61,33 @@ export default function ProjectPage() {
   ];
 
   const filteredProjects = useMemo(() => {
-    return projects.filter((p) => {
-      const matchesCategory =
-        selectedCategory === "all" || p.category === selectedCategory;
-      const displayTitle = p.title || t(p.titleKey || "");
-      const matchesSearch =
-        searchQuery === "" ||
-        displayTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (p.desc && p.desc.toLowerCase().includes(searchQuery.toLowerCase()));
-      return matchesCategory && matchesSearch;
-    });
+    return [...projects]
+      .map((project, index) => ({ project, index }))
+      .sort((a, b) => {
+        const aTime = a.project.publishedAt
+          ? new Date(a.project.publishedAt).getTime()
+          : Number.NEGATIVE_INFINITY;
+        const bTime = b.project.publishedAt
+          ? new Date(b.project.publishedAt).getTime()
+          : Number.NEGATIVE_INFINITY;
+
+        if (aTime !== bTime) {
+          return bTime - aTime;
+        }
+
+        return a.index - b.index;
+      })
+      .map(({ project }) => project)
+      .filter((p) => {
+        const matchesCategory =
+          selectedCategory === "all" || p.category === selectedCategory;
+        const displayTitle = p.title || t(p.titleKey || "");
+        const matchesSearch =
+          searchQuery === "" ||
+          displayTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          (p.desc && p.desc.toLowerCase().includes(searchQuery.toLowerCase()));
+        return matchesCategory && matchesSearch;
+      });
   }, [projects, selectedCategory, searchQuery]);
 
   const getStatusBadge = (status: Status) => {

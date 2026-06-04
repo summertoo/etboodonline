@@ -22,6 +22,7 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   platformLabel?: string;
+  publishedAt?: string;
 }
 
 export const projects: Project[] = [
@@ -154,6 +155,7 @@ export const projects: Project[] = [
     status: "new",
     logoUrl: "/avatars/hotdance.png",
     liveUrl: "/hotdance/hotdance.html",
+    publishedAt: "2026-06-04T21:00:00+08:00",
   },
   {
     id: "dapp-ruok",
