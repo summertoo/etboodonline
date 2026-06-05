@@ -31,6 +31,101 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-05",
+    date: "2026-06-05",
+    title: {
+      zh: "AI HOT 日报 · 2026-06-05",
+      en: "AI HOT Daily · Jun 5, 2026",
+    },
+    summary: {
+      zh: "NVIDIA 推出可定制多模态安全模型 Nemotron 3.5 Content Safety，Nex-N2-Pro 以 397B MoE 架构冲击顶级推理性能，Google 发布实时音乐模型 MRT2，Replit 联手 Shopify 加速建店，ChatGPT 推出更强记忆系统 Dreaming，OpenAI API 新增审核评分，OpenJarvis 强调本地优先个人智能体，全球机器人流量首次超过人类网页流量。",
+      en: "NVIDIA launched the customizable multimodal safety model Nemotron 3.5 Content Safety, Nex-N2-Pro pushed a 397B MoE reasoning model toward top-tier performance, Google released the real-time music model MRT2, Replit teamed up with Shopify to speed up store creation, ChatGPT introduced its stronger Dreaming memory system, OpenAI APIs added moderation scores, OpenJarvis advanced a local-first personal agent framework, and bot traffic surpassed human web traffic for the first time.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Nemotron 3.5 Content Safety",
+          en: "Nemotron 3.5 Content Safety",
+        },
+        description: {
+          zh: "面向企业的多模态安全模型，支持自定义策略、统一审查文本与图像，并提供可审计推理轨迹。",
+          en: "Enterprise-focused multimodal safety model with custom policies, unified text and image review, and auditable reasoning traces.",
+        },
+      },
+      {
+        title: {
+          zh: "Nex-N2-Pro",
+          en: "Nex-N2-Pro",
+        },
+        description: {
+          zh: "基于 Qwen3.5 的 397B MoE 推理模型，支持超长上下文和多模态，主打更深推理与更低思考 token 成本。",
+          en: "A 397B MoE reasoning model based on Qwen3.5, supporting ultra-long context and multimodal input with deeper reasoning at lower token cost.",
+        },
+      },
+      {
+        title: {
+          zh: "Google MRT2",
+          en: "Google MRT2",
+        },
+        description: {
+          zh: "Google 发布实时音乐模型 MRT2，可通过 MIDI、文本提示和手势实时演奏，延迟控制在 200ms 以内。",
+          en: "Google released MRT2, a real-time music model playable through MIDI, text prompts, and gestures with sub-200ms latency.",
+        },
+      },
+      {
+        title: {
+          zh: "Replit + Shopify",
+          en: "Replit + Shopify",
+        },
+        description: {
+          zh: "Replit Agent 与 Shopify 合作，帮助用户用自然语言快速搭建并上线自定义店铺。",
+          en: "Replit Agent partnered with Shopify to help users build and launch custom stores from natural language prompts.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT Dreaming",
+          en: "ChatGPT Dreaming",
+        },
+        description: {
+          zh: "ChatGPT 推出 Dreaming 记忆系统，强化跨会话记忆和个性化响应，让长期对话更连贯。",
+          en: "ChatGPT introduced Dreaming, a stronger memory system for better cross-conversation recall and personalization.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI API moderation scores",
+          en: "OpenAI API moderation scores",
+        },
+        description: {
+          zh: "OpenAI 在 Responses API 和 Completions API 中加入审核评分，便于应用在生成流程中直接记录、路由或拦截内容。",
+          en: "OpenAI added moderation scores to the Responses and Completions APIs so apps can log, route, review, or block content in the same generation flow.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenJarvis",
+          en: "OpenJarvis",
+        },
+        description: {
+          zh: "Stanford 团队发布本地优先的个人 AI 智能体框架 OpenJarvis，把推理、记忆、工具和学习都放到设备端。",
+          en: "Stanford researchers released OpenJarvis, a local-first personal AI agent framework that keeps reasoning, memory, tools, and learning on-device.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare Radar",
+          en: "Cloudflare Radar",
+        },
+        description: {
+          zh: "Cloudflare Radar 显示，最近一周全球 HTML 请求中机器人流量首次超过人类，占比达到 57.5%。",
+          en: "Cloudflare Radar reported that bot traffic made up 57.5% of global HTML requests over the past week, surpassing human traffic for the first time.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-04-hot",
     date: "2026-06-04",
     title: {
