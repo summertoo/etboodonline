@@ -31,6 +31,101 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-05-hot",
+    date: "2026-06-05",
+    title: {
+      zh: "热点快报 · 2026-06-05",
+      en: "Hot News Brief · Jun 5, 2026",
+    },
+    summary: {
+      zh: "高考前夕“最后一课”走红，广西粉店因王祖蓝团队拍摄引发清场误会获通报，多地辟谣汛情旧闻，八国外长就耶路撒冷宗教圣地紧张局势发联合声明，“985+211”路牌成高考打卡点，国内乘用车 12 年平均增重近 400 公斤，绿皮车全面禁烟呼声升温，荔枝龙眼杂交新品种“怀石”首次亮相。",
+      en: "An emotional final pre-gaokao class went viral, a Guangxi noodle-shop filming misunderstanding involving Wong Cho-lam drew an official notice, authorities debunked several flood rumors, eight foreign ministers issued a joint statement on tensions at a Jerusalem holy site, a '985+211' road sign became a gaokao photo spot, passenger cars gained nearly 400 kg on average over 12 years, calls for full smoking bans on green trains intensified, and the new lychee-longan hybrid 'Huaishi' made its debut.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "“最后一课”老师哽咽走红",
+          en: "Emotional Final Class Before Gaokao Goes Viral",
+        },
+        description: {
+          zh: "高考前一位老师在“最后一课”上笑着送祝福却忍不住落泪，相关画面引发大量网友共鸣。",
+          en: "A teacher's emotional final class before the gaokao, meant as a cheerful send-off, ended in tears and resonated widely online.",
+        },
+      },
+      {
+        title: {
+          zh: "王祖蓝拍摄引发粉店清场误会",
+          en: "Filming Misunderstanding at Noodle Shop Draws Official Response",
+        },
+        description: {
+          zh: "广西一粉店顾客称因王祖蓝团队拍摄被要求离场，当地通报称并未安排清场，主要是现场沟通不当造成误解。",
+          en: "After diners said they were asked to leave during a shoot involving Wong Cho-lam's team, local authorities said no formal clearance was arranged and blamed poor on-site communication.",
+        },
+      },
+      {
+        title: {
+          zh: "多地汛情旧闻被集中辟谣",
+          en: "Authorities Debunk Viral Flood Misinformation",
+        },
+        description: {
+          zh: "多条网传“洪水灾情”信息被证实为旧闻或编造，相关造谣和误传线索已被查处。",
+          en: "Several viral flood-disaster posts were identified as old or fabricated stories, and authorities said related misinformation cases were being handled.",
+        },
+      },
+      {
+        title: {
+          zh: "八国外长就圣地局势发联合声明",
+          en: "Eight Foreign Ministers Issue Joint Statement on Holy Site Tensions",
+        },
+        description: {
+          zh: "巴基斯坦、埃及、土耳其等八国外长就耶路撒冷宗教圣地局势发表联合声明，呼吁尊重现状并避免紧张升级。",
+          en: "Foreign ministers from Pakistan, Egypt, Turkey and five other countries issued a joint statement calling for restraint and respect for the status quo at a Jerusalem holy site.",
+        },
+      },
+      {
+        title: {
+          zh: "“985+211”路牌成高考打卡点",
+          en: "'985+211' Road Sign Becomes a Gaokao Photo Spot",
+        },
+        description: {
+          zh: "陕西一块写有 G211 国道 985 公里处的路牌因数字组合巧合走红，成了不少考生家长的打卡祝福点。",
+          en: "A road sign marking kilometer 985 on China's G211 highway went viral because its numbers echo elite university labels, turning it into a gaokao good-luck stop.",
+        },
+      },
+      {
+        title: {
+          zh: "乘用车 12 年平均增重近 400 公斤",
+          en: "Passenger Cars Gain Nearly 400 kg in 12 Years",
+        },
+        description: {
+          zh: "数据显示国内乘用车平均整备质量较 2012 年增加近 400 公斤，电池包、更大车身和舒适配置是主要推力。",
+          en: "New data suggests average passenger-car curb weight has risen by nearly 400 kg since 2012, largely driven by battery packs, larger bodies, and added comfort features.",
+        },
+      },
+      {
+        title: {
+          zh: "绿皮车全面禁烟呼声升温",
+          en: "Calls Grow for a Full Smoking Ban on Green Trains",
+        },
+        description: {
+          zh: "多家控烟组织联合建议普通列车及相关站台全面禁烟，相关公共健康讨论持续升温。",
+          en: "Anti-smoking groups jointly called for full smoking bans on ordinary green trains and related platforms, pushing the public-health debate further.",
+        },
+      },
+      {
+        title: {
+          zh: "荔枝龙眼杂交新品种“怀石”亮相",
+          en: "New Lychee-Longan Hybrid 'Huaishi' Debuts",
+        },
+        description: {
+          zh: "广东发布全球首个以荔枝和龙眼为亲本的杂交新品种“怀石”，主打早熟、甜脆和填补优质早熟资源空白。",
+          en: "Researchers in Guangdong introduced 'Huaishi,' described as the world's first hybrid bred from lychee and longan parent lines, featuring early ripening and a crisp, sweet profile.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-05",
     date: "2026-06-05",
     title: {
