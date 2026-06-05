@@ -103,6 +103,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "project.search": "Search projects...",
     "project.all": "All",
     "project.filter": "Filter",
+    "project.filter.allGames": "All Games",
     "project.category.game": "Games",
     "project.category.roblox": "Roblox Games",
     "project.category.webgame": "Web Games",
@@ -110,6 +111,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "project.category.tool": "Tools",
     "project.category.article": "Articles",
     "project.category.novel": "Novels",
+    "project.tag.game": "Game",
+    "project.tag.featured": "Featured",
+    "project.tag.latest": "Latest",
     "project.platform.roblox": "Roblox",
     "project.platform.web": "Web",
     "project.live": "● Live",
@@ -154,7 +158,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.saveManDesc":
       "Use the rescue claw to save trapped miners from the mine! Click to drop the claw and pull them up.",
     "game.miniSoccerDesc":
-      "Mini Soccer is a game that allows players to play soccer in the metaverse.",
+      "A line-draw soccer game where you flick the ball with elastic shots, curve your aim, and score with precise rebounds.",
     "game.killerH5Desc":
       "Assassin H5 Game - Analyze the scene, identify targets, use props wisely, and become a legendary assassin!",
     "game.swimDesc":
@@ -336,6 +340,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "project.search": "搜索项目...",
     "project.all": "全部",
     "project.filter": "筛选",
+    "project.filter.allGames": "全部游戏",
     "project.category.game": "游戏",
     "project.category.roblox": "Roblox游戏",
     "project.category.webgame": "网页游戏",
@@ -343,6 +348,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "project.category.tool": "工具",
     "project.category.article": "文章",
     "project.category.novel": "小说",
+    "project.tag.game": "游戏",
+    "project.tag.featured": "热门推荐",
+    "project.tag.latest": "最新推荐",
     "project.platform.roblox": "Roblox",
     "project.platform.web": "网页",
     "project.live": "● 已上线",
@@ -381,7 +389,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.handBattleDesc": "用手势对战的趣味游戏。",
     "game.saveManDesc":
       "操控救援抓斗，从矿井中救出被困人员！点击释放抓斗，将他们拉上来。",
-    "game.miniSoccerDesc": "在元宇宙中踢足球的游戏。",
+    "game.miniSoccerDesc": "划线控制弹力射门的足球小游戏，找准角度与反弹路线，把球送进球门。",
     "game.killerH5Desc":
       "暗杀H5游戏 — 分析场景，识别目标，合理利用道具，成为传奇刺客！",
     "game.swimDesc": "百米自由泳比赛 — 极速冲刺，收集道具，勇夺冠军！",

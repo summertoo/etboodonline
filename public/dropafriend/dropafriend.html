@@ -1,0 +1,2966 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <title>扔掉一个朋友</title>
+  <style>
+    :root {
+      --bg-top: #211238;
+      --bg-bottom: #09070c;
+      --panel: rgba(15, 18, 30, 0.9);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #f8f2ff;
+      --muted: rgba(248, 242, 255, 0.72);
+      --accent: #ff8256;
+      --accent-2: #ffd55b;
+      --coin: #ffe07a;
+      --good: #7ff1b3;
+      --danger: #ff6f8c;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(157, 90, 255, 0.28), transparent 42%),
+        linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+    }
+
+    body {
+      padding: 16px;
+    }
+
+    .page {
+      width: min(1260px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr) 320px;
+      grid-template-areas: "left center right";
+      gap: 18px;
+      align-items: start;
+    }
+
+    .left-panel {
+      grid-area: left;
+    }
+
+    .center-panel {
+      grid-area: center;
+    }
+
+    .right-panel {
+      grid-area: right;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+        var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      overflow: hidden;
+    }
+
+    .stack {
+      display: grid;
+      gap: 14px;
+      padding: 18px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .headline {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    .subline {
+      margin: 8px 0 0;
+      font-size: 14px;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .resource-bar {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .resource-card,
+    .friend-card,
+    .upgrade-card,
+    .tech-card,
+    .trap-card,
+    .board-card,
+    .custom-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px;
+    }
+
+    .resource-card .label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .resource-card .value {
+      margin-top: 6px;
+      font-size: 22px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .friend-card.active {
+      border-color: rgba(255, 130, 86, 0.76);
+      background: rgba(255, 130, 86, 0.12);
+      box-shadow: 0 0 0 1px rgba(255, 130, 86, 0.18) inset;
+    }
+
+    .friend-top,
+    .stat-row,
+    .row-actions,
+    .input-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .friend-top {
+      align-items: flex-start;
+    }
+
+    .avatar-dot {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      font-weight: 900;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.05));
+      flex-shrink: 0;
+    }
+
+    .friend-name {
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .friend-meta,
+    .tiny-note {
+      margin-top: 4px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .grid-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .drawer .grid-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-content: start;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .pill.good {
+      color: #baffdc;
+      background: rgba(127, 241, 179, 0.12);
+    }
+
+    .pill.locked {
+      color: #ffcfab;
+      background: rgba(255, 149, 92, 0.12);
+    }
+
+    .drop-button,
+    .mobile-drop-button,
+    .small-button,
+    .buy-button {
+      border: 0;
+      border-radius: 16px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 900;
+    }
+
+    .drop-button,
+    .mobile-drop-button {
+      min-height: 58px;
+      width: 100%;
+      background: linear-gradient(135deg, #ff8550, #ff4472);
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      box-shadow: 0 16px 28px rgba(255, 68, 114, 0.22);
+    }
+
+    .mobile-drop-button {
+      display: none;
+      margin-top: 12px;
+      min-height: 50px;
+      font-size: 16px;
+    }
+
+    .small-button,
+    .buy-button {
+      min-height: 38px;
+      padding: 0 14px;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+    }
+
+    .small-button.primary,
+    .buy-button {
+      background: linear-gradient(135deg, #ff9454, #ff5b74);
+    }
+
+    .drop-button:disabled,
+    .mobile-drop-button:disabled,
+    .small-button:disabled,
+    .buy-button:disabled {
+      opacity: 0.42;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      min-height: 42px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      padding: 0 12px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    input[type="text"]::placeholder {
+      color: rgba(255, 255, 255, 0.38);
+    }
+
+    .stage {
+      position: relative;
+      min-height: 760px;
+      background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 42%),
+        linear-gradient(180deg, rgba(43, 57, 102, 0.22), rgba(8, 10, 16, 0.92));
+    }
+
+    .stage-top {
+      padding: 18px 20px 0;
+    }
+
+    .canvas-wrap {
+      position: relative;
+      padding: 12px 14px 14px;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: clamp(420px, 70vh, 700px);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        linear-gradient(180deg, rgba(133, 205, 255, 0.08), rgba(8, 8, 12, 0.98));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      touch-action: none;
+    }
+
+    .hud-row {
+      position: absolute;
+      top: 22px;
+      left: 24px;
+      right: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      pointer-events: none;
+    }
+
+    .hud-chip {
+      padding: 9px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(8, 11, 18, 0.76);
+      font-size: 12px;
+      color: var(--muted);
+      backdrop-filter: blur(10px);
+    }
+
+    .hud-chip strong {
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .scene-note {
+      padding: 0 16px 18px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .summary-total {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255, 214, 91, 0.12);
+      border: 1px solid rgba(255, 214, 91, 0.2);
+      color: #fff4d2;
+      line-height: 1.72;
+      font-size: 15px;
+    }
+
+    .summary-total strong {
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .summary-list,
+    .damage-list,
+    .leaderboard-list,
+    .log-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .summary-row,
+    .damage-row,
+    .leaderboard-row,
+    .log-row {
+      display: grid;
+      gap: 10px;
+      padding: 9px 10px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 13px;
+      align-items: center;
+    }
+
+    .summary-row,
+    .damage-row {
+      grid-template-columns: 1fr auto;
+    }
+
+    .leaderboard-row {
+      grid-template-columns: 34px 1fr auto;
+    }
+
+    .leaderboard-row.me {
+      outline: 1px solid rgba(127, 241, 179, 0.54);
+      background: rgba(127, 241, 179, 0.08);
+    }
+
+    .log-list {
+      max-height: 170px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .log-row {
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .game-shell {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-bar {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+      gap: 16px;
+      padding: 20px;
+      align-items: start;
+    }
+
+    .hero-copy {
+      display: grid;
+      gap: 8px;
+    }
+
+    .hero-stats {
+      align-self: stretch;
+    }
+
+    .stage-panel {
+      padding: 14px;
+    }
+
+    .stage {
+      min-height: auto;
+      border-radius: 28px;
+      overflow: hidden;
+    }
+
+    .stage-top {
+      padding: 8px 10px 14px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .stage-copy {
+      display: grid;
+      gap: 6px;
+    }
+
+    .stage-title {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    .stage-tip {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .stage-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .canvas-wrap {
+      padding: 0;
+    }
+
+    .action-dock {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .action-row {
+      display: grid;
+      grid-template-columns: minmax(220px, 1.5fr) repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .dock-drop {
+      min-width: 0;
+    }
+
+    .panel-toggle {
+      min-height: 58px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .panel-toggle:hover,
+    .panel-toggle.active {
+      background: rgba(255, 133, 80, 0.18);
+      border-color: rgba(255, 133, 80, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .dock-note {
+      margin: 0;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .mirror-button {
+      display: none;
+      margin-top: 0;
+    }
+
+    .drawer-scrim {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 7, 12, 0.64);
+      backdrop-filter: blur(8px);
+      z-index: 40;
+    }
+
+    .drawer {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translate(-50%, 18px);
+      width: min(980px, calc(100% - 24px));
+      max-height: min(82vh, 880px);
+      overflow-y: auto;
+      padding: 18px;
+      z-index: 50;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+    }
+
+    .drawer.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, 0);
+    }
+
+    .drawer-wide {
+      width: min(1120px, calc(100% - 24px));
+    }
+
+    .drawer-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .drawer-title {
+      margin: 4px 0 0;
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    .drawer-close {
+      min-height: 40px;
+      padding: 0 16px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .drawer-grid,
+    .records-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .records-column {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .page.game-layout {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .page.game-layout .left-panel {
+      display: none;
+    }
+
+    .page.game-layout .right-panel {
+      display: none;
+    }
+
+    .page.game-layout .center-panel {
+      width: 100%;
+    }
+
+    .page.game-layout .center-panel .stage {
+      min-height: auto;
+    }
+
+    .page.game-layout .mobile-drop-button {
+      display: none !important;
+    }
+
+    .page.game-layout .hud-row {
+      position: static;
+      inset: auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      padding: 0 14px 12px;
+      pointer-events: auto;
+    }
+
+    .page.game-layout .hud-chip {
+      min-width: 0;
+    }
+
+    .hero-copy {
+      display: grid;
+      gap: 8px;
+      align-content: start;
+    }
+
+    .hero-stats {
+      align-self: stretch;
+    }
+
+    .stage-shell {
+      padding: 14px;
+    }
+
+    @media (max-width: 1140px) {
+      .hero-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .action-row {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .dock-drop {
+        grid-column: 1 / -1;
+      }
+
+      .drawer-grid,
+      .records-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .drawer .grid-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 10px;
+      }
+
+      .hero-bar,
+      .action-dock,
+      .drawer {
+        padding: 12px;
+      }
+
+      .headline {
+        font-size: 24px;
+      }
+
+      .resource-bar,
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      canvas {
+        height: clamp(320px, 46vh, 420px);
+      }
+
+      .stage-top {
+        padding: 4px 4px 10px;
+      }
+
+      .stage-title {
+        font-size: 22px;
+      }
+
+      .stage-tip,
+      .subline {
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .hud-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      .hud-chip {
+        min-width: 0;
+        padding: 7px 8px;
+        font-size: 10px;
+      }
+
+      .hud-chip strong {
+        font-size: 13px;
+      }
+
+      .action-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .panel-toggle {
+        min-height: 44px;
+        font-size: 12px;
+      }
+
+      .mirror-button {
+        display: block;
+      }
+
+      .action-dock {
+        position: sticky;
+        bottom: 6px;
+        z-index: 8;
+      }
+
+      .drawer {
+        width: calc(100% - 12px);
+        bottom: 8px;
+        max-height: 84vh;
+      }
+
+      .drawer-title {
+        font-size: 25px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .canvas-wrap {
+        padding: 8px 8px 10px;
+      }
+
+      canvas {
+        height: clamp(300px, 42vh, 360px);
+      }
+
+      .hero-bar,
+      .stage-panel,
+      .action-dock {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="panel left-panel">
+      <div class="stack">
+        <div>
+          <p class="section-title">Friends</p>
+          <h1 class="headline">扔掉一个朋友</h1>
+          <p class="subline">
+            先在中央区域把朋友拖到悬崖边，再点击左边按钮把他扔下去。朋友一路下坠时会撞上机关，按不同部位结算伤害和金币，再用金币升级身体、科技和机关。
+          </p>
+        </div>
+
+        <div class="resource-bar">
+          <div class="resource-card">
+            <div class="label">Coins</div>
+            <div class="value" id="coinValue">0</div>
+          </div>
+          <div class="resource-card">
+            <div class="label">Throws</div>
+            <div class="value" id="throwValue">0</div>
+          </div>
+          <div class="resource-card">
+            <div class="label">Best</div>
+            <div class="value" id="bestValue">0</div>
+          </div>
+        </div>
+
+        <button class="drop-button" id="dropButton" type="button">把朋友扔下悬崖</button>
+
+        <div>
+          <p class="section-title">Friend Locker</p>
+          <div class="grid-list" id="friendList"></div>
+        </div>
+
+        <div class="custom-card">
+          <p class="section-title">Custom Friend</p>
+          <div class="input-row">
+            <input id="customNameInput" type="text" maxlength="18" placeholder="输入朋友名字" />
+            <button class="small-button primary" id="saveCustomButton" type="button">保存</button>
+          </div>
+          <div class="input-row">
+            <input id="customLookInput" type="text" maxlength="6" placeholder="昵称缩写，例如 老王" />
+            <button class="small-button" id="applyCustomButton" type="button">立即使用</button>
+          </div>
+          <div class="tiny-note">
+            自定义朋友会作为一个可重复修改的角色存在，不占额外角色位。
+          </div>
+        </div>
+
+        <div class="board-card">
+          <p class="section-title">Run Summary</p>
+          <div class="summary-total" id="summaryTotal">
+            先把朋友拖到悬崖边，再开始第一轮扔人赚钱。
+          </div>
+          <div class="summary-list" id="summaryList"></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="panel center-panel">
+      <div class="stage">
+        <div class="stage-top">
+          <p class="section-title">Cliff Drop Arena</p>
+        </div>
+        <div class="canvas-wrap">
+          <div class="hud-row">
+            <div class="hud-chip">当前朋友: <strong id="currentFriendLabel">-</strong></div>
+            <div class="hud-chip">本轮金币: <strong id="runGoldLabel">0</strong></div>
+            <div class="hud-chip">身体收益: <strong id="bodyBoostLabel">x1.00</strong></div>
+            <div class="hud-chip">科技收益: <strong id="techBoostLabel">x1.00</strong></div>
+          </div>
+          <canvas id="gameCanvas" width="620" height="700" aria-label="Drop a Friend game scene"></canvas>
+          <button class="mobile-drop-button" id="mobileDropButton" type="button">把朋友扔下悬崖</button>
+        </div>
+        <div class="scene-note" id="sceneMessage">
+          先拖住朋友，把他摆到悬崖边发光区域里。摆好之后，左边按钮才会解锁。
+        </div>
+      </div>
+    </main>
+
+    <aside class="panel right-panel">
+      <div class="stack">
+        <div>
+          <p class="section-title">Body Upgrades</p>
+          <div class="grid-list" id="upgradeList"></div>
+        </div>
+
+        <div>
+          <p class="section-title">Tech Lab</p>
+          <div class="grid-list" id="techList"></div>
+        </div>
+
+        <div>
+          <p class="section-title">Trap Workshop</p>
+          <div class="grid-list" id="trapList"></div>
+        </div>
+
+        <div class="board-card">
+          <p class="section-title">Damage Ledger</p>
+          <div class="damage-list" id="damageList"></div>
+        </div>
+
+        <div class="board-card">
+          <p class="section-title">Gold Leaderboard</p>
+          <div class="leaderboard-list" id="leaderboardList"></div>
+        </div>
+
+        <div class="board-card">
+          <p class="section-title">Battle Log</p>
+          <div class="log-list" id="logList"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    (function () {
+      var STORAGE_KEY = "drop-a-friend-state-v3";
+      var LEGACY_KEYS = ["drop-a-friend-state-v2", "drop-a-friend-state-v1"];
+
+      var WORLD = {
+        width: 900,
+        height: 3380,
+        ledgeY: 240,
+        shaftLeft: 290,
+        shaftRight: 610,
+        holdX: 140,
+        holdY: 180,
+        placeX: 260,
+        placeY: 195,
+        floorY: 3160,
+      };
+
+      var bodyParts = [
+        { key: "head", label: "头", icon: "头", baseCost: 54, color: "#ffd6b3" },
+        { key: "arms", label: "胳膊", icon: "臂", baseCost: 58, color: "#9fdcff" },
+        { key: "torso", label: "躯干", icon: "躯", baseCost: 72, color: "#ff9aad" },
+        { key: "legs", label: "腿", icon: "腿", baseCost: 64, color: "#aaf3c5" },
+      ];
+
+      var techCatalog = [
+        { key: "magnet", name: "吸金科技", desc: "所有金币收益每级 +12%。", baseCost: 120, icon: "磁" },
+        { key: "crit", name: "暴击研究", desc: "暴击率每级 +5%，暴击倍率每级 +15%。", baseCost: 150, icon: "暴" },
+        { key: "salvage", name: "回收无人机", desc: "每次命中额外回收固定金币。", baseCost: 170, icon: "机" },
+        { key: "lab", name: "疯狂实验", desc: "所有机关收益每级 +10%。", baseCost: 210, icon: "科" },
+      ];
+
+      var trapCatalog = [
+        {
+          key: "bomb",
+          name: "炸弹桶",
+          color: "#ff8458",
+          icon: "爆",
+          unlockCost: 0,
+          levelCost: 82,
+          baseDamage: { head: 14, arms: 9, torso: 20, legs: 11 },
+        },
+        {
+          key: "spikes",
+          name: "地刺",
+          color: "#8edcff",
+          icon: "刺",
+          unlockCost: 180,
+          levelCost: 98,
+          baseDamage: { head: 8, arms: 14, torso: 12, legs: 24 },
+        },
+        {
+          key: "cactus",
+          name: "仙人掌",
+          color: "#7ef3a8",
+          icon: "掌",
+          unlockCost: 280,
+          levelCost: 118,
+          baseDamage: { head: 9, arms: 12, torso: 15, legs: 16 },
+        },
+        {
+          key: "hedgehog",
+          name: "刺猬轮",
+          color: "#ffd56c",
+          icon: "猬",
+          unlockCost: 420,
+          levelCost: 145,
+          baseDamage: { head: 13, arms: 18, torso: 16, legs: 19 },
+        },
+        {
+          key: "crusher",
+          name: "落石机",
+          color: "#d4c6ff",
+          icon: "石",
+          unlockCost: 620,
+          levelCost: 176,
+          baseDamage: { head: 22, arms: 13, torso: 27, legs: 12 },
+        },
+      ];
+
+      var friendCatalog = [
+        { id: "friend-paper", name: "纸片朋友", look: "纸", unlockCost: 0, yieldBonus: 1, suit: "#2c2835", accent: "#ff797d", hair: "#352732" },
+        { id: "friend-office", name: "打工朋友", look: "工", unlockCost: 280, yieldBonus: 1.08, suit: "#25334c", accent: "#7dd2ff", hair: "#1b2235" },
+        { id: "friend-gym", name: "健身朋友", look: "猛", unlockCost: 620, yieldBonus: 1.18, suit: "#233629", accent: "#86f1b7", hair: "#3a2b22" },
+        { id: "friend-rich", name: "氪金朋友", look: "豪", unlockCost: 980, yieldBonus: 1.32, suit: "#452830", accent: "#ffc560", hair: "#2c1d25" },
+        { id: "friend-boss", name: "老板朋友", look: "总", unlockCost: 1480, yieldBonus: 1.48, suit: "#302541", accent: "#d8bcff", hair: "#20172c" },
+        { id: "custom-friend", name: "自定义朋友", look: "友", unlockCost: 0, yieldBonus: 1.12, suit: "#2f2c3e", accent: "#ff9cb2", hair: "#232033", custom: true },
+      ];
+
+      // shaftLeft=290 shaftRight=610 中心=450 可用范围约[320,580]
+      var trapSlots = [
+        { x: 450, y: 380, size: 32 },
+        { x: 370, y: 590, size: 30 },
+        { x: 530, y: 810, size: 32 },
+        { x: 420, y: 1040, size: 34 },
+        { x: 350, y: 1270, size: 30 },
+        { x: 510, y: 1510, size: 32 },
+        { x: 440, y: 1740, size: 34 },
+        { x: 360, y: 1970, size: 30 },
+        { x: 520, y: 2200, size: 32 },
+        { x: 430, y: 2430, size: 34 },
+        { x: 355, y: 2660, size: 30 },
+        { x: 505, y: 2900, size: 32 },
+      ];
+
+      var defaultState = {
+        coins: 260,
+        totalCoins: 260,
+        totalThrows: 0,
+        bestRun: 0,
+        currentFriendId: "friend-paper",
+        unlockedFriends: ["friend-paper", "custom-friend"],
+        bodyLevels: { head: 0, arms: 0, torso: 0, legs: 0 },
+        techLevels: { magnet: 0, crit: 0, salvage: 0, lab: 0 },
+        trapLevels: buildDefaultTrapLevels(),
+        customFriend: { name: "自定义朋友", look: "友" },
+        lastRun: null,
+        leaderboard: [
+          { name: "悬崖经纪人", coins: 1260 },
+          { name: "刺猬导演", coins: 1850 },
+          { name: "机关会计", coins: 2440 },
+          { name: "暴击工程师", coins: 3160 },
+          { name: "深坑大亨", coins: 4020 },
+        ],
+        logs: [
+          "系统准备完毕。先把朋友拖到悬崖边，再把他扔下去。",
+        ],
+      };
+
+      function buildDefaultTrapLevels() {
+        var result = {};
+        for (var i = 0; i < trapCatalog.length; i += 1) {
+          result[trapCatalog[i].key] = { unlocked: i === 0, level: i === 0 ? 1 : 0 };
+        }
+        return result;
+      }
+
+      var canvas = document.getElementById("gameCanvas");
+      var ctx = canvas.getContext("2d");
+      var coinValue = document.getElementById("coinValue");
+      var throwValue = document.getElementById("throwValue");
+      var bestValue = document.getElementById("bestValue");
+      var currentFriendLabel = document.getElementById("currentFriendLabel");
+      var runGoldLabel = document.getElementById("runGoldLabel");
+      var bodyBoostLabel = document.getElementById("bodyBoostLabel");
+      var techBoostLabel = document.getElementById("techBoostLabel");
+      var sceneMessage = document.getElementById("sceneMessage");
+      var friendList = document.getElementById("friendList");
+      var upgradeList = document.getElementById("upgradeList");
+      var techList = document.getElementById("techList");
+      var trapList = document.getElementById("trapList");
+      var damageList = document.getElementById("damageList");
+      var leaderboardList = document.getElementById("leaderboardList");
+      var logList = document.getElementById("logList");
+      var summaryTotal = document.getElementById("summaryTotal");
+      var summaryList = document.getElementById("summaryList");
+      var dropButton = document.getElementById("dropButton");
+      var mobileDropButton = document.getElementById("mobileDropButton");
+      var customNameInput = document.getElementById("customNameInput");
+      var customLookInput = document.getElementById("customLookInput");
+      var saveCustomButton = document.getElementById("saveCustomButton");
+      var applyCustomButton = document.getElementById("applyCustomButton");
+
+      var viewport = { width: canvas.clientWidth, height: canvas.clientHeight };
+      var query = typeof URLSearchParams === "function" ? new URLSearchParams(window.location.search) : null;
+      var state = loadState();
+      var running = false;
+      var scene = createIdleScene();
+      var lastFrameTime = 0;
+      var dragState = { active: false, offsetX: 0, offsetY: 0 };
+      var transient = {
+        screenShake: 0,
+        screenFlash: 0,
+        bodyPulse: createBodyPulseMap(),
+      };
+
+      function createBodyPulseMap() {
+        var map = {};
+        for (var i = 0; i < bodyParts.length; i += 1) {
+          map[bodyParts[i].key] = 0;
+        }
+        return map;
+      }
+
+      function clone(data) {
+        return JSON.parse(JSON.stringify(data));
+      }
+
+      function mergeLoadedState(parsed) {
+        var base = clone(defaultState);
+        return {
+          coins: typeof parsed.coins === "number" ? parsed.coins : base.coins,
+          totalCoins: typeof parsed.totalCoins === "number" ? parsed.totalCoins : base.totalCoins,
+          totalThrows: typeof parsed.totalThrows === "number" ? parsed.totalThrows : base.totalThrows,
+          bestRun: typeof parsed.bestRun === "number" ? parsed.bestRun : base.bestRun,
+          currentFriendId: parsed.currentFriendId || base.currentFriendId,
+          unlockedFriends: Array.isArray(parsed.unlockedFriends) ? parsed.unlockedFriends : base.unlockedFriends,
+          bodyLevels: shallowMerge(base.bodyLevels, parsed.bodyLevels),
+          techLevels: shallowMerge(base.techLevels, parsed.techLevels),
+          trapLevels: shallowMerge(base.trapLevels, parsed.trapLevels),
+          customFriend: shallowMerge(base.customFriend, parsed.customFriend),
+          lastRun: parsed.lastRun || null,
+          leaderboard: Array.isArray(parsed.leaderboard) ? parsed.leaderboard : base.leaderboard,
+          logs: Array.isArray(parsed.logs) ? parsed.logs : base.logs,
+        };
+      }
+
+      function shallowMerge(base, extra) {
+        var result = clone(base);
+        if (!extra) return result;
+        for (var key in extra) {
+          if (Object.prototype.hasOwnProperty.call(extra, key)) {
+            if (typeof base[key] === "object" && base[key] !== null && !Array.isArray(base[key])) {
+              result[key] = shallowMerge(base[key], extra[key]);
+            } else {
+              result[key] = extra[key];
+            }
+          }
+        }
+        return result;
+      }
+
+      function loadState() {
+        try {
+          var raw = localStorage.getItem(STORAGE_KEY);
+          if (raw) return mergeLoadedState(JSON.parse(raw));
+
+          for (var i = 0; i < LEGACY_KEYS.length; i += 1) {
+            var legacyRaw = localStorage.getItem(LEGACY_KEYS[i]);
+            if (legacyRaw) return mergeLoadedState(JSON.parse(legacyRaw));
+          }
+        } catch (_error) {
+        }
+        return clone(defaultState);
+      }
+
+      function saveState() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      }
+
+      function createPartTotals() {
+        var totals = {};
+        for (var i = 0; i < bodyParts.length; i += 1) {
+          totals[bodyParts[i].key] = { coins: 0, damage: 0, hits: 0 };
+        }
+        return totals;
+      }
+
+      function getFriend(friendId) {
+        var base = friendCatalog[0];
+        for (var i = 0; i < friendCatalog.length; i += 1) {
+          if (friendCatalog[i].id === friendId) {
+            base = friendCatalog[i];
+            break;
+          }
+        }
+        if (base.id !== "custom-friend") return base;
+        return {
+          id: base.id,
+          name: state.customFriend.name || "自定义朋友",
+          look: state.customFriend.look || "友",
+          unlockCost: 0,
+          yieldBonus: base.yieldBonus,
+          suit: base.suit,
+          accent: base.accent,
+          hair: base.hair,
+          custom: true,
+        };
+      }
+
+      function getCurrentFriend() {
+        return getFriend(state.currentFriendId);
+      }
+
+      function logEvent(text) {
+        var time = new Date().toLocaleTimeString("zh-CN", { hour12: false });
+        state.logs.unshift(time + " " + text);
+        state.logs = state.logs.slice(0, 14);
+      }
+
+      function getBodyCoinMultiplier(partKey) {
+        return 1 + state.bodyLevels[partKey] * 0.42;
+      }
+
+      function getBodyBoostDisplay() {
+        var total = 0;
+        for (var key in state.bodyLevels) {
+          total += state.bodyLevels[key];
+        }
+        return 1 + total * 0.08;
+      }
+
+      function getTechCoinMultiplier() {
+        return 1 + state.techLevels.magnet * 0.12 + state.techLevels.lab * 0.1;
+      }
+
+      function getCritChance() {
+        return 0.08 + state.techLevels.crit * 0.05;
+      }
+
+      function getCritMultiplier() {
+        return 1.7 + state.techLevels.crit * 0.15;
+      }
+
+      function getFlatSalvageBonus() {
+        return state.techLevels.salvage * 8;
+      }
+
+      function getBodyUpgradeCost(partKey) {
+        var part = null;
+        for (var i = 0; i < bodyParts.length; i += 1) {
+          if (bodyParts[i].key === partKey) part = bodyParts[i];
+        }
+        return Math.round(part.baseCost * Math.pow(1.42, state.bodyLevels[partKey]));
+      }
+
+      function getTechUpgradeCost(techKey) {
+        var tech = null;
+        for (var i = 0; i < techCatalog.length; i += 1) {
+          if (techCatalog[i].key === techKey) tech = techCatalog[i];
+        }
+        return Math.round(tech.baseCost * Math.pow(1.46, state.techLevels[techKey]));
+      }
+
+      function getTrapUnlockCost(trap) {
+        return trap.unlockCost;
+      }
+
+      function getTrapUpgradeCost(trapKey) {
+        var trap = null;
+        for (var i = 0; i < trapCatalog.length; i += 1) {
+          if (trapCatalog[i].key === trapKey) trap = trapCatalog[i];
+        }
+        var level = Math.max(1, state.trapLevels[trapKey].level);
+        return Math.round(trap.levelCost * Math.pow(1.34, level - 1));
+      }
+
+      function getFriendUnlockCost(friend) {
+        return friend.unlockCost;
+      }
+
+      function createFriendBody(friend) {
+        var partFlash = {};
+        for (var i = 0; i < bodyParts.length; i += 1) {
+          partFlash[bodyParts[i].key] = 0;
+        }
+        return {
+          style: friend,
+          x: WORLD.holdX,
+          y: WORLD.holdY,
+          vx: 0,
+          vy: 0,
+          rotation: 0,
+          spin: 0,
+          thrown: false,
+          placed: false,
+          partFlash: partFlash,
+        };
+      }
+
+      function buildTrapActors() {
+        var unlocked = [];
+        for (var i = 0; i < trapCatalog.length; i += 1) {
+          if (state.trapLevels[trapCatalog[i].key] && state.trapLevels[trapCatalog[i].key].unlocked) {
+            unlocked.push(trapCatalog[i]);
+          }
+        }
+        if (!unlocked.length) unlocked.push(trapCatalog[0]);
+
+        var actors = [];
+        for (var j = 0; j < trapSlots.length; j += 1) {
+          var trap = unlocked[j % unlocked.length];
+          var slot = trapSlots[j];
+          actors.push({
+            actorId: trap.key + "-" + j,
+            key: trap.key,
+            name: trap.name,
+            icon: trap.icon,
+            color: trap.color,
+            baseDamage: trap.baseDamage,
+            level: state.trapLevels[trap.key].level,
+            x: slot.x,
+            y: slot.y,
+            size: slot.size + state.trapLevels[trap.key].level * 2.5,
+            phase: j * 0.9,
+            pulse: 0,
+            cooldowns: createBodyPulseMap(),
+          });
+        }
+        return actors;
+      }
+
+      function createIdleScene() {
+        var previewCameraY = clamp(WORLD.holdY - 92, 0, WORLD.ledgeY - 60);
+        return {
+          mode: "idle",
+          elapsed: 0,
+          cameraY: previewCameraY,
+          friend: createFriendBody(getCurrentFriend()),
+          traps: buildTrapActors(),
+          particles: [],
+          popups: [],
+          collisions: [],
+          partTotals: createPartTotals(),
+          runCoins: 0,
+          settleTimer: 0,
+        };
+      }
+
+      function createRunScene() {
+        var idleFriend = scene.friend;
+        var runFriend = createFriendBody(getCurrentFriend());
+        runFriend.x = idleFriend.x;
+        runFriend.y = idleFriend.y;
+        runFriend.placed = true;
+        runFriend.thrown = true;
+        runFriend.vx = 7.8 + Math.random() * 1.2;
+        runFriend.vy = -2.4;
+        runFriend.spin = 0.11;
+        return {
+          mode: "dropping",
+          elapsed: 0,
+          cameraY: 0,
+          friend: runFriend,
+          traps: buildTrapActors(),
+          particles: [],
+          popups: [],
+          collisions: [],
+          partTotals: createPartTotals(),
+          runCoins: 0,
+          settleTimer: 0,
+        };
+      }
+
+      function refreshIdleScene() {
+        if (!running) {
+          scene = createIdleScene();
+        }
+      }
+
+      function resizeCanvas() {
+        var rect = canvas.getBoundingClientRect();
+        var dpr = window.devicePixelRatio || 1;
+        var width = Math.max(280, Math.round(rect.width > 1 ? rect.width : (canvas.offsetWidth || canvas.clientWidth || 620)));
+        var height = Math.max(320, Math.round(rect.height > 1 ? rect.height : (canvas.offsetHeight || canvas.clientHeight || 560)));
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        viewport.width = width;
+        viewport.height = height;
+      }
+
+      function getSceneScale() {
+        if (!viewport.width) return 1;
+        return Math.min(1, viewport.width / WORLD.width);
+      }
+
+      function getSceneOffsetX() {
+        return (viewport.width - WORLD.width * getSceneScale()) * 0.5;
+      }
+
+      function getVisibleWorldHeight() {
+        return viewport.height / Math.max(0.42, getSceneScale());
+      }
+
+      function worldToScreenX(worldX) {
+        return getSceneOffsetX() + worldX * getSceneScale();
+      }
+
+      function worldToScreenY(worldY) {
+        return (worldY - scene.cameraY) * getSceneScale();
+      }
+
+      function screenToWorld(point) {
+        var scale = Math.max(0.42, getSceneScale());
+        return {
+          x: (point.x - getSceneOffsetX()) / scale,
+          y: point.y / scale + scene.cameraY,
+        };
+      }
+
+      function getPartNodes(friend) {
+        var cos = Math.cos(friend.rotation);
+        var sin = Math.sin(friend.rotation);
+        var offsets = {
+          head: { x: 0, y: -54, r: 24 },
+          arms: { x: 0, y: -2, r: 28 },
+          torso: { x: 0, y: 20, r: 24 },
+          legs: { x: 0, y: 74, r: 30 },
+        };
+        var nodes = {};
+        for (var i = 0; i < bodyParts.length; i += 1) {
+          var key = bodyParts[i].key;
+          var offset = offsets[key];
+          nodes[key] = {
+            x: friend.x + offset.x * cos - offset.y * sin,
+            y: friend.y + offset.x * sin + offset.y * cos,
+            r: offset.r,
+          };
+        }
+        return nodes;
+      }
+
+      function updateButtons() {
+        var ready = !running && scene.friend && scene.friend.placed;
+        dropButton.disabled = !ready;
+        mobileDropButton.disabled = !ready;
+      }
+
+      function primeFriendAtCliff() {
+        if (!scene || !scene.friend) return;
+        scene.friend.x = WORLD.placeX;
+        scene.friend.y = WORLD.placeY;
+        scene.friend.placed = true;
+        scene.friend.rotation = 0;
+        updateButtons();
+      }
+
+      function primeImpactDemo() {
+        running = true;
+        scene = createRunScene();
+        var actor = scene.traps[0];
+        scene.friend.x = actor.x - 10;
+        scene.friend.y = actor.y - 18;
+        scene.friend.vx = 0.2;
+        scene.friend.vy = 0.6;
+        scene.friend.rotation = 0.26;
+        scene.friend.spin = 0.04;
+        var visibleWorldHeight = getVisibleWorldHeight();
+        var nodes = getPartNodes(scene.friend);
+        processCollision(actor, "legs", nodes.legs);
+        scene.friend.x = actor.x + 18;
+        scene.friend.y = actor.y + 24;
+        scene.friend.vx = 0;
+        scene.friend.vy = 0;
+        scene.friend.rotation = 0.34;
+        scene.friend.spin = 0;
+        scene.demoHold = 72;
+        scene.cameraY = clamp(
+          actor.y - visibleWorldHeight * 0.34,
+          0,
+          Math.max(0, WORLD.height - visibleWorldHeight)
+        );
+        updateButtons();
+      }
+
+      function maybeStartDemoMode() {
+        if (!query) return;
+        var demo = query.get("demo");
+        if (!demo) return;
+        if (demo === "impact") {
+          primeImpactDemo();
+          return;
+        }
+        primeFriendAtCliff();
+        if (demo === "drop") {
+          window.setTimeout(function () {
+            if (!running && scene.friend && scene.friend.placed) {
+              startDrop();
+            }
+          }, 240);
+        }
+      }
+
+      function updateLeaderboard() {
+        var list = [];
+        for (var i = 0; i < state.leaderboard.length; i += 1) {
+          if (state.leaderboard[i].name !== "你") {
+            list.push(state.leaderboard[i]);
+          }
+        }
+        list.push({ name: "你", coins: state.totalCoins, me: true });
+        list.sort(function (a, b) { return b.coins - a.coins; });
+        state.leaderboard = list.slice(0, 10);
+      }
+
+      function renderHud() {
+        coinValue.textContent = state.coins.toLocaleString("en-US");
+        throwValue.textContent = state.totalThrows.toLocaleString("en-US");
+        bestValue.textContent = state.bestRun.toLocaleString("en-US");
+        currentFriendLabel.textContent = getCurrentFriend().name;
+        runGoldLabel.textContent = running ? scene.runCoins.toLocaleString("en-US") : "0";
+        bodyBoostLabel.textContent = "x" + getBodyBoostDisplay().toFixed(2);
+        techBoostLabel.textContent = "x" + getTechCoinMultiplier().toFixed(2);
+        customNameInput.value = state.customFriend.name || "";
+        customLookInput.value = state.customFriend.look || "";
+        updateButtons();
+      }
+
+      function renderFriendList() {
+        friendList.innerHTML = "";
+        for (var i = 0; i < friendCatalog.length; i += 1) {
+          (function () {
+            var friend = friendCatalog[i];
+            var displayFriend = friend.id === "custom-friend" ? getFriend(friend.id) : friend;
+            var unlocked = state.unlockedFriends.indexOf(friend.id) !== -1 || friend.unlockCost === 0;
+            var active = state.currentFriendId === friend.id;
+            var card = document.createElement("div");
+            card.className = "friend-card" + (active ? " active" : "");
+            card.innerHTML = [
+              '<div class="friend-top">',
+              '<div class="avatar-dot">' + displayFriend.look + "</div>",
+              "<div>",
+              '<div class="friend-name">' + displayFriend.name + "</div>",
+              '<div class="friend-meta">' + (unlocked ? ("收益倍率 x" + displayFriend.yieldBonus.toFixed(2)) : ("解锁价格 " + getFriendUnlockCost(friend) + " 金币")) + "</div>",
+              "</div>",
+              "</div>",
+              '<div class="row-actions">',
+              '<span class="pill ' + (unlocked ? "good" : "locked") + '">' + (unlocked ? "Ready" : "Locked") + "</span>",
+              "</div>",
+            ].join("");
+            var button = document.createElement("button");
+            button.type = "button";
+            button.className = "small-button " + (unlocked ? "primary" : "");
+            button.textContent = unlocked ? (active ? "当前已选" : "选择") : "解锁";
+            button.disabled = running || (unlocked && active);
+            button.addEventListener("click", function () {
+              if (unlocked) {
+                selectFriend(friend.id);
+              } else {
+                unlockFriend(friend.id);
+              }
+            });
+            card.querySelector(".row-actions").appendChild(button);
+            friendList.appendChild(card);
+          })();
+        }
+      }
+
+      function renderUpgradeList() {
+        upgradeList.innerHTML = "";
+        for (var i = 0; i < bodyParts.length; i += 1) {
+          (function () {
+            var part = bodyParts[i];
+            var level = state.bodyLevels[part.key];
+            var cost = getBodyUpgradeCost(part.key);
+            var card = document.createElement("div");
+            card.className = "upgrade-card";
+            card.innerHTML = [
+              '<div class="stat-row">',
+              "<div>",
+              '<div class="friend-name">' + part.label + "</div>",
+              '<div class="friend-meta">Lv.' + level + "，该部位金币倍率 x" + getBodyCoinMultiplier(part.key).toFixed(2) + "</div>",
+              "</div>",
+              '<div class="avatar-dot" style="background: linear-gradient(135deg, ' + part.color + ', rgba(255,255,255,0.08));">' + part.icon + "</div>",
+              "</div>",
+              '<div class="row-actions"><span class="pill">Cost ' + cost + "</span></div>",
+            ].join("");
+            var button = document.createElement("button");
+            button.type = "button";
+            button.className = "buy-button";
+            button.textContent = "升级";
+            button.disabled = running || state.coins < cost;
+            button.addEventListener("click", function () {
+              upgradeBody(part.key);
+            });
+            card.querySelector(".row-actions").appendChild(button);
+            upgradeList.appendChild(card);
+          })();
+        }
+      }
+
+      function renderTechList() {
+        techList.innerHTML = "";
+        for (var i = 0; i < techCatalog.length; i += 1) {
+          (function () {
+            var tech = techCatalog[i];
+            var level = state.techLevels[tech.key];
+            var cost = getTechUpgradeCost(tech.key);
+            var card = document.createElement("div");
+            card.className = "tech-card";
+            card.innerHTML = [
+              '<div class="stat-row">',
+              "<div>",
+              '<div class="friend-name">' + tech.name + "</div>",
+              '<div class="friend-meta">' + tech.desc + " 当前 Lv." + level + "</div>",
+              "</div>",
+              '<div class="avatar-dot">' + tech.icon + "</div>",
+              "</div>",
+              '<div class="row-actions"><span class="pill">Cost ' + cost + "</span></div>",
+            ].join("");
+            var button = document.createElement("button");
+            button.type = "button";
+            button.className = "buy-button";
+            button.textContent = "升级科技";
+            button.disabled = running || state.coins < cost;
+            button.addEventListener("click", function () {
+              upgradeTech(tech.key);
+            });
+            card.querySelector(".row-actions").appendChild(button);
+            techList.appendChild(card);
+          })();
+        }
+      }
+
+      function renderTrapList() {
+        trapList.innerHTML = "";
+        for (var i = 0; i < trapCatalog.length; i += 1) {
+          (function () {
+            var trap = trapCatalog[i];
+            var trapState = state.trapLevels[trap.key];
+            var unlocked = trapState.unlocked;
+            var cost = unlocked ? getTrapUpgradeCost(trap.key) : getTrapUnlockCost(trap);
+            var card = document.createElement("div");
+            card.className = "trap-card";
+            card.innerHTML = [
+              '<div class="stat-row">',
+              "<div>",
+              '<div class="friend-name">' + trap.name + "</div>",
+              '<div class="friend-meta">' + (unlocked ? ("Lv." + trapState.level + "，会重复部署到整条悬崖里。") : "解锁后会加入沿途机关链。") + "</div>",
+              "</div>",
+              '<div class="avatar-dot" style="background: linear-gradient(135deg, ' + trap.color + ', rgba(255,255,255,0.08));">' + trap.icon + "</div>",
+              "</div>",
+              '<div class="row-actions"><span class="pill ' + (unlocked ? "good" : "locked") + '">' + (unlocked ? ("Lv." + trapState.level) : "Locked") + "</span><span class=\"pill\">Cost " + cost + "</span></div>",
+            ].join("");
+            var button = document.createElement("button");
+            button.type = "button";
+            button.className = "buy-button";
+            button.textContent = unlocked ? "升级机关" : "解锁机关";
+            button.disabled = running || state.coins < cost;
+            button.addEventListener("click", function () {
+              unlockOrUpgradeTrap(trap.key);
+            });
+            card.querySelector(".row-actions").appendChild(button);
+            trapList.appendChild(card);
+          })();
+        }
+      }
+
+      function renderDamageLedger() {
+        damageList.innerHTML = "";
+        if (!state.lastRun || !state.lastRun.partTotals) {
+          var empty = document.createElement("div");
+          empty.className = "damage-row";
+          empty.innerHTML = "<span>还没有任何伤害记录。</span><strong>0</strong>";
+          damageList.appendChild(empty);
+          return;
+        }
+
+        for (var i = 0; i < bodyParts.length; i += 1) {
+          var part = bodyParts[i];
+          var entry = state.lastRun.partTotals[part.key] || { damage: 0, hits: 0, coins: 0 };
+          var row = document.createElement("div");
+          row.className = "damage-row";
+          row.innerHTML = "<span>" + part.label + " 受伤 " + entry.damage + " 点，命中 " + entry.hits + " 次</span><strong>+" + entry.coins + "</strong>";
+          damageList.appendChild(row);
+        }
+      }
+
+      function renderSummary() {
+        summaryList.innerHTML = "";
+        if (!state.lastRun) {
+          summaryTotal.innerHTML = "先把朋友拖到悬崖边，再开始第一轮扔人赚钱。";
+          return;
+        }
+
+        summaryTotal.innerHTML =
+          "<div>" + state.lastRun.friendName + " 本轮总计爆出 <strong>" + state.lastRun.totalCoins + "</strong> 金币。</div>" +
+          "<div>补偿金币：" + (state.lastRun.pityCoins || 0) + "，有效命中：" + state.lastRun.collisions.length + " 次。</div>";
+
+        for (var i = 0; i < Math.min(6, state.lastRun.collisions.length); i += 1) {
+          var collision = state.lastRun.collisions[i];
+          var row = document.createElement("div");
+          row.className = "summary-row";
+          row.innerHTML = "<span>" + collision.partLabel + " 撞上 " + collision.trapName + (collision.crit ? " · 暴击" : "") + "</span><strong>+" + collision.coins + "</strong>";
+          summaryList.appendChild(row);
+        }
+      }
+
+      function renderLeaderboard() {
+        updateLeaderboard();
+        leaderboardList.innerHTML = "";
+        for (var i = 0; i < state.leaderboard.length; i += 1) {
+          var entry = state.leaderboard[i];
+          var row = document.createElement("div");
+          row.className = "leaderboard-row" + (entry.me ? " me" : "");
+          row.innerHTML = "<strong>" + (i + 1) + "</strong><span>" + entry.name + "</span><strong>" + entry.coins + "</strong>";
+          leaderboardList.appendChild(row);
+        }
+      }
+
+      function renderLogs() {
+        logList.innerHTML = "";
+        for (var i = 0; i < state.logs.length; i += 1) {
+          var row = document.createElement("div");
+          row.className = "log-row";
+          row.textContent = state.logs[i];
+          logList.appendChild(row);
+        }
+      }
+
+      function bootstrapGameLayout() {
+        var page = document.querySelector(".page");
+        var leftPanel = document.querySelector(".left-panel");
+        var centerPanel = document.querySelector(".center-panel");
+        var rightPanel = document.querySelector(".right-panel");
+        if (!page || !leftPanel || !centerPanel || !rightPanel) return;
+        if (page.classList.contains("game-layout")) return;
+
+        var leftStack = leftPanel.querySelector(".stack");
+        var centerStage = centerPanel.querySelector(".stage");
+        var resourceBar = leftStack ? leftStack.querySelector(".resource-bar") : null;
+        var introBlock = leftStack ? leftStack.querySelector("div") : null;
+        var friendSection = friendList ? friendList.parentElement : null;
+        var customCard = customNameInput ? customNameInput.closest(".custom-card") : null;
+        var summaryCard = summaryTotal ? summaryTotal.closest(".board-card") : null;
+        var damageCard = damageList ? damageList.closest(".board-card") : null;
+        var leaderboardCard = leaderboardList ? leaderboardList.closest(".board-card") : null;
+        var logCard = logList ? logList.closest(".board-card") : null;
+        var upgradeSection = upgradeList ? upgradeList.parentElement : null;
+        var techSection = techList ? techList.parentElement : null;
+        var trapSection = trapList ? trapList.parentElement : null;
+        var canvasWrap = canvas ? canvas.parentElement : null;
+        var stageTop = centerStage ? centerStage.querySelector(".stage-top") : null;
+        var stageShell = document.createElement("div");
+        var actionDock = document.createElement("section");
+        var actionRow = document.createElement("div");
+        var dockNote = document.createElement("p");
+        var scrim = document.createElement("div");
+        var drawers = {};
+        var toggles = {};
+        var activeDrawer = null;
+
+        page.classList.add("game-layout");
+        leftPanel.classList.add("hero-bar");
+        centerPanel.classList.add("stage-panel");
+        actionDock.className = "panel action-dock";
+        actionRow.className = "action-row";
+        dockNote.className = "dock-note";
+        dockNote.textContent = "Open panels to pick a friend, upgrade parts, unlock traps, and check your coin records.";
+        scrim.className = "drawer-scrim";
+        scrim.hidden = true;
+
+        if (resourceBar) {
+          resourceBar.classList.add("hero-stats");
+        }
+        if (introBlock) {
+          introBlock.classList.add("hero-copy");
+          var introTitle = introBlock.querySelector(".headline");
+          var introSubline = introBlock.querySelector(".subline");
+          var sectionTitle = introBlock.querySelector(".section-title");
+          if (sectionTitle) sectionTitle.textContent = "Arcade Drop";
+          if (introTitle) introTitle.textContent = "扔掉一个朋友";
+          if (introSubline) {
+            introSubline.textContent = "挑一个朋友站上悬崖，扔下深坑撞机关赚钱，再拿金币升级身体、科技和陷阱，循环冲更高收益。";
+          }
+        }
+
+        if (centerStage) {
+          stageShell.className = "stage-shell";
+          centerStage.parentNode.insertBefore(stageShell, centerStage);
+          stageShell.appendChild(centerStage);
+        }
+
+        if (stageTop) {
+          stageTop.innerHTML = "";
+          var stageCopy = document.createElement("div");
+          stageCopy.className = "stage-copy";
+          stageCopy.innerHTML = [
+            '<p class="section-title">Cliff Drop Arena</p>',
+            '<h2 class="stage-title">Throw, Crash, Upgrade</h2>',
+            '<p class="stage-tip">Drag your friend to the glowing cliff spot first. Then throw and follow the fall for damage, crits, and coins.</p>'
+          ].join("");
+          var stageBadges = document.createElement("div");
+          stageBadges.className = "stage-badges";
+          stageBadges.innerHTML = [
+            '<span class="pill good">Physics Drop</span>',
+            '<span class="pill">Trap Combos</span>',
+            '<span class="pill">Coin Progression</span>'
+          ].join("");
+          stageTop.appendChild(stageCopy);
+          stageTop.appendChild(stageBadges);
+        }
+
+        if (canvasWrap && mobileDropButton) {
+          mobileDropButton.classList.add("mirror-button");
+        }
+
+        function createDrawer(key, title, wide) {
+          var drawer = document.createElement("section");
+          drawer.className = "panel drawer" + (wide ? " drawer-wide" : "");
+          drawer.dataset.drawer = key;
+          drawer.hidden = true;
+          drawer.innerHTML = [
+            '<div class="drawer-head">',
+            '<div>',
+            '<p class="section-title">Menu</p>',
+            '<h3 class="drawer-title">' + title + "</h3>",
+            "</div>",
+            '<button class="drawer-close" type="button" data-close-drawer="1">Close</button>',
+            "</div>"
+          ].join("");
+          document.body.appendChild(drawer);
+          drawers[key] = drawer;
+          drawer.querySelector("[data-close-drawer]").addEventListener("click", closeDrawer);
+          return drawer;
+        }
+
+        function createToggle(key, label, extraClass) {
+          var button = document.createElement("button");
+          button.type = "button";
+          button.className = (extraClass || "panel-toggle");
+          button.textContent = label;
+          button.dataset.panelTarget = key;
+          button.addEventListener("click", function () {
+            if (activeDrawer === key) {
+              closeDrawer();
+            } else {
+              openDrawer(key);
+            }
+          });
+          toggles[key] = button;
+          return button;
+        }
+
+        function openDrawer(key) {
+          for (var drawerKey in drawers) {
+            var currentDrawer = drawers[drawerKey];
+            var isTarget = drawerKey === key;
+            currentDrawer.hidden = !isTarget;
+            currentDrawer.classList.toggle("open", isTarget);
+          }
+          for (var toggleKey in toggles) {
+            toggles[toggleKey].classList.toggle("active", toggleKey === key);
+          }
+          scrim.hidden = false;
+          activeDrawer = key;
+          resizeCanvas();
+        }
+
+        function closeDrawer() {
+          for (var drawerKey in drawers) {
+            drawers[drawerKey].hidden = true;
+            drawers[drawerKey].classList.remove("open");
+          }
+          for (var toggleKey in toggles) {
+            toggles[toggleKey].classList.remove("active");
+          }
+          scrim.hidden = true;
+          activeDrawer = null;
+          resizeCanvas();
+        }
+
+        scrim.addEventListener("click", closeDrawer);
+
+        var friendDrawer = createDrawer("friends", "Friends", false);
+        var upgradeDrawer = createDrawer("upgrades", "Body Upgrades", false);
+        var techDrawer = createDrawer("tech", "Tech Lab", false);
+        var trapDrawer = createDrawer("traps", "Trap Workshop", false);
+        var recordsDrawer = createDrawer("records", "Run Records", true);
+
+        var friendGrid = document.createElement("div");
+        friendGrid.className = "drawer-grid";
+        var friendColumn = document.createElement("div");
+        friendColumn.className = "records-column";
+        var customColumn = document.createElement("div");
+        customColumn.className = "records-column";
+        if (friendSection) friendColumn.appendChild(friendSection);
+        if (customCard) customColumn.appendChild(customCard);
+        friendGrid.appendChild(friendColumn);
+        friendGrid.appendChild(customColumn);
+        friendDrawer.appendChild(friendGrid);
+
+        if (upgradeSection) upgradeDrawer.appendChild(upgradeSection);
+        if (techSection) techDrawer.appendChild(techSection);
+        if (trapSection) trapDrawer.appendChild(trapSection);
+
+        var recordsGrid = document.createElement("div");
+        recordsGrid.className = "records-grid";
+        var recordsColumnA = document.createElement("div");
+        var recordsColumnB = document.createElement("div");
+        recordsColumnA.className = "records-column";
+        recordsColumnB.className = "records-column";
+        if (summaryCard) recordsColumnA.appendChild(summaryCard);
+        if (damageCard) recordsColumnA.appendChild(damageCard);
+        if (leaderboardCard) recordsColumnB.appendChild(leaderboardCard);
+        if (logCard) recordsColumnB.appendChild(logCard);
+        recordsGrid.appendChild(recordsColumnA);
+        recordsGrid.appendChild(recordsColumnB);
+        recordsDrawer.appendChild(recordsGrid);
+
+        actionRow.appendChild(createToggle("friends", "Friends"));
+        actionRow.appendChild(createToggle("upgrades", "Body"));
+        actionRow.appendChild(createToggle("tech", "Tech"));
+        actionRow.appendChild(createToggle("traps", "Traps"));
+        actionRow.appendChild(createToggle("records", "Records"));
+
+        if (dropButton) {
+          dropButton.classList.add("dock-drop");
+          actionRow.insertBefore(dropButton, actionRow.firstChild);
+        }
+
+        actionDock.appendChild(actionRow);
+        actionDock.appendChild(dockNote);
+
+        if (centerStage && centerStage.parentNode) {
+          centerStage.parentNode.parentNode.insertBefore(actionDock, centerStage.parentNode.nextSibling);
+        }
+
+        document.body.appendChild(scrim);
+      }
+
+      function renderAll() {
+        renderHud();
+        renderFriendList();
+        renderUpgradeList();
+        renderTechList();
+        renderTrapList();
+        renderDamageLedger();
+        renderSummary();
+        renderLeaderboard();
+        renderLogs();
+      }
+
+      function selectFriend(friendId) {
+        if (state.unlockedFriends.indexOf(friendId) === -1) return;
+        state.currentFriendId = friendId;
+        scene = createIdleScene();
+        dragState.active = false;
+        sceneMessage.textContent = "已切换到 " + getCurrentFriend().name + "。先把他拖到悬崖边。";
+        logEvent("已选择朋友：" + getCurrentFriend().name + "。");
+        saveState();
+        renderAll();
+      }
+
+      function unlockFriend(friendId) {
+        var friend = getFriend(friendId);
+        var cost = getFriendUnlockCost(friend);
+        if (state.coins < cost) return;
+        state.coins -= cost;
+        if (state.unlockedFriends.indexOf(friendId) === -1) {
+          state.unlockedFriends.push(friendId);
+        }
+        state.currentFriendId = friendId;
+        scene = createIdleScene();
+        sceneMessage.textContent = friend.name + " 已解锁。先把他拖到悬崖边。";
+        logEvent("解锁新朋友：" + friend.name + "。");
+        saveState();
+        renderAll();
+      }
+
+      function triggerBodyPulse(partKey) {
+        transient.bodyPulse[partKey] = 40;
+        if (scene.friend && scene.friend.partFlash) {
+          scene.friend.partFlash[partKey] = 36;
+        }
+        if (scene.friend && scene.particles) {
+          var nodes = getPartNodes(scene.friend);
+          var color = "#ffffff";
+          for (var i = 0; i < bodyParts.length; i += 1) {
+            if (bodyParts[i].key === partKey) {
+              color = bodyParts[i].color;
+              break;
+            }
+          }
+          if (nodes[partKey]) {
+            spawnParticles(nodes[partKey].x, nodes[partKey].y, color, 18);
+          }
+        }
+        transient.screenShake = Math.max(transient.screenShake, 7);
+        transient.screenFlash = Math.max(transient.screenFlash, 0.1);
+      }
+
+      function upgradeBody(partKey) {
+        var cost = getBodyUpgradeCost(partKey);
+        if (state.coins < cost) return;
+        state.coins -= cost;
+        state.bodyLevels[partKey] += 1;
+        triggerBodyPulse(partKey);
+        sceneMessage.textContent = bodyLabel(partKey) + " 已升级。下一次撞到机关时会更值钱。";
+        logEvent(bodyLabel(partKey) + " 升到 Lv." + state.bodyLevels[partKey] + "。");
+        saveState();
+        renderAll();
+      }
+
+      function upgradeTech(techKey) {
+        var cost = getTechUpgradeCost(techKey);
+        if (state.coins < cost) return;
+        state.coins -= cost;
+        state.techLevels[techKey] += 1;
+        transient.screenFlash = Math.max(transient.screenFlash, 0.12);
+        sceneMessage.textContent = techName(techKey) + " 已升级，整体收益更高了。";
+        logEvent(techName(techKey) + " 升到 Lv." + state.techLevels[techKey] + "。");
+        saveState();
+        renderAll();
+      }
+
+      function unlockOrUpgradeTrap(trapKey) {
+        var trapState = state.trapLevels[trapKey];
+        if (!trapState) return;
+        var trap = findTrap(trapKey);
+        if (!trapState.unlocked) {
+          var unlockCost = getTrapUnlockCost(trap);
+          if (state.coins < unlockCost) return;
+          state.coins -= unlockCost;
+          trapState.unlocked = true;
+          trapState.level = 1;
+          sceneMessage.textContent = trap.name + " 已加入悬崖陷阱链。";
+          logEvent("解锁机关：" + trap.name + "。");
+        } else {
+          var upgradeCost = getTrapUpgradeCost(trapKey);
+          if (state.coins < upgradeCost) return;
+          state.coins -= upgradeCost;
+          trapState.level += 1;
+          sceneMessage.textContent = trap.name + " 升级完成，打钱更狠了。";
+          logEvent(trap.name + " 升到 Lv." + trapState.level + "。");
+        }
+        if (!running) {
+          scene.traps = buildTrapActors();
+        }
+        saveState();
+        renderAll();
+      }
+
+      function saveCustomFriend(useNow) {
+        var name = customNameInput.value.trim() || "自定义朋友";
+        var look = (customLookInput.value.trim() || name.slice(0, 1) || "友").slice(0, 2);
+        state.customFriend = { name: name, look: look };
+        if (state.unlockedFriends.indexOf("custom-friend") === -1) {
+          state.unlockedFriends.push("custom-friend");
+        }
+        if (useNow) {
+          state.currentFriendId = "custom-friend";
+          scene = createIdleScene();
+          sceneMessage.textContent = name + " 已经被拉到台前。拖到悬崖边再扔。";
+          logEvent("切换自定义朋友：" + name + "。");
+        } else {
+          sceneMessage.textContent = name + " 已保存到橱窗。";
+          logEvent("保存自定义朋友：" + name + "。");
+        }
+        saveState();
+        renderAll();
+      }
+
+      function bodyLabel(partKey) {
+        for (var i = 0; i < bodyParts.length; i += 1) {
+          if (bodyParts[i].key === partKey) return bodyParts[i].label;
+        }
+        return partKey;
+      }
+
+      function techName(techKey) {
+        for (var i = 0; i < techCatalog.length; i += 1) {
+          if (techCatalog[i].key === techKey) return techCatalog[i].name;
+        }
+        return techKey;
+      }
+
+      function findTrap(trapKey) {
+        for (var i = 0; i < trapCatalog.length; i += 1) {
+          if (trapCatalog[i].key === trapKey) return trapCatalog[i];
+        }
+        return trapCatalog[0];
+      }
+
+      function startDrop() {
+        if (running || !scene.friend.placed) return;
+        running = true;
+        scene = createRunScene();
+        runGoldLabel.textContent = "0";
+        sceneMessage.textContent = getCurrentFriend().name + " 已经被扔下去了，镜头正在跟着下坠。";
+        logEvent("把 " + getCurrentFriend().name + " 扔下了悬崖。");
+        renderHud();
+      }
+
+      function getCanvasPoint(event) {
+        var rect = canvas.getBoundingClientRect();
+        var clientX = event.clientX;
+        var clientY = event.clientY;
+        if (event.touches && event.touches.length) {
+          clientX = event.touches[0].clientX;
+          clientY = event.touches[0].clientY;
+        } else if (event.changedTouches && event.changedTouches.length) {
+          clientX = event.changedTouches[0].clientX;
+          clientY = event.changedTouches[0].clientY;
+        }
+        return {
+          x: clientX - rect.left,
+          y: clientY - rect.top,
+        };
+      }
+
+      function hitTestFriend(point) {
+        var friend = scene.friend;
+        var friendScreenX = worldToScreenX(friend.x);
+        var friendScreenY = worldToScreenY(friend.y);
+        return Math.hypot(point.x - friendScreenX, point.y - friendScreenY) < Math.max(34, 48 * getSceneScale());
+      }
+
+      function startDragFromEvent(event) {
+        if (running || scene.mode !== "idle") return;
+        var point = getCanvasPoint(event);
+        var worldPoint = screenToWorld(point);
+        if (!hitTestFriend(point)) return;
+        dragState.active = true;
+        dragState.offsetX = worldPoint.x - scene.friend.x;
+        dragState.offsetY = worldPoint.y - scene.friend.y;
+        event.preventDefault();
+      }
+
+      function moveDragFromEvent(event) {
+        if (!dragState.active || running || scene.mode !== "idle") return;
+        var point = screenToWorld(getCanvasPoint(event));
+        scene.friend.x = clamp(point.x - dragState.offsetX, 42, WORLD.width - 42);
+        scene.friend.y = clamp(point.y - dragState.offsetY, 86, WORLD.ledgeY - 42);
+        scene.friend.placed = false;
+        sceneMessage.textContent = "拖动朋友到右侧发光区域，摆到悬崖边。";
+        updateButtons();
+        event.preventDefault();
+      }
+
+      function endDragFromEvent(event) {
+        if (!dragState.active || running || scene.mode !== "idle") return;
+        dragState.active = false;
+        var friend = scene.friend;
+        var dx = friend.x - WORLD.placeX;
+        var dy = friend.y - WORLD.placeY;
+        if (Math.hypot(dx, dy) < 66) {
+          friend.x = WORLD.placeX;
+          friend.y = WORLD.placeY;
+          friend.placed = true;
+          sceneMessage.textContent = "朋友已经摆到悬崖边。现在可以点击左边按钮扔下去。";
+        } else {
+          friend.x = WORLD.holdX;
+          friend.y = WORLD.holdY;
+          friend.placed = false;
+          sceneMessage.textContent = "还没摆到悬崖边。继续拖过去。";
+        }
+        updateButtons();
+        if (event) event.preventDefault();
+      }
+
+      function clamp(value, min, max) {
+        return Math.max(min, Math.min(max, value));
+      }
+
+      function updateTransient(dt) {
+        transient.screenShake = Math.max(0, transient.screenShake - 0.5 * dt);
+        transient.screenFlash = Math.max(0, transient.screenFlash - 0.01 * dt);
+        for (var key in transient.bodyPulse) {
+          transient.bodyPulse[key] = Math.max(0, transient.bodyPulse[key] - 0.9 * dt);
+        }
+      }
+
+      function updateIdle(dt) {
+        scene.elapsed += dt;
+        if (!dragState.active) {
+          var friend = scene.friend;
+          var targetY = friend.placed ? WORLD.placeY : WORLD.holdY;
+          var targetX = friend.placed ? WORLD.placeX : WORLD.holdX;
+          friend.x += (targetX - friend.x) * 0.12;
+          friend.y += (targetY - friend.y) * 0.12;
+          friend.rotation = Math.sin(scene.elapsed * 0.06) * 0.04;
+        }
+      }
+
+      function addCoinPopup(x, y, amount, crit) {
+        scene.popups.push({
+          x: x,
+          y: y,
+          amount: amount,
+          crit: crit,
+          life: crit ? 64 : 52,
+        });
+      }
+
+      function spawnParticles(x, y, color, power) {
+        var count = 10 + Math.floor(power * 0.4);
+        for (var i = 0; i < count; i += 1) {
+          scene.particles.push({
+            x: x,
+            y: y,
+            vx: (Math.random() - 0.5) * (2.8 + power * 0.16),
+            vy: (Math.random() - 1.2) * (3 + power * 0.18),
+            life: 30 + Math.random() * 18,
+            radius: 2 + Math.random() * 4,
+            color: color,
+          });
+        }
+      }
+
+      function getPartNodes(friend) {
+        var cos = Math.cos(friend.rotation);
+        var sin = Math.sin(friend.rotation);
+        var offsets = {
+          head: { x: 0, y: -54, r: 24 },
+          arms: { x: 0, y: -2, r: 28 },
+          torso: { x: 0, y: 20, r: 24 },
+          legs: { x: 0, y: 74, r: 30 },
+        };
+        var nodes = {};
+        for (var i = 0; i < bodyParts.length; i += 1) {
+          var key = bodyParts[i].key;
+          var offset = offsets[key];
+          nodes[key] = {
+            x: friend.x + offset.x * cos - offset.y * sin,
+            y: friend.y + offset.x * sin + offset.y * cos,
+            r: offset.r,
+          };
+        }
+        return nodes;
+      }
+
+      function processCollision(actor, partKey, node) {
+        var trapLevel = actor.level;
+        var friendStyle = getCurrentFriend();
+        var baseCoins = actor.baseDamage[partKey] * 2.7;
+        var partMult = getBodyCoinMultiplier(partKey);
+        var trapMult = 1 + (trapLevel - 1) * 0.28 + state.techLevels.lab * 0.1;
+        var techMult = getTechCoinMultiplier();
+        var salvage = getFlatSalvageBonus();
+        var crit = Math.random() < getCritChance();
+        var coins = Math.round(baseCoins * partMult * trapMult * techMult * friendStyle.yieldBonus + salvage);
+        if (crit) {
+          coins = Math.round(coins * getCritMultiplier());
+        }
+        var damage = Math.round(actor.baseDamage[partKey] * (1 + trapLevel * 0.34));
+
+        scene.runCoins += coins;
+        scene.partTotals[partKey].coins += coins;
+        scene.partTotals[partKey].damage += damage;
+        scene.partTotals[partKey].hits += 1;
+        scene.collisions.unshift({
+          trapName: actor.name,
+          partKey: partKey,
+          partLabel: bodyLabel(partKey),
+          coins: coins,
+          damage: damage,
+          crit: crit,
+        });
+
+        addCoinPopup(node.x, node.y - 16, coins, crit);
+        spawnParticles(node.x, node.y, actor.color, crit ? 18 : 12);
+        actor.pulse = crit ? 28 : 18;
+        actor.cooldowns[partKey] = crit ? 56 : 40;
+        scene.friend.partFlash[partKey] = crit ? 44 : 28;
+        transient.screenShake = Math.max(transient.screenShake, crit ? 8 : 4);
+        transient.screenFlash = Math.max(transient.screenFlash, crit ? 0.18 : 0.08);
+
+        // 碰撞后只给少量横向偏移，纵向保持向下（正值=继续下落）
+        var sideDir = scene.friend.x < actor.x ? -1 : 1;
+        if (actor.key === "bomb") {
+          scene.friend.vy = Math.abs(scene.friend.vy) * 0.25 + 1.5;
+          scene.friend.vx = sideDir * 2.8;
+        } else if (actor.key === "spikes") {
+          scene.friend.vy = Math.abs(scene.friend.vy) * 0.20 + 1.2;
+          scene.friend.vx = sideDir * 1.8;
+        } else if (actor.key === "cactus") {
+          scene.friend.vy = Math.abs(scene.friend.vy) * 0.18 + 1.0;
+          scene.friend.vx = sideDir * 1.5;
+        } else if (actor.key === "hedgehog") {
+          scene.friend.vy = Math.abs(scene.friend.vy) * 0.22 + 1.3;
+          scene.friend.vx = sideDir * 2.2;
+        } else if (actor.key === "crusher") {
+          scene.friend.vy = Math.abs(scene.friend.vy) * 0.30 + 1.8;
+          scene.friend.vx = sideDir * 1.6;
+        }
+
+        scene.friend.spin += crit ? 0.18 : 0.08;
+        runGoldLabel.textContent = scene.runCoins.toLocaleString("en-US");
+        sceneMessage.textContent = bodyLabel(partKey) + " 撞上 " + actor.name + "，爆出 " + coins + " 金币" + (crit ? "，暴击！" : "。");
+        logEvent(bodyLabel(partKey) + " 撞上 " + actor.name + "，拿到 " + coins + " 金币" + (crit ? "，暴击" : "") + "。");
+      }
+
+      function updateRun(dt) {
+        scene.elapsed += dt;
+        var friend = scene.friend;
+        friend.vy += 0.52 * dt;
+        friend.x += friend.vx * dt;
+        friend.y += friend.vy * dt;
+        friend.rotation += friend.spin * dt;
+        friend.spin *= 0.994;
+
+        for (var p = 0; p < bodyParts.length; p += 1) {
+          var flashKey = bodyParts[p].key;
+          friend.partFlash[flashKey] = Math.max(0, friend.partFlash[flashKey] - 0.9 * dt);
+        }
+
+        if (friend.y > WORLD.ledgeY) {
+          if (friend.x < WORLD.shaftLeft + 20) {
+            friend.x = WORLD.shaftLeft + 20;
+            if (friend.vx < 0) friend.vx *= -0.78;
+          }
+          if (friend.x > WORLD.shaftRight - 20) {
+            friend.x = WORLD.shaftRight - 20;
+            if (friend.vx > 0) friend.vx *= -0.78;
+          }
+        }
+
+        if (friend.y >= WORLD.floorY) {
+          friend.y = WORLD.floorY;
+          if (Math.abs(friend.vy) > 2) {
+            friend.vy *= -0.32;
+            friend.vx *= 0.4;
+            friend.spin *= 0.5;
+          } else {
+            friend.vy = 0;
+            friend.vx = 0;
+            friend.spin = 0;
+          }
+        }
+
+        var nodes = getPartNodes(friend);
+        for (var i = 0; i < scene.traps.length; i += 1) {
+          var actor = scene.traps[i];
+          actor.pulse = Math.max(0, actor.pulse - 0.8 * dt);
+          for (var cKey in actor.cooldowns) {
+            actor.cooldowns[cKey] = Math.max(0, actor.cooldowns[cKey] - dt);
+          }
+
+          for (var j = 0; j < bodyParts.length; j += 1) {
+            var partKey = bodyParts[j].key;
+            if (actor.cooldowns[partKey] > 0) continue;
+            var node = nodes[partKey];
+            var distance = Math.hypot(node.x - actor.x, node.y - actor.y);
+            if (distance < actor.size + node.r * 0.42) {
+              processCollision(actor, partKey, node);
+              break;
+            }
+          }
+        }
+
+        for (var k = scene.particles.length - 1; k >= 0; k -= 1) {
+          var particle = scene.particles[k];
+          particle.x += particle.vx * dt;
+          particle.y += particle.vy * dt;
+          particle.vy += 0.08 * dt;
+          particle.life -= 1.2 * dt;
+          if (particle.life <= 0) {
+            scene.particles.splice(k, 1);
+          }
+        }
+
+        for (var m = scene.popups.length - 1; m >= 0; m -= 1) {
+          var popup = scene.popups[m];
+          popup.life -= 1.1 * dt;
+          popup.y -= 1.35 * dt;
+          if (popup.life <= 0) {
+            scene.popups.splice(m, 1);
+          }
+        }
+
+        var visibleWorldHeight = getVisibleWorldHeight();
+        var cameraTarget = clamp(
+          friend.y - visibleWorldHeight * 0.34,
+          0,
+          Math.max(0, WORLD.height - visibleWorldHeight)
+        );
+        scene.cameraY += (cameraTarget - scene.cameraY) * 0.16;
+
+        var resting =
+          friend.y >= WORLD.floorY &&
+          Math.abs(friend.vy) < 0.3 &&
+          Math.abs(friend.vx) < 0.25;
+
+        if (resting) {
+          scene.settleTimer += dt;
+          if (scene.settleTimer > 180) {
+            finishRun();
+          }
+        } else {
+          scene.settleTimer = 0;
+        }
+      }
+
+      function finishRun() {
+        var pityCoins = scene.runCoins === 0 ? 28 + Math.round(getTechCoinMultiplier() * 8) : 0;
+        var finalCoins = scene.runCoins + pityCoins;
+        state.coins += finalCoins;
+        state.totalCoins += finalCoins;
+        state.totalThrows += 1;
+        state.bestRun = Math.max(state.bestRun, finalCoins);
+        state.lastRun = {
+          friendName: getCurrentFriend().name,
+          totalCoins: finalCoins,
+          pityCoins: pityCoins,
+          partTotals: clone(scene.partTotals),
+          collisions: scene.collisions.slice(0, 16),
+        };
+        updateLeaderboard();
+        running = false;
+        sceneMessage.textContent = getCurrentFriend().name + " 已经滚到底了。本轮总计 " + finalCoins + " 金币。";
+        logEvent(getCurrentFriend().name + " 本轮结算 " + finalCoins + " 金币。");
+        saveState();
+        renderAll();
+        scene = createIdleScene();
+      }
+
+      function drawBackground(time) {
+        // 天空渐变
+        var sky = ctx.createLinearGradient(0, 0, 0, viewport.height * 0.55);
+        sky.addColorStop(0, "#a8d8ea");
+        sky.addColorStop(0.5, "#cdeaf7");
+        sky.addColorStop(1, "#e8f6fb");
+        ctx.fillStyle = sky;
+        ctx.fillRect(0, 0, viewport.width, viewport.height);
+
+        // 太阳
+        var sunX = viewport.width * 0.82;
+        var sunY = viewport.height * 0.08;
+        var sunGlow = ctx.createRadialGradient(sunX, sunY, 4, sunX, sunY, 60);
+        sunGlow.addColorStop(0, "rgba(255,240,180,0.95)");
+        sunGlow.addColorStop(0.3, "rgba(255,220,120,0.4)");
+        sunGlow.addColorStop(1, "rgba(255,200,80,0)");
+        ctx.fillStyle = sunGlow;
+        ctx.fillRect(sunX - 60, sunY - 60, 120, 120);
+        ctx.fillStyle = "#fff8d0";
+        ctx.beginPath();
+        ctx.arc(sunX, sunY, 18, 0, Math.PI * 2);
+        ctx.fill();
+
+        // 远山（三层）
+        var mtnColors = ["#b8d4c8", "#8fbfaa", "#6aa48e"];
+        var mtnOffsets = [0.18, 0.28, 0.38];
+        var mtnHeights = [0.28, 0.22, 0.18];
+        for (var m = 0; m < 3; m += 1) {
+          ctx.fillStyle = mtnColors[m];
+          ctx.beginPath();
+          ctx.moveTo(0, viewport.height * mtnOffsets[m]);
+          var peakCount = 5 + m;
+          for (var p = 0; p <= peakCount; p += 1) {
+            var px = (p / peakCount) * viewport.width;
+            var baseY = viewport.height * (mtnOffsets[m] + mtnHeights[m] * 0.5);
+            var peakY = baseY - viewport.height * mtnHeights[m] * (0.5 + 0.5 * Math.sin(p * 2.3 + m * 1.7 + time * 0.002));
+            if (p === 0) ctx.moveTo(0, baseY);
+            ctx.lineTo(px, peakY);
+          }
+          ctx.lineTo(viewport.width, viewport.height * (mtnOffsets[m] + mtnHeights[m]));
+          ctx.lineTo(0, viewport.height * (mtnOffsets[m] + mtnHeights[m]));
+          ctx.closePath();
+          ctx.fill();
+        }
+
+        // 江水（底部）
+        var waterTop = viewport.height * 0.62;
+        var water = ctx.createLinearGradient(0, waterTop, 0, viewport.height);
+        water.addColorStop(0, "#5ba3c9");
+        water.addColorStop(0.4, "#3d8aad");
+        water.addColorStop(1, "#1e5f7a");
+        ctx.fillStyle = water;
+        ctx.fillRect(0, waterTop, viewport.width, viewport.height - waterTop);
+
+        // 水面波纹
+        ctx.strokeStyle = "rgba(255,255,255,0.22)";
+        ctx.lineWidth = 1.5;
+        for (var w = 0; w < 6; w += 1) {
+          var wy = waterTop + 18 + w * 22 + Math.sin(time * 0.8 + w) * 4;
+          var woff = (time * 28 * (w % 2 === 0 ? 1 : -1)) % viewport.width;
+          ctx.beginPath();
+          for (var wx = -viewport.width; wx < viewport.width * 2; wx += 80) {
+            var wax = wx + woff;
+            ctx.moveTo(wax, wy);
+            ctx.quadraticCurveTo(wax + 20, wy - 5, wax + 40, wy);
+          }
+          ctx.stroke();
+        }
+
+        // 近景绿地
+        ctx.fillStyle = "#4a7c45";
+        ctx.beginPath();
+        ctx.moveTo(0, viewport.height * 0.58);
+        for (var gx = 0; gx <= viewport.width; gx += 40) {
+          var gy = viewport.height * 0.58 + Math.sin(gx * 0.04 + time * 0.3) * 8;
+          ctx.lineTo(gx, gy);
+        }
+        ctx.lineTo(viewport.width, viewport.height);
+        ctx.lineTo(0, viewport.height);
+        ctx.closePath();
+        ctx.fill();
+
+        // 近景竹子（左右各几根）
+        ctx.strokeStyle = "#3a6b36";
+        ctx.lineWidth = 3;
+        var bambooPos = [20, 45, 65, viewport.width - 25, viewport.width - 50, viewport.width - 72];
+        for (var b = 0; b < bambooPos.length; b += 1) {
+          var bx = bambooPos[b];
+          var bh = 90 + (b % 3) * 30;
+          var bbase = viewport.height * 0.56;
+          var sway = Math.sin(time * 0.5 + b * 0.8) * 4;
+          ctx.beginPath();
+          ctx.moveTo(bx, bbase);
+          ctx.quadraticCurveTo(bx + sway * 0.5, bbase - bh * 0.5, bx + sway, bbase - bh);
+          ctx.stroke();
+          // 竹节
+          for (var seg = 1; seg < 4; seg += 1) {
+            var sy = bbase - bh * (seg / 4);
+            var sx = bx + sway * (seg / 4);
+            ctx.beginPath();
+            ctx.moveTo(sx - 4, sy);
+            ctx.lineTo(sx + 4, sy);
+            ctx.stroke();
+          }
+          // 叶子
+          ctx.fillStyle = "#5aaa52";
+          ctx.beginPath();
+          ctx.ellipse(bx + sway - 8, bbase - bh, 10, 4, -0.4, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.ellipse(bx + sway + 8, bbase - bh - 6, 10, 4, 0.4, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // 飞鸟
+        ctx.strokeStyle = "rgba(40,40,60,0.5)";
+        ctx.lineWidth = 1.5;
+        for (var bird = 0; bird < 3; bird += 1) {
+          var birdX = ((time * 18 * (1 + bird * 0.3) + bird * 180) % (viewport.width + 80)) - 40;
+          var birdY = viewport.height * 0.12 + bird * 18 + Math.sin(time * 1.2 + bird) * 8;
+          var flap = Math.sin(time * 4 + bird) * 5;
+          ctx.beginPath();
+          ctx.moveTo(birdX - 10, birdY);
+          ctx.quadraticCurveTo(birdX - 5, birdY - flap, birdX, birdY);
+          ctx.quadraticCurveTo(birdX + 5, birdY - flap, birdX + 10, birdY);
+          ctx.stroke();
+        }
+      }
+
+      function drawStageWorld(time) {
+        var scale = getSceneScale();
+        var camY = scene.cameraY;
+        ctx.save();
+        ctx.translate(getSceneOffsetX(), 0);
+        ctx.scale(scale, scale);
+        ctx.translate(0, -camY);
+
+        // 悬崖两侧山体（石灰岩纹理感）
+        var cliffGradL = ctx.createLinearGradient(0, 0, WORLD.shaftLeft, 0);
+        cliffGradL.addColorStop(0, "#5a6e4a");
+        cliffGradL.addColorStop(0.6, "#7a8f5e");
+        cliffGradL.addColorStop(1, "#4e5e3c");
+        ctx.fillStyle = cliffGradL;
+        ctx.fillRect(0, WORLD.ledgeY, WORLD.shaftLeft, WORLD.height - WORLD.ledgeY + 300);
+
+        var cliffGradR = ctx.createLinearGradient(WORLD.shaftRight, 0, WORLD.width, 0);
+        cliffGradR.addColorStop(0, "#4e5e3c");
+        cliffGradR.addColorStop(0.4, "#7a8f5e");
+        cliffGradR.addColorStop(1, "#5a6e4a");
+        ctx.fillStyle = cliffGradR;
+        ctx.fillRect(WORLD.shaftRight, WORLD.ledgeY, WORLD.width - WORLD.shaftRight, WORLD.height - WORLD.ledgeY + 300);
+
+        // 崖顶边缘（石块感）
+        ctx.fillStyle = "#8fa870";
+        ctx.fillRect(0, WORLD.ledgeY - 18, WORLD.shaftLeft, 22);
+        ctx.fillRect(WORLD.shaftRight, WORLD.ledgeY - 18, WORLD.width - WORLD.shaftRight, 22);
+        // 崖顶草皮
+        ctx.fillStyle = "#6abf58";
+        ctx.fillRect(0, WORLD.ledgeY - 24, WORLD.shaftLeft, 10);
+        ctx.fillRect(WORLD.shaftRight, WORLD.ledgeY - 24, WORLD.width - WORLD.shaftRight, 10);
+
+        // 悬崖侧面岩层纹理
+        ctx.strokeStyle = "rgba(0,0,0,0.12)";
+        ctx.lineWidth = 1;
+        for (var ry = WORLD.ledgeY + 60; ry < WORLD.floorY; ry += 80) {
+          ctx.beginPath();
+          ctx.moveTo(0, ry + Math.sin(ry * 0.05) * 6);
+          ctx.lineTo(WORLD.shaftLeft, ry + Math.sin(ry * 0.07) * 4);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(WORLD.shaftRight, ry + Math.sin(ry * 0.06) * 5);
+          ctx.lineTo(WORLD.width, ry + Math.sin(ry * 0.05) * 6);
+          ctx.stroke();
+        }
+
+        // 竖井（深渊）
+        var shaftGrad = ctx.createLinearGradient(WORLD.shaftLeft, 0, WORLD.shaftRight, 0);
+        shaftGrad.addColorStop(0, "#0a1520");
+        shaftGrad.addColorStop(0.3, "#0d1e2e");
+        shaftGrad.addColorStop(0.7, "#0d1e2e");
+        shaftGrad.addColorStop(1, "#0a1520");
+        ctx.fillStyle = shaftGrad;
+        ctx.fillRect(WORLD.shaftLeft, WORLD.ledgeY, WORLD.shaftRight - WORLD.shaftLeft, WORLD.floorY - WORLD.ledgeY + 140);
+
+        // 竖井内瀑布（白色细线）
+        ctx.strokeStyle = "rgba(160,220,255,0.12)";
+        ctx.lineWidth = 2;
+        var fallOffsets = [0.2, 0.5, 0.78];
+        for (var f = 0; f < fallOffsets.length; f += 1) {
+          var fx = WORLD.shaftLeft + (WORLD.shaftRight - WORLD.shaftLeft) * fallOffsets[f];
+          for (var fy = WORLD.ledgeY; fy < WORLD.floorY; fy += 120) {
+            var foff = (time * 60 + f * 40) % 120;
+            ctx.beginPath();
+            ctx.moveTo(fx, fy + foff);
+            ctx.lineTo(fx + Math.sin(fy * 0.02 + time) * 6, fy + foff + 60);
+            ctx.stroke();
+          }
+        }
+
+        // 深度标记
+        ctx.fillStyle = "rgba(160,220,255,0.22)";
+        ctx.font = "bold 11px Trebuchet MS";
+        for (var dy = WORLD.ledgeY + 120; dy < WORLD.floorY; dy += 220) {
+          ctx.fillRect(WORLD.shaftLeft + 10, dy, WORLD.shaftRight - WORLD.shaftLeft - 20, 1);
+          ctx.fillText(Math.round((dy - WORLD.ledgeY) / 10) + "m", WORLD.shaftRight + 8, dy + 4);
+        }
+
+        // 崖顶左侧树木
+        var treeXs = [40, 88, 140, 190];
+        for (var t = 0; t < treeXs.length; t += 1) {
+          var tx = treeXs[t];
+          var ty = WORLD.ledgeY - 22;
+          var tsway = Math.sin(time * 0.4 + t) * 2;
+          ctx.strokeStyle = "#4a3020";
+          ctx.lineWidth = 5 - t * 0.5;
+          ctx.beginPath();
+          ctx.moveTo(tx, ty);
+          ctx.quadraticCurveTo(tx + tsway, ty - 40, tx + tsway * 1.5, ty - 80);
+          ctx.stroke();
+          ctx.fillStyle = t % 2 === 0 ? "#3a7a30" : "#4e9a42";
+          ctx.beginPath();
+          ctx.arc(tx + tsway * 1.5, ty - 80, 22 - t * 2, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        // 右侧树木
+        var treeXsR = [WORLD.shaftRight + 30, WORLD.shaftRight + 75, WORLD.shaftRight + 120];
+        for (var tr = 0; tr < treeXsR.length; tr += 1) {
+          var trx = treeXsR[tr];
+          var try_ = WORLD.ledgeY - 22;
+          var trsway = Math.sin(time * 0.4 + tr + 2) * 2;
+          ctx.strokeStyle = "#4a3020";
+          ctx.lineWidth = 4 - tr * 0.5;
+          ctx.beginPath();
+          ctx.moveTo(trx, try_);
+          ctx.quadraticCurveTo(trx + trsway, try_ - 35, trx + trsway * 1.5, try_ - 70);
+          ctx.stroke();
+          ctx.fillStyle = tr % 2 === 0 ? "#4e9a42" : "#3a7a30";
+          ctx.beginPath();
+          ctx.arc(trx + trsway * 1.5, try_ - 70, 18 - tr, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        if (scene.mode === "idle") {
+          ctx.fillStyle = "rgba(127, 241, 179, 0.14)";
+          ctx.fillRect(WORLD.placeX - 34, WORLD.placeY - 50, 68, 80);
+          ctx.strokeStyle = scene.friend.placed ? "rgba(127,241,179,0.9)" : "rgba(255,214,91,0.7)";
+          ctx.lineWidth = 2.5;
+          ctx.strokeRect(WORLD.placeX - 34, WORLD.placeY - 50, 68, 80);
+
+          ctx.fillStyle = "rgba(255,255,255,0.08)";
+          ctx.fillRect(WORLD.holdX - 34, WORLD.holdY - 50, 68, 80);
+          ctx.strokeStyle = "rgba(141,220,255,0.54)";
+          ctx.lineWidth = 2;
+          ctx.strokeRect(WORLD.holdX - 34, WORLD.holdY - 50, 68, 80);
+
+          ctx.fillStyle = "rgba(255,255,255,0.9)";
+          ctx.font = "bold 11px Trebuchet MS";
+          ctx.textAlign = "center";
+          ctx.fillText("拖到这里", WORLD.placeX, WORLD.placeY + 38);
+          ctx.fillText("拿起朋友", WORLD.holdX, WORLD.holdY + 38);
+          ctx.textAlign = "left";
+        }
+
+        for (var i = 0; i < scene.traps.length; i += 1) {
+          drawTrap(scene.traps[i], time);
+        }
+        drawFriend(scene.friend, time);
+        drawParticles();
+        drawPopups();
+        ctx.restore();
+      }
+
+      function drawTrap(actor, time) {
+        var pulse = actor.pulse / 28;
+        var bob = Math.sin(time * 0.04 + actor.phase) * 4;
+        ctx.save();
+        ctx.translate(actor.x, actor.y + bob);
+
+        if (actor.key === "bomb") {
+          ctx.fillStyle = actor.color;
+          ctx.beginPath();
+          ctx.arc(0, 0, actor.size * 0.45, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = "#fff5df";
+          ctx.fillRect(-4, -actor.size * 0.6, 8, 14);
+        } else if (actor.key === "spikes") {
+          ctx.fillStyle = actor.color;
+          for (var i = -2; i <= 2; i += 1) {
+            ctx.beginPath();
+            ctx.moveTo(i * 11, 15);
+            ctx.lineTo(i * 11 - 7, -14);
+            ctx.lineTo(i * 11 + 7, -14);
+            ctx.closePath();
+            ctx.fill();
+          }
+        } else if (actor.key === "cactus") {
+          ctx.fillStyle = actor.color;
+          ctx.fillRect(-10, -26, 20, 52);
+          ctx.fillRect(-24, -10, 12, 28);
+          ctx.fillRect(12, -2, 12, 22);
+        } else if (actor.key === "hedgehog") {
+          ctx.rotate(time * 0.05 + actor.phase);
+          ctx.fillStyle = actor.color;
+          for (var j = 0; j < 10; j += 1) {
+            ctx.rotate((Math.PI * 2) / 10);
+            ctx.fillRect(-3, -actor.size * 0.55, 6, 18);
+          }
+          ctx.beginPath();
+          ctx.arc(0, 0, actor.size * 0.3, 0, Math.PI * 2);
+          ctx.fill();
+        } else if (actor.key === "crusher") {
+          ctx.strokeStyle = "rgba(255,255,255,0.18)";
+          ctx.lineWidth = 3;
+          ctx.beginPath();
+          ctx.moveTo(0, -42);
+          ctx.lineTo(0, -16);
+          ctx.stroke();
+          ctx.fillStyle = actor.color;
+          ctx.fillRect(-22, -16, 44, 32);
+          ctx.fillStyle = "rgba(255,255,255,0.18)";
+          ctx.fillRect(-18, -12, 36, 8);
+        }
+
+        if (pulse > 0) {
+          ctx.globalAlpha = 0.2 + pulse * 0.36;
+          ctx.strokeStyle = actor.color;
+          ctx.lineWidth = 3;
+          ctx.beginPath();
+          ctx.arc(0, 0, actor.size * (0.82 + pulse * 0.34), 0, Math.PI * 2);
+          ctx.stroke();
+          ctx.globalAlpha = 1;
+        }
+
+        ctx.fillStyle = "rgba(255,255,255,0.9)";
+        ctx.font = "bold 11px Trebuchet MS";
+        ctx.textAlign = "center";
+        ctx.fillText("Lv." + actor.level, 0, actor.size * 0.94);
+        ctx.restore();
+      }
+
+      function partGlowValue(partKey, friend) {
+        return (state.bodyLevels[partKey] || 0) * 2 + transient.bodyPulse[partKey] + friend.partFlash[partKey];
+      }
+
+      function drawFriend(friend, time) {
+        var style = friend.style;
+        var pulseHead = partGlowValue("head", friend);
+        var pulseArms = partGlowValue("arms", friend);
+        var pulseTorso = partGlowValue("torso", friend);
+        var pulseLegs = partGlowValue("legs", friend);
+        var floatSwing = Math.sin(time * 0.1) * 0.02;
+        var S = 0.68;
+
+        ctx.save();
+        ctx.translate(friend.x, friend.y);
+        ctx.rotate(friend.rotation + floatSwing);
+        ctx.scale(S, S);
+
+        if (pulseHead > 0) {
+          ctx.fillStyle = "rgba(255, 214, 179, " + (0.12 + pulseHead * 0.012) + ")";
+          ctx.beginPath();
+          ctx.arc(0, -54, 30 + pulseHead * 0.35, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // 脱衣（身体+脉脉）
+        ctx.fillStyle = style.suit;
+        ctx.fillRect(-18, -18, 36, 66);
+        ctx.fillStyle = style.accent;
+        ctx.fillRect(-13, -8, 26, 18);
+        ctx.fillRect(-4, 14, 8, 20);
+
+        // 降皮芤艳
+        ctx.strokeStyle = "#f8d2c4";
+        ctx.lineCap = "round";
+        ctx.lineWidth = 10 + pulseLegs * 0.06;
+        ctx.beginPath();
+        ctx.moveTo(-8, 48);
+        ctx.lineTo(-13, 88 + pulseLegs * 0.08);
+        ctx.moveTo(8, 48);
+        ctx.lineTo(13, 88 + pulseLegs * 0.08);
+        ctx.stroke();
+
+        ctx.lineWidth = 9 + pulseArms * 0.06;
+        ctx.beginPath();
+        ctx.moveTo(-18, -8);
+        ctx.lineTo(-34 - pulseArms * 0.05, 18 + Math.sin(time * 0.12) * 3);
+        ctx.moveTo(18, -8);
+        ctx.lineTo(34 + pulseArms * 0.05, 18 - Math.sin(time * 0.12) * 3);
+        ctx.stroke();
+
+        // 脔子（连接头和身体）
+        ctx.fillStyle = "#f8d2c4";
+        ctx.fillRect(-7, -32, 14, 16);
+
+        // 头部：先画头发底色，再画脸，再画头发上半
+        ctx.fillStyle = style.hair;
+        ctx.beginPath();
+        ctx.arc(0, -52, 24, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#f8d2c4";
+        ctx.beginPath();
+        ctx.arc(0, -54, 21, 0, Math.PI);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = style.hair;
+        ctx.beginPath();
+        ctx.arc(0, -56, 22, Math.PI, Math.PI * 2);
+        ctx.closePath();
+        ctx.fill();
+
+        // 眼睛和嘴
+        ctx.fillStyle = "#fff";
+        ctx.beginPath();
+        ctx.arc(-7, -57, 3, 0, Math.PI * 2);
+        ctx.arc(7, -57, 3, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = "#333";
+        ctx.beginPath();
+        ctx.arc(-7, -57, 1.5, 0, Math.PI * 2);
+        ctx.arc(7, -57, 1.5, 0, Math.PI * 2);
+        ctx.fill();
+        // 嘴
+        ctx.strokeStyle = "#c0786a";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(0, -49, 5, 0.1, Math.PI - 0.1);
+        ctx.stroke();
+
+        // 身上文字
+        ctx.fillStyle = "#fff";
+        ctx.font = "bold 14px Trebuchet MS";
+        ctx.textAlign = "center";
+        ctx.fillText(style.look, 0, 8);
+        ctx.restore();
+
+        // 部位光圈：在 scale 之内绘制，与人物坐标系一致
+        ctx.save();
+        ctx.translate(friend.x, friend.y);
+        ctx.rotate(friend.rotation + floatSwing);
+        ctx.scale(S, S);
+        var scaledOffsets = {
+          head:  { x: 0, y: -54, r: 26 },
+          arms:  { x: 0, y: -2,  r: 30 },
+          torso: { x: 0, y: 20,  r: 26 },
+          legs:  { x: 0, y: 74,  r: 28 },
+        };
+        var cos2 = Math.cos(0); var sin2 = Math.sin(0); // rotation already applied via ctx.rotate
+        for (var i = 0; i < bodyParts.length; i += 1) {
+          var part = bodyParts[i];
+          var glow = partGlowValue(part.key, friend);
+          if (state.bodyLevels[part.key] <= 0 && glow <= 0) continue;
+          var off = scaledOffsets[part.key];
+          ctx.globalAlpha = Math.min(0.48, 0.12 + glow * 0.012);
+          ctx.strokeStyle = part.color;
+          ctx.lineWidth = 3;
+          ctx.beginPath();
+          ctx.arc(off.x, off.y, off.r, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+        ctx.globalAlpha = 1;
+        ctx.restore();
+      }
+
+      function drawParticles() {
+        for (var i = 0; i < scene.particles.length; i += 1) {
+          var particle = scene.particles[i];
+          ctx.globalAlpha = Math.max(0, particle.life / 48);
+          ctx.fillStyle = particle.color;
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+      }
+
+      function drawPopups() {
+        for (var i = 0; i < scene.popups.length; i += 1) {
+          var popup = scene.popups[i];
+          var maxLife = popup.crit ? 64 : 52;
+          ctx.globalAlpha = Math.max(0, popup.life / maxLife);
+          ctx.textAlign = "center";
+          ctx.font = popup.crit ? "bold 22px Trebuchet MS" : "bold 18px Trebuchet MS";
+          ctx.fillStyle = popup.crit ? "#fff59c" : "#ffd86b";
+          ctx.fillText("+" + popup.amount, popup.x, popup.y);
+          if (popup.crit) {
+            ctx.font = "bold 12px Trebuchet MS";
+            ctx.fillStyle = "#ff95ad";
+            ctx.fillText("CRIT!", popup.x, popup.y - 18);
+          }
+        }
+        ctx.globalAlpha = 1;
+      }
+
+      function drawScene(now) {
+        var dpr = window.devicePixelRatio || 1;
+        var w = canvas.width / dpr;
+        var h = canvas.height / dpr;
+        if (w !== viewport.width || h !== viewport.height) {
+          viewport.width = w;
+          viewport.height = h;
+        }
+        ctx.clearRect(0, 0, viewport.width, viewport.height);
+        ctx.save();
+
+        if (transient.screenShake > 0) {
+          ctx.translate(
+            (Math.random() - 0.5) * transient.screenShake,
+            (Math.random() - 0.5) * transient.screenShake * 0.65,
+          );
+        }
+
+        drawBackground(now * 0.001);
+        drawStageWorld(now * 0.001);
+        ctx.restore();
+
+        if (transient.screenFlash > 0) {
+          ctx.fillStyle = "rgba(255,255,255," + transient.screenFlash + ")";
+          ctx.fillRect(0, 0, viewport.width, viewport.height);
+        }
+      }
+
+      function tick(now) {
+        if (!lastFrameTime) lastFrameTime = now;
+        var delta = Math.min(34, now - lastFrameTime);
+        lastFrameTime = now;
+        var dt = delta / 16.6667;
+
+        updateTransient(dt);
+        if (running) {
+          updateRun(dt);
+        } else {
+          updateIdle(dt);
+        }
+        drawScene(now);
+        requestAnimationFrame(tick);
+      }
+
+      dropButton.addEventListener("click", startDrop);
+      mobileDropButton.addEventListener("click", startDrop);
+      saveCustomButton.addEventListener("click", function () { saveCustomFriend(false); });
+      applyCustomButton.addEventListener("click", function () { saveCustomFriend(true); });
+
+      canvas.addEventListener("mousedown", startDragFromEvent);
+      window.addEventListener("mousemove", moveDragFromEvent);
+      window.addEventListener("mouseup", endDragFromEvent);
+
+      canvas.addEventListener("touchstart", startDragFromEvent, { passive: false });
+      window.addEventListener("touchmove", moveDragFromEvent, { passive: false });
+      window.addEventListener("touchend", endDragFromEvent, { passive: false });
+      window.addEventListener("touchcancel", endDragFromEvent, { passive: false });
+      window.addEventListener("resize", resizeCanvas);
+      window.addEventListener("orientationchange", resizeCanvas);
+      window.addEventListener("load", resizeCanvas);
+
+      if (window.ResizeObserver && canvas.parentElement) {
+        new ResizeObserver(function () {
+          resizeCanvas();
+        }).observe(canvas.parentElement);
+      }
+
+      bootstrapGameLayout();
+      resizeCanvas();
+      renderAll();
+      maybeStartDemoMode();
+      requestAnimationFrame(tick);
+      setTimeout(function () { resizeCanvas(); }, 0);
+    })();
+  </script>
+</body>
+</html>

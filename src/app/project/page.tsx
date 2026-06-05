@@ -14,6 +14,7 @@ import {
   type Category,
   type Status,
   type Project,
+  type ProjectTag,
 } from "@/data/projects";
 import { fetchProjectSocialStats, type ProjectSocialStat } from "@/lib/social";
 import { supabase } from "@/lib/supabase";
@@ -22,6 +23,7 @@ export default function ProjectPage() {
   const { t, lang } = useLang();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<Category>("all");
+  const [selectedTag, setSelectedTag] = useState<ProjectTag | null>(null);
   const [authOpen, setAuthOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [socialStats, setSocialStats] = useState<Record<string, ProjectSocialStat>>({});
@@ -51,13 +53,18 @@ export default function ProjectPage() {
   }, [isLoggedIn]);
 
   const categories: { value: Category; labelKey: string }[] = [
-    { value: "all", labelKey: "project.all" },
     { value: "roblox", labelKey: "project.category.roblox" },
     { value: "webgame", labelKey: "project.category.webgame" },
     { value: "dapp", labelKey: "project.category.dapp" },
     { value: "tool", labelKey: "project.category.tool" },
     { value: "article", labelKey: "project.category.article" },
     { value: "novel", labelKey: "project.category.novel" },
+  ];
+
+  const tagFilters: { value: ProjectTag; labelKey: string }[] = [
+    { value: "featured", labelKey: "project.tag.featured" },
+    { value: "latest", labelKey: "project.tag.latest" },
+    { value: "game", labelKey: "project.filter.allGames" },
   ];
 
   const filteredProjects = useMemo(() => {
@@ -81,14 +88,15 @@ export default function ProjectPage() {
       .filter((p) => {
         const matchesCategory =
           selectedCategory === "all" || p.category === selectedCategory;
+        const matchesTag = !selectedTag || p.tags?.includes(selectedTag);
         const displayTitle = p.title || t(p.titleKey || "");
         const matchesSearch =
           searchQuery === "" ||
           displayTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
           (p.desc && p.desc.toLowerCase().includes(searchQuery.toLowerCase()));
-        return matchesCategory && matchesSearch;
+        return matchesCategory && matchesTag && matchesSearch;
       });
-  }, [projects, selectedCategory, searchQuery]);
+  }, [selectedCategory, selectedTag, searchQuery, t]);
 
   const getStatusBadge = (status: Status) => {
     switch (status) {
@@ -137,6 +145,24 @@ export default function ProjectPage() {
       novel: "bg-rose-100 text-rose-700",
     };
     return map[category];
+  };
+
+  const getTagLabel = (tag: ProjectTag) => {
+    const map: Record<ProjectTag, string> = {
+      game: t("project.tag.game"),
+      featured: t("project.tag.featured"),
+      latest: t("project.tag.latest"),
+    };
+    return map[tag];
+  };
+
+  const getTagColor = (tag: ProjectTag) => {
+    const map: Record<ProjectTag, string> = {
+      game: "bg-slate-100 text-slate-700",
+      featured: "bg-amber-100 text-amber-700",
+      latest: "bg-emerald-100 text-emerald-700",
+    };
+    return map[tag];
   };
 
   const getActionButton = (p: Project) => {
@@ -213,7 +239,7 @@ export default function ProjectPage() {
       </section>
 
       <section className="py-8">
-        <div className="flex flex-col md:flex-row gap-4 mb-8">
+        <div className="flex flex-col gap-4 mb-8">
           <Input
             className="cyber-input flex-1"
             placeholder={t("project.search")}
@@ -221,10 +247,36 @@ export default function ProjectPage() {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <div className="flex flex-wrap gap-2">
+            {tagFilters.map((tag) => {
+              const isActive = selectedTag === tag.value;
+              return (
+                <button
+                  key={tag.value}
+                  onClick={() =>
+                    setSelectedTag((current) =>
+                      current === tag.value ? null : tag.value,
+                    )
+                  }
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                    isActive
+                      ? "bg-[var(--cyber-primary)] text-white"
+                      : "border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:border-[var(--cyber-primary)] hover:text-[var(--cyber-primary)]"
+                  }`}
+                >
+                  {t(tag.labelKey)}
+                </button>
+              );
+            })}
+          </div>
+          <div className="flex flex-wrap gap-2">
             {categories.map((cat) => (
               <button
                 key={cat.value}
-                onClick={() => setSelectedCategory(cat.value)}
+                onClick={() =>
+                  setSelectedCategory((current) =>
+                    current === cat.value ? "all" : cat.value,
+                  )
+                }
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   selectedCategory === cat.value
                     ? "bg-[var(--cyber-primary)] text-white"
@@ -295,6 +347,14 @@ export default function ProjectPage() {
                         >
                           {getCategoryLabel(project.category)}
                         </span>
+                        {project.tags?.map((tag) => (
+                          <span
+                            key={`${project.id}-${tag}`}
+                            className={`text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0 ${getTagColor(tag)}`}
+                          >
+                            {getTagLabel(tag)}
+                          </span>
+                        ))}
                       </div>
                       <p className="text-sm mb-3 cyber-subtitle line-clamp-2">
                         {project.desc || t(project.descKey)}

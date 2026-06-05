@@ -8,6 +8,7 @@ export type Category =
   | "novel";
 export type Status = "live" | "coming" | "new";
 export type Platform = "roblox" | "web";
+export type ProjectTag = "game" | "featured" | "latest";
 
 export interface Project {
   id: string;
@@ -23,6 +24,7 @@ export interface Project {
   githubUrl?: string;
   platformLabel?: string;
   publishedAt?: string;
+  tags?: ProjectTag[];
 }
 
 export const projects: Project[] = [
@@ -35,6 +37,7 @@ export const projects: Project[] = [
     status: "live",
     logoUrl: "/avatars/apex-mind.png",
     liveUrl: "roblox://placeId=126170387607652",
+    tags: ["game"],
   },
   {
     id: "roblox-lobster-bump",
@@ -45,6 +48,7 @@ export const projects: Project[] = [
     status: "live",
     logoUrl: "/avatars/lobster-bump.png",
     liveUrl: "roblox://placeId=102614376416074",
+    tags: ["game"],
   },
   {
     id: "roblox-warlord-saga",
@@ -54,6 +58,7 @@ export const projects: Project[] = [
     platform: "roblox",
     status: "coming",
     logoUrl: "/avatars/warlord-saga.png",
+    tags: ["game"],
   },
   {
     id: "web-lobster-run",
@@ -64,6 +69,7 @@ export const projects: Project[] = [
     status: "new",
     logoUrl: "/avatars/lobster-run.png",
     liveUrl: "/h5game01/龙虾跑酷.html",
+    tags: ["featured", "game"],
   },
   {
     id: "web-mini-soccer",
@@ -74,6 +80,7 @@ export const projects: Project[] = [
     status: "live",
     logoUrl: "/avatars/mini-soccer.png",
     liveUrl: "https://soccerdemo.edgeone.app/",
+    tags: ["game"],
   },
   {
     id: "web-warlord-heroes",
@@ -85,6 +92,7 @@ export const projects: Project[] = [
     logoUrl: "/avatars/warlord-heroes.png",
     liveUrl:
       "https://games.soonjy.com/public/gameLobby/?projectId=69cb5b0280d0cf54f562a136&inviteCode=1BBDC0C1",
+    tags: ["featured", "game"],
   },
   {
     id: "web-football",
@@ -95,6 +103,7 @@ export const projects: Project[] = [
     status: "new",
     logoUrl: "/avatars/football-game.png",
     liveUrl: "/football/football-game.html",
+    tags: ["game"],
   },
   {
     id: "web-save-man",
@@ -105,6 +114,7 @@ export const projects: Project[] = [
     status: "new",
     logoUrl: "/avatars/save-man.png",
     liveUrl: "/saveman/saveman.html",
+    tags: ["featured", "latest", "game"],
   },
   {
     id: "web-killer-h5",
@@ -115,6 +125,7 @@ export const projects: Project[] = [
     status: "live",
     logoUrl: "/avatars/killer-h5.png",
     liveUrl: "/killerh5/index.html",
+    tags: ["game"],
   },
   {
     id: "web-swim",
@@ -125,6 +136,7 @@ export const projects: Project[] = [
     status: "live",
     logoUrl: "/avatars/swimming.png",
     liveUrl: "/swim/index.html",
+    tags: ["game"],
   },
   {
     id: "web-zombie-siege",
@@ -135,6 +147,7 @@ export const projects: Project[] = [
     status: "new",
     logoUrl: "/avatars/zombiesiege.png",
     liveUrl: "/zombiesiege/shotdemo01.html",
+    tags: ["latest", "game"],
   },
   {
     id: "web-grandpa-farm",
@@ -145,6 +158,7 @@ export const projects: Project[] = [
     status: "new",
     logoUrl: "/avatars/grandpafarm.png",
     liveUrl: "https://farmdemo-one.vercel.app/",
+    tags: ["latest", "game"],
   },
   {
     id: "web-hotdance",
@@ -156,6 +170,7 @@ export const projects: Project[] = [
     logoUrl: "/avatars/hotdance.png",
     liveUrl: "/hotdance/hotdance.html",
     publishedAt: "2026-06-04T21:00:00+08:00",
+    tags: ["featured", "latest", "game"],
   },
   {
     id: "dapp-ruok",

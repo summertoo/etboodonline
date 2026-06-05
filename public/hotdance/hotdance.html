@@ -21,6 +21,10 @@
       --lane-2: #ff7aa8;
       --lane-3: #9bff7a;
       --lane-4: #ffc16b;
+      --app-height: 100vh;
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+      --control-bottom: 18px;
     }
 
     * {
@@ -62,7 +66,7 @@
     .game-shell {
       position: relative;
       width: min(100%, 460px);
-      height: min(100vh - 24px, 900px);
+      height: min(calc(var(--app-height, 100vh) - 24px), 900px);
       min-height: 620px;
       border-radius: 28px;
       overflow: hidden;
@@ -83,7 +87,7 @@
 
     .top-hud {
       position: absolute;
-      top: 14px;
+      top: calc(14px + var(--safe-top));
       left: 0;
       right: 0;
       display: flex;
@@ -134,7 +138,7 @@
     .score-box {
       position: absolute;
       left: 50%;
-      top: 18px;
+      top: calc(18px + var(--safe-top));
       transform: translateX(-50%);
       z-index: 2;
       padding: 10px 18px 12px;
@@ -200,7 +204,7 @@
       position: absolute;
       left: 14px;
       right: 14px;
-      bottom: 18px;
+      bottom: calc(var(--control-bottom) + var(--safe-bottom));
       z-index: 2;
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -252,7 +256,7 @@
       position: absolute;
       left: 14px;
       right: 14px;
-      bottom: 92px;
+      bottom: calc(var(--control-bottom) + var(--safe-bottom) + 74px);
       z-index: 2;
       display: flex;
       align-items: center;
@@ -277,7 +281,7 @@
 
     .top-actions {
       position: absolute;
-      top: 86px;
+      top: calc(86px + var(--safe-top));
       right: 14px;
       z-index: 3;
       display: flex;
@@ -300,7 +304,7 @@
     .help {
       position: absolute;
       left: 50%;
-      bottom: 122px;
+      bottom: calc(var(--control-bottom) + var(--safe-bottom) + 104px);
       transform: translateX(-50%);
       z-index: 2;
       font-size: 12px;
@@ -317,7 +321,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 18px;
+      padding:
+        calc(18px + var(--safe-top))
+        18px
+        calc(18px + var(--safe-bottom));
       background: rgba(5, 7, 12, 0.62);
       backdrop-filter: blur(10px);
     }
@@ -487,14 +494,19 @@
     }
 
     @media (max-width: 520px) {
+      :root {
+        --control-bottom: 12px;
+      }
+
       body {
         padding: 0;
+        min-height: var(--app-height, 100vh);
       }
 
       .game-shell {
         width: 100vw;
-        height: 100vh;
-        min-height: auto;
+        height: var(--app-height, 100vh);
+        min-height: var(--app-height, 100vh);
         border-radius: 0;
       }
 
@@ -527,32 +539,30 @@
       }
 
       .top-actions {
-        top: 78px;
+        top: calc(72px + var(--safe-top));
         right: 10px;
       }
 
       .meta-bar {
         left: 10px;
         right: 10px;
-        bottom: 86px;
       }
 
       .control-bar {
         left: 10px;
         right: 10px;
-        bottom: 14px;
         gap: 8px;
       }
 
       .control-btn {
-        min-height: 58px;
+        min-height: 54px;
         border-radius: 16px;
-        font-size: 26px;
+        font-size: 24px;
       }
 
       .help {
-        bottom: 116px;
         font-size: 11px;
+        width: calc(100% - 24px);
       }
     }
   </style>
@@ -827,6 +837,16 @@
         canvas.width = Math.round(rect.width * dpr);
         canvas.height = Math.round(rect.height * dpr);
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      function syncViewportHeight() {
+        const viewportHeight = window.visualViewport
+          ? window.visualViewport.height
+          : window.innerHeight;
+        document.documentElement.style.setProperty(
+          "--app-height",
+          `${Math.round(viewportHeight)}px`,
+        );
       }
 
       function ensureAudio() {
@@ -2482,8 +2502,14 @@
       });
 
       overlay.addEventListener("pointerdown", ensureAudio, { once: true });
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", syncViewportHeight);
+        window.visualViewport.addEventListener("scroll", syncViewportHeight);
+      }
+      window.addEventListener("orientationchange", syncViewportHeight);
       window.addEventListener("resize", resizeCanvas);
 
+      syncViewportHeight();
       resizeCanvas();
       setLanguage("zh");
       renderLeaderboard();
