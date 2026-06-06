@@ -3679,12 +3679,12 @@
 
           // 崖顶左侧树木
           var treeXs = [40, 88, 140, 190];
-          for (var t = 0; t < treeXs.length; t += 1) {
-            var tx = treeXs[t];
+          for (var ti = 0; ti < treeXs.length; ti += 1) {
+            var tx = treeXs[ti];
             var ty = WORLD.ledgeY - 22;
-            var tsway = Math.sin(time * 0.4 + t) * 2;
+            var tsway = Math.sin(time * 0.4 + ti) * 2;
             ctx.strokeStyle = "#4a3020";
-            ctx.lineWidth = 5 - t * 0.5;
+            ctx.lineWidth = 5 - ti * 0.5;
             ctx.beginPath();
             ctx.moveTo(tx, ty);
             ctx.quadraticCurveTo(
@@ -3694,9 +3694,9 @@
               ty - 80,
             );
             ctx.stroke();
-            ctx.fillStyle = t % 2 === 0 ? "#3a7a30" : "#4e9a42";
+            ctx.fillStyle = ti % 2 === 0 ? "#3a7a30" : "#4e9a42";
             ctx.beginPath();
-            ctx.arc(tx + tsway * 1.5, ty - 80, 22 - t * 2, 0, Math.PI * 2);
+            ctx.arc(tx + tsway * 1.5, ty - 80, 22 - ti * 2, 0, Math.PI * 2);
             ctx.fill();
           }
           // 右侧树木
