@@ -984,7 +984,7 @@
           placeY: 195,
           floorY: 3160,
           playerX: 195,
-          playerY: 200,
+          playerY: 247,
         };
 
         var bodyParts = [
@@ -1539,6 +1539,7 @@
             mode: "dropping",
             elapsed: 0,
             cameraY: 0,
+            cameraHold: 36,
             friend: runFriend,
             player: createPlayerState(),
             traps: buildTrapActors(),
@@ -2423,6 +2424,8 @@
         function executeDrop() {
           running = true;
           scene = createRunScene();
+          scene.player.pushActive = true;
+          scene.player.pushStart = scene.player.pushDuration;
           runGoldLabel.textContent = "0";
           sceneMessage.textContent =
             getCurrentFriend().name + " 已经被扔下去了，镜头正在跟着下坠。";
@@ -2777,12 +2780,20 @@
           }
 
           var visibleWorldHeight = getVisibleWorldHeight();
-          var cameraTarget = clamp(
-            friend.y - visibleWorldHeight * 0.34,
-            0,
-            Math.max(0, WORLD.height - visibleWorldHeight),
-          );
-          scene.cameraY += (cameraTarget - scene.cameraY) * 0.16;
+          if (scene.cameraHold > 0) {
+            scene.cameraHold -= dt;
+            scene.cameraY = 0;
+            if (scene.cameraHold <= 0 && scene.player) {
+              scene.player.pushActive = false;
+            }
+          } else {
+            var cameraTarget = clamp(
+              friend.y - visibleWorldHeight * 0.34,
+              0,
+              Math.max(0, WORLD.height - visibleWorldHeight),
+            );
+            scene.cameraY += (cameraTarget - scene.cameraY) * 0.16;
+          }
 
           var resting =
             friend.y >= WORLD.floorY &&
@@ -3443,15 +3454,8 @@
           var bodyLean = 0;
           if (player.pushActive) {
             var t = player.pushStart / player.pushDuration;
-            if (t < 0.22) {
-              var w = t / 0.22;
-              pushEased = -w * 0.6;
-              bodyLean = -w * 0.12;
-            } else {
-              var u = (t - 0.22) / 0.78;
-              pushEased = 1 - Math.pow(1 - u, 2.6);
-              bodyLean = pushEased * 0.18;
-            }
+            pushEased = 1 - Math.pow(1 - t, 2.0);
+            bodyLean = pushEased * 0.12;
           }
 
           var skin = "#f8d2c4";
@@ -3459,9 +3463,11 @@
           var dress = "#e98aa8";
           var dressDark = "#c97194";
           var shoe = "#3a2820";
+          var S = 1.35;
 
           ctx.save();
           ctx.translate(px, py + idleBob);
+          ctx.scale(S, S);
           if (player.pushActive) ctx.rotate(bodyLean);
 
           // Shadow
@@ -3512,53 +3518,29 @@
           var rightArmSwing = Math.sin(breath * 0.16) * 1.5;
           ctx.strokeStyle = skin;
           ctx.lineCap = "round";
-          ctx.lineWidth = 6;
+          ctx.lineWidth = 5;
           ctx.beginPath();
           ctx.moveTo(-13, -42);
           ctx.lineTo(-19 + rightArmSwing * 0.4, -22);
           ctx.stroke();
           ctx.fillStyle = skin;
           ctx.beginPath();
-          ctx.arc(-19 + rightArmSwing * 0.4, -19, 3.5, 0, Math.PI * 2);
+          ctx.arc(-19 + rightArmSwing * 0.4, -19, 3.2, 0, Math.PI * 2);
           ctx.fill();
 
-          // Left arm (viewer's right, friend side)
+          // Left arm (viewer's right, friend side) — push extends forward
           ctx.strokeStyle = skin;
-          ctx.lineWidth = 6;
-          if (player.pushActive) {
-            var armTipX = 13 + pushEased * 56;
-            var armTipY = -42 + Math.abs(pushEased) * 4;
-            ctx.beginPath();
-            ctx.moveTo(13, -42);
-            ctx.lineTo(armTipX, armTipY);
-            ctx.stroke();
-            ctx.fillStyle = skin;
-            ctx.beginPath();
-            ctx.arc(armTipX, armTipY, 4, 0, Math.PI * 2);
-            ctx.fill();
-            if (pushEased > 0.2) {
-              ctx.strokeStyle = "rgba(255,255,255,0.65)";
-              ctx.lineWidth = 1.5;
-              for (var m = 0; m < 3; m += 1) {
-                var ly = armTipY - 7 + m * 5;
-                var lx = armTipX + 4 + m * 2;
-                ctx.beginPath();
-                ctx.moveTo(lx, ly);
-                ctx.lineTo(lx + 6, ly);
-                ctx.stroke();
-              }
-            }
-          } else {
-            var leftArmSwing = Math.sin(breath * 0.16 + 1) * 1.5;
-            ctx.beginPath();
-            ctx.moveTo(13, -42);
-            ctx.lineTo(19 + leftArmSwing * 0.4, -22);
-            ctx.stroke();
-            ctx.fillStyle = skin;
-            ctx.beginPath();
-            ctx.arc(19 + leftArmSwing * 0.4, -19, 3.5, 0, Math.PI * 2);
-            ctx.fill();
-          }
+          ctx.lineWidth = 5;
+          var leftArmTipX = 19 + pushEased * 48;
+          var leftArmTipY = -19 - pushEased * 21;
+          ctx.beginPath();
+          ctx.moveTo(13, -42);
+          ctx.lineTo(leftArmTipX, leftArmTipY);
+          ctx.stroke();
+          ctx.fillStyle = skin;
+          ctx.beginPath();
+          ctx.arc(leftArmTipX, leftArmTipY, 3.6, 0, Math.PI * 2);
+          ctx.fill();
 
           // Neck
           ctx.fillStyle = skin;
