@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <title>扔掉一个朋友</title>
+    <title data-t="appTitle">扔掉一个朋友</title>
     <style>
       :root {
         --bg-top: #211238;
@@ -94,6 +94,31 @@
         letter-spacing: 0.16em;
         text-transform: uppercase;
         color: var(--muted);
+      }
+
+      .section-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .lang-toggle {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        padding: 4px 10px;
+        cursor: pointer;
+        min-height: 28px;
+      }
+
+      .lang-toggle:hover {
+        background: rgba(255, 255, 255, 0.12);
       }
 
       .headline {
@@ -902,50 +927,62 @@
       <aside class="panel left-panel">
         <div class="stack">
           <div>
-            <p class="section-title">Friends</p>
-            <h1 class="headline">扔掉一个朋友</h1>
-            <p class="subline">
+            <div class="section-row">
+              <p class="section-title" data-t="sectionFriends">Friends</p>
+              <button class="lang-toggle" id="langToggleButton" type="button">
+                EN
+              </button>
+            </div>
+            <h1 class="headline" data-t="headline">扔掉一个朋友</h1>
+            <p class="subline" data-t="subline">
               先在中央区域把朋友拖到悬崖边，再点击左边按钮把他扔下去。朋友一路下坠时会撞上机关，按不同部位结算伤害和金币，再用金币升级身体、科技和机关。
             </p>
           </div>
 
           <div class="resource-bar">
             <div class="resource-card">
-              <div class="label">Coins</div>
+              <div class="label" data-t="coins">Coins</div>
               <div class="value" id="coinValue">0</div>
             </div>
             <div class="resource-card">
-              <div class="label">Throws</div>
+              <div class="label" data-t="throws">Throws</div>
               <div class="value" id="throwValue">0</div>
             </div>
             <div class="resource-card">
-              <div class="label">Best</div>
+              <div class="label" data-t="best">Best</div>
               <div class="value" id="bestValue">0</div>
             </div>
           </div>
 
-          <button class="drop-button" id="dropButton" type="button">
+          <button
+            class="drop-button"
+            id="dropButton"
+            type="button"
+            data-t="dropButton"
+          >
             把朋友扔下悬崖
           </button>
 
           <div>
-            <p class="section-title">Friend Locker</p>
+            <p class="section-title" data-t="sectionLocker">Friend Locker</p>
             <div class="grid-list" id="friendList"></div>
           </div>
 
           <div class="custom-card">
-            <p class="section-title">Custom Friend</p>
+            <p class="section-title" data-t="sectionCustom">Custom Friend</p>
             <div class="input-row">
               <input
                 id="customNameInput"
                 type="text"
                 maxlength="18"
                 placeholder="输入朋友名字"
+                data-t-ph="customNamePh"
               />
               <button
                 class="small-button primary"
                 id="saveCustomButton"
                 type="button"
+                data-t="saveCustom"
               >
                 保存
               </button>
@@ -956,19 +993,29 @@
                 type="text"
                 maxlength="6"
                 placeholder="昵称缩写，例如 老王"
+                data-t-ph="customLookPh"
               />
-              <button class="small-button" id="applyCustomButton" type="button">
+              <button
+                class="small-button"
+                id="applyCustomButton"
+                type="button"
+                data-t="applyCustom"
+              >
                 立即使用
               </button>
             </div>
-            <div class="tiny-note">
+            <div class="tiny-note" data-t="customNote">
               自定义朋友会作为一个可重复修改的角色存在，不占额外角色位。
             </div>
           </div>
 
           <div class="board-card">
-            <p class="section-title">Run Summary</p>
-            <div class="summary-total" id="summaryTotal">
+            <p class="section-title" data-t="sectionRun">Run Summary</p>
+            <div
+              class="summary-total"
+              id="summaryTotal"
+              data-t-hint="summaryHint"
+            >
               先把朋友拖到悬崖边，再开始第一轮扔人赚钱。
             </div>
             <div class="summary-list" id="summaryList"></div>
@@ -979,21 +1026,25 @@
       <main class="panel center-panel">
         <div class="stage">
           <div class="stage-top">
-            <p class="section-title">Cliff Drop Arena</p>
+            <p class="section-title" data-t="stageTitle">Cliff Drop Arena</p>
           </div>
           <div class="canvas-wrap">
             <div class="hud-row">
               <div class="hud-chip">
-                当前朋友: <strong id="currentFriendLabel">-</strong>
+                <span data-t="currentFriend">当前朋友</span>:
+                <strong id="currentFriendLabel">-</strong>
               </div>
               <div class="hud-chip">
-                本轮金币: <strong id="runGoldLabel">0</strong>
+                <span data-t="runGold">本轮金币</span>:
+                <strong id="runGoldLabel">0</strong>
               </div>
               <div class="hud-chip">
-                身体收益: <strong id="bodyBoostLabel">x1.00</strong>
+                <span data-t="bodyBoost">身体收益</span>:
+                <strong id="bodyBoostLabel">x1.00</strong>
               </div>
               <div class="hud-chip">
-                科技收益: <strong id="techBoostLabel">x1.00</strong>
+                <span data-t="techBoost">科技收益</span>:
+                <strong id="techBoostLabel">x1.00</strong>
               </div>
             </div>
             <canvas
@@ -1006,6 +1057,7 @@
               class="mobile-drop-button"
               id="mobileDropButton"
               type="button"
+              data-t="dropButton"
             >
               把朋友扔下悬崖
             </button>
@@ -1019,32 +1071,34 @@
       <aside class="panel right-panel">
         <div class="stack">
           <div>
-            <p class="section-title">Body Upgrades</p>
+            <p class="section-title" data-t="sectionBody">Body Upgrades</p>
             <div class="grid-list" id="upgradeList"></div>
           </div>
 
           <div>
-            <p class="section-title">Tech Lab</p>
+            <p class="section-title" data-t="sectionTech">Tech Lab</p>
             <div class="grid-list" id="techList"></div>
           </div>
 
           <div>
-            <p class="section-title">Trap Workshop</p>
+            <p class="section-title" data-t="sectionTraps">Trap Workshop</p>
             <div class="grid-list" id="trapList"></div>
           </div>
 
           <div class="board-card">
-            <p class="section-title">Damage Ledger</p>
+            <p class="section-title" data-t="sectionRun">Damage Ledger</p>
             <div class="damage-list" id="damageList"></div>
           </div>
 
           <div class="board-card">
-            <p class="section-title">Gold Leaderboard</p>
+            <p class="section-title" data-t="sectionLeaderboard">
+              Gold Leaderboard
+            </p>
             <div class="leaderboard-list" id="leaderboardList"></div>
           </div>
 
           <div class="board-card">
-            <p class="section-title">Battle Log</p>
+            <p class="section-title" data-t="sectionLog">Battle Log</p>
             <div class="log-list" id="logList"></div>
           </div>
         </div>
@@ -1054,14 +1108,19 @@
     <div class="results-modal" id="resultsModal" hidden>
       <div class="results-backdrop" id="resultsBackdrop"></div>
       <div class="results-card">
-        <p class="results-eyebrow">本轮结算</p>
+        <p class="results-eyebrow" data-t="resultsTitle">本轮结算</p>
         <p class="results-friend" id="resultsFriend">-</p>
         <div class="results-coin-block">
-          <span class="results-coin-label">获得金币</span>
+          <span class="results-coin-label" data-t="resultsCoin">获得金币</span>
           <span class="results-coin-value" id="resultsCoinValue">0</span>
         </div>
         <p class="results-pity" id="resultsPity"></p>
-        <button class="drop-button" id="resultsCloseButton" type="button">
+        <button
+          class="drop-button"
+          id="resultsCloseButton"
+          type="button"
+          data-t="resultsClose"
+        >
           关闭并回到悬崖顶
         </button>
       </div>
@@ -1091,6 +1150,8 @@
           {
             key: "head",
             label: "头",
+            labelZh: "头",
+            labelEn: "Head",
             icon: "头",
             baseCost: 54,
             color: "#ffd6b3",
@@ -1098,6 +1159,8 @@
           {
             key: "arms",
             label: "胳膊",
+            labelZh: "胳膊",
+            labelEn: "Arms",
             icon: "臂",
             baseCost: 58,
             color: "#9fdcff",
@@ -1105,6 +1168,8 @@
           {
             key: "torso",
             label: "躯干",
+            labelZh: "躯干",
+            labelEn: "Torso",
             icon: "躯",
             baseCost: 72,
             color: "#ff9aad",
@@ -1112,6 +1177,8 @@
           {
             key: "legs",
             label: "腿",
+            labelZh: "腿",
+            labelEn: "Legs",
             icon: "腿",
             baseCost: 64,
             color: "#aaf3c5",
@@ -1122,28 +1189,44 @@
           {
             key: "magnet",
             name: "吸金科技",
+            nameZh: "吸金科技",
+            nameEn: "Coin Magnet",
             desc: "所有金币收益每级 +12%。",
+            descZh: "所有金币收益每级 +12%。",
+            descEn: "All coin gains +12% per level.",
             baseCost: 120,
             icon: "磁",
           },
           {
             key: "crit",
             name: "暴击研究",
+            nameZh: "暴击研究",
+            nameEn: "Crit Research",
             desc: "暴击率每级 +5%，暴击倍率每级 +15%。",
+            descZh: "暴击率每级 +5%，暴击倍率每级 +15%。",
+            descEn: "+5% crit chance and +15% crit damage per level.",
             baseCost: 150,
             icon: "暴",
           },
           {
             key: "salvage",
             name: "回收无人机",
+            nameZh: "回收无人机",
+            nameEn: "Salvage Drone",
             desc: "每次命中额外回收固定金币。",
+            descZh: "每次命中额外回收固定金币。",
+            descEn: "Recovers a flat coin bonus on every hit.",
             baseCost: 170,
             icon: "机",
           },
           {
             key: "lab",
             name: "疯狂实验",
+            nameZh: "疯狂实验",
+            nameEn: "Mad Lab",
             desc: "所有机关收益每级 +10%。",
+            descZh: "所有机关收益每级 +10%。",
+            descEn: "All trap gains +10% per level.",
             baseCost: 210,
             icon: "科",
           },
@@ -1153,6 +1236,8 @@
           {
             key: "bomb",
             name: "炸弹桶",
+            nameZh: "炸弹桶",
+            nameEn: "Bomb Barrel",
             color: "#ff8458",
             icon: "爆",
             unlockCost: 0,
@@ -1162,6 +1247,8 @@
           {
             key: "spikes",
             name: "地刺",
+            nameZh: "地刺",
+            nameEn: "Spike Bed",
             color: "#8edcff",
             icon: "刺",
             unlockCost: 180,
@@ -1171,6 +1258,8 @@
           {
             key: "cactus",
             name: "仙人掌",
+            nameZh: "仙人掌",
+            nameEn: "Cactus",
             color: "#7ef3a8",
             icon: "掌",
             unlockCost: 280,
@@ -1180,6 +1269,8 @@
           {
             key: "hedgehog",
             name: "刺猬轮",
+            nameZh: "刺猬轮",
+            nameEn: "Hedgehog Wheel",
             color: "#ffd56c",
             icon: "猬",
             unlockCost: 420,
@@ -1189,6 +1280,8 @@
           {
             key: "crusher",
             name: "落石机",
+            nameZh: "落石机",
+            nameEn: "Rock Crusher",
             color: "#d4c6ff",
             icon: "石",
             unlockCost: 620,
@@ -1198,6 +1291,8 @@
           {
             key: "sweeper",
             name: "扫刺挡板",
+            nameZh: "扫刺挡板",
+            nameEn: "Spike Sweeper",
             color: "#ff9d6c",
             icon: "扫",
             unlockCost: 860,
@@ -1210,6 +1305,8 @@
           {
             id: "friend-paper",
             name: "纸片朋友",
+            nameZh: "纸片朋友",
+            nameEn: "Paper Friend",
             look: "纸",
             unlockCost: 0,
             yieldBonus: 1,
@@ -1220,6 +1317,8 @@
           {
             id: "friend-office",
             name: "打工朋友",
+            nameZh: "打工朋友",
+            nameEn: "Office Friend",
             look: "工",
             unlockCost: 280,
             yieldBonus: 1.08,
@@ -1230,6 +1329,8 @@
           {
             id: "friend-gym",
             name: "健身朋友",
+            nameZh: "健身朋友",
+            nameEn: "Gym Friend",
             look: "猛",
             unlockCost: 620,
             yieldBonus: 1.18,
@@ -1240,6 +1341,8 @@
           {
             id: "friend-rich",
             name: "氪金朋友",
+            nameZh: "氪金朋友",
+            nameEn: "Whale Friend",
             look: "豪",
             unlockCost: 980,
             yieldBonus: 1.32,
@@ -1250,6 +1353,8 @@
           {
             id: "friend-boss",
             name: "老板朋友",
+            nameZh: "老板朋友",
+            nameEn: "Boss Friend",
             look: "总",
             unlockCost: 1480,
             yieldBonus: 1.48,
@@ -1260,6 +1365,8 @@
           {
             id: "custom-friend",
             name: "自定义朋友",
+            nameZh: "自定义朋友",
+            nameEn: "Custom Friend",
             look: "友",
             unlockCost: 0,
             yieldBonus: 1.12,
@@ -1306,6 +1413,7 @@
             { name: "深坑大亨", coins: 4020 },
           ],
           logs: ["系统准备完毕。先把朋友拖到悬崖边，再把他扔下去。"],
+          lang: "zh",
         };
 
         function buildDefaultTrapLevels() {
@@ -1360,9 +1468,258 @@
             ? new URLSearchParams(window.location.search)
             : null;
         var state = loadState();
+        var currentLang = state.lang || "zh";
         var running = false;
         var scene = createIdleScene();
         var lastFrameTime = 0;
+
+        var translations = {
+          zh: {
+            appTitle: "扔掉一个朋友",
+            headline: "扔掉一个朋友",
+            subline:
+              "先在中央区域把朋友拖到悬崖边，再点击左边按钮把他扔下去。朋友一路下坠时会撞上机关，按不同部位结算伤害和金币，再用金币升级身体、科技和机关。",
+            coins: "金币",
+            throws: "扔出",
+            best: "最佳",
+            dropButton: "把朋友推下悬崖",
+            sectionFriends: "朋友",
+            sectionLocker: "朋友列表",
+            sectionCustom: "自定义朋友",
+            sectionBody: "身体升级",
+            sectionTech: "科技",
+            sectionTraps: "机关",
+            sectionRun: "本轮总结",
+            sectionLog: "战斗日志",
+            sectionLeaderboard: "排行榜",
+            customNamePh: "输入朋友名字",
+            customLookPh: "昵称缩写，例如 老王",
+            saveCustom: "保存",
+            applyCustom: "立即使用",
+            customNote:
+              "自定义朋友会作为一个可重复修改的角色存在，不占额外角色位。",
+            upgrade: "升级",
+            upgradeTech: "升级科技",
+            upgradeTrap: "升级机关",
+            unlockTrap: "解锁机关",
+            canvasDropHere: "拖到这里",
+            canvasPickUp: "拿起朋友",
+            sceneReady:
+              "先拖住朋友，把他摆到悬崖边发光区域里。摆好之后，左边按钮才会解锁。",
+            scenePlaced: "已摆好。点左边按钮把朋友推下悬崖。",
+            sceneDropped: "{name} 已经被扔下去了，镜头正在跟着下坠。",
+            sceneSettled: "{name} 已经滚到底了。本轮总计 {coins} 金币。",
+            sceneHit: "{name} 撞上 {trap}，爆出 {coins} 金币{crit}。",
+            logHit: "{name} 撞上 {trap}，拿到 {coins} 金币{crit}。",
+            sceneDrag: "拖动朋友到右侧发光区域，摆到悬崖边。",
+            sceneNotPlaced: "还没摆到悬崖边。继续拖过去。",
+            sceneTrapUnlocked: "{name} 已加入悬崖陷阱链。",
+            sceneTrapUpgraded: "{name} 升级完成，打钱更狠了。",
+            sceneCustomSaved: "{name} 已保存到橱窗。",
+            sceneThrow: "把 {name} 扔下了悬崖。",
+            sceneSettle: "{name} 本轮结算 {coins} 金币。",
+            resultsTitle: "本轮结算",
+            resultsCoin: "获得金币",
+            resultsPity: "含保底 {pity} 金币（本轮未撞到机关）。",
+            resultsNoHit: "这轮没撞到任何机关，下次试试别的朋友。",
+            resultsNormal: "撞了 {coins} 金币机关收益，无保底。",
+            resultsClose: "关闭并回到悬崖顶",
+            noDamage: "还没有任何伤害记录。",
+            summaryHint: "先把朋友拖到悬崖边，再开始第一轮扔人赚钱。",
+            summaryNoLast: "上一轮还没结算。",
+            summaryLast: "上一轮 {name} 拿到 {coins} 金币（{details}）。",
+            summaryCompensation: "补偿金币：{coins}",
+            summaryBody: "身体 {name}：{value}",
+            summaryBodyEmpty: "身体没撞到东西。",
+            summaryHits: "本轮共撞 {count} 次",
+            summaryHead: "头",
+            summaryArms: "胳膊",
+            summaryTorso: "躯干",
+            summaryLegs: "腿",
+            logInit: "系统准备完毕。先把朋友拖到悬崖边，再把他扔下去。",
+            sceneSwitched: "已切换到 {name}。先把他拖到悬崖边。",
+            logSwitched: "已选择朋友：{name}。",
+            sceneUnlocked: "{name} 已解锁。先把他拖到悬崖边。",
+            logUnlocked: "解锁新朋友：{name}。",
+            sceneBodyUp: "{name} 已升级。下一次撞到机关时会更值钱。",
+            logBodyUp: "{name} 升到 Lv.{level}。",
+            sceneTechUp: "{name} 已升级，整体收益更高了。",
+            logTechUp: "{name} 升到 Lv.{level}。",
+            sceneTrapUnlock: "{name} 已加入悬崖陷阱链。",
+            logTrapUnlock: "解锁机关：{name}。",
+            sceneTrapUp: "{name} 升级完成，打钱更狠了。",
+            logTrapUp: "{name} 升到 Lv.{level}。",
+            sceneCustomUse: "{name} 已经被拉到台前。拖到悬崖边再扔。",
+            logCustomUse: "切换自定义朋友：{name}。",
+            sceneCustomSave: "{name} 已保存到橱窗。",
+            logCustomSave: "保存自定义朋友：{name}。",
+            langToggle: "EN",
+            currentFriend: "当前朋友",
+            runGold: "本轮金币",
+            bodyBoost: "身体收益",
+            techBoost: "科技收益",
+            stageTitle: "Cliff Drop Arena",
+          },
+          en: {
+            appTitle: "Drop a Friend",
+            headline: "Drop a Friend",
+            subline:
+              "Drag your friend to the cliff edge in the center, then click the button on the left to push them off. As they fall they hit traps that deal damage by body part and earn coins. Spend coins to upgrade body, tech, and traps.",
+            coins: "Coins",
+            throws: "Throws",
+            best: "Best",
+            dropButton: "Push your friend off",
+            sectionFriends: "Friends",
+            sectionLocker: "Friend Locker",
+            sectionCustom: "Custom Friend",
+            sectionBody: "Body Upgrades",
+            sectionTech: "Tech",
+            sectionTraps: "Traps",
+            sectionRun: "Run Summary",
+            sectionLog: "Battle Log",
+            sectionLeaderboard: "Leaderboard",
+            customNamePh: "Enter friend name",
+            customLookPh: "Nickname (e.g. Bob)",
+            saveCustom: "Save",
+            applyCustom: "Apply",
+            customNote:
+              "Your custom friend can be edited anytime and doesn't take an extra slot.",
+            upgrade: "Upgrade",
+            upgradeTech: "Upgrade Tech",
+            upgradeTrap: "Upgrade Trap",
+            unlockTrap: "Unlock Trap",
+            canvasDropHere: "Drop here",
+            canvasPickUp: "Pick up friend",
+            sceneReady:
+              "Drag your friend to the glowing area on the cliff edge. The drop button unlocks once they're placed.",
+            scenePlaced:
+              "Placed! Click the button on the left to push your friend off.",
+            sceneDropped:
+              "{name} has been pushed. Camera is following the fall.",
+            sceneSettled:
+              "{name} reached the bottom. This run earned {coins} coins.",
+            sceneHit: "{name} hit {trap} for {coins} coins{crit}.",
+            logHit: "{name} hit {trap} for {coins} coins{crit}.",
+            sceneDrag:
+              "Drag your friend to the glowing area on the cliff edge.",
+            sceneNotPlaced: "Not at the cliff edge yet. Keep dragging.",
+            sceneTrapUnlocked: "{name} added to the trap chain.",
+            sceneTrapUpgraded: "{name} upgraded. Coins per hit increased.",
+            sceneCustomSaved: "{name} saved to the locker.",
+            sceneThrow: "Pushed {name} off the cliff.",
+            sceneSettle: "{name} earned {coins} coins this run.",
+            resultsTitle: "Run Results",
+            resultsCoin: "Coins Earned",
+            resultsPity: "Includes {pity} pity coins (no traps hit this run).",
+            resultsNoHit:
+              "No traps hit this run. Try a different friend next time.",
+            resultsNormal: "Earned {coins} from traps, no pity bonus.",
+            resultsClose: "Close and return to cliff top",
+            noDamage: "No damage recorded yet.",
+            summaryHint:
+              "Drag your friend to the cliff edge, then start your first drop to earn coins.",
+            summaryNoLast: "No previous run.",
+            summaryLast: "Last run: {name} earned {coins} coins ({details}).",
+            summaryCompensation: "Pity coins: {coins}",
+            summaryBody: "Body {name}: {value}",
+            summaryBodyEmpty: "Body didn't hit anything.",
+            summaryHits: "Total hits this run: {count}",
+            summaryHead: "Head",
+            summaryArms: "Arms",
+            summaryTorso: "Torso",
+            summaryLegs: "Legs",
+            logInit:
+              "System ready. Drag your friend to the cliff edge, then push them off.",
+            sceneSwitched: "Switched to {name}. Drag them to the cliff edge.",
+            logSwitched: "Selected friend: {name}.",
+            sceneUnlocked: "{name} unlocked. Drag them to the cliff edge.",
+            logUnlocked: "Unlocked new friend: {name}.",
+            sceneBodyUp: "{name} upgraded. Next trap hit will earn more.",
+            logBodyUp: "{name} reached Lv.{level}.",
+            sceneTechUp: "{name} upgraded. Overall gains improved.",
+            logTechUp: "{name} reached Lv.{level}.",
+            sceneTrapUnlock: "{name} added to the trap chain.",
+            logTrapUnlock: "Unlocked trap: {name}.",
+            sceneTrapUp: "{name} upgraded. Coins per hit increased.",
+            logTrapUp: "{name} reached Lv.{level}.",
+            sceneCustomUse:
+              "{name} is on stage. Drag to the cliff edge and push.",
+            logCustomUse: "Switched custom friend: {name}.",
+            sceneCustomSave: "{name} saved to the locker.",
+            logCustomSave: "Saved custom friend: {name}.",
+            langToggle: "中文",
+            currentFriend: "Friend",
+            runGold: "Run Coins",
+            bodyBoost: "Body Boost",
+            techBoost: "Tech Boost",
+            stageTitle: "Cliff Drop Arena",
+          },
+        };
+
+        function t(key, vars) {
+          var dict = translations[currentLang] || translations.zh;
+          var str = dict[key] || translations.zh[key] || key;
+          if (vars) {
+            for (var k in vars) {
+              if (Object.prototype.hasOwnProperty.call(vars, k)) {
+                str = str.replace("{" + k + "}", vars[k]);
+              }
+            }
+          }
+          return str;
+        }
+
+        function applyCatalogLanguage() {
+          for (var i = 0; i < bodyParts.length; i += 1) {
+            var p = bodyParts[i];
+            p.label = currentLang === "en" ? p.labelEn : p.labelZh;
+          }
+          for (var j = 0; j < techCatalog.length; j += 1) {
+            var tc = techCatalog[j];
+            tc.name = currentLang === "en" ? tc.nameEn : tc.nameZh;
+            tc.desc = currentLang === "en" ? tc.descEn : tc.descZh;
+          }
+          for (var k = 0; k < trapCatalog.length; k += 1) {
+            var tr = trapCatalog[k];
+            tr.name = currentLang === "en" ? tr.nameEn : tr.nameZh;
+          }
+          for (var m = 0; m < friendCatalog.length; m += 1) {
+            var fr = friendCatalog[m];
+            fr.name = currentLang === "en" ? fr.nameEn : fr.nameZh;
+          }
+        }
+
+        function applyLanguage() {
+          applyCatalogLanguage();
+          document.documentElement.lang = currentLang === "en" ? "en" : "zh-CN";
+          var nodes = document.querySelectorAll("[data-t]");
+          for (var i = 0; i < nodes.length; i += 1) {
+            var el = nodes[i];
+            var key = el.getAttribute("data-t");
+            el.textContent = t(key);
+          }
+          var phs = document.querySelectorAll("[data-t-ph]");
+          for (var j = 0; j < phs.length; j += 1) {
+            var pel = phs[j];
+            pel.placeholder = t(pel.getAttribute("data-t-ph"));
+          }
+          var hints = document.querySelectorAll("[data-t-hint]");
+          for (var k = 0; k < hints.length; k += 1) {
+            var hel = hints[k];
+            hel.textContent = t(hel.getAttribute("data-t-hint"));
+          }
+          var langBtn = document.getElementById("langToggleButton");
+          if (langBtn) langBtn.textContent = t("langToggle");
+          if (typeof renderAll === "function") renderAll();
+        }
+
+        function setLanguage(lang) {
+          if (lang !== "zh" && lang !== "en") return;
+          currentLang = lang;
+          state.lang = lang;
+          applyLanguage();
+          saveState();
+        }
         var dragState = { active: false, offsetX: 0, offsetY: 0 };
         var transient = {
           screenShake: 0,
@@ -1621,7 +1978,7 @@
             pushActive: false,
             pushStart: 0,
             pushDuration: 70,
-            pushReach: 20 + Math.random() * 3,
+            pushReach: 9 + Math.random() * 4,
             breath: 0,
           };
         }
@@ -2382,9 +2739,10 @@
           state.currentFriendId = friendId;
           scene = createIdleScene();
           dragState.active = false;
-          sceneMessage.textContent =
-            "已切换到 " + getCurrentFriend().name + "。先把他拖到悬崖边。";
-          logEvent("已选择朋友：" + getCurrentFriend().name + "。");
+          sceneMessage.textContent = t("sceneSwitched", {
+            name: getCurrentFriend().name,
+          });
+          logEvent(t("logSwitched", { name: getCurrentFriend().name }));
           saveState();
           renderAll();
         }
@@ -2399,9 +2757,8 @@
           }
           state.currentFriendId = friendId;
           scene = createIdleScene();
-          sceneMessage.textContent =
-            friend.name + " 已解锁。先把他拖到悬崖边。";
-          logEvent("解锁新朋友：" + friend.name + "。");
+          sceneMessage.textContent = t("sceneUnlocked", { name: friend.name });
+          logEvent(t("logUnlocked", { name: friend.name }));
           saveState();
           renderAll();
         }
@@ -2434,10 +2791,14 @@
           state.coins -= cost;
           state.bodyLevels[partKey] += 1;
           triggerBodyPulse(partKey);
-          sceneMessage.textContent =
-            bodyLabel(partKey) + " 已升级。下一次撞到机关时会更值钱。";
+          sceneMessage.textContent = t("sceneBodyUp", {
+            name: bodyLabel(partKey),
+          });
           logEvent(
-            bodyLabel(partKey) + " 升到 Lv." + state.bodyLevels[partKey] + "。",
+            t("logBodyUp", {
+              name: bodyLabel(partKey),
+              level: state.bodyLevels[partKey],
+            }),
           );
           saveState();
           renderAll();
@@ -2449,10 +2810,14 @@
           state.coins -= cost;
           state.techLevels[techKey] += 1;
           transient.screenFlash = Math.max(transient.screenFlash, 0.12);
-          sceneMessage.textContent =
-            techName(techKey) + " 已升级，整体收益更高了。";
+          sceneMessage.textContent = t("sceneTechUp", {
+            name: techName(techKey),
+          });
           logEvent(
-            techName(techKey) + " 升到 Lv." + state.techLevels[techKey] + "。",
+            t("logTechUp", {
+              name: techName(techKey),
+              level: state.techLevels[techKey],
+            }),
           );
           saveState();
           renderAll();
@@ -2468,15 +2833,19 @@
             state.coins -= unlockCost;
             trapState.unlocked = true;
             trapState.level = 1;
-            sceneMessage.textContent = trap.name + " 已加入悬崖陷阱链。";
-            logEvent("解锁机关：" + trap.name + "。");
+            sceneMessage.textContent = t("sceneTrapUnlock", {
+              name: trap.name,
+            });
+            logEvent(t("logTrapUnlock", { name: trap.name }));
           } else {
             var upgradeCost = getTrapUpgradeCost(trapKey);
             if (state.coins < upgradeCost) return;
             state.coins -= upgradeCost;
             trapState.level += 1;
-            sceneMessage.textContent = trap.name + " 升级完成，打钱更狠了。";
-            logEvent(trap.name + " 升到 Lv." + trapState.level + "。");
+            sceneMessage.textContent = t("sceneTrapUp", { name: trap.name });
+            logEvent(
+              t("logTrapUp", { name: trap.name, level: trapState.level }),
+            );
           }
           if (!running) {
             scene.traps = buildTrapActors();
@@ -2499,12 +2868,11 @@
           if (useNow) {
             state.currentFriendId = "custom-friend";
             scene = createIdleScene();
-            sceneMessage.textContent =
-              name + " 已经被拉到台前。拖到悬崖边再扔。";
-            logEvent("切换自定义朋友：" + name + "。");
+            sceneMessage.textContent = t("sceneCustomUse", { name: name });
+            logEvent(t("logCustomUse", { name: name }));
           } else {
-            sceneMessage.textContent = name + " 已保存到橱窗。";
-            logEvent("保存自定义朋友：" + name + "。");
+            sceneMessage.textContent = t("sceneCustomSave", { name: name });
+            logEvent(t("logCustomSave", { name: name }));
           }
           saveState();
           renderAll();
@@ -2547,9 +2915,10 @@
           scene.player.pushActive = true;
           scene.player.pushStart = scene.player.pushDuration;
           runGoldLabel.textContent = "0";
-          sceneMessage.textContent =
-            getCurrentFriend().name + " 已经被扔下去了，镜头正在跟着下坠。";
-          logEvent("把 " + getCurrentFriend().name + " 扔下了悬崖。");
+          sceneMessage.textContent = t("sceneDropped", {
+            name: getCurrentFriend().name,
+          });
+          logEvent(t("sceneThrow", { name: getCurrentFriend().name }));
           renderHud();
         }
 
@@ -2617,7 +2986,7 @@
             WORLD.ledgeY - 42,
           );
           scene.friend.placed = false;
-          sceneMessage.textContent = "拖动朋友到右侧发光区域，摆到悬崖边。";
+          sceneMessage.textContent = t("sceneDrag");
           updateButtons();
           event.preventDefault();
         }
@@ -2638,7 +3007,7 @@
             friend.x = WORLD.holdX;
             friend.y = WORLD.holdY;
             friend.placed = false;
-            sceneMessage.textContent = "还没摆到悬崖边。继续拖过去。";
+            sceneMessage.textContent = t("sceneNotPlaced");
           }
           updateButtons();
           if (event) event.preventDefault();
@@ -2799,24 +3168,21 @@
 
           scene.friend.spin += crit ? 0.18 : 0.08;
           runGoldLabel.textContent = scene.runCoins.toLocaleString("en-US");
-          sceneMessage.textContent =
-            bodyLabel(partKey) +
-            " 撞上 " +
-            actor.name +
-            "，爆出 " +
-            coins +
-            " 金币" +
-            (crit ? "，暴击！" : "。");
-          logEvent(
-            bodyLabel(partKey) +
-              " 撞上 " +
-              actor.name +
-              "，拿到 " +
-              coins +
-              " 金币" +
-              (crit ? "，暴击" : "") +
-              "。",
-          );
+          var critSuffix = crit
+            ? currentLang === "en"
+              ? " — CRIT!"
+              : "，暴击！"
+            : currentLang === "en"
+              ? ""
+              : "";
+          var hitVars = {
+            name: bodyLabel(partKey),
+            trap: actor.name,
+            coins: coins,
+            crit: critSuffix,
+          };
+          sceneMessage.textContent = t("sceneHit", hitVars);
+          logEvent(t("logHit", hitVars));
         }
 
         function updateRun(dt) {
@@ -2973,13 +3339,15 @@
           };
           updateLeaderboard();
           running = false;
-          sceneMessage.textContent =
-            getCurrentFriend().name +
-            " 已经滚到底了。本轮总计 " +
-            finalCoins +
-            " 金币。";
+          var settledName = getCurrentFriend().name;
+          sceneMessage.textContent = t("sceneSettled", {
+            name: settledName,
+            coins: finalCoins,
+          });
           logEvent(
-            getCurrentFriend().name + " 本轮结算 " + finalCoins + " 金币。",
+            currentLang === "en"
+              ? settledName + " settled for " + finalCoins + " coins."
+              : settledName + " 本轮结算 " + finalCoins + " 金币。",
           );
           saveState();
           renderAll();
@@ -3376,8 +3744,8 @@
             ctx.fillStyle = "rgba(255,255,255,0.9)";
             ctx.font = "bold 11px Trebuchet MS";
             ctx.textAlign = "center";
-            ctx.fillText("拖到这里", WORLD.placeX, WORLD.placeY + 38);
-            ctx.fillText("拿起朋友", WORLD.holdX, WORLD.holdY + 38);
+            ctx.fillText(t("canvasDropHere"), WORLD.placeX, WORLD.placeY + 38);
+            ctx.fillText(t("canvasPickUp"), WORLD.holdX, WORLD.holdY + 38);
             ctx.textAlign = "left";
           }
 
@@ -3855,6 +4223,12 @@
         applyCustomButton.addEventListener("click", function () {
           saveCustomFriend(true);
         });
+        var langToggleEl = document.getElementById("langToggleButton");
+        if (langToggleEl) {
+          langToggleEl.addEventListener("click", function () {
+            setLanguage(currentLang === "en" ? "zh" : "en");
+          });
+        }
 
         canvas.addEventListener("mousedown", startDragFromEvent);
         window.addEventListener("mousemove", moveDragFromEvent);
@@ -3883,6 +4257,7 @@
         }
 
         bootstrapGameLayout();
+        applyLanguage();
         resizeCanvas();
         renderAll();
         maybeStartDemoMode();
