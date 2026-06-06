@@ -31,6 +31,101 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-06-hot",
+    date: "2026-06-06",
+    title: {
+      zh: "热点快报 · 2026-06-06",
+      en: "Hot News Brief · Jun 6, 2026",
+    },
+    summary: {
+      zh: "医保个人账户跨省共济正式落地，高考诚信与安检提醒升级，酒店卫生争议带火“牙科蓝膜”，我国航天和能源等领域迎来集中突破，全球首款硅基氮化镓射频芯片交付，多地发布暴雨预警，智能眼镜偷拍隐患引发关注，公积金提取规则修订征求意见。",
+      en: "Cross-province sharing of personal medical-insurance accounts went live, gaokao integrity and security reminders intensified, hotel hygiene concerns boosted dental barrier-film sales, China saw a cluster of breakthroughs across aerospace and energy, the first silicon-based GaN RF chip was delivered, heavy-rain alerts were issued in multiple regions, smart-glass privacy risks drew attention, and revised housing-fund withdrawal rules entered consultation.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "医保个人账户跨省共济落地",
+          en: "Cross-Province Medical Account Sharing Goes Live",
+        },
+        description: {
+          zh: "6 月起职工医保个人账户实现全国跨省共济，近亲属可跨省使用额度支付就医购药自费或居民医保、长护险缴费。",
+          en: "From June, employee medical-insurance personal accounts can be shared nationwide across provinces for close relatives' out-of-pocket care, medicine purchases, and some insurance payments.",
+        },
+      },
+      {
+        title: {
+          zh: "高考诚信与安检提醒升级",
+          en: "Gaokao Integrity and Security Warnings Intensify",
+        },
+        description: {
+          zh: "公安和教育部门高考前再次提醒，严打涉考违法行为，手机、智能手表和智能眼镜等带入考场即会被认定为作弊。",
+          en: "Ahead of the gaokao, public-security and education authorities renewed warnings that exam-related crimes will be punished and devices like phones, smartwatches, and smart glasses count as cheating if taken into test rooms.",
+        },
+      },
+      {
+        title: {
+          zh: "酒店卫生争议带火“牙科蓝膜”",
+          en: "Hotel Hygiene Concerns Boost Dental Barrier Film Sales",
+        },
+        description: {
+          zh: "多家酒店问题曝光后，旅客自带隔脏用品的讨论升温，原本用于牙科诊所的“牙科蓝膜”销量迅速攀升。",
+          en: "After hotel cleanliness issues were exposed, discussion around bringing personal protective supplies surged and sales of dental barrier film climbed quickly.",
+        },
+      },
+      {
+        title: {
+          zh: "多领域迎来硬核科技突破",
+          en: "Multiple Fields See Major Tech Breakthroughs",
+        },
+        description: {
+          zh: "本周我国在航天、清洁能源和农业等方向接连出现重大进展，成为当天最受关注的综合科技热点之一。",
+          en: "China logged notable advances this week across aerospace, clean energy, and agriculture, making it one of the day's biggest broad technology storylines.",
+        },
+      },
+      {
+        title: {
+          zh: "硅基氮化镓射频芯片完成交付",
+          en: "Silicon-Based GaN RF Chip Delivered",
+        },
+        description: {
+          zh: "全球首款硅基氮化镓射频芯片完成交付，显示高端射频器件和通信芯片能力继续向前推进。",
+          en: "The world's first silicon-based gallium-nitride RF chip was delivered, highlighting continued progress in high-end RF and communications components.",
+        },
+      },
+      {
+        title: {
+          zh: "多地发布暴雨预警",
+          en: "Heavy Rain Alerts Issued Across Multiple Regions",
+        },
+        description: {
+          zh: "中央气象部门继续发布暴雨蓝色预警，山东、河南、湖北、四川、重庆、贵州、湖南等地需加强防范。",
+          en: "Weather authorities kept a blue heavy-rain alert in place for parts of Shandong, Henan, Hubei, Sichuan, Chongqing, Guizhou, and Hunan.",
+        },
+      },
+      {
+        title: {
+          zh: "智能眼镜偷拍隐患受关注",
+          en: "Smart-Glass Hidden Recording Risks Draw Concern",
+        },
+        description: {
+          zh: "媒体调查显示，部分智能眼镜用户社区存在大量偷拍内容，公众对隐私边界和设备监管的担忧升温。",
+          en: "A media investigation found hidden-recording content in some smart-glass user communities, raising concerns about privacy boundaries and device oversight.",
+        },
+      },
+      {
+        title: {
+          zh: "公积金提取规则修订征求意见",
+          en: "Revised Housing Fund Withdrawal Rules Seek Feedback",
+        },
+        description: {
+          zh: "住建部就公积金条例修订稿征求意见，拟明确 9 类提取情形，并把装修、物业费等新场景纳入讨论。",
+          en: "China's housing ministry opened consultation on revised housing-fund rules, proposing nine withdrawal scenarios and discussing new uses such as renovation and property fees.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-06",
     date: "2026-06-06",
     title: {
