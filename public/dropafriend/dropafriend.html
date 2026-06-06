@@ -121,6 +121,34 @@
         background: rgba(255, 255, 255, 0.12);
       }
 
+      .lang-fab {
+        position: fixed;
+        top: 14px;
+        right: 18px;
+        z-index: 50;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.04)
+          ),
+          rgba(12, 16, 26, 0.78);
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        padding: 7px 14px;
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+        min-height: 32px;
+      }
+
+      .lang-fab:hover {
+        background: rgba(255, 255, 255, 0.16);
+      }
+
       .headline {
         margin: 0;
         font-size: 34px;
@@ -923,15 +951,13 @@
     </style>
   </head>
   <body>
+    <button class="lang-fab" id="langToggleButton" type="button">EN</button>
     <div class="page">
       <aside class="panel left-panel">
         <div class="stack">
           <div>
             <div class="section-row">
               <p class="section-title" data-t="sectionFriends">Friends</p>
-              <button class="lang-toggle" id="langToggleButton" type="button">
-                EN
-              </button>
             </div>
             <h1 class="headline" data-t="headline">扔掉一个朋友</h1>
             <p class="subline" data-t="subline">
