@@ -1502,7 +1502,7 @@
             y: WORLD.playerY,
             pushActive: false,
             pushStart: 0,
-            pushDuration: 380,
+            pushDuration: 130,
             breath: 0,
           };
         }
@@ -3455,7 +3455,7 @@
           if (player.pushActive) {
             var t = player.pushStart / player.pushDuration;
             pushEased = 1 - Math.pow(1 - t, 2.0);
-            bodyLean = pushEased * 0.12;
+            bodyLean = pushEased * 0.06;
           }
 
           var skin = "#f8d2c4";
@@ -3531,8 +3531,8 @@
           // Left arm (viewer's right, friend side) — push extends forward
           ctx.strokeStyle = skin;
           ctx.lineWidth = 5;
-          var leftArmTipX = 19 + pushEased * 48;
-          var leftArmTipY = -19 - pushEased * 21;
+          var leftArmTipX = 19 + pushEased * 22;
+          var leftArmTipY = -19 - pushEased * 12;
           ctx.beginPath();
           ctx.moveTo(13, -42);
           ctx.lineTo(leftArmTipX, leftArmTipY);
