@@ -1195,6 +1195,15 @@
             levelCost: 176,
             baseDamage: { head: 22, arms: 13, torso: 27, legs: 12 },
           },
+          {
+            key: "sweeper",
+            name: "扫刺挡板",
+            color: "#ff9d6c",
+            icon: "扫",
+            unlockCost: 860,
+            levelCost: 198,
+            baseDamage: { head: 18, arms: 12, torso: 14, legs: 22 },
+          },
         ];
 
         var friendCatalog = [
@@ -1592,11 +1601,14 @@
               baseDamage: trap.baseDamage,
               level: state.trapLevels[trap.key].level,
               x: slot.x,
+              baseX: slot.x,
               y: slot.y,
               size: slot.size + state.trapLevels[trap.key].level * 2.5,
               phase: j * 0.9,
               pulse: 0,
               cooldowns: createBodyPulseMap(),
+              dirX: 1,
+              sweepSpeed: 0.9 + Math.random() * 0.4,
             });
           }
           return actors;
@@ -1609,6 +1621,7 @@
             pushActive: false,
             pushStart: 0,
             pushDuration: 70,
+            pushReach: 20 + Math.random() * 12,
             breath: 0,
           };
         }
@@ -2850,6 +2863,21 @@
           var nodes = getPartNodes(friend);
           for (var i = 0; i < scene.traps.length; i += 1) {
             var actor = scene.traps[i];
+            if (actor.key === "sweeper") {
+              var maxRange = Math.min(
+                actor.baseX - WORLD.shaftLeft - 28,
+                WORLD.shaftRight - actor.baseX - 28,
+              );
+              if (maxRange < 20) maxRange = 20;
+              actor.x += actor.dirX * actor.sweepSpeed * dt;
+              if (actor.x > actor.baseX + maxRange) {
+                actor.x = actor.baseX + maxRange;
+                actor.dirX = -1;
+              } else if (actor.x < actor.baseX - maxRange) {
+                actor.x = actor.baseX - maxRange;
+                actor.dirX = 1;
+              }
+            }
             actor.pulse = Math.max(0, actor.pulse - 0.8 * dt);
             for (var cKey in actor.cooldowns) {
               actor.cooldowns[cKey] = Math.max(0, actor.cooldowns[cKey] - dt);
@@ -2859,8 +2887,16 @@
               var partKey = bodyParts[j].key;
               if (actor.cooldowns[partKey] > 0) continue;
               var node = nodes[partKey];
-              var distance = Math.hypot(node.x - actor.x, node.y - actor.y);
-              if (distance < actor.size + node.r * 0.42) {
+              var hit = false;
+              if (actor.key === "sweeper") {
+                hit =
+                  Math.abs(node.x - actor.x) < 25 + node.r * 0.42 &&
+                  Math.abs(node.y - actor.y) < 14 + node.r * 0.42;
+              } else {
+                var distance = Math.hypot(node.x - actor.x, node.y - actor.y);
+                hit = distance < actor.size + node.r * 0.42;
+              }
+              if (hit) {
                 processCollision(actor, partKey, node);
                 break;
               }
@@ -3404,6 +3440,36 @@
             ctx.fillRect(-22, -16, 44, 32);
             ctx.fillStyle = "rgba(255,255,255,0.18)";
             ctx.fillRect(-18, -12, 36, 8);
+          } else if (actor.key === "sweeper") {
+            // 底座
+            ctx.fillStyle = "#3a4250";
+            ctx.fillRect(-28, 8, 56, 6);
+            ctx.fillStyle = "rgba(0,0,0,0.28)";
+            ctx.fillRect(-28, 12, 56, 2);
+            // 挡板（金属横条）
+            ctx.fillStyle = "#7a8595";
+            ctx.fillRect(-25, -8, 50, 16);
+            ctx.fillStyle = "rgba(255,255,255,0.18)";
+            ctx.fillRect(-25, -8, 50, 4);
+            ctx.fillStyle = "rgba(0,0,0,0.22)";
+            ctx.fillRect(-25, 4, 50, 4);
+            // 顶面钉刺
+            ctx.fillStyle = actor.color;
+            for (var sw = 0; sw < 5; sw += 1) {
+              var swx = -20 + sw * 10;
+              ctx.beginPath();
+              ctx.moveTo(swx - 4, -8);
+              ctx.lineTo(swx, -22);
+              ctx.lineTo(swx + 4, -8);
+              ctx.closePath();
+              ctx.fill();
+            }
+            // 钉刺高光
+            ctx.fillStyle = "rgba(255,255,255,0.28)";
+            for (var sw2 = 0; sw2 < 5; sw2 += 1) {
+              var swx2 = -20 + sw2 * 10;
+              ctx.fillRect(swx2 - 1, -20, 1, 8);
+            }
           }
 
           if (pulse > 0) {
@@ -3674,7 +3740,7 @@
           // Left arm (viewer's right, friend side) — push extends forward
           ctx.strokeStyle = skin;
           ctx.lineWidth = 5;
-          var leftArmTipX = 19 + pushEased * 22;
+          var leftArmTipX = 19 + pushEased * (player.pushReach || 22);
           var leftArmTipY = -19 - pushEased * 12;
           ctx.beginPath();
           ctx.moveTo(13, -42);
