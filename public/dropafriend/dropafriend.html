@@ -370,6 +370,90 @@
         color: var(--muted);
       }
 
+      .results-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+      }
+
+      .results-modal[hidden] {
+        display: none;
+      }
+
+      .results-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(8, 6, 18, 0.72);
+        backdrop-filter: blur(6px);
+      }
+
+      .results-card {
+        position: relative;
+        z-index: 1;
+        width: min(380px, 100%);
+        padding: 26px 22px 20px;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.03)
+          ),
+          var(--panel);
+        box-shadow: var(--shadow);
+        text-align: center;
+        display: grid;
+        gap: 14px;
+      }
+
+      .results-eyebrow {
+        margin: 0;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .results-friend {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--text);
+      }
+
+      .results-coin-block {
+        display: grid;
+        gap: 4px;
+        padding: 16px 12px;
+        border-radius: 18px;
+        background: rgba(255, 224, 122, 0.12);
+        border: 1px solid rgba(255, 224, 122, 0.2);
+      }
+
+      .results-coin-label {
+        font-size: 12px;
+        color: var(--muted);
+        letter-spacing: 0.1em;
+      }
+
+      .results-coin-value {
+        font-size: 44px;
+        font-weight: 900;
+        color: var(--coin);
+        text-shadow: 0 4px 14px rgba(255, 208, 107, 0.45);
+      }
+
+      .results-pity {
+        margin: 0;
+        min-height: 16px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
       .summary-total {
         padding: 14px;
         border-radius: 18px;
@@ -967,6 +1051,22 @@
       </aside>
     </div>
 
+    <div class="results-modal" id="resultsModal" hidden>
+      <div class="results-backdrop" id="resultsBackdrop"></div>
+      <div class="results-card">
+        <p class="results-eyebrow">本轮结算</p>
+        <p class="results-friend" id="resultsFriend">-</p>
+        <div class="results-coin-block">
+          <span class="results-coin-label">获得金币</span>
+          <span class="results-coin-value" id="resultsCoinValue">0</span>
+        </div>
+        <p class="results-pity" id="resultsPity"></p>
+        <button class="drop-button" id="resultsCloseButton" type="button">
+          关闭并回到悬崖顶
+        </button>
+      </div>
+    </div>
+
     <script>
       (function () {
         var STORAGE_KEY = "drop-a-friend-state-v3";
@@ -1235,6 +1335,12 @@
         var customLookInput = document.getElementById("customLookInput");
         var saveCustomButton = document.getElementById("saveCustomButton");
         var applyCustomButton = document.getElementById("applyCustomButton");
+        var resultsModal = document.getElementById("resultsModal");
+        var resultsModalFriend = document.getElementById("resultsFriend");
+        var resultsModalCoinValue = document.getElementById("resultsCoinValue");
+        var resultsModalPity = document.getElementById("resultsPity");
+        var resultsCloseButton = document.getElementById("resultsCloseButton");
+        var resultsBackdrop = document.getElementById("resultsBackdrop");
 
         var viewport = {
           width: canvas.clientWidth,
@@ -2415,6 +2521,7 @@
         function startDrop() {
           if (running || !scene.friend.placed) return;
           if (scene.player && scene.player.pushActive) return;
+          if (resultsModal && !resultsModal.hidden) return;
           if (scene.player) {
             scene.player.pushActive = true;
             scene.player.pushStart = 0;
@@ -2543,6 +2650,7 @@
         }
 
         function updateIdle(dt) {
+          if (resultsModal && !resultsModal.hidden) return;
           scene.elapsed += dt;
           if (scene.player) {
             scene.player.breath += dt;
@@ -2839,7 +2947,42 @@
           );
           saveState();
           renderAll();
+          openResultsModal({
+            friendName: getCurrentFriend().name,
+            coins: finalCoins,
+            runCoins: scene.runCoins,
+            pityCoins: pityCoins,
+          });
+        }
+
+        function openResultsModal(data) {
+          resultsModalFriend.textContent = data.friendName;
+          resultsModalCoinValue.textContent =
+            data.coins.toLocaleString("en-US");
+          if (data.pityCoins > 0) {
+            resultsModalPity.textContent =
+              "含保底 " + data.pityCoins + " 金币(本轮未撞到机关)。";
+          } else if (data.runCoins === 0) {
+            resultsModalPity.textContent =
+              "这轮没撞到任何机关，下次试试别的朋友。";
+          } else {
+            resultsModalPity.textContent =
+              "撞了 " + data.runCoins + " 金币机关收益，无保底。";
+          }
+          resultsModal.hidden = false;
+          if (typeof dropButton !== "undefined" && dropButton) {
+            dropButton.disabled = true;
+          }
+          if (typeof mobileDropButton !== "undefined" && mobileDropButton) {
+            mobileDropButton.disabled = true;
+          }
+        }
+
+        function closeResultsModal() {
+          resultsModal.hidden = true;
           scene = createIdleScene();
+          updateButtons();
+          renderHud();
         }
 
         function drawBackground(time) {
@@ -3336,11 +3479,11 @@
           ctx.lineTo(34 + pulseArms * 0.05, 18 - Math.sin(time * 0.12) * 3);
           ctx.stroke();
 
-          // 脔子（连接头和身体）
+          // 脖子（连接头和身体）
           ctx.fillStyle = "#f8d2c4";
           ctx.fillRect(-7, -32, 14, 16);
 
-          // 头部：先画头发底色，再画脸，再画头发上半
+          // 头部：头发底色 → 脸(下半圆, 半径与底色相同, 避免脸下露出黑圈) → 头顶头发
           ctx.fillStyle = style.hair;
           ctx.beginPath();
           ctx.arc(0, -52, 24, 0, Math.PI * 2);
@@ -3348,7 +3491,7 @@
 
           ctx.fillStyle = "#f8d2c4";
           ctx.beginPath();
-          ctx.arc(0, -54, 21, 0, Math.PI);
+          ctx.arc(0, -52, 24, 0, Math.PI);
           ctx.closePath();
           ctx.fill();
 
@@ -3546,25 +3689,24 @@
           ctx.fillStyle = skin;
           ctx.fillRect(-4, -50, 8, 6);
 
-          // Head: hair back layer
+          // Head: hair back, face (lower half, same radius — no black ring), hair top
           ctx.fillStyle = hair;
           ctx.beginPath();
           ctx.arc(0, -60, 14, 0, Math.PI * 2);
           ctx.fill();
-          // Face
           ctx.fillStyle = skin;
           ctx.beginPath();
-          ctx.arc(0, -60, 12, 0, Math.PI * 2);
+          ctx.arc(0, -60, 14, 0, Math.PI);
+          ctx.closePath();
           ctx.fill();
-          // Hair top (bangs)
           ctx.fillStyle = hair;
           ctx.beginPath();
-          ctx.arc(0, -60, 13, Math.PI, Math.PI * 2);
+          ctx.arc(0, -62, 13, Math.PI, Math.PI * 2);
           ctx.closePath();
           ctx.fill();
           // Side hair strands
-          ctx.fillRect(-13, -60, 3, 9);
-          ctx.fillRect(10, -60, 3, 9);
+          ctx.fillRect(-15, -60, 3, 14);
+          ctx.fillRect(12, -60, 3, 14);
 
           // Eyes
           ctx.fillStyle = "#fff";
@@ -3639,6 +3781,8 @@
 
         dropButton.addEventListener("click", startDrop);
         mobileDropButton.addEventListener("click", startDrop);
+        resultsCloseButton.addEventListener("click", closeResultsModal);
+        resultsBackdrop.addEventListener("click", closeResultsModal);
         saveCustomButton.addEventListener("click", function () {
           saveCustomFriend(false);
         });
