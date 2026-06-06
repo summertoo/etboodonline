@@ -1585,6 +1585,50 @@
             bodyBoost: "身体收益",
             techBoost: "科技收益",
             stageTitle: "Cliff Drop Arena",
+            stageHeading: "扔、撞、升级",
+            stageTip:
+              "先把朋友拖到悬崖边发光区，再扔下去追着下坠看伤害、暴击和金币。",
+            stageBadgePhysics: "物理投掷",
+            stageBadgeCombos: "机关连击",
+            stageBadgeProgression: "金币成长",
+            sectionArcade: "街机模式",
+            introTitle: "扔掉一个朋友",
+            introSubline:
+              "挑一个朋友站上悬崖，扔下深坑撞机关赚钱，再拿金币升级身体、科技和陷阱，循环冲更高收益。",
+            pillReady: "就绪",
+            pillLocked: "未解锁",
+            pillCost: "花费",
+            selectBtn: "选择",
+            selectBtnActive: "当前已选",
+            unlockBtn: "解锁",
+            upgradeBtn: "升级",
+            upgradeTechBtn: "升级科技",
+            upgradeTrapBtn: "升级机关",
+            unlockTrapBtn: "解锁机关",
+            metaYield: "收益倍率 x{bonus}",
+            metaUnlockPrice: "解锁价格 {cost} 金币",
+            techMeta: "当前 Lv.{level}",
+            bodyUpgradeMeta: "Lv.{level}，该部位金币倍率 x{mult}",
+            trapMetaUnlocked: "Lv.{level}，会重复部署到整条悬崖里。",
+            trapMetaLocked: "解锁后会加入沿途机关链。",
+            damageEmpty: "还没有任何伤害记录。",
+            damageRow: "{name} 受伤 {damage} 点，命中 {hits} 次",
+            summaryEmpty: "先把朋友拖到悬崖边，再开始第一轮扔人赚钱。",
+            summaryBody: "{name} 本轮总计爆出 {coins} 金币。",
+            summaryPity: "补偿金币：{pity}，有效命中：{hits} 次。",
+            drawerMenu: "菜单",
+            dockNote: "打开面板选朋友、升级部位、解锁机关、查看金币记录。",
+            drawerClose: "关闭",
+            drawerFriends: "朋友",
+            drawerUpgrades: "身体升级",
+            drawerTech: "科技",
+            drawerTraps: "机关",
+            drawerRecords: "本轮记录",
+            toggleFriends: "朋友",
+            toggleUpgrades: "身体",
+            toggleTech: "科技",
+            toggleTraps: "机关",
+            toggleRecords: "记录",
           },
           en: {
             appTitle: "Drop a Friend",
@@ -1679,6 +1723,52 @@
             bodyBoost: "Body Boost",
             techBoost: "Tech Boost",
             stageTitle: "Cliff Drop Arena",
+            stageHeading: "Throw, Crash, Upgrade",
+            stageTip:
+              "Drag your friend to the glowing cliff spot first. Then throw and follow the fall for damage, crits, and coins.",
+            stageBadgePhysics: "Physics Drop",
+            stageBadgeCombos: "Trap Combos",
+            stageBadgeProgression: "Coin Progression",
+            sectionArcade: "Arcade Drop",
+            introTitle: "Throw a Friend Off",
+            introSubline:
+              "Pick a friend to stand on the cliff, drop them down the shaft to hit traps and earn coins, then spend coins on body, tech, and trap upgrades to push for higher yields.",
+            pillReady: "Ready",
+            pillLocked: "Locked",
+            pillCost: "Cost",
+            selectBtn: "Select",
+            selectBtnActive: "Active",
+            unlockBtn: "Unlock",
+            upgradeBtn: "Upgrade",
+            upgradeTechBtn: "Upgrade",
+            upgradeTrapBtn: "Upgrade Trap",
+            unlockTrapBtn: "Unlock Trap",
+            metaYield: "Yield x{bonus}",
+            metaUnlockPrice: "Unlock cost {cost}",
+            techMeta: "Lv.{level}",
+            bodyUpgradeMeta: "Lv.{level}, coin multiplier x{mult}",
+            trapMetaUnlocked: "Lv.{level}, deploys repeatedly along the cliff.",
+            trapMetaLocked: "Adds a new trap to the cliff chain.",
+            damageEmpty: "No damage recorded yet.",
+            damageRow: "{name} took {damage} dmg, {hits} hits",
+            summaryEmpty:
+              "Drag your friend to the cliff edge, then start your first drop to earn coins.",
+            summaryBody: "{name} earned {coins} coins this run.",
+            summaryPity: "Pity coins: {pity}, effective hits: {hits}.",
+            drawerMenu: "Menu",
+            dockNote:
+              "Open panels to pick a friend, upgrade parts, unlock traps, and check your coin records.",
+            drawerClose: "Close",
+            drawerFriends: "Friends",
+            drawerUpgrades: "Body Upgrades",
+            drawerTech: "Tech Lab",
+            drawerTraps: "Trap Workshop",
+            drawerRecords: "Run Records",
+            toggleFriends: "Friends",
+            toggleUpgrades: "Body",
+            toggleTech: "Tech",
+            toggleTraps: "Traps",
+            toggleRecords: "Records",
           },
         };
 
@@ -2200,12 +2290,13 @@
 
         function updateLeaderboard() {
           var list = [];
+          var meName = currentLang === "en" ? "You" : "你";
           for (var i = 0; i < state.leaderboard.length; i += 1) {
-            if (state.leaderboard[i].name !== "你") {
+            if (state.leaderboard[i].name !== meName) {
               list.push(state.leaderboard[i]);
             }
           }
-          list.push({ name: "你", coins: state.totalCoins, me: true });
+          list.push({ name: meName, coins: state.totalCoins, me: true });
           list.sort(function (a, b) {
             return b.coins - a.coins;
           });
@@ -2240,23 +2331,22 @@
               var active = state.currentFriendId === friend.id;
               var card = document.createElement("div");
               card.className = "friend-card" + (active ? " active" : "");
+              var metaText = unlocked
+                ? t("metaYield", { bonus: displayFriend.yieldBonus.toFixed(2) })
+                : t("metaUnlockPrice", { cost: getFriendUnlockCost(friend) });
               card.innerHTML = [
                 '<div class="friend-top">',
                 '<div class="avatar-dot">' + displayFriend.look + "</div>",
                 "<div>",
                 '<div class="friend-name">' + displayFriend.name + "</div>",
-                '<div class="friend-meta">' +
-                  (unlocked
-                    ? "收益倍率 x" + displayFriend.yieldBonus.toFixed(2)
-                    : "解锁价格 " + getFriendUnlockCost(friend) + " 金币") +
-                  "</div>",
+                '<div class="friend-meta">' + metaText + "</div>",
                 "</div>",
                 "</div>",
                 '<div class="row-actions">',
                 '<span class="pill ' +
                   (unlocked ? "good" : "locked") +
                   '">' +
-                  (unlocked ? "Ready" : "Locked") +
+                  (unlocked ? t("pillReady") : t("pillLocked")) +
                   "</span>",
                 "</div>",
               ].join("");
@@ -2265,9 +2355,9 @@
               button.className = "small-button " + (unlocked ? "primary" : "");
               button.textContent = unlocked
                 ? active
-                  ? "当前已选"
-                  : "选择"
-                : "解锁";
+                  ? t("selectBtnActive")
+                  : t("selectBtn")
+                : t("unlockBtn");
               button.disabled = running || (unlocked && active);
               button.addEventListener("click", function () {
                 if (unlocked) {
@@ -2291,15 +2381,15 @@
               var cost = getBodyUpgradeCost(part.key);
               var card = document.createElement("div");
               card.className = "upgrade-card";
+              var metaText = t("bodyUpgradeMeta", {
+                level: level,
+                mult: getBodyCoinMultiplier(part.key).toFixed(2),
+              });
               card.innerHTML = [
                 '<div class="stat-row">',
                 "<div>",
                 '<div class="friend-name">' + part.label + "</div>",
-                '<div class="friend-meta">Lv.' +
-                  level +
-                  "，该部位金币倍率 x" +
-                  getBodyCoinMultiplier(part.key).toFixed(2) +
-                  "</div>",
+                '<div class="friend-meta">' + metaText + "</div>",
                 "</div>",
                 '<div class="avatar-dot" style="background: linear-gradient(135deg, ' +
                   part.color +
@@ -2307,14 +2397,16 @@
                   part.icon +
                   "</div>",
                 "</div>",
-                '<div class="row-actions"><span class="pill">Cost ' +
+                '<div class="row-actions"><span class="pill">' +
+                  t("pillCost") +
+                  " " +
                   cost +
                   "</span></div>",
               ].join("");
               var button = document.createElement("button");
               button.type = "button";
               button.className = "buy-button";
-              button.textContent = "升级";
+              button.textContent = t("upgradeBtn");
               button.disabled = running || state.coins < cost;
               button.addEventListener("click", function () {
                 upgradeBody(part.key);
@@ -2334,26 +2426,25 @@
               var cost = getTechUpgradeCost(tech.key);
               var card = document.createElement("div");
               card.className = "tech-card";
+              var metaText = tech.desc + " " + t("techMeta", { level: level });
               card.innerHTML = [
                 '<div class="stat-row">',
                 "<div>",
                 '<div class="friend-name">' + tech.name + "</div>",
-                '<div class="friend-meta">' +
-                  tech.desc +
-                  " 当前 Lv." +
-                  level +
-                  "</div>",
+                '<div class="friend-meta">' + metaText + "</div>",
                 "</div>",
                 '<div class="avatar-dot">' + tech.icon + "</div>",
                 "</div>",
-                '<div class="row-actions"><span class="pill">Cost ' +
+                '<div class="row-actions"><span class="pill">' +
+                  t("pillCost") +
+                  " " +
                   cost +
                   "</span></div>",
               ].join("");
               var button = document.createElement("button");
               button.type = "button";
               button.className = "buy-button";
-              button.textContent = "升级科技";
+              button.textContent = t("upgradeTechBtn");
               button.disabled = running || state.coins < cost;
               button.addEventListener("click", function () {
                 upgradeTech(tech.key);
@@ -2376,15 +2467,17 @@
                 : getTrapUnlockCost(trap);
               var card = document.createElement("div");
               card.className = "trap-card";
+              var metaText = unlocked
+                ? t("trapMetaUnlocked", { level: trapState.level })
+                : t("trapMetaLocked");
+              var badgeText = unlocked
+                ? t("pillReady") + " Lv." + trapState.level
+                : t("pillLocked");
               card.innerHTML = [
                 '<div class="stat-row">',
                 "<div>",
                 '<div class="friend-name">' + trap.name + "</div>",
-                '<div class="friend-meta">' +
-                  (unlocked
-                    ? "Lv." + trapState.level + "，会重复部署到整条悬崖里。"
-                    : "解锁后会加入沿途机关链。") +
-                  "</div>",
+                '<div class="friend-meta">' + metaText + "</div>",
                 "</div>",
                 '<div class="avatar-dot" style="background: linear-gradient(135deg, ' +
                   trap.color +
@@ -2395,15 +2488,19 @@
                 '<div class="row-actions"><span class="pill ' +
                   (unlocked ? "good" : "locked") +
                   '">' +
-                  (unlocked ? "Lv." + trapState.level : "Locked") +
-                  '</span><span class="pill">Cost ' +
+                  badgeText +
+                  '</span><span class="pill">' +
+                  t("pillCost") +
+                  " " +
                   cost +
                   "</span></div>",
               ].join("");
               var button = document.createElement("button");
               button.type = "button";
               button.className = "buy-button";
-              button.textContent = unlocked ? "升级机关" : "解锁机关";
+              button.textContent = unlocked
+                ? t("upgradeTrapBtn")
+                : t("unlockTrapBtn");
               button.disabled = running || state.coins < cost;
               button.addEventListener("click", function () {
                 unlockOrUpgradeTrap(trap.key);
@@ -2420,7 +2517,7 @@
             var empty = document.createElement("div");
             empty.className = "damage-row";
             empty.innerHTML =
-              "<span>还没有任何伤害记录。</span><strong>0</strong>";
+              "<span>" + t("damageEmpty") + "</span><strong>0</strong>";
             damageList.appendChild(empty);
             return;
           }
@@ -2434,14 +2531,15 @@
             };
             var row = document.createElement("div");
             row.className = "damage-row";
+            var rowText = t("damageRow", {
+              name: part.label,
+              damage: entry.damage,
+              hits: entry.hits,
+            });
             row.innerHTML =
               "<span>" +
-              part.label +
-              " 受伤 " +
-              entry.damage +
-              " 点，命中 " +
-              entry.hits +
-              " 次</span><strong>+" +
+              rowText +
+              "</span><strong>+" +
               entry.coins +
               "</strong>";
             damageList.appendChild(row);
@@ -2451,22 +2549,23 @@
         function renderSummary() {
           summaryList.innerHTML = "";
           if (!state.lastRun) {
-            summaryTotal.innerHTML =
-              "先把朋友拖到悬崖边，再开始第一轮扔人赚钱。";
+            summaryTotal.innerHTML = t("summaryEmpty");
             return;
           }
 
           summaryTotal.innerHTML =
             "<div>" +
-            state.lastRun.friendName +
-            " 本轮总计爆出 <strong>" +
-            state.lastRun.totalCoins +
-            "</strong> 金币。</div>" +
-            "<div>补偿金币：" +
-            (state.lastRun.pityCoins || 0) +
-            "，有效命中：" +
-            state.lastRun.collisions.length +
-            " 次。</div>";
+            t("summaryBody", {
+              name: state.lastRun.friendName,
+              coins: state.lastRun.totalCoins,
+            }) +
+            "</div>" +
+            "<div>" +
+            t("summaryPity", {
+              pity: state.lastRun.pityCoins || 0,
+              hits: state.lastRun.collisions.length,
+            }) +
+            "</div>";
 
           for (
             var i = 0;
@@ -2476,12 +2575,18 @@
             var collision = state.lastRun.collisions[i];
             var row = document.createElement("div");
             row.className = "summary-row";
+            var colText =
+              collision.partLabel +
+              (currentLang === "en" ? " hit " : " 撞上 ") +
+              collision.trapName +
+              (collision.crit
+                ? currentLang === "en"
+                  ? " · CRIT"
+                  : " · 暴击"
+                : "");
             row.innerHTML =
               "<span>" +
-              collision.partLabel +
-              " 撞上 " +
-              collision.trapName +
-              (collision.crit ? " · 暴击" : "") +
+              colText +
               "</span><strong>+" +
               collision.coins +
               "</strong>";
@@ -2568,8 +2673,7 @@
           actionDock.className = "panel action-dock";
           actionRow.className = "action-row";
           dockNote.className = "dock-note";
-          dockNote.textContent =
-            "Open panels to pick a friend, upgrade parts, unlock traps, and check your coin records.";
+          dockNote.setAttribute("data-t", "dockNote");
           scrim.className = "drawer-scrim";
           scrim.hidden = true;
 
@@ -2581,12 +2685,11 @@
             var introTitle = introBlock.querySelector(".headline");
             var introSubline = introBlock.querySelector(".subline");
             var sectionTitle = introBlock.querySelector(".section-title");
-            if (sectionTitle) sectionTitle.textContent = "Arcade Drop";
-            if (introTitle) introTitle.textContent = "扔掉一个朋友";
-            if (introSubline) {
-              introSubline.textContent =
-                "挑一个朋友站上悬崖，扔下深坑撞机关赚钱，再拿金币升级身体、科技和陷阱，循环冲更高收益。";
-            }
+            if (sectionTitle)
+              sectionTitle.setAttribute("data-t", "sectionArcade");
+            if (introTitle) introTitle.setAttribute("data-t", "introTitle");
+            if (introSubline)
+              introSubline.setAttribute("data-t", "introSubline");
           }
 
           if (centerStage) {
@@ -2600,16 +2703,16 @@
             var stageCopy = document.createElement("div");
             stageCopy.className = "stage-copy";
             stageCopy.innerHTML = [
-              '<p class="section-title">Cliff Drop Arena</p>',
-              '<h2 class="stage-title">Throw, Crash, Upgrade</h2>',
-              '<p class="stage-tip">Drag your friend to the glowing cliff spot first. Then throw and follow the fall for damage, crits, and coins.</p>',
+              '<p class="section-title" data-t="stageTitle">Cliff Drop Arena</p>',
+              '<h2 class="stage-title" data-t="stageHeading">Throw, Crash, Upgrade</h2>',
+              '<p class="stage-tip" data-t="stageTip">Drag your friend to the glowing cliff spot first.</p>',
             ].join("");
             var stageBadges = document.createElement("div");
             stageBadges.className = "stage-badges";
             stageBadges.innerHTML = [
-              '<span class="pill good">Physics Drop</span>',
-              '<span class="pill">Trap Combos</span>',
-              '<span class="pill">Coin Progression</span>',
+              '<span class="pill good" data-t="stageBadgePhysics">Physics Drop</span>',
+              '<span class="pill" data-t="stageBadgeCombos">Trap Combos</span>',
+              '<span class="pill" data-t="stageBadgeProgression">Coin Progression</span>',
             ].join("");
             stageTop.appendChild(stageCopy);
             stageTop.appendChild(stageBadges);
@@ -2619,7 +2722,7 @@
             mobileDropButton.classList.add("mirror-button");
           }
 
-          function createDrawer(key, title, wide) {
+          function createDrawer(key, titleKey, wide) {
             var drawer = document.createElement("section");
             drawer.className = "panel drawer" + (wide ? " drawer-wide" : "");
             drawer.dataset.drawer = key;
@@ -2627,10 +2730,10 @@
             drawer.innerHTML = [
               '<div class="drawer-head">',
               "<div>",
-              '<p class="section-title">Menu</p>',
-              '<h3 class="drawer-title">' + title + "</h3>",
+              '<p class="section-title" data-t="drawerMenu">Menu</p>',
+              '<h3 class="drawer-title" data-t="' + titleKey + '"></h3>',
               "</div>",
-              '<button class="drawer-close" type="button" data-close-drawer="1">Close</button>',
+              '<button class="drawer-close" type="button" data-close-drawer="1" data-t="drawerClose">Close</button>',
               "</div>",
             ].join("");
             document.body.appendChild(drawer);
@@ -2641,11 +2744,11 @@
             return drawer;
           }
 
-          function createToggle(key, label, extraClass) {
+          function createToggle(key, labelKey, extraClass) {
             var button = document.createElement("button");
             button.type = "button";
             button.className = extraClass || "panel-toggle";
-            button.textContent = label;
+            button.setAttribute("data-t", labelKey);
             button.dataset.panelTarget = key;
             button.addEventListener("click", function () {
               if (activeDrawer === key) {
@@ -2688,11 +2791,11 @@
 
           scrim.addEventListener("click", closeDrawer);
 
-          var friendDrawer = createDrawer("friends", "Friends", false);
-          var upgradeDrawer = createDrawer("upgrades", "Body Upgrades", false);
-          var techDrawer = createDrawer("tech", "Tech Lab", false);
-          var trapDrawer = createDrawer("traps", "Trap Workshop", false);
-          var recordsDrawer = createDrawer("records", "Run Records", true);
+          var friendDrawer = createDrawer("friends", "drawerFriends", false);
+          var upgradeDrawer = createDrawer("upgrades", "drawerUpgrades", false);
+          var techDrawer = createDrawer("tech", "drawerTech", false);
+          var trapDrawer = createDrawer("traps", "drawerTraps", false);
+          var recordsDrawer = createDrawer("records", "drawerRecords", true);
 
           var friendGrid = document.createElement("div");
           friendGrid.className = "drawer-grid";
@@ -2724,11 +2827,11 @@
           recordsGrid.appendChild(recordsColumnB);
           recordsDrawer.appendChild(recordsGrid);
 
-          actionRow.appendChild(createToggle("friends", "Friends"));
-          actionRow.appendChild(createToggle("upgrades", "Body"));
-          actionRow.appendChild(createToggle("tech", "Tech"));
-          actionRow.appendChild(createToggle("traps", "Traps"));
-          actionRow.appendChild(createToggle("records", "Records"));
+          actionRow.appendChild(createToggle("friends", "toggleFriends"));
+          actionRow.appendChild(createToggle("upgrades", "toggleUpgrades"));
+          actionRow.appendChild(createToggle("tech", "toggleTech"));
+          actionRow.appendChild(createToggle("traps", "toggleTraps"));
+          actionRow.appendChild(createToggle("records", "toggleRecords"));
 
           if (dropButton) {
             dropButton.classList.add("dock-drop");
@@ -3027,8 +3130,7 @@
             friend.x = WORLD.placeX;
             friend.y = WORLD.placeY;
             friend.placed = true;
-            sceneMessage.textContent =
-              "朋友已经摆到悬崖边。现在可以点击左边按钮扔下去。";
+            sceneMessage.textContent = t("scenePlaced");
           } else {
             friend.x = WORLD.holdX;
             friend.y = WORLD.holdY;
@@ -3390,14 +3492,15 @@
           resultsModalCoinValue.textContent =
             data.coins.toLocaleString("en-US");
           if (data.pityCoins > 0) {
-            resultsModalPity.textContent =
-              "含保底 " + data.pityCoins + " 金币(本轮未撞到机关)。";
+            resultsModalPity.textContent = t("resultsPity", {
+              pity: data.pityCoins,
+            });
           } else if (data.runCoins === 0) {
-            resultsModalPity.textContent =
-              "这轮没撞到任何机关，下次试试别的朋友。";
+            resultsModalPity.textContent = t("resultsNoHit");
           } else {
-            resultsModalPity.textContent =
-              "撞了 " + data.runCoins + " 金币机关收益，无保底。";
+            resultsModalPity.textContent = t("resultsNormal", {
+              coins: data.runCoins,
+            });
           }
           resultsModal.hidden = false;
           if (typeof dropButton !== "undefined" && dropButton) {
