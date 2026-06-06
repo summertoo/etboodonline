@@ -6,7 +6,7 @@ import { CardContent, Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
-import { newsCategoryMeta, newsList } from "@/data/news";
+import { latestNewsList, newsCategoryMeta } from "@/data/news";
 import { projects } from "@/data/projects";
 import Link from "next/link";
 import FeedbackForm from "@/components/FeedbackForm";
@@ -392,16 +392,7 @@ export default function Homepage() {
     () => projects.find((p) => p.id === "sui-best-practices"),
     [],
   );
-  const homepageNews = useMemo(() => {
-    if (newsList.length === 0) return [];
-
-    const latestDate = newsList.reduce(
-      (latest, item) => (item.date > latest ? item.date : latest),
-      newsList[0].date,
-    );
-
-    return newsList.filter((item) => item.date === latestDate);
-  }, []);
+  const homepageNews = latestNewsList;
 
   function FloatingParticles() {
     const [mounted, setMounted] = useState(false);

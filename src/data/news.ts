@@ -31,6 +31,101 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-06",
+    date: "2026-06-06",
+    title: {
+      zh: "AI HOT 日报 · 2026-06-06",
+      en: "AI HOT Daily · Jun 6, 2026",
+    },
+    summary: {
+      zh: "OpenRouter 上线可控图像模型 Riverflow 2.5，Gemini Live 支持实时生成与编辑图像，Google 集中更新 Nano Banana 2、Co-Scientist、dreambeans 与 Gemma 4，Colab CLI 让本地终端直连云端 GPU，Cloudflare 为 AI Gateway 增加花费上限，ChatGPT 网页版支持直接发邮件，Anthropic 获 350 亿美元芯片融资，Agent Arena 用真实任务给主流智能体排位。",
+      en: "OpenRouter launched the controllable image model Riverflow 2.5, Gemini Live gained real-time image editing, Google rolled out Nano Banana 2, Co-Scientist, dreambeans, and Gemma 4 updates, Colab CLI linked local terminals to cloud GPUs, Cloudflare added spend limits to AI Gateway, ChatGPT web gained direct email sending, Anthropic lined up $35B for AI chips, and Agent Arena ranked leading agents on real-world tasks.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Riverflow 2.5",
+          en: "Riverflow 2.5",
+        },
+        description: {
+          zh: "OpenRouter 上线可调评分标准的图像模型，可在速度、质量和推理强度之间做权衡。",
+          en: "OpenRouter added an image model with adjustable scoring rules so users can trade off speed, quality, and reasoning effort.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini Live 实时修图",
+          en: "Gemini Live Real-Time Image Editing",
+        },
+        description: {
+          zh: "Gemini Live 现在能一边对话一边实时生成和修改图像，适合场景预览、解题和梗图制作。",
+          en: "Gemini Live can now generate and edit images during live conversations for room previews, problem solving, and meme creation.",
+        },
+      },
+      {
+        title: {
+          zh: "Google AI 本周更新包",
+          en: "Google AI Weekly Product Bundle",
+        },
+        description: {
+          zh: "Nano Banana 2 正式可用，Co-Scientist 面向科研，dreambeans 和 Gemma 4 继续扩展多模态与离线能力。",
+          en: "Nano Banana 2 reached general availability, Co-Scientist targeted research workflows, and dreambeans plus Gemma 4 pushed multimodal and offline use further.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Colab CLI",
+          en: "Google Colab CLI",
+        },
+        description: {
+          zh: "新 CLI 可把本地终端接到远程 Colab 运行时，方便申请 GPU、跑脚本和查看工件日志。",
+          en: "The new CLI connects a local terminal to remote Colab runtimes for requesting GPUs, running scripts, and checking artifacts.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare AI Gateway 花费上限",
+          en: "Cloudflare AI Gateway Spend Limits",
+        },
+        description: {
+          zh: "Cloudflare 为 AI Gateway 增加实时预算限制，帮助企业控制多家模型供应商的 token 成本。",
+          en: "Cloudflare added real-time budget limits to AI Gateway so teams can keep multi-provider token spending under control.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT 网页版发邮件",
+          en: "ChatGPT Web Email Sending",
+        },
+        description: {
+          zh: "网页版 ChatGPT 可直接在写作块里起草、调整并发送邮件，不用离开当前对话。",
+          en: "ChatGPT on the web can now draft, revise, and send emails directly from the writing block without leaving the conversation.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 350 亿美元芯片融资",
+          en: "Anthropic's $35B Chip Financing",
+        },
+        description: {
+          zh: "Apollo 和 Blackstone 为 Anthropic 敲定 350 亿美元融资，继续扩建 AI 基础设施。",
+          en: "Apollo and Blackstone finalized $35 billion in financing for Anthropic to keep expanding AI infrastructure.",
+        },
+      },
+      {
+        title: {
+          zh: "Agent Arena",
+          en: "Agent Arena",
+        },
+        description: {
+          zh: "Arena 发布真实任务智能体排行榜，用大量任务、工具调用和代码量评测主流模型的实战表现。",
+          en: "Arena launched a real-world agent leaderboard that scores major models on large volumes of tasks, tool calls, and code output.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-05-hot",
     date: "2026-06-05",
     title: {
@@ -1373,3 +1468,16 @@ export const newsList: NewsItem[] = [
     ],
   },
 ];
+
+export const latestNewsDate =
+  newsList.length === 0
+    ? null
+    : newsList.reduce(
+        (latest, item) => (item.date > latest ? item.date : latest),
+        newsList[0].date,
+      );
+
+export const latestNewsList =
+  latestNewsDate === null
+    ? []
+    : newsList.filter((item) => item.date === latestNewsDate);
