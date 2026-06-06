@@ -173,6 +173,18 @@ export const projects: Project[] = [
     tags: ["featured", "latest", "game"],
   },
   {
+    id: "web-dropafriend",
+    title: "🪨 扔掉一个朋友 (Drop a Friend)",
+    descKey: "game.dropafriendDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/dropafriend.png",
+    liveUrl: "/dropafriend/dropafriend.html",
+    publishedAt: "2026-06-06T18:00:00+08:00",
+    tags: ["featured", "latest", "game"],
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",

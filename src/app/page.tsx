@@ -309,7 +309,9 @@ export default function Homepage() {
   const [subEmail, setSubEmail] = useState("");
   const [authOpen, setAuthOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [socialStats, setSocialStats] = useState<Record<string, ProjectSocialStat>>({});
+  const [socialStats, setSocialStats] = useState<
+    Record<string, ProjectSocialStat>
+  >({});
   const [subStatus, setSubStatus] = useState<
     "idle" | "loading" | "ok" | "dup" | "error"
   >("idle");
@@ -319,9 +321,11 @@ export default function Homepage() {
       setIsLoggedIn(!!session?.user);
     });
 
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setIsLoggedIn(!!session?.user);
-    });
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        setIsLoggedIn(!!session?.user);
+      },
+    );
 
     return () => listener.subscription.unsubscribe();
   }, []);
@@ -329,10 +333,13 @@ export default function Homepage() {
   useEffect(() => {
     fetchProjectSocialStats(projects.map((project) => project.id))
       .then((stats) => {
-        const nextStats = stats.reduce<Record<string, ProjectSocialStat>>((acc, item) => {
-          acc[item.project_id] = item;
-          return acc;
-        }, {});
+        const nextStats = stats.reduce<Record<string, ProjectSocialStat>>(
+          (acc, item) => {
+            acc[item.project_id] = item;
+            return acc;
+          },
+          {},
+        );
         setSocialStats(nextStats);
       })
       .catch(() => {});
@@ -807,6 +814,16 @@ export default function Homepage() {
               <li>Apex Mind</li>
               <li>LOBSTER BUMP</li>
               <li>WARLORD SAGA</li>
+              <li>
+                <a
+                  href="/dropafriend/dropafriend.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[var(--cyber-hover-pink)] transition-colors"
+                >
+                  扔掉一个朋友 / Drop a Friend
+                </a>
+              </li>
             </ul>
           </div>
           <div>

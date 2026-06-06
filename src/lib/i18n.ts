@@ -16,7 +16,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.title": "ZD Tech Studio",
     "hero.subtitle":
       "A showcase for web games, Roblox experiences, DApps, and practical tools.",
-    "hero.tagline": "Play projects, browse updates, and interact with likes, favorites, and comments.",
+    "hero.tagline":
+      "Play projects, browse updates, and interact with likes, favorites, and comments.",
     "hero.contact": "Contact Now",
     "hero.viewGames": "View Games ↓",
 
@@ -169,6 +170,8 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Build up Grandpa's desert farm, plant crops, and turn a quiet patch of sand into a thriving oasis.",
     "game.hotDanceDesc":
       "A stage-based rhythm web game with falling arrows, combos, arc explosions, bilingual UI, and a top-10 leaderboard.",
+    "game.dropafriendDesc":
+      "Drag your friend to the cliff edge, push them off, and let them tumble through a chain of traps to collect coins. Bilingual UI, mobile-friendly, and full of upgrades.",
 
     // DApp descriptions
     "dapp.ruokDesc":
@@ -389,14 +392,18 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.handBattleDesc": "用手势对战的趣味游戏。",
     "game.saveManDesc":
       "操控救援抓斗，从矿井中救出被困人员！点击释放抓斗，将他们拉上来。",
-    "game.miniSoccerDesc": "划线控制弹力射门的足球小游戏，找准角度与反弹路线，把球送进球门。",
+    "game.miniSoccerDesc":
+      "划线控制弹力射门的足球小游戏，找准角度与反弹路线，把球送进球门。",
     "game.killerH5Desc":
       "暗杀H5游戏 — 分析场景，识别目标，合理利用道具，成为传奇刺客！",
     "game.swimDesc": "百米自由泳比赛 — 极速冲刺，收集道具，勇夺冠军！",
-    "game.zombieSiegeDesc": "在末日丧尸围城中生存下来！守卫基地，升级武器，击退无尽尸潮。",
+    "game.zombieSiegeDesc":
+      "在末日丧尸围城中生存下来！守卫基地，升级武器，击退无尽尸潮。",
     "game.comingSoonDesc": "即将上线，敬请期待！",
     "game.hotDanceDesc":
       "100 级节奏闯关网页游戏，跟随下落箭头打出连击，触发电弧爆炸，并冲击前十排行榜。",
+    "game.dropafriendDesc":
+      "把朋友拖到悬崖边推下去，让他一路撞击陷阱赚金币 — 中英双语、移动端友好，升级内容丰富。",
 
     // DApp descriptions
     "dapp.ruokDesc": "基于 Sui 网络的去中心化签到触发定时转账 DApp",
