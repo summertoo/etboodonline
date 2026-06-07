@@ -31,6 +31,56 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-07",
+    date: "2026-06-07",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-07",
+      en: "🤖 AI HOT Daily · Jun 7, 2026",
+    },
+    summary: {
+      zh: "GitHub 发布 Spec Kit 引导 AI 编码、OpenCV 5 原生支持大模型、谷歌每月支付 SpaceX 92亿美元获取算力、阶跃张祥雨合著 ResNet 获 CVPR 时间检验奖。",
+      en: "GitHub Spec Kit for AI coding, OpenCV 5 native LLM support, Google pays SpaceX $920M/mo compute, StepFun ResNet CVPR award.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: { zh: "GitHub Spec Kit：产品规范引导 AI 编码", en: "GitHub Spec Kit: Product Specs Guide AI Coding" },
+        description: {
+          zh: "GitHub 开源 Spec Kit 工具包，解决 vibe coding 弱点，推动先写产品规范再让 AI 实现，支持 30+ agent 集成。",
+          en: "GitHub released Spec Kit to solve vibe coding weakness - write specs first, then let AI implement. Supports 30+ agents.",
+        },
+      },
+      {
+        title: { zh: "OpenCV 5 发布：原生支持大模型", en: "OpenCV 5 Released: Native LLM Support" },
+        description: {
+          zh: "OpenCV 5 升级全新 DNN 引擎，ONNX 算子覆盖率从 23% 提升至超 80%，原生支持 Transformer、VLM、LLM。",
+          en: "OpenCV 5 launches with graph-based DNN engine, ONNX coverage from <23% to 80%+, native Transformer/VLM/LLM support.",
+        },
+      },
+      {
+        title: { zh: "谷歌每月支付 SpaceX 92亿美元", en: "Google Pays SpaceX $920M/Month" },
+        description: {
+          zh: "谷歌与 SpaceX 达成协议，每月支付 9.2 亿美元获取 xAI 数据中心计算能力。",
+          en: "Google & SpaceX deal: Google pays $920M/month for xAI data center compute capacity.",
+        },
+      },
+      {
+        title: { zh: "阶跃张祥雨 ResNet 获 CVPR 时间检验奖", en: "StepFun ResNet Wins CVPR Test of Time" },
+        description: {
+          zh: "阶跃星辰首席科学家张祥雨合著论文 ResNet 获得 CVPR 2026「时间检验奖」。",
+          en: "StepFun chief scientist Zhang Xiangyu co-authored ResNet paper winning CVPR 2026 Test of Time Award.",
+        },
+      },
+      {
+        title: { zh: "MiniMax 海螺 AI 牵手上海国际电影节", en: "MiniMax Sea Shell AI at Shanghai Film Festival" },
+        description: {
+          zh: "海螺 AI 作为第 28 届上影节独家 AI 影像战略合作伙伴，6.14-6.15 举办开放日活动。",
+          en: "Sea Shell AI is exclusive AI imaging partner for Shanghai Intl Film Festival, open days June 14-15.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-06-hot",
     date: "2026-06-06",
     title: {
