@@ -31,6 +31,63 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-10",
+    date: "2026-06-10",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-10",
+      en: "🤖 AI HOT Daily · Jun 10, 2026",
+    },
+    summary: {
+      zh: "Anthropic 发布 Claude Fable 5 和 Mythos 5，Google 发布 Gemma 4 12B 无编码器多模态模型，小米 MiMo 突破 1000 tokens/s，中国计划投资 2950 亿美元建设 AI 基础设施。",
+      en: "Anthropic launches Claude Fable 5 and Mythos 5, Google releases Gemma 4 12B encoder-free multimodal, Xiaomi MiMo breaks 1000 tps, China plans $295B AI infrastructure.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: { zh: "Anthropic 发布 Claude Fable 5 和 Mythos 5", en: "Anthropic Releases Claude Fable 5 and Mythos 5" },
+        description: {
+          zh: "Fable 5 在几乎所有测试基准上达到 SOTA，Stripe 将数月工程压缩至数天；Mythos 5 在药物设计中实现约 10 倍加速。售价仅为之前的一半。",
+          en: "Fable 5 achieves SOTA on nearly all benchmarks, Stripe compresses months of work into days; Mythos 5 delivers ~10x speedup in drug discovery. Price halved.",
+        },
+      },
+      {
+        title: { zh: "Google Gemma 4 12B：无编码器多模态模型", en: "Google Gemma 4 12B: Encoder-Free Multimodal" },
+        description: {
+          zh: "首个无编码器统一架构多模态模型，原生支持音频，基准测试性能接近 26B MoE 模型，仅需 16GB 显存即可在消费级笔记本运行。",
+          en: "First encoder-free unified multimodal architecture, native audio support, performance near 26B MoE with under 16GB VRAM on consumer laptops.",
+        },
+      },
+      {
+        title: { zh: "小米 MiMo 突破 1000 tokens/s", en: "Xiaomi MiMo Breaks 1000 tps" },
+        description: {
+          zh: "MiMo-V2.5-Pro-UltraSpeed 首次在 1T 模型上实现超 1000 tokens/s 输出，采用 FP4 混合量化和 DFlash 推测解码。",
+          en: "MiMo-V2.5-Pro-UltraSpeed first to exceed 1000 tps on 1T model using FP4 quantization and DFlash speculative decoding.",
+        },
+      },
+      {
+        title: { zh: "Cohere 发布 North Mini Code 开源编码模型", en: "Cohere Releases North Mini Code Open-Source" },
+        description: {
+          zh: "30B 参数 MoE 模型，Apache 2.0 开源。在 SWE-Bench Verified 上 pass@10 达 80.2%，专为智能体编码任务优化。",
+          en: "30B parameter MoE model, Apache 2.0 open-source. Achieves 80.2% pass@10 on SWE-Bench Verified, optimized for agentic coding tasks.",
+        },
+      },
+      {
+        title: { zh: "中国计划投资 2950 亿美元建设 AI 基础设施", en: "China Plans $295B AI Infrastructure Investment" },
+        description: {
+          zh: "未来五年投入约 2 万亿元人民币建设全国数据中心，以推动国内 AI 产业发展并超越美国。",
+          en: "China to invest ~2 trillion yuan over five years building nationwide data centers to boost domestic AI and overtake the US.",
+        },
+      },
+      {
+        title: { zh: "德国裁决：Google 为 AI Overviews 错误承担责任", en: "German Court: Google Liable for AI Overviews Errors" },
+        description: {
+          zh: "德国地方法院裁定 Google 对 AI 概览生成的内容直接承担法律责任，不能援引搜索引擎有限责任保护。",
+          en: "German court rules Google directly liable for AI Overviews content, cannot invoke search engine limited liability protection.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-09",
     date: "2026-06-09",
     title: {
