@@ -185,6 +185,18 @@ export const projects: Project[] = [
     tags: ["featured", "latest", "game"],
   },
   {
+    id: "web-bladedart",
+    title: "🗡️ 剑出飞镖 (Blade Dart)",
+    descKey: "game.bladeDartDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/bladedart.png",
+    liveUrl: "/bladedart/bladedart.html",
+    publishedAt: "2026-06-12T00:00:00+08:00",
+    tags: ["game"],
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",
