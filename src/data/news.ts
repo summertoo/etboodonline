@@ -31,6 +31,121 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-12",
+    date: "2026-06-12",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-12",
+      en: "🤖 AI HOT Daily · Jun 12, 2026",
+    },
+    summary: {
+      zh: "Gemini Omni Flash 视频任务达 SOTA，全自主无人机首次击毙人类士兵，贝佐斯 AI 公司 Prometheus 融资 120 亿美元估值 410 亿，Anthropic 与 DXC 达成全球联盟。",
+      en: "Gemini Omni Flash achieves SOTA on video tasks, fully autonomous drone kills human soldier for first time, Bezos AI company Prometheus raises $12B at $41B valuation, Anthropic forms global alliance with DXC.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Gemini Omni Flash 视频任务达 SOTA",
+          en: "Gemini Omni Flash Achieves SOTA on Video",
+        },
+        description: {
+          zh: "Gemini Omni Flash 在图像到视频、文本到视频和视频编辑方面达到 SOTA，即将通过 API 向开发者开放。",
+          en: "Gemini Omni Flash achieves SOTA on image-to-video, text-to-video, and video editing, coming soon via API for developers.",
+        },
+      },
+      {
+        title: {
+          zh: "Midjourney V8.1 成为默认模型",
+          en: "Midjourney V8.1 Becomes Default Model",
+        },
+        description: {
+          zh: "Midjourney 将默认模型从 V7 升级为 V8.1，智能性、连贯性、提示遵循度和文本渲染均有提升，HD 模式已支持。",
+          en: "Midjourney upgraded default model from V7 to V8.1 with improved intelligence, coherence, prompt adherence, text rendering, and HD mode support.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯混元开源升级 HPC-Ops 推理算子库",
+          en: "Tencent Hunyuan Open-Sources HPC-Ops Inference Library",
+        },
+        description: {
+          zh: "腾讯混元 AI Infra 团队开源升级推理算子库，Attention 采用运行时动态负载调度，长文本最高加速 2.95 倍。",
+          en: "Tencent Hunyuan open-sources upgraded HPC-Ops inference operator library with runtime dynamic load scheduling, up to 2.95x speedup on long text.",
+        },
+      },
+      {
+        title: {
+          zh: "Perplexity Computer 集成 Deep Research",
+          en: "Perplexity Computer Integrates Deep Research",
+        },
+        description: {
+          zh: "Perplexity 将 Deep Research 作为原生技能集成到 Computer 中，连接智能体框架和搜索即代码生成，Pro 和 Max 用户可用。",
+          en: "Perplexity integrates Deep Research as native skill into Computer, connected to agent framework and search-as-code, available for Pro and Max users.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 推出 Auto-review 分类器智能体",
+          en: "Cursor Launches Auto-review Classifier Agent",
+        },
+        description: {
+          zh: "Cursor 推出 Auto-review 机制，通过分类器智能体在工具调用前审查动作风险，高风险时阻止并返回解释，低风险时放行。",
+          en: "Cursor launches Auto-review using a classifier agent to inspect tool calls before execution, blocking high-risk actions and allowing low-risk ones.",
+        },
+      },
+      {
+        title: {
+          zh: "全自主无人机首次击毙人类士兵",
+          en: "Fully Autonomous Drone Kills Human Soldier for First Time",
+        },
+        description: {
+          zh: "据《新科学家》报道，全自主无人机首次在实战中执行致命攻击，标志着自主武器系统的新里程碑。",
+          en: "New Scientist reports the first recorded lethal attack by a fully autonomous drone, marking a new milestone for autonomous weapon systems.",
+        },
+      },
+      {
+        title: {
+          zh: "Prometheus 融资 120 亿美元，定位人工通用工程师",
+          en: "Prometheus Raises $12B as 'Artificial General Engineer'",
+        },
+        description: {
+          zh: "贝佐斯旗下 AI 公司 Prometheus 成立仅 7 个月，以 410 亿美元估值完成 120 亿美元融资，目标将设计到制造循环压缩 10 倍以上。",
+          en: "Bezos-backed AI startup Prometheus raises $12B at $41B valuation after just 7 months, aiming to compress the design-to-manufacturing loop 10x.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 与 DXC 达成全球联盟",
+          en: "Anthropic Forms Global Alliance with DXC",
+        },
+        description: {
+          zh: "Anthropic 与 DXC Technology 达成多年联盟，将培训数万名 Claude 认证工程师，将 AI 引入银行、航空、保险和政府关键系统。",
+          en: "Anthropic partners with DXC Technology to train tens of thousands of Claude-certified engineers, bringing AI to critical banking, airline, insurance, and government systems.",
+        },
+      },
+      {
+        title: {
+          zh: "研究：LLM 在 95% 模拟中会使用战术核武器",
+          en: "Study: LLMs Use Tactical Nukes in 95% of Simulations",
+        },
+        description: {
+          zh: "一项模拟研究显示，LLM 在 95% 的模拟场景中选择使用战术核武器，引发对 AI 决策行为的广泛关注。",
+          en: "A simulation study shows LLMs choose to use tactical nuclear weapons in 95% of scenarios, raising concerns about AI decision-making.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic CEO 警告 AI 将造成大规模岗位流失",
+          en: "Anthropic CEO Warns of Mass AI Job Displacement",
+        },
+        description: {
+          zh: "Dario Amodei 警告 AI 导致的岗位流失是结构性必然，提出薪资保障、培训补贴等应对思路，若人力需求永久下降需全社会应对。",
+          en: "Dario Amodei warns AI-driven job displacement is structurally inevitable, proposing wage guarantees and training subsidies as society prepares for potentially permanent labor demand reduction.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-11",
     date: "2026-06-11",
     title: {
