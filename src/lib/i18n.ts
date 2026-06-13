@@ -20,6 +20,10 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Play projects, browse updates, and interact with likes, favorites, and comments.",
     "hero.contact": "Contact Now",
     "hero.viewGames": "View Games ↓",
+    "hero.wishPlaceholder": "Describe the game you want...",
+    "hero.wishButton": "Make a Wish 🎯",
+    "hero.wishSuccess": "Wish received! We'll consider it 🚀",
+    "hero.wishError": "Oops, something went wrong. Try again!",
 
     // Roblox Games
     "roblox.title": "🎮 Roblox Games",
@@ -265,6 +269,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.tagline": "可以试玩项目、浏览更新，并进行点赞、收藏与留言互动。",
     "hero.contact": "联系我们",
     "hero.viewGames": "查看游戏 ↓",
+    "hero.wishPlaceholder": "描述你想要的游戏...",
+    "hero.wishButton": "许愿按钮 🎯",
+    "hero.wishSuccess": "愿望已收到！我们会考虑的 🚀",
+    "hero.wishError": "哎呀，出错了！再试一次吧",
 
     // Roblox Games
     "roblox.title": "🎮 Roblox 游戏",

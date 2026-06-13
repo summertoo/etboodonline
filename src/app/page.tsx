@@ -315,6 +315,34 @@ export default function Homepage() {
   const [subStatus, setSubStatus] = useState<
     "idle" | "loading" | "ok" | "dup" | "error"
   >("idle");
+  const [wishText, setWishText] = useState("");
+  const [wishSubmitting, setWishSubmitting] = useState(false);
+  const [wishMessage, setWishMessage] = useState("");
+  const [wishMessageType, setWishMessageType] = useState<"success" | "error">(
+    "success",
+  );
+
+  async function submitWish() {
+    const text = wishText.trim();
+    if (!text) return;
+    setWishSubmitting(true);
+    setWishMessage("");
+    try {
+      const { error } = await supabase.from("game_wishes").insert({
+        idea: text,
+        created_at: new Date().toISOString(),
+      });
+      if (error) throw error;
+      setWishText("");
+      setWishMessageType("success");
+      setWishMessage(t("hero.wishSuccess"));
+    } catch {
+      setWishMessageType("error");
+      setWishMessage(t("hero.wishError"));
+    } finally {
+      setWishSubmitting(false);
+    }
+  }
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -369,7 +397,14 @@ export default function Homepage() {
     [],
   );
   const webGames = useMemo(
-    () => projects.filter((p) => p.category === "webgame"),
+    () =>
+      projects
+        .filter((p) => p.category === "webgame")
+        .sort(
+          (a, b) =>
+            new Date(b.publishedAt || 0).getTime() -
+            new Date(a.publishedAt || 0).getTime(),
+        ),
     [],
   );
   const dapps = useMemo(
@@ -451,6 +486,52 @@ export default function Homepage() {
           <p className="mb-8 text-sm cyber-subtitle opacity-70">
             {t("hero.tagline")}
           </p>
+
+          <div className="max-w-xl mx-auto">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={wishText}
+                onChange={(e) => setWishText(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") submitWish();
+                }}
+                placeholder={t("hero.wishPlaceholder")}
+                className="flex-1 px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--cyber-primary)] focus:border-transparent transition-all"
+                disabled={wishSubmitting}
+              />
+              <button
+                onClick={submitWish}
+                disabled={wishSubmitting || !wishText.trim()}
+                className="px-5 py-2.5 rounded-lg font-semibold text-sm whitespace-nowrap transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                style={{
+                  background:
+                    "linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary))",
+                  color: "#fff",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow =
+                    "0 0 20px rgba(249,115,22,0.4)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              >
+                {t("hero.wishButton")}
+              </button>
+            </div>
+            {wishMessage && (
+              <p
+                className={`mt-2 text-sm ${
+                  wishMessageType === "success"
+                    ? "text-green-600 dark:text-green-400"
+                    : "text-red-500"
+                }`}
+              >
+                {wishMessage}
+              </p>
+            )}
+          </div>
         </div>
       </section>
 
