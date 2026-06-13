@@ -492,6 +492,15 @@ export default function Homepage() {
             {t("hero.tagline")}
           </p>
 
+          <div className="mb-8 mx-auto max-w-2xl aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+            <iframe
+              src="//player.bilibili.com/player.html?isOutside=true&aid=116737898971838&bvid=BV1sTJ56YEKf&cid=39070794360&p=1"
+              scrolling="no"
+              frameBorder="no"
+              allowFullScreen={true}
+              className="w-full h-full"
+            />
+          </div>
           <div className="max-w-xl mx-auto">
             <div className="flex flex-col sm:flex-row gap-2">
               <div className="flex-1 flex flex-col gap-2">
