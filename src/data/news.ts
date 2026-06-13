@@ -31,6 +31,121 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-13",
+    date: "2026-06-13",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-13",
+      en: "🤖 AI HOT Daily · Jun 13, 2026",
+    },
+    summary: {
+      zh: "MiniMax M3 开源权重模型发布，Kimi 发布并开源 Kimi-K2.7-Code，苹果 iOS 27 健康 App 大改，字节豆包上线任务模式，Anthropic 公众调查显示近半美国人盼 AI 治愈疾病。",
+      en: "MiniMax open-sources M3 weights, Kimi releases Kimi-K2.7-Code, Apple redesigns Health app in iOS 27, ByteDance Doubao launches Task Mode, Anthropic survey shows 48% want AI to cure cancer.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "MiniMax M3 开源权重模型发布",
+          en: "MiniMax Releases M3 Open-Weight Model",
+        },
+        description: {
+          zh: "MiniMax 发布开源权重模型 M3，428B 总参数、23B 激活，采用稀疏注意力支持 1M token 上下文，原生多模态，已上架 HuggingFace。",
+          en: "MiniMax releases open-weight M3 with 428B total params, 23B active, sparse attention for 1M token context, native multimodal, now on HuggingFace.",
+        },
+      },
+      {
+        title: {
+          zh: "Kimi 发布并开源 Kimi-K2.7-Code",
+          en: "Kimi Releases Open-Source Kimi-K2.7-Code",
+        },
+        description: {
+          zh: "Kimi 发布最新代码模型 K2.7-Code，Kimi Code Bench v2 提升 +21.8%，推理 token 使用量降低 30%，6x 高速模式即将推出。",
+          en: "Kimi releases K2.7-Code with +21.8% on Kimi Code Bench v2, 30% less reasoning token usage, 6x speed mode coming soon.",
+        },
+      },
+      {
+        title: {
+          zh: "苹果 iOS 27 健康 App 大改",
+          en: "Apple Redesigns Health App in iOS 27",
+        },
+        description: {
+          zh: "iOS 27 健康 App 改为卡片布局，新增视觉智能营养识别（拍摄食物获取营养信息），经期追踪扩展围绝经期支持。",
+          en: "iOS 27 Health app gets card layout, visual nutrition recognition via camera, and perimenopause tracking support.",
+        },
+      },
+      {
+        title: {
+          zh: "字节豆包上线任务模式与专家模式",
+          en: "ByteDance Doubao Launches Task Mode & Expert Mode",
+        },
+        description: {
+          zh: "豆包上线任务模式，支持定时执行、零代码网页生成、PPT 生成、数据可视化。思考模式升级为专家模式，三档定价 68/200/500 元每月。",
+          en: "Doubao launches Task Mode with scheduled execution, no-code web page generation, PPT generation, data visualization. Thinking Mode upgraded to Expert Mode at $68/200/500 monthly.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI Codex 推出速率重置攒存与浏览器开发者模式",
+          en: "OpenAI Codex: Rate Reset Bank & Browser Dev Mode",
+        },
+        description: {
+          zh: "Codex 新增速率限制重置攒存功能，可将重置保留到以后使用。同时支持 Chrome DevTools 协议调试浏览器问题。",
+          en: "Codex adds rate limit reset banking for later use, plus Chrome DevTools Protocol support for browser debugging.",
+        },
+      },
+      {
+        title: {
+          zh: "TCS 与 Anthropic 合作将 Claude 引入受监管行业",
+          en: "TCS Partners with Anthropic for Regulated Industries",
+        },
+        description: {
+          zh: "Anthropic 与塔塔咨询服务合作，TCS 将向 56 个国家 5 万名员工提供 Claude，为金融、医疗等受监管行业客户构建产品。",
+          en: "Anthropic partners with Tata Consultancy Services to bring Claude to 50,000 employees across 56 countries for regulated industries like finance and healthcare.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Research：AI 帮助用户理解皮肤问题",
+          en: "Google Research: AI Helps Users Understand Skin Conditions",
+        },
+        description: {
+          zh: "Google Research 在 JAMA Dermatology 发表研究，2345 名参与者显示 AI 辅助显著提升了用户识别皮肤疾病名称和就医决策能力。",
+          en: "Google Research study in JAMA Dermatology with 2,345 participants shows AI significantly improves users' ability to identify skin conditions and make care decisions.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 首次公众调查：48% 盼 AI 治愈癌症",
+          en: "Anthropic Survey: 48% Want AI to Cure Cancer",
+        },
+        description: {
+          zh: "Anthropic 对近 5.2 万美国人调查显示，48% 将治愈癌症列为首要期望，64% 担忧 AI 导致失业，超 70% 支持政府监管。",
+          en: "Anthropic survey of ~52,000 Americans: 48% rank curing cancer as top AI hope, 64% fear job loss, over 70% support government regulation.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 推出 Academy 课程",
+          en: "OpenAI Launches Academy Courses",
+        },
+        description: {
+          zh: "OpenAI 发布三门 Academy 课程，帮助用户掌握实用 AI 技能、创建可重复工作流，并在日常工作中应用 AI 智能体。",
+          en: "OpenAI releases three Academy courses to help users master practical AI skills, create repeatable workflows, and apply AI agents at work.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 调查：超六成美国人担忧 AI 失业潮",
+          en: "Anthropic: 64% of Americans Fear AI Job Loss",
+        },
+        description: {
+          zh: "调查显示 64% 担忧 AI 导致失业，仅 15% 信任 AI 公司决策，超 70% 支持政府监管，反映公众对 AI 风险的广泛关切。",
+          en: "Survey finds 64% fear AI-driven job loss, only 15% trust AI company decisions, over 70% support government oversight.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-12",
     date: "2026-06-12",
     title: {
