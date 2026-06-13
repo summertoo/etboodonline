@@ -316,6 +316,7 @@ export default function Homepage() {
     "idle" | "loading" | "ok" | "dup" | "error"
   >("idle");
   const [wishText, setWishText] = useState("");
+  const [wishContact, setWishContact] = useState("");
   const [wishSubmitting, setWishSubmitting] = useState(false);
   const [wishMessage, setWishMessage] = useState("");
   const [wishMessageType, setWishMessageType] = useState<"success" | "error">(
@@ -328,12 +329,16 @@ export default function Homepage() {
     setWishSubmitting(true);
     setWishMessage("");
     try {
-      const { error } = await supabase.from("game_wishes").insert({
+      const payload: Record<string, string> = {
         idea: text,
         created_at: new Date().toISOString(),
-      });
+      };
+      const contact = wishContact.trim();
+      if (contact) payload.contact = contact;
+      const { error } = await supabase.from("game_wishes").insert(payload);
       if (error) throw error;
       setWishText("");
+      setWishContact("");
       setWishMessageType("success");
       setWishMessage(t("hero.wishSuccess"));
     } catch {
@@ -488,22 +493,32 @@ export default function Homepage() {
           </p>
 
           <div className="max-w-xl mx-auto">
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={wishText}
-                onChange={(e) => setWishText(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") submitWish();
-                }}
-                placeholder={t("hero.wishPlaceholder")}
-                className="flex-1 px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--cyber-primary)] focus:border-transparent transition-all"
-                disabled={wishSubmitting}
-              />
+            <div className="flex flex-col sm:flex-row gap-2">
+              <div className="flex-1 flex flex-col gap-2">
+                <input
+                  type="text"
+                  value={wishText}
+                  onChange={(e) => setWishText(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") submitWish();
+                  }}
+                  placeholder={t("hero.wishPlaceholder")}
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--cyber-primary)] focus:border-transparent transition-all"
+                  disabled={wishSubmitting}
+                />
+                <input
+                  type="text"
+                  value={wishContact}
+                  onChange={(e) => setWishContact(e.target.value)}
+                  placeholder={t("hero.wishContactPlaceholder")}
+                  className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-xs focus:outline-none focus:ring-2 focus:ring-[var(--cyber-primary)] focus:border-transparent transition-all opacity-70"
+                  disabled={wishSubmitting}
+                />
+              </div>
               <button
                 onClick={submitWish}
                 disabled={wishSubmitting || !wishText.trim()}
-                className="px-5 py-2.5 rounded-lg font-semibold text-sm whitespace-nowrap transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-5 py-2.5 rounded-lg font-semibold text-sm whitespace-nowrap transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed self-start"
                 style={{
                   background:
                     "linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary))",

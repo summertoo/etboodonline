@@ -21,6 +21,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.contact": "Contact Now",
     "hero.viewGames": "View Games ↓",
     "hero.wishPlaceholder": "Describe the game you want...",
+    "hero.wishContactPlaceholder":
+      "Email / X / Telegram (optional — so we can reach you)",
     "hero.wishButton": "Make a Wish 🎯",
     "hero.wishSuccess": "Wish received! We'll consider it 🚀",
     "hero.wishError": "Oops, something went wrong. Try again!",
@@ -270,6 +272,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.contact": "联系我们",
     "hero.viewGames": "查看游戏 ↓",
     "hero.wishPlaceholder": "描述你想要的游戏...",
+    "hero.wishContactPlaceholder":
+      "邮箱 / X / Telegram（可选，方便我们通知你）",
     "hero.wishButton": "许愿按钮 🎯",
     "hero.wishSuccess": "愿望已收到！我们会考虑的 🚀",
     "hero.wishError": "哎呀，出错了！再试一次吧",
