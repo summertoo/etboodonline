@@ -197,6 +197,18 @@ export const projects: Project[] = [
     tags: ["game"],
   },
   {
+    id: "web-summit",
+    title: "⛰️ 登峰造极 (Summit Seeker)",
+    descKey: "game.summitDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/summit.png",
+    liveUrl: "/summit/summit.html",
+    publishedAt: "2026-06-14T00:00:00+08:00",
+    tags: ["game"],
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",

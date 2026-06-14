@@ -180,6 +180,8 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Drag your friend to the cliff edge, push them off, and let them tumble through a chain of traps to collect coins. Bilingual UI, mobile-friendly, and full of upgrades.",
     "game.bladeDartDesc":
       "Throw darts at a rotating target with precision! Unlock new blades, upgrade damage, and conquer 300 levels of dart-throwing action.",
+    "game.summitDesc":
+      "Scale the icy peak step by step! Tap or click to climb, survive falling rocks and predators, and conquer the summit in this minimalist arcade challenge.",
 
     // DApp descriptions
     "dapp.ruokDesc":
@@ -420,6 +422,8 @@ export const translations: Record<Lang, Record<string, string>> = {
       "把朋友拖到悬崖边推下去，让他一路撞击陷阱赚金币 — 中英双语、移动端友好，升级内容丰富。",
     "game.bladeDartDesc":
       "向旋转的靶心精准投掷飞镖！解锁新飞刀、升级伤害，征服 300 关飞镖挑战！",
+    "game.summitDesc":
+      "一步步攀登冰封山峰！点击或触摸向上攀爬，躲避落石和捕食者，征服顶峰！极简风冒险挑战。",
 
     // DApp descriptions
     "dapp.ruokDesc": "基于 Sui 网络的去中心化签到触发定时转账 DApp",
