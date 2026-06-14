@@ -494,7 +494,7 @@ export default function Homepage() {
 
           <div className="mb-8 mx-auto max-w-2xl aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
             <iframe
-              src="//player.bilibili.com/player.html?isOutside=true&aid=116737898971838&bvid=BV1sTJ56YEKf&cid=39070794360&p=1"
+              src="//player.bilibili.com/player.html?isOutside=true&aid=116747747198093&bvid=BV1jfJc6nEm4&cid=39112017327&p=1"
               scrolling="no"
               frameBorder="no"
               allowFullScreen={true}
