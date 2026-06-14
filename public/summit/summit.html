@@ -400,17 +400,17 @@ function drawMobileControls(){
     CX.beginPath();CX.roundRect(x,y,w,h,10);CX.fill();
     CX.strokeStyle=pressed?'rgba(255,255,255,0.5)':'rgba(255,255,255,0.2)';CX.lineWidth=1.5;
     CX.beginPath();CX.roundRect(x,y,w,h,10);CX.stroke();
-    CX.fillStyle='rgba(255,255,255,0.75)';CX.font='bold 24px sans-serif';CX.textAlign='center';CX.textBaseline='middle';
+    CX.fillStyle='rgba(255,255,255,0.75)';CX.font='bold 30px sans-serif';CX.textAlign='center';CX.textBaseline='middle';
     CX.fillText(text,x+w/2,y+h/2);
   };
-  drawBtn(18,H-80,55,55,'◀',keys['_btnLeft']);
-  drawBtn(78,H-80,55,55,'▶',keys['_btnRight']);
-  const jx=W-85,jy=H-90,jw=75,jh=75;
+  drawBtn(5,H-120,90,90,'◀',keys['_btnLeft']);
+  drawBtn(130,H-120,90,90,'▶',keys['_btnRight']);
+  const jx=W-115,jy=H-125,jw=105,jh=105;
   CX.fillStyle=keys['_btnJump']?'rgba(255,255,255,0.25)':'rgba(0,0,0,0.35)';
-  CX.beginPath();CX.roundRect(jx,jy,jw,jh,12);CX.fill();
+  CX.beginPath();CX.roundRect(jx,jy,jw,jh,14);CX.fill();
   CX.strokeStyle=keys['_btnJump']?'rgba(255,255,255,0.5)':'rgba(255,255,255,0.2)';CX.lineWidth=1.5;
-  CX.beginPath();CX.roundRect(jx,jy,jw,jh,12);CX.stroke();
-  CX.fillStyle='rgba(255,255,255,0.75)';CX.font='bold 24px sans-serif';CX.textAlign='center';CX.textBaseline='middle';
+  CX.beginPath();CX.roundRect(jx,jy,jw,jh,14);CX.stroke();
+  CX.fillStyle='rgba(255,255,255,0.75)';CX.font='bold 36px sans-serif';CX.textAlign='center';CX.textBaseline='middle';
   CX.fillText(lang==='zh'?'跳':'JUMP',jx+jw/2,jy+jh/2);
 }
 function showMenu(){
@@ -829,9 +829,9 @@ C.addEventListener('click',e=>{
   const btnTouches={};
   function hitBtn(mx,my,bx,by,bw,bh){return mx>=bx&&mx<=bx+bw&&my>=by&&my<=by+bh;}
   function getCtrlBtn(mx,my){
-    if(hitBtn(mx,my,18,H-80,55,55))return 'left';
-    if(hitBtn(mx,my,78,H-80,55,55))return 'right';
-    if(hitBtn(mx,my,W-85,H-90,75,75))return 'jump';
+    if(hitBtn(mx,my,5,H-120,90,90))return 'left';
+    if(hitBtn(mx,my,130,H-120,90,90))return 'right';
+    if(hitBtn(mx,my,W-115,H-125,105,105))return 'jump';
     return null;
   }
   C.addEventListener('touchstart',e=>{e.preventDefault();
