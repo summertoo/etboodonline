@@ -31,6 +31,121 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-14",
+    date: "2026-06-14",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-14",
+      en: "🤖 AI HOT Daily · Jun 14, 2026",
+    },
+    summary: {
+      zh: "智谱 GLM-5.2 全量开放支持 1M 上下文，Anthropic 秘密申请上市估值 9650 亿美元，谷歌安全负责人因反对军事 AI 合作辞职，OpenAI 遭多州总检察长联合调查。",
+      en: "Zhipu GLM-5.2 launches with 1M context, Anthropic files for IPO at $965B valuation, Google's Android security chief resigns over military AI, OpenAI probed by state attorneys general.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "智谱 GLM-5.2 全量开放，支持 1M 上下文",
+          en: "Zhipu GLM-5.2 Launches with 1M Context",
+        },
+        description: {
+          zh: "智谱发布迄今最强开源模型 GLM-5.2，支持真正可用的 1M 上下文，被称为最强国产 Coding 模型，下周开源并遵循 MIT 协议。",
+          en: "Zhipu releases its most capable open-source model GLM-5.2 with true 1M context, hailed as the strongest domestic coding model, open-sourcing next week under MIT license.",
+        },
+      },
+      {
+        title: {
+          zh: "Suno 发布音轨分离功能",
+          en: "Suno Releases Stem Separation",
+        },
+        description: {
+          zh: "Suno 发布音轨分离功能，可以从零生成更纯净的音频内容。",
+          en: "Suno launches stem separation feature for generating cleaner audio from scratch.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter Fusion API：半价达 Fable 级智能",
+          en: "OpenRouter Fusion API: Fable-Level at Half Price",
+        },
+        description: {
+          zh: "OpenRouter 推出 Fusion API，以半价即可达到 Fable 级别的智能水平，提供更具性价比的 AI 调用方案。",
+          en: "OpenRouter launches Fusion API delivering Fable-grade intelligence at half the price for cost-effective AI inference.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 安全警告适得其反，政府撤回最强大 AI",
+          en: "Anthropic Safety Warning Backfires, Government Pulls AI",
+        },
+        description: {
+          zh: "Anthropic 不满政府基于狭窄越狱发现撤回已部署给数亿用户的商业模型，称此举不合理。",
+          en: "Anthropic pushes back after government pulls its most powerful AI from billions of users based on a narrow jailbreak finding.",
+        },
+      },
+      {
+        title: {
+          zh: "谷歌安全负责人因反对军事 AI 合作辞职",
+          en: "Google Security Chief Resigns Over Military AI",
+        },
+        description: {
+          zh: "谷歌 Android 安全负责人辞职，指责公司丧失道德指针、放弃碳中和目标、与战争部签署允许 AI 用于任何合法目的的协议。",
+          en: "Google's Android security chief resigns, accusing the company of abandoning ethics, carbon neutrality, and signing military AI agreements.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 秘密申请上市，估值 9650 亿美元",
+          en: "Anthropic Files for IPO at $965B Valuation",
+        },
+        description: {
+          zh: "Anthropic 秘密提交 IPO 申请，估值达 9650 亿美元，被称为史上增长最快的初创公司之一。",
+          en: "Anthropic files confidential IPO at $965 billion valuation, one of the fastest-growing startups ever.",
+        },
+      },
+      {
+        title: {
+          zh: "扎克伯格承认 Meta AI 转型脱轨",
+          en: "Zuckerberg Admits Meta AI Transition Derailed",
+        },
+        description: {
+          zh: "扎克伯格内部备忘录承认 AI 转型组织调整过快，今年已裁减 10% 员工、7000 人转入 AI 项目，预计将继续犯错。",
+          en: "Zuckerberg internal memo admits rushed AI reorganization, 10% workforce cut, 7,000 reassigned to AI projects, expects more mistakes ahead.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 遭多州总检察长联合调查",
+          en: "OpenAI Probed by State Attorneys General",
+        },
+        description: {
+          zh: "OpenAI 正被多州总检察长组成的联盟调查，已向该公司索取涵盖广泛主题的信息。",
+          en: "A coalition of state attorneys general is investigating OpenAI, demanding broad information from the AI company.",
+        },
+      },
+      {
+        title: {
+          zh: "SemiAnalysis：200 美元 AI 订阅榨出 70 倍 Token 用量",
+          en: "SemiAnalysis: $200 Sub Gets 70x Token Value",
+        },
+        description: {
+          zh: "分析显示 Claude Max 20x 订阅可消耗约值 8000 美元的 token，ChatGPT Pro 20x 对应 14000 美元，重度模式价格难以长期维持。",
+          en: "Analysis shows Claude Max 20x sub burns ~$8K in API tokens, ChatGPT Pro 20x ~$14K — heavy usage patterns may be unsustainable.",
+        },
+      },
+      {
+        title: {
+          zh: "/architect 项目减少 80% 的 Fable Token 消耗",
+          en: "/architect Cuts Fable Token Use by 80%",
+        },
+        description: {
+          zh: "/architect 将 Fable 用于协调和审核、Codex 负责构建，成功减少 80% 的 Fable token 消耗。",
+          en: "/architect delegates Fable to orchestration and review, Codex to building, cutting Fable token consumption by 80%.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-13",
     date: "2026-06-13",
     title: {
