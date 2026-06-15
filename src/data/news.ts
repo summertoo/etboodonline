@@ -31,6 +31,81 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-15",
+    date: "2026-06-15",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-15",
+      en: "🤖 AI HOT Daily · Jun 15, 2026",
+    },
+    summary: {
+      zh: "Anthropic 暂停新模型访问，Meta 撤销 20 亿美元收购 Manus 交易，白宫 AI 监管被指偏袒 OpenAI，Nadella 警告 AI 生态失衡风险。",
+      en: "Anthropic suspends new model access, Meta unwinds $2B Manus acquisition, White House AI decision favors OpenAI, Nadella warns on AI ecosystem risk.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Anthropic 暂停新模型访问，印度辩论 AI 未来",
+          en: "Anthropic Suspends Models, India Debates AI Future",
+        },
+        description: {
+          zh: "Anthropic 暂停新模型访问权限，印度科技领袖围绕此事展开辩论，探讨对印度 AI 雄心的警示意义。",
+          en: "Anthropic suspends access to new models, sparking debate among Indian tech leaders about implications for the country's AI ambitions.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 撤销 20 亿美元收购 Manus 交易",
+          en: "Meta Unwinds $2B Manus Acquisition",
+        },
+        description: {
+          zh: "Meta 开始撤销对 Manus 的 20 亿美元收购，此前北京要求交易必须反转，收购解除程序已启动。",
+          en: "Meta reportedly moves to unwind its $2B Manus acquisition after Beijing demanded the deal be reversed.",
+        },
+      },
+      {
+        title: {
+          zh: "乔木小说创作 Skill 开源发布",
+          en: "Qiaomu Novel Generator Skill Open-Sourced",
+        },
+        description: {
+          zh: "开源乔木小说创作 Skill，一句话自动生成剧情梗概、人物设定、冲突升级和结尾。",
+          en: "Open-source novel-writing Skill: one command generates plot outlines, character settings, conflict escalation, and endings.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic CEO 上市前夕警告：千漏洞、AI 砍半白领工作",
+          en: "Anthropic CEO Pre-IPO Warnings: 1000 Bugs, Half White-Collar Jobs",
+        },
+        description: {
+          zh: "Dario Amodei 透露内部模型上千漏洞、AI 一到五年砍半入门级白领工作、Claude 已被美军用于对伊朗战争，给出文明崩溃概率 10%-25%。",
+          en: "Amodei reveals 1000+ model bugs, AI to halve entry-level white-collar jobs in 1-5 years, Claude used by US military in Iran, gives 10-25% civilization collapse odds.",
+        },
+      },
+      {
+        title: {
+          zh: "白宫 AI 监管被指偏袒 OpenAI 与亚马逊",
+          en: "White House AI Decision Favors OpenAI and Amazon",
+        },
+        description: {
+          zh: "白宫 AI 监管决定被指偏袒 OpenAI、亚马逊，同时对 Anthropic 施压不足 24 小时，专家呼吁建立独立 AI 监管机构。",
+          en: "White House AI regulation decision criticized for favoring OpenAI and Amazon while pressuring Anthropic within 24 hours, experts call for independent oversight.",
+        },
+      },
+      {
+        title: {
+          zh: "Satya Nadella：没有生态的前沿不稳定",
+          en: "Satya Nadella: Frontier Without Ecosystem Is Unstable",
+        },
+        description: {
+          zh: "微软 CEO 警告若所有价值被少数模型吞噬，将重演全球化空心化悲剧，企业需同时构建人力资本与 token 资本。",
+          en: "Microsoft CEO warns if all value is captured by a few models, it repeats the hollowing-out tragedy of globalization; firms need both human and token capital.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-14",
     date: "2026-06-14",
     title: {
