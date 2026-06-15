@@ -275,14 +275,6 @@ export const projects: Project[] = [
     liveUrl: "https://moligate.com/sign-up?aff=vGbL",
   },
   {
-    id: "free-model",
-    descKey: "freeModel.desc",
-    category: "tool",
-    status: "new",
-    logoUrl: "/avatars/free-model.png",
-    liveUrl: "https://freemodel.dev/invite/FRE-70703524",
-  },
-  {
     id: "article-sui-move-series",
     title: "从0基础开始写 Sui MOVE 应用&游戏实战系列",
     descKey: "dapp.ruokDesc",

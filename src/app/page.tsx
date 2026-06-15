@@ -422,17 +422,12 @@ export default function Homepage() {
         (p) =>
           p.category === "tool" &&
           p.id !== "stable-gateway" &&
-          p.id !== "sui-best-practices" &&
-          p.id !== "free-model",
+          p.id !== "sui-best-practices",
       ),
     [],
   );
   const stableGateway = useMemo(
     () => projects.find((p) => p.id === "stable-gateway"),
-    [],
-  );
-  const freeModel = useMemo(
-    () => projects.find((p) => p.id === "free-model"),
     [],
   );
   const suiBestPractices = useMemo(
@@ -709,21 +704,6 @@ export default function Homepage() {
               index={0}
               t={t}
               socialStat={socialStats[stableGateway.id]}
-              isLoggedIn={isLoggedIn}
-              onRequireLogin={() => setAuthOpen(true)}
-            />
-          )}
-          {freeModel && (
-            <ProjectCard
-              id={freeModel.id}
-              title={t("freeModel.title")}
-              desc={t("freeModel.desc")}
-              logoUrl={freeModel.logoUrl}
-              liveUrl={freeModel.liveUrl}
-              status={freeModel.status}
-              index={1}
-              t={t}
-              socialStat={socialStats[freeModel.id]}
               isLoggedIn={isLoggedIn}
               onRequireLogin={() => setAuthOpen(true)}
             />

@@ -217,9 +217,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     "gateway.title": "🚉 Stable Gateway",
     "gateway.subtitle": "Recommended stable access points and tools.",
     "gateway.visit": "Visit →",
-    "freeModel.title": "Free Model - AI API Gateway",
-    "freeModel.desc":
-      "Another stable AI API gateway option, providing access to various models at competitive rates.",
 
     // Auth
     "nav.login": "Login",
@@ -456,9 +453,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     "gateway.title": "🚉 稳定的中转站",
     "gateway.subtitle": "推荐稳定可用的 AI 接入与中转工具。",
     "gateway.visit": "立即访问 →",
-    "freeModel.title": "Free Model - AI API 中转站",
-    "freeModel.desc":
-      "另一个稳定可用的 AI API 中转站，提供多种模型的接入，价格优惠。",
 
     // Auth
     "nav.login": "登录",
