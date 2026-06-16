@@ -31,6 +31,121 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-16",
+    date: "2026-06-16",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-16",
+      en: "🤖 AI HOT Daily · Jun 16, 2026",
+    },
+    summary: {
+      zh: "MiniMax 开源 M3 权重及 MSA 论文，Salesforce 36 亿美元收购 AI 客服 Fin，Meta 上线 AI Mode，Nvidia 发行 200 亿美元债券。",
+      en: "MiniMax open-sources M3 weights, Salesforce acquires AI customer service platform Fin for $3.6B, Meta launches AI Mode, Nvidia issues $20B in bonds.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "MiniMax 开源 M3 权重及 MSA 技术论文",
+          en: "MiniMax Open-Sources M3 Weights & MSA Paper",
+        },
+        description: {
+          zh: "MiniMax 开源 428B 参数 M3 模型权重，同步发布 MSA 稀疏注意力论文。M3 是首个预训练阶段多模态混合训练的开源模型，获开源模型第一。",
+          en: "MiniMax open-sources 428B-param M3 weights and MSA sparse attention paper. M3 is the first open-source model with pretraining-stage multimodal interleaving, ranking #1 in open-source models.",
+        },
+      },
+      {
+        title: {
+          zh: "DFlash 投机解码：4.3 倍吞吐量",
+          en: "DFlash Speculative Decoding: 4.3x Throughput",
+        },
+        description: {
+          zh: "Z Lab、Modal 与 SGLang 联合发布 DFlash，采用块扩散+KV 注入并行生成，在 Qwen 3.5 397B 上吞吐量达基线 4.3 倍。",
+          en: "Z Lab, Modal and SGLang release DFlash with block diffusion + KV injection, achieving 4.3x baseline throughput on Qwen 3.5 397B.",
+        },
+      },
+      {
+        title: {
+          zh: "Flash-KMeans：比 FAISS 快 200 倍",
+          en: "Flash-KMeans: 200x Faster Than FAISS on GPU",
+        },
+        description: {
+          zh: "UC Berkeley 与 UT Austin 开源 Flash-KMeans，通过重构 GPU 数据流实现精确 Lloyd's k-Means，在 H200 上比 FAISS 快 200 倍以上。",
+          en: "UC Berkeley and UT Austin open-source Flash-KMeans, achieving exact Lloyd's k-Means with 200x+ speedup over FAISS on H200 GPUs.",
+        },
+      },
+      {
+        title: {
+          zh: "Grok Build 推出 Agent Dashboard",
+          en: "Grok Build Launches Agent Dashboard",
+        },
+        description: {
+          zh: "xAI 为 Grok Build 推出 Agent Dashboard，单一屏幕管理多个编码会话，支持按状态分组、peek 面板查看输出。",
+          en: "xAI launches Agent Dashboard for Grok Build, managing multiple coding sessions in one screen with status grouping and output peek panel.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 在 Facebook 上线 AI Mode",
+          en: "Meta Launches AI Mode on Facebook",
+        },
+        description: {
+          zh: "Meta 推出 AI Mode 搜索，从公开帖子提取信息合成答案，同时启动 Facebook、Instagram 和 WhatsApp 全球订阅（月费 3.99 美元起）。",
+          en: "Meta launches AI Mode search that synthesizes answers from public posts, alongside global subscriptions for Facebook, Instagram, and WhatsApp starting at $3.99/mo.",
+        },
+      },
+      {
+        title: {
+          zh: "Kimi K2.7 Code 高速版上线",
+          en: "Kimi K2.7 Code Speed Mode Launched",
+        },
+        description: {
+          zh: "Kimi K2.7 Code 高速版输出速度约 5-6 倍，常规编程场景约 180 Token/s，API 定价为普通版 2 倍。",
+          en: "Kimi K2.7 Code speed mode delivers 5-6x output at ~180 Token/s for regular coding, API priced at 2x the standard version.",
+        },
+      },
+      {
+        title: {
+          zh: "Salesforce 以 36 亿美元收购 AI 客服 Fin",
+          en: "Salesforce Acquires Fin for $3.6B",
+        },
+        description: {
+          zh: "Salesforce 以 36 亿美元收购 AI 客服平台 Fin，利用其技术增强企业级 Agentforce 平台。",
+          en: "Salesforce acquires AI customer service platform Fin for $3.6B to enhance its enterprise Agentforce platform.",
+        },
+      },
+      {
+        title: {
+          zh: "Nvidia 发行 200 亿美元债券",
+          en: "Nvidia Issues $20B in Bonds",
+        },
+        description: {
+          zh: "Nvidia 计划通过自 2021 年以来的首次债券发行筹集至少 200 亿美元，加入 AI 领域的债务融资热潮。",
+          en: "Nvidia plans to raise at least $20B through its first bond sale since 2021, joining the AI debt financing boom.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI 将 Grok 集成至 Warp 终端",
+          en: "xAI Integrates Grok into Warp Terminal",
+        },
+        description: {
+          zh: "xAI 宣布 Grok 集成到 Warp 终端开发环境，Warp 是基于终端的智能体开发环境，拥有近百万开发者用户。",
+          en: "xAI integrates Grok into Warp, a terminal-based agent development environment with nearly one million developers.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 裁员浪潮成为火药桶",
+          en: "AI Layoff Wave Becomes a Powder Keg",
+        },
+        description: {
+          zh: "科技公司今年已裁员约 15 万人，AI 连续三个月是裁员首要原因，同期 AI 芯片商 Cerebras 上市市值达 670 亿美元。",
+          en: "Tech companies have laid off ~150,000 people this year, with AI cited as the top reason for three consecutive months, while Cerebras IPO'd at $67B.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-15",
     date: "2026-06-15",
     title: {
