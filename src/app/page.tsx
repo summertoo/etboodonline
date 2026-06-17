@@ -217,7 +217,6 @@ function GameCard({
 }) {
   const isLive = status === "live" || status === "new";
   const isNew = status === "new";
-  const displayTitle = title || (titleKey ? t(titleKey) : "");
 
   return (
     <RevealSection delay={index * 120}>
@@ -227,7 +226,7 @@ function GameCard({
             <div className="w-16 h-16 rounded-xl overflow-hidden shadow-md flex-shrink-0">
               <img
                 src={logoUrl}
-                alt={title}
+                alt={titleKey ? t(titleKey) : title || ""}
                 className="w-full h-full object-cover"
                 loading="lazy"
                 onError={(e) => {
@@ -247,7 +246,7 @@ function GameCard({
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-2 flex-wrap">
                 <h4 className="w-full font-semibold text-base leading-6 break-words sm:w-auto sm:text-lg sm:truncate">
-                  {displayTitle}
+                  {titleKey ? t(titleKey) : title || ""}
                 </h4>
                 {platform && (
                   <span
@@ -572,6 +571,7 @@ export default function Homepage() {
               key={game.id}
               id={game.id}
               title={game.title!}
+              titleKey={game.titleKey}
               descKey={game.descKey}
               logoUrl={game.logoUrl}
               liveUrl={game.liveUrl!}
