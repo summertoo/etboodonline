@@ -209,6 +209,18 @@ export const projects: Project[] = [
     tags: ["game"],
   },
   {
+    id: "web-crazybird",
+    titleKey: "game.crazyBirdTitle",
+    descKey: "game.crazyBirdDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/crazybird.png",
+    liveUrl: "/crazybird/index.html",
+    publishedAt: "2026-06-17T00:00:00+08:00",
+    tags: ["game"],
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",

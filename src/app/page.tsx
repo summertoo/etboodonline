@@ -187,6 +187,7 @@ function ProjectCard({
 function GameCard({
   id,
   title,
+  titleKey,
   descKey,
   logoUrl,
   liveUrl,
@@ -200,7 +201,8 @@ function GameCard({
   onRequireLogin,
 }: {
   id: string;
-  title: string;
+  title?: string;
+  titleKey?: string;
   descKey: string;
   logoUrl: string;
   liveUrl: string;
@@ -215,6 +217,7 @@ function GameCard({
 }) {
   const isLive = status === "live" || status === "new";
   const isNew = status === "new";
+  const displayTitle = title || (titleKey ? t(titleKey) : "");
 
   return (
     <RevealSection delay={index * 120}>
@@ -244,7 +247,7 @@ function GameCard({
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-2 flex-wrap">
                 <h4 className="w-full font-semibold text-base leading-6 break-words sm:w-auto sm:text-lg sm:truncate">
-                  {title}
+                  {displayTitle}
                 </h4>
                 {platform && (
                   <span
@@ -588,18 +591,19 @@ export default function Homepage() {
       <section className="py-20">
         <RevealSection>
           <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("roblox.title")}
+            {t("webgames.title")}
           </h3>
           <p className="mb-10 text-center cyber-subtitle">
-            {t("roblox.subtitle")}
+            {t("webgames.subtitle")}
           </p>
         </RevealSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {robloxGames.map((game, i) => (
+          {webGames.map((game, i) => (
             <GameCard
               key={game.id}
               id={game.id}
               title={game.title!}
+              titleKey={game.titleKey}
               descKey={game.descKey}
               logoUrl={game.logoUrl}
               liveUrl={game.liveUrl!}
