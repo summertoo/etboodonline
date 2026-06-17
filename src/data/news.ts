@@ -31,6 +31,121 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-17",
+    date: "2026-06-17",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-17",
+      en: "🤖 AI HOT Daily · Jun 17, 2026",
+    },
+    summary: {
+      zh: "SpaceX 600 亿美元收购 Cursor，Anthropic 企业份额首超 OpenAI，DeepSeek 融资估值超 500 亿美元，小米 MiMo Claw 正式发布。",
+      en: "SpaceX acquires Cursor for $60B in stock, Anthropic surpasses OpenAI in enterprise share, DeepSeek raises at $50B+ valuation, Xiaomi launches MiMo Claw.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Cartesia 发布 Sonic 3.5 与 Ink 2 实时语音模型",
+          en: "Cartesia Releases Sonic 3.5 & Ink 2 Voice Models",
+        },
+        description: {
+          zh: "Cartesia 推出 Sonic 3.5（TTS）和 Ink 2（STT）实时语音模型，Ink 2 在流式语音转文字排行榜排名第一，Sonic 3.5 首音频延迟约 82ms。",
+          en: "Cartesia launches Sonic 3.5 (TTS) and Ink 2 (STT) as a real-time voice stack, with Ink 2 ranking #1 on streaming speech-to-text leaderboard.",
+        },
+      },
+      {
+        title: {
+          zh: "通义千问发布机器人三连：RobotManip/RobotWorld/RobotNav",
+          en: "Qwen Drops Robot Trilogy: Manip/World/Nav",
+        },
+        description: {
+          zh: "通义千问连发三款机器人基础模型：RobotManip 操作模型 LIBERO-Plus 达 91.4%，RobotWorld 统一 20+ 形态，RobotNav 导航模型涵盖五大领域。",
+          en: "Qwen releases three robot foundation models: RobotManip scores 91.4% on LIBERO-Plus, RobotWorld unifies 20+ forms, RobotNav covers 5 navigation domains.",
+        },
+      },
+      {
+        title: {
+          zh: "字节跳动推出 Seedance 2.0 Mini，视频生成成本砍半",
+          en: "ByteDance Seedance 2.0 Mini Cuts Video Cost in Half",
+        },
+        description: {
+          zh: "火山引擎上线 Seedance 2.0 Mini，比 Fast 版快 2 倍，720P 下单秒生成成本约 0.5 元，较标准版降低约一半。",
+          en: "Volcano Engine launches Seedance 2.0 Mini, 2x faster than Fast version, ~$0.07 per second at 720P, roughly half the standard cost.",
+        },
+      },
+      {
+        title: {
+          zh: "小米 MiMo Claw 正式版发布",
+          en: "Xiaomi MiMo Claw Officially Launched",
+        },
+        description: {
+          zh: "搭载 MiMo-V2.5-Pro 旗舰模型，支持百万超长上下文，原生兼容 MCP 协议，联动金山办公生态，免费用户每日时长升级至 4 小时。",
+          en: "Powered by MiMo-V2.5-Pro flagship model, million-token context, native MCP compatibility, integrated with Kingsoft Office, free tier expanded to 4 hours daily.",
+        },
+      },
+      {
+        title: {
+          zh: "SpaceX 以 600 亿美元股票收购 Cursor",
+          en: "SpaceX Acquires Cursor for $60B in Stock",
+        },
+        description: {
+          zh: "SpaceX 在 IPO 数天后，同意以 600 亿美元股票收购 AI 编程公司 Cursor，交易预计本季度完成。",
+          en: "Days after its IPO, SpaceX agrees to acquire AI coding startup Cursor for $60 billion in stock, expected to close this quarter.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 5 月企业份额首超 OpenAI",
+          en: "Anthropic Surpasses OpenAI in Enterprise Share",
+        },
+        description: {
+          zh: "Anthropic 5 月企业 AI 订阅市场份额达 41%，首次超越 OpenAI（39.5%），特朗普政府禁令反而推动采用量创新高。",
+          en: "Anthropic captures 41% of enterprise AI subscriptions in May, surpassing OpenAI's 39.5%, with the Trump ban paradoxically boosting adoption.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 完成首轮外部融资，估值超 500 亿美元",
+          en: "DeepSeek Raises First Outside Round at $50B+",
+        },
+        description: {
+          zh: "DeepSeek 完成首轮外部融资超 74 亿美元，估值超 500 亿美元，创始人梁文锋个人投入约 200 亿元，腾讯和宁德时代为主要投资者。",
+          en: "DeepSeek raises $7.4B+ in first outside round at $50B+ valuation, founder invested ~$3B personally, Tencent and CATL are key investors.",
+        },
+      },
+      {
+        title: {
+          zh: "五角大楼将大部分 AI 工作流从 Anthropic 转移",
+          en: "Pentagon Moves AI Workflows from Anthropic",
+        },
+        description: {
+          zh: "五角大楼将超 2/3 日常 AI 工作流从 Anthropic 转移，起因是 Anthropic 拒绝签署允许 Claude 用于监控和自动武器的协议。",
+          en: "Pentagon shifts over 2/3 of daily AI workflows away from Anthropic after it refused to sign agreements allowing Claude use for surveillance and autonomous weapons.",
+        },
+      },
+      {
+        title: {
+          zh: "微软 Copilot Cowork 全球正式可用",
+          en: "Microsoft Copilot Cowork GA Worldwide",
+        },
+        description: {
+          zh: "微软 Copilot Cowork 现已全球正式可用，支持多模型，每个组织可让长期运行的智能体处理复杂的多步骤任务。",
+          en: "Microsoft Copilot Cowork is now globally available with multi-model support, enabling long-running agents for complex multi-step tasks.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 版支付宝「阿宝」开启邀测",
+          en: "AI-Powered Alipay 'Abao' Opens Beta",
+        },
+        description: {
+          zh: "支付宝开启 AI 版邀测，用户右滑进入新版界面，由阿宝 AI 助手代办事项，首批放出 100 个邀请码。",
+          en: "Alipay launches AI version beta, users swipe right for 'Abao' AI assistant to handle tasks, 100 invite codes in the first batch.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-16",
     date: "2026-06-16",
     title: {
