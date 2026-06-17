@@ -91,7 +91,7 @@ function ProjectCard({
   isLoggedIn: boolean;
   onRequireLogin: () => void;
 }) {
-  const displayTitle = title || (titleKey ? t(titleKey) : "");
+  const displayTitle = titleKey ? t(titleKey) : title || "";
   const displayDesc = desc || (descKey ? t(descKey) : "");
   const isLive = status !== "coming";
   const isNew = status === "new";
@@ -591,38 +591,6 @@ export default function Homepage() {
       <section className="py-20">
         <RevealSection>
           <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("webgames.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("webgames.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {webGames.map((game, i) => (
-            <GameCard
-              key={game.id}
-              id={game.id}
-              title={game.title!}
-              titleKey={game.titleKey}
-              descKey={game.descKey}
-              logoUrl={game.logoUrl}
-              liveUrl={game.liveUrl!}
-              status={game.status}
-              platform={game.platform}
-              index={i}
-              t={t}
-              lang={lang}
-              socialStat={socialStats[game.id]}
-              isLoggedIn={isLoggedIn}
-              onRequireLogin={() => setAuthOpen(true)}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
             {t("dapps.title")}
           </h3>
           <p className="mb-10 text-center cyber-subtitle">
@@ -761,9 +729,7 @@ export default function Homepage() {
             />
           </div>
         </section>
-      </RevealSection>
 
-      <RevealSection>
         <section className="py-20">
           <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
             {t("newsletter.title")}

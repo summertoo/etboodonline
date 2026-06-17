@@ -62,7 +62,8 @@ export const projects: Project[] = [
   },
   {
     id: "web-lobster-run",
-    title: "🦞 龙虾跑酷 (Lobster Run)",
+    title: "🦞 Lobster Run",
+    titleKey: "game.lobsterRunTitle",
     descKey: "game.lobsterRunDesc",
     category: "webgame",
     platform: "web",
@@ -118,7 +119,8 @@ export const projects: Project[] = [
   },
   {
     id: "web-killer-h5",
-    title: "🗡️ 暗杀 (Assassin)",
+    title: "🗡️ Assassin",
+    titleKey: "game.killerH5Title",
     descKey: "game.killerH5Desc",
     category: "webgame",
     platform: "web",
@@ -129,7 +131,8 @@ export const projects: Project[] = [
   },
   {
     id: "web-swim",
-    title: "🏊 百米自由泳 (Swim Race)",
+    title: "🏊 Swim Race",
+    titleKey: "game.swimTitle",
     descKey: "game.swimDesc",
     category: "webgame",
     platform: "web",
@@ -140,7 +143,8 @@ export const projects: Project[] = [
   },
   {
     id: "web-zombie-siege",
-    title: "🧟 降临：僵尸围城 (Skyfall Zombie Siege)",
+    title: "🧟 Skyfall Zombie Siege",
+    titleKey: "game.zombieSiegeTitle",
     descKey: "game.zombieSiegeDesc",
     category: "webgame",
     platform: "web",
@@ -151,7 +155,8 @@ export const projects: Project[] = [
   },
   {
     id: "web-grandpa-farm",
-    title: "爷爷的农场 (Grandpa's Desert Farm)",
+    title: "Grandpa's Desert Farm",
+    titleKey: "game.grandpaFarmTitle",
     descKey: "game.grandpaFarmDesc",
     category: "webgame",
     platform: "web",
@@ -162,7 +167,8 @@ export const projects: Project[] = [
   },
   {
     id: "web-hotdance",
-    title: "热舞团 (Hot Dance Crew)",
+    title: "Hot Dance Crew",
+    titleKey: "game.hotDanceTitle",
     descKey: "game.hotDanceDesc",
     category: "webgame",
     platform: "web",
@@ -174,7 +180,8 @@ export const projects: Project[] = [
   },
   {
     id: "web-dropafriend",
-    title: "🪨 扔掉一个朋友 (Drop a Friend)",
+    title: "🪨 Drop a Friend",
+    titleKey: "game.dropafriendTitle",
     descKey: "game.dropafriendDesc",
     category: "webgame",
     platform: "web",
@@ -186,7 +193,8 @@ export const projects: Project[] = [
   },
   {
     id: "web-bladedart",
-    title: "🗡️ 剑出飞镖 (Blade Dart)",
+    title: "🗡️ Blade Dart",
+    titleKey: "game.bladeDartTitle",
     descKey: "game.bladeDartDesc",
     category: "webgame",
     platform: "web",
@@ -198,7 +206,8 @@ export const projects: Project[] = [
   },
   {
     id: "web-summit",
-    title: "⛰️ 登峰造极 (Summit Seeker)",
+    title: "⛰️ Summit Seeker",
+    titleKey: "game.summitTitle",
     descKey: "game.summitDesc",
     category: "webgame",
     platform: "web",

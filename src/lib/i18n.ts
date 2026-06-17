@@ -178,6 +178,15 @@ export const translations: Record<Lang, Record<string, string>> = {
       "A stage-based rhythm web game with falling arrows, combos, arc explosions, bilingual UI, and a top-10 leaderboard.",
     "game.dropafriendDesc":
       "Drag your friend to the cliff edge, push them off, and let them tumble through a chain of traps to collect coins. Bilingual UI, mobile-friendly, and full of upgrades.",
+    "game.lobsterRunTitle": "🦞 Lobster Run",
+    "game.killerH5Title": "🗡️ Assassin",
+    "game.swimTitle": "🏊 Swim Race",
+    "game.zombieSiegeTitle": "🧟 Skyfall Zombie Siege",
+    "game.grandpaFarmTitle": "Grandpa's Desert Farm",
+    "game.hotDanceTitle": "Hot Dance Crew",
+    "game.dropafriendTitle": "🪨 Drop a Friend",
+    "game.bladeDartTitle": "🗡️ Blade Dart",
+    "game.summitTitle": "⛰️ Summit Seeker",
     "game.crazyBirdTitle": "🐦 Crazy Bird",
     "game.crazyBirdDesc":
       "Propel your bird with precise slingshot aim! Knock down stubborn pigs, bust through block fortresses, and conquer physics-based levels.",
@@ -424,6 +433,15 @@ export const translations: Record<Lang, Record<string, string>> = {
       "向旋转的靶心精准投掷飞镖！解锁新飞刀、升级伤害，征服 300 关飞镖挑战！",
     "game.summitDesc":
       "一步步攀登冰封山峰！点击或触摸向上攀爬，躲避落石和捕食者，征服顶峰！极简风冒险挑战。",
+    "game.lobsterRunTitle": "🦞 龙虾跑酷",
+    "game.killerH5Title": "🗡️ 暗杀",
+    "game.swimTitle": "🏊 百米自由泳",
+    "game.zombieSiegeTitle": "🧟 降临：僵尸围城",
+    "game.grandpaFarmTitle": "爷爷的农场",
+    "game.hotDanceTitle": "热舞团",
+    "game.dropafriendTitle": "🪨 扔掉一个朋友",
+    "game.bladeDartTitle": "🗡️ 剑出飞镖",
+    "game.summitTitle": "⛰️ 登峰造极",
     "game.crazyBirdTitle": "🐦 愤怒的小鸡",
     "game.crazyBirdDesc":
       "用弹弓精准发射小鸟！撞倒顽固的猪头，冲破砖块堡垒，征服基于物理引擎的趣味关卡。",
