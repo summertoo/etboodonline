@@ -31,6 +31,121 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-18",
+    date: "2026-06-18",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-18",
+      en: "🤖 AI HOT Daily · Jun 18, 2026",
+    },
+    summary: {
+      zh: "Grok 4.3 登陆 Bedrock 支持百万上下文，Vercel 开源 AI 智能体框架 Eve，Google 发布 99 美元 Gemini 音箱，阿里云 HappyOyster 1.0 发布，Claude Design 与 Replit 联动，OpenAI 年营收 130 亿但巨亏 209 亿，NVIDIA ENPIRE 八机器人协同系统，Anthropic 首尔办公室开业。",
+      en: "Grok 4.3 on Bedrock with 1M context, Vercel open-sources Eve AI agent framework, Google's $99 Gemini speaker, Alibaba HappyOyster 1.0, Claude Design integrates with Replit, OpenAI $13B revenue vs $20.9B loss, NVIDIA ENPIRE 8-robot swarm, Anthropic opens Seoul office.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Grok 4.3 在 Amazon Bedrock 正式可用",
+          en: "Grok 4.3 Launches on Amazon Bedrock",
+        },
+        description: {
+          zh: "Grok 4.3 在 Bedrock 上全面可用，达成最低幻觉率，支持 100 万 token 上下文，每美元智能度是其他前沿模型的 2–10 倍。",
+          en: "Grok 4.3 is fully available on Bedrock with lowest hallucination rate, 1M token context, delivering 2-10x intelligence per dollar vs other frontier models.",
+        },
+      },
+      {
+        title: {
+          zh: "Vercel 开源 AI 智能体框架 Eve",
+          en: "Vercel Open-Sources Eve Agent Framework",
+        },
+        description: {
+          zh: "Apache-2.0 开源，文件系统优先设计，每个智能体对应一个磁盘目录，内置持久执行、沙箱计算、人机审批等生产能力。",
+          en: "Apache-2.0 licensed, filesystem-first design where each agent maps to a directory, with persistent execution, sandbox compute, and human-in-the-loop approval.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布 99 美元 Gemini 智能音箱",
+          en: "Google Launches $99 Gemini Smart Speaker",
+        },
+        description: {
+          zh: "Google 推出首款 Gemini 智能音箱 Google Home Speaker，售价 99.99 美元，高级 AI 功能需订阅 Home Premium（月费 10 美元）。",
+          en: "Google launches its first Gemini-powered smart speaker at $99.99, with premium AI features via $10/mo Home Premium subscription.",
+        },
+      },
+      {
+        title: {
+          zh: "阿里云发布 HappyOyster 1.0 世界模型",
+          en: "Alibaba Cloud Releases HappyOyster 1.0 World Model",
+        },
+        description: {
+          zh: "阿里云发布开放式世界模型 HappyOyster 1.0（快乐生蚝），支持多模态输入与音视频联合生成，生成中可持续接收用户指令实时响应。",
+          en: "Alibaba Cloud launches HappyOyster 1.0 open world model with multimodal input, joint audio-video generation, and real-time user instruction response during generation.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Design 更新：跨品牌一致与 Replit 联动",
+          en: "Claude Design Update: Brand Consistency & Replit Integration",
+        },
+        description: {
+          zh: "Claude Design 支持跨项目使用统一设计系统，与 Claude Code 同步，首周用户超百万，新增 Replit 联动可将设计直接变为应用。",
+          en: "Claude Design now supports cross-project design systems, syncs with Claude Code, 1M+ users in first week, and integrates with Replit to turn designs into apps.",
+        },
+      },
+      {
+        title: {
+          zh: "泄露文件显示 OpenAI 年营收 130 亿但巨亏 209 亿",
+          en: "Leaked Docs: OpenAI $13B Revenue, $20.9B Loss",
+        },
+        description: {
+          zh: "OpenAI 2025 年营收 130.7 亿美元，运营亏损 209.2 亿。ChatGPT 周活超 9 亿，付费约 5000 万。已关闭 Sora 并削减非核心业务，筹备 IPO。",
+          en: "OpenAI's 2025 revenue hit $13.07B but operating loss was $20.92B. ChatGPT has 900M+ weekly active users, ~50M paid. Sora shut down, non-core businesses cut, IPO preparations underway.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA ENPIRE：8 个 AI 智能体自主控制机器人",
+          en: "NVIDIA ENPIRE: 8 AI Agents Control Robots Autonomously",
+        },
+        description: {
+          zh: "NVIDIA GEAR 推出 ENPIRE 系统，8 个 Codex 智能体控制 8 台机器人通宵无人运行，完成扎带、整理细针、安装 GPU 等高精度任务。",
+          en: "NVIDIA GEAR launches ENPIRE: 8 Codex agents controlling 8 robots running overnight unattended, performing cable tying, fine needle sorting, and GPU installation.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 在首尔开设办公室并达成多项韩国合作",
+          en: "Anthropic Opens Seoul Office, Multiple Korean Partnerships",
+        },
+        description: {
+          zh: "NAVER 全公司部署 Claude Code，Nexon 用 Claude Code 编写游戏代码，LG CNS、Samsung SDS 等加入合作。",
+          en: "NAVER deploys Claude Code company-wide, Nexon uses Claude Code for game development, LG CNS and Samsung SDS join partnerships.",
+        },
+      },
+      {
+        title: {
+          zh: "LifeSciBench：AI 生命科学研究评测基准发布",
+          en: "LifeSciBench: AI Life Science Research Benchmark",
+        },
+        description: {
+          zh: "OpenAI 联合 173 位博士级生命科学家发布评测基准，涵盖 750 个真实研究任务、19020 条细化评分标准，评估模型在复杂研究任务中的能力。",
+          en: "OpenAI and 173 PhD-level life scientists release a benchmark with 750 real research tasks and 19,020 fine-grained criteria to evaluate models on complex research tasks.",
+        },
+      },
+      {
+        title: {
+          zh: "Omnigent 开源：AI 智能体团队元框架",
+          en: "Omnigent Open-Sourced: AI Agent Team Meta-Framework",
+        },
+        description: {
+          zh: "Databricks 开源 Omnigent，支持在实时会话中运行智能体团队：Claude Code、Codex、Cursor、Pi 等协同工作。",
+          en: "Databricks open-sources Omnigent, enabling an agent team with Claude Code, Codex, Cursor, Pi and more collaborating in a single live session.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-17",
     date: "2026-06-17",
     title: {
