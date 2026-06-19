@@ -31,6 +31,121 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-19",
+    date: "2026-06-19",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-19",
+      en: "🤖 AI HOT Daily · Jun 19, 2026",
+    },
+    summary: {
+      zh: "首个统一科学大模型 LOGOS 开源，火山引擎豆包实时语音 3.0 邀测，GPT-5.5 Instant 健康智能大幅提升，Claude Code 支持 artifacts，DeepSeek 识图模式上线，Noam Shazeer 离开 Google 加入 OpenAI，桑德斯提出 7 万亿美元 AI 计划，Anthropic Project Fetch 机器人自主任务快 20 倍。",
+      en: "First unified science model LOGOS open-sourced, Volcengine Doubao real-time voice 3.0 beta, GPT-5.5 Instant boosts health intelligence, Claude Code gets artifacts, DeepSeek visual mode launched, Noam Shazeer leaves Google for OpenAI, Sanders proposes $7T AI plan, Anthropic Project Fetch robots work 20x faster.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "首个统一科学大模型 LOGOS 正式开源",
+          en: "First Unified Science Model LOGOS Open-Sourced",
+        },
+        description: {
+          zh: "LOGOS 是基于统一「科学语法」的多领域科学生成基础模型（1B 参数），在六大科学任务上匹配或超越领域专用方法。逆合成预测 Top-1 准确率 74.8%，已完整开源。",
+          en: "LOGOS is the first multi-domain science foundation model based on unified 'science grammar' (1B params), matching or exceeding domain-specific methods across 6 science tasks. Retrosynthesis Top-1 accuracy 74.8%, fully open-source.",
+        },
+      },
+      {
+        title: {
+          zh: "火山引擎上线豆包实时语音模型 3.0",
+          en: "Volcengine Launches Doubao Real-Time Voice 3.0",
+        },
+        description: {
+          zh: "原生全双工端到端语音大模型 Seeduplex，支持在多人对话中安静待命、指定话题时主动加入，误回复率与误打断率大幅降低。",
+          en: "Native full-duplex end-to-end voice model Seeduplex, supports standby in multi-person conversations and auto-joins when topics arise, with significantly reduced false reply and interruption rates.",
+        },
+      },
+      {
+        title: {
+          zh: "Grok TTS 盲测人类感得分 96 登顶",
+          en: "Grok TTS Scores 96 in Human-Likeness Blind Test",
+        },
+        description: {
+          zh: "Grok TTS 在 Humanness Index 盲测中以 96 分（真人 100 分）位居榜首，成为最接近真人语音的 AI 语音模型。",
+          en: "Grok TTS tops the Humanness Index blind test with a score of 96 (human benchmark 100), making it the most human-like AI voice model.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-5.5 Instant 大幅提升 ChatGPT 健康智能",
+          en: "GPT-5.5 Instant Boosts ChatGPT Health Intelligence",
+        },
+        description: {
+          zh: "GPT-5.5 Instant 在健康评估中达到前沿 Thinking 模型水平，已面向所有免费用户开放。健康类回复事实性问题率下降 71%，每周超 2.3 亿用户受益。",
+          en: "GPT-5.5 Instant reaches frontier Thinking model level on health assessments, now available to all free users. Health response factuality errors down 71%, benefiting 230M+ weekly users.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 现已支持 artifacts",
+          en: "Claude Code Now Supports Artifacts",
+        },
+        description: {
+          zh: "Claude Code 可将工作进度生成为实时、可分享的交互式网页，涵盖 PR 走查、系统说明、仪表盘等，默认仅作者可见。",
+          en: "Claude Code can now generate real-time, shareable interactive web pages from work progress, including PR walkthroughs, system docs, and dashboards, visible to author by default.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 识图模式正式上线",
+          en: "DeepSeek Visual Mode Officially Launched",
+        },
+        description: {
+          zh: "DeepSeek 识图模式于 6 月 18 日上线，与快速模式、专家模式并列，背后多模态技术核心框架为 Thinking with Visual Primitives。",
+          en: "DeepSeek's visual mode launched June 18, joining speed mode and expert mode, powered by the 'Thinking with Visual Primitives' multimodal framework.",
+        },
+      },
+      {
+        title: {
+          zh: "Noam Shazeer 离开 Google 加入 OpenAI",
+          en: "Noam Shazeer Leaves Google for OpenAI",
+        },
+        description: {
+          zh: "AI 传奇 Noam Shazeer（Transformer 共同作者）两年前谷歌花 27 亿美元请回，现已离开 Google 加入 OpenAI。",
+          en: "AI legend Noam Shazeer (Transformer co-author), who Google brought back for $2.7B two years ago, has left Google to join OpenAI.",
+        },
+      },
+      {
+        title: {
+          zh: "桑德斯提出 7 万亿美元 AI 计划",
+          en: "Sanders Proposes $7 Trillion AI Plan",
+        },
+        description: {
+          zh: "伯尼·桑德斯提议对年 AI 销售额超 2 亿美元的公司征收 50% 股票税，建立约 7 万亿美元主权财富基金，每年向每位美国公民发放超 1000 美元股息。",
+          en: "Bernie Sanders proposes a 50% stock tax on companies with over $200M annual AI sales, creating a ~$7 trillion sovereign wealth fund paying $1000+ annual dividends to every US citizen.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic Project Fetch 第二阶段：Claude 自主操控机器人快 20 倍",
+          en: "Anthropic Project Fetch Phase 2: Claude Robot Tasks 20x Faster",
+        },
+        description: {
+          zh: "Claude Opus 4.7 无需人类协助即完成所有机器人操控任务，速度比最快人类团队快约 20 倍，编码量减少近 10 倍。",
+          en: "Claude Opus 4.7 completes all robotic manipulation tasks without human assistance, ~20x faster than the fastest human team, with ~10x less code.",
+        },
+      },
+      {
+        title: {
+          zh: "IT之家：OpenAI IPO 前招揽 Transformer 共同作者及前白宫 AI 官员",
+          en: "OpenAI Hires Transformer Co-Author & Former White House AI Policy Lead",
+        },
+        description: {
+          zh: "OpenAI 在 IPO 前夕连招 Noam Shazeer（Transformer 共同作者）及前白宫 AI 政策官员 Dean Ball，后者将领导新组建的 Strategic Futures 团队。",
+          en: "On the eve of its IPO, OpenAI hires Noam Shazeer (Transformer co-author) and former White House AI policy lead Dean Ball to head the new Strategic Futures team.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-18",
     date: "2026-06-18",
     title: {
