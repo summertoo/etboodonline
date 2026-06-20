@@ -31,6 +31,121 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-20",
+    date: "2026-06-20",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-20",
+      en: "🤖 AI HOT Daily · Jun 20, 2026",
+    },
+    summary: {
+      zh: "阿里开源向量数据库 Zvec，NVIDIA 发布免训练空间推理框架 SpatialClaw，Cloudflare 推出 AI 智能体临时账户，Figure 机器人数量首超人类员工，AlphaFold 负责人 John Jumper 加入 Anthropic，DeepSeek 开源 AutoResearch 自主 RL 研究闭环。",
+      en: "Alibaba open-sources vector DB Zvec, NVIDIA releases training-free spatial reasoning framework SpatialClaw, Cloudflare launches temporary accounts for AI agents, Figure robots outnumber human employees, AlphaFold lead John Jumper joins Anthropic, DeepSeek open-sources AutoResearch autonomous RL loop.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "阿里开源向量数据库 Zvec，UCSD 提出因果 AI 第四代范式",
+          en: "Alibaba Open-Sources Zvec Vector DB, UCSD Proposes 4th Gen Causal AI",
+        },
+        description: {
+          zh: "阿里开源 Zvec（pip install zvec），对标 Pinecone 每月 70 美元能力，支持十亿向量毫秒级检索。UCSD 黄碧薇教授提出 AI 四代范式：相关性小模型 → 因果小模型 → 相关性大模型 → 因果大模型。",
+          en: "Alibaba open-sources Zvec (pip install zvec), rivaling Pinecone's $70/mo capability with billion-scale vector millisecond retrieval. UCSD professor proposes 4 AI paradigms: correlation small → causal small → correlation large → causal large models.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA 发布 SpatialClaw：免训练空间推理框架",
+          en: "NVIDIA Releases SpatialClaw: Training-Free Spatial Reasoning",
+        },
+        description: {
+          zh: "通过将代码作为动作接口，让智能体调用感知工具组合输出，在 20 项基准测试中平均准确率 59.9%，比无工具基线高 6.5 个百分点，支持 Qwen3.5、Gemma4 等模型。",
+          en: "Treats code as action interface for agents to compose perception tools, achieving 59.9% average accuracy across 20 benchmarks, +6.5% over tool-free baseline, supporting Qwen3.5, Gemma4 and more.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 为 AI 智能体推出临时账户",
+          en: "Cloudflare Launches Temporary Accounts for AI Agents",
+        },
+        description: {
+          zh: "Workers 推出临时账户，AI 智能体可直接运行 wrangler deploy --temporary，数秒内获取可用实时 Worker，降低智能体部署门槛。",
+          en: "Workers introduces temporary accounts - AI agents can run 'wrangler deploy --temporary' to get a live Worker in seconds, lowering the deployment barrier.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.183 发布：增强自动模式安全性",
+          en: "Claude Code v2.1.183: Enhanced Auto-Mode Safety",
+        },
+        description: {
+          zh: "增强自动模式安全性：阻止 git reset --hard、git commit --amend（非本轮提交）、terraform destroy 等破坏性命令。",
+          en: "Enhanced auto-mode safety: blocks destructive commands like git reset --hard, git commit --amend (non-current commits), terraform destroy.",
+        },
+      },
+      {
+        title: {
+          zh: "Figure 机器人数首超人类员工",
+          en: "Figure Robot Count Exceeds Human Employees for First Time",
+        },
+        description: {
+          zh: "Figure 宣布其机器人数量首次超过人类员工数量，标志着机器人从理论阶段进入实践阶段。",
+          en: "Figure announces its robot count has surpassed human employees for the first time, marking the transition from theory to practice.",
+        },
+      },
+      {
+        title: {
+          zh: "AlphaFold 负责人 John Jumper 离职 DeepMind 加入 Anthropic",
+          en: "AlphaFold Lead John Jumper Leaves DeepMind for Anthropic",
+        },
+        description: {
+          zh: "AlphaFold 团队负责人 John Jumper 在 Google DeepMind 工作近 9 年后离职加入 Anthropic。DeepMind CEO 表示过去 9 年的合作改变了世界。",
+          en: "AlphaFold team lead John Jumper leaves Google DeepMind after nearly 9 years to join Anthropic. DeepMind CEO says their collaboration changed the world.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 研究员开源 AutoResearch：AI 自主跑通 RL 研究闭环",
+          en: "DeepSeek Open-Sources AutoResearch: Autonomous RL Research Loop",
+        },
+        description: {
+          zh: "DeepSeek 研究员 Deli Chen 开源 AutoResearch 协议，AI 智能体首次完全自主地在 285B 模型上完成完整 RL 研究闭环——从实验设计到结论总结，全程零人工干预。",
+          en: "DeepSeek researcher Deli Chen open-sources AutoResearch protocol. An AI agent autonomously completes a full RL research loop on a 285B model — from experiment design to conclusion, zero human intervention.",
+        },
+      },
+      {
+        title: {
+          zh: "Humanize PPT v0.9：为演讲而生的开源 PPT Skill",
+          en: "Humanize PPT v0.9: Open-Source Presentation-First PPT Skill",
+        },
+        description: {
+          zh: "专为演讲场景设计，通过 AST（观众、状态、传递）逻辑重新编排大纲。支持演讲模式：S 键显示备注，ESC 键打开全局索引快速跳页。",
+          en: "Designed for presentations, reorganizes outlines via AST (Audience, State, Transfer) logic. Speaker mode: press S for notes, ESC for global index quick-navigation.",
+        },
+      },
+      {
+        title: {
+          zh: "基于 Elasticsearch 的持久化智能体内存层开源",
+          en: "Persistent Agent Memory Layer on Elasticsearch Open-Sourced",
+        },
+        description: {
+          zh: "Agent Builder 基于 Elasticsearch 的持久化内存层，将记忆分为情景、语义、程序三类，R@10 平均 0.89，零跨租户泄漏，已开源。",
+          en: "Agent Builder's persistent memory layer on Elasticsearch classifies memory into episodic, semantic, and procedural types, with 0.89 R@10 average and zero cross-tenant leakage. Open-sourced.",
+        },
+      },
+      {
+        title: {
+          zh: "baoyu-design Skill 迭代：修复导出样式丢失，支持 AI 配图导出 PPTX",
+          en: "baoyu-design Skill Update: Style Fix, AI-Generated Images in PPTX Export",
+        },
+        description: {
+          zh: "修复了样式表未铺满整页、渐变色丢失等问题，支持调用 AI 生图配图并连同图片一起导出为 PPTX，可在 PowerPoint/Keynote 中二次编辑。",
+          en: "Fixes stylesheet page-fill and gradient loss issues. Now supports AI-generated images in PPTX export, editable in PowerPoint/Keynote.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-19",
     date: "2026-06-19",
     title: {
