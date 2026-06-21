@@ -70,75 +70,104 @@ export default function Blog() {
     <div className="max-w-7xl mx-auto px-4 cyber-container fly-in">
       <Navbar />
 
-      <section className="text-center py-20 cyber-hero">
-        <h2 className="text-4xl font-bold mb-4 cyber-title">{t("blog.title")}</h2>
-        <p className="mb-8 cyber-subtitle max-w-2xl mx-auto">{t("blog.subtitle")}</p>
-      </section>
+      <main>
+        <section className="text-center py-20 cyber-hero">
+          <h1 className="text-4xl font-bold mb-4 cyber-title">
+            {t("blog.title")}
+          </h1>
+          <p className="mb-8 cyber-subtitle max-w-2xl mx-auto">
+            {t("blog.subtitle")}
+          </p>
+        </section>
 
-      <section className="py-12">
-        <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-          {lang === "zh" ? "📖 技术教程" : "📖 Technical Tutorials"}
-        </h3>
-        <p className="mb-10 text-center cyber-subtitle">
-          {lang === "zh" ? "区块链开发实战教程系列" : "Blockchain development tutorial series"}
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {articles.map((article) => (
-            <Card key={article.id} className="cyber-card h-full group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-              <div className="relative h-40 overflow-hidden rounded-t-lg bg-gradient-to-br from-blue-500 to-cyan-400">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-5xl">📚</span>
+        <section className="py-12">
+          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+            {lang === "zh" ? "📖 技术教程" : "📖 Technical Tutorials"}
+          </h3>
+          <p className="mb-10 text-center cyber-subtitle">
+            {lang === "zh"
+              ? "区块链开发实战教程系列"
+              : "Blockchain development tutorial series"}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {articles.map((article) => (
+              <Card
+                key={article.id}
+                className="cyber-card h-full group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div className="relative h-40 overflow-hidden rounded-t-lg bg-gradient-to-br from-blue-500 to-cyan-400">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-5xl">📚</span>
+                  </div>
                 </div>
-              </div>
-              <CardContent className="p-5">
-                <h4 className="font-semibold text-lg mb-2">{article.title}</h4>
-                <p className="text-sm mb-4 cyber-subtitle">{article.desc}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[var(--cyber-muted)]">
-                    📌 {article.platform}
-                  </span>
-                  <a href={article.url} target="_blank" rel="noopener noreferrer">
-                    <Button className="cyber-button-small">{t("articles.read")}</Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
+                <CardContent className="p-5">
+                  <h4 className="font-semibold text-lg mb-2">
+                    {article.title}
+                  </h4>
+                  <p className="text-sm mb-4 cyber-subtitle">{article.desc}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-[var(--cyber-muted)]">
+                      📌 {article.platform}
+                    </span>
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="cyber-button-small">
+                        {t("articles.read")}
+                      </Button>
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
 
-      <section className="py-12">
-        <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-          {lang === "zh" ? "📚 创作小说" : "📚 Creative Writing"}
-        </h3>
-        <p className="mb-10 text-center cyber-subtitle">
-          {lang === "zh" ? "原创小说与文学创作" : "Original novels and creative works"}
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {novels.map((novel) => (
-            <Card key={novel.id} className="cyber-card h-full group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-              <div className="relative h-40 overflow-hidden rounded-t-lg bg-gradient-to-br from-rose-400 to-orange-400">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-5xl">📖</span>
+        <section className="py-12">
+          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+            {lang === "zh" ? "📚 创作小说" : "📚 Creative Writing"}
+          </h3>
+          <p className="mb-10 text-center cyber-subtitle">
+            {lang === "zh"
+              ? "原创小说与文学创作"
+              : "Original novels and creative works"}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {novels.map((novel) => (
+              <Card
+                key={novel.id}
+                className="cyber-card h-full group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div className="relative h-40 overflow-hidden rounded-t-lg bg-gradient-to-br from-rose-400 to-orange-400">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-5xl">📖</span>
+                  </div>
                 </div>
-              </div>
-              <CardContent className="p-5">
-                <h4 className="font-semibold text-lg mb-2">{novel.title}</h4>
-                <p className="text-sm mb-4 cyber-subtitle">{novel.desc}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[var(--cyber-muted)]">
-                    📖 {novel.platform}
-                  </span>
-                  <a href={novel.url} target="_blank" rel="noopener noreferrer">
-                    <Button className="cyber-button-small">{t("novels.read")}</Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
+                <CardContent className="p-5">
+                  <h4 className="font-semibold text-lg mb-2">{novel.title}</h4>
+                  <p className="text-sm mb-4 cyber-subtitle">{novel.desc}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-[var(--cyber-muted)]">
+                      📖 {novel.platform}
+                    </span>
+                    <a
+                      href={novel.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="cyber-button-small">
+                        {t("novels.read")}
+                      </Button>
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+      </main>
       <footer className="py-10 cyber-footer text-center">
         <p className="cyber-subtitle">{t("footer.copyright")}</p>
       </footer>

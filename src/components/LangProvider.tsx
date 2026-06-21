@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
 import { Lang, translations } from "@/lib/i18n";
 
 interface LangContextType {
@@ -26,18 +32,22 @@ export function LangProvider({ children }: { children: ReactNode }) {
       setLang(saved);
     } else {
       // Auto-detect: Chinese browsers default to zh, others to en
-      const browserLang = navigator.language || navigator.languages?.[0] || "en";
+      const browserLang =
+        navigator.language || navigator.languages?.[0] || "en";
       const isZh = browserLang.toLowerCase().startsWith("zh");
       setLang(isZh ? "zh" : "en");
     }
     setMounted(true);
   }, []);
 
-  // Save to localStorage on change
+  // Save to localStorage & sync <html lang> + OG locale on change
   useEffect(() => {
-    if (mounted) {
-      localStorage.setItem("zdtech-lang", lang);
-    }
+    if (!mounted) return;
+    localStorage.setItem("zdtech-lang", lang);
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    if (ogLocale)
+      ogLocale.setAttribute("content", lang === "zh" ? "zh_CN" : "en_US");
   }, [lang, mounted]);
 
   const toggleLang = () => setLang((prev) => (prev === "en" ? "zh" : "en"));

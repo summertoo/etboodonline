@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title data-i18n="app.title">疯狂的小鸡</title>
-    <script type="module" crossorigin src="/crazybird/assets/index-4A0HimCp.js"></script>
-    <link rel="stylesheet" crossorigin href="/crazybird/assets/style-BN7lc4cO.css">
+    <title data-i18n="app.title">Angry Chicken</title>
+    <script type="module" crossorigin src="/crazybird/assets/index-L1eTyzTP.js"></script>
+    <link rel="stylesheet" crossorigin href="/crazybird/assets/style-CgyV1XPG.css">
   </head>
   <body>
     <div id="app">
       <div id="loading">
         <div class="loading-content">
-          <h1 class="loading-title">疯狂的小鸡</h1>
-          <p class="loading-subtitle">Crazych Web3</p>
+          <h1 class="loading-title">Angry Chicken</h1>
+          <p class="loading-subtitle">sui testnet</p>
           <div class="loading-bar-track">
             <div class="loading-bar-fill" id="loading-fill"></div>
           </div>
@@ -24,12 +24,12 @@
       <canvas id="game" width="1280" height="720"></canvas>
       <div id="home-screen" class="home-screen">
         <div class="home-content">
-          <h1 class="home-title" data-i18n="app.title">疯狂的小鸡</h1>
-          <p class="home-subtitle">Crazych Web3</p>
+          <h1 class="home-title" data-i18n="app.title">Angry Chicken</h1>
+          <p class="home-subtitle">sui testnet</p>
           <div class="home-menu">
             <button id="home-start" class="home-btn home-btn-primary" data-i18n="home.start">开始游戏</button>
-            <button id="home-create" class="home-btn home-btn-create" data-i18n="home.create">✏️ 创作关卡</button>
-            <button id="home-editor" class="home-btn" data-i18n="home.editor">自定义关卡</button>
+            <button id="home-create" class="home-btn home-btn-create hidden" data-i18n="home.create">✏️ 创作关卡</button>
+            <button id="home-editor" class="home-btn hidden" data-i18n="home.editor">自定义关卡</button>
             <button id="home-community" class="home-btn" data-i18n="home.community">社区关卡</button>
             <button id="home-skins" class="home-btn" data-i18n="home.skins">皮肤工坊</button>
             <button id="home-shop" class="home-btn" data-i18n="home.shop">&#127991; 皮肤商店</button>
@@ -57,11 +57,11 @@
         <span id="level">关卡 --</span>
         <span id="chickens">&#128020; --</span>
         <span id="status">初始化中</span>
+        <span id="network" class="network-badge">sui testnet</span>
         <span id="wallet-display" class="wallet-display">&#128179; 连接钱包</span>
         <span id="skin-btn" class="skin-btn hidden" data-i18n="btn.skins">&#127912; 皮肤</span>
         <span id="craft-btn" class="craft-btn hidden" data-i18n="btn.craft">&#128295; 铸造</span>
         <span id="market-btn" class="market-btn hidden" data-i18n="btn.market">&#127968; 社区</span>
-        <span id="treasury-btn" class="treasury-btn hidden" data-i18n="btn.treasury">&#128176; 金库</span>
         <span class="hud-right-group">
           <span id="mute-btn" class="mute-btn">&#128266;</span>
           <span id="back-home-btn" class="back-home-btn" data-i18n="hud.back_home">&#127968; 首页</span>
@@ -70,15 +70,18 @@
         </span>
       </div>
 
+      <div id="hud-dropdown" class="hud-dropdown hidden">
+        <div class="hud-dropdown-item" data-action="level-select" data-i18n="hud.select_level">&#128196; 选择关卡</div>
+        <div class="hud-dropdown-item" data-action="about" data-i18n="btn.about">&#9432; About</div>
+      </div>
+
       <div id="chicken-selector" class="chicken-selector hidden">
         <div class="chicken-select-option active" data-kind="shopck1">
-          <span class="chicken-select-dot" style="background:#FF4500"></span>
-          <span class="chicken-select-label">&#128020;</span>
+          <img class="chicken-select-img" src="/crazybird/shop/shopck1.png" alt="普通小鸡" draggable="false">
           <span class="chicken-select-count" id="ck-count-shopck1">3</span>
         </div>
         <div class="chicken-select-option" data-kind="shopck2">
-          <span class="chicken-select-dot" style="background:#FFD700"></span>
-          <span class="chicken-select-label">&#128293;</span>
+          <img class="chicken-select-img" src="/crazybird/shop/shopck2.png" alt="投弹鸡" draggable="false">
           <span class="chicken-select-count" id="ck-count-shopck2">1</span>
         </div>
       </div>
@@ -202,57 +205,37 @@
         </div>
       </div>
 
-      <div id="treasury-panel" class="treasury-panel hidden">
-        <div class="treasury-header">
-          <span data-i18n="treasury.title">&#128176; 金库管理</span>
-          <button id="treasury-close" class="treasury-close">&times;</button>
-        </div>
-        <div class="treasury-body">
-          <div class="treasury-row">
-            <label data-i18n="treasury.status">状态</label>
-            <span id="treasury-status" class="treasury-val">--</span>
+      <div id="about-overlay" class="overlay hidden">
+        <div class="modal about-modal">
+          <div class="about-header">
+            <span data-i18n="about.title">&#9432; About</span>
+            <button id="about-close" class="about-close">&times;</button>
           </div>
-          <div class="treasury-row">
-            <label data-i18n="treasury.beneficiary">收款地址</label>
-            <span id="treasury-addr" class="treasury-val treasury-addr">--</span>
+          <div class="about-body">
+            <div class="about-section">
+              <h2>Angry Chicken</h2>
+              <p class="about-network">sui testnet</p>
+            </div>
+            <div class="about-section">
+              <h3 data-i18n="about.treasury">&#128176; 金库</h3>
+              <div class="about-row">
+                <span data-i18n="treasury.status">状态</span>
+                <span id="about-treasury-status">--</span>
+              </div>
+              <div class="about-row">
+                <span data-i18n="treasury.beneficiary">收款地址</span>
+                <span id="about-treasury-addr" class="about-addr">--</span>
+              </div>
+            </div>
+            <div class="about-section">
+              <h3 data-i18n="about.studio">&#127918; 工作室</h3>
+              <p class="about-studio">zd tech</p>
+              <a class="about-link" href="https://www.etboodonline.com" target="_blank" rel="noopener">www.etboodonline.com</a>
+            </div>
           </div>
-          <div class="treasury-row">
-            <label data-i18n="treasury.admin_cap">AdminCap</label>
-            <span id="treasury-cap" class="treasury-val">--</span>
+          <div class="about-footer">
+            <button id="about-close-btn" class="btn" data-i18n="btn.close">关闭</button>
           </div>
-        </div>
-        <div class="treasury-footer">
-          <span id="treasury-msg" class="treasury-msg"></span>
-        </div>
-      </div>
-        <div class="treasury-body">
-          <div class="treasury-row">
-            <label data-i18n="treasury.status">状态</label>
-            <span id="treasury-status" class="treasury-val">Ready</span>
-          </div>
-          <div class="treasury-row">
-            <label data-i18n="treasury.beneficiary">收款地址</label>
-            <span id="treasury-addr" class="treasury-val treasury-addr">0x73cc0ae26d78...58bb9</span>
-          </div>
-        </div>
-      </div>
-        <div class="treasury-body">
-          <div class="treasury-row">
-            <label data-i18n="treasury.status">状态</label>
-            <span id="treasury-status" class="treasury-val">--</span>
-          </div>
-          <div class="treasury-row">
-            <label data-i18n="treasury.beneficiary">收款地址</label>
-            <span id="treasury-addr" class="treasury-val treasury-addr">--</span>
-          </div>
-          <div class="treasury-row">
-            <label data-i18n="treasury.admin_cap">AdminCap</label>
-            <span id="treasury-cap" class="treasury-val">--</span>
-          </div>
-
-        </div>
-        <div class="treasury-footer">
-          <span id="treasury-msg" class="treasury-msg"></span>
         </div>
       </div>
 
@@ -267,21 +250,56 @@
       </div>
 
       <div id="share-overlay" class="overlay hidden">
-        <div class="modal">
+        <div class="modal share-modal">
           <h1 data-i18n="share.title">&#127760; 关卡已发布</h1>
-          <p data-i18n="share.desc_data">&#9989; 直接分享链接（无需网络）：</p>
+          <div class="share-publish-info">
+            <div class="share-info-row">
+              <span class="share-info-label" data-i18n="share.publisher">发布者</span>
+              <span id="share-publisher" class="share-info-value share-addr">--</span>
+            </div>
+            <div class="share-info-row">
+              <span class="share-info-label" data-i18n="share.level_name">关卡名称</span>
+              <span id="share-level-name" class="share-info-value">--</span>
+            </div>
+            <div class="share-info-row">
+              <span class="share-info-label" data-i18n="share.status">状态</span>
+              <span id="share-status-text" class="share-info-value share-status-ok">--</span>
+            </div>
+            <div class="share-info-row" id="share-blob-row">
+              <span class="share-info-label">Blob ID</span>
+              <span id="share-blob-id" class="share-info-value share-addr">--</span>
+            </div>
+            <div class="share-info-row" id="share-digest-row">
+              <span class="share-info-label">Tx Digest</span>
+              <span id="share-tx-digest" class="share-info-value share-addr">--</span>
+            </div>
+          </div>
+          <div class="share-explorer-links" id="share-explorer-links">
+            <p data-i18n="share.explorer_hint">&#128270; 在区块链浏览器中查看：</p>
+            <a id="share-explorer-link" href="#" target="_blank" rel="noopener" class="share-explorer-btn">&#127760; <span data-i18n="share.view_explorer">查看 Blob</span></a>
+          </div>
+          <p data-i18n="share.desc_data" style="margin-top:14px;font-size:13px;color:rgba(255,255,255,0.5)">&#9989; 直接分享链接（无需网络）：</p>
           <div class="share-link-row">
             <input id="share-link-data" type="text" readonly style="flex:1;padding:8px;border:1px solid #64c8ff;border-radius:6px;font-size:13px;color:#333" />
             <button id="share-copy-data" class="btn btn-primary" data-i18n="share.copy">&#128203; 复制</button>
           </div>
-          <p data-i18n="share.desc_blob" style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.5)">&#128279; Walrus 备份链接（需联网）：</p>
-          <div class="share-link-row" style="margin-top:4px">
-            <input id="share-link-blob" type="text" readonly style="flex:1;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px;color:#333" />
-            <button id="share-copy-blob" class="btn" data-i18n="share.copy">&#128203; 复制</button>
-          </div>
           <p id="share-link-status" style="font-size:13px;color:#4caf50;min-height:20px;margin-top:4px"></p>
           <div class="actions">
             <button id="share-close" class="btn" data-i18n="btn.close">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="user-levels-overlay" class="overlay hidden">
+        <div class="modal user-levels-modal">
+          <div class="user-levels-header">
+            <span data-i18n="ueditor.my_levels">我的关卡</span>
+            <button id="user-levels-close" class="user-levels-close">&times;</button>
+          </div>
+          <div id="user-levels-grid" class="user-levels-grid"></div>
+          <div class="user-levels-footer">
+            <span id="user-levels-status" class="user-levels-status"></span>
+            <button id="user-levels-new-btn" class="btn btn-primary" data-i18n="ueditor.new_level">＋ 新建空白关卡</button>
           </div>
         </div>
       </div>
@@ -302,8 +320,8 @@
       <div id="lock-overlay" class="overlay hidden">
         <div class="modal">
           <h1 data-i18n="lock.title">&#128274; 关卡锁定</h1>
-          <p data-i18n="lock.desc">购买关卡包以解锁关卡 11-25</p>
-          <p data-i18n="lock.price">价格: 0.5 SUI</p>
+          <p id="lock-desc">购买关卡包以解锁关卡</p>
+          <p id="lock-price">价格: 0.1 SUI</p>
           <div class="actions">
             <button id="lock-buy" class="btn btn-primary" data-i18n="btn.buy">购买</button>
             <button id="lock-cancel" class="btn" data-i18n="btn.cancel">取消</button>

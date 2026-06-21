@@ -93,7 +93,7 @@ export default function Navbar() {
             className="rounded-lg"
             priority
           />
-          <h1 className="text-3xl font-bold">ZD Tech</h1>
+          <span className="text-3xl font-bold">ZD Tech</span>
         </Link>
         {/* Mobile hamburger */}
         <button

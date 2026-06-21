@@ -48,14 +48,16 @@ export function buildPageMetadata({
   noIndex = false,
 }: PageMetadataOptions): Metadata {
   const url = path === "/" ? siteConfig.url : `${siteConfig.url}${path}`;
-  const allKeywords = Array.from(new Set([...siteConfig.keywords, ...keywords]));
+  const allKeywords = Array.from(
+    new Set([...siteConfig.keywords, ...keywords]),
+  );
 
   return {
     title,
     description,
     keywords: allKeywords,
     alternates: {
-      canonical: path,
+      canonical: path === "/" ? siteConfig.url : `${siteConfig.url}${path}`,
     },
     openGraph: {
       type: "website",
@@ -92,14 +94,14 @@ export function buildPageMetadata({
       : {
           index: true,
           follow: true,
-        googleBot: {
-          index: true,
-          follow: true,
-          "max-snippet": -1,
-          "max-image-preview": "large",
-          "max-video-preview": -1,
+          googleBot: {
+            index: true,
+            follow: true,
+            "max-snippet": -1,
+            "max-image-preview": "large",
+            "max-video-preview": -1,
+          },
         },
-      },
   };
 }
 
@@ -189,49 +191,49 @@ export const sectionListJsonLd = {
 export const sitemapEntries: MetadataRoute.Sitemap = [
   {
     url: siteConfig.url,
-    lastModified: new Date("2026-06-04T00:00:00+08:00"),
+    lastModified: new Date(),
     changeFrequency: "daily",
     priority: 1,
   },
   {
     url: `${siteConfig.url}/project`,
-    lastModified: new Date("2026-06-04T00:00:00+08:00"),
+    lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.95,
   },
   {
     url: `${siteConfig.url}/news`,
-    lastModified: new Date("2026-06-04T00:00:00+08:00"),
+    lastModified: new Date(),
     changeFrequency: "daily",
     priority: 0.92,
   },
   {
     url: `${siteConfig.url}/blog`,
-    lastModified: new Date("2026-06-04T00:00:00+08:00"),
+    lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.82,
   },
   {
     url: `${siteConfig.url}/what-we-do`,
-    lastModified: new Date("2026-06-04T00:00:00+08:00"),
+    lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.78,
   },
   {
     url: `${siteConfig.url}/service`,
-    lastModified: new Date("2026-06-04T00:00:00+08:00"),
+    lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.74,
   },
   {
     url: `${siteConfig.url}/contact`,
-    lastModified: new Date("2026-06-04T00:00:00+08:00"),
+    lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.64,
   },
   {
     url: `${siteConfig.url}/hotdance/hotdance.html`,
-    lastModified: new Date("2026-06-04T00:00:00+08:00"),
+    lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.86,
   },

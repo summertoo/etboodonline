@@ -26,16 +26,20 @@ export default function ProjectPage() {
   const [selectedTag, setSelectedTag] = useState<ProjectTag | null>(null);
   const [authOpen, setAuthOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [socialStats, setSocialStats] = useState<Record<string, ProjectSocialStat>>({});
+  const [socialStats, setSocialStats] = useState<
+    Record<string, ProjectSocialStat>
+  >({});
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setIsLoggedIn(!!session?.user);
     });
 
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setIsLoggedIn(!!session?.user);
-    });
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        setIsLoggedIn(!!session?.user);
+      },
+    );
 
     return () => listener.subscription.unsubscribe();
   }, []);
@@ -43,10 +47,13 @@ export default function ProjectPage() {
   useEffect(() => {
     fetchProjectSocialStats(projects.map((project) => project.id))
       .then((stats) => {
-        const nextStats = stats.reduce<Record<string, ProjectSocialStat>>((acc, item) => {
-          acc[item.project_id] = item;
-          return acc;
-        }, {});
+        const nextStats = stats.reduce<Record<string, ProjectSocialStat>>(
+          (acc, item) => {
+            acc[item.project_id] = item;
+            return acc;
+          },
+          {},
+        );
         setSocialStats(nextStats);
       })
       .catch(() => {});
@@ -229,164 +236,167 @@ export default function ProjectPage() {
     <div className="max-w-7xl mx-auto px-4 cyber-container fly-in">
       <Navbar />
 
-      <section className="text-center py-20 cyber-hero">
-        <h2 className="text-4xl font-bold mb-4 cyber-title">
-          {t("project.title")}
-        </h2>
-        <p className="mb-8 cyber-subtitle max-w-2xl mx-auto">
-          {t("project.subtitle")}
-        </p>
-      </section>
+      <main>
+        <section className="text-center py-20 cyber-hero">
+          <h1 className="text-4xl font-bold mb-4 cyber-title">
+            {t("project.title")}
+          </h1>
+          <p className="mb-8 cyber-subtitle max-w-2xl mx-auto">
+            {t("project.subtitle")}
+          </p>
+        </section>
 
-      <section className="py-8">
-        <div className="flex flex-col gap-4 mb-8">
-          <Input
-            className="cyber-input flex-1"
-            placeholder={t("project.search")}
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <div className="flex flex-wrap gap-2">
-            {tagFilters.map((tag) => {
-              const isActive = selectedTag === tag.value;
-              return (
+        <section className="py-8">
+          <div className="flex flex-col gap-4 mb-8">
+            <Input
+              className="cyber-input flex-1"
+              placeholder={t("project.search")}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <div className="flex flex-wrap gap-2">
+              {tagFilters.map((tag) => {
+                const isActive = selectedTag === tag.value;
+                return (
+                  <button
+                    key={tag.value}
+                    onClick={() =>
+                      setSelectedTag((current) =>
+                        current === tag.value ? null : tag.value,
+                      )
+                    }
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                      isActive
+                        ? "bg-[var(--cyber-primary)] text-white"
+                        : "border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:border-[var(--cyber-primary)] hover:text-[var(--cyber-primary)]"
+                    }`}
+                  >
+                    {t(tag.labelKey)}
+                  </button>
+                );
+              })}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {categories.map((cat) => (
                 <button
-                  key={tag.value}
+                  key={cat.value}
                   onClick={() =>
-                    setSelectedTag((current) =>
-                      current === tag.value ? null : tag.value,
+                    setSelectedCategory((current) =>
+                      current === cat.value ? "all" : cat.value,
                     )
                   }
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                    isActive
+                    selectedCategory === cat.value
                       ? "bg-[var(--cyber-primary)] text-white"
                       : "border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:border-[var(--cyber-primary)] hover:text-[var(--cyber-primary)]"
                   }`}
                 >
-                  {t(tag.labelKey)}
+                  {t(cat.labelKey)}
                 </button>
-              );
-            })}
+              ))}
+            </div>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat.value}
-                onClick={() =>
-                  setSelectedCategory((current) =>
-                    current === cat.value ? "all" : cat.value,
-                  )
-                }
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                  selectedCategory === cat.value
-                    ? "bg-[var(--cyber-primary)] text-white"
-                    : "border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:border-[var(--cyber-primary)] hover:text-[var(--cyber-primary)]"
-                }`}
-              >
-                {t(cat.labelKey)}
-              </button>
-            ))}
-          </div>
-        </div>
 
-        <div className="text-sm text-[var(--cyber-muted)] mb-6">
-          {filteredProjects.length}{" "}
-          {lang === "zh" ? "个项目" : "projects found"}
-        </div>
-
-        {filteredProjects.length === 0 ? (
-          <div className="text-center py-20">
-            <div className="text-5xl mb-4">🔍</div>
-            <p className="cyber-subtitle">{t("project.noResults")}</p>
+          <div className="text-sm text-[var(--cyber-muted)] mb-6">
+            {filteredProjects.length}{" "}
+            {lang === "zh" ? "个项目" : "projects found"}
           </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {filteredProjects.map((project) => (
-              <Card
-                key={project.id}
-                className="cyber-card group cursor-pointer relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-              >
-                <CardContent className="p-5">
-                  <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shadow-md flex-shrink-0">
-                      <img
-                        src={project.logoUrl}
-                        alt={project.title || t(project.titleKey || "")}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = "none";
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.style.backgroundColor = "#fed7aa";
-                            parent.style.display = "flex";
-                            parent.style.alignItems = "center";
-                            parent.style.justifyContent = "center";
-                            const iconMap: Record<string, string> = {
-                              roblox: "🎮",
-                              webgame: "🎮",
-                              dapp: "🔗",
-                              tool: "🛠️",
-                              article: "📝",
-                              novel: "📚",
-                            };
-                            parent.innerHTML = `<span class="text-2xl">${iconMap[project.category] || "💼"}</span>`;
-                          }
-                        }}
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex flex-wrap items-center gap-2 mb-2">
-                        <h4 className="w-full min-w-0 font-semibold text-base leading-6 break-words sm:w-auto sm:flex-1 sm:text-lg sm:truncate">
-                          {project.title || t(project.titleKey || "")}
-                        </h4>
-                        {getStatusBadge(project.status)}
-                        <span
-                          className={`text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0 ${getCategoryColor(project.category)}`}
-                        >
-                          {getCategoryLabel(project.category)}
-                        </span>
-                        {project.tags?.map((tag) => (
-                          <span
-                            key={`${project.id}-${tag}`}
-                            className={`text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0 ${getTagColor(tag)}`}
-                          >
-                            {getTagLabel(tag)}
-                          </span>
-                        ))}
+
+          {filteredProjects.length === 0 ? (
+            <div className="text-center py-20">
+              <div className="text-5xl mb-4">🔍</div>
+              <p className="cyber-subtitle">{t("project.noResults")}</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {filteredProjects.map((project) => (
+                <Card
+                  key={project.id}
+                  className="cyber-card group cursor-pointer relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                >
+                  <CardContent className="p-5">
+                    <div className="flex items-start gap-4">
+                      <div className="w-14 h-14 rounded-xl overflow-hidden shadow-md flex-shrink-0">
+                        <img
+                          src={project.logoUrl}
+                          alt={project.title || t(project.titleKey || "")}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = "none";
+                            const parent = target.parentElement;
+                            if (parent) {
+                              parent.style.backgroundColor = "#fed7aa";
+                              parent.style.display = "flex";
+                              parent.style.alignItems = "center";
+                              parent.style.justifyContent = "center";
+                              const iconMap: Record<string, string> = {
+                                roblox: "🎮",
+                                webgame: "🎮",
+                                dapp: "🔗",
+                                tool: "🛠️",
+                                article: "📝",
+                                novel: "📚",
+                              };
+                              parent.innerHTML = `<span class="text-2xl">${iconMap[project.category] || "💼"}</span>`;
+                            }
+                          }}
+                        />
                       </div>
-                      <p className="text-sm mb-3 cyber-subtitle line-clamp-2">
-                        {project.desc || t(project.descKey)}
-                      </p>
-                      {project.platform && (
-                        <p className="text-xs text-[var(--cyber-muted)] mb-2">
-                          {t(`project.platform.${project.platform}`)}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-wrap items-center gap-2 mb-2">
+                          <h4 className="w-full min-w-0 font-semibold text-base leading-6 break-words sm:w-auto sm:flex-1 sm:text-lg sm:truncate">
+                            {project.title || t(project.titleKey || "")}
+                          </h4>
+                          {getStatusBadge(project.status)}
+                          <span
+                            className={`text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0 ${getCategoryColor(project.category)}`}
+                          >
+                            {getCategoryLabel(project.category)}
+                          </span>
+                          {project.tags?.map((tag) => (
+                            <span
+                              key={`${project.id}-${tag}`}
+                              className={`text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0 ${getTagColor(tag)}`}
+                            >
+                              {getTagLabel(tag)}
+                            </span>
+                          ))}
+                        </div>
+                        <p className="text-sm mb-3 cyber-subtitle line-clamp-2">
+                          {project.desc || t(project.descKey)}
                         </p>
-                      )}
-                      {project.platformLabel && (
-                        <p className="text-xs text-[var(--cyber-muted)] mb-2">
-                          {lang === "zh" ? "平台" : "Platform"}:{" "}
-                          {project.platformLabel}
-                        </p>
-                      )}
-                      {getActionButton(project)}
-                      <ProjectActions
-                        projectId={project.id}
-                        projectTitle={project.title || t(project.titleKey || "")}
-                        initialStat={socialStats[project.id]}
-                        isLoggedIn={isLoggedIn}
-                        onRequireLogin={() => setAuthOpen(true)}
-                      />
+                        {project.platform && (
+                          <p className="text-xs text-[var(--cyber-muted)] mb-2">
+                            {t(`project.platform.${project.platform}`)}
+                          </p>
+                        )}
+                        {project.platformLabel && (
+                          <p className="text-xs text-[var(--cyber-muted)] mb-2">
+                            {lang === "zh" ? "平台" : "Platform"}:{" "}
+                            {project.platformLabel}
+                          </p>
+                        )}
+                        {getActionButton(project)}
+                        <ProjectActions
+                          projectId={project.id}
+                          projectTitle={
+                            project.title || t(project.titleKey || "")
+                          }
+                          initialStat={socialStats[project.id]}
+                          isLoggedIn={isLoggedIn}
+                          onRequireLogin={() => setAuthOpen(true)}
+                        />
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        )}
-      </section>
-
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          )}
+        </section>
+      </main>
       <footer className="py-10 cyber-footer text-center">
         <p className="cyber-subtitle">{t("footer.copyright")}</p>
       </footer>

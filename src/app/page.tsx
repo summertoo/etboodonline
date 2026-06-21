@@ -465,387 +465,390 @@ export default function Homepage() {
       <SiteUpdateNotice />
       <Navbar />
 
-      <section className="text-center py-16 md:py-24 cyber-hero relative overflow-hidden">
-        <FloatingParticles />
-        <div className="relative z-10">
-          <h2
-            className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 px-2"
-            style={{
-              background:
-                "linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary))",
-              WebkitBackgroundClip: "text",
-              backgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundSize: "200% 200%",
-              animation: "gradientShift 6s ease infinite",
-            }}
-          >
-            {t("hero.title")}
-          </h2>
-          <p className="mb-4 cyber-subtitle text-lg max-w-2xl mx-auto">
-            {t("hero.subtitle")}
-          </p>
-          <p className="mb-8 text-sm cyber-subtitle opacity-70">
-            {t("hero.tagline")}
-          </p>
-
-          <div className="mb-8 mx-auto max-w-2xl aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
-            <iframe
-              src="//player.bilibili.com/player.html?isOutside=true&aid=116760984422951&bvid=BV1FajL6sEmF&cid=39170870578&p=1"
-              scrolling="no"
-              frameBorder="no"
-              allowFullScreen={true}
-              className="w-full h-full"
-            />
-          </div>
-          <div className="max-w-xl mx-auto">
-            <div className="flex flex-col sm:flex-row gap-2">
-              <div className="flex-1 flex flex-col gap-2">
-                <input
-                  type="text"
-                  value={wishText}
-                  onChange={(e) => setWishText(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") submitWish();
-                  }}
-                  placeholder={t("hero.wishPlaceholder")}
-                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--cyber-primary)] focus:border-transparent transition-all"
-                  disabled={wishSubmitting}
-                />
-                <input
-                  type="text"
-                  value={wishContact}
-                  onChange={(e) => setWishContact(e.target.value)}
-                  placeholder={t("hero.wishContactPlaceholder")}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-xs focus:outline-none focus:ring-2 focus:ring-[var(--cyber-primary)] focus:border-transparent transition-all opacity-70"
-                  disabled={wishSubmitting}
-                />
-              </div>
-              <button
-                onClick={submitWish}
-                disabled={wishSubmitting || !wishText.trim()}
-                className="px-5 py-2.5 rounded-lg font-semibold text-sm whitespace-nowrap transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed self-start"
-                style={{
-                  background:
-                    "linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary))",
-                  color: "#fff",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow =
-                    "0 0 20px rgba(249,115,22,0.4)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = "none";
-                }}
-              >
-                {t("hero.wishButton")}
-              </button>
-            </div>
-            {wishMessage && (
-              <p
-                className={`mt-2 text-sm ${
-                  wishMessageType === "success"
-                    ? "text-green-600 dark:text-green-400"
-                    : "text-red-500"
-                }`}
-              >
-                {wishMessage}
-              </p>
-            )}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("webgames.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("webgames.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {webGames.map((game, i) => (
-            <GameCard
-              key={game.id}
-              id={game.id}
-              title={game.title!}
-              titleKey={game.titleKey}
-              descKey={game.descKey}
-              logoUrl={game.logoUrl}
-              liveUrl={game.liveUrl!}
-              status={game.status}
-              platform={game.platform}
-              index={i}
-              t={t}
-              lang={lang}
-              socialStat={socialStats[game.id]}
-              isLoggedIn={isLoggedIn}
-              onRequireLogin={() => setAuthOpen(true)}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("dapps.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("dapps.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {dapps.map((dapp, i) => (
-            <ProjectCard
-              key={dapp.id}
-              id={dapp.id}
-              titleKey={dapp.titleKey}
-              descKey={dapp.descKey}
-              logoUrl={dapp.logoUrl}
-              liveUrl={dapp.liveUrl}
-              githubUrl={dapp.githubUrl}
-              status={dapp.status}
-              index={i}
-              t={t}
-              socialStat={socialStats[dapp.id]}
-              isLoggedIn={isLoggedIn}
-              onRequireLogin={() => setAuthOpen(true)}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("opc.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("opc.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {tools.map((tool, i) => (
-            <ProjectCard
-              key={tool.id}
-              id={tool.id}
-              title={tool.title}
-              desc={tool.desc}
-              logoUrl={tool.logoUrl}
-              githubUrl={tool.githubUrl}
-              status={tool.status}
-              index={i}
-              t={t}
-              socialStat={socialStats[tool.id]}
-              isLoggedIn={isLoggedIn}
-              onRequireLogin={() => setAuthOpen(true)}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("gateway.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("gateway.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {stableGateway && (
-            <ProjectCard
-              id={stableGateway.id}
-              title={
-                lang === "zh"
-                  ? "站长推荐：支持 GPT-5.4 / 5.5 的稳定中转站"
-                  : "Editor's Pick: Stable Gateway Supporting GPT-5.4 / 5.5"
-              }
-              desc={
-                lang === "zh"
-                  ? "一个稳定可用的 AI API 中转站，支持 GPT-5.4 / 5.5，适合开发、测试与日常调用。"
-                  : "A stable AI API gateway supporting GPT-5.4 / 5.5, suitable for development, testing, and daily use."
-              }
-              logoUrl={stableGateway.logoUrl}
-              liveUrl={stableGateway.liveUrl}
-              status={stableGateway.status}
-              index={0}
-              t={t}
-              socialStat={socialStats[stableGateway.id]}
-              isLoggedIn={isLoggedIn}
-              onRequireLogin={() => setAuthOpen(true)}
-            />
-          )}
-        </div>
-      </section>
-
-      <section className="py-20">
-        <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("opensource.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("opensource.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {suiBestPractices && (
-            <ProjectCard
-              id={suiBestPractices.id}
-              titleKey={suiBestPractices.titleKey}
-              descKey={suiBestPractices.descKey}
-              logoUrl={suiBestPractices.logoUrl}
-              liveUrl={suiBestPractices.liveUrl}
-              githubUrl="https://github.com/majoson-chen/sui-best-practices/pull/16"
-              status={suiBestPractices.status}
-              index={0}
-              t={t}
-              socialStat={socialStats[suiBestPractices.id]}
-              isLoggedIn={isLoggedIn}
-              onRequireLogin={() => setAuthOpen(true)}
-            />
-          )}
-        </div>
-      </section>
-
-      <RevealSection>
-        <section className="py-16">
-          <div className="flex justify-center cyber-image-container">
-            <img
-              alt="ZD Tech"
-              height={300}
-              src="/detask9.png"
+      <main>
+        <section className="text-center py-16 md:py-24 cyber-hero relative overflow-hidden">
+          <FloatingParticles />
+          <div className="relative z-10">
+            <h1
+              className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 px-2"
               style={{
-                aspectRatio: "500/300",
-                objectFit: "cover",
-                maxWidth: "100%",
+                background:
+                  "linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary))",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundSize: "200% 200%",
+                animation: "gradientShift 6s ease infinite",
               }}
-              width={500}
-              loading="lazy"
-            />
+            >
+              {t("hero.title")}
+            </h1>
+            <p className="mb-4 cyber-subtitle text-lg max-w-2xl mx-auto">
+              {t("hero.subtitle")}
+            </p>
+            <p className="mb-8 text-sm cyber-subtitle opacity-70">
+              {t("hero.tagline")}
+            </p>
+
+            <div className="mb-8 mx-auto max-w-2xl aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+              <iframe
+                src="//player.bilibili.com/player.html?isOutside=true&aid=116760984422951&bvid=BV1FajL6sEmF&cid=39170870578&p=1"
+                title="ZD Tech 工作室介绍视频"
+                scrolling="no"
+                frameBorder="no"
+                allowFullScreen={true}
+                className="w-full h-full"
+              />
+            </div>
+            <div className="max-w-xl mx-auto">
+              <div className="flex flex-col sm:flex-row gap-2">
+                <div className="flex-1 flex flex-col gap-2">
+                  <input
+                    type="text"
+                    value={wishText}
+                    onChange={(e) => setWishText(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") submitWish();
+                    }}
+                    placeholder={t("hero.wishPlaceholder")}
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--cyber-primary)] focus:border-transparent transition-all"
+                    disabled={wishSubmitting}
+                  />
+                  <input
+                    type="text"
+                    value={wishContact}
+                    onChange={(e) => setWishContact(e.target.value)}
+                    placeholder={t("hero.wishContactPlaceholder")}
+                    className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-xs focus:outline-none focus:ring-2 focus:ring-[var(--cyber-primary)] focus:border-transparent transition-all opacity-70"
+                    disabled={wishSubmitting}
+                  />
+                </div>
+                <button
+                  onClick={submitWish}
+                  disabled={wishSubmitting || !wishText.trim()}
+                  className="px-5 py-2.5 rounded-lg font-semibold text-sm whitespace-nowrap transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed self-start"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary))",
+                    color: "#fff",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow =
+                      "0 0 20px rgba(249,115,22,0.4)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
+                  {t("hero.wishButton")}
+                </button>
+              </div>
+              {wishMessage && (
+                <p
+                  className={`mt-2 text-sm ${
+                    wishMessageType === "success"
+                      ? "text-green-600 dark:text-green-400"
+                      : "text-red-500"
+                  }`}
+                >
+                  {wishMessage}
+                </p>
+              )}
+            </div>
           </div>
         </section>
 
         <section className="py-20">
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("newsletter.title")}
-          </h3>
-          <p className="text-center cyber-subtitle mb-8">
-            {t("newsletter.subtitle")}
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
-            <Input
-              className="cyber-input w-72"
-              placeholder={t("newsletter.placeholder")}
-              type="email"
-              value={subEmail}
-              onChange={(e) => {
-                setSubEmail(e.target.value);
-                setSubStatus("idle");
-              }}
-              onKeyDown={(e) => e.key === "Enter" && handleSubscribe()}
-            />
-            <Button
-              className="cyber-button"
-              onClick={handleSubscribe}
-              disabled={subStatus === "loading"}
-            >
-              {subStatus === "loading"
-                ? t("newsletter.subscribing")
-                : t("newsletter.subscribe")}
-            </Button>
+          <RevealSection>
+            <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+              {t("webgames.title")}
+            </h3>
+            <p className="mb-10 text-center cyber-subtitle">
+              {t("webgames.subtitle")}
+            </p>
+          </RevealSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {webGames.map((game, i) => (
+              <GameCard
+                key={game.id}
+                id={game.id}
+                title={game.title!}
+                titleKey={game.titleKey}
+                descKey={game.descKey}
+                logoUrl={game.logoUrl}
+                liveUrl={game.liveUrl!}
+                status={game.status}
+                platform={game.platform}
+                index={i}
+                t={t}
+                lang={lang}
+                socialStat={socialStats[game.id]}
+                isLoggedIn={isLoggedIn}
+                onRequireLogin={() => setAuthOpen(true)}
+              />
+            ))}
           </div>
-          {subStatus === "ok" && (
-            <p className="text-center mt-4 text-green-600 font-medium">
-              {t("newsletter.success")}
-            </p>
-          )}
-          {subStatus === "dup" && (
-            <p className="text-center mt-4 text-amber-600 font-medium">
-              {t("newsletter.duplicate")}
-            </p>
-          )}
-          {subStatus === "error" && (
-            <p className="text-center mt-4 text-red-500 font-medium">
-              {t("newsletter.error")}
-            </p>
-          )}
         </section>
-      </RevealSection>
 
-      <section className="py-20">
+        <section className="py-20">
+          <RevealSection>
+            <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+              {t("dapps.title")}
+            </h3>
+            <p className="mb-10 text-center cyber-subtitle">
+              {t("dapps.subtitle")}
+            </p>
+          </RevealSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {dapps.map((dapp, i) => (
+              <ProjectCard
+                key={dapp.id}
+                id={dapp.id}
+                titleKey={dapp.titleKey}
+                descKey={dapp.descKey}
+                logoUrl={dapp.logoUrl}
+                liveUrl={dapp.liveUrl}
+                githubUrl={dapp.githubUrl}
+                status={dapp.status}
+                index={i}
+                t={t}
+                socialStat={socialStats[dapp.id]}
+                isLoggedIn={isLoggedIn}
+                onRequireLogin={() => setAuthOpen(true)}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section className="py-20">
+          <RevealSection>
+            <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+              {t("opc.title")}
+            </h3>
+            <p className="mb-10 text-center cyber-subtitle">
+              {t("opc.subtitle")}
+            </p>
+          </RevealSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {tools.map((tool, i) => (
+              <ProjectCard
+                key={tool.id}
+                id={tool.id}
+                title={tool.title}
+                desc={tool.desc}
+                logoUrl={tool.logoUrl}
+                githubUrl={tool.githubUrl}
+                status={tool.status}
+                index={i}
+                t={t}
+                socialStat={socialStats[tool.id]}
+                isLoggedIn={isLoggedIn}
+                onRequireLogin={() => setAuthOpen(true)}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section className="py-20">
+          <RevealSection>
+            <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+              {t("gateway.title")}
+            </h3>
+            <p className="mb-10 text-center cyber-subtitle">
+              {t("gateway.subtitle")}
+            </p>
+          </RevealSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {stableGateway && (
+              <ProjectCard
+                id={stableGateway.id}
+                title={
+                  lang === "zh"
+                    ? "站长推荐：支持 GPT-5.4 / 5.5 的稳定中转站"
+                    : "Editor's Pick: Stable Gateway Supporting GPT-5.4 / 5.5"
+                }
+                desc={
+                  lang === "zh"
+                    ? "一个稳定可用的 AI API 中转站，支持 GPT-5.4 / 5.5，适合开发、测试与日常调用。"
+                    : "A stable AI API gateway supporting GPT-5.4 / 5.5, suitable for development, testing, and daily use."
+                }
+                logoUrl={stableGateway.logoUrl}
+                liveUrl={stableGateway.liveUrl}
+                status={stableGateway.status}
+                index={0}
+                t={t}
+                socialStat={socialStats[stableGateway.id]}
+                isLoggedIn={isLoggedIn}
+                onRequireLogin={() => setAuthOpen(true)}
+              />
+            )}
+          </div>
+        </section>
+
+        <section className="py-20">
+          <RevealSection>
+            <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+              {t("opensource.title")}
+            </h3>
+            <p className="mb-10 text-center cyber-subtitle">
+              {t("opensource.subtitle")}
+            </p>
+          </RevealSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {suiBestPractices && (
+              <ProjectCard
+                id={suiBestPractices.id}
+                titleKey={suiBestPractices.titleKey}
+                descKey={suiBestPractices.descKey}
+                logoUrl={suiBestPractices.logoUrl}
+                liveUrl={suiBestPractices.liveUrl}
+                githubUrl="https://github.com/majoson-chen/sui-best-practices/pull/16"
+                status={suiBestPractices.status}
+                index={0}
+                t={t}
+                socialStat={socialStats[suiBestPractices.id]}
+                isLoggedIn={isLoggedIn}
+                onRequireLogin={() => setAuthOpen(true)}
+              />
+            )}
+          </div>
+        </section>
+
         <RevealSection>
-          <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
-            {t("news.title")}
-          </h3>
-          <p className="mb-10 text-center cyber-subtitle">
-            {t("news.subtitle")}
-          </p>
-        </RevealSection>
-        <div className="max-w-4xl mx-auto space-y-4">
-          {homepageNews.map((news) => {
-            const categoryMeta = newsCategoryMeta[news.category];
+          <section className="py-16">
+            <div className="flex justify-center cyber-image-container">
+              <img
+                alt="ZD Tech 工作室创意展示与项目合集"
+                height={300}
+                src="/detask9.png"
+                style={{
+                  aspectRatio: "500/300",
+                  objectFit: "cover",
+                  maxWidth: "100%",
+                }}
+                width={500}
+                loading="lazy"
+              />
+            </div>
+          </section>
 
-            return (
-              <div
-                key={news.id}
-                className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white"
+          <section className="py-20">
+            <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+              {t("newsletter.title")}
+            </h3>
+            <p className="text-center cyber-subtitle mb-8">
+              {t("newsletter.subtitle")}
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
+              <Input
+                className="cyber-input w-72"
+                placeholder={t("newsletter.placeholder")}
+                type="email"
+                value={subEmail}
+                onChange={(e) => {
+                  setSubEmail(e.target.value);
+                  setSubStatus("idle");
+                }}
+                onKeyDown={(e) => e.key === "Enter" && handleSubscribe()}
+              />
+              <Button
+                className="cyber-button"
+                onClick={handleSubscribe}
+                disabled={subStatus === "loading"}
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <span
-                    className={`rounded-full px-2.5 py-1 text-xs font-bold tracking-wide ${categoryMeta.badgeClassName}`}
-                  >
-                    {lang === "zh"
-                      ? categoryMeta.label.zh
-                      : categoryMeta.label.en}
-                  </span>
-                  <div>
-                    <h4 className="font-semibold">
-                      {lang === "zh" ? news.title.zh : news.title.en}
-                    </h4>
-                    <p className="text-xs text-[var(--cyber-muted)]">
-                      {news.date}
-                    </p>
-                  </div>
-                </div>
-                <p className="text-sm cyber-subtitle leading-relaxed mb-4">
-                  {lang === "zh" ? news.summary.zh : news.summary.en}
-                </p>
-                <div className="space-y-3">
-                  {news.items.slice(0, 4).map((item, index) => (
-                    <div
-                      key={`${news.id}-${index}`}
-                      className="p-4 rounded-lg border border-[var(--cyber-border)]"
+                {subStatus === "loading"
+                  ? t("newsletter.subscribing")
+                  : t("newsletter.subscribe")}
+              </Button>
+            </div>
+            {subStatus === "ok" && (
+              <p className="text-center mt-4 text-green-600 font-medium">
+                {t("newsletter.success")}
+              </p>
+            )}
+            {subStatus === "dup" && (
+              <p className="text-center mt-4 text-amber-600 font-medium">
+                {t("newsletter.duplicate")}
+              </p>
+            )}
+            {subStatus === "error" && (
+              <p className="text-center mt-4 text-red-500 font-medium">
+                {t("newsletter.error")}
+              </p>
+            )}
+          </section>
+        </RevealSection>
+
+        <section className="py-20">
+          <RevealSection>
+            <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
+              {t("news.title")}
+            </h3>
+            <p className="mb-10 text-center cyber-subtitle">
+              {t("news.subtitle")}
+            </p>
+          </RevealSection>
+          <div className="max-w-4xl mx-auto space-y-4">
+            {homepageNews.map((news) => {
+              const categoryMeta = newsCategoryMeta[news.category];
+
+              return (
+                <article
+                  key={news.id}
+                  className="p-6 rounded-xl border border-[var(--cyber-border)] bg-white"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span
+                      className={`rounded-full px-2.5 py-1 text-xs font-bold tracking-wide ${categoryMeta.badgeClassName}`}
                     >
-                      <p className="font-semibold text-[var(--cyber-primary)] mb-1">
-                        {index + 1}.{" "}
-                        {lang === "zh" ? item.title.zh : item.title.en}
-                      </p>
-                      <p className="text-sm cyber-subtitle leading-relaxed">
-                        {lang === "zh"
-                          ? item.description.zh
-                          : item.description.en}
+                      {lang === "zh"
+                        ? categoryMeta.label.zh
+                        : categoryMeta.label.en}
+                    </span>
+                    <div>
+                      <h4 className="font-semibold">
+                        {lang === "zh" ? news.title.zh : news.title.en}
+                      </h4>
+                      <p className="text-xs text-[var(--cyber-muted)]">
+                        {news.date}
                       </p>
                     </div>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="text-center mt-6">
-          <Link
-            href="/news"
-            className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:text-[var(--cyber-hover-pink)] hover:border-[var(--cyber-hover-pink)] transition-all duration-300"
-          >
-            {lang === "zh" ? "查看更多 →" : "View All →"}
-          </Link>
-        </div>
-      </section>
+                  </div>
+                  <p className="text-sm cyber-subtitle leading-relaxed mb-4">
+                    {lang === "zh" ? news.summary.zh : news.summary.en}
+                  </p>
+                  <div className="space-y-3">
+                    {news.items.slice(0, 4).map((item, index) => (
+                      <div
+                        key={`${news.id}-${index}`}
+                        className="p-4 rounded-lg border border-[var(--cyber-border)]"
+                      >
+                        <p className="font-semibold text-[var(--cyber-primary)] mb-1">
+                          {index + 1}.{" "}
+                          {lang === "zh" ? item.title.zh : item.title.en}
+                        </p>
+                        <p className="text-sm cyber-subtitle leading-relaxed">
+                          {lang === "zh"
+                            ? item.description.zh
+                            : item.description.en}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+          <div className="text-center mt-6">
+            <Link
+              href="/news"
+              className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg border border-[var(--cyber-border)] text-[var(--cyber-muted)] hover:text-[var(--cyber-hover-pink)] hover:border-[var(--cyber-hover-pink)] transition-all duration-300"
+            >
+              {lang === "zh" ? "查看更多 →" : "View All →"}
+            </Link>
+          </div>
+        </section>
+      </main>
 
       <FeedbackForm lang={lang} />
       <AuthModal

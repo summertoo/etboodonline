@@ -28,6 +28,22 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "PerplexityBot",
         allow: "/",
       },
+      {
+        userAgent: "Google-Extended",
+        allow: "/",
+      },
+      {
+        userAgent: "CCBot",
+        allow: "/",
+      },
+      {
+        userAgent: "Applebot-Extended",
+        allow: "/",
+      },
+      {
+        userAgent: "cohere-ai",
+        allow: "/",
+      },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
     host: siteConfig.url,
