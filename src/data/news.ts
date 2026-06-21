@@ -31,6 +31,41 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-21",
+    date: "2026-06-21",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-21",
+      en: "🤖 AI HOT Daily · Jun 21, 2026",
+    },
+    summary: {
+      zh: "微软双向转售 GPT 与 DeepSeek 成全球最大 AI 中间商，开源教程《Deep Agents 实战》发布。",
+      en: "Microsoft becomes the world's largest AI reseller by selling GPT to China and DeepSeek to the West; open-source 'Deep Agents' tutorial released.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "微软双向转售 GPT 与 DeepSeek 成全球最大 AI 中间商",
+          en: "Microsoft Becomes World's Largest AI Reseller: GPT to China, DeepSeek to West",
+        },
+        description: {
+          zh: "彭博社报道，微软已成为全球最大 AI 模型中转站，既将 ChatGPT 卖给中国企业，也反向将 DeepSeek 模型卖给西方客户。正在测试 DeepSeek-R1 和 DeepSeek-V4，构建跨中美 AI 模型的双向贸易网络。",
+          en: "Bloomberg reports Microsoft has become the world's largest AI model reseller, selling ChatGPT to Chinese enterprises and DeepSeek models to Western customers. Testing DeepSeek-R1 and DeepSeek-V4, building a two-way AI trade network across China and the US.",
+        },
+      },
+      {
+        title: {
+          zh: "开源教程《Deep Agents 实战》发布",
+          en: "Open-Source 'Deep Agents' Tutorial Released",
+        },
+        description: {
+          zh: "基于 LangChain/LangGraph 生态，讲解用 Deep Agents Harness 框架构建真实 Agent 应用。核心三层架构：Runtime（LangGraph）、Framework（LangChain）、Harness（Deep Agents），共 8 章。",
+          en: "Based on LangChain/LangGraph ecosystem, teaches building real Agent applications with the Deep Agents Harness framework. Core three-tier architecture: Runtime (LangGraph), Framework (LangChain), Harness (Deep Agents). 8 chapters.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-20",
     date: "2026-06-20",
     title: {
