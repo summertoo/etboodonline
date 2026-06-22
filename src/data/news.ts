@@ -31,6 +31,176 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-22-hot",
+    date: "2026-06-22",
+    title: {
+      zh: "🔥 今日热点 · 2026-06-22",
+      en: "🔥 Hot Topics · Jun 22, 2026",
+    },
+    summary: {
+      zh: "佛得角世界杯再爆冷 2-2 战平乌拉圭，美伊谈判暂停，东风-17 发射状态首次公开，猪肝猪双肾移植创全球首例。",
+      en: "Cape Verde draws Uruguay 2-2 in World Cup shock, US-Iran talks suspended, China debuts DF-17 launch status, world's first pig liver & kidney transplant.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "佛得角 2-2 战平乌拉圭，连续逼平两届世界冠军",
+          en: "Cape Verde 2-2 Uruguay: Back-to-Back Draws Against Two World Champions",
+        },
+        description: {
+          zh: "2026 世界杯 H 组第二轮，佛得角 2-2 战平乌拉圭，打入队史世界杯首球，继零封西班牙后再拿一分，连续逼平两个世界冠军。",
+          en: "2026 World Cup Group H: Cape Verde draws Uruguay 2-2, scores first World Cup goal in history, second point after holding Spain to a draw.",
+        },
+      },
+      {
+        title: {
+          zh: "佛得角门将沃齐尼亚收到失业通知书",
+          en: "Cape Verde Goalkeeper Vozinha Gets Termination Notice",
+        },
+        description: {
+          zh: "40 岁门将沃齐尼亚世界杯一战封神，对阵西班牙 27 次射门 7 次射正零封对手。葡甲球队沙维斯通知不再续约，他将成为自由球员。",
+          en: "40-year-old goalkeeper Vozinha becomes World Cup hero with 7 saves vs Spain. Portuguese club Chaves terminates his contract; he becomes a free agent.",
+        },
+      },
+      {
+        title: {
+          zh: "美伊谈判暂停，伊朗离场抗议",
+          en: "US-Iran Talks Suspended After Iran Walks Out",
+        },
+        description: {
+          zh: "美伊在瑞士谈判期间，特朗普就黎巴嫩问题发文威胁伊朗。伊朗代表团提出抗议后离开会场，暂停谈判转向内部磋商。",
+          en: "During US-Iran talks in Switzerland, Trump threatens Iran over Lebanon. Iranian delegation protests, walks out, and suspends talks for internal consultation.",
+        },
+      },
+      {
+        title: {
+          zh: "东风-17 发射状态首次公开",
+          en: "China's DF-17 Launch Status Revealed for First Time",
+        },
+        description: {
+          zh: "火箭军首次公开东风-17 野外发射完整状态，该导弹具备全天候、无依托、强突防优势，多车齐射模式可提升实战打击效能。",
+          en: "PLA Rocket Force reveals full DF-17 field launch status. Features all-weather, no-emplacement, strong penetration capabilities with multi-vehicle salvo mode.",
+        },
+      },
+      {
+        title: {
+          zh: "全球首例猪肝猪双肾联合移植完成",
+          en: "World's First Combined Pig Liver & Kidney Transplant",
+        },
+        description: {
+          zh: "广西医科大学团队完成全球首例基因编辑猪肝和猪双肾联合移植，术后不到 24 小时移植器官开始分泌胆汁并恢复功能。",
+          en: "Guangxi medical team completes world's first gene-edited pig liver and dual kidney transplant. Organs began secreting bile and functioning within 24 hours.",
+        },
+      },
+      {
+        title: {
+          zh: "刘强东：企业出海不能想着捞一把就走",
+          en: "Liu Qiangdong: Overseas Investment Isn't About Quick Profits",
+        },
+        description: {
+          zh: "京东创始人刘强东在 APEC 论坛表示，企业到海外投资不能只想着捞一把就走，要思考如何将自身发展与当地就业、税收紧密结合。",
+          en: "JD.com founder Liu Qiangdong at APEC forum says companies investing overseas shouldn't seek quick profits but integrate with local employment and tax growth.",
+        },
+      },
+      {
+        title: {
+          zh: "卖茶直播间 27 位茶农 20 个是演员",
+          en: "Tea Livestream: 20 of 27 'Farmers' Are Actors",
+        },
+        description: {
+          zh: "记者调查发现，12 万粉丝的茶叶直播间号称卖冰岛老寨普洱茶，实为冒牌货。27 名茶农中 20 人是演员，仅 7 人为真茶农。",
+          en: "Investigation reveals a 120K-follower tea livestream selling counterfeit 'Bingdao' pu'er tea. 20 of 27 on-screen farmers are actors; only 7 are real.",
+        },
+      },
+      {
+        title: {
+          zh: "职业本科无法考研系不实信息",
+          en: "Vocational Bachelor's Can Apply for Graduate School",
+        },
+        description: {
+          zh: "南京工业职业技术大学辟谣：网传职业本科专业代码受限无法考研的说法不属实，职教法规定职业学校学生升学就业享有平等机会。",
+          en: "Official clarification: claims that vocational bachelor's degree holders cannot apply for graduate school are false. Vocational Education Law guarantees equal rights.",
+        },
+      },
+      {
+        title: {
+          zh: "85 岁大爷长期被老伴家暴，民警劝离后感谢",
+          en: "85-Year-Old Man Thanks Police After Divorce from Abusive Wife",
+        },
+        description: {
+          zh: "山东济南 85 岁赵大爷长期遭八旬老伴家暴，近半年三次报警。民警调解无果后建议离婚，赵大爷离婚后买喜糖感谢民警。",
+          en: "An 85-year-old man in Jinan suffered long-term domestic abuse from his wife. Police mediation failed; after divorce he bought candy to thank officers.",
+        },
+      },
+      {
+        title: {
+          zh: "端午假期上海再现拉链式人墙",
+          en: "Shanghai Deploys 'Zipper Human Wall' for Dragon Boat Festival",
+        },
+        description: {
+          zh: "端午节期间，武警上海总队官兵全时坚守岗位，再现拉链式人墙，在热门地段疏导人流，守护游客平安。",
+          en: "During Dragon Boat Festival, Shanghai Armed Police deploy the iconic 'zipper human wall' at popular spots to manage crowds and ensure tourist safety.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-06-22",
+    date: "2026-06-22",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-22",
+      en: "🤖 AI HOT Daily · Jun 22, 2026",
+    },
+    summary: {
+      zh: "美团 tabbit 国际版免费接入 GPT-5.5/Claude Opus 4.8，NSA 局长称 Mythos AI 数小时攻破机密系统，三星部署 ChatGPT Enterprise，腾讯元宝父亲节活动。",
+      en: "Meituan tabbit international offers GPT-5.5/Claude 4.8 free, NSA director says Mythos AI breached classified systems in hours, Samsung deploys ChatGPT Enterprise, Tencent Yuanbao Father's Day campaign.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "美团 tabbit 国际版免费接入 GPT-5.5 等海外旗舰模型",
+          en: "Meituan tabbit International Offers Free GPT-5.5 & Claude Opus 4.8",
+        },
+        description: {
+          zh: "美团上线 tabbit 国际版应用，免费集成 GPT-5.5、Claude Opus 4.8、Gemini 3.5 Flash 等海外模型及国内 Kimi-2.6、GLM-5.1 等，目前免费推广中。",
+          en: "Meituan launches tabbit international app, free integration of GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash and domestic models. Currently in free promotion phase.",
+        },
+      },
+      {
+        title: {
+          zh: "NSA 局长：Mythos AI 数小时攻破几乎所有机密系统",
+          en: "NSA Director: Mythos AI Breached Nearly All Classified Systems in Hours",
+        },
+        description: {
+          zh: "NSA 局长称 Mythos 数小时内攻破几乎所有机密系统。此前 Mythos 已在 5 天内破解 MacOS，Google Project Zero 完成同等攻击需 6 个月。",
+          en: "NSA director says Mythos breached nearly all classified systems within hours. Previously Mythos cracked MacOS in 5 days; Google Project Zero would need 6 months.",
+        },
+      },
+      {
+        title: {
+          zh: "三星电子向全球员工部署 ChatGPT Enterprise 和 Codex",
+          en: "Samsung Deploys ChatGPT Enterprise & Codex to Global Employees",
+        },
+        description: {
+          zh: "三星电子向全球员工推出 ChatGPT Enterprise 和 Codex，这是 OpenAI 目前规模最大的企业级 AI 部署之一。",
+          en: "Samsung rolls out ChatGPT Enterprise and Codex to all global employees, one of OpenAI's largest enterprise AI deployments to date.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯元宝推出父亲节活动：穿越与年轻爸爸合影",
+          en: "Tencent Yuanbao Father's Day: Time-Travel Photos with Young Dad",
+        },
+        description: {
+          zh: "腾讯元宝推出父亲节主题活动，用户选择爸爸年轻时照片与自己的照片，AI 生成穿越回过去与爸爸的合影。",
+          en: "Tencent Yuanbao launches Father's Day event: upload photos of your dad when young and yourself, AI generates a time-travel photo together.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-21",
     date: "2026-06-21",
     title: {
