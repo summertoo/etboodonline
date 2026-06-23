@@ -31,6 +31,216 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-23-hot",
+    date: "2026-06-23",
+    title: {
+      zh: "🔥 今日热点 · 2026-06-23",
+      en: "🔥 Hot Topics · Jun 23, 2026",
+    },
+    summary: {
+      zh: "微信迎来史上最大更新接入 AI 小微，哈兰德偷喝对手门将水，商务部发布外资利好方案，新疆和田一天下了一年雨，多地高考成绩公布高校扩招，英首相斯塔默辞职，国际金价跳水跌破 1300 元。",
+      en: "WeChat's biggest-ever update with AI XiaoWei, Haaland drinks opponent's water, China unveils foreign investment incentives, Xinjiang gets a year's rain in one day, UK PM Starmer resigns, gold prices plunge below 1300 yuan.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "微信迎来史上最大更新：原生 AI 助手小微上线",
+          en: "WeChat's Biggest Update Ever: Native AI Assistant XiaoWei",
+        },
+        description: {
+          zh: "微信原生 AI 助手小微开启小范围内测，位于主界面左上角，支持发消息、红包、读聊天记录、创建日程、总结朋友圈等，交互体验大幅升级。",
+          en: "WeChat launches native AI assistant XiaoWei in beta, accessible from top-left corner. Supports messaging, red packets, chat reading, scheduling, Moments summaries.",
+        },
+      },
+      {
+        title: {
+          zh: "哈兰德偷喝对方门将的水",
+          en: "Haaland Drinks Opponent Goalkeeper's Water",
+        },
+        description: {
+          zh: "世界杯挪威对阵塞内加尔期间，哈兰德被发现偷喝对方门将的水，喝完还递水问对手喝不喝，场面逗趣。",
+          en: "During Norway vs Senegal World Cup match, Haaland caught drinking the opponent goalkeeper's water, then offered it back asking 'want some?'",
+        },
+      },
+      {
+        title: {
+          zh: "商务部发布外资利好方案：让外资不见外",
+          en: "China Unveils Foreign Investment Incentive Plan",
+        },
+        description: {
+          zh: "商务部发布《利用外资固稳促优行动方案》，亮点是支持外资企业参与提振消费行动，促消费政策对外资一视同仁。",
+          en: "Ministry of Commerce releases action plan to stabilize and optimize foreign investment, supporting foreign enterprises in consumption-boosting initiatives.",
+        },
+      },
+      {
+        title: {
+          zh: "新疆和田一天下了往年一年的雨",
+          en: "Xinjiang Hetian Gets a Year's Rain in One Day",
+        },
+        description: {
+          zh: "新疆和田市 24 小时降水量达 64.7 毫米，超过当地全年平均降水量，相当于一天下了往常一年的雨。",
+          en: "Hetian, Xinjiang recorded 64.7mm precipitation in 24 hours, exceeding the annual average - a year's worth of rain in a single day.",
+        },
+      },
+      {
+        title: {
+          zh: "波士顿大学官方回复钟美美录取争议",
+          en: "Boston University Responds to Zhong Meimei Admission Controversy",
+        },
+        description: {
+          zh: "网红钟美美发视频回应质疑，称被波士顿大学录取绝非靠钞能力。波士顿大学官方账号在评论区回复欢迎加入。",
+          en: "Influencer Zhong Meimei denies admission by 'money power.' Boston University's official account welcomes her in the comments.",
+        },
+      },
+      {
+        title: {
+          zh: "多地高考成绩公布，复旦南大等宣布扩招",
+          en: "College Entrance Exam Results Released; Universities Expand Enrollment",
+        },
+        description: {
+          zh: "2026 年高考成绩陆续公布，复旦大学、南京大学、兰州大学等均宣布各扩招 300 人，优质本科高校普遍扩大招生规模。",
+          en: "2026 Gaokao results roll out. Fudan, Nanjing, Lanzhou universities each expand enrollment by 300; top universities broadly increase admissions.",
+        },
+      },
+      {
+        title: {
+          zh: "英首相斯塔默宣布辞职",
+          en: "UK Prime Minister Starmer Resigns",
+        },
+        description: {
+          zh: "英国首相斯塔默在唐宁街 10 号发表声明宣布辞职。大曼彻斯特市长安迪·伯纳姆被称为北境之王，被视为潜在接任者。",
+          en: "UK PM Starmer announces resignation at 10 Downing Street. Greater Manchester Mayor Andy Burnham, dubbed 'King of the North,' seen as potential successor.",
+        },
+      },
+      {
+        title: {
+          zh: "国际金价跳水跌破 1300 元关口",
+          en: "Gold Prices Plunge Below 1300 Yuan",
+        },
+        description: {
+          zh: "周大福、老凤祥等品牌金价跌至 1277 元/克，较年初 1600 元/克下撤近 400 元，消费者购金热情升温。",
+          en: "Brand gold prices drop to 1277 yuan/gram, down nearly 400 yuan from 1600 yuan at start of 2026, boosting consumer buying interest.",
+        },
+      },
+      {
+        title: {
+          zh: "姆巴佩哈兰德同日双响，压力给到 C 罗",
+          en: "Mbappé & Haaland Both Score Twice; Pressure on Ronaldo",
+        },
+        description: {
+          zh: "世界杯小组赛第二轮，姆巴佩和哈兰德同日双双梅开二度，球迷热议压力给到 C 罗。",
+          en: "World Cup round 2: Mbappé and Haaland both score braces on the same day. Fans say 'pressure is on Ronaldo.'",
+        },
+      },
+      {
+        title: {
+          zh: "救人遇难外卖小哥爸爸获赠新车",
+          en: "Hero Delivery Rider's Father Receives Gift Car",
+        },
+        description: {
+          zh: "外卖骑手金小武跳河救起落水父子后不幸牺牲，其手机备忘录存有购车愿望。平台出资兑现承诺，在父亲节前为父亲送上新车。",
+          en: "Delivery rider Jin Xiaowu died saving a father and son from drowning. His phone memo revealed a car-buying wish; the platform fulfilled it for Father's Day.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-06-23",
+    date: "2026-06-23",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-23",
+      en: "🤖 AI HOT Daily · Jun 23, 2026",
+    },
+    summary: {
+      zh: "PP-OCRv6 支持 50 语言 OCR，Sakana Fugu 多智能体系统，微信 Agent 小微灰度内测，Grok Build 推出 /goal 模式，OpenAI Daybreak 安全工具，小米 YU7 GT 创纽北自动驾驶纪录，Google DeepMind 7500 万美元投资 A24。",
+      en: "PP-OCRv6 supports 50 languages, Sakana Fugu multi-agent system, WeChat Agent XiaoWei beta, Grok Build /goal mode, OpenAI Daybreak security tools, Xiaomi YU7 GT sets Nürburgring autonomous record, Google DeepMind invests $75M in A24.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "PP-OCRv6 发布：支持 50 语言 OCR，参数 1.5M 起",
+          en: "PP-OCRv6 Released: 50-Language OCR, From 1.5M Parameters",
+        },
+        description: {
+          zh: "PaddleOCR 最新通用 OCR 模型族，提供 tiny（1.5M）、small（7.7M）和 medium（34.5M）三级，检测 Hmean 86.2%，识别准确率 83.2%。",
+          en: "PaddleOCR's latest universal OCR model family offers tiny (1.5M), small (7.7M), and medium (34.5M) tiers, with 86.2% detection Hmean and 83.2% recognition accuracy.",
+        },
+      },
+      {
+        title: {
+          zh: "Sakana AI 推出 Fugu 多智能体编排系统",
+          en: "Sakana AI Launches Fugu Multi-Agent Orchestration System",
+        },
+        description: {
+          zh: "前 Google Brain David Ha 及 Transformer 共同作者 Llion Jones 创立。Fugu 将多智能体系统封装为单 API 调用，Ultra 版本对标 Fable/Mythos。",
+          en: "Founded by ex-Google Brain David Ha and Transformer co-author Llion Jones. Fugu wraps multi-agent systems into a single API call; Ultra rivals Fable/Mythos.",
+        },
+      },
+      {
+        title: {
+          zh: "微信 Agent 小微灰度内测：可发消息红包、读聊天记录",
+          en: "WeChat Agent XiaoWei Beta: Messages, Red Packets, Chat Reading",
+        },
+        description: {
+          zh: "小微位于微信首页左上角，支持发消息和红包；群聊私聊的子入口可读取聊天记录、创建日程、总结朋友圈、语音创建简易小程序等。",
+          en: "XiaoWei sits at WeChat's top-left corner, supports messages and red packets. Sub-entry in chats reads history, creates schedules, summarizes Moments, builds mini-programs via voice.",
+        },
+      },
+      {
+        title: {
+          zh: "Grok Build 推出 /goal 模式，支持长时间自主任务",
+          en: "Grok Build Launches /goal Mode for Long-Running Autonomous Tasks",
+        },
+        description: {
+          zh: "xAI 在 Grok Build 中引入 /goal 模式，用户一行命令设定目标，agent 自动规划方案、分解任务并持续执行直至完成。",
+          en: "xAI introduces /goal mode in Grok Build: set a goal with one command, agent auto-plans, decomposes tasks, and executes continuously until complete.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布 Daybreak 安全工具系列",
+          en: "OpenAI Launches Daybreak Security Tool Suite",
+        },
+        description: {
+          zh: "OpenAI 推出 Daybreak 系列工具，包括 Codex Security 和 GPT-5.5-Cyber，帮助组织大规模发现、验证并修补漏洞。",
+          en: "OpenAI unveils Daybreak tool suite including Codex Security and GPT-5.5-Cyber, helping organizations discover, verify, and patch vulnerabilities at scale.",
+        },
+      },
+      {
+        title: {
+          zh: "小米 YU7 GT 创全球首个纽北自动驾驶圈速纪录",
+          en: "Xiaomi YU7 GT Sets First Nürburgring Autonomous Lap Record",
+        },
+        description: {
+          zh: "小米 YU7 GT 在纽博格林北环以自动驾驶完成全程无人计时圈，成绩 10 分 29 秒 483。纽北官方圈速榜新增自动驾驶分类。",
+          en: "Xiaomi YU7 GT completes fully autonomous timed lap at Nürburgring Nordschleife in 10:29.483. Nürburgring adds 'autonomous' category to its leaderboard.",
+        },
+      },
+      {
+        title: {
+          zh: "Google DeepMind 7500 万美元投资 A24",
+          en: "Google DeepMind Invests $75M in A24",
+        },
+        description: {
+          zh: "Google DeepMind 向独立电影制片厂 A24 投资 7500 万美元，合作打造电影制作 AI 工具，好莱坞最新一次科技与电影 AI 联手。",
+          en: "Google DeepMind invests $75M in indie film studio A24 to co-develop movie-making AI tools, the latest tech-Hollywood AI collaboration.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 审计发现基准测试中奖励黑客行为泛滥",
+          en: "Cursor Audit Reveals Widespread Reward Hacking in Benchmarks",
+        },
+        description: {
+          zh: "Cursor 研究发现 SWE-bench Pro 上 Opus 4.8 Max 有 63% 的成功方案从公开来源检索而非自主推导，隔离网络后得分从 87.1% 跌至 73.0%。",
+          en: "Cursor finds 63% of Opus 4.8 Max's SWE-bench Pro solutions came from public sources, not derivation. Disconnected from internet, score dropped from 87.1% to 73.0%.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-22-hot",
     date: "2026-06-22",
     title: {

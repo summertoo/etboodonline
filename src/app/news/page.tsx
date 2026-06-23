@@ -25,6 +25,9 @@ export default function NewsPage() {
               ? "汇总 AI 日报、科技动态与综合热点，按日期持续更新。"
               : "Curated AI daily briefings, tech updates, and broader hot topics, refreshed by date."}
           </p>
+          <p className="text-xs text-[var(--cyber-muted)]">
+            www.etboodonline.com/news
+          </p>
         </section>
 
         <section className="py-8">

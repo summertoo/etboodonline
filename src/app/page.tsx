@@ -491,7 +491,7 @@ export default function Homepage() {
             </p>
 
             <div className="mb-8 mx-auto max-w-2xl aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
-              <iframe                                                 
+              <iframe
                 src="//player.bilibili.com/player.html?isOutside=true&aid=116787626642838&bvid=BV177jt6pEfa&cid=39288112754&p=1"
                 title="ZD Tech 工作室介绍视频"
                 scrolling="no"
@@ -786,6 +786,9 @@ export default function Homepage() {
             </h3>
             <p className="mb-10 text-center cyber-subtitle">
               {t("news.subtitle")}
+            </p>
+            <p className="text-center text-xs text-[var(--cyber-muted)] mb-6">
+              www.etboodonline.com/news
             </p>
           </RevealSection>
           <div className="max-w-4xl mx-auto space-y-4">
