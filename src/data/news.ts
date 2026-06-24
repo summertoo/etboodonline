@@ -31,6 +31,236 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-24-hot",
+    date: "2026-06-24",
+    title: {
+      zh: "🔥 今日热点 · 2026-06-24",
+      en: "🔥 Hot Topics · Jun 24, 2026",
+    },
+    summary: {
+      zh: "C罗奇葩任意球配合骗过全世界，公交车上座率十年降一半，孙正义公开叫板马斯克太空数据中心，双胞胎高考双双超650分，立陶宛暂停与台合作，豆包专业版最高6000元/年。",
+      en: "Ronaldo's trick free-kick fools the world, bus ridership halved in a decade, Masayoshi Son challenges Musk's space data center, twins both score 650+ on Gaokao, Lithuania halts Taiwan cooperation, Doubao Pro costs up to $830/year.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "C罗骗了全世界：任意球配合惊艳世界杯",
+          en: "Ronaldo Fools the World: Trick Free-Kick Stuns World Cup",
+        },
+        description: {
+          zh: "葡萄牙对阵乌兹别克斯坦，C罗站在球前吸引防守注意力，努诺·门德斯直接任意球破门。C罗赛后表示是事先商量好的骗门将战术。",
+          en: "Portugal vs Uzbekistan: Ronaldo feigns the free-kick to draw defenders, Nuno Mendes scores directly. Ronaldo says it was a pre-planned trick on the goalkeeper.",
+        },
+      },
+      {
+        title: {
+          zh: "公交车上座率越来越低，十年下降约一半",
+          en: "Bus Ridership Halved Over the Past Decade",
+        },
+        description: {
+          zh: "交通运输部数据显示，2024年全国公交客运量386.70亿人次，相比2015年的765.40亿人次下降了约一半，公交上座率持续走低。",
+          en: "Ministry data shows 2024 national bus ridership at 38.67 billion, roughly half of 2015's 76.54 billion, as bus occupancy rates continue declining.",
+        },
+      },
+      {
+        title: {
+          zh: "亚洲首富孙正义公开叫板世界首富马斯克",
+          en: "Masa Son Challenges Elon Musk Over Space Data Center Plan",
+        },
+        description: {
+          zh: "孙正义在软银股东大会上反驳马斯克的太空数据中心设想，指出电力成本仅占7%，但硬件、运输维护和通信延迟成本远超预期。",
+          en: "At SoftBank's shareholder meeting, Son refutes Musk's space data center concept, noting electricity is only 7% of costs while hardware, transport, and latency far outweigh savings.",
+        },
+      },
+      {
+        title: {
+          zh: "双胞胎高考双双过650分",
+          en: "Twin Siblings Both Score 650+ on Gaokao",
+        },
+        description: {
+          zh: "内蒙古乌兰察布一对双胞胎高考成绩双双突破650分，哥哥655分，弟弟662分。网友点赞：不仅长得像，连智商都复制粘贴。",
+          en: "Inner Mongolia twins both score over 650 on Gaokao; brother gets 655, younger brother 662. Netizens marvel at their 'copy-paste' intelligence.",
+        },
+      },
+      {
+        title: {
+          zh: "41岁C罗生物年龄仅28.9岁",
+          en: "41-Year-Old Ronaldo Has Biological Age of 28.9",
+        },
+        description: {
+          zh: "Whoop 报告显示 C 罗生物年龄仅 28.9 岁，体脂率常年保持 7% 左右，低于职业足球运动员平均水平，更接近健美运动员标准。",
+          en: "Whoop report reveals Ronaldo's biological age is just 28.9, with 7% body fat — below the average professional footballer, closer to bodybuilder levels.",
+        },
+      },
+      {
+        title: {
+          zh: "立陶宛暂停与台湾地区合作谈判",
+          en: "Lithuania Halts Cooperation Talks with Taiwan",
+        },
+        description: {
+          zh: "立陶宛总理宣布辞职，立陶宛外交部证实与台湾的经济合作行动计划谈判已在双方同意下暂时搁置。",
+          en: "Lithuanian PM resigns; foreign ministry confirms economic cooperation talks with Taiwan have been suspended by mutual agreement.",
+        },
+      },
+      {
+        title: {
+          zh: "豆包专业版正式推出，最高6000元一年",
+          en: "Doubao Pro Launched: Up to 6000 Yuan/Year",
+        },
+        description: {
+          zh: "字节跳动旗下豆包推出专业版并公布定价方案，最高收费 6000 元一年，面向企业级和企业用户。",
+          en: "ByteDance's Doubao launches Pro tier with pricing up to 6000 yuan/year, targeting enterprise and professional users.",
+        },
+      },
+      {
+        title: {
+          zh: "大学生因室友违规充电燃爆，全身90%烧伤",
+          en: "Student Suffers 90% Burns After Roommate's E-Bike Battery Explodes",
+        },
+        description: {
+          zh: "武汉一学生因室友在合租房违规充电引发锂电池爆燃，全身 90% 烧伤。法院一审判决室友担责 51%，多方连带赔偿 253 万余元。",
+          en: "Wuhan student suffers 90% burns after roommate's illegal e-bike battery charging causes explosion. Court rules roommate 51% liable, total compensation 2.53M yuan.",
+        },
+      },
+      {
+        title: {
+          zh: "看台强吻夏奇拉的是她13岁儿子",
+          en: "Shakira's 'New Boyfriend' Is Actually Her 13-Year-Old Son",
+        },
+        description: {
+          zh: "夏奇拉带13岁长子米兰观看世界杯，因米兰身高近1.78米且戴帽遮面，其亲吻母亲动作被全球观众误认为新男友强吻。",
+          en: "Shakira attends World Cup with 13-year-old son Milan, whose 1.78m height and hat lead global audience to mistake his kiss for a new boyfriend.",
+        },
+      },
+      {
+        title: {
+          zh: "普京：俄愿意与乌克兰进行和平谈判",
+          en: "Putin: Russia Ready for Peace Talks with Ukraine",
+        },
+        description: {
+          zh: "普京在政府工作会议上表示，俄方愿意在伊斯坦布尔协议、外交部讲话原则、安克雷奇模式及地面现实基础上，与乌克兰进行和谈。",
+          en: "Putin states Russia is ready for peace talks based on the Istanbul agreements, foreign ministry principles, the Anchorage model, and ground realities.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-06-24",
+    date: "2026-06-24",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-24",
+      en: "🤖 AI HOT Daily · Jun 24, 2026",
+    },
+    summary: {
+      zh: "FastWan-QAD 单卡 1.8 秒生成 5 秒视频，京东全栈交互模型 JoyAI 发布，Confucius4-TTS 14 语种语音克隆开源，豆包音频生成模型 1.0 发布，Mistral OCR 4 发布，字节 Seed2.1 发布，IBM 开源 CUGA 智能体框架，五眼联盟警告 AI 网络威胁。",
+      en: "FastWan-QAD generates 5s video in 1.8s on single GPU, JD.com's JoyAI full-stack interactive model, Confucius4-TTS 14-language voice cloning, Mistral OCR 4, ByteDance Seed2.1, IBM open-sources CUGA agent framework, Five Eyes warns of AI cyber threats.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "FastWan-QAD：单卡5090上1.8秒生成5秒视频",
+          en: "FastWan-QAD: 5s Video in 1.8s on a Single RTX 5090",
+        },
+        description: {
+          zh: "Sky Computing Lab 发布基于量化感知蒸馏的视频生成模型，单张 RTX 5090 上端到端生成 5 秒 480P 视频仅需 1.8 秒，已开源。",
+          en: "Sky Computing Lab releases a video generation model using quantization-aware distillation. End-to-end 5s 480P video in 1.8s on a single RTX 5090. Open-sourced.",
+        },
+      },
+      {
+        title: {
+          zh: "京东全栈开源 JoyAI-VL-Interaction：边看边说",
+          en: "JD.com Open-Sources JoyAI-VL-Interaction: See and Talk",
+        },
+        description: {
+          zh: "全球首个全栈交互模型，能持续观察视频流、主动判断关键事件并实时响应。在盲评中对比豆包视频通话助手胜率 77.6%，对比 Gemini 胜率 87.9%。",
+          en: "World's first full-stack interactive model that continuously observes video streams, proactively identifies key events, and responds in real-time. Beats Doubao 77.6% and Gemini 87.9% in blind tests.",
+        },
+      },
+      {
+        title: {
+          zh: "Confucius4-TTS：14 语种跨语种无口音语音克隆",
+          en: "Confucius4-TTS: 14-Language Accent-Free Voice Cloning",
+        },
+        description: {
+          zh: "网易有道发布，支持 14 种语言跨语种无口音语音克隆，仅需 3 秒音频零样本克隆，相似度超 85%，任务准确度达 97%，已全量开源。",
+          en: "NetEase Youdao releases 14-language accent-free voice cloning model. Zero-shot cloning from just 3s audio, 85%+ similarity, 97% task accuracy. Fully open-sourced under Apache.",
+        },
+      },
+      {
+        title: {
+          zh: "豆包音频生成模型 1.0 发布",
+          en: "Doubao Audio Generation Model 1.0 Released",
+        },
+        description: {
+          zh: "火山引擎发布，支持文本与音频参考生成，单条 Prompt 可编排多角色对白、情绪语气、背景音乐及环境氛围，已开启 API 邀测。",
+          en: "Volcengine launches, supporting text and reference audio generation. Single prompt can orchestrate multi-character dialogue, emotion, BGM, and ambiance. API beta open.",
+        },
+      },
+      {
+        title: {
+          zh: "Mistral OCR 4 发布：支持 170 种语言",
+          en: "Mistral OCR 4: Supports 170 Languages",
+        },
+        description: {
+          zh: "新增边界框、块分类及逐页逐词置信度分数，支持 170 种语言。在 OlmOCRBench 上得分 85.20，定价每 1000 页 $4。",
+          en: "Adds bounding boxes, block classification, per-page per-word confidence scores. Supports 170 languages. Scores 85.20 on OlmOCRBench, priced at $4 per 1000 pages.",
+        },
+      },
+      {
+        title: {
+          zh: "字节 Seed2.1 正式发布",
+          en: "ByteDance Seed2.1 Officially Released",
+        },
+        description: {
+          zh: "字节发布 Seed2.1 系列，强化通用 Agent 能力、代码工程交付与多模态理解。Seed2.1 Pro 在 GDPval 和 MobileWorld 手机 GUI 任务获最高分。",
+          en: "ByteDance releases Seed2.1 series with enhanced general agent capabilities, code engineering, and multimodal understanding. Seed2.1 Pro tops GDPval and MobileWorld benchmarks.",
+        },
+      },
+      {
+        title: {
+          zh: "IBM 开源 CUGA 轻量级智能体框架",
+          en: "IBM Open-Sources CUGA Lightweight Agent Framework",
+        },
+        description: {
+          zh: "CUGA 内置计划-执行-反思循环，在 AppWorld 和 WebArena 基准上排名第一。支持 Fast/Balanced/Accurate 三种推理模式，提供二十余个单文件示例应用。",
+          en: "CUGA features a plan-execute-reflect loop, ranking first on AppWorld and WebArena. Offers Fast/Balanced/Accurate inference modes with 20+ single-file example apps.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 推出 Claude Tag：在 Slack 中 @Claude 协作",
+          en: "Anthropic Launches Claude Tag: @Claude in Slack",
+        },
+        description: {
+          zh: "在 Slack 频道中通过 @Claude 委托任务，支持多用户交互，可自主学习其他频道和数据源。支持异步工作，面向 Enterprise 和 Team 客户提供 beta 版。",
+          en: "Delegate tasks via @Claude in Slack channels. Supports multi-user interaction, learns from other channels and data sources. Async support. Beta available for Enterprise and Team customers.",
+        },
+      },
+      {
+        title: {
+          zh: "Oracle 因 AI 应用裁员 21000 人",
+          en: "Oracle Lays Off 21,000 as AI Replaces Roles",
+        },
+        description: {
+          zh: "Oracle 在截至 5 月的财年裁员 21000 人（降幅 12.9%），AI 技术采用导致劳动力缩减。计划 2026 年筹集 450-500 亿美元扩建云基础设施。",
+          en: "Oracle cuts 21,000 jobs (12.9% workforce reduction) in fiscal year ending May, driven by AI adoption. Plans to raise $45-50B in 2026 for cloud infrastructure expansion.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-5 帮助免疫学家解开三年未解之谜",
+          en: "GPT-5 Helps Immunologist Solve 3-Year Scientific Mystery",
+        },
+        description: {
+          zh: "GPT-5 Pro 帮助免疫学家 Derya Unutmaz 解决一个长达三年的免疫学谜团，揭示 T 细胞行为新见解，可能为癌症和自身免疫疾病研究提供支持。",
+          en: "GPT-5 Pro helps immunologist Derya Unutmaz solve a three-year immunological mystery, revealing new insights into T-cell behavior that could aid cancer and autoimmune disease research.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-23-hot",
     date: "2026-06-23",
     title: {
