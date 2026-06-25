@@ -31,6 +31,236 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-25-hot",
+    date: "2026-06-25",
+    title: {
+      zh: "🔥 今日热点 · 2026-06-25",
+      en: "🔥 Hot Topics · Jun 25, 2026",
+    },
+    summary: {
+      zh: "2026 高考分数线陆续公布，黄岩岛首次发现罕见蓝洞，韩国队打平即出线又输了，委内瑞拉 1 分钟连发 7.1+7.5 级强震，WPS 会员套路曝光，南非队史首次世界杯出线。",
+      en: "2026 Gaokao score cutoffs released, rare blue hole discovered in Huangyan Island, South Korea fails to advance needing only a draw, Venezuela hit by 7.1+7.5 quakes in 1 minute, WPS membership scams exposed, South Africa reaches World Cup knockout stage for first time.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "2026 年各地高考分数线陆续公布",
+          en: "2026 Gaokao Score Cutoffs Released Across China",
+        },
+        description: {
+          zh: "广东、上海、天津、北京、安徽等地公布高考分数线。广东历史类 440 分/物理类 425 分，上海本科线 403 分，北京本科线 429 分。",
+          en: "Guangdong, Shanghai, Tianjin, Beijing, Anhui release Gaokao cutoffs. Guangdong history 440/physics 425, Shanghai本科 403, Beijing本科 429.",
+        },
+      },
+      {
+        title: {
+          zh: "中国在黄岩岛首次发现罕见蓝洞",
+          en: "Rare Blue Hole Discovered in Huangyan Island",
+        },
+        description: {
+          zh: "生态环境部宣布在南海黄岩岛海域发现珊瑚礁生长结构成因型海洋蓝洞，洞口面积 1491.7 平方米，最大深度 16.6 米。",
+          en: "Ministry of Ecology announces discovery of a rare coral-reef-formed marine blue hole in the South China Sea, with 1491.7m² opening and 16.6m max depth.",
+        },
+      },
+      {
+        title: {
+          zh: "韩国队又输了：打平即出线仍失利",
+          en: "South Korea Knocked Out Despite Needing Only a Draw",
+        },
+        description: {
+          zh: "世界杯 A 组末轮，韩国队面对打平即出线的大好形势，0-1 不敌南非队，排名小组第三，出线希望渺茫。",
+          en: "World Cup Group A final: South Korea, needing only a draw to advance, loses 0-1 to South Africa, finishing third in the group.",
+        },
+      },
+      {
+        title: {
+          zh: "辽宁舰远海训练：日本相机跟不上中国航母速度",
+          en: "Liaoning Carrier Training: Japan Can't Keep Up with Camera",
+        },
+        description: {
+          zh: "辽宁舰编队结束 40 余天远海训练返港。期间日本防卫省未发布任何照片——不是相机坏了，是中国航母太快了。",
+          en: "Liaoning carrier group returns after 40+ days of open-sea training. Japan's defense ministry released zero photos — not because their cameras broke, but because China's carrier is too fast.",
+        },
+      },
+      {
+        title: {
+          zh: "委内瑞拉 1 分钟内连发 7.1 级和 7.5 级强震",
+          en: "Venezuela Hit by 7.1 and 7.5 Quakes Within 1 Minute",
+        },
+        description: {
+          zh: "委内瑞拉在 1 分钟内接连发生 7.1 级和 7.5 级地震，震源深度 10 公里。美方预估死亡人数可能在 1 万到 10 万之间。",
+          en: "Venezuela struck by 7.1 and 7.5 magnitude earthquakes within one minute, depth 10km. US estimates 10,000 to 100,000 potential fatalities.",
+        },
+      },
+      {
+        title: {
+          zh: "WPS 会员套路曝光：强制占 C 盘、套娃式收费",
+          en: "WPS Membership Scams: Forced C-Drive Usage, Nested Fees",
+        },
+        description: {
+          zh: "WPS 会员收费模式引发大规模投诉，黑猫投诉平台累计超 11000 条，涉及强制占用 C 盘空间、付费后仍需叠加购买功能等套娃式收费。",
+          en: "WPS membership model triggers mass complaints on BlackCat platform (11,000+). Issues include forced C-drive usage and nested fees requiring additional purchases after paying.",
+        },
+      },
+      {
+        title: {
+          zh: "南非 1-0 战胜韩国，队史首次晋级世界杯淘汰赛",
+          en: "South Africa Advances to World Cup Knockouts for First Time",
+        },
+        description: {
+          zh: "世界杯 A 组末轮，南非 1-0 击败韩国，队史首次晋级世界杯淘汰赛阶段。",
+          en: "World Cup Group A final: South Africa beats South Korea 1-0, qualifying for the knockout stage for the first time in its history.",
+        },
+      },
+      {
+        title: {
+          zh: "桔子酒店起诉橘子宾馆：索赔 10 万称损失 500 余万",
+          en: "Orange Hotel Sues 'Orange Inn' for Trademark Infringement",
+        },
+        description: {
+          zh: "桔子酒店起诉河南平顶山橘子宾馆商标侵权，索赔 10 万元并称造成 500 余万元损失。被告辩称其平价宾馆平均房价不足 100 元。",
+          en: "Orange Hotel sues Pingdingshan 'Orange Inn' for trademark infringement, seeking 100K yuan compensation claiming 5M+ yuan losses. Defendant argues average room price under 100 yuan.",
+        },
+      },
+      {
+        title: {
+          zh: "12 岁女孩感冒服药店违规配药后急性心衰死亡",
+          en: "12-Year-Old Dies After Pharmacy's Illegally Compounded Cold Medicine",
+        },
+        description: {
+          zh: "吉林松原一名 12 岁女孩因感冒服用药店违规配制的 7 种药物（含处方药）后突发急性心衰死亡，法医鉴定药物对死亡起促进作用。",
+          en: "A 12-year-old in Jilin dies of acute heart failure after taking 7 illegally compounded drugs (including prescription) from a pharmacy. Autopsy finds drugs contributed to death.",
+        },
+      },
+      {
+        title: {
+          zh: "浙江夜市柠檬茶从 10 元卷到 2 元",
+          en: "Night Market Lemon Tea Prices Crash from 10 to 2 Yuan",
+        },
+        description: {
+          zh: "浙江丽水夜市三四家手打柠檬茶摊位价格战，单价从 10 元逐日降至 2 元。有摊主挂出标语不为赚钱只为卷死同行。",
+          en: "Lishui night market sees lemon tea price war among 3-4 stalls, prices dropping from 10 to 2 yuan. One vendor's sign: 'Not for profit, just to bankrupt competitors.'",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-06-25",
+    date: "2026-06-25",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-25",
+      en: "🤖 AI HOT Daily · Jun 25, 2026",
+    },
+    summary: {
+      zh: "OpenAI Bidi 1 双向语音模型测试中，Qwen-AgentWorld 开源超越 GPT-5.4，Gemini 3.5 Flash 集成计算机使用，豆包专业版正式推出，OpenAI 与 Broadcom 发布 Jalapeño 推理芯片，NSA 失去 Mythos 访问权限，DFlash 块扩散模型提升 15 倍吞吐。",
+      en: "OpenAI Bidi 1 bidirectional voice model in testing, Qwen-AgentWorld open-sourced beats GPT-5.4, Gemini 3.5 Flash gets computer use, Doubao Pro launches, OpenAI & Broadcom unveil Jalapeño inference chip, NSA loses Mythos access, DFlash boosts throughput 15x.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI ChatGPT 语音最大规模升级：Bidi 1 双向模型",
+          en: "OpenAI's Biggest Voice Upgrade: Bidi 1 Bidirectional Model",
+        },
+        description: {
+          zh: "双向 AI 语音模型 Bidi 1，支持边说话边监听，用户可在对话中途打断并发出新指令。尚未官宣，本周启动更大范围测试。",
+          en: "Bidi 1 bidirectional voice model supports simultaneous speaking and listening, allowing users to interrupt mid-conversation with new instructions. Not yet officially announced; wider testing this week.",
+        },
+      },
+      {
+        title: {
+          zh: "Qwen-AgentWorld 开源：让 Agent 学会先预测再行动",
+          en: "Qwen-AgentWorld Open-Sourced: Predict Before Acting",
+        },
+        description: {
+          zh: "首个原生语言世界模型，覆盖 MCP、Search、Terminal、SWE、Web、OS、Android 七大领域，基于超 1000 万条真实交互轨迹训练，在 AgentWorldBench 超越 GPT-5.4 和 Claude Opus 4.8。",
+          en: "First native language world model covering MCP, Search, Terminal, SWE, Web, OS, Android. Trained on 10M+ real interaction trajectories, surpassing GPT-5.4 and Claude Opus 4.8 on AgentWorldBench.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 3.5 Flash 集成计算机使用能力",
+          en: "Gemini 3.5 Flash Gains Computer Use Capability",
+        },
+        description: {
+          zh: "Google 将 Computer use 作为内置工具集成至 Gemini 3.5 Flash，支持跨浏览器、移动端和桌面环境的智能体操作，新增对抗训练降低提示注入风险。",
+          en: "Google integrates computer use as a built-in tool for Gemini 3.5 Flash, supporting agent operations across browser, mobile, and desktop environments with new adversarial training.",
+        },
+      },
+      {
+        title: {
+          zh: "豆包专业版正式推出：500 元/月",
+          en: "Doubao Pro Officially Launched: 500 Yuan/Month",
+        },
+        description: {
+          zh: "基于豆包 2.1 系列大模型，支持操作本地电脑、浏览器、调用 Skills 技能、定时任务，内置 Office 办公套件。标准套餐 68 元/月，专业版 500 元/月。",
+          en: "Based on Doubao 2.1 models, supports local computer control, browser operations, Skills, scheduled tasks, and built-in Office suite. Standard 68 yuan/month, Pro 500 yuan/month.",
+        },
+      },
+      {
+        title: {
+          zh: "Figma Config 2026：AI 画布能力来自第三方",
+          en: "Figma Config 2026: Canvas AI Powered by Third Parties",
+        },
+        description: {
+          zh: "Figma 扩展设计画布至代码、动画、3D。AI 功能依赖 Anthropic、OpenAI、Google 外部模型，推理成本挤压利润率。",
+          en: "Figma expands canvas to code, animation, and 3D. AI features rely on external models from Anthropic, OpenAI, and Google, with inference costs squeezing margins.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 与 Broadcom 发布 Jalapeño 定制推理芯片",
+          en: "OpenAI & Broadcom Unveil Jalapeño Custom Inference Chip",
+        },
+        description: {
+          zh: "OpenAI 与 Broadcom 联合推出专为大语言模型推理优化的定制 AI 芯片 Jalapeño，旨在提升性能、效率与规模。",
+          en: "OpenAI and Broadcom jointly unveil Jalapeño, a custom AI chip optimized for large language model inference, targeting improved performance, efficiency, and scale.",
+        },
+      },
+      {
+        title: {
+          zh: "NSA 因与 Anthropic 纠纷失去 Mythos 访问权限",
+          en: "NSA Loses Mythos Access Amid Dispute with Anthropic",
+        },
+        description: {
+          zh: "NSA 因与 Anthropic 的纠纷，失去了对 Mythos 系统的访问权限。Mythos 此前被披露数小时内攻破 NSA 机密系统。",
+          en: "The NSA has lost access to the Mythos system due to a dispute with Anthropic. Mythos was previously revealed to have breached NSA classified systems within hours.",
+        },
+      },
+      {
+        title: {
+          zh: "DFlash：块扩散草稿模型实现最高 15 倍吞吐量提升",
+          en: "DFlash: Block Diffusion Drafting Achieves 15x Throughput",
+        },
+        description: {
+          zh: "UC San Diego 提出 DFlash，一次前向推理生成整块 token，在 NVIDIA Blackwell 上 gpt-oss-120b 模型吞吐量提升最高 15 倍，约 EAGLE-3 的 1.5 倍。",
+          en: "UC San Diego proposes DFlash generating whole token blocks in one forward pass. Up to 15x throughput improvement on NVIDIA Blackwell for gpt-oss-120b, ~1.5x EAGLE-3.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 被认为取代工程岗，但数据显示工程是 2025 年最具韧性岗位",
+          en: "Engineering: The Most Resilient Job of 2025 Despite AI Fears",
+        },
+        description: {
+          zh: "SignalFire 数据显示工程岗是 2025 年最具韧性岗位。大型科技公司工程岗仅降 11%，早期初创公司工程师招聘比 2019 年增长 7%。",
+          en: "SignalFire data shows engineering is the most resilient job of 2025. Big tech engineering roles only declined 11%, while early-stage startup engineering hiring grew 7% vs 2019.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-5.5 Instant 新版本发布：对话更有趣",
+          en: "New GPT-5.5 Instant: More Engaging Conversations",
+        },
+        description: {
+          zh: "新版 GPT-5.5 Instant 更好理解问题背后意图并调整回应，能更可靠处理复杂约束，面向付费和免费用户逐步推送。",
+          en: "Updated GPT-5.5 Instant better understands intent behind questions and adapts responses accordingly, handling complex constraints more reliably. Rolling out to paid and free users.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-24-hot",
     date: "2026-06-24",
     title: {
