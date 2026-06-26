@@ -31,6 +31,236 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-26-hot",
+    date: "2026-06-26",
+    title: {
+      zh: "🔥 今日热点 · 2026-06-26",
+      en: "🔥 Hot Topics · Jun 26, 2026",
+    },
+    summary: {
+      zh: "德国爆冷输球坑苦韩国，金价跌回3字头半年回撤30%，重卡司机称换不起85万纯电重卡，中国单兵激光武器亮相，苹果涨价iPhone未涨，考生8次模考失利高考逆袭652分，全世界都在针对韩国队，日本7.2级地震中国游客亲历，多人将两女子关铁笼游街系摆拍，佛得角队门将不用担心失业了。",
+      en: "Germany's upset loss hurts South Korea, gold price drops 30% in half year, truck drivers can't afford $117K electric trucks, China's portable laser weapon debuts, Apple hikes prices but not iPhone, student scores 652 after 8 failed mock exams, world 'targeting' South Korea, Chinese tourist experiences Japan 7.2 quake, 'women in cage parade' video staged, Cape Verde goalkeeper won't worry about unemployment.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "德国爆冷输球坑苦韩国",
+          en: "Germany's Upset Loss Hurts South Korea",
+        },
+        description: {
+          zh: "2026美加墨世界杯E组末轮，已提前锁定小组头名的德国1比2输给厄瓜多尔，最冤的却是不在E组的韩国，他们算好的出线账被德国搅乱。",
+          en: "Group E finale: already-qualified Germany loses 1-2 to Ecuador, inadvertently screwing over South Korea's qualification math.",
+        },
+      },
+      {
+        title: {
+          zh: "金价跌回3字头 半年回撤30%",
+          en: "Gold Price Drops 30% in Half Year",
+        },
+        description: {
+          zh: "伦敦金现货价格盘中跌破4000美元/盎司至3958美元，较年初5598美元历史高点回撤近30%，白银同期跌幅超50%。",
+          en: "London spot gold跌破$4000/oz to $3958, down nearly 30% from Jan high of $5598. Silver down over 50% in same period.",
+        },
+      },
+      {
+        title: {
+          zh: "重卡司机称换不起85万的纯电重卡",
+          en: "Truck Drivers Can't Afford $117K Electric Trucks",
+        },
+        description: {
+          zh: "纯电重卡落地价85万元（柴油车仅40万），虽有车电分离新政将门槛降至40万，但换电站标准不互通、电池估值体系缺失，政策落地仍有堵点。",
+          en: "Electric trucks cost 850K yuan vs 400K for diesel. Despite new 'battery-separation' policy lowering barrier to 400K, lack of standards and battery valuation system hinders adoption.",
+        },
+      },
+      {
+        title: {
+          zh: "中国单兵激光武器亮相",
+          en: "China's Portable Laser Weapon Debuts",
+        },
+        description: {
+          zh: "哈尔滨新光光电展出利剑系列单兵激光武器，重25公斤，射程500米，4秒内烧毁无人机，冷却不足5秒，单套约200万元。",
+          en: "Harbin Xinguang displays 'Sword' series portable laser weapon: 25kg, 500m range, burns drones in 4s, <5s cooldown, ~2M yuan per unit.",
+        },
+      },
+      {
+        title: {
+          zh: "苹果涨价iPhone未涨 官方回应",
+          en: "Apple Hikes Prices But Not iPhone",
+        },
+        description: {
+          zh: "苹果全球官网上调Mac、iPad及家居产品价格，iPhone全系暂未调价。官方回应因AI数据中心扩张导致存储芯片成本上涨。",
+          en: "Apple raises Mac, iPad, and home product prices globally. iPhone untouched. Official reason: storage chip costs rising due to AI data center expansion.",
+        },
+      },
+      {
+        title: {
+          zh: "考生8次模考失利 高考逆袭652分",
+          en: "Student Scores 652 After 8 Failed Mock Exams",
+        },
+        description: {
+          zh: "深圳市宝安中学考生马平川在经历8次模考考砸后，高考以652分逆袭，其父手持向日葵激动不已。",
+          en: "Ma Pingchuan from Shenzhen Bao'an Middle School scored 652 on Gaokao after 8 failed mock exams. His emotional father held sunflowers in celebration.",
+        },
+      },
+      {
+        title: {
+          zh: "亲历日本7.2级地震的中国游客住14楼",
+          en: "Chinese Tourist Experiences Japan 7.2 Quake on 14th Floor",
+        },
+        description: {
+          zh: "日本岩手县附近海域发生7.2级地震，一名在青森县旅游的中国游客描述住14楼旅馆经历剧烈晃动，随后驱车前往内陆避险。",
+          en: "A 7.2 quake struck off Iwate, Japan. A Chinese tourist in Aomori described violent shaking on the 14th floor of a hotel before evacuating inland by car.",
+        },
+      },
+      {
+        title: {
+          zh: "多人将两女子关铁笼游街系摆拍",
+          en: "Women in Cage Video: Staged for Attention",
+        },
+        description: {
+          zh: "网传多人将两女子关铁笼游街视频，经核查系何某为博流量纠集8人策划拍摄，已被刑事拘留。",
+          en: "Viral video of women in a cage paraded through streets was staged by a man seeking online attention. He and 8 accomplices detained.",
+        },
+      },
+      {
+        title: {
+          zh: "佛得角队门将不用担心失业了",
+          en: "Cape Verde Goalkeeper Won't Worry About Unemployment",
+        },
+        description: {
+          zh: "在世界杯上大放异彩的佛得角队40岁门将沃津尼亚，至少已有三家巴西俱乐部对其抛出橄榄枝。",
+          en: "Cape Verde's 40-year-old goalkeeper Vozinha, who shined at the World Cup, has received interest from at least three Brazilian clubs.",
+        },
+      },
+      {
+        title: {
+          zh: "学霸考683分仍觉郁闷：不上不下",
+          en: "683 Points but Still Unhappy: Awkward Score Zone",
+        },
+        description: {
+          zh: "长沙学生刘仁铭高考683分，却因分数不上不下而郁闷。该成绩可冲刺北大强基计划，或选择复旦、浙大、交大等。",
+          en: "Liu Renming scored 683 on Gaokao but is unhappy with his 'awkward' score. Can aim for Peking University or choose Fudan, Zhejiang, or Shanghai Jiao Tong.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-06-26",
+    date: "2026-06-26",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-26",
+      en: "🤖 AI HOT Daily · Jun 26, 2026",
+    },
+    summary: {
+      zh: "Ornith-1.0 开源 Agentic Coding 模型家族发布，OpenRouter MCP 服务器发布，Midjourney 预览 V8.2，Codex 在 ChatGPT 移动 App 可用，Runway 发布 Agent 2.0，美国政府要求 OpenAI 暂缓 GPT-5.6 发布，Anthropic 指控阿里巴巴非法获取 Claude，General Intuition 获 3.2 亿美元融资用游戏数据训练 AI，IBM 发布亚纳米级芯片技术，AI 经济年化收入超 1750 亿美元。",
+      en: "Ornith-1.0 open-source Agentic Coding model family, OpenRouter MCP server launched, Midjourney previews V8.2, Codex available in ChatGPT mobile, Runway launches Agent 2.0, US govt asks OpenAI to delay GPT-5.6, Anthropic accuses Alibaba of illicitly extracting Claude, General Intuition raises $320M for game-data AI training, IBM unveils sub-1nm chip tech, AI economy annualized revenue exceeds $175B.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Ornith-1.0 开源模型家族发布，专注 Agentic Coding",
+          en: "Ornith-1.0 Open-Source Model Family for Agentic Coding",
+        },
+        description: {
+          zh: "覆盖 9B Dense 至 397B MoE 全参数规模，SWE-Bench Verified 82.4、Terminal-Bench 2.1 达 77.5，全系列 MIT 开源。",
+          en: "Covers 9B Dense to 397B MoE scales, achieves SWE-Bench 82.4 and Terminal-Bench 2.1 77.5, fully MIT open-source.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter MCP 服务器发布",
+          en: "OpenRouter MCP Server Launched",
+        },
+        description: {
+          zh: "为编程智能体提供实时模型数据、基准排名、定价和文档查询，一键安装支持 Claude Code、Codex CLI、Cursor 等客户端。",
+          en: "Provides coding agents with real-time model data, benchmarks, pricing, and docs. One-click install supports Claude Code, Codex CLI, Cursor.",
+        },
+      },
+      {
+        title: {
+          zh: "Midjourney 预览 V8.2 并加速草稿模式",
+          en: "Midjourney Previews V8.2, Speeds Up Draft Mode",
+        },
+        description: {
+          zh: "加入 --preview 参数体验 V8.2 美学效果，草稿模式支持 --sref random 随机风格，探索速度比之前快 24 倍。",
+          en: "New --preview parameter for V8.2 aesthetics. Draft mode supports --sref random for style exploration, 24x faster than before.",
+        },
+      },
+      {
+        title: {
+          zh: "Codex 在 ChatGPT 移动 App 正式可用",
+          en: "Codex Now Available in ChatGPT Mobile App",
+        },
+        description: {
+          zh: "OpenAI 宣布 Codex 在 ChatGPT 移动应用中开放，新增一对一设备配对实现更安全的手机与电脑连接及目标、通知等功能。",
+          en: "OpenAI announces Codex in ChatGPT mobile app with device pairing for secure phone-computer connection, goals, notifications, and side chat.",
+        },
+      },
+      {
+        title: {
+          zh: "Runway 发布 Agent 2.0 营销 AI",
+          en: "Runway Launches Agent 2.0 for Marketing",
+        },
+        description: {
+          zh: "帮助营销人员创建、测试和优化广告、视频及营销活动，支持自动本地化、多格式裁切、绩效数据分析，面向所有用户开放。",
+          en: "Helps marketers create, test, and optimize ads, videos, and campaigns with auto-localization, multi-format cropping, and performance analytics.",
+        },
+      },
+      {
+        title: {
+          zh: "美国政府要求 OpenAI 暂缓 GPT-5.6 广泛发布",
+          en: "US Gov't Asks OpenAI to Delay GPT-5.6 Wide Release",
+        },
+        description: {
+          zh: "美国政府因安全顾虑要求 OpenAI 暂缓 GPT-5.6 广泛发布，改为受控预览版，由政府逐客户审批准入。",
+          en: "US government cites safety concerns, requests controlled preview instead of wide release, with per-client government approval.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 指控阿里巴巴非法获取 Claude 模型能力",
+          en: "Anthropic Accuses Alibaba of Illicitly Extracting Claude",
+        },
+        description: {
+          zh: "Anthropic 指控阿里巴巴未经授权提取其 Claude AI 模型能力，阿里巴巴尚未公开回应。",
+          en: "Anthropic alleges Alibaba extracted Claude AI model capabilities without authorization. Alibaba has not publicly responded.",
+        },
+      },
+      {
+        title: {
+          zh: "General Intuition 完成 3.2 亿美元融资",
+          en: "General Intuition Raises $320M for Game-Data AI",
+        },
+        description: {
+          zh: "从 Medal 平台获取数亿小时游戏操作数据训练单一模型，AI 连续运行 100 小时，机器人仅靠 8 分钟真实数据微调即可自主探索。",
+          en: "Uses hundreds of millions of hours of gaming data from Medal to train a single model. AI runs 100h, robots explore with just 8 min real-world fine-tuning.",
+        },
+      },
+      {
+        title: {
+          zh: "IBM 首度推出亚纳米级芯片技术（0.7 nm）",
+          en: "IBM Debuts Sub-1nm Chip Technology (0.7nm)",
+        },
+        description: {
+          zh: "指甲盖大小集成近 1000 亿个晶体管，性能最高提升 50%，能效最高提升 70%，预计 5 年内量产。",
+          en: "Nearly 100 billion transistors in a fingernail-sized chip, up to 50% performance boost, 70% energy efficiency gain, mass production ~5 years.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 经济年化收入超 1750 亿美元",
+          en: "AI Economy Annualized Revenue Exceeds $175B",
+        },
+        description: {
+          zh: "过去 12 个月 AI 实际营收 1100 亿美元，年化超 1750 亿，增长速度约为移动/互联网浪潮的 3 倍。Token 降价每 10% 刺激 12-18% 用量增长。",
+          en: "AI actual revenue $110B over past 12 months, annualized over $175B, growth ~3x faster than mobile/internet revolution. Every 10% token price drop drives 12-18% usage growth.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-25-hot",
     date: "2026-06-25",
     title: {
