@@ -31,6 +31,236 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-27-hot",
+    date: "2026-06-27",
+    title: {
+      zh: "🔥 今日热点 · 2026-06-27",
+      en: "🔥 Hot Topics · Jun 27, 2026",
+    },
+    summary: {
+      zh: "世界冠军与亚洲冠军同时出局世界杯，本周中国多领域解锁硬核成就，男生考703分烦恼上北大还是清华，百花奖启动初评投票，网民侮辱张桂梅校长被行拘，天下苦话费贵久矣，黄金大跌多家银行发布公告，美军深夜空袭伊朗，昔日汽车经销巨头转型包租公，最佳抗糖运动出炉。",
+      en: "World Cup champions Uruguay and Asian champions Saudi Arabia both eliminated, China achieves multiple tech breakthroughs, student scores 703 torn between Peking and Tsinghua, Hundred Flowers Awards voting begins, netizen detained for insulting educator Zhang Guimei, phone bill complaints surge, gold plunges banks issue warnings, US airstrike on Iran overnight, auto dealer giant turns landlord, best anti-diabetes exercise revealed.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "世界冠军与亚洲冠军同时出局",
+          en: "World Cup & Asian Champions Eliminated Together",
+        },
+        description: {
+          zh: "世界杯H组爆惊天冷门，两届世界杯冠军乌拉圭与三届亚洲冠军沙特阿拉伯双双出局，H组晋级的是西班牙和首次参赛便震惊世界的佛得角。",
+          en: "Group H shocker: two-time World Cup winners Uruguay and three-time Asian champions Saudi Arabia both eliminated. Spain and debutants Cape Verde advance.",
+        },
+      },
+      {
+        title: {
+          zh: "本周中国多领域解锁硬核成就",
+          en: "China Achieves Multiple Tech Breakthroughs This Week",
+        },
+        description: {
+          zh: "中国超算灵晟登顶全球榜首、国产存储斩获双料冠军、世界第一高坝首台机组并网发电，彰显科技创新活力。",
+          en: "China's 'Lingsheng' supercomputer tops global rankings, domestic storage wins dual championships, world's tallest dam's first unit goes online.",
+        },
+      },
+      {
+        title: {
+          zh: "男生考703分也烦恼：上北大还是清华",
+          en: "703 Points, One Problem: Which Top University to Choose?",
+        },
+        description: {
+          zh: "河南项城考生获703分（全省第39名），清华、北大招生组连夜登门争抢生源，家庭面临择校的幸福烦恼。",
+          en: "Henan student scores 703 (39th in province). Both Tsinghua and Peking University admissions teams rushed to his home overnight.",
+        },
+      },
+      {
+        title: {
+          zh: "百花奖启动初评投票",
+          en: "Hundred Flowers Awards Begin Preliminary Voting",
+        },
+        description: {
+          zh: "第38届大众电影百花奖参评影片和单项经全国观众投票，将评选出每个奖项6个提名。",
+          en: "The 38th Hundred Flowers Awards: nationwide audience voting will determine 6 nominations per category from eligible films.",
+        },
+      },
+      {
+        title: {
+          zh: "网民公然侮辱张桂梅校长被行拘",
+          en: "Netizen Detained for Insulting Educator Zhang Guimei",
+        },
+        description: {
+          zh: "一名女子为发泄私愤发布侮辱张桂梅校长及挑起地域歧视言论，被公安部门行政拘留十日，责令删除全部违规内容。",
+          en: "A woman was detained for 10 days for posting insults against educator Zhang Guimei and inciting regional discrimination. Ordered to delete all offensive content.",
+        },
+      },
+      {
+        title: {
+          zh: "天下苦话费贵久矣",
+          en: "Phone Bill Complaints Surge Across China",
+        },
+        description: {
+          zh: "深圳消费者269元套餐销户时发现同城更低资费，广西用户29元套餐被单方面调至98元，客服拒绝恢复。运营商存在价格不透明和杀熟行为。",
+          en: "Shenzhen user found cheaper local rates when canceling 269 yuan plan. Guangxi user's 29 yuan plan unilaterally raised to 98 yuan. Opaque pricing and price discrimination exposed.",
+        },
+      },
+      {
+        title: {
+          zh: "黄金大跌 多家银行发布公告",
+          en: "Gold Plunges, Multiple Banks Issue Warnings",
+        },
+        description: {
+          zh: "金价持续大跌，多家银行发布风险公告，提醒投资者注意贵金属市场波动风险。",
+          en: "Gold prices continue to fall sharply. Multiple banks issue risk warnings advising investors of precious metal market volatility.",
+        },
+      },
+      {
+        title: {
+          zh: "美军深夜空袭伊朗",
+          en: "US Military Launches Night Airstrike on Iran",
+        },
+        description: {
+          zh: "美军深夜对伊朗发动空袭，地区紧张局势进一步升级。",
+          en: "US forces launched airstrikes on Iran overnight, escalating regional tensions.",
+        },
+      },
+      {
+        title: {
+          zh: "昔日汽车经销巨头转型包租公",
+          en: "Former Auto Dealer Giant Reinvents as Landlord",
+        },
+        description: {
+          zh: "广汇汽车全面退出新车销售业务，转型自有物业租赁、汽车经销、售后维修。巅峰时期曾拥有超700个网点，代理57个品牌。",
+          en: "Guanghui Auto exits new car sales, pivots to property leasing, auto dealership, and after-sales repair. Once had 700+ locations and 57 brands at its peak.",
+        },
+      },
+      {
+        title: {
+          zh: "最佳抗糖运动出炉",
+          en: "Best Anti-Diabetes Exercise Revealed",
+        },
+        description: {
+          zh: "最新研究公布最佳抗糖运动为抗阻运动（力量训练），每天十几分钟，糖尿病风险下降27%。",
+          en: "Latest study reveals resistance training as the best anti-diabetes exercise. Just 10+ minutes daily reduces diabetes risk by 27%.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-06-27",
+    date: "2026-06-27",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-27",
+      en: "🤖 AI HOT Daily · Jun 27, 2026",
+    },
+    summary: {
+      zh: "OpenAI 预览 GPT-5.6 Sol，纽约时报修订诉讼指控微软为 OpenAI 建造版权侵权超级计算机，近400家美国报纸起诉微软和OpenAI，小鹏 CEO 称 2026 年底自动驾驶可合法进入全球，Cursor 研究发现奖励攻击虚增编码智能体基准分数，Anthropic 发布 AI 经济指数使用节奏报告，小互IP Studio 开源含31个原创角色，Leaf 开源项目将网红做成实时通话 AI 分身，AI 聊天机器人被指存在左翼偏见，Claude Code 6个实用 Hook 玩法。",
+      en: "OpenAI previews GPT-5.6 Sol, NYT amends lawsuit accusing Microsoft of building supercomputer for OpenAI's copyright infringement, 400 US newspapers sue Microsoft and OpenAI, XPeng CEO says autonomous driving legal globally by end of 2026, Cursor study finds reward hacking inflates coding agent benchmarks, Anthropic Economic Index reveals usage patterns, Xiaohu IP Studio open-sourced with 31 original characters, Leaf project turns streamers into real-time AI avatars, AI chatbots found to have left-wing bias, 6 practical Claude Code Hook tips.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI 预览新一代模型 GPT-5.6 Sol",
+          en: "OpenAI Previews Next-Gen Model GPT-5.6 Sol",
+        },
+        description: {
+          zh: "OpenAI 发布 GPT-5.6 Sol 预览，定位为新一代模型，目前仅公开标题，尚未披露具体技术细节。",
+          en: "OpenAI releases preview of GPT-5.6 Sol, positioned as the next-generation model. Only the title has been revealed so far; no technical details disclosed.",
+        },
+      },
+      {
+        title: {
+          zh: "纽约时报修订诉讼，指控微软为 OpenAI 建侵权超级计算机",
+          en: "NYT Amends Lawsuit: Microsoft Built Supercomputer for OpenAI Infringement",
+        },
+        description: {
+          zh: "纽约时报修订版权诉讼，指控微软建造超级计算机主动鼓励 OpenAI 窃取其作品。微软称修订是挽救不利先例的最后手段。",
+          en: "NYT amends copyright lawsuit, alleging Microsoft built a supercomputer to actively encourage OpenAI to infringe its works. Microsoft calls it 'a last-ditch effort to salvage an unfavorable precedent.'",
+        },
+      },
+      {
+        title: {
+          zh: "近400家美国报纸起诉微软和 OpenAI",
+          en: "Nearly 400 US Newspapers Sue Microsoft and OpenAI",
+        },
+        description: {
+          zh: "代表近 400 家纸媒的出版商联盟起诉微软和 OpenAI，指控其未经授权抓取新闻内容训练 AI 模型。OpenAI 回应训练数据符合合理使用原则。",
+          en: "A coalition representing nearly 400 newspapers sues Microsoft and OpenAI for unauthorized use of news content in AI training. OpenAI claims fair use.",
+        },
+      },
+      {
+        title: {
+          zh: "小鹏 CEO：2026 年底自动驾驶可合法进入全球",
+          en: "XPeng CEO: Autonomous Driving Legal Globally by End of 2026",
+        },
+        description: {
+          zh: "联合国 WP29 批准 DCAS 与 UNR ADS 自动驾驶法规，DCAS 六个月后成为欧盟强制法规，2026 年底自动驾驶可合法进入全球。",
+          en: "UN WP29 approves DCAS and UNR ADS autonomous driving regulations. DCAS becomes mandatory in EU in 6 months. Global legal autonomous driving by end of 2026.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 研究：奖励攻击虚增编码智能体基准分数",
+          en: "Cursor Study: Reward Hacking Inflates Coding Agent Benchmarks",
+        },
+        description: {
+          zh: "审计 731 条 Opus 4.8 Max 轨迹显示 63% 成功修复来自检索，严格隔离后分数从 87.1% 降至 73.0%。建议严格测试环境获取可信分数。",
+          en: "Audit of 731 Opus 4.8 Max traces reveals 63% of successful fixes came from retrieval. After strict isolation, scores dropped from 87.1% to 73.0%.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 发布 AI 经济指数：使用节奏报告",
+          en: "Anthropic Economic Index: AI Usage Rhythms Revealed",
+        },
+        description: {
+          zh: "工作日个人对话占约 35%，周末升至近 50%。新闻请求集中在早 7 点，食谱在下午 6 点达 2.3 倍，睡眠建议凌晨 3 点最多。",
+          en: "Personal conversations account for ~35% on weekdays, rising to nearly 50% on weekends. News requests peak at 7 AM, recipes 2.3x at 6 PM, sleep advice peaks at 3 AM.",
+        },
+      },
+      {
+        title: {
+          zh: "小互IP Studio 开源，含31个原创角色",
+          en: "Xiaohu IP Studio Open-Sourced with 31 Original Characters",
+        },
+        description: {
+          zh: "包含 31 个原创角色及配图方法论，Agent 自动读取文章、规划配图类型、生成并自查返工。默认手绘线稿淡彩画风，备 5 种皮肤可切换。",
+          en: "31 original characters + illustration methodology. Agent auto-reads articles, plans illustration types, generates and self-checks. Default hand-drawn line art style with 5 skin options.",
+        },
+      },
+      {
+        title: {
+          zh: "Leaf 开源项目：将网红做成实时通话 AI 分身",
+          en: "Leaf: Open-Source Real-Time AI Avatars of Streamers",
+        },
+        description: {
+          zh: "集成实时对话、音色克隆和人格注入，工程延迟压到 1 秒内。普通人半小时可跑通，填两个 API Key 即可使用。",
+          en: "Integrates real-time conversation, voice cloning, and personality injection with <1s latency. Anyone can set it up in 30 minutes with just two API keys.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 聊天机器人存在左翼偏见",
+          en: "AI Chatbots Found to Have Left-Wing Bias",
+        },
+        description: {
+          zh: "华盛顿邮报调查显示 AI 在约 30 项政策议题上存在左翼偏见，GPT-5.5 仅给出左倾立场占 80%，问题在于模型在展现权衡前已用单一道德框架压缩政治分歧。",
+          en: "Washington Post study finds AI leans left on ~30 policy issues. GPT-5.5 presents only left-wing arguments 80% of the time, compressing political diversity into a single moral framework.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 6个实用 Hook 玩法",
+          en: "6 Practical Claude Code Hook Techniques",
+        },
+        description: {
+          zh: "Claude Code 内置近 30 个 Hook 事件，运行时不消耗 token。6 个玩法：权限弹窗、开机日程播报、自动生成摘要卡片、整理下载文件夹、久坐提醒、手机推送。",
+          en: "Claude Code has ~30 built-in Hook events that consume zero tokens at runtime. 6 uses: permission popups, daily agenda on startup, auto-summary cards, download folder cleanup, sedentary reminders, push notifications.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-26-hot",
     date: "2026-06-26",
     title: {
