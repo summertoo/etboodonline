@@ -31,6 +31,236 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-28-hot",
+    date: "2026-06-28",
+    title: {
+      zh: "🔥 今日热点 · 2026-06-28",
+      en: "🔥 Hot Topics · Jun 28, 2026",
+    },
+    summary: {
+      zh: "世界杯32强全部出炉伊朗最后时刻出局，人造太阳取得重要突破，韩国队正式出局，德国人为抢中国空调开始氪金，乌拉圭队取消包机球员自行返程，伊朗打击8处美军设施，三战高考女孩查分大哭，C罗将对阵莫德里奇，韩媒气到给主帅打码，未来5年充电供热供暖将有大变化。",
+      en: "World Cup final 32 confirmed as Iran eliminated at last moment, China's artificial sun achieves major breakthrough, South Korea officially eliminated, Germans pay for Chinese AC restock alerts, Uruguay cancels charter flights after humiliating exit, Iran strikes 8 US military facilities, girl cries after passing Gaokao on 3rd attempt, Ronaldo vs Modric in Round of 32, Korean media blurs coach's face in shame, major changes coming to China's energy infrastructure.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "世界杯32强全部出炉，伊朗最后时刻出局",
+          en: "World Cup Final 32 Set, Iran Eliminated at Last Moment",
+        },
+        description: {
+          zh: "小组赛收官，约旦1-3阿根廷，阿尔及利亚3-3奥地利。32强全部落定：亚洲2队、欧洲13队、非洲9队、南美5队、中北美3队。伊朗压哨出局。",
+          en: "Group stage concludes: Jordan 1-3 Argentina, Algeria 3-3 Austria. Final 32 set: 2 Asia, 13 Europe, 9 Africa, 5 South America, 3 CONCACAF. Iran eliminated at the buzzer.",
+        },
+      },
+      {
+        title: {
+          zh: "人造太阳取得重要突破",
+          en: "China's Artificial Sun Achieves Major Breakthrough",
+        },
+        description: {
+          zh: "中科院合肥物质科学研究院人造太阳项目环向场磁体完成制备验收，高温超导中心螺管线圈磁体完成满工况测试，核心性能达国际领先水准。",
+          en: "Hefei Institute's artificial sun project: toroidal field magnet completes fabrication and acceptance, HTS central solenoid coil passes full-load testing, core performance reaches world-leading levels.",
+        },
+      },
+      {
+        title: {
+          zh: "韩国队出局",
+          en: "South Korea Eliminated from World Cup",
+        },
+        description: {
+          zh: "民主刚果3-1逆转乌兹别克斯坦后积4分出线，韩国队被挤出小组第三横向积分榜前八，彻底无缘32强淘汰赛。",
+          en: "DR Congo beats Uzbekistan 3-1 to advance with 4 points, pushing South Korea out of the top-8 third-place rankings and eliminating them from the knockout stage.",
+        },
+      },
+      {
+        title: {
+          zh: "德国人为抢中国空调开始氪金了",
+          en: "Germans Pay for Chinese AC Restock Alerts as Heatwave Hits",
+        },
+        description: {
+          zh: "西欧热浪侵袭德国多地超37℃，国产免安装移动空调爆火脱销。德国开发者搭建付费信息站，用户花2.69欧元获取空调补货通知。",
+          en: "Western Europe heatwave: German temps exceed 37°C. Chinese portable ACs sell out. A German developer creates a paid notification service for restock alerts at 2.69 EUR.",
+        },
+      },
+      {
+        title: {
+          zh: "乌拉圭队取消包机，球员将自行返程",
+          en: "Uruguay Cancels Charter Flights After Humiliating Exit",
+        },
+        description: {
+          zh: "乌拉圭小组赛末轮输给西班牙垫底出局，足协取消国家队包机，勒令球员自行回国。",
+          en: "Uruguay finishes last in group after losing to Spain. FA cancels charter flight, orders players to return home on their own.",
+        },
+      },
+      {
+        title: {
+          zh: "伊朗打击8处美军设施",
+          en: "Iran Strikes 8 US Military Facilities",
+        },
+        description: {
+          zh: "伊朗对8处美军设施发动打击，中东地区紧张局势进一步升级。",
+          en: "Iran launches strikes on 8 US military facilities, escalating tensions in the Middle East.",
+        },
+      },
+      {
+        title: {
+          zh: "三战高考女孩查分大哭看哭网友",
+          en: "Girl Cries After Passing Gaokao on 3rd Attempt",
+        },
+        description: {
+          zh: "山东济宁播音生董同学经历三次高考，前两年分别以1分、6分之差与中传失之交臂，第三次以495分圆梦，查分时激动大哭。",
+          en: "Dong from Shandong takes Gaokao for the third time, after missing Communication University of China by 1 and 6 points in previous years. Scores 495 and bursts into tears.",
+        },
+      },
+      {
+        title: {
+          zh: "C罗将对阵莫德里奇",
+          en: "Ronaldo to Face Modric in Round of 32",
+        },
+        description: {
+          zh: "葡萄牙0-0战平哥伦比亚小组第二出线，1/16决赛将对阵克罗地亚，C罗与莫德里奇将上演巅峰对决。",
+          en: "Portugal draws 0-0 with Colombia, advances as group runner-up. Faces Croatia in Round of 32: Ronaldo vs Modric showdown.",
+        },
+      },
+      {
+        title: {
+          zh: "韩媒气到给主帅打码",
+          en: "Korean Media Blurs Coach's Face in Disgrace",
+        },
+        description: {
+          zh: "韩国KBS电视台在报道国家队主帅洪明甫采访时，将其脸部打上马赛克，通常只用于嫌疑犯的处理方式引发热议。",
+          en: "KBS blurs coach Hong Myung-bo's face during news interview — a treatment usually reserved for criminal suspects — sparking heated debate.",
+        },
+      },
+      {
+        title: {
+          zh: "未来5年充电供热供暖将有大变化",
+          en: "Major Changes Coming to China's Energy Infrastructure",
+        },
+        description: {
+          zh: "新型能源体系建设十五五规划提出提高民生用能电气化水平，2030年人均年生活用电量达1500千瓦时。",
+          en: "The 15th Five-Year Plan for new energy systems targets higher electrification for households, with per capita annual residential electricity reaching 1,500 kWh by 2030.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-06-28",
+    date: "2026-06-28",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-28",
+      en: "🤖 AI HOT Daily · Jun 28, 2026",
+    },
+    summary: {
+      zh: "阿里千问输入法上线 macOS 版最快300字/分，Runway API 推出广告本地化 Recipe，SpaceX 注册 SpaceXAI 商标将合并 xAI，苹果 Vision 负责人跳槽 OpenAI，1-5月电子行业利润增103.9%，Raise Us 启动筹集10亿美元应对 AI 就业冲击，AI 账单失控后 DeepSeek 成香饽饽，DeepSeek 开源 DSpark 投机解码框架加速60-85%，一次失败的民族国家攻击剖析，2026年6月值得关注的开放权重模型。",
+      en: "Alibaba Qianwen IME launches on macOS with 300 chars/min AI voice input, Runway API introduces ad localization Recipe, SpaceX registers SpaceXAI trademark plans to merge xAI, Apple Vision VP jumps to OpenAI, China's electronics industry profits surge 103.9% Jan-May, Raise Us launches $1B retraining program for AI-displaced workers, US companies switch 100% to DeepSeek as AI bills spiral, DeepSeek open-sources DSpark speculative decoding framework boosting speed 60-85%, dissection of a failed nation-state attack, open-weight models that matter in June 2026.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "阿里千问输入法上线 macOS 版：最快300字/分",
+          en: "Alibaba Qianwen IME Launches on macOS: 300 Chars/Min",
+        },
+        description: {
+          zh: "AI 语音输入最快300字/分，自动润色、口语转工整文字，支持9种方言，纯净无广告。iOS、Android、Windows 版即将发布。",
+          en: "AI voice input up to 300 chars/min, auto-polishing, speech-to-text, 9 dialects supported. Clean and ad-free. iOS, Android, Windows versions coming soon.",
+        },
+      },
+      {
+        title: {
+          zh: "Runway API 推出广告本地化 Recipe",
+          en: "Runway API Launches Ad Localization Recipe",
+        },
+        description: {
+          zh: "通过单次 API 调用即可翻译静态广告和图形资产，实现广告本地化。",
+          en: "Single API call to translate static ads and graphic assets for localization.",
+        },
+      },
+      {
+        title: {
+          zh: "SpaceX 注册 SpaceXAI 商标，将合并 xAI",
+          en: "SpaceX Registers SpaceXAI Trademark, Plans xAI Merger",
+        },
+        description: {
+          zh: "埃隆·马斯克表示 xAI 将解散并入 SpaceXAI，成为 SpaceX 的 AI 产品部门，不再作为独立公司运营。",
+          en: "Elon Musk announces xAI will dissolve and merge into SpaceXAI, becoming SpaceX's AI product division rather than an independent company.",
+        },
+      },
+      {
+        title: {
+          zh: "苹果 Vision 负责人跳槽 OpenAI",
+          en: "Apple Vision VP Jumps to OpenAI",
+        },
+        description: {
+          zh: "苹果 Vision 产品组副总裁 Paul Meade 离职加入 OpenAI 硬件部门。首款触控 OLED MacBook 使用 M5 Pro/Max 芯片，年底到2027年初发布。",
+          en: "Apple's VP of Vision products Paul Meade leaves for OpenAI's hardware division. First touch OLED MacBook with M5 Pro/Max chip coming late 2026 to early 2027.",
+        },
+      },
+      {
+        title: {
+          zh: "1-5月电子行业利润增103.9%",
+          en: "China Electronics Industry Profits Surge 103.9% Jan-May",
+        },
+        description: {
+          zh: "电子行业利润增103.9%，主因全球AI技术变革推动高端算力芯片和存储芯片需求爆发。高技术制造业利润增44.7%。",
+          en: "Electronics profits surge 103.9% driven by global AI demand for high-performance compute and memory chips. High-tech manufacturing profits up 44.7%.",
+        },
+      },
+      {
+        title: {
+          zh: "Raise Us启动：筹集10亿美元应对AI就业冲击",
+          en: "Raise Us Launches $1B Initiative for AI Job Displacement",
+        },
+        description: {
+          zh: "前美商务部长 Raimondo 发起非营利组织，为 AI 经济下工人再培训筹集10亿美元，已锁定5亿。Amazon、Anthropic、Microsoft、OpenAI 等支持。",
+          en: "Former US Commerce Secretary Raimondo launches nonprofit to raise $1B for worker retraining in the AI economy. $500M secured. Supported by Amazon, Anthropic, Microsoft, OpenAI.",
+        },
+      },
+      {
+        title: {
+          zh: "AI账单失控后 DeepSeek 成香饽饽",
+          en: "US Companies Switch to DeepSeek as AI Bills Spiral",
+        },
+        description: {
+          zh: "美国企业AI账单超支，旧金山公司 Lindy 已将100%流量切换到 DeepSeek，预计每月节省数百万美元。企业开始采用按任务匹配模型的模型路由策略。",
+          en: "US companies overspend on AI. SF-based Lindy moves 100% traffic to DeepSeek, saving millions monthly. Enterprises adopt model routing to match tasks to the right model.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 开源 DSpark 投机解码框架",
+          en: "DeepSeek Open-Sources DSpark Speculative Decoding",
+        },
+        description: {
+          zh: "DSpark 通过半自回归生成实现无损加速。生产环境下 V4-Flash 和 V4-Pro 每用户生成速度较基线分别提升60-85%和57-78%。",
+          en: "DSpark achieves lossless acceleration via semi-autoregressive generation. V4-Flash and V4-Pro per-user speed improve 60-85% and 57-78% over baseline respectively.",
+        },
+      },
+      {
+        title: {
+          zh: "一次失败的民族国家攻击剖析",
+          en: "Dissecting a Failed Nation-State Attack",
+        },
+        description: {
+          zh: "作者收到伪装 VC 面试的虚假邮件，Claude 扫描发现 TypeScript patch 中隐藏 base64 混淆后门 PinpinRAT，目标是作者的 Rust 包。",
+          en: "Author receives fake VC interview email. Claude scans and discovers hidden base64-obfuscated backdoor 'PinpinRAT' in a TypeScript patch targeting the author's Rust package.",
+        },
+      },
+      {
+        title: {
+          zh: "2026年6月值得关注的开放权重模型",
+          en: "Open-Weight Models That Matter — June 2026",
+        },
+        description: {
+          zh: "OpenRouter 发布截至2026年6月四个最值得关注的开放权重模型及各自最佳使用场景。",
+          en: "OpenRouter highlights the four most notable open-weight models as of June 2026 and their best use cases.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-27-hot",
     date: "2026-06-27",
     title: {
