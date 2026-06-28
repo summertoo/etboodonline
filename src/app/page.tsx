@@ -324,6 +324,13 @@ export default function Homepage() {
   const [wishMessageType, setWishMessageType] = useState<"success" | "error">(
     "success",
   );
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowScrollTop(window.scrollY > 300);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   async function submitWish() {
     const text = wishText.trim();
@@ -930,6 +937,30 @@ export default function Homepage() {
           <p className="cyber-subtitle text-sm">{t("footer.copyright")}</p>
         </div>
       </footer>
+
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className={`fixed bottom-6 right-4 z-50 w-9 h-9 flex items-center justify-center rounded-full border border-[var(--cyber-border)] bg-[var(--cyber-bg)]/80 backdrop-blur-sm text-[var(--cyber-muted)] hover:text-[var(--cyber-hover-pink)] hover:border-[var(--cyber-hover-pink)] transition-all duration-300 shadow-lg ${
+          showScrollTop
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-4 pointer-events-none"
+        }`}
+        aria-label={lang === "zh" ? "返回顶部" : "Back to top"}
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M8 13V3" />
+          <path d="M3 7l5-5 5 5" />
+        </svg>
+      </button>
     </div>
   );
 }
