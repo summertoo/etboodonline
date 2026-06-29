@@ -31,6 +31,206 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-29-hot",
+    date: "2026-06-29",
+    title: {
+      zh: "🔥 今日热点 · 2026-06-29",
+      en: "🔥 Hot Topics · Jun 29, 2026",
+    },
+    summary: {
+      zh: "法国紧急下单3万台空调应对热浪，韩国媒体破防被中国球迷当笑柄，宜宾地震食客避难后折返无人逃单，葫芦岛居民楼爆炸致3人失联，韩国主帅辞职念完稿双手插兜离场，利率一再降存款搬家搬去哪，中方将20家日本实体列入出口管制名单，欧洲人驾车200公里抢购中国空调，中国战机大片上新，中俄联合巡航阵容强大日本慌了。",
+      en: "France urgently orders 30,000 ACs as heatwave kills ~1,000, Korean media melts down over Chinese fans' mockery, Yibin earthquake diners return to pay bills after evacuating, Huludao explosion leaves 3 missing, South Korea coach resigns hands in pockets, interest rates keep falling where does savings go, China sanctions 20 Japanese entities, Europeans drive 200km for Chinese ACs, China releases epic fighter jet film, China-Russia joint patrol rattles Japan.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "法国紧急下单3万台空调",
+          en: "France Orders 30,000 ACs Amid Deadly Heatwave",
+        },
+        description: {
+          zh: "高温峰值三天内法国超额死亡约1000人，卫生部长宣布紧急下单3万台空调，预计未来几天配送到医院。",
+          en: "~1,000 excess deaths in 3 days during heatwave peak. Health minister orders 30,000 ACs for hospital delivery in coming days.",
+        },
+      },
+      {
+        title: {
+          zh: "韩国媒体破防：被中国球迷当笑柄",
+          en: "Korean Media Melts Down Over Chinese Fans' Mockery",
+        },
+        description: {
+          zh: "韩国队世界杯出局后遭中国网民调侃登顶热搜，韩媒感慨韩国队被当成热议笑柄。",
+          en: "After South Korea's World Cup exit, Chinese netizens mock the team to trending topic status. Korean media laments being a laughingstock.",
+        },
+      },
+      {
+        title: {
+          zh: "宜宾地震食客避难后折返 无人逃单",
+          en: "Yibin Earthquake: Diners Evacuate, Return to Pay Bills",
+        },
+        description: {
+          zh: "四川宜宾突发5.5级地震，烧烤店食客仓促撤离后竟再折返继续用餐，无一桌逃单。",
+          en: "A 5.5 quake strikes Yibin, Sichuan. BBQ diners evacuate then return to finish their meals. Every single table paid.",
+        },
+      },
+      {
+        title: {
+          zh: "葫芦岛居民楼爆炸致3人失联",
+          en: "Huludao Explosion: 3 Missing, 8 Injured",
+        },
+        description: {
+          zh: "葫芦岛市一居民楼发生疑似液化气泄漏闪爆，导致3人失联、8人轻微伤，事故原因正在调查。",
+          en: "Suspected gas leak explosion in a Huludao residential building leaves 3 missing and 8 with minor injuries. Cause under investigation.",
+        },
+      },
+      {
+        title: {
+          zh: "韩国主帅辞职 念完稿双手插兜离场",
+          en: "South Korea Coach Quits: Reads Statement, Leaves Hands in Pockets",
+        },
+        description: {
+          zh: "洪明甫新闻发布会上宣读辞职声明后未接受提问，双手插兜径直离场，被韩媒批评嘴上说抱歉态度却敷衍。",
+          en: "Hong Myung-bo reads resignation statement, takes no questions, walks off hands in pockets. Korean media slams his dismissive attitude.",
+        },
+      },
+      {
+        title: {
+          zh: "利率一再降 存款搬家搬去哪",
+          en: "Interest Rates Keep Falling: Where Does Savings Go?",
+        },
+        description: {
+          zh: "市场利率持续下降，长期高息存单逐步下架，居民到期存款再配置成难题，理财产品成为新选择。",
+          en: "Market rates keep dropping, long-term high-yield deposits phased out. Residents face reallocation challenges as wealth management products gain traction.",
+        },
+      },
+      {
+        title: {
+          zh: "中方将20家日本实体列入出口管制名单",
+          en: "China Sanctions 20 Japanese Entities",
+        },
+        description: {
+          zh: "商务部宣布将防卫研究所等参与提升日本军事实力的20家日本实体列入出口管制管控名单，以维护国家安全。",
+          en: "Ministry of Commerce adds 20 Japanese entities involved in military capability enhancement to export control list for national security.",
+        },
+      },
+      {
+        title: {
+          zh: "欧洲人驾车200公里抢购中国空调",
+          en: "Europeans Drive 200km to Buy Chinese ACs",
+        },
+        description: {
+          zh: "欧洲多国破纪录高温超40℃，中国移动分体式空调免打孔安装价格优势被抢购，有消费者驱车200公里跨国购买，现货溢价超100欧元。",
+          en: "Record heat waves across Europe exceed 40°C. Chinese portable split ACs sell out due to easy installation and price. Some drive 200km across borders, spot premiums over €100.",
+        },
+      },
+      {
+        title: {
+          zh: "中国战机大片上新",
+          en: "China Releases Epic Fighter Jet Film",
+        },
+        description: {
+          zh: "运-20列装空军十周年之际，8K视觉片《扶摇直上九万里》记录运-20十年航迹，展现大机群出动、为歼-20空中加油等震撼场景。",
+          en: "On 10th anniversary of Y-20 service, 8K film 'Soaring 90,000 Li' documents the heavy transport aircraft's decade of service featuring mass deployments and J-20 aerial refueling.",
+        },
+      },
+      {
+        title: {
+          zh: "中俄联合巡航阵容强大 日本慌了",
+          en: "China-Russia Joint Patrol Rattles Japan",
+        },
+        description: {
+          zh: "中俄空军在日本海、东海、太平洋西部实施第11次联合空中战略巡航，日本防卫省紧急升空战机应对。",
+          en: "China and Russia conduct 11th joint air patrol over Sea of Japan, East China Sea, and western Pacific. Japan scrambles fighter jets in response.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-06-29",
+    date: "2026-06-29",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-29",
+      en: "🤖 AI HOT Daily · Jun 29, 2026",
+    },
+    summary: {
+      zh: "Grok 4.5 私测于 SpaceX 和 Tesla 性能接近 Opus，新浪开源 VibeThinker-3B 推理可压缩事实知识不能，Wayfinder Router 实现本地/托管 LLM 查询路由，Adrafinil 仅 AI agent 工作时阻止 Mac 睡眠，仅三个AI模型在500天创业测试中盈利超起始资本，四大顶级AI对决《文明VI》暴露感知与执行短板，开源模型生态扩展 NVIDIA Cohere 等发布新模型。",
+      en: "Grok 4.5 tested at SpaceX and Tesla approaches Opus performance, Sina open-sources VibeThinker-3B showing reasoning compresses but knowledge doesn't, Wayfinder Router enables deterministic LLM query routing, Adrafinil prevents Mac sleep only during AI agent work, only 3 AI models profitable in 500-day startup simulation, top AIs play Civilization VI exposing perception gaps, open-source model ecosystem expands with NVIDIA and Cohere releases.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Grok 4.5 私测于 SpaceX 和 Tesla，性能接近 Opus",
+          en: "Grok 4.5 Tested at SpaceX & Tesla, Nears Opus Performance",
+        },
+        description: {
+          zh: "基于1.5T V9基础模型，补充训练中加入 Cursor 数据。初步评估性能接近或超越 Opus。SpaceX 将每月发布完全从头训练的新模型。",
+          en: "Based on 1.5T V9 base model with Cursor data in supplemental training. Early evaluations show performance near or surpassing Opus. SpaceX to release monthly retrained models.",
+        },
+      },
+      {
+        title: {
+          zh: "新浪开源 VibeThinker-3B：推理可压缩，事实知识不能",
+          en: "Sina Open-Sources VibeThinker-3B: Reasoning Compresses, Knowledge Doesn't",
+        },
+        description: {
+          zh: "仅3B参数，AIME26等基准持平 DeepSeek V3.2 等大200-333倍模型，但知识密集型 GPQA-Diamond 大幅落后。提出参数压缩-覆盖假说，已开源。",
+          en: "Only 3B params, matches DeepSeek V3.2 (200-333x larger) on AIME26 benchmarks, but falls behind on knowledge-heavy GPQA-Diamond. Proposes 'parameter compression-coverage hypothesis.'",
+        },
+      },
+      {
+        title: {
+          zh: "Wayfinder Router：本地/托管 LLM 查询路由",
+          en: "Wayfinder Router: Deterministic LLM Query Routing",
+        },
+        description: {
+          zh: "通过分析提示词结构在微秒级完成路由决策，完全离线无需调用其他模型。支持任何 OpenAI 兼容 API，可自托管。",
+          en: "Microsecond-level routing decisions by analyzing prompt structure. Fully offline, no external model calls. Supports any OpenAI-compatible API, self-hostable.",
+        },
+      },
+      {
+        title: {
+          zh: "Adrafinil：仅 AI agent 工作时阻止 Mac 睡眠",
+          en: "Adrafinil: Prevent Mac Sleep Only During AI Agent Work",
+        },
+        description: {
+          zh: "支持 Claude Code、Codex、Cursor、Gemini CLI、Aider 等9种 AI coding agent，无 agent 工作时合盖后 Mac 正常睡眠。",
+          en: "Supports 9 AI coding agents including Claude Code, Codex, Cursor, Gemini CLI, Aider. Mac sleeps normally when no agent is running.",
+        },
+      },
+      {
+        title: {
+          zh: "仅三个AI模型在500天创业测试中盈利超起始资本",
+          en: "Only 3 AI Models Profitable in 500-Day Startup Test",
+        },
+        description: {
+          zh: "普林斯顿 CEO-Bench 基准中，14个模型仅 Claude Fable 5（4715万美元）、Opus 4.8（2780万）和 GPT-5.5（2130万）超过100万起始资本。多数模型在模拟结束前破产。",
+          en: "Princeton's CEO-Bench: of 14 models, only Claude Fable 5 ($47.15M), Opus 4.8 ($27.8M), and GPT-5.5 ($21.3M) exceeded $1M starting capital. Most went bankrupt before the simulation ended.",
+        },
+      },
+      {
+        title: {
+          zh: "四大顶级AI对决《文明VI》，暴露感知与执行短板",
+          en: "Top AIs Play Civilization VI: Exposing Perception & Execution Gaps",
+        },
+        description: {
+          zh: "Claude、GPT-5.4、Gemini 3.1 Pro 等进行23场《文明VI》对局。AI 主动检查全局状态仅占1-2%，计划后10回合内执行率仅48-66%。",
+          en: "Claude, GPT-5.4, Gemini 3.1 Pro play 23 games of Civilization VI. AI proactively checks game state only 1-2% of turns. Plan execution rate within 10 turns: just 48-66%.",
+        },
+      },
+      {
+        title: {
+          zh: "Artifacts 22：开源模型生态扩展，NVIDIA 和 Cohere 发布新模型",
+          en: "Artifacts 22: Open-Source Ecosystem Expands with NVIDIA & Cohere",
+        },
+        description: {
+          zh: "开源模型生态变得更多元，从中国公司扩展到全球各类组织。NVIDIA 发布 Nemotron-3-Ultra-550B，Cohere 以 Apache 2.0 开源旗舰模型。",
+          en: "Open-source model landscape diversifies globally. NVIDIA releases Nemotron-3-Ultra-550B, Cohere open-sources flagship model under Apache 2.0.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-28-hot",
     date: "2026-06-28",
     title: {
