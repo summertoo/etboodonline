@@ -31,6 +31,236 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-06-30-hot",
+    date: "2026-06-30",
+    title: {
+      zh: "🔥 今日热点 · 2026-06-30",
+      en: "🔥 Hot Topics · Jun 30, 2026",
+    },
+    summary: {
+      zh: "德国点球大战不敌巴拉圭连续三届无缘16强，张雪一句是我们引发岛内热议，7月1日起一批新规落地，巴西补时绝杀日本，马航370搜寻将延长，教育部披露高考生篡改7名同学志愿，解放军黄岩岛战备警巡驱离菲方飞机，德国队主帅为爆冷出局道歉，泰山景区建135公里刀片刺绳隔离网引争议，孙颖莎横扫刘杨子取得开门红。",
+      en: "Germany eliminated on penalties by Paraguay for 3rd consecutive World Cup failure, Zhang Xue's 'it's us' comment sparks Taiwan debate, new regulations take effect July 1, Brazil scores stoppage-time winner against Japan, MH370 search extended, student hacked 7 classmates' Gaokao志愿, PLA patrols Huangyan Island drives away Philippine aircraft, Germany coach apologizes for shock exit, Mount Tai builds 135km razor wire fence sparking controversy, Sun Yingsha sweeps Liu Yangzi at WTT.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "德国点球大战不敌巴拉圭，连续三届无缘16强",
+          en: "Germany Out on Penalties: 3rd Consecutive World Cup Failure",
+        },
+        description: {
+          zh: "1/16决赛巴拉圭点球4-3（总5-4）淘汰德国，德国连续三届世界杯无缘16强，队史首次点球大战失利。",
+          en: "Paraguay beats Germany 4-3 on penalties (5-4 agg). Germany misses knockout stage for 3rd straight World Cup, first penalty shootout loss in team history.",
+        },
+      },
+      {
+        title: {
+          zh: "张雪的一句「是我们」引发岛内热议",
+          en: "Zhang Xue's 'It's Us' Comment Sparks Taiwan Debate",
+        },
+        description: {
+          zh: "国产摩托车品牌创始人张雪直播中对台湾车主说「不是你们，是我们」，车主随即改口「就是我们」，迅速引发岛内热议。",
+          en: "Chinese motorcycle brand founder Zhang Xue tells Taiwanese owner 'not you, it's us' during livestream. Owner quickly agrees, sparking heated discussion across the strait.",
+        },
+      },
+      {
+        title: {
+          zh: "7月1日起一批新规即将落地",
+          en: "New Regulations Take Effect July 1",
+        },
+        description: {
+          zh: "新修订行政复议法实施条例、对外投资领域首部行政法规、超龄劳动者基本权益保障新规等同步实施。",
+          en: "Revised Administrative Reconsideration regulations, first overseas investment administrative regulation, and new rules protecting elderly workers take effect simultaneously.",
+        },
+      },
+      {
+        title: {
+          zh: "巴西补时绝杀日本",
+          en: "Brazil Scores Stoppage-Time Winner Against Japan",
+        },
+        description: {
+          zh: "1/16决赛巴西凭借补时阶段的绝杀进球2-1击败日本晋级16强，日本主帅森保一赛后鞠躬致歉称自己水平不够。",
+          en: "Brazil beats Japan 2-1 with stoppage-time winner in Round of 32. Japan coach Moriyasu bows in apology, says 'I'm not good enough.'",
+        },
+      },
+      {
+        title: {
+          zh: "马航370搜寻最新消息",
+          en: "MH370 Search to Continue",
+        },
+        description: {
+          zh: "马来西亚交通部宣布将延长与水下探测公司海洋无限的协议期限，继续在印度洋南部海域搜寻马航370残骸。",
+          en: "Malaysia extends agreement with Ocean Infinity to continue searching for MH370 wreckage in the southern Indian Ocean.",
+        },
+      },
+      {
+        title: {
+          zh: "教育部披露：高考生篡改7名同学志愿",
+          en: "Student Hacked 7 Classmates' Gaokao志愿",
+        },
+        description: {
+          zh: "一名高考生因嫉妒心作祟登录7名同学账号篡改第一志愿，教育部发布预警要求保护个人信息严防志愿被篡改。",
+          en: "A Gaokao student logs into 7 classmates' accounts out of jealousy and alters their first-choice universities. Ministry of Education issues warning.",
+        },
+      },
+      {
+        title: {
+          zh: "解放军黄岩岛战备警巡 驱离菲方飞机",
+          en: "PLA Patrols Huangyan Island, Drives Away Philippine Aircraft",
+        },
+        description: {
+          zh: "南部战区组织海空兵力在黄岩岛领海领空常态战备警巡，空军飞行员依法依规驱离菲律宾飞机。",
+          en: "PLA Southern Theater conducts combat-ready patrols in Huangyan Island's territorial waters and airspace. Pilot lawfully drives away Philippine aircraft.",
+        },
+      },
+      {
+        title: {
+          zh: "德国队主帅为爆冷出局道歉",
+          en: "Germany Coach Apologizes for Shock Exit",
+        },
+        description: {
+          zh: "纳格尔斯曼称执教生涯最痛苦一天，德国点球不敌巴拉圭，连续三届世界杯止步16强。",
+          en: "Nagelsmann calls it the most painful day of his coaching career as Germany loses to Paraguay on penalties, failing to reach Round of 16 for 3rd straight World Cup.",
+        },
+      },
+      {
+        title: {
+          zh: "泰山景区建135公里刀片刺绳隔离网",
+          en: "Mount Tai Builds 135km Razor Wire Fence, Sparking Controversy",
+        },
+        description: {
+          zh: "泰山景区建成135公里刀片刺绳隔离网属防火防虫工程，市民担心破坏景观和阻隔野生动物迁徙，景区各部门未有效回应。",
+          en: "Mount Tai builds 135km razor wire fence for fire and pest prevention. Citizens worry about landscape damage and wildlife barriers. Scenic area authorities remain unresponsive.",
+        },
+      },
+      {
+        title: {
+          zh: "孙颖莎横扫刘杨子 取得开门红",
+          en: "Sun Yingsha Sweeps Liu Yangzi at WTT US Smash",
+        },
+        description: {
+          zh: "孙颖莎在WTT美国大满贯女单1/32决赛中以3-0横扫澳大利亚选手刘杨子，取得开门红。",
+          en: "Sun Yingsha dominates Liu Yangzi (Australia) 3-0 in WTT US Smash women's singles Round of 32, securing a dominant opening win.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-06-30",
+    date: "2026-06-30",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-06-30",
+      en: "🤖 AI HOT Daily · Jun 30, 2026",
+    },
+    summary: {
+      zh: "美团 LongCat Owl Alpha 1.6万亿MoE成OpenRouter最流行模型，Cursor for iOS 公测版发布，EverOS 开源 Markdown 优先智能体记忆运行时，小红书 RedKnot 推理引擎加速长文本，国务院印发教育十五五规划推进 AI 全学段教育，Rubin Ultra 取消新版尺寸性能减半，美军用 AI 选目标误炸伊朗学校致约120儿童死亡，三星 SK 海力士计划投资5900亿美元扩产芯片，Meta 发布 Brain2Qwerty v2 非侵入式实时句子解码，Claude Code 打开 GitHub 仓库即执行隐藏恶意代码。",
+      en: "Meituan LongCat Owl Alpha (1.6T MoE) becomes most popular model on OpenRouter, Cursor for iOS beta launches, EverOS open-sources Markdown-first agent memory runtime, Xiaohongshu RedKnot inference engine accelerates long context, China's 15th Five-Year Plan mandates AI education across all grades, Rubin Ultra cancelled new version half the size, US military AI targeting mistakenly bombs Iran school killing ~120 children, Samsung & SK Hynix plan $590B chip investment, Meta releases Brain2Qwerty v2 for non-invasive sentence decoding, Claude Code executes hidden malware from GitHub repos.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "美团 LongCat Owl Alpha 成 OpenRouter 最流行模型",
+          en: "Meituan LongCat Owl Alpha: OpenRouter's Most Popular Model",
+        },
+        description: {
+          zh: "1.6万亿参数 MoE，35万亿 tokens 训练，完全在5万块国产ASIC上完成。OpenRouter 上累计消耗10万亿 tokens，每日调用量全球Top 3。",
+          en: "1.6T parameter MoE trained on 35T tokens entirely on 50K domestic ASICs. 10T tokens consumed on OpenRouter, top 3 globally in daily calls.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor for iOS 公测版发布",
+          en: "Cursor for iOS Beta Launched",
+        },
+        description: {
+          zh: "开发者可在手机上启动云端智能体或远程操控电脑端智能体。支持语音输入、锁屏 Live Activities 推送通知。云端智能体在隔离虚拟机中运行。",
+          en: "Launch cloud agents or remotely control desktop agents from your phone. Voice input, lock screen Live Activities. Cloud agents run in isolated VMs.",
+        },
+      },
+      {
+        title: {
+          zh: "EverOS：开源 Markdown 优先智能体记忆运行时",
+          en: "EverOS: Open-Source Markdown-First Agent Memory Runtime",
+        },
+        description: {
+          zh: "EverMind 推出开源智能体记忆运行时（Apache 2.0），以 Markdown 文件为记忆主体，支持混合检索与自进化技能，LoCoMo 得分93.05%。",
+          en: "EverMind launches Apache 2.0 agent memory runtime using Markdown files as memory primitives with hybrid retrieval and self-evolving skills. LoCoMo score: 93.05%.",
+        },
+      },
+      {
+        title: {
+          zh: "小红书 RedKnot 推理引擎：加速长文本",
+          en: "Xiaohongshu RedKnot: Long-Context Inference Acceleration",
+        },
+        description: {
+          zh: "按注意力头维度拆解 KV Cache，8卡 H800 上 TTFT 最高加速1.6–3.54×，单卡并发提升4.7–7.8×，DeepSeek-V4-Flash 128K 上下文 TTFT 加速达5.16×。",
+          en: "Decomposes KV Cache by attention head. On 8x H800: TTFT speeds up 1.6-3.54x, per-GPU concurrency up 4.7-7.8x. DeepSeek-V4-Flash 128K context TTFT up 5.16x.",
+        },
+      },
+      {
+        title: {
+          zh: "国务院印发教育十五五规划，推进 AI 全学段教育",
+          en: "China's 15th Five-Year Plan Mandates AI Education Across All Grades",
+        },
+        description: {
+          zh: "要求推进人工智能全学段教育，提升学生 AI 素养，加强科学素养和创新能力培养，目标到2030年高质量教育体系基本建成。",
+          en: "Requires AI education across all school levels, improving student AI literacy, strengthening scientific innovation training. Target: high-quality education system by 2030.",
+        },
+      },
+      {
+        title: {
+          zh: "Rubin Ultra 取消，新版尺寸性能减半",
+          en: "NVIDIA Rubin Ultra Cancelled, New Version Half the Size",
+        },
+        description: {
+          zh: "NVIDIA 原4-die Rubin Ultra 因制造执行问题被取消，新版尺寸减半，实际性能约原版一半。",
+          en: "NVIDIA's 4-die Rubin Ultra canceled due to manufacturing issues. Replacement is half the size with roughly half the performance.",
+        },
+      },
+      {
+        title: {
+          zh: "美军用 AI 选目标却误炸伊朗学校",
+          en: "US Military AI Targeting Mistakenly Bombs Iran School",
+        },
+        description: {
+          zh: "美军首次大规模使用AI选择目标，但对一所学校的导弹袭击导致约120名儿童死亡。信息因系统未连接而从未送达指挥官。",
+          en: "First large-scale US military AI targeting results in missile strike on a school, killing ~120 children. Critical intel never reached commanders due to disconnected systems.",
+        },
+      },
+      {
+        title: {
+          zh: "三星和 SK 海力士计划投资5900亿美元扩产芯片",
+          en: "Samsung & SK Hynix Plan $590B Chip Investment",
+        },
+        description: {
+          zh: "AI数据中心需求驱动内存价格飙升，Jefferies预测2026 Q3内存价格将上涨40-50%。两家公司控制全球近80%高带宽内存市场。",
+          en: "AI data center demand drives memory prices up. Jefferies forecasts 40-50% price increase in Q3 2026. Two companies control ~80% of global HBM market.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 发布 Brain2Qwerty v2：非侵入式实时句子解码",
+          en: "Meta Brain2Qwerty v2: Non-Invasive Real-Time Sentence Decoding",
+        },
+        description: {
+          zh: "基于 Nature 发表的 v1，v2 从字符级性能提升至解码单词和语义，有望帮助因脑损伤无法沟通的人群。",
+          en: "Building on Nature-published v1, v2 improves from character-level to word and semantic decoding, potentially helping those unable to communicate due to brain injury.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 打开 GitHub 仓库即执行隐藏恶意代码",
+          en: "Claude Code Executes Hidden Malware from GitHub Repos",
+        },
+        description: {
+          zh: "安全研究人员发现新攻击向量，Claude Code 在设置过程中自动运行含反向 shell 的脚本。建议运行前显示 setup 脚本内容。",
+          en: "New attack vector discovered: Claude Code auto-runs scripts with reverse shells during setup. Security researchers recommend showing setup script content before execution.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-29-hot",
     date: "2026-06-29",
     title: {
