@@ -31,6 +31,236 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-01-hot",
+    date: "2026-07-01",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-01",
+      en: "🔥 Hot Topics · Jul 1, 2026",
+    },
+    summary: {
+      zh: "庆祝中国共产党成立105周年大会举行，香港街头挂满国旗区旗迎回归29周年，哈兰德绝杀创5大纪录挪威晋级，卢卡申科出席儿子北大毕业典礼，沃尔玛永辉小象超市抽检沦陷，东风17实弹发射影像首次公开，机器人伴侣订单破1万仅限成人购买，詹姆斯正式发声告别湖人，王曼昱爆冷0-3不敌佐藤瞳，义乌商贸城9.42平商铺拍出1700万。",
+      en: "CPC celebrates 105th anniversary, Hong Kong streets adorned with national flags for 29th handover anniversary, Haaland scores winner breaks 5 records Norway advances, Lukashenko attends son's Peking University graduation, Walmart Yonghui Freshhema supermarket inspections fail, DF-17 live-fire footage released for first time, robot companion orders exceed 10K adults only, LeBron James officially says goodbye to Lakers, Wang Manyu stunned 0-3 by Sato Hitomi, Yiwu Market 9.42sqm shop sells for 17M yuan.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "庆祝中国共产党成立105周年大会",
+          en: "CPC Celebrates 105th Anniversary",
+        },
+        description: {
+          zh: "上午10时在人民大会堂隆重举行，习近平向七一勋章获得者颁授勋章并发表重要讲话，8名共产党员获颁党内最高荣誉。",
+          en: "Grand ceremony at the Great Hall of the People at 10 AM. Xi Jinping awards July 1 Medals and delivers important speech. 8 CPC members receive highest Party honor.",
+        },
+      },
+      {
+        title: {
+          zh: "香港街头挂满国旗区旗",
+          en: "Hong Kong Streets Adorned with National Flags",
+        },
+        description: {
+          zh: "香港回归祖国29周年，大街小巷挂满国旗和区旗，满城尽是中国红。",
+          en: "Hong Kong marks 29th anniversary of return to China. Streets and alleys decorated with national and regional flags in a sea of red.",
+        },
+      },
+      {
+        title: {
+          zh: "哈兰德绝杀创5大纪录",
+          en: "Haaland's Winner Breaks 5 Records",
+        },
+        description: {
+          zh: "世界杯1/16决赛挪威2-1力挫科特迪瓦，哈兰德上演绝杀。挪威时隔28年重返16强，1/8决赛将战巴西。",
+          en: "Norway beats Ivory Coast 2-1 in Round of 32 with a Haaland stoppage-time winner. Norway reaches Round of 16 for first time in 28 years, will face Brazil.",
+        },
+      },
+      {
+        title: {
+          zh: "卢卡申科出席儿子北大毕业典礼",
+          en: "Lukashenko Attends Son's Peking University Graduation",
+        },
+        description: {
+          zh: "白俄罗斯总统携小儿子尼古拉出席北京大学中白合作生物技术专业联培项目毕业典礼，称从未想过家中会走出生物技术人才。",
+          en: "Belarusian president attends son Nikolai's graduation from PKU's China-Belarus biotechnology joint program, saying he never expected a biotech specialist in the family.",
+        },
+      },
+      {
+        title: {
+          zh: "沃尔玛、永辉、小象超市抽检沦陷",
+          en: "Walmart, Yonghui, Freshhema Fail Food Safety Inspections",
+        },
+        description: {
+          zh: "深圳市监局抽检2305份食用农产品样品，86份不合格。沃尔玛、永辉超市、小象超市等知名品牌均存在不合格样品。",
+          en: "Shenzhen market watchdog tests 2,305 food samples, 86 fail. Walmart, Yonghui, and Freshhema all have non-compliant products. Follow-up actions underway.",
+        },
+      },
+      {
+        title: {
+          zh: "东风17实弹发射影像首次公开",
+          en: "DF-17 Live-Fire Footage Released for First Time",
+        },
+        description: {
+          zh: "中国战略导弹部队组建60周年纪念日，火箭军实战化演练公开，多款战略导弹集中亮相，东风17实弹发射影像首次公开。",
+          en: "On 60th anniversary of China's strategic missile force, PLA Rocket Force releases live-fire exercises featuring multiple strategic missiles, including first-ever DF-17 footage.",
+        },
+      },
+      {
+        title: {
+          zh: "机器人伴侣订单破1万 仅限成人购买",
+          en: "Robot Companion Orders Exceed 10K, Adults Only",
+        },
+        description: {
+          zh: "优必选发布超仿生人形机器人U1系列，主打日常陪伴与情绪支持，定价11.98万至99万元，订单已突破1万台，仅限成人购买。",
+          en: "UBTECH launches lifelike humanoid robot U1 series for companionship and emotional support. Priced 119,800-990,000 yuan. Orders exceed 10K, adults only.",
+        },
+      },
+      {
+        title: {
+          zh: "詹姆斯正式发声告别湖人",
+          en: "LeBron James Officially Says Goodbye to Lakers",
+        },
+        description: {
+          zh: "勒布朗·詹姆斯通过经纪人正式告知湖人队将离队，结束八年紫金生涯，进入完全自由球员市场。湖人官方发文告别。",
+          en: "LeBron James informs the Lakers he's leaving via his agent, ending his 8-year tenure in purple and gold. Enters unrestricted free agency. Lakers release farewell statement.",
+        },
+      },
+      {
+        title: {
+          zh: "王曼昱爆冷0-3不敌佐藤瞳",
+          en: "Wang Manyu Stunned 0-3 by Sato Hitomi at WTT",
+        },
+        description: {
+          zh: "WTT美国大满贯女单1/16决赛，世界排名第2的王曼昱状态不佳，爆冷0-3不敌日本削球手佐藤瞳，止步32强。",
+          en: "WTT US Smash women's singles: world No.2 Wang Manyu loses 0-3 to Japanese chopper Sato Hitomi in a major upset, eliminated in Round of 32.",
+        },
+      },
+      {
+        title: {
+          zh: "义乌商贸城9.42平商铺拍出1700万",
+          en: "Yiwu Market 9.42sqm Shop Sells for 17M Yuan",
+        },
+        description: {
+          zh: "义乌国际商贸城一区一处9.42平方米商铺以1700万元成交，折合单价约180.47万元/平方米，因位于人流密集连通处成为高价关键。",
+          en: "A 9.42sqm shop in Yiwu International Trade Market sells for 17M yuan (~180.47万/sqm). Prime location at intersection of zones drives the astronomical price.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-01",
+    date: "2026-07-01",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-07-01",
+      en: "🤖 AI HOT Daily · Jul 1, 2026",
+    },
+    summary: {
+      zh: "Claude Sonnet 5 发布性能接近 Opus 4.8，美团 LongCat-2.0 旗舰模型1.6T MoE原生1M上下文，X 发布 hosted X MCP 智能体可直连 X API，NotebookLM 短视频概览全量上线，Claude Desktop Linux 公测版推出，Claude Science 科研工作台正式上线，特斯拉 Cybercab 量产版公开道路测试，商务部解除 Claude Fable 5 出口管制，黑石拟投300亿美元在日本建 AI 数据中心，AI prover-verifier LLM 循环攻克9个未解数学难题。",
+      en: "Claude Sonnet 5 released approaching Opus 4.8 performance, Meituan LongCat-2.0 flagship 1.6T MoE with native 1M context, X launches hosted X MCP for agent API access, NotebookLM Short Video Overviews fully launched, Claude Desktop Linux beta available, Claude Science AI workbench goes live, Tesla Cybercab量产版 begins public road testing, Commerce Ministry lifts export controls on Claude Fable 5, Blackstone plans $30B AI data center investment in Japan, AI prover-verifier LLM loop solves 9 unsolved math problems.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Claude Sonnet 5 发布，性能接近 Opus 4.8",
+          en: "Claude Sonnet 5 Released, Approaches Opus 4.8 Performance",
+        },
+        description: {
+          zh: "Anthropic 最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低。",
+          en: "Anthropic's latest Sonnet model with planning, browser, and terminal tool use capabilities. Approaches Opus 4.8 performance at a lower price point.",
+        },
+      },
+      {
+        title: {
+          zh: "美团 LongCat-2.0 旗舰模型：1.6T MoE，原生1M上下文",
+          en: "Meituan LongCat-2.0: 1.6T MoE with Native 1M Context",
+        },
+        description: {
+          zh: "1.6T 参数 MoE 架构（约48B活跃参数），原生支持1M上下文窗口。定价 Input Cache $0.015/1M tokens。",
+          en: "1.6T parameter MoE (~48B active), native 1M context window. Input Cache priced at $0.015/1M tokens.",
+        },
+      },
+      {
+        title: {
+          zh: "X 发布 hosted X MCP，AI 智能体可直连 X API",
+          en: "X Launches Hosted X MCP for Direct Agent API Access",
+        },
+        description: {
+          zh: "X 官方推出 hosted X MCP，AI 智能体可通过 MCP 协议直接调用 X API 获取实时信息，支持 Grok、Cursor 等工具。",
+          en: "X officially launches hosted MCP server. AI agents can directly call X API via MCP protocol for real-time data. Supports Grok, Cursor, and more.",
+        },
+      },
+      {
+        title: {
+          zh: "NotebookLM 短视频概览功能全量上线",
+          en: "NotebookLM Short Video Overviews Fully Launched",
+        },
+        description: {
+          zh: "NotebookLM 向 Web 英文用户全量推出 Short Video Overviews 功能，可将复杂资料自动转化为60秒竖屏视频，深入讲解任意概念。",
+          en: "NotebookLM rolls out Short Video Overviews to all English web users. Automatically converts complex materials into 60-second vertical videos explaining concepts in depth.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Desktop Linux 公测版推出",
+          en: "Claude Desktop Linux Beta Released",
+        },
+        description: {
+          zh: "Claude Desktop 现已在 Linux（Ubuntu 和 Debian）推出测试版，提供包括 Claude Code 在内的一流桌面体验。",
+          en: "Claude Desktop beta now available on Linux (Ubuntu & Debian), delivering a first-class desktop experience including Claude Code.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Science 科研工作台正式上线",
+          en: "Claude Science AI Workbench Goes Live",
+        },
+        description: {
+          zh: "Anthropic 推出 AI 科研工作台，整合常用工具与计算资源，支持从文献分析到多步骤研究全流程。提供超60项预配置技能与连接器。",
+          en: "Anthropic launches AI research workbench integrating tools and compute resources. Supports end-to-end workflows from literature analysis to multi-step research. 60+ pre-configured skills.",
+        },
+      },
+      {
+        title: {
+          zh: "特斯拉 Cybercab 量产版公开道路测试",
+          en: "Tesla Cybercab Begins Public Road Testing",
+        },
+        description: {
+          zh: "特斯拉在奥斯汀公共道路启动首批量产版 Cybercab 工程测试。车辆无方向盘与脚踏板，配有安全监督员。从概念首秀到实车上路约20个月。",
+          en: "Tesla starts first production Cybercab engineering tests on Austin public roads. No steering wheel or pedals, safety attendant onboard. ~20 months from concept debut to real-world testing.",
+        },
+      },
+      {
+        title: {
+          zh: "商务部解除 Claude Fable 5 等出口管制",
+          en: "Commerce Ministry Lifts Export Controls on Claude Fable 5",
+        },
+        description: {
+          zh: "商务部已解除对 Claude Fable 5 和 Mythos 5 的出口管制，Anthropic 将从明天开始恢复访问，很快分享最新进展。",
+          en: "Ministry of Commerce lifts export controls on Claude Fable 5 and Mythos 5. Anthropic to restore access tomorrow and share updates soon.",
+        },
+      },
+      {
+        title: {
+          zh: "黑石拟投300亿美元在日本建 AI 数据中心",
+          en: "Blackstone Plans $30B AI Data Center Investment in Japan",
+        },
+        description: {
+          zh: "黑石计划未来3-5年在日本 AI 数据中心领域投资300亿美元，新增超1GW容量。黑石总裁认为AI投资仍处早期，真正风险是算力短缺。",
+          en: "Blackstone plans $30B investment in Japanese AI data centers over 3-5 years, adding 1GW+ capacity. President says AI investment is still early, real risk is compute shortage.",
+        },
+      },
+      {
+        title: {
+          zh: "AI prover-verifier LLM 循环攻克9个未解数学难题",
+          en: "AI Prover-Verifier LLM Loop Solves 9 Unsolved Math Problems",
+        },
+        description: {
+          zh: "AI Safety Memes 指出 AI 采用 prover-verifier LLM 循环刚刚解决了9个未解决的数学问题，但全球没有记者报道。",
+          en: "AI Safety Memes highlights that AI using prover-verifier LLM loops has just solved 9 previously unsolved math problems, yet no global news outlets have covered it.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-06-30-hot",
     date: "2026-06-30",
     title: {
