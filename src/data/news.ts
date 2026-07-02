@@ -31,6 +31,236 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-02-hot",
+    date: "2026-07-02",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-02",
+      en: "🔥 Hot Topics · Jul 2, 2026",
+    },
+    summary: {
+      zh: "越来越多公司证明AI无法替代人工，比利时内讧时对手都来劝架仍晋级，日本市民大排长龙买中国大疆相机，10人美国2-0波黑晋级16强，清华大学一本科生被公告退学，微波炉热菜微塑料飙升125倍，法博物馆长称若证实掠夺即刻归还中国文物，孙颖莎给勒布伦打趴下了，二手豪车大降价车商改干烧烤，杰伦布朗与保罗乔治互换。",
+      en: "More companies prove AI can't replace humans, Belgium infighting doesn't stop their advance as even opponents mediate, Japanese queue for hours to buy DJI cameras, 10-man USA beats Bosnia 2-0, Tsinghua student expelled, microwaving plastic releases 125x more microplastics, French museum director says will return looted Chinese artifacts immediately, Sun Yingsha crushes Lebrun, luxury used car prices plummet dealers switch to BBQ, Jaylen Brown and Paul George swap teams.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "越来越多公司证明AI无法替代人工",
+          en: "More Companies Prove AI Can't Replace Humans",
+        },
+        description: {
+          zh: "39%企业领导者因AI部署裁员，其中55%承认裁员是错误决定。专家指出人机协作比完全取代人类工作更有价值。",
+          en: "39% of business leaders have laid off workers due to AI deployment. 55% admit it was a mistake. Experts say human-AI collaboration is more valuable than full replacement.",
+        },
+      },
+      {
+        title: {
+          zh: "比利时内讧时对手都来劝架了",
+          en: "Belgium Infighting: Even Opponents Came to Mediate",
+        },
+        description: {
+          zh: "世界杯1/16决赛比利时0-2落后时内讧，蒂莱曼斯与特罗萨德激烈争吵，卢卡库和对方球员都来劝架。最终两人戏剧性连线，加时3-2逆转塞内加尔晋级。",
+          en: "Trailing 0-2 in Round of 32, Belgium teammates Tieleman & Trossard fight on pitch. Lukaku and even opponents mediate. They later combine for a dramatic equalizer, win 3-2 in extra time.",
+        },
+      },
+      {
+        title: {
+          zh: "日本市民大排长龙买中国相机",
+          en: "Japanese Queue for Hours to Buy DJI Pocket 4",
+        },
+        description: {
+          zh: "东京秋叶原等地市民平均排队9小时抢购大疆Pocket 4手持云台相机，450张入场券开场30分钟即告罄。",
+          en: "Japanese consumers queue average 9 hours in Akihabara for DJI Pocket 4 gimbal cameras. 450 tickets sold out within 30 minutes.",
+        },
+      },
+      {
+        title: {
+          zh: "10人美国2-0波黑 晋级16强",
+          en: "10-Man USA Beats Bosnia 2-0, Advances to Round of 16",
+        },
+        description: {
+          zh: "世界杯1/16决赛美国队在少一人作战的情况下仍以2-0击败波黑，成功晋级16强。",
+          en: "Despite being reduced to 10 men, the US defeats Bosnia 2-0 in the World Cup Round of 32 to advance.",
+        },
+      },
+      {
+        title: {
+          zh: "清华大学一本科生被公告退学",
+          en: "Tsinghua University Student Expelled",
+        },
+        description: {
+          zh: "清华大学一学生被公告退学处理，疑为美国国籍，2023年申请休学半年后未提出复学申请，至今逾期两年。",
+          en: "A Tsinghua student (suspected US citizen) is expelled after taking a half-year leave in 2023 and failing to apply for reinstatement for two years.",
+        },
+      },
+      {
+        title: {
+          zh: "微波炉这样热菜 微塑料飙升125倍",
+          en: "Microwaving Plastic Releases 125x More Microplastics",
+        },
+        description: {
+          zh: "浙大研究显示微波炉加热带油PE塑料餐盒三分钟，微塑料释放量较装水加热飙升125倍，还会析出重金属。建议改用玻璃陶瓷容器。",
+          en: "Zhejiang University study: microwaving oily food in plastic containers for 3 minutes releases 125x more microplastics than water. Heavy metals also leach. Use glass or ceramic instead.",
+        },
+      },
+      {
+        title: {
+          zh: "法博物馆长：若证实掠夺即刻归还",
+          en: "French Museum Director: Will Return Looted Chinese Artifacts Immediately",
+        },
+        description: {
+          zh: "法国国立吉美亚洲艺术博物馆馆长表示，若馆藏中国文物被证实为掠夺所得，将在24小时内归还。该馆约三分之一藏品为中国文物。",
+          en: "Director of Guimet Museum says if Chinese artifacts are proven looted, they will be returned within 24 hours. Roughly 1/3 of the museum's collection is Chinese.",
+        },
+      },
+      {
+        title: {
+          zh: "孙颖莎给勒布伦打趴下了",
+          en: "Sun Yingsha Crushes Lebrun at WTT US Smash",
+        },
+        description: {
+          zh: "WTT美国大满贯混双1/4决赛，王楚钦/孙颖莎击败勒布伦/大藤沙月，孙颖莎正手霸气一击将对手打趴在地。",
+          en: "WTT US Smash mixed doubles quarterfinal: Wang Chuqin/Sun Yingsha beat Lebrun/Otogaki. Sun's powerful forehand sends Lebrun diving to the floor.",
+        },
+      },
+      {
+        title: {
+          zh: "二手豪车大降价 车商改干烧烤",
+          en: "Luxury Used Car Prices Plunge, Dealers Switch to BBQ",
+        },
+        description: {
+          zh: "BBA及二线豪华品牌开启风暴式降价，业内人士称车商走了一半，不少转行开网约车或干烧烤。",
+          en: "BMW, Mercedes, Audi and other luxury brands slash prices. Industry insiders say half the dealers have left, many switching to ride-hailing or BBQ businesses.",
+        },
+      },
+      {
+        title: {
+          zh: "杰伦布朗与保罗乔治互换",
+          en: "Jaylen Brown and Paul George Swapped in Blockbuster Trade",
+        },
+        description: {
+          zh: "凯尔特人送出杰伦-布朗从76人换回保罗-乔治外加两枚首轮和两枚次轮选秀权，NBA休赛期重磅交易达成。",
+          en: "Celtics trade Jaylen Brown to 76ers for Paul George plus two first-round and two second-round picks in a blockbuster NBA offseason deal.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-02",
+    date: "2026-07-02",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-07-02",
+      en: "🤖 AI HOT Daily · Jul 2, 2026",
+    },
+    summary: {
+      zh: "美团 LongCat-2.0 正式发布开源万亿参数国产算力模型，NVIDIA 发布 Nemotron-Labs-TwoTower 扩散语言模型，xAI 推出 Voice Agent Builder 测试版两分钟创建语音智能体，Claude Code v2.1.198 Claude in Chrome 全面可用，Cloudflare 推出AI流量管理选项，Anthropic 被指在 Claude Code 中植入隐写术识别中国用户，Meta 效仿 SpaceX 将过剩 AI 算力变现推出 Meta Compute，OpenAI 论文揭示 GPT-5.6 三个 Pro 变体，亚马逊 AWS 砸10亿美元派遣工程师进驻客户公司，Cloudflare Monetization Gateway 为任何资源收费。",
+      en: "Meituan LongCat-2.0 open-sources 1.6T MoE model trained on domestic ASICs, NVIDIA releases Nemotron-Labs-TwoTower diffusion LM, xAI launches Voice Agent Builder beta for 2-minute voice agent creation, Claude Code v2.1.198 Claude in Chrome fully available, Cloudflare introduces granular AI traffic management, Anthropic accused of embedding steganography in Claude Code to identify Chinese users, Meta launches Meta Compute to monetize excess AI compute, OpenAI paper reveals three GPT-5.6 Pro variants, Amazon AWS invests $1B to embed engineers at client companies, Cloudflare Monetization Gateway charges for any resource via x402 protocol.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "美团 LongCat-2.0 正式发布开源",
+          en: "Meituan LongCat-2.0 Open-Sourced: 1.6T MoE on Domestic ASICs",
+        },
+        description: {
+          zh: "万亿参数大模型开源，总参数1.6T，平均激活约48B，原生支持1M超长上下文，在五万卡国产算力集群上完成全流程训练与推理。",
+          en: "Open-sourced 1.6T param MoE (~48B active), native 1M context, fully trained and inferenced on 50K domestic ASIC cluster.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA 发布 Nemotron-Labs-TwoTower 扩散语言模型",
+          en: "NVIDIA Releases Nemotron-Labs-TwoTower Diffusion LM",
+        },
+        description: {
+          zh: "基于冻结的自回归骨干的双塔架构扩散语言模型：上下文塔冻结，降噪器塔训练，通过层间通信实现高效生成。",
+          en: "Two-tower diffusion LM: context tower frozen, denoiser tower trained, with inter-layer communication for efficient generation.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI 推出 Voice Agent Builder 测试版",
+          en: "xAI Launches Voice Agent Builder Beta",
+        },
+        description: {
+          zh: "基于 Grok Voice 的无代码平台，可在两分钟内创建生产级语音智能体，集成电话、知识检索、工具、MCP、Guardrail 等。",
+          en: "No-code platform based on Grok Voice. Create production-grade voice agents in 2 minutes with phone, knowledge retrieval, tools, MCP, and guardrails.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.198 发布，Claude in Chrome 全面可用",
+          en: "Claude Code v2.1.198: Claude in Chrome Fully Available",
+        },
+        description: {
+          zh: "Claude in Chrome 全面可用，为 claude agents 新增后台智能体通知功能。",
+          en: "Claude in Chrome now generally available. New background agent notifications for Claude agents.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 推出 AI 流量管理选项",
+          en: "Cloudflare Introduces Granular AI Traffic Management",
+        },
+        description: {
+          zh: "为网站所有者提供更精细的AI流量管控，区分搜索爬虫、AI智能体爬虫和训练爬虫，新增保护广告变现页面能力。",
+          en: "Granular AI traffic controls for site owners: distinguish search crawlers, AI agent crawlers, and training crawlers. New ad monetization page protection.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 被指在 Claude Code 中植入隐写术识别中国用户",
+          en: "Anthropic Accused of Steganography in Claude Code to Identify Chinese Users",
+        },
+        description: {
+          zh: "Anthropic 在 Claude Code 中读取本地时区和环境变量，与经 base64+XOR 编码的数据比对，被指用于识别中国用户。",
+          en: "Anthropic's Claude Code reads local timezone and env vars, compares with base64+XOR encoded data, allegedly to identify Chinese users.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 效仿 SpaceX，将过剩 AI 算力变现",
+          en: "Meta Launches Meta Compute to Monetize Excess AI Compute",
+        },
+        description: {
+          zh: "Meta 计划推出云基础设施业务 Meta Compute，对外出售 AI 计算能力和模型访问权限，直接与 AWS、Google Cloud 及 Azure 竞争。",
+          en: "Meta plans Meta Compute cloud infrastructure business, selling AI compute and model access, competing directly with AWS, Google Cloud, and Azure.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 论文揭示 GPT-5.6 三个 Pro 变体",
+          en: "OpenAI Paper Reveals Three GPT-5.6 Pro Variants",
+        },
+        description: {
+          zh: "论文首次列出 GPT-5.6 的三个 Pro 变体：Luna Pro、Terra Pro 和 Sol Pro，取代以往单一 Pro 模式。Sol Pro 在基因组学基准通过率31.5%居60个测试模型之首。",
+          en: "Paper reveals three GPT-5.6 Pro variants: Luna Pro, Terra Pro, and Sol Pro, replacing the single-Pro strategy. Sol Pro tops 60 models on genomics benchmark at 31.5%.",
+        },
+      },
+      {
+        title: {
+          zh: "亚马逊 AWS 砸 10 亿美元派遣工程师进驻客户公司",
+          en: "Amazon AWS Invests $1B to Embed Engineers at Client Companies",
+        },
+        description: {
+          zh: "AWS 组建前置驻场工程师团队，先期投入10亿美元。每批5-6组工程师驻场45天，协助客户落地 AI 软件。",
+          en: "AWS creates embedded engineering teams with $1B initial investment. 5-6 engineer groups per batch, 45-day on-site engagements to help clients deploy AI software.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare Monetization Gateway：为任何资源收费",
+          en: "Cloudflare Monetization Gateway: Pay for Any Resource",
+        },
+        description: {
+          zh: "Cloudflare 开放 Monetization Gateway，允许对任何网页、数据集、API 或 MCP 工具收费，费用通过 x402 开放协议以稳定币支付。",
+          en: "Cloudflare opens Monetization Gateway waitlist. Charge for any webpage, dataset, API, or MCP tool behind Cloudflare. Payments via x402 protocol in stablecoins.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-01-hot",
     date: "2026-07-01",
     title: {
