@@ -31,6 +31,236 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-03-hot",
+    date: "2026-07-03",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-03",
+      en: "🔥 Hot Topics · Jul 3, 2026",
+    },
+    summary: {
+      zh: "C罗点球破门葡萄牙2-1克罗地亚晋级，克罗地亚103分钟绝平进球被VAR吹掉，王楚钦无缘WTT8强，女子自费装电梯给全楼用遭抵制，19岁男生扛楼还清亡父债务，苹果折叠屏手机备货至1000万台，清华学霸夫妻毕业携手献身国防事业，世界杯2天3队内讧，莫德里奇笑着告别世界杯，上海程序员拍下银河落九天奇观。",
+      en: "Ronaldo penalty winner as Portugal beats Croatia 2-1, Croatia's 103rd-minute equalizer ruled out by VAR, Wang Chuqin eliminated from WTT quarters, woman installs stair lift for disabled mother faces opposition, 19-year-old carries building materials to pay off father's debt, Apple folds iPhone production target raised to 10M, Tsinghua PhD couple dedicates themselves to national defense, 3 teams implode in 2 days at World Cup, Modric smiles goodbye to World Cup, Shanghai programmer captures Milky Way waterfall.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "C罗点球破门！葡萄牙2-1克罗地亚",
+          en: "Ronaldo Penalty Seals Portugal 2-1 Win Over Croatia",
+        },
+        description: {
+          zh: "世界杯1/16决赛葡萄牙2-1克罗地亚晋级16强，41岁C罗第67分钟点球破门收获世界杯淘汰赛个人首球，赛后穿已故队友若塔球衣谢场。",
+          en: "Portugal beats Croatia 2-1 in Round of 32. 41-year-old Ronaldo scores first World Cup knockout goal from penalty spot, then honors late teammate Jota with his shirt.",
+        },
+      },
+      {
+        title: {
+          zh: "克罗地亚103分钟绝平进球被吹",
+          en: "Croatia's 103rd-Minute Equalizer Ruled Out",
+        },
+        description: {
+          zh: "克罗地亚在加时赛第103分钟打入绝平进球，但VAR判定无效。C罗从失落到眉开眼笑，足球将两种情绪演绎到极致。",
+          en: "Croatia scores a dramatic equalizer in 103rd minute, but VAR rules it out. Ronaldo's emotions swing from despair to joy in a moment of pure football drama.",
+        },
+      },
+      {
+        title: {
+          zh: "王楚钦无缘8强",
+          en: "Wang Chuqin Eliminated from WTT Quarterfinals",
+        },
+        description: {
+          zh: "WTT美国大满贯男单1/8决赛，世界第一王楚钦1-3不敌丹麦选手林德，止步16强无缘八强，爆冷出局。",
+          en: "World No.1 Wang Chuqin loses 1-3 to Denmark's Lind in WTT US Smash Round of 16, eliminated from quarterfinals in a major upset.",
+        },
+      },
+      {
+        title: {
+          zh: "女子自费装电梯给全楼用遭抵制",
+          en: "Woman Installs Stair Lift for Disabled Mother, Neighbors Object",
+        },
+        description: {
+          zh: "上海巢女士自费6.2万元为78岁患病母亲安装座椅爬楼机，因轨道占用公共楼梯空间最窄处仅67厘米不符消防规范，遭部分居民反对面临拆除。",
+          en: "Shanghai woman spends 62K yuan on stair lift for 78-year-old mother. Railings narrow public stairs to 67cm, violating fire codes. Faces removal order from objecting neighbors.",
+        },
+      },
+      {
+        title: {
+          zh: "19岁男生扛楼让离世父母放心",
+          en: "19-Year-Old Carries Materials to Pay Off Father's Debt",
+        },
+        description: {
+          zh: "19岁农村男生在父母双亡后独自扛起家庭，通过扛运建材日赚600元，已还清父亲3万余元债务，计划回村盖房告慰父母。",
+          en: "After losing both parents, a 19-year-old rural teen carries building materials earning 600 yuan/day, pays off father's 30K+ yuan debt, plans to build a house in his hometown.",
+        },
+      },
+      {
+        title: {
+          zh: "苹果折叠屏手机备货至1000万台",
+          en: "Apple Raises Foldable iPhone Production Target to 10M",
+        },
+        description: {
+          zh: "苹果告知供应商为今年生产约1000万部可折叠iPhone，高于此前预估的700-800万部，计划今年下半年和明年上半年推出至少5款新机型。",
+          en: "Apple tells suppliers to prepare for ~10M foldable iPhones this year, up from 7-8M estimate. Plans at least 5 new models through late 2026 and early 2027.",
+        },
+      },
+      {
+        title: {
+          zh: "清华学霸夫妻毕业携手献身国防事业",
+          en: "Tsinghua PhD Couple Dedicates Themselves to National Defense",
+        },
+        description: {
+          zh: "清华大学航空发动机研究院2026届博士毕业生王曦婷和蒋金岑夫妻，共同选择投身国防科研一线，赴四川从事国防科技工作。",
+          en: "Tsinghua aero-engine PhD graduates Wang Xiting and Jiang Jincen, a married couple, choose to work together on national defense R&D in Sichuan.",
+        },
+      },
+      {
+        title: {
+          zh: "世界杯2天3队内讧",
+          en: "3 Teams Implode in 2 Days at World Cup",
+        },
+        description: {
+          zh: "比利时蒂莱曼斯与特罗萨德争吵后戏剧性逆转，奥地利0-3西班牙出局队长阿拉巴怒骂队友，两天内三队爆发内讧。",
+          en: "Belgium's Tieleman & Trossard fight then dramatically win. Austria eliminated 0-3 by Spain as captain Alaba screams at teammates. 3 teams implode in 2 days.",
+        },
+      },
+      {
+        title: {
+          zh: "莫德里奇笑着告别世界杯",
+          en: "Modric Smiles Goodbye to World Cup",
+        },
+        description: {
+          zh: "克罗地亚被葡萄牙淘汰，40岁的莫德里奇笑着告别世界杯。赛后C罗穿过人群拥抱安慰这位老对手和老友。",
+          en: "Croatia eliminated by Portugal. 40-year-old Modric smiles farewell to the World Cup. Ronaldo crosses the pitch to embrace his old rival and friend.",
+        },
+      },
+      {
+        title: {
+          zh: "上海程序员拍下银河落九天",
+          en: "Shanghai Programmer Captures 'Milky Way Falls from Sky'",
+        },
+        description: {
+          zh: "上海程序员在安徽石台县瀑布拍摄的星空照片完美呈现银河与瀑布垂直线条重合，被赞为李白诗句疑是银河落九天的现实再现。",
+          en: "A Shanghai programmer captures a stunning photo of the Milky Way aligning perfectly with a waterfall in Anhui, hailed as a real-life version of Li Bai's famous poem.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-03",
+    date: "2026-07-03",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-07-03",
+      en: "🤖 AI HOT Daily · Jul 3, 2026",
+    },
+    summary: {
+      zh: "AI版支付宝蚂蚁阿宝开放公测，Kimi K2.7 Code 在 GitHub Copilot 正式发布，阿里巴巴 Page Agent 开源JS库自然语言操控DOM，昆仑万维 Skywork Tags 让AI加入工作群聊，Claude Enterprise 新增用量成本分析，Microsoft 成立 Frontier Company 25亿美元派驻6000 AI工程师，Anthropic 与五角大楼控权之争 Claude 军事用途分歧，OpenAI 提议美国政府持股5%估值426亿美元，快手可灵AI获20亿美元注资估值180亿，谷歌AI建设导致2025年用电量增长37%。",
+      en: "Alipay AI assistant Abao opens public beta, Kimi K2.7 Code launches on GitHub Copilot, Alibaba Page Agent open-sources JS library for DOM manipulation via natural language, Kunlun Skywork Tags brings AI to workplace group chats, Claude Enterprise adds usage analytics, Microsoft launches $2.5B Frontier Company embedding 6,000 AI engineers, Anthropic vs Pentagon control dispute over Claude military use, OpenAI offers US government 5% stake worth $42.6B, Kuaishou Keling AI receives $2B investment at $18B valuation, Google AI buildout drove 37% electricity usage increase in 2025.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "AI 版支付宝蚂蚁阿宝开放公测",
+          en: "Alipay AI Assistant Abao Opens Public Beta",
+        },
+        description: {
+          zh: "支付宝阿宝 AI 助手开放公测，iOS 和安卓用户可直接体验。以对话方式安排办事，例如说出查公积金自动匹配服务。",
+          en: "Alipay's Abao AI assistant enters public beta on iOS and Android. Handle tasks conversationally — say 'check housing fund' and it auto-matches the service.",
+        },
+      },
+      {
+        title: {
+          zh: "Kimi K2.7 Code 在 GitHub Copilot 正式发布",
+          en: "Kimi K2.7 Code Launches on GitHub Copilot",
+        },
+        description: {
+          zh: "Kimi K2.7 Code 开源权重模型正式在 GitHub Copilot 中可用，成为 Copilot 模型选择器首个可选的开源权重模型，为编程提供更低成本选择。",
+          en: "Kimi K2.7 Code open-weight model now available in GitHub Copilot, becoming the first open-weight option in Copilot's model selector for cost-effective coding.",
+        },
+      },
+      {
+        title: {
+          zh: "阿里巴巴 Page Agent：开源 JS 库自然语言操控 DOM",
+          en: "Alibaba Page Agent: Open-Source JS for NL DOM Control",
+        },
+        description: {
+          zh: "开源 JavaScript 客户端库，嵌入网页后可通过自然语言指令直接操作 DOM 元素，无需外部浏览器自动化工具。",
+          en: "Open-source JS library that enables natural language DOM manipulation when embedded in web pages, eliminating the need for external browser automation tools.",
+        },
+      },
+      {
+        title: {
+          zh: "昆仑万维 Skywork Tags：AI 智能体加入工作群聊",
+          en: "Kunlun Skywork Tags: AI Agents Join Workplace Group Chats",
+        },
+        description: {
+          zh: "天工3.2发布Skywork Tags，将AI智能体以团队成员身份接入Slack、飞书、钉钉、Discord等IM工具，可在群中@Skywork参与讨论。",
+          en: "Skywork Tags integrates AI agents as team members into Slack, Feishu, DingTalk, Discord, etc. @Skywork in group chats to participate in discussions.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Enterprise 新增用量与成本分析",
+          en: "Claude Enterprise Adds Usage Analytics & Cost Controls",
+        },
+        description: {
+          zh: "仪表板可按群组和用户分析用量与成本，展示制品创建、文件编辑、技能和连接器对应的成本，支持按 SCIM 群组筛选。",
+          en: "Dashboard analyzes usage and spend by group and user, showing costs by artifact creation, file edits, skills, and connectors. Filterable by SCIM groups.",
+        },
+      },
+      {
+        title: {
+          zh: "Microsoft 成立 Frontier Company：25亿美元派驻6000 AI工程师",
+          en: "Microsoft Launches $2.5B Frontier Company with 6,000 AI Engineers",
+        },
+        description: {
+          zh: "微软新设业务部门，拨款25亿美元，将6000名行业与工程专家派驻企业客户现场，共同设计、部署并持续改进 AI 系统。",
+          en: "Microsoft creates new unit with $2.5B to embed 6,000 industry and engineering experts at enterprise client sites, co-designing and deploying AI systems.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 与五角大楼控权之争：Claude 军事用途分歧",
+          en: "Anthropic vs Pentagon: Dispute Over Claude Military Use",
+        },
+        description: {
+          zh: "法庭文件显示 Anthropic CEO 与五角大楼副部长数月邮件往来，核心分歧在于 Claude 军事用途护栏。Anthropic 要求禁止全自主武器。",
+          en: "Court filings reveal months of email between Anthropic's CEO and Pentagon's deputy secretary over Claude's military use guardrails. Anthropic demands ban on autonomous weapons.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 提议美国政府持股5%，估值426亿美元",
+          en: "OpenAI Offers US Government 5% Stake Worth $42.6B",
+        },
+        description: {
+          zh: "据 Financial Times 报道，OpenAI 提议向美国政府提供公司5%股份，按近期8520亿美元估值计算价值约426亿美元。",
+          en: "OpenAI offers the US government 5% equity, valued at ~$42.6B based on recent $852B valuation, per Financial Times and CNBC reports.",
+        },
+      },
+      {
+        title: {
+          zh: "快手可灵 AI 获20亿美元注资，估值180亿",
+          en: "Kuaishou Keling AI Raises $2B at $18B Valuation",
+        },
+        description: {
+          zh: "21名初始投资者以20.28亿美元现金注资北京可灵，投后估值180亿美元。同日15名额外投资者追加出资7.66亿美元。",
+          en: "21 initial investors inject $2.028B into Kling AI at $18B post-money valuation. 15 additional investors contribute another $766M on the same day.",
+        },
+      },
+      {
+        title: {
+          zh: "谷歌 AI 建设导致2025年用电量增长37%",
+          en: "Google AI Buildout Drove 37% Electricity Increase in 2025",
+        },
+        description: {
+          zh: "2025年谷歌年度用电量同比上涨37%，数据中心全年消耗超4200万兆瓦时，超过新西兰、丹麦等国总用电量。自2019年以来总用电量增长超250%。",
+          en: "Google's annual electricity consumption rose 37% in 2025. Data centers consumed 42M+ MWh, exceeding entire countries like New Zealand and Denmark. 250%+ increase since 2019.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-02-hot",
     date: "2026-07-02",
     title: {
