@@ -2,12 +2,58 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <title data-i18n="app.title">Angry Chicken</title>
-    <script type="module" crossorigin src="/crazybird/assets/index-L1eTyzTP.js"></script>
-    <link rel="stylesheet" crossorigin href="/crazybird/assets/style-CgyV1XPG.css">
+    <meta
+      name="description"
+      content="Angry Chicken — slingshot your bird to knock down pigs and bust through block fortresses. A physics-based web game on Sui testnet."
+    />
+    <meta
+      property="og:title"
+      content="Angry Chicken — Sui Testnet Physics Game"
+    />
+    <meta
+      property="og:description"
+      content="Angry Chicken — slingshot your bird to knock down pigs and bust through block fortresses on Sui testnet."
+    />
+    <meta
+      property="og:image"
+      content="https://www.etboodonline.com/og-image.png"
+    />
+    <meta property="og:url" content="https://www.etboodonline.com/crazybird/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Angry Chicken — Sui Testnet Physics Game"
+    />
+    <meta
+      name="twitter:description"
+      content="Angry Chicken — slingshot your bird to knock down pigs and bust through block fortresses on Sui testnet."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.etboodonline.com/og-image.png"
+    />
+    <link rel="canonical" href="https://www.etboodonline.com/crazybird/" />
+    <script
+      type="module"
+      crossorigin
+      src="/crazybird/assets/index-L1eTyzTP.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      crossorigin
+      href="/crazybird/assets/style-CgyV1XPG.css"
+    />
   </head>
   <body>
     <div id="app">
@@ -27,28 +73,80 @@
           <h1 class="home-title" data-i18n="app.title">Angry Chicken</h1>
           <p class="home-subtitle">sui testnet</p>
           <div class="home-menu">
-            <button id="home-start" class="home-btn home-btn-primary" data-i18n="home.start">开始游戏</button>
-            <button id="home-create" class="home-btn home-btn-create hidden" data-i18n="home.create">✏️ 创作关卡</button>
-            <button id="home-editor" class="home-btn hidden" data-i18n="home.editor">自定义关卡</button>
-            <button id="home-community" class="home-btn" data-i18n="home.community">社区关卡</button>
-            <button id="home-skins" class="home-btn" data-i18n="home.skins">皮肤工坊</button>
-            <button id="home-shop" class="home-btn" data-i18n="home.shop">&#127991; 皮肤商店</button>
-            <button id="home-wallet-btn" class="home-btn home-btn-wallet" data-i18n="btn.wallet">&#128179; 连接钱包</button>
+            <button
+              id="home-start"
+              class="home-btn home-btn-primary"
+              data-i18n="home.start"
+            >
+              开始游戏
+            </button>
+            <button
+              id="home-create"
+              class="home-btn home-btn-create hidden"
+              data-i18n="home.create"
+            >
+              ✏️ 创作关卡
+            </button>
+            <button
+              id="home-editor"
+              class="home-btn hidden"
+              data-i18n="home.editor"
+            >
+              自定义关卡
+            </button>
+            <button
+              id="home-community"
+              class="home-btn"
+              data-i18n="home.community"
+            >
+              社区关卡
+            </button>
+            <button id="home-skins" class="home-btn" data-i18n="home.skins">
+              皮肤工坊
+            </button>
+            <button id="home-shop" class="home-btn" data-i18n="home.shop">
+              &#127991; 皮肤商店
+            </button>
+            <button
+              id="home-wallet-btn"
+              class="home-btn home-btn-wallet"
+              data-i18n="btn.wallet"
+            >
+              &#128179; 连接钱包
+            </button>
           </div>
           <div class="home-footer">
-            <span id="home-lang-btn" class="home-lang-btn" data-i18n="btn.lang">EN</span>
+            <span id="home-lang-btn" class="home-lang-btn" data-i18n="btn.lang"
+              >EN</span
+            >
           </div>
         </div>
       </div>
 
       <div id="home-wallet-prompt" class="overlay hidden">
         <div class="modal home-wallet-modal">
-          <h1 id="home-prompt-title" data-i18n="home.wallet_prompt.title">连接钱包</h1>
-          <p id="home-prompt-desc" data-i18n="home.wallet_prompt.desc">连接钱包后可解锁社区关卡、付费内容和皮肤工坊</p>
+          <h1 id="home-prompt-title" data-i18n="home.wallet_prompt.title">
+            连接钱包
+          </h1>
+          <p id="home-prompt-desc" data-i18n="home.wallet_prompt.desc">
+            连接钱包后可解锁社区关卡、付费内容和皮肤工坊
+          </p>
           <p id="home-prompt-msg" class="home-prompt-msg"></p>
           <div class="actions">
-            <button id="home-prompt-connect" class="btn btn-primary" data-i18n="home.wallet_prompt.connect">连接钱包</button>
-            <button id="home-prompt-skip" class="btn" data-i18n="home.wallet_prompt.skip">免费关卡</button>
+            <button
+              id="home-prompt-connect"
+              class="btn btn-primary"
+              data-i18n="home.wallet_prompt.connect"
+            >
+              连接钱包
+            </button>
+            <button
+              id="home-prompt-skip"
+              class="btn"
+              data-i18n="home.wallet_prompt.skip"
+            >
+              免费关卡
+            </button>
           </div>
         </div>
       </div>
@@ -58,30 +156,65 @@
         <span id="chickens">&#128020; --</span>
         <span id="status">初始化中</span>
         <span id="network" class="network-badge">sui testnet</span>
-        <span id="wallet-display" class="wallet-display">&#128179; 连接钱包</span>
-        <span id="skin-btn" class="skin-btn hidden" data-i18n="btn.skins">&#127912; 皮肤</span>
-        <span id="craft-btn" class="craft-btn hidden" data-i18n="btn.craft">&#128295; 铸造</span>
-        <span id="market-btn" class="market-btn hidden" data-i18n="btn.market">&#127968; 社区</span>
+        <span id="wallet-display" class="wallet-display"
+          >&#128179; 连接钱包</span
+        >
+        <span id="skin-btn" class="skin-btn hidden" data-i18n="btn.skins"
+          >&#127912; 皮肤</span
+        >
+        <span id="craft-btn" class="craft-btn hidden" data-i18n="btn.craft"
+          >&#128295; 铸造</span
+        >
+        <span id="market-btn" class="market-btn hidden" data-i18n="btn.market"
+          >&#127968; 社区</span
+        >
         <span class="hud-right-group">
           <span id="mute-btn" class="mute-btn">&#128266;</span>
-          <span id="back-home-btn" class="back-home-btn" data-i18n="hud.back_home">&#127968; 首页</span>
+          <span
+            id="back-home-btn"
+            class="back-home-btn"
+            data-i18n="hud.back_home"
+            >&#127968; 首页</span
+          >
           <span id="lang-btn" data-i18n="btn.lang">EN</span>
           <span id="select-level-btn" class="select-level-btn">&#9776;</span>
         </span>
       </div>
 
       <div id="hud-dropdown" class="hud-dropdown hidden">
-        <div class="hud-dropdown-item" data-action="level-select" data-i18n="hud.select_level">&#128196; 选择关卡</div>
-        <div class="hud-dropdown-item" data-action="about" data-i18n="btn.about">&#9432; About</div>
+        <div
+          class="hud-dropdown-item"
+          data-action="level-select"
+          data-i18n="hud.select_level"
+        >
+          &#128196; 选择关卡
+        </div>
+        <div
+          class="hud-dropdown-item"
+          data-action="about"
+          data-i18n="btn.about"
+        >
+          &#9432; About
+        </div>
       </div>
 
       <div id="chicken-selector" class="chicken-selector hidden">
         <div class="chicken-select-option active" data-kind="shopck1">
-          <img class="chicken-select-img" src="/crazybird/shop/shopck1.png" alt="普通小鸡" draggable="false">
+          <img
+            class="chicken-select-img"
+            src="/crazybird/shop/shopck1.png"
+            alt="普通小鸡"
+            draggable="false"
+          />
           <span class="chicken-select-count" id="ck-count-shopck1">3</span>
         </div>
         <div class="chicken-select-option" data-kind="shopck2">
-          <img class="chicken-select-img" src="/crazybird/shop/shopck2.png" alt="投弹鸡" draggable="false">
+          <img
+            class="chicken-select-img"
+            src="/crazybird/shop/shopck2.png"
+            alt="投弹鸡"
+            draggable="false"
+          />
           <span class="chicken-select-count" id="ck-count-shopck2">1</span>
         </div>
       </div>
@@ -96,14 +229,14 @@
             <div class="sound-row">
               <span class="sound-label" data-i18n="sound.music">背景音乐</span>
               <label class="sound-toggle">
-                <input type="checkbox" id="sound-music-toggle" checked>
+                <input type="checkbox" id="sound-music-toggle" checked />
                 <span class="sound-toggle-slider"></span>
               </label>
             </div>
             <div class="sound-row">
               <span class="sound-label" data-i18n="sound.sfx">音效</span>
               <label class="sound-toggle">
-                <input type="checkbox" id="sound-sfx-toggle" checked>
+                <input type="checkbox" id="sound-sfx-toggle" checked />
                 <span class="sound-toggle-slider"></span>
               </label>
             </div>
@@ -112,7 +245,9 @@
       </div>
 
       <div id="wallet-action-popup" class="hidden wallet-action-popup">
-        <button id="wallet-disconnect-btn" data-i18n="hud.disconnect">断开连接</button>
+        <button id="wallet-disconnect-btn" data-i18n="hud.disconnect">
+          断开连接
+        </button>
       </div>
 
       <div id="skin-panel" class="skin-panel hidden">
@@ -122,8 +257,16 @@
         </div>
         <div id="skin-grid" class="skin-grid"></div>
         <div class="skin-panel-footer">
-          <button id="skin-none" class="btn" data-i18n="skin.none">默认皮肤</button>
-          <button id="open-box-btn" class="btn btn-primary" data-i18n="box.open">&#127873; 开盲盒 (0.1 SUI)</button>
+          <button id="skin-none" class="btn" data-i18n="skin.none">
+            默认皮肤
+          </button>
+          <button
+            id="open-box-btn"
+            class="btn btn-primary"
+            data-i18n="box.open"
+          >
+            &#127873; 开盲盒 (0.1 SUI)
+          </button>
         </div>
       </div>
 
@@ -139,11 +282,11 @@
           <div class="craft-controls">
             <div class="craft-row">
               <label data-i18n="craft.primary">主色</label>
-              <input type="color" id="craft-primary" value="#ff4500">
+              <input type="color" id="craft-primary" value="#ff4500" />
             </div>
             <div class="craft-row">
               <label data-i18n="craft.secondary">辅色</label>
-              <input type="color" id="craft-secondary" value="#ffd700">
+              <input type="color" id="craft-secondary" value="#ffd700" />
             </div>
             <div class="craft-row">
               <label data-i18n="craft.pattern">图案</label>
@@ -151,7 +294,9 @@
                 <option value="0" data-i18n="pattern.0">&#9632; 纯色</option>
                 <option value="1" data-i18n="pattern.1">&#8212; 条纹</option>
                 <option value="2" data-i18n="pattern.2">&#8226; 斑点</option>
-                <option value="3" data-i18n="pattern.3">&#128293; 火焰纹</option>
+                <option value="3" data-i18n="pattern.3">
+                  &#128293; 火焰纹
+                </option>
                 <option value="4" data-i18n="pattern.4">&#127818; 迷彩</option>
               </select>
             </div>
@@ -169,21 +314,42 @@
               <label data-i18n="craft.accessory">配饰</label>
               <select id="craft-accessory">
                 <option value="0" data-i18n="accessory.0">&#10060; 无</option>
-                <option value="1" data-i18n="accessory.1">&#127913; 小帽</option>
-                <option value="2" data-i18n="accessory.2">&#128083; 眼镜</option>
-                <option value="3" data-i18n="accessory.3">&#127745; 披风</option>
-                <option value="4" data-i18n="accessory.4">&#128081; 皇冠</option>
-                <option value="5" data-i18n="accessory.5">&#127789; 围巾</option>
+                <option value="1" data-i18n="accessory.1">
+                  &#127913; 小帽
+                </option>
+                <option value="2" data-i18n="accessory.2">
+                  &#128083; 眼镜
+                </option>
+                <option value="3" data-i18n="accessory.3">
+                  &#127745; 披风
+                </option>
+                <option value="4" data-i18n="accessory.4">
+                  &#128081; 皇冠
+                </option>
+                <option value="5" data-i18n="accessory.5">
+                  &#127789; 围巾
+                </option>
               </select>
             </div>
             <div class="craft-row">
               <label data-i18n="craft.name">名称</label>
-              <input type="text" id="craft-name" value="My Chicken" maxlength="32">
+              <input
+                type="text"
+                id="craft-name"
+                value="My Chicken"
+                maxlength="32"
+              />
             </div>
           </div>
         </div>
         <div class="craft-footer">
-          <button id="craft-mint" class="btn btn-primary" data-i18n="craft.mint">&#9889; 铸造 (0.3 SUI)</button>
+          <button
+            id="craft-mint"
+            class="btn btn-primary"
+            data-i18n="craft.mint"
+          >
+            &#9889; 铸造 (0.3 SUI)
+          </button>
           <span id="craft-status" class="craft-status"></span>
         </div>
       </div>
@@ -194,14 +360,34 @@
           <button id="market-close" class="market-close">&times;</button>
         </div>
         <div class="market-filters">
-          <button class="market-filter active" data-filter="all" data-i18n="market.all">全部</button>
-          <button class="market-filter" data-filter="free" data-i18n="market.free">免费</button>
-          <button class="market-filter" data-filter="paid" data-i18n="market.paid">付费</button>
+          <button
+            class="market-filter active"
+            data-filter="all"
+            data-i18n="market.all"
+          >
+            全部
+          </button>
+          <button
+            class="market-filter"
+            data-filter="free"
+            data-i18n="market.free"
+          >
+            免费
+          </button>
+          <button
+            class="market-filter"
+            data-filter="paid"
+            data-i18n="market.paid"
+          >
+            付费
+          </button>
         </div>
         <div id="market-grid" class="market-grid"></div>
         <div class="market-footer">
           <span id="market-status" class="market-status"></span>
-          <button id="market-refresh" class="btn" data-i18n="market.refresh">&#128260; 刷新</button>
+          <button id="market-refresh" class="btn" data-i18n="market.refresh">
+            &#128260; 刷新
+          </button>
         </div>
       </div>
 
@@ -230,11 +416,19 @@
             <div class="about-section">
               <h3 data-i18n="about.studio">&#127918; 工作室</h3>
               <p class="about-studio">zd tech</p>
-              <a class="about-link" href="https://www.etboodonline.com" target="_blank" rel="noopener">www.etboodonline.com</a>
+              <a
+                class="about-link"
+                href="https://www.etboodonline.com"
+                target="_blank"
+                rel="noopener"
+                >www.etboodonline.com</a
+              >
             </div>
           </div>
           <div class="about-footer">
-            <button id="about-close-btn" class="btn" data-i18n="btn.close">关闭</button>
+            <button id="about-close-btn" class="btn" data-i18n="btn.close">
+              关闭
+            </button>
           </div>
         </div>
       </div>
@@ -244,7 +438,9 @@
           <h1 data-i18n="wallet.title">&#128179; 选择钱包</h1>
           <div id="wallet-list" class="wallet-list"></div>
           <div class="actions">
-            <button id="wallet-cancel" class="btn" data-i18n="btn.cancel">取消</button>
+            <button id="wallet-cancel" class="btn" data-i18n="btn.cancel">
+              取消
+            </button>
           </div>
         </div>
       </div>
@@ -254,38 +450,101 @@
           <h1 data-i18n="share.title">&#127760; 关卡已发布</h1>
           <div class="share-publish-info">
             <div class="share-info-row">
-              <span class="share-info-label" data-i18n="share.publisher">发布者</span>
-              <span id="share-publisher" class="share-info-value share-addr">--</span>
+              <span class="share-info-label" data-i18n="share.publisher"
+                >发布者</span
+              >
+              <span id="share-publisher" class="share-info-value share-addr"
+                >--</span
+              >
             </div>
             <div class="share-info-row">
-              <span class="share-info-label" data-i18n="share.level_name">关卡名称</span>
+              <span class="share-info-label" data-i18n="share.level_name"
+                >关卡名称</span
+              >
               <span id="share-level-name" class="share-info-value">--</span>
             </div>
             <div class="share-info-row">
-              <span class="share-info-label" data-i18n="share.status">状态</span>
-              <span id="share-status-text" class="share-info-value share-status-ok">--</span>
+              <span class="share-info-label" data-i18n="share.status"
+                >状态</span
+              >
+              <span
+                id="share-status-text"
+                class="share-info-value share-status-ok"
+                >--</span
+              >
             </div>
             <div class="share-info-row" id="share-blob-row">
               <span class="share-info-label">Blob ID</span>
-              <span id="share-blob-id" class="share-info-value share-addr">--</span>
+              <span id="share-blob-id" class="share-info-value share-addr"
+                >--</span
+              >
             </div>
             <div class="share-info-row" id="share-digest-row">
               <span class="share-info-label">Tx Digest</span>
-              <span id="share-tx-digest" class="share-info-value share-addr">--</span>
+              <span id="share-tx-digest" class="share-info-value share-addr"
+                >--</span
+              >
             </div>
           </div>
           <div class="share-explorer-links" id="share-explorer-links">
-            <p data-i18n="share.explorer_hint">&#128270; 在区块链浏览器中查看：</p>
-            <a id="share-explorer-link" href="#" target="_blank" rel="noopener" class="share-explorer-btn">&#127760; <span data-i18n="share.view_explorer">查看 Blob</span></a>
+            <p data-i18n="share.explorer_hint">
+              &#128270; 在区块链浏览器中查看：
+            </p>
+            <a
+              id="share-explorer-link"
+              href="#"
+              target="_blank"
+              rel="noopener"
+              class="share-explorer-btn"
+              >&#127760;
+              <span data-i18n="share.view_explorer">查看 Blob</span></a
+            >
           </div>
-          <p data-i18n="share.desc_data" style="margin-top:14px;font-size:13px;color:rgba(255,255,255,0.5)">&#9989; 直接分享链接（无需网络）：</p>
+          <p
+            data-i18n="share.desc_data"
+            style="
+              margin-top: 14px;
+              font-size: 13px;
+              color: rgba(255, 255, 255, 0.5);
+            "
+          >
+            &#9989; 直接分享链接（无需网络）：
+          </p>
           <div class="share-link-row">
-            <input id="share-link-data" type="text" readonly style="flex:1;padding:8px;border:1px solid #64c8ff;border-radius:6px;font-size:13px;color:#333" />
-            <button id="share-copy-data" class="btn btn-primary" data-i18n="share.copy">&#128203; 复制</button>
+            <input
+              id="share-link-data"
+              type="text"
+              readonly
+              style="
+                flex: 1;
+                padding: 8px;
+                border: 1px solid #64c8ff;
+                border-radius: 6px;
+                font-size: 13px;
+                color: #333;
+              "
+            />
+            <button
+              id="share-copy-data"
+              class="btn btn-primary"
+              data-i18n="share.copy"
+            >
+              &#128203; 复制
+            </button>
           </div>
-          <p id="share-link-status" style="font-size:13px;color:#4caf50;min-height:20px;margin-top:4px"></p>
+          <p
+            id="share-link-status"
+            style="
+              font-size: 13px;
+              color: #4caf50;
+              min-height: 20px;
+              margin-top: 4px;
+            "
+          ></p>
           <div class="actions">
-            <button id="share-close" class="btn" data-i18n="btn.close">关闭</button>
+            <button id="share-close" class="btn" data-i18n="btn.close">
+              关闭
+            </button>
           </div>
         </div>
       </div>
@@ -294,12 +553,20 @@
         <div class="modal user-levels-modal">
           <div class="user-levels-header">
             <span data-i18n="ueditor.my_levels">我的关卡</span>
-            <button id="user-levels-close" class="user-levels-close">&times;</button>
+            <button id="user-levels-close" class="user-levels-close">
+              &times;
+            </button>
           </div>
           <div id="user-levels-grid" class="user-levels-grid"></div>
           <div class="user-levels-footer">
             <span id="user-levels-status" class="user-levels-status"></span>
-            <button id="user-levels-new-btn" class="btn btn-primary" data-i18n="ueditor.new_level">＋ 新建空白关卡</button>
+            <button
+              id="user-levels-new-btn"
+              class="btn btn-primary"
+              data-i18n="ueditor.new_level"
+            >
+              ＋ 新建空白关卡
+            </button>
           </div>
         </div>
       </div>
@@ -323,8 +590,12 @@
           <p id="lock-desc">购买关卡包以解锁关卡</p>
           <p id="lock-price">价格: 0.1 SUI</p>
           <div class="actions">
-            <button id="lock-buy" class="btn btn-primary" data-i18n="btn.buy">购买</button>
-            <button id="lock-cancel" class="btn" data-i18n="btn.cancel">取消</button>
+            <button id="lock-buy" class="btn btn-primary" data-i18n="btn.buy">
+              购买
+            </button>
+            <button id="lock-cancel" class="btn" data-i18n="btn.cancel">
+              取消
+            </button>
           </div>
         </div>
       </div>
@@ -335,9 +606,15 @@
           <p id="win-stars" class="win-stars"></p>
           <p id="win-stats"></p>
           <div class="actions">
-            <button id="win-restart" class="btn" data-i18n="btn.restart">重玩本关</button>
-            <button id="win-next" class="btn btn-primary" data-i18n="btn.next">下一关</button>
-            <button id="win-select" class="btn" data-i18n="btn.select">选关</button>
+            <button id="win-restart" class="btn" data-i18n="btn.restart">
+              重玩本关
+            </button>
+            <button id="win-next" class="btn btn-primary" data-i18n="btn.next">
+              下一关
+            </button>
+            <button id="win-select" class="btn" data-i18n="btn.select">
+              选关
+            </button>
           </div>
         </div>
       </div>
@@ -347,8 +624,12 @@
           <h1 data-i18n="lose.title">&#128128; 失败</h1>
           <p id="lose-stats"></p>
           <div class="actions">
-            <button id="lose-restart" class="btn" data-i18n="btn.restart">重玩本关</button>
-            <button id="lose-select" class="btn" data-i18n="btn.select">选关</button>
+            <button id="lose-restart" class="btn" data-i18n="btn.restart">
+              重玩本关
+            </button>
+            <button id="lose-select" class="btn" data-i18n="btn.select">
+              选关
+            </button>
           </div>
         </div>
       </div>
@@ -357,13 +638,30 @@
         <div class="modal level-select-modal">
           <div class="level-select-header">
             <div class="level-tabs">
-              <button class="level-tab active" data-tab="official" data-i18n="level.tab.official">官方关卡</button>
-              <button class="level-tab" data-tab="community" data-i18n="level.tab.community">社区关卡</button>
+              <button
+                class="level-tab active"
+                data-tab="official"
+                data-i18n="level.tab.official"
+              >
+                官方关卡
+              </button>
+              <button
+                class="level-tab"
+                data-tab="community"
+                data-i18n="level.tab.community"
+              >
+                社区关卡
+              </button>
             </div>
-            <button id="level-select-close" class="level-select-close">&times;</button>
+            <button id="level-select-close" class="level-select-close">
+              &times;
+            </button>
           </div>
           <div id="level-grid" class="level-grid"></div>
-          <div id="community-level-list" class="community-level-list hidden"></div>
+          <div
+            id="community-level-list"
+            class="community-level-list hidden"
+          ></div>
         </div>
       </div>
     </div>

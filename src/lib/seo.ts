@@ -142,6 +142,64 @@ export const websiteJsonLd = {
     "@type": "Organization",
     name: siteConfig.name,
   },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${siteConfig.url}/search?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+export const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  name: "ZD Tech Navigation",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: siteConfig.url,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Projects",
+      item: `${siteConfig.url}/project`,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "News",
+      item: `${siteConfig.url}/news`,
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Blog",
+      item: `${siteConfig.url}/blog`,
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      name: "What We Do",
+      item: `${siteConfig.url}/what-we-do`,
+    },
+    {
+      "@type": "ListItem",
+      position: 6,
+      name: "Service",
+      item: `${siteConfig.url}/service`,
+    },
+    {
+      "@type": "ListItem",
+      position: 7,
+      name: "Contact",
+      item: `${siteConfig.url}/contact`,
+    },
+  ],
 };
 
 export const sectionListJsonLd = {
@@ -236,5 +294,65 @@ export const sitemapEntries: MetadataRoute.Sitemap = [
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.86,
+  },
+  {
+    url: `${siteConfig.url}/crazybird/`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.72,
+  },
+  {
+    url: `${siteConfig.url}/bladedart/bladedart.html`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.72,
+  },
+  {
+    url: `${siteConfig.url}/dropafriend/dropafriend.html`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.72,
+  },
+  {
+    url: `${siteConfig.url}/zombiesiege/shotdemo01.html`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  {
+    url: `${siteConfig.url}/swim/`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  {
+    url: `${siteConfig.url}/killerh5/`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  {
+    url: `${siteConfig.url}/saveman/saveman.html`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  {
+    url: `${siteConfig.url}/football/football-game.html`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.72,
+  },
+  {
+    url: `${siteConfig.url}/summit/summit.html`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.68,
+  },
+  {
+    url: `${siteConfig.url}/h5game01/${encodeURIComponent("龙虾跑酷.html")}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
   },
 ];

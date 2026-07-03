@@ -4,6 +4,7 @@ import "@/components/component/homepage.css";
 import { Providers } from "./providers";
 import "./globals.css";
 import {
+  breadcrumbJsonLd,
   organizationJsonLd,
   sectionListJsonLd,
   siteConfig,
@@ -55,6 +56,9 @@ export const metadata: Metadata = {
     },
   },
   category: "technology",
+  other: {
+    "llms.txt": "/llms.txt",
+  },
 };
 
 export default function RootLayout({
@@ -111,6 +115,14 @@ export default function RootLayout({
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(sectionListJsonLd),
+          }}
+        />
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbJsonLd),
           }}
         />
         <Providers>{children}</Providers>

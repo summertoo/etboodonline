@@ -1,1430 +1,2096 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>百米自由泳比赛</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>百米自由泳比赛 / Swim Race</title>
+    <meta
+      name="description"
+      content="百米自由泳比赛 / Swim Race — sprint dash, collect power-ups and win the 100m freestyle swimming race in this fast-paced sports game."
+    />
+    <meta
+      property="og:title"
+      content="百米自由泳比赛 / Swim Race — 竞技游泳游戏"
+    />
+    <meta
+      property="og:description"
+      content="Sprint dash, collect power-ups and win the 100m freestyle swimming race in this fast-paced sports game."
+    />
+    <meta
+      property="og:image"
+      content="https://www.etboodonline.com/og-image.png"
+    />
+    <meta property="og:url" content="https://www.etboodonline.com/swim/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="百米自由泳比赛 / Swim Race" />
+    <meta
+      name="twitter:description"
+      content="Sprint dash, collect power-ups and win the 100m freestyle swimming race."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.etboodonline.com/og-image.png"
+    />
+    <link rel="canonical" href="https://www.etboodonline.com/swim/" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1a2980, #26d0ce);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            color: white;
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #1a2980, #26d0ce);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        color: white;
+      }
+
+      .container {
+        max-width: 1000px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        margin-top: 20px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+        position: relative;
+      }
+
+      .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .lang-toggle {
+        padding: 4px 14px;
+        font-size: 0.85rem;
+        background: rgba(0, 180, 219, 0.25);
+        border: 1px solid rgba(0, 180, 219, 0.5);
+        border-radius: 20px;
+        color: #00b4db;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      .lang-toggle:hover {
+        background: rgba(0, 180, 219, 0.4);
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        background: linear-gradient(45deg, #00b4db, #0083b0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 20px;
+      }
+
+      .game-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        background: rgba(0, 131, 176, 0.2);
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      .info-box {
+        text-align: center;
+      }
+      .info-label {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        margin-bottom: 5px;
+      }
+      .info-value {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #00b4db;
+      }
+
+      .game-area {
+        position: relative;
+        height: 500px;
+        background: linear-gradient(to bottom, #0083b0, #005b8a);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        border: 3px solid #00b4db;
+      }
+
+      .pool {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .lane {
+        position: absolute;
+        width: 100%;
+        height: 80px;
+        border-bottom: 2px dashed rgba(255, 255, 255, 0.25);
+      }
+      .lane:nth-child(1) {
+        top: 20px;
+      }
+      .lane:nth-child(2) {
+        top: 100px;
+      }
+      .lane:nth-child(3) {
+        top: 180px;
+      }
+      .lane:nth-child(4) {
+        top: 260px;
+      }
+      .lane:nth-child(5) {
+        top: 340px;
+      }
+      .lane:nth-child(6) {
+        top: 420px;
+      }
+
+      /* 跳台 */
+      .dive-block {
+        position: absolute;
+        left: 2px;
+        width: 38px;
+        height: 10px;
+        background: linear-gradient(to bottom, #888, #555);
+        border-radius: 2px 2px 0 0;
+        z-index: 5;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      }
+      .dive-block::after {
+        content: "";
+        position: absolute;
+        right: -4px;
+        top: 2px;
+        width: 4px;
+        height: 6px;
+        background: #666;
+      }
+
+      /* 跳台编号 */
+      .dive-block .block-num {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: bold;
+      }
+
+      /* ============ 水平小人 ============ */
+      .swimmer {
+        position: absolute;
+        left: 15px;
+        z-index: 10;
+        transition: left 0.1s linear;
+      }
+      .swimmer:nth-child(13) {
+        top: 42px;
+      } /* lane 1 */
+      .swimmer:nth-child(14) {
+        top: 122px;
+      } /* lane 2 */
+      .swimmer:nth-child(15) {
+        top: 202px;
+      } /* lane 3 */
+      .swimmer:nth-child(16) {
+        top: 282px;
+      } /* lane 4 */
+      .swimmer:nth-child(17) {
+        top: 362px;
+      } /* lane 5 */
+      .swimmer:nth-child(18) {
+        top: 442px;
+      } /* lane 6 */
+
+      .man-wrapper {
+        width: 55px;
+        height: 30px;
+        position: relative;
+      }
+      .dir-left .man-wrapper {
+        transform: scaleX(-1);
+      }
+
+      .man {
+        position: relative;
+        width: 55px;
+        height: 30px;
+        overflow: visible;
+      }
+
+      /* 头 - 右侧（前方） */
+      .m-head {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        right: 0;
+        top: 9px;
+      }
+
+      /* 泳帽 */
+      .m-cap {
+        position: absolute;
+        width: 10px;
+        height: 6px;
+        border-radius: 5px 5px 0 0;
+        right: 1px;
+        top: 4px;
+      }
+
+      /* 身体 - 水平 */
+      .m-body {
+        position: absolute;
+        width: 28px;
+        height: 8px;
+        border-radius: 4px;
+        right: 8px;
+        top: 11px;
+      }
+
+      /* 手臂 - 风车式360°轮转划水 */
+      .m-arm {
+        position: absolute;
+        width: 16px;
+        height: 3px;
+        border-radius: 3px;
+        left: 29px;
+        top: 12px;
+        transform-origin: right center;
+      }
+      .swimming .m-arm-a {
+        animation: windmillA 0.9s linear infinite;
+      }
+      .swimming .m-arm-b {
+        animation: windmillB 0.9s linear infinite;
+      }
+
+      @keyframes windmillA {
+        0% {
+          transform: rotate(0deg);
         }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes windmillB {
+        0% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(540deg);
+        }
+      }
 
+      /* 腿 - 从臀部（身体左端）出发 */
+      .m-leg {
+        position: absolute;
+        width: 14px;
+        height: 3px;
+        border-radius: 2px;
+        left: 0;
+        top: 13px;
+        transform-origin: right center;
+      }
+      .swimming .m-leg-a {
+        animation: kickA 0.3s ease-in-out infinite;
+      }
+      .swimming .m-leg-b {
+        animation: kickB 0.3s ease-in-out infinite;
+      }
+
+      @keyframes kickA {
+        0% {
+          transform: rotate(-20deg);
+        }
+        50% {
+          transform: rotate(20deg);
+        }
+        100% {
+          transform: rotate(-20deg);
+        }
+      }
+      @keyframes kickB {
+        0% {
+          transform: rotate(20deg);
+        }
+        50% {
+          transform: rotate(-20deg);
+        }
+        100% {
+          transform: rotate(20deg);
+        }
+      }
+
+      /* 身体起伏 */
+      .swimming .man {
+        animation: bodyBob 0.35s ease-in-out infinite;
+      }
+      @keyframes bodyBob {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-2px);
+        }
+      }
+
+      /* 水花尾迹 */
+      .swimmer::after {
+        content: "";
+        position: absolute;
+        left: -6px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 14px;
+        background: radial-gradient(
+          ellipse,
+          rgba(255, 255, 255, 0.35),
+          transparent
+        );
+        border-radius: 50%;
+        opacity: 0;
+      }
+      .swimming.swimmer::after {
+        animation: wake 0.4s ease-out infinite;
+      }
+      @keyframes wake {
+        0% {
+          opacity: 0.6;
+          transform: translateY(-50%) scale(0.5);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-50%) scale(1.5);
+        }
+      }
+
+      /* 脚部浪花 */
+      .swimmer::before {
+        content: "";
+        position: absolute;
+        left: -2px;
+        top: 65%;
+        width: 8px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        opacity: 0;
+        z-index: 1;
+        pointer-events: none;
+      }
+      .swimming.swimmer::before {
+        animation: footSplash 0.25s ease-out infinite;
+      }
+      @keyframes footSplash {
+        0% {
+          opacity: 0.8;
+          transform: scale(0.4) translateX(0);
+        }
+        50% {
+          opacity: 0.4;
+          transform: scale(1) translateX(-6px);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(1.3) translateX(-12px);
+        }
+      }
+
+      /* 暂停动画（站在跳台上） */
+      .on-block .m-arm-a,
+      .on-block .m-arm-b,
+      .on-block .m-leg-a,
+      .on-block .m-leg-b {
+        animation: none;
+        transform: rotate(0deg);
+      }
+
+      /* ============ 水中道具 ============ */
+      .powerup {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        z-index: 8;
+        pointer-events: none;
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+      }
+      .powerup.speed {
+        background: radial-gradient(circle, #fff4a0, #ffc107);
+        animation: floatItem 1.2s ease-in-out infinite;
+      }
+      .powerup.boost {
+        background: radial-gradient(circle, #a0e4ff, #2196f3);
+        animation: floatItem 1.2s ease-in-out infinite 0.4s;
+      }
+      .powerup.slow {
+        background: radial-gradient(circle, #e1a0ff, #9c27b0);
+        animation: floatItem 1.2s ease-in-out infinite 0.8s;
+      }
+      @keyframes floatItem {
+        0%,
+        100% {
+          transform: translateY(-3px);
+        }
+        50% {
+          transform: translateY(3px);
+        }
+      }
+      .powerup .pulse {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        animation: pulseRing 1.5s ease-out infinite;
+      }
+      @keyframes pulseRing {
+        0% {
+          transform: scale(0.8);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(1.6);
+          opacity: 0;
+        }
+      }
+
+      /* 拾取道具提示 */
+      .collect-msg {
+        position: absolute;
+        font-weight: bold;
+        font-size: 16px;
+        pointer-events: none;
+        z-index: 20;
+        animation: floatUp 1s ease-out forwards;
+      }
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-40px);
+          opacity: 0;
+        }
+      }
+
+      /* 终点线 */
+      .finish-line {
+        position: absolute;
+        right: 100px;
+        top: 0;
+        width: 5px;
+        height: 100%;
+        background: repeating-linear-gradient(
+          to bottom,
+          #fff 0px,
+          #fff 10px,
+          #ff0000 10px,
+          #ff0000 20px
+        );
+      }
+
+      .controls {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      #startBtn {
+        background: linear-gradient(45deg, #00b09b, #96c93d);
+        color: white;
+      }
+      #startBtn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 176, 155, 0.4);
+      }
+      #resetBtn {
+        background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        color: white;
+      }
+      #resetBtn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+      }
+      #boostBtn {
+        background: linear-gradient(45deg, #4776e6, #8e54e9);
+        color: white;
+      }
+      #boostBtn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(71, 118, 230, 0.4);
+      }
+
+      .boost-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .boost-bar {
+        flex: 1;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .boost-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #4776e6, #8e54e9);
+        width: 0%;
+        transition: width 0.3s ease;
+      }
+
+      .boost-count {
+        font-weight: bold;
+        color: #8e54e9;
+      }
+
+      .fatigue-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 5px;
+      }
+      .fatigue-bar {
+        flex: 1;
+        height: 14px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 7px;
+        overflow: hidden;
+      }
+      .fatigue-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #ff6b6b, #ff4444);
+        width: 0%;
+        transition: width 0.3s ease;
+      }
+      .fatigue-label {
+        font-size: 0.8rem;
+        color: #ff6b6b;
+        min-width: 50px;
+      }
+
+      /* ============ 结果弹窗 ============ */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-overlay.active {
+        display: flex;
+        animation: fadeIn 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .modal {
+        background: linear-gradient(145deg, #1a1a2e, #16213e);
+        border-radius: 20px;
+        width: 520px;
+        max-width: 90vw;
+        max-height: 85vh;
+        overflow: hidden;
+        box-shadow:
+          0 20px 60px rgba(0, 0, 0, 0.5),
+          0 0 40px rgba(0, 180, 219, 0.2);
+        animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        border: 1px solid rgba(0, 180, 219, 0.3);
+      }
+      @keyframes slideUp {
+        from {
+          transform: translateY(60px) scale(0.9);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+      }
+
+      .modal-header {
+        text-align: center;
+        padding: 25px 20px 15px;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 180, 219, 0.2),
+          rgba(0, 131, 176, 0.1)
+        );
+        border-bottom: 1px solid rgba(0, 180, 219, 0.2);
+      }
+      .modal-header .trophy {
+        font-size: 3rem;
+        display: block;
+        margin-bottom: 5px;
+        animation: bounce 1s ease infinite;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+      .modal-header h2 {
+        font-size: 1.6rem;
+        color: #00b4db;
+        margin-bottom: 4px;
+      }
+      .modal-header .race-time {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .modal-body {
+        padding: 15px 25px 20px;
+      }
+
+      .podium {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 8px;
+        margin-bottom: 20px;
+        padding: 10px 0;
+      }
+
+      .podium-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+      }
+      .podium-item:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .podium-item:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .podium-item:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      @keyframes popIn {
+        from {
+          transform: scale(0);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .podium-item .podium-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 6px;
+        border: 3px solid;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+      }
+      .podium-item .podium-name {
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-bottom: 4px;
+        text-align: center;
+        max-width: 80px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .podium-item .podium-time {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 6px;
+      }
+      .podium-item .podium-block {
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        font-weight: bold;
+        border-radius: 6px 6px 0 0;
+      }
+
+      .podium-item.gold .podium-avatar {
+        border-color: #ffd700;
+        background: rgba(255, 215, 0, 0.2);
+        color: #ffd700;
+      }
+      .podium-item.gold .podium-name {
+        color: #ffd700;
+      }
+      .podium-item.gold .podium-block {
+        height: 70px;
+        background: linear-gradient(to top, #b8860b, #ffd700);
+        color: #1a1a2e;
+      }
+
+      .podium-item.silver .podium-avatar {
+        border-color: #c0c0c0;
+        background: rgba(192, 192, 192, 0.2);
+        color: #c0c0c0;
+      }
+      .podium-item.silver .podium-name {
+        color: #c0c0c0;
+      }
+      .podium-item.silver .podium-block {
+        height: 50px;
+        background: linear-gradient(to top, #808080, #c0c0c0);
+        color: #1a1a2e;
+      }
+
+      .podium-item.bronze .podium-avatar {
+        border-color: #cd7f32;
+        background: rgba(205, 127, 50, 0.2);
+        color: #cd7f32;
+      }
+      .podium-item.bronze .podium-name {
+        color: #cd7f32;
+      }
+      .podium-item.bronze .podium-block {
+        height: 35px;
+        background: linear-gradient(to top, #8b4513, #cd7f32);
+        color: #1a1a2e;
+      }
+
+      .modal-rankings {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .modal-rankings th {
+        text-align: left;
+        padding: 8px 10px;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .modal-rankings td {
+        padding: 9px 10px;
+        font-size: 0.85rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .modal-rankings tr.player-row {
+        background: rgba(0, 180, 219, 0.1);
+        border-left: 3px solid #00b4db;
+      }
+      .modal-rankings .rank-num {
+        font-weight: bold;
+        width: 30px;
+      }
+      .modal-rankings .rank-1 {
+        color: #ffd700;
+      }
+      .modal-rankings .rank-2 {
+        color: #c0c0c0;
+      }
+      .modal-rankings .rank-3 {
+        color: #cd7f32;
+      }
+      .modal-rankings .swimmer-color {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 6px;
+        vertical-align: middle;
+      }
+
+      .modal-footer {
+        padding: 15px 25px 20px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .modal-footer button {
+        padding: 12px 35px;
+        font-size: 1rem;
+        background: linear-gradient(45deg, #00b09b, #96c93d);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        letter-spacing: 1px;
+      }
+      .modal-footer button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 176, 155, 0.4);
+      }
+
+      .instructions {
+        margin-top: 30px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+      .instructions h3 {
+        color: #00b4db;
+        margin-bottom: 10px;
+      }
+      .instructions ul {
+        padding-left: 20px;
+      }
+      .instructions li {
+        margin-bottom: 8px;
+      }
+
+      .splash {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: splashAnim 0.5s ease-out forwards;
+      }
+      @keyframes splashAnim {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(2.5);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
         .container {
-            max-width: 1000px;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            margin-top: 20px;
+          padding: 15px;
         }
-
-        header { text-align: center; margin-bottom: 30px; position: relative; }
-
-        .header-top { display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; }
-
-        .lang-toggle {
-            padding: 4px 14px;
-            font-size: 0.85rem;
-            background: rgba(0, 180, 219, 0.25);
-            border: 1px solid rgba(0, 180, 219, 0.5);
-            border-radius: 20px;
-            color: #00b4db;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        .lang-toggle:hover { background: rgba(0, 180, 219, 0.4); }
-
         h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            background: linear-gradient(45deg, #00b4db, #0083b0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+          font-size: 2rem;
         }
-
-        .subtitle { font-size: 1.2rem; opacity: 0.9; margin-bottom: 20px; }
-
-        .game-info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            background: rgba(0, 131, 176, 0.2);
-            padding: 15px;
-            border-radius: 10px;
-        }
-
-        .info-box { text-align: center; }
-        .info-label { font-size: 0.9rem; opacity: 0.8; margin-bottom: 5px; }
-        .info-value { font-size: 1.5rem; font-weight: bold; color: #00b4db; }
-
         .game-area {
-            position: relative;
-            height: 500px;
-            background: linear-gradient(to bottom, #0083b0, #005b8a);
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            border: 3px solid #00b4db;
+          height: 400px;
         }
-
-        .pool {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-        }
-
-        .lane {
-            position: absolute;
-            width: 100%;
-            height: 80px;
-            border-bottom: 2px dashed rgba(255, 255, 255, 0.25);
-        }
-        .lane:nth-child(1) { top: 20px; }
-        .lane:nth-child(2) { top: 100px; }
-        .lane:nth-child(3) { top: 180px; }
-        .lane:nth-child(4) { top: 260px; }
-        .lane:nth-child(5) { top: 340px; }
-        .lane:nth-child(6) { top: 420px; }
-
-        /* 跳台 */
-        .dive-block {
-            position: absolute;
-            left: 2px;
-            width: 38px;
-            height: 10px;
-            background: linear-gradient(to bottom, #888, #555);
-            border-radius: 2px 2px 0 0;
-            z-index: 5;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-        }
-        .dive-block::after {
-            content: '';
-            position: absolute;
-            right: -4px;
-            top: 2px;
-            width: 4px;
-            height: 6px;
-            background: #666;
-        }
-
-        /* 跳台编号 */
-        .dive-block .block-num {
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 10px;
-            color: rgba(255,255,255,0.5);
-            font-weight: bold;
-        }
-
-        /* ============ 水平小人 ============ */
-        .swimmer {
-            position: absolute;
-            left: 15px;
-            z-index: 10;
-            transition: left 0.1s linear;
-        }
-        .swimmer:nth-child(13) { top: 42px; }  /* lane 1 */
-        .swimmer:nth-child(14) { top: 122px; } /* lane 2 */
-        .swimmer:nth-child(15) { top: 202px; } /* lane 3 */
-        .swimmer:nth-child(16) { top: 282px; } /* lane 4 */
-        .swimmer:nth-child(17) { top: 362px; } /* lane 5 */
-        .swimmer:nth-child(18) { top: 442px; } /* lane 6 */
-
-        .man-wrapper {
-            width: 55px;
-            height: 30px;
-            position: relative;
-        }
-        .dir-left .man-wrapper {
-            transform: scaleX(-1);
-        }
-
-        .man {
-            position: relative;
-            width: 55px;
-            height: 30px;
-            overflow: visible;
-        }
-
-        /* 头 - 右侧（前方） */
-        .m-head {
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            right: 0;
-            top: 9px;
-        }
-
-        /* 泳帽 */
-        .m-cap {
-            position: absolute;
-            width: 10px;
-            height: 6px;
-            border-radius: 5px 5px 0 0;
-            right: 1px;
-            top: 4px;
-        }
-
-        /* 身体 - 水平 */
-        .m-body {
-            position: absolute;
-            width: 28px;
-            height: 8px;
-            border-radius: 4px;
-            right: 8px;
-            top: 11px;
-        }
-
-        /* 手臂 - 风车式360°轮转划水 */
-        .m-arm {
-            position: absolute;
-            width: 16px;
-            height: 3px;
-            border-radius: 3px;
-            left: 29px;
-            top: 12px;
-            transform-origin: right center;
-        }
-        .swimming .m-arm-a {
-            animation: windmillA 0.9s linear infinite;
-        }
-        .swimming .m-arm-b {
-            animation: windmillB 0.9s linear infinite;
-        }
-
-        @keyframes windmillA {
-            0%   { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        @keyframes windmillB {
-            0%   { transform: rotate(180deg); }
-            100% { transform: rotate(540deg); }
-        }
-
-        /* 腿 - 从臀部（身体左端）出发 */
-        .m-leg {
-            position: absolute;
-            width: 14px;
-            height: 3px;
-            border-radius: 2px;
-            left: 0;
-            top: 13px;
-            transform-origin: right center;
-        }
-        .swimming .m-leg-a {
-            animation: kickA 0.3s ease-in-out infinite;
-        }
-        .swimming .m-leg-b {
-            animation: kickB 0.3s ease-in-out infinite;
-        }
-
-        @keyframes kickA {
-            0%   { transform: rotate(-20deg); }
-            50%  { transform: rotate(20deg); }
-            100% { transform: rotate(-20deg); }
-        }
-        @keyframes kickB {
-            0%   { transform: rotate(20deg); }
-            50%  { transform: rotate(-20deg); }
-            100% { transform: rotate(20deg); }
-        }
-
-        /* 身体起伏 */
-        .swimming .man {
-            animation: bodyBob 0.35s ease-in-out infinite;
-        }
-        @keyframes bodyBob {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-2px); }
-        }
-
-        /* 水花尾迹 */
-        .swimmer::after {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 10px;
-            height: 14px;
-            background: radial-gradient(ellipse, rgba(255,255,255,0.35), transparent);
-            border-radius: 50%;
-            opacity: 0;
-        }
-        .swimming.swimmer::after {
-            animation: wake 0.4s ease-out infinite;
-        }
-        @keyframes wake {
-            0% { opacity: 0.6; transform: translateY(-50%) scale(0.5); }
-            100% { opacity: 0; transform: translateY(-50%) scale(1.5); }
-        }
-
-        /* 脚部浪花 */
-        .swimmer::before {
-            content: '';
-            position: absolute;
-            left: -2px;
-            top: 65%;
-            width: 8px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 50%;
-            opacity: 0;
-            z-index: 1;
-            pointer-events: none;
-        }
-        .swimming.swimmer::before {
-            animation: footSplash 0.25s ease-out infinite;
-        }
-        @keyframes footSplash {
-            0%   { opacity: 0.8; transform: scale(0.4) translateX(0); }
-            50%  { opacity: 0.4; transform: scale(1) translateX(-6px); }
-            100% { opacity: 0; transform: scale(1.3) translateX(-12px); }
-        }
-
-        /* 暂停动画（站在跳台上） */
-        .on-block .m-arm-a,
-        .on-block .m-arm-b,
-        .on-block .m-leg-a,
-        .on-block .m-leg-b {
-            animation: none;
-            transform: rotate(0deg);
-        }
-
-        /* ============ 水中道具 ============ */
-        .powerup {
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            z-index: 8;
-            pointer-events: none;
-            box-shadow: 0 0 12px rgba(255,255,255,0.3);
-        }
-        .powerup.speed {
-            background: radial-gradient(circle, #fff4a0, #ffc107);
-            animation: floatItem 1.2s ease-in-out infinite;
-        }
-        .powerup.boost {
-            background: radial-gradient(circle, #a0e4ff, #2196f3);
-            animation: floatItem 1.2s ease-in-out infinite 0.4s;
-        }
-        .powerup.slow {
-            background: radial-gradient(circle, #e1a0ff, #9c27b0);
-            animation: floatItem 1.2s ease-in-out infinite 0.8s;
-        }
-        @keyframes floatItem {
-            0%, 100% { transform: translateY(-3px); }
-            50% { transform: translateY(3px); }
-        }
-        .powerup .pulse {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 2px solid rgba(255,255,255,0.5);
-            animation: pulseRing 1.5s ease-out infinite;
-        }
-        @keyframes pulseRing {
-            0% { transform: scale(0.8); opacity: 0.8; }
-            100% { transform: scale(1.6); opacity: 0; }
-        }
-
-        /* 拾取道具提示 */
-        .collect-msg {
-            position: absolute;
-            font-weight: bold;
-            font-size: 16px;
-            pointer-events: none;
-            z-index: 20;
-            animation: floatUp 1s ease-out forwards;
-        }
-        @keyframes floatUp {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(-40px); opacity: 0; }
-        }
-
-        /* 终点线 */
-        .finish-line {
-            position: absolute;
-            right: 100px;
-            top: 0;
-            width: 5px;
-            height: 100%;
-            background: repeating-linear-gradient(
-                to bottom,
-                #fff 0px, #fff 10px,
-                #ff0000 10px, #ff0000 20px
-            );
-        }
-
         .controls {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 30px;
+          flex-direction: column;
+          align-items: center;
         }
-
         button {
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+          width: 100%;
+          max-width: 300px;
         }
-
-        #startBtn { background: linear-gradient(45deg, #00b09b, #96c93d); color: white; }
-        #startBtn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 176, 155, 0.4); }
-        #resetBtn { background: linear-gradient(45deg, #ff416c, #ff4b2b); color: white; }
-        #resetBtn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4); }
-        #boostBtn { background: linear-gradient(45deg, #4776E6, #8E54E9); color: white; }
-        #boostBtn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(71, 118, 230, 0.4); }
-
-        .boost-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 10px;
+        .podium-item .podium-block {
+          width: 65px;
         }
-
-        .boost-bar {
-            flex: 1;
-            height: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .boost-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #4776E6, #8E54E9);
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-
-        .boost-count { font-weight: bold; color: #8E54E9; }
-
-        .fatigue-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 5px;
-        }
-        .fatigue-bar {
-            flex: 1;
-            height: 14px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 7px;
-            overflow: hidden;
-        }
-        .fatigue-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #ff6b6b, #ff4444);
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-        .fatigue-label { font-size: 0.8rem; color: #ff6b6b; min-width: 50px; }
-
-        /* ============ 结果弹窗 ============ */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.75);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-overlay.active { display: flex; animation: fadeIn 0.3s ease; }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        .modal {
-            background: linear-gradient(145deg, #1a1a2e, #16213e);
-            border-radius: 20px;
-            width: 520px;
-            max-width: 90vw;
-            max-height: 85vh;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(0,180,219,0.2);
-            animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            border: 1px solid rgba(0,180,219,0.3);
-        }
-        @keyframes slideUp {
-            from { transform: translateY(60px) scale(0.9); opacity: 0; }
-            to { transform: translateY(0) scale(1); opacity: 1; }
-        }
-
-        .modal-header {
-            text-align: center;
-            padding: 25px 20px 15px;
-            background: linear-gradient(135deg, rgba(0,180,219,0.2), rgba(0,131,176,0.1));
-            border-bottom: 1px solid rgba(0,180,219,0.2);
-        }
-        .modal-header .trophy { font-size: 3rem; display: block; margin-bottom: 5px; animation: bounce 1s ease infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-        .modal-header h2 { font-size: 1.6rem; color: #00b4db; margin-bottom: 4px; }
-        .modal-header .race-time { font-size: 0.95rem; color: rgba(255,255,255,0.6); }
-
-        .modal-body { padding: 15px 25px 20px; }
-
-        .podium { display: flex; justify-content: center; align-items: flex-end; gap: 8px; margin-bottom: 20px; padding: 10px 0; }
-
-        .podium-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
-        }
-        .podium-item:nth-child(1) { animation-delay: 0.2s; }
-        .podium-item:nth-child(2) { animation-delay: 0.1s; }
-        .podium-item:nth-child(3) { animation-delay: 0.3s; }
-        @keyframes popIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-
-        .podium-item .podium-avatar {
-            width: 42px; height: 42px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.2rem; font-weight: bold; margin-bottom: 6px;
-            border: 3px solid; box-shadow: 0 3px 12px rgba(0,0,0,0.3);
-        }
-        .podium-item .podium-name { font-size: 0.75rem; font-weight: bold; margin-bottom: 4px; text-align: center; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .podium-item .podium-time { font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-bottom: 6px; }
-        .podium-item .podium-block { width: 80px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: bold; border-radius: 6px 6px 0 0; }
-
-        .podium-item.gold .podium-avatar { border-color: #ffd700; background: rgba(255,215,0,0.2); color: #ffd700; }
-        .podium-item.gold .podium-name { color: #ffd700; }
-        .podium-item.gold .podium-block { height: 70px; background: linear-gradient(to top, #b8860b, #ffd700); color: #1a1a2e; }
-
-        .podium-item.silver .podium-avatar { border-color: #c0c0c0; background: rgba(192,192,192,0.2); color: #c0c0c0; }
-        .podium-item.silver .podium-name { color: #c0c0c0; }
-        .podium-item.silver .podium-block { height: 50px; background: linear-gradient(to top, #808080, #c0c0c0); color: #1a1a2e; }
-
-        .podium-item.bronze .podium-avatar { border-color: #cd7f32; background: rgba(205,127,50,0.2); color: #cd7f32; }
-        .podium-item.bronze .podium-name { color: #cd7f32; }
-        .podium-item.bronze .podium-block { height: 35px; background: linear-gradient(to top, #8b4513, #cd7f32); color: #1a1a2e; }
-
-        .modal-rankings { width: 100%; border-collapse: collapse; }
-        .modal-rankings th { text-align: left; padding: 8px 10px; font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .modal-rankings td { padding: 9px 10px; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .modal-rankings tr.player-row { background: rgba(0,180,219,0.1); border-left: 3px solid #00b4db; }
-        .modal-rankings .rank-num { font-weight: bold; width: 30px; }
-        .modal-rankings .rank-1 { color: #ffd700; }
-        .modal-rankings .rank-2 { color: #c0c0c0; }
-        .modal-rankings .rank-3 { color: #cd7f32; }
-        .modal-rankings .swimmer-color { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
-
-        .modal-footer { padding: 15px 25px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
-        .modal-footer button { padding: 12px 35px; font-size: 1rem; background: linear-gradient(45deg, #00b09b, #96c93d); color: white; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; transition: all 0.3s ease; letter-spacing: 1px; }
-        .modal-footer button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,176,155,0.4); }
-
-        .instructions { margin-top: 30px; padding: 20px; background: rgba(0,0,0,0.5); border-radius: 10px; font-size: 0.9rem; line-height: 1.6; }
-        .instructions h3 { color: #00b4db; margin-bottom: 10px; }
-        .instructions ul { padding-left: 20px; }
-        .instructions li { margin-bottom: 8px; }
-
-        .splash {
-            position: absolute;
-            width: 20px; height: 20px;
-            background: rgba(255,255,255,0.7);
-            border-radius: 50%;
-            pointer-events: none;
-            animation: splashAnim 0.5s ease-out forwards;
-        }
-        @keyframes splashAnim { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
-
-        @media (max-width: 768px) {
-            .container { padding: 15px; }
-            h1 { font-size: 2rem; }
-            .game-area { height: 400px; }
-            .controls { flex-direction: column; align-items: center; }
-            button { width: 100%; max-width: 300px; }
-            .podium-item .podium-block { width: 65px; }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="header-top">
-            <h1>🏊 <span data-lang="title">百米自由泳比赛</span> 🏊</h1>
-            <button id="langToggle" class="lang-toggle">EN</button>
-        </div>
-        <p class="subtitle" data-lang="subtitle">四个回合，永争冠军！</p>
+      <div class="header-top">
+        <h1>🏊 <span data-lang="title">百米自由泳比赛</span> 🏊</h1>
+        <button id="langToggle" class="lang-toggle">EN</button>
+      </div>
+      <p class="subtitle" data-lang="subtitle">四个回合，永争冠军！</p>
     </header>
 
     <div class="container">
-        <div class="game-info">
-            <div class="info-box">
-                <div class="info-label" data-lang="labelStatus">比赛状态</div>
-                <div class="info-value" id="gameStatus">准备开始</div>
-            </div>
-            <div class="info-box">
-                <div class="info-label" data-lang="labelTime">比赛时间</div>
-                <div class="info-value" id="timer">00.00</div>
-            </div>
-            <div class="info-box">
-                <div class="info-label" data-lang="labelLap">当前回合</div>
-                <div class="info-value" id="lapCounter">0/4</div>
-            </div>
-            <div class="info-box">
-                <div class="info-label" data-lang="labelItems">收集道具</div>
-                <div class="info-value" id="itemCount">0</div>
-            </div>
-            <div class="info-box">
-                <div class="info-label" data-lang="labelRank">你的排名</div>
-                <div class="info-value" id="playerRank">-</div>
-            </div>
-            <div class="info-box">
-                <div class="info-label" data-lang="labelSpeed">最快速度</div>
-                <div class="info-value" id="fastestSpeed">0 m/s</div>
-            </div>
+      <div class="game-info">
+        <div class="info-box">
+          <div class="info-label" data-lang="labelStatus">比赛状态</div>
+          <div class="info-value" id="gameStatus">准备开始</div>
         </div>
+        <div class="info-box">
+          <div class="info-label" data-lang="labelTime">比赛时间</div>
+          <div class="info-value" id="timer">00.00</div>
+        </div>
+        <div class="info-box">
+          <div class="info-label" data-lang="labelLap">当前回合</div>
+          <div class="info-value" id="lapCounter">0/4</div>
+        </div>
+        <div class="info-box">
+          <div class="info-label" data-lang="labelItems">收集道具</div>
+          <div class="info-value" id="itemCount">0</div>
+        </div>
+        <div class="info-box">
+          <div class="info-label" data-lang="labelRank">你的排名</div>
+          <div class="info-value" id="playerRank">-</div>
+        </div>
+        <div class="info-box">
+          <div class="info-label" data-lang="labelSpeed">最快速度</div>
+          <div class="info-value" id="fastestSpeed">0 m/s</div>
+        </div>
+      </div>
 
-        <div class="game-area" id="gameArea">
-            <div class="pool">
-                <div class="lane"></div>
-                <div class="lane"></div>
-                <div class="lane"></div>
-                <div class="lane"></div>
-                <div class="lane"></div>
-                <div class="lane"></div>
+      <div class="game-area" id="gameArea">
+        <div class="pool">
+          <div class="lane"></div>
+          <div class="lane"></div>
+          <div class="lane"></div>
+          <div class="lane"></div>
+          <div class="lane"></div>
+          <div class="lane"></div>
 
-                <div class="dive-block" style="top:50px"><span class="block-num">1</span></div>
-                <div class="dive-block" style="top:130px"><span class="block-num">2</span></div>
-                <div class="dive-block" style="top:210px"><span class="block-num">3</span></div>
-                <div class="dive-block" style="top:290px"><span class="block-num">4</span></div>
-                <div class="dive-block" style="top:370px"><span class="block-num">5</span></div>
-                <div class="dive-block" style="top:450px"><span class="block-num">6</span></div>
+          <div class="dive-block" style="top: 50px">
+            <span class="block-num">1</span>
+          </div>
+          <div class="dive-block" style="top: 130px">
+            <span class="block-num">2</span>
+          </div>
+          <div class="dive-block" style="top: 210px">
+            <span class="block-num">3</span>
+          </div>
+          <div class="dive-block" style="top: 290px">
+            <span class="block-num">4</span>
+          </div>
+          <div class="dive-block" style="top: 370px">
+            <span class="block-num">5</span>
+          </div>
+          <div class="dive-block" style="top: 450px">
+            <span class="block-num">6</span>
+          </div>
 
-                <div class="swimmer on-block" id="swimmer1">
-                    <div class="man-wrapper"><div class="man">
-                        <div class="m-cap"></div>
-                        <div class="m-head"></div>
-                        <div class="m-body"></div>
-                        <div class="m-arm m-arm-a"></div>
-                        <div class="m-arm m-arm-b"></div>
-                        <div class="m-leg m-leg-a"></div>
-                        <div class="m-leg m-leg-b"></div>
-                    </div></div>
-                </div>
-                <div class="swimmer on-block" id="swimmer2">
-                    <div class="man-wrapper"><div class="man">
-                        <div class="m-cap"></div>
-                        <div class="m-head"></div>
-                        <div class="m-body"></div>
-                        <div class="m-arm m-arm-a"></div>
-                        <div class="m-arm m-arm-b"></div>
-                        <div class="m-leg m-leg-a"></div>
-                        <div class="m-leg m-leg-b"></div>
-                    </div></div>
-                </div>
-                <div class="swimmer on-block" id="swimmer3">
-                    <div class="man-wrapper"><div class="man">
-                        <div class="m-cap"></div>
-                        <div class="m-head"></div>
-                        <div class="m-body"></div>
-                        <div class="m-arm m-arm-a"></div>
-                        <div class="m-arm m-arm-b"></div>
-                        <div class="m-leg m-leg-a"></div>
-                        <div class="m-leg m-leg-b"></div>
-                    </div></div>
-                </div>
-                <div class="swimmer on-block" id="swimmer4">
-                    <div class="man-wrapper"><div class="man">
-                        <div class="m-cap"></div>
-                        <div class="m-head"></div>
-                        <div class="m-body"></div>
-                        <div class="m-arm m-arm-a"></div>
-                        <div class="m-arm m-arm-b"></div>
-                        <div class="m-leg m-leg-a"></div>
-                        <div class="m-leg m-leg-b"></div>
-                    </div></div>
-                </div>
-                <div class="swimmer on-block" id="swimmer5">
-                    <div class="man-wrapper"><div class="man">
-                        <div class="m-cap"></div>
-                        <div class="m-head"></div>
-                        <div class="m-body"></div>
-                        <div class="m-arm m-arm-a"></div>
-                        <div class="m-arm m-arm-b"></div>
-                        <div class="m-leg m-leg-a"></div>
-                        <div class="m-leg m-leg-b"></div>
-                    </div></div>
-                </div>
-                <div class="swimmer on-block" id="swimmer6">
-                    <div class="man-wrapper"><div class="man">
-                        <div class="m-cap"></div>
-                        <div class="m-head"></div>
-                        <div class="m-body"></div>
-                        <div class="m-arm m-arm-a"></div>
-                        <div class="m-arm m-arm-b"></div>
-                        <div class="m-leg m-leg-a"></div>
-                        <div class="m-leg m-leg-b"></div>
-                    </div></div>
-                </div>
-
-                <div class="finish-line"></div>
+          <div class="swimmer on-block" id="swimmer1">
+            <div class="man-wrapper">
+              <div class="man">
+                <div class="m-cap"></div>
+                <div class="m-head"></div>
+                <div class="m-body"></div>
+                <div class="m-arm m-arm-a"></div>
+                <div class="m-arm m-arm-b"></div>
+                <div class="m-leg m-leg-a"></div>
+                <div class="m-leg m-leg-b"></div>
+              </div>
             </div>
-        </div>
-
-        <div class="boost-info">
-            <span data-lang="labelBoost">加速能量:</span>
-            <div class="boost-bar">
-                <div class="boost-fill" id="boostFill"></div>
+          </div>
+          <div class="swimmer on-block" id="swimmer2">
+            <div class="man-wrapper">
+              <div class="man">
+                <div class="m-cap"></div>
+                <div class="m-head"></div>
+                <div class="m-body"></div>
+                <div class="m-arm m-arm-a"></div>
+                <div class="m-arm m-arm-b"></div>
+                <div class="m-leg m-leg-a"></div>
+                <div class="m-leg m-leg-b"></div>
+              </div>
             </div>
-            <span class="boost-count" id="boostCount">3/3</span>
-        </div>
-        <div class="fatigue-info">
-            <span data-lang="labelFatigue">疲劳值:</span>
-            <div class="fatigue-bar">
-                <div class="fatigue-fill" id="fatigueFill"></div>
+          </div>
+          <div class="swimmer on-block" id="swimmer3">
+            <div class="man-wrapper">
+              <div class="man">
+                <div class="m-cap"></div>
+                <div class="m-head"></div>
+                <div class="m-body"></div>
+                <div class="m-arm m-arm-a"></div>
+                <div class="m-arm m-arm-b"></div>
+                <div class="m-leg m-leg-a"></div>
+                <div class="m-leg m-leg-b"></div>
+              </div>
             </div>
-            <span class="fatigue-label" id="fatigueText">0%</span>
-        </div>
+          </div>
+          <div class="swimmer on-block" id="swimmer4">
+            <div class="man-wrapper">
+              <div class="man">
+                <div class="m-cap"></div>
+                <div class="m-head"></div>
+                <div class="m-body"></div>
+                <div class="m-arm m-arm-a"></div>
+                <div class="m-arm m-arm-b"></div>
+                <div class="m-leg m-leg-a"></div>
+                <div class="m-leg m-leg-b"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swimmer on-block" id="swimmer5">
+            <div class="man-wrapper">
+              <div class="man">
+                <div class="m-cap"></div>
+                <div class="m-head"></div>
+                <div class="m-body"></div>
+                <div class="m-arm m-arm-a"></div>
+                <div class="m-arm m-arm-b"></div>
+                <div class="m-leg m-leg-a"></div>
+                <div class="m-leg m-leg-b"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swimmer on-block" id="swimmer6">
+            <div class="man-wrapper">
+              <div class="man">
+                <div class="m-cap"></div>
+                <div class="m-head"></div>
+                <div class="m-body"></div>
+                <div class="m-arm m-arm-a"></div>
+                <div class="m-arm m-arm-b"></div>
+                <div class="m-leg m-leg-a"></div>
+                <div class="m-leg m-leg-b"></div>
+              </div>
+            </div>
+          </div>
 
-        <div class="controls">
-            <button id="startBtn" data-lang="btnStart">开始比赛</button>
-            <button id="boostBtn" data-lang="btnBoost">加速冲刺 (空格键)</button>
-            <button id="resetBtn" data-lang="btnReset">重新开始</button>
+          <div class="finish-line"></div>
         </div>
+      </div>
 
-        <div class="instructions">
-            <h3 data-lang="instrTitle">游戏说明</h3>
-            <ul>
-                <li data-lang="instr1" data-lang-html="true"><strong>开始比赛：</strong>按 Enter 键开始比赛，选手从跳台跳入水中</li>
-                <li data-lang="instr2" data-lang-html="true"><strong>前冲划水：</strong>按"D"键（或"A"键）朝当前方向猛冲一段距离！注意疲劳值，疲劳过高无法冲刺</li>
-                <li data-lang="instr3" data-lang-html="true"><strong>加速冲刺：</strong>按"空格键"或点击"加速冲刺"按钮使用加速能量</li>
-                <li data-lang="instr4" data-lang-html="true"><strong>收集道具：</strong>水中有 ⚡加速、🔋额外冲刺、🌀减速对手 道具，游过去收集！</li>
-                <li data-lang="instr5" data-lang-html="true"><strong>重新开始：</strong>比赛结束后点击"重新开始"按钮重新比赛</li>
-                <li data-lang="instr6" data-lang-html="true"><strong>目标：</strong>完成四个回合（8段泳程），第一个触壁的选手获胜！</li>
-            </ul>
+      <div class="boost-info">
+        <span data-lang="labelBoost">加速能量:</span>
+        <div class="boost-bar">
+          <div class="boost-fill" id="boostFill"></div>
         </div>
+        <span class="boost-count" id="boostCount">3/3</span>
+      </div>
+      <div class="fatigue-info">
+        <span data-lang="labelFatigue">疲劳值:</span>
+        <div class="fatigue-bar">
+          <div class="fatigue-fill" id="fatigueFill"></div>
+        </div>
+        <span class="fatigue-label" id="fatigueText">0%</span>
+      </div>
+
+      <div class="controls">
+        <button id="startBtn" data-lang="btnStart">开始比赛</button>
+        <button id="boostBtn" data-lang="btnBoost">加速冲刺 (空格键)</button>
+        <button id="resetBtn" data-lang="btnReset">重新开始</button>
+      </div>
+
+      <div class="instructions">
+        <h3 data-lang="instrTitle">游戏说明</h3>
+        <ul>
+          <li data-lang="instr1" data-lang-html="true">
+            <strong>开始比赛：</strong>按 Enter 键开始比赛，选手从跳台跳入水中
+          </li>
+          <li data-lang="instr2" data-lang-html="true">
+            <strong>前冲划水：</strong
+            >按"D"键（或"A"键）朝当前方向猛冲一段距离！注意疲劳值，疲劳过高无法冲刺
+          </li>
+          <li data-lang="instr3" data-lang-html="true">
+            <strong>加速冲刺：</strong
+            >按"空格键"或点击"加速冲刺"按钮使用加速能量
+          </li>
+          <li data-lang="instr4" data-lang-html="true">
+            <strong>收集道具：</strong>水中有 ⚡加速、🔋额外冲刺、🌀减速对手
+            道具，游过去收集！
+          </li>
+          <li data-lang="instr5" data-lang-html="true">
+            <strong>重新开始：</strong>比赛结束后点击"重新开始"按钮重新比赛
+          </li>
+          <li data-lang="instr6" data-lang-html="true">
+            <strong>目标：</strong
+            >完成四个回合（8段泳程），第一个触壁的选手获胜！
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="modal-overlay" id="resultModal">
-        <div class="modal">
-            <div class="modal-header">
-                <span class="trophy">🏆</span>
-                <h2 data-lang="modalTitle">比赛结束</h2>
-                <div class="race-time" id="modalRaceTime"></div>
-            </div>
-            <div class="modal-body">
-                <div class="podium" id="podium"></div>
-                <table class="modal-rankings">
-                    <thead>
-                        <tr><th data-lang="rankHeader">#</th><th data-lang="playerHeader">选手</th><th data-lang="timeHeader">用时</th><th data-lang="speedHeader">最高速度</th></tr>
-                    </thead>
-                    <tbody id="modalRankingBody"></tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <button id="modalRestartBtn" data-lang="btnRestart">再来一局</button>
-            </div>
+      <div class="modal">
+        <div class="modal-header">
+          <span class="trophy">🏆</span>
+          <h2 data-lang="modalTitle">比赛结束</h2>
+          <div class="race-time" id="modalRaceTime"></div>
         </div>
+        <div class="modal-body">
+          <div class="podium" id="podium"></div>
+          <table class="modal-rankings">
+            <thead>
+              <tr>
+                <th data-lang="rankHeader">#</th>
+                <th data-lang="playerHeader">选手</th>
+                <th data-lang="timeHeader">用时</th>
+                <th data-lang="speedHeader">最高速度</th>
+              </tr>
+            </thead>
+            <tbody id="modalRankingBody"></tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button id="modalRestartBtn" data-lang="btnRestart">再来一局</button>
+        </div>
+      </div>
     </div>
 
     <script>
-        var gameRunning = false;
-        var gameTime = 0;
-        var timerInterval = null;
-        var playerSwimmer = 1;
-        var boostCount = 3;
-        var maxBoost = 3;
-        var swimmers = [];
-        var raceFinished = false;
-        var divingPhase = true;
-        var diveDuration = 650;
-        var diveStagger = 120;
-        var powerups = [];
-        var powerupTimer = 0;
-        var powerupInterval = 2.0;
-        var itemsCollected = 0;
-        var fatigue = 0;
-        var maxFatigue = 100;
-        var fatiguePerDash = 35;
-        var fatigueRecovery = 2;
-        var dashDistance = 40;
+      var gameRunning = false;
+      var gameTime = 0;
+      var timerInterval = null;
+      var playerSwimmer = 1;
+      var boostCount = 3;
+      var maxBoost = 3;
+      var swimmers = [];
+      var raceFinished = false;
+      var divingPhase = true;
+      var diveDuration = 650;
+      var diveStagger = 120;
+      var powerups = [];
+      var powerupTimer = 0;
+      var powerupInterval = 2.0;
+      var itemsCollected = 0;
+      var fatigue = 0;
+      var maxFatigue = 100;
+      var fatiguePerDash = 35;
+      var fatigueRecovery = 2;
+      var dashDistance = 40;
 
-        var WALL_LEFT = 65;
-        var WALL_RIGHT = 820;
-        var TOTAL_LAPS = 4;
-        var TOTAL_LAPS_DISPLAY = '4';
+      var WALL_LEFT = 65;
+      var WALL_RIGHT = 820;
+      var TOTAL_LAPS = 4;
+      var TOTAL_LAPS_DISPLAY = "4";
 
-        var currentLang = 'zh';
-        var LANG = {
-            zh: {
-                title: '百米自由泳大赛',
-                subtitle: '四轮对决，勇夺冠军！',
-                statusReady: '准备开始',
-                statusDiving: '跳水中...',
-                statusRacing: '比赛中...',
-                statusFinished: '比赛结束',
-                roundPrefix: '回合',
-                btnStart: '开始比赛',
-                btnBoost: '加速冲刺 (空格键)',
-                btnReset: '重新开始',
-                btnRestart: '再来一局',
-                labelStatus: '比赛状态',
-                labelTime: '比赛时间',
-                labelLap: '当前回合',
-                labelItems: '收集道具',
-                labelRank: '你的排名',
-                labelSpeed: '最快速度',
-                labelBoost: '加速能量:',
-                labelFatigue: '疲劳值:',
-                modalTitle: '比赛结束',
-                modalTime: '总用时 {time} 秒 · 收集道具 {count} 个',
-                rankHeader: '#',
-                playerHeader: '选手',
-                timeHeader: '用时',
-                speedHeader: '最高速度',
-                playerSuffix: ' (你)',
-                instrTitle: '游戏说明',
-                instr1: '<strong>开始比赛：</strong>按 Enter 键开始比赛，选手从跳台跳入水中',
-                instr2: '<strong>前冲划水：</strong>按"D"键（或"A"键）朝当前方向猛冲一段距离！注意疲劳值，疲劳过高无法冲刺',
-                instr3: '<strong>加速冲刺：</strong>按"空格键"或点击"加速冲刺"按钮使用加速能量',
-                instr4: '<strong>收集道具：</strong>水中有 ⚡加速、🔋额外冲刺、🌀减速对手 道具，游过去收集！',
-                instr5: '<strong>重新开始：</strong>比赛结束后点击"重新开始"按钮重新比赛',
-                instr6: '<strong>目标：</strong>完成四个回合（8段泳程），第一个触壁的选手获胜！',
-                names: ['红色闪电', '蓝色风暴', '金色飞鱼', '绿色海豚', '粉色猛将', '紫色旋风'],
-                itemSpeed: '加速',
-                itemBoost: '+1冲刺',
-                itemSlow: '减速对手'
-            },
-            en: {
-                title: '100m Freestyle Championship',
-                subtitle: 'Four Rounds, Fight for the Title!',
-                statusReady: 'Ready',
-                statusDiving: 'Diving...',
-                statusRacing: 'Racing...',
-                statusFinished: 'Race Finished',
-                roundPrefix: 'Round',
-                btnStart: 'Start Race',
-                btnBoost: 'Sprint (Space)',
-                btnReset: 'Restart',
-                btnRestart: 'Play Again',
-                labelStatus: 'Status',
-                labelTime: 'Time',
-                labelLap: 'Round',
-                labelItems: 'Items',
-                labelRank: 'Rank',
-                labelSpeed: 'Top Speed',
-                labelBoost: 'Boost Energy:',
-                labelFatigue: 'Fatigue:',
-                modalTitle: 'Race Finished',
-                modalTime: 'Total {time}s · Items {count}',
-                rankHeader: '#',
-                playerHeader: 'Player',
-                timeHeader: 'Time',
-                speedHeader: 'Top Speed',
-                playerSuffix: ' (You)',
-                instrTitle: 'How to Play',
-                instr1: '<strong>Start:</strong> Press Enter to start. Swimmers dive into the water.',
-                instr2: '<strong>Dash:</strong> Tap D (or A) to lunge forward! Watch fatigue bar — too tired = can\'t dash.',
-                instr3: '<strong>Sprint:</strong> Press Space to use boost sprint.',
-                instr4: '<strong>Items:</strong> Collect ⚡Speed 🔋+1Boost 🌀Slow Foe in the water!',
-                instr5: '<strong>Restart:</strong> Click "Restart" after the race to play again.',
-                instr6: '<strong>Goal:</strong> Complete four rounds (8 lengths), first to touch wins!',
-                names: ['Red Lightning', 'Blue Storm', 'Golden Fish', 'Green Dolphin', 'Pink Power', 'Purple Cyclone'],
-                itemSpeed: 'Speed',
-                itemBoost: '+1Boost',
-                itemSlow: 'Slow Foe'
-            }
-        };
+      var currentLang = "zh";
+      var LANG = {
+        zh: {
+          title: "百米自由泳大赛",
+          subtitle: "四轮对决，勇夺冠军！",
+          statusReady: "准备开始",
+          statusDiving: "跳水中...",
+          statusRacing: "比赛中...",
+          statusFinished: "比赛结束",
+          roundPrefix: "回合",
+          btnStart: "开始比赛",
+          btnBoost: "加速冲刺 (空格键)",
+          btnReset: "重新开始",
+          btnRestart: "再来一局",
+          labelStatus: "比赛状态",
+          labelTime: "比赛时间",
+          labelLap: "当前回合",
+          labelItems: "收集道具",
+          labelRank: "你的排名",
+          labelSpeed: "最快速度",
+          labelBoost: "加速能量:",
+          labelFatigue: "疲劳值:",
+          modalTitle: "比赛结束",
+          modalTime: "总用时 {time} 秒 · 收集道具 {count} 个",
+          rankHeader: "#",
+          playerHeader: "选手",
+          timeHeader: "用时",
+          speedHeader: "最高速度",
+          playerSuffix: " (你)",
+          instrTitle: "游戏说明",
+          instr1:
+            "<strong>开始比赛：</strong>按 Enter 键开始比赛，选手从跳台跳入水中",
+          instr2:
+            '<strong>前冲划水：</strong>按"D"键（或"A"键）朝当前方向猛冲一段距离！注意疲劳值，疲劳过高无法冲刺',
+          instr3:
+            '<strong>加速冲刺：</strong>按"空格键"或点击"加速冲刺"按钮使用加速能量',
+          instr4:
+            "<strong>收集道具：</strong>水中有 ⚡加速、🔋额外冲刺、🌀减速对手 道具，游过去收集！",
+          instr5:
+            '<strong>重新开始：</strong>比赛结束后点击"重新开始"按钮重新比赛',
+          instr6:
+            "<strong>目标：</strong>完成四个回合（8段泳程），第一个触壁的选手获胜！",
+          names: [
+            "红色闪电",
+            "蓝色风暴",
+            "金色飞鱼",
+            "绿色海豚",
+            "粉色猛将",
+            "紫色旋风",
+          ],
+          itemSpeed: "加速",
+          itemBoost: "+1冲刺",
+          itemSlow: "减速对手",
+        },
+        en: {
+          title: "100m Freestyle Championship",
+          subtitle: "Four Rounds, Fight for the Title!",
+          statusReady: "Ready",
+          statusDiving: "Diving...",
+          statusRacing: "Racing...",
+          statusFinished: "Race Finished",
+          roundPrefix: "Round",
+          btnStart: "Start Race",
+          btnBoost: "Sprint (Space)",
+          btnReset: "Restart",
+          btnRestart: "Play Again",
+          labelStatus: "Status",
+          labelTime: "Time",
+          labelLap: "Round",
+          labelItems: "Items",
+          labelRank: "Rank",
+          labelSpeed: "Top Speed",
+          labelBoost: "Boost Energy:",
+          labelFatigue: "Fatigue:",
+          modalTitle: "Race Finished",
+          modalTime: "Total {time}s · Items {count}",
+          rankHeader: "#",
+          playerHeader: "Player",
+          timeHeader: "Time",
+          speedHeader: "Top Speed",
+          playerSuffix: " (You)",
+          instrTitle: "How to Play",
+          instr1:
+            "<strong>Start:</strong> Press Enter to start. Swimmers dive into the water.",
+          instr2:
+            "<strong>Dash:</strong> Tap D (or A) to lunge forward! Watch fatigue bar — too tired = can't dash.",
+          instr3: "<strong>Sprint:</strong> Press Space to use boost sprint.",
+          instr4:
+            "<strong>Items:</strong> Collect ⚡Speed 🔋+1Boost 🌀Slow Foe in the water!",
+          instr5:
+            '<strong>Restart:</strong> Click "Restart" after the race to play again.',
+          instr6:
+            "<strong>Goal:</strong> Complete four rounds (8 lengths), first to touch wins!",
+          names: [
+            "Red Lightning",
+            "Blue Storm",
+            "Golden Fish",
+            "Green Dolphin",
+            "Pink Power",
+            "Purple Cyclone",
+          ],
+          itemSpeed: "Speed",
+          itemBoost: "+1Boost",
+          itemSlow: "Slow Foe",
+        },
+      };
 
-        function t(key) { return LANG[currentLang][key] || key; }
+      function t(key) {
+        return LANG[currentLang][key] || key;
+      }
 
-        function applyLanguage() {
-            var els = document.querySelectorAll('[data-lang]');
-            for (var i = 0; i < els.length; i++) {
-                var key = els[i].getAttribute('data-lang');
-                if (els[i].getAttribute('data-lang-html') === 'true') {
-                    els[i].innerHTML = t(key);
-                } else {
-                    els[i].textContent = t(key);
-                }
-            }
-            updateLapDisplay();
-            if (_roundLap >= 0) {
-                var d = _roundDir < 0 ? '←' : '→';
-                updateGameStatus(t('roundPrefix') + ' ' + _roundLap + '/' + TOTAL_LAPS_DISPLAY + ' ' + d);
-            } else {
-                updateGameStatus(t(_statusKey));
-            }
+      function applyLanguage() {
+        var els = document.querySelectorAll("[data-lang]");
+        for (var i = 0; i < els.length; i++) {
+          var key = els[i].getAttribute("data-lang");
+          if (els[i].getAttribute("data-lang-html") === "true") {
+            els[i].innerHTML = t(key);
+          } else {
+            els[i].textContent = t(key);
+          }
+        }
+        updateLapDisplay();
+        if (_roundLap >= 0) {
+          var d = _roundDir < 0 ? "←" : "→";
+          updateGameStatus(
+            t("roundPrefix") +
+              " " +
+              _roundLap +
+              "/" +
+              TOTAL_LAPS_DISPLAY +
+              " " +
+              d,
+          );
+        } else {
+          updateGameStatus(t(_statusKey));
+        }
+      }
+
+      function toggleLang() {
+        currentLang = currentLang === "zh" ? "en" : "zh";
+        applyLanguage();
+        document.getElementById("langToggle").textContent =
+          currentLang === "zh" ? "EN" : "中";
+      }
+
+      var profiles = [
+        {
+          id: 1,
+          name: "红色闪电",
+          cap: "#ff6b6b",
+          skin: "#f4c89a",
+          body: "#e53935",
+          scale: 1.0,
+          baseSpeed: 3.2,
+          sv: 0.3,
+        },
+        {
+          id: 2,
+          name: "蓝色风暴",
+          cap: "#2196f3",
+          skin: "#deb887",
+          body: "#1565c0",
+          scale: 0.95,
+          baseSpeed: 3.6,
+          sv: 0.4,
+        },
+        {
+          id: 3,
+          name: "金色飞鱼",
+          cap: "#ffc107",
+          skin: "#f5cba7",
+          body: "#f9a825",
+          scale: 1.05,
+          baseSpeed: 3.5,
+          sv: 0.35,
+        },
+        {
+          id: 4,
+          name: "绿色海豚",
+          cap: "#4caf50",
+          skin: "#d4a574",
+          body: "#2e7d32",
+          scale: 0.92,
+          baseSpeed: 3.7,
+          sv: 0.45,
+        },
+        {
+          id: 5,
+          name: "粉色猛将",
+          cap: "#e91e63",
+          skin: "#c68642",
+          body: "#ad1457",
+          scale: 1.08,
+          baseSpeed: 3.55,
+          sv: 0.4,
+        },
+        {
+          id: 6,
+          name: "紫色旋风",
+          cap: "#9c27b0",
+          skin: "#8d5524",
+          body: "#6a1b9a",
+          scale: 0.98,
+          baseSpeed: 3.65,
+          sv: 0.42,
+        },
+      ];
+
+      function styleSwimmer(id, p) {
+        var el = document.getElementById("swimmer" + id);
+        var man = el.querySelector(".man");
+        man.style.transform = "scale(" + p.scale + ")";
+        man.style.transformOrigin = "right center";
+        el.querySelector(".m-cap").style.background = p.cap;
+        el.querySelector(".m-head").style.background = p.skin;
+        el.querySelector(".m-body").style.background = p.body;
+        var arms = el.querySelectorAll(".m-arm");
+        for (var i = 0; i < arms.length; i++) arms[i].style.background = p.skin;
+        var legs = el.querySelectorAll(".m-leg");
+        for (var i = 0; i < legs.length; i++) legs[i].style.background = p.skin;
+      }
+
+      function initSwimmers() {
+        swimmers = profiles.map(function (p) {
+          return {
+            id: p.id,
+            name: p.name,
+            speed: 0,
+            baseSpeed: p.baseSpeed,
+            maxSpeed: 0,
+            position: 50,
+            finished: false,
+            finishTime: 0,
+            rank: 0,
+            isPlayer: p.id === 1,
+            inWater: false,
+            direction: 1,
+            laps: 0,
+            boostTimer: 0,
+            slowTimer: 0,
+          };
+        });
+        profiles.forEach(function (p) {
+          styleSwimmer(p.id, p);
+        });
+      }
+
+      function resetSwimmerDOM() {
+        for (var i = 0; i < profiles.length; i++) {
+          var el = document.getElementById("swimmer" + profiles[i].id);
+          el.style.left = "15px";
+          el.classList.remove("swimming", "diving", "dir-left");
+          el.classList.add("on-block");
+        }
+      }
+
+      function initGame() {
+        gameRunning = false;
+        gameTime = 0;
+        raceFinished = false;
+        divingPhase = true;
+        boostCount = maxBoost;
+        itemsCollected = 0;
+        fatigue = 0;
+        powerupTimer = 0;
+
+        for (var pi = 0; pi < powerups.length; pi++) {
+          if (powerups[pi].el.parentNode)
+            powerups[pi].el.parentNode.removeChild(powerups[pi].el);
+        }
+        powerups = [];
+
+        var msgs = document.querySelectorAll(".collect-msg");
+        for (var mi = 0; mi < msgs.length; mi++) {
+          if (msgs[mi].parentNode) msgs[mi].parentNode.removeChild(msgs[mi]);
         }
 
-        function toggleLang() {
-            currentLang = currentLang === 'zh' ? 'en' : 'zh';
-            applyLanguage();
-            document.getElementById('langToggle').textContent = currentLang === 'zh' ? 'EN' : '中';
+        initSwimmers();
+        resetSwimmerDOM();
+
+        _statusKey = "statusReady";
+        _roundLap = -1;
+        document.getElementById("resultModal").classList.remove("active");
+        updateTimer();
+        updateBoost();
+        updateGameStatus(t("statusReady"));
+        updatePlayerRank("-");
+        updateFastestSpeed("0 m/s");
+        updateFatigue();
+
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
         }
+      }
 
-        var profiles = [
-            { id: 1, name: "红色闪电", cap: "#ff6b6b", skin: "#f4c89a", body: "#e53935", scale: 1.0,  baseSpeed: 3.2, sv: 0.3 },
-            { id: 2, name: "蓝色风暴", cap: "#2196f3", skin: "#deb887", body: "#1565c0", scale: 0.95, baseSpeed: 3.6, sv: 0.4 },
-            { id: 3, name: "金色飞鱼", cap: "#ffc107", skin: "#f5cba7", body: "#f9a825", scale: 1.05, baseSpeed: 3.5, sv: 0.35 },
-            { id: 4, name: "绿色海豚", cap: "#4caf50", skin: "#d4a574", body: "#2e7d32", scale: 0.92, baseSpeed: 3.7, sv: 0.45 },
-            { id: 5, name: "粉色猛将", cap: "#e91e63", skin: "#c68642", body: "#ad1457", scale: 1.08, baseSpeed: 3.55, sv: 0.4 },
-            { id: 6, name: "紫色旋风", cap: "#9c27b0", skin: "#8d5524", body: "#6a1b9a", scale: 0.98, baseSpeed: 3.65, sv: 0.42 }
-        ];
+      function diveSwimmer(el, swimmer, targetX, duration, callback) {
+        var startX = 15;
+        var startTime = null;
 
-        function styleSwimmer(id, p) {
-            var el = document.getElementById('swimmer' + id);
-            var man = el.querySelector('.man');
-            man.style.transform = 'scale(' + p.scale + ')';
-            man.style.transformOrigin = 'right center';
-            el.querySelector('.m-cap').style.background = p.cap;
-            el.querySelector('.m-head').style.background = p.skin;
-            el.querySelector('.m-body').style.background = p.body;
-            var arms = el.querySelectorAll('.m-arm');
-            for (var i = 0; i < arms.length; i++) arms[i].style.background = p.skin;
-            var legs = el.querySelectorAll('.m-leg');
-            for (var i = 0; i < legs.length; i++) legs[i].style.background = p.skin;
-        }
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
 
-        function initSwimmers() {
-            swimmers = profiles.map(function(p) {
-                return {
-                    id: p.id, name: p.name,
-                    speed: 0, baseSpeed: p.baseSpeed, maxSpeed: 0,
-                    position: 50, finished: false, finishTime: 0, rank: 0,
-                    isPlayer: p.id === 1, inWater: false,
-                    direction: 1, laps: 0, boostTimer: 0, slowTimer: 0
-                };
-            });
-            profiles.forEach(function(p) { styleSwimmer(p.id, p); });
-        }
+          var currentX = startX + (targetX - startX) * eased;
+          var arcY = -35 * Math.sin(progress * Math.PI);
 
-        function resetSwimmerDOM() {
-            for (var i = 0; i < profiles.length; i++) {
-                var el = document.getElementById('swimmer' + profiles[i].id);
-                el.style.left = '15px';
-                el.classList.remove('swimming', 'diving', 'dir-left');
-                el.classList.add('on-block');
-            }
-        }
+          el.style.left = currentX + "px";
+          el.style.transform = "translateY(" + arcY + "px)";
 
-        function initGame() {
-            gameRunning = false;
-            gameTime = 0;
-            raceFinished = false;
-            divingPhase = true;
-            boostCount = maxBoost;
-            itemsCollected = 0;
-            fatigue = 0;
-            powerupTimer = 0;
-
-            for (var pi = 0; pi < powerups.length; pi++) {
-                if (powerups[pi].el.parentNode) powerups[pi].el.parentNode.removeChild(powerups[pi].el);
-            }
-            powerups = [];
-
-            var msgs = document.querySelectorAll('.collect-msg');
-            for (var mi = 0; mi < msgs.length; mi++) {
-                if (msgs[mi].parentNode) msgs[mi].parentNode.removeChild(msgs[mi]);
-            }
-
-            initSwimmers();
-            resetSwimmerDOM();
-
-            _statusKey = 'statusReady';
-            _roundLap = -1;
-            document.getElementById('resultModal').classList.remove('active');
-            updateTimer();
-            updateBoost();
-            updateGameStatus(t('statusReady'));
-            updatePlayerRank('-');
-            updateFastestSpeed('0 m/s');
-            updateFatigue();
-
-            if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
-        }
-
-        function diveSwimmer(el, swimmer, targetX, duration, callback) {
-            var startX = 15;
-            var startTime = null;
-
-            function step(timestamp) {
-                if (!startTime) startTime = timestamp;
-                var progress = Math.min((timestamp - startTime) / duration, 1);
-                var eased = 1 - Math.pow(1 - progress, 3);
-
-                var currentX = startX + (targetX - startX) * eased;
-                var arcY = -35 * Math.sin(progress * Math.PI);
-
-                el.style.left = currentX + 'px';
-                el.style.transform = 'translateY(' + arcY + 'px)';
-
-                if (progress < 1) {
-                    requestAnimationFrame(step);
-                } else {
-                    el.style.transform = '';
-                    swimmer.position = targetX;
-                    swimmer.inWater = true;
-                    el.classList.remove('on-block');
-                    el.classList.add('swimming');
-                    createSplash(el);
-                    if (callback) callback();
-                }
-            }
-
-            el.classList.remove('on-block');
+          if (progress < 1) {
             requestAnimationFrame(step);
-        }
-
-        function startGame() {
-            if (gameRunning || raceFinished) return;
-            gameRunning = true;
-            divingPhase = true;
-            gameTime = 0;
-
-            _statusKey = 'statusDiving';
-            _roundLap = -1;
-            updateGameStatus(t('statusDiving'));
-
-            var completedDives = 0;
-            var totalSwimmers = swimmers.length;
-
-            for (var i = 0; i < totalSwimmers; i++) {
-                (function(idx) {
-                    var el = document.getElementById('swimmer' + swimmers[idx].id);
-                    var delay = idx * diveStagger;
-
-                    setTimeout(function() {
-                        diveSwimmer(el, swimmers[idx], 55, diveDuration, function() {
-                            completedDives++;
-                            if (completedDives >= totalSwimmers) {
-                                divingPhase = false;
-                                _statusKey = 'statusRacing';
-                                updateGameStatus(t('statusRacing'));
-                                timerInterval = setInterval(function() {
-                                    gameTime += 0.1;
-                                    updateTimer();
-                                    updateGame();
-                                    updatePowerups();
-                                }, 100);
-                            }
-                        });
-                    }, delay);
-                })(i);
-            }
-        }
-
-        function updateGame() {
-            if (!gameRunning) return;
-
-            var allFinished = true;
-            var finishedCount = 0;
-            for (var i = 0; i < swimmers.length; i++) { if (swimmers[i].finished) finishedCount++; }
-
-            for (var i = 0; i < swimmers.length; i++) {
-                var s = swimmers[i];
-                if (s.finished) continue;
-                if (!s.inWater) { allFinished = false; continue; }
-
-                allFinished = false;
-
-                var sv = 0;
-                if (!s.isPlayer) {
-                    var tp = getTotalProgress(s) / (TOTAL_LAPS * (WALL_RIGHT - WALL_LEFT) * 2);
-                    if (tp > 0.85) sv = Math.random() * 0.9 + 0.3;
-                    else if (tp > 0.6) sv = Math.random() * 0.5 + 0.2;
-                    else if (tp > 0.3) sv = Math.random() * 0.4 + 0.1;
-                    else sv = Math.random() * 0.3 + 0.05;
-                    if (Math.random() < 0.03) {
-                        npcDash(s);
-                    }
-                }
-
-                s.speed = s.baseSpeed + sv;
-                if (s.boostTimer > 0) { s.speed += 3; s.boostTimer--; }
-                if (s.slowTimer > 0) { s.speed -= 2; s.slowTimer--; }
-                if (s.speed > s.maxSpeed) s.maxSpeed = s.speed;
-                s.position += s.speed * s.direction;
-
-                if (s.direction > 0 && s.position >= WALL_RIGHT) {
-                    s.position = WALL_RIGHT;
-                    s.direction = -1;
-                    var el = document.getElementById('swimmer' + s.id);
-                    if (el) createSplash(el);
-                    if (s.isPlayer) {
-                        _roundLap = s.laps + 1;
-                        _roundDir = -1;
-                        updateGameStatus(t('roundPrefix') + ' ' + _roundLap + '/' + TOTAL_LAPS_DISPLAY + ' ←');
-                    }
-                }
-
-                if (s.direction < 0 && s.position <= WALL_LEFT) {
-                    s.position = WALL_LEFT;
-                    s.direction = 1;
-                    s.laps++;
-                    var el = document.getElementById('swimmer' + s.id);
-                    if (el) createSplash(el);
-                    if (s.laps >= TOTAL_LAPS) {
-                        s.finished = true;
-                        s.finishTime = gameTime;
-                        s.rank = ++finishedCount;
-                        var fel = document.getElementById('swimmer' + s.id);
-                        if (fel) { fel.classList.remove('swimming'); createSplash(fel); }
-                    } else if (s.isPlayer) {
-                        _roundLap = s.laps + 1;
-                        _roundDir = 1;
-                        updateGameStatus(t('roundPrefix') + ' ' + _roundLap + '/' + TOTAL_LAPS_DISPLAY + ' →');
-                    }
-                }
-
-                if (!s.finished) {
-                    var fel = document.getElementById('swimmer' + s.id);
-                    fel.style.left = s.position + 'px';
-                    if (s.direction < 0) fel.classList.add('dir-left');
-                    else fel.classList.remove('dir-left');
-                }
-            }
-
-            if (!allFinished) {
-                allFinished = swimmers.every(function(s) { return s.finished; });
-            }
-            fatigue = Math.max(0, fatigue - fatigueRecovery);
-            updateFatigue();
-            if (allFinished) finishRace();
-            updatePlayerRanking();
-            updateFastestSpeed();
-            updateLapDisplay();
-        }
-
-        function updateLapDisplay() {
-            var p = swimmers[0];
-            var dir = p.direction > 0 ? '→' : '←';
-            var leg = p.laps * 2 + (p.direction > 0 ? 0 : 1);
-            document.getElementById('lapCounter').textContent = (p.laps || 0) + '/' + TOTAL_LAPS_DISPLAY + ' ' + dir;
-        }
-
-        function finishRace() {
-            gameRunning = false;
-            raceFinished = true;
-            if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
-            for (var pi = 0; pi < powerups.length; pi++) {
-                if (powerups[pi].el.parentNode) powerups[pi].el.parentNode.removeChild(powerups[pi].el);
-            }
-            powerups = [];
-            _statusKey = 'statusFinished';
-            _roundLap = -1;
-            updateGameStatus(t('statusFinished'));
-            showResultModal();
-        }
-
-        function showResultModal() {
-            var sorted = swimmers.slice().sort(function(a, b) { return a.rank - b.rank; });
-            var top3 = sorted.slice(0, 3);
-            var podium = document.getElementById('podium');
-            podium.innerHTML = '';
-            var order = [1, 0, 2];
-            var medals = ['silver', 'gold', 'bronze'];
-            var icons = ['🥇', '🥈', '🥉'];
-
-            for (var di = 0; di < order.length; di++) {
-                var si = order[di];
-                if (si >= top3.length) continue;
-                var s = top3[si];
-                var p = profiles[s.id - 1];
-                var item = document.createElement('div');
-                item.className = 'podium-item ' + medals[di];
-                item.innerHTML =
-                    '<div class="podium-avatar" style="color:' + p.cap + ';border-color:' + p.cap + '">' + s.id + '</div>' +
-                    '<div class="podium-name">' + t('names')[s.id - 1] + '</div>' +
-                    '<div class="podium-time">' + s.finishTime.toFixed(2) + 's</div>' +
-                    '<div class="podium-block">' + icons[si] + '</div>';
-                podium.appendChild(item);
-            }
-
-            document.getElementById('modalRaceTime').textContent = t('modalTime').replace('{time}', gameTime.toFixed(2)).replace('{count}', itemsCollected);
-            var tbody = document.getElementById('modalRankingBody');
-            tbody.innerHTML = '';
-
-            for (var i = 0; i < sorted.length; i++) {
-                var s = sorted[i];
-                var p = profiles[s.id - 1];
-                var tr = document.createElement('tr');
-                if (s.isPlayer) tr.className = 'player-row';
-                var rc = s.rank <= 3 ? ' rank-' + s.rank : '';
-                tr.innerHTML =
-                    '<td class="rank-num' + rc + '">' + s.rank + '</td>' +
-                    '<td><span class="swimmer-color" style="background:' + p.cap + '"></span>' + t('names')[s.id - 1] + (s.isPlayer ? t('playerSuffix') : '') + '</td>' +
-                    '<td>' + s.finishTime.toFixed(2) + 's</td>' +
-                    '<td>' + s.maxSpeed.toFixed(1) + ' m/s</td>';
-                tbody.appendChild(tr);
-            }
-
-            document.getElementById('resultModal').classList.add('active');
-        }
-
-        function useBoost() {
-            if (!gameRunning || boostCount <= 0 || swimmers[0].finished) return;
-            boostCount--;
-            updateBoost();
-            swimmers[0].boostTimer = 20;
-            swimmers[0].position += 60 * swimmers[0].direction;
-            document.getElementById('swimmer' + playerSwimmer).style.left = swimmers[0].position + 'px';
-            createSplash(document.getElementById('swimmer' + playerSwimmer));
-        }
-
-        function createSplash(element) {
-            var rect = element.getBoundingClientRect();
-            var ga = document.getElementById('gameArea');
-            var gr = ga.getBoundingClientRect();
-            var splash = document.createElement('div');
-            splash.className = 'splash';
-            splash.style.left = (rect.left - gr.left + 40) + 'px';
-            splash.style.top = (rect.top - gr.top + 15) + 'px';
-            ga.appendChild(splash);
-            setTimeout(function() { if (splash.parentNode) splash.parentNode.removeChild(splash); }, 600);
-        }
-
-        function dashForward() {
-            if (!gameRunning || swimmers[0].finished || !swimmers[0].inWater) return;
-            if (fatigue + fatiguePerDash > maxFatigue) return;
-            var p = swimmers[0];
-            var dash = dashDistance;
-            var newPos = p.position + dash * p.direction;
-            if (newPos < WALL_LEFT) newPos = WALL_LEFT;
-            if (newPos > WALL_RIGHT) newPos = WALL_RIGHT;
-            p.position = newPos;
-            fatigue += fatiguePerDash;
-            p.boostTimer = Math.max(p.boostTimer, 2);
-            var el = document.getElementById('swimmer' + playerSwimmer);
-            el.style.left = p.position + 'px';
+          } else {
+            el.style.transform = "";
+            swimmer.position = targetX;
+            swimmer.inWater = true;
+            el.classList.remove("on-block");
+            el.classList.add("swimming");
             createSplash(el);
-            updateFatigue();
+            if (callback) callback();
+          }
         }
 
-        function npcDash(s) {
-            var dash = 25 + Math.random() * 25;
-            var newPos = s.position + dash * s.direction;
-            if (newPos < WALL_LEFT) newPos = WALL_LEFT;
-            if (newPos > WALL_RIGHT) newPos = WALL_RIGHT;
-            s.position = newPos;
-            var nel = document.getElementById('swimmer' + s.id);
-            if (nel) createSplash(nel);
-        }
+        el.classList.remove("on-block");
+        requestAnimationFrame(step);
+      }
 
-        function getTotalProgress(s) {
-            var legLen = WALL_RIGHT - WALL_LEFT;
-            if (s.direction > 0) return s.laps * legLen * 2 + (s.position - WALL_LEFT);
-            return s.laps * legLen * 2 + legLen + (WALL_RIGHT - s.position);
-        }
+      function startGame() {
+        if (gameRunning || raceFinished) return;
+        gameRunning = true;
+        divingPhase = true;
+        gameTime = 0;
 
-        function updateTimer() { document.getElementById('timer').textContent = gameTime.toFixed(2); }
-        var _statusKey = 'statusReady';
-        var _roundLap = -1;
-        var _roundDir = 1;
+        _statusKey = "statusDiving";
+        _roundLap = -1;
+        updateGameStatus(t("statusDiving"));
 
-        function updateGameStatus(s) {
-            document.getElementById('gameStatus').textContent = s;
-        }
-        function updatePlayerRank(r) { document.getElementById('playerRank').textContent = r; }
-        function updateFastestSpeed() {
-            if (!gameRunning) return;
-            var mx = 0;
-            for (var i = 0; i < swimmers.length; i++) { if (swimmers[i].speed > mx) mx = swimmers[i].speed; }
-            document.getElementById('fastestSpeed').textContent = mx.toFixed(1) + ' m/s';
-        }
+        var completedDives = 0;
+        var totalSwimmers = swimmers.length;
 
-        function updatePlayerRanking() {
-            if (!gameRunning) return;
-            var player = swimmers[0];
-            if (player.finished) return;
-            var playerProgress = getTotalProgress(player);
-            var unfinished = swimmers.filter(function(s) { return !s.finished && s.inWater && s.id !== player.id; });
-            var ahead = unfinished.filter(function(s) { return getTotalProgress(s) > playerProgress; }).length;
-            var finishedAhead = swimmers.filter(function(s) { return s.finished && s.id !== player.id; }).length;
-            updatePlayerRank(ahead + finishedAhead + 1);
-        }
+        for (var i = 0; i < totalSwimmers; i++) {
+          (function (idx) {
+            var el = document.getElementById("swimmer" + swimmers[idx].id);
+            var delay = idx * diveStagger;
 
-        function updateBoost() {
-            var pct = (boostCount / maxBoost) * 100;
-            document.getElementById('boostFill').style.width = pct + '%';
-            document.getElementById('boostCount').textContent = boostCount + '/' + maxBoost;
-            var btn = document.getElementById('boostBtn');
-            btn.disabled = boostCount <= 0 || !gameRunning || raceFinished;
-            btn.style.opacity = btn.disabled ? '0.5' : '1';
-        }
-
-        function updateFatigue() {
-            var pct = (fatigue / maxFatigue) * 100;
-            document.getElementById('fatigueFill').style.width = pct + '%';
-            document.getElementById('fatigueText').textContent = Math.round(pct) + '%';
-            var fill = document.getElementById('fatigueFill');
-            if (pct >= 90) fill.style.background = 'linear-gradient(90deg, #ff4444, #cc0000)';
-            else if (pct > 50) fill.style.background = 'linear-gradient(90deg, #ff6b6b, #ff4444)';
-            else fill.style.background = 'linear-gradient(90deg, #4ecdc4, #44aa88)';
-        }
-
-        /* ============ 道具系统 ============ */
-        var powerupTypes = [
-            { type: 'speed', icon: '⚡', color: '#ffc107', label: '加速' },
-            { type: 'boost', icon: '🔋', color: '#2196f3', label: '+1冲刺' },
-            { type: 'slow', icon: '🌀', color: '#9c27b0', label: '减速对手' }
-        ];
-
-        var LANE_YS = [42, 122, 202, 282, 362, 442];
-
-        function spawnPowerup() {
-            var pt = powerupTypes[Math.floor(Math.random() * powerupTypes.length)];
-            var laneIdx = Math.floor(Math.random() * LANE_YS.length);
-            var x = 200 + Math.random() * 500;
-            var el = document.createElement('div');
-            el.className = 'powerup ' + pt.type;
-            el.innerHTML = '<div class="pulse"></div>' + pt.icon;
-            el.style.left = x + 'px';
-            el.style.top = (LANE_YS[laneIdx] - 6) + 'px';
-            document.getElementById('gameArea').appendChild(el);
-            powerups.push({ el: el, x: x, top: LANE_YS[laneIdx] - 6, type: pt.type, icon: pt.icon, label: pt.label, lane: laneIdx });
-        }
-
-        function updatePowerups() {
-            if (divingPhase || raceFinished) return;
-            powerupTimer += 0.1;
-            if (powerupTimer >= powerupInterval && powerups.length < 6) {
-                powerupTimer = 0;
-                powerupInterval = 1.0 + Math.random() * 1.5;
-                spawnPowerup();
-            }
-            for (var i = powerups.length - 1; i >= 0; i--) {
-                var p = powerups[i];
-                p.x -= 0.5 + Math.random() * 0.5;
-                p.el.style.left = p.x + 'px';
-                if (p.x < -30) {
-                    p.el.parentNode.removeChild(p.el);
-                    powerups.splice(i, 1);
-                    continue;
+            setTimeout(function () {
+              diveSwimmer(el, swimmers[idx], 55, diveDuration, function () {
+                completedDives++;
+                if (completedDives >= totalSwimmers) {
+                  divingPhase = false;
+                  _statusKey = "statusRacing";
+                  updateGameStatus(t("statusRacing"));
+                  timerInterval = setInterval(function () {
+                    gameTime += 0.1;
+                    updateTimer();
+                    updateGame();
+                    updatePowerups();
+                  }, 100);
                 }
-                for (var j = 0; j < swimmers.length; j++) {
-                    var s = swimmers[j];
-                    if (s.finished || !s.inWater) continue;
-                    if (s.id - 1 !== p.lane) continue;
-                    if (Math.abs(s.position - p.x) < 35) {
-                        collectPowerup(s, i, p);
-                        break;
-                    }
-                }
-            }
+              });
+            }, delay);
+          })(i);
+        }
+      }
+
+      function updateGame() {
+        if (!gameRunning) return;
+
+        var allFinished = true;
+        var finishedCount = 0;
+        for (var i = 0; i < swimmers.length; i++) {
+          if (swimmers[i].finished) finishedCount++;
         }
 
-        function collectPowerup(swimmer, idx, p) {
-            var el = p.el;
-            el.parentNode.removeChild(el);
-            powerups.splice(idx, 1);
+        for (var i = 0; i < swimmers.length; i++) {
+          var s = swimmers[i];
+          if (s.finished) continue;
+          if (!s.inWater) {
+            allFinished = false;
+            continue;
+          }
 
-            var isPlayer = swimmer.isPlayer;
+          allFinished = false;
+
+          var sv = 0;
+          if (!s.isPlayer) {
+            var tp =
+              getTotalProgress(s) / (TOTAL_LAPS * (WALL_RIGHT - WALL_LEFT) * 2);
+            if (tp > 0.85) sv = Math.random() * 0.9 + 0.3;
+            else if (tp > 0.6) sv = Math.random() * 0.5 + 0.2;
+            else if (tp > 0.3) sv = Math.random() * 0.4 + 0.1;
+            else sv = Math.random() * 0.3 + 0.05;
+            if (Math.random() < 0.03) {
+              npcDash(s);
+            }
+          }
+
+          s.speed = s.baseSpeed + sv;
+          if (s.boostTimer > 0) {
+            s.speed += 3;
+            s.boostTimer--;
+          }
+          if (s.slowTimer > 0) {
+            s.speed -= 2;
+            s.slowTimer--;
+          }
+          if (s.speed > s.maxSpeed) s.maxSpeed = s.speed;
+          s.position += s.speed * s.direction;
+
+          if (s.direction > 0 && s.position >= WALL_RIGHT) {
+            s.position = WALL_RIGHT;
+            s.direction = -1;
+            var el = document.getElementById("swimmer" + s.id);
+            if (el) createSplash(el);
+            if (s.isPlayer) {
+              _roundLap = s.laps + 1;
+              _roundDir = -1;
+              updateGameStatus(
+                t("roundPrefix") +
+                  " " +
+                  _roundLap +
+                  "/" +
+                  TOTAL_LAPS_DISPLAY +
+                  " ←",
+              );
+            }
+          }
+
+          if (s.direction < 0 && s.position <= WALL_LEFT) {
+            s.position = WALL_LEFT;
+            s.direction = 1;
+            s.laps++;
+            var el = document.getElementById("swimmer" + s.id);
+            if (el) createSplash(el);
+            if (s.laps >= TOTAL_LAPS) {
+              s.finished = true;
+              s.finishTime = gameTime;
+              s.rank = ++finishedCount;
+              var fel = document.getElementById("swimmer" + s.id);
+              if (fel) {
+                fel.classList.remove("swimming");
+                createSplash(fel);
+              }
+            } else if (s.isPlayer) {
+              _roundLap = s.laps + 1;
+              _roundDir = 1;
+              updateGameStatus(
+                t("roundPrefix") +
+                  " " +
+                  _roundLap +
+                  "/" +
+                  TOTAL_LAPS_DISPLAY +
+                  " →",
+              );
+            }
+          }
+
+          if (!s.finished) {
+            var fel = document.getElementById("swimmer" + s.id);
+            fel.style.left = s.position + "px";
+            if (s.direction < 0) fel.classList.add("dir-left");
+            else fel.classList.remove("dir-left");
+          }
+        }
+
+        if (!allFinished) {
+          allFinished = swimmers.every(function (s) {
+            return s.finished;
+          });
+        }
+        fatigue = Math.max(0, fatigue - fatigueRecovery);
+        updateFatigue();
+        if (allFinished) finishRace();
+        updatePlayerRanking();
+        updateFastestSpeed();
+        updateLapDisplay();
+      }
+
+      function updateLapDisplay() {
+        var p = swimmers[0];
+        var dir = p.direction > 0 ? "→" : "←";
+        var leg = p.laps * 2 + (p.direction > 0 ? 0 : 1);
+        document.getElementById("lapCounter").textContent =
+          (p.laps || 0) + "/" + TOTAL_LAPS_DISPLAY + " " + dir;
+      }
+
+      function finishRace() {
+        gameRunning = false;
+        raceFinished = true;
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        for (var pi = 0; pi < powerups.length; pi++) {
+          if (powerups[pi].el.parentNode)
+            powerups[pi].el.parentNode.removeChild(powerups[pi].el);
+        }
+        powerups = [];
+        _statusKey = "statusFinished";
+        _roundLap = -1;
+        updateGameStatus(t("statusFinished"));
+        showResultModal();
+      }
+
+      function showResultModal() {
+        var sorted = swimmers.slice().sort(function (a, b) {
+          return a.rank - b.rank;
+        });
+        var top3 = sorted.slice(0, 3);
+        var podium = document.getElementById("podium");
+        podium.innerHTML = "";
+        var order = [1, 0, 2];
+        var medals = ["silver", "gold", "bronze"];
+        var icons = ["🥇", "🥈", "🥉"];
+
+        for (var di = 0; di < order.length; di++) {
+          var si = order[di];
+          if (si >= top3.length) continue;
+          var s = top3[si];
+          var p = profiles[s.id - 1];
+          var item = document.createElement("div");
+          item.className = "podium-item " + medals[di];
+          item.innerHTML =
+            '<div class="podium-avatar" style="color:' +
+            p.cap +
+            ";border-color:" +
+            p.cap +
+            '">' +
+            s.id +
+            "</div>" +
+            '<div class="podium-name">' +
+            t("names")[s.id - 1] +
+            "</div>" +
+            '<div class="podium-time">' +
+            s.finishTime.toFixed(2) +
+            "s</div>" +
+            '<div class="podium-block">' +
+            icons[si] +
+            "</div>";
+          podium.appendChild(item);
+        }
+
+        document.getElementById("modalRaceTime").textContent = t("modalTime")
+          .replace("{time}", gameTime.toFixed(2))
+          .replace("{count}", itemsCollected);
+        var tbody = document.getElementById("modalRankingBody");
+        tbody.innerHTML = "";
+
+        for (var i = 0; i < sorted.length; i++) {
+          var s = sorted[i];
+          var p = profiles[s.id - 1];
+          var tr = document.createElement("tr");
+          if (s.isPlayer) tr.className = "player-row";
+          var rc = s.rank <= 3 ? " rank-" + s.rank : "";
+          tr.innerHTML =
+            '<td class="rank-num' +
+            rc +
+            '">' +
+            s.rank +
+            "</td>" +
+            '<td><span class="swimmer-color" style="background:' +
+            p.cap +
+            '"></span>' +
+            t("names")[s.id - 1] +
+            (s.isPlayer ? t("playerSuffix") : "") +
+            "</td>" +
+            "<td>" +
+            s.finishTime.toFixed(2) +
+            "s</td>" +
+            "<td>" +
+            s.maxSpeed.toFixed(1) +
+            " m/s</td>";
+          tbody.appendChild(tr);
+        }
+
+        document.getElementById("resultModal").classList.add("active");
+      }
+
+      function useBoost() {
+        if (!gameRunning || boostCount <= 0 || swimmers[0].finished) return;
+        boostCount--;
+        updateBoost();
+        swimmers[0].boostTimer = 20;
+        swimmers[0].position += 60 * swimmers[0].direction;
+        document.getElementById("swimmer" + playerSwimmer).style.left =
+          swimmers[0].position + "px";
+        createSplash(document.getElementById("swimmer" + playerSwimmer));
+      }
+
+      function createSplash(element) {
+        var rect = element.getBoundingClientRect();
+        var ga = document.getElementById("gameArea");
+        var gr = ga.getBoundingClientRect();
+        var splash = document.createElement("div");
+        splash.className = "splash";
+        splash.style.left = rect.left - gr.left + 40 + "px";
+        splash.style.top = rect.top - gr.top + 15 + "px";
+        ga.appendChild(splash);
+        setTimeout(function () {
+          if (splash.parentNode) splash.parentNode.removeChild(splash);
+        }, 600);
+      }
+
+      function dashForward() {
+        if (!gameRunning || swimmers[0].finished || !swimmers[0].inWater)
+          return;
+        if (fatigue + fatiguePerDash > maxFatigue) return;
+        var p = swimmers[0];
+        var dash = dashDistance;
+        var newPos = p.position + dash * p.direction;
+        if (newPos < WALL_LEFT) newPos = WALL_LEFT;
+        if (newPos > WALL_RIGHT) newPos = WALL_RIGHT;
+        p.position = newPos;
+        fatigue += fatiguePerDash;
+        p.boostTimer = Math.max(p.boostTimer, 2);
+        var el = document.getElementById("swimmer" + playerSwimmer);
+        el.style.left = p.position + "px";
+        createSplash(el);
+        updateFatigue();
+      }
+
+      function npcDash(s) {
+        var dash = 25 + Math.random() * 25;
+        var newPos = s.position + dash * s.direction;
+        if (newPos < WALL_LEFT) newPos = WALL_LEFT;
+        if (newPos > WALL_RIGHT) newPos = WALL_RIGHT;
+        s.position = newPos;
+        var nel = document.getElementById("swimmer" + s.id);
+        if (nel) createSplash(nel);
+      }
+
+      function getTotalProgress(s) {
+        var legLen = WALL_RIGHT - WALL_LEFT;
+        if (s.direction > 0)
+          return s.laps * legLen * 2 + (s.position - WALL_LEFT);
+        return s.laps * legLen * 2 + legLen + (WALL_RIGHT - s.position);
+      }
+
+      function updateTimer() {
+        document.getElementById("timer").textContent = gameTime.toFixed(2);
+      }
+      var _statusKey = "statusReady";
+      var _roundLap = -1;
+      var _roundDir = 1;
+
+      function updateGameStatus(s) {
+        document.getElementById("gameStatus").textContent = s;
+      }
+      function updatePlayerRank(r) {
+        document.getElementById("playerRank").textContent = r;
+      }
+      function updateFastestSpeed() {
+        if (!gameRunning) return;
+        var mx = 0;
+        for (var i = 0; i < swimmers.length; i++) {
+          if (swimmers[i].speed > mx) mx = swimmers[i].speed;
+        }
+        document.getElementById("fastestSpeed").textContent =
+          mx.toFixed(1) + " m/s";
+      }
+
+      function updatePlayerRanking() {
+        if (!gameRunning) return;
+        var player = swimmers[0];
+        if (player.finished) return;
+        var playerProgress = getTotalProgress(player);
+        var unfinished = swimmers.filter(function (s) {
+          return !s.finished && s.inWater && s.id !== player.id;
+        });
+        var ahead = unfinished.filter(function (s) {
+          return getTotalProgress(s) > playerProgress;
+        }).length;
+        var finishedAhead = swimmers.filter(function (s) {
+          return s.finished && s.id !== player.id;
+        }).length;
+        updatePlayerRank(ahead + finishedAhead + 1);
+      }
+
+      function updateBoost() {
+        var pct = (boostCount / maxBoost) * 100;
+        document.getElementById("boostFill").style.width = pct + "%";
+        document.getElementById("boostCount").textContent =
+          boostCount + "/" + maxBoost;
+        var btn = document.getElementById("boostBtn");
+        btn.disabled = boostCount <= 0 || !gameRunning || raceFinished;
+        btn.style.opacity = btn.disabled ? "0.5" : "1";
+      }
+
+      function updateFatigue() {
+        var pct = (fatigue / maxFatigue) * 100;
+        document.getElementById("fatigueFill").style.width = pct + "%";
+        document.getElementById("fatigueText").textContent =
+          Math.round(pct) + "%";
+        var fill = document.getElementById("fatigueFill");
+        if (pct >= 90)
+          fill.style.background = "linear-gradient(90deg, #ff4444, #cc0000)";
+        else if (pct > 50)
+          fill.style.background = "linear-gradient(90deg, #ff6b6b, #ff4444)";
+        else fill.style.background = "linear-gradient(90deg, #4ecdc4, #44aa88)";
+      }
+
+      /* ============ 道具系统 ============ */
+      var powerupTypes = [
+        { type: "speed", icon: "⚡", color: "#ffc107", label: "加速" },
+        { type: "boost", icon: "🔋", color: "#2196f3", label: "+1冲刺" },
+        { type: "slow", icon: "🌀", color: "#9c27b0", label: "减速对手" },
+      ];
+
+      var LANE_YS = [42, 122, 202, 282, 362, 442];
+
+      function spawnPowerup() {
+        var pt = powerupTypes[Math.floor(Math.random() * powerupTypes.length)];
+        var laneIdx = Math.floor(Math.random() * LANE_YS.length);
+        var x = 200 + Math.random() * 500;
+        var el = document.createElement("div");
+        el.className = "powerup " + pt.type;
+        el.innerHTML = '<div class="pulse"></div>' + pt.icon;
+        el.style.left = x + "px";
+        el.style.top = LANE_YS[laneIdx] - 6 + "px";
+        document.getElementById("gameArea").appendChild(el);
+        powerups.push({
+          el: el,
+          x: x,
+          top: LANE_YS[laneIdx] - 6,
+          type: pt.type,
+          icon: pt.icon,
+          label: pt.label,
+          lane: laneIdx,
+        });
+      }
+
+      function updatePowerups() {
+        if (divingPhase || raceFinished) return;
+        powerupTimer += 0.1;
+        if (powerupTimer >= powerupInterval && powerups.length < 6) {
+          powerupTimer = 0;
+          powerupInterval = 1.0 + Math.random() * 1.5;
+          spawnPowerup();
+        }
+        for (var i = powerups.length - 1; i >= 0; i--) {
+          var p = powerups[i];
+          p.x -= 0.5 + Math.random() * 0.5;
+          p.el.style.left = p.x + "px";
+          if (p.x < -30) {
+            p.el.parentNode.removeChild(p.el);
+            powerups.splice(i, 1);
+            continue;
+          }
+          for (var j = 0; j < swimmers.length; j++) {
+            var s = swimmers[j];
+            if (s.finished || !s.inWater) continue;
+            if (s.id - 1 !== p.lane) continue;
+            if (Math.abs(s.position - p.x) < 35) {
+              collectPowerup(s, i, p);
+              break;
+            }
+          }
+        }
+      }
+
+      function collectPowerup(swimmer, idx, p) {
+        var el = p.el;
+        el.parentNode.removeChild(el);
+        powerups.splice(idx, 1);
+
+        var isPlayer = swimmer.isPlayer;
+        if (isPlayer) {
+          itemsCollected++;
+          document.getElementById("itemCount").textContent = itemsCollected;
+        }
+
+        switch (p.type) {
+          case "speed":
+            swimmer.boostTimer = Math.max(swimmer.boostTimer, 15);
+            break;
+          case "boost":
             if (isPlayer) {
-                itemsCollected++;
-                document.getElementById('itemCount').textContent = itemsCollected;
+              boostCount = Math.min(boostCount + 1, maxBoost);
+              updateBoost();
+            } else {
+              swimmer.boostTimer = Math.max(swimmer.boostTimer, 10);
             }
-
-            switch (p.type) {
-                case 'speed':
-                    swimmer.boostTimer = Math.max(swimmer.boostTimer, 15);
-                    break;
-                case 'boost':
-                    if (isPlayer) {
-                        boostCount = Math.min(boostCount + 1, maxBoost);
-                        updateBoost();
-                    } else {
-                        swimmer.boostTimer = Math.max(swimmer.boostTimer, 10);
-                    }
-                    break;
-                case 'slow':
-                    if (isPlayer) {
-                        var leading = null;
-                        var leadingProgress = -1;
-                        for (var k = 1; k < swimmers.length; k++) {
-                            if (!swimmers[k].finished) {
-                                var tp = getTotalProgress(swimmers[k]);
-                                if (tp > leadingProgress) { leadingProgress = tp; leading = swimmers[k]; }
-                            }
-                        }
-                        if (leading) {
-                            leading.slowTimer = Math.max(leading.slowTimer, 12);
-                            createSplash(document.getElementById('swimmer' + leading.id));
-                        }
-                    } else {
-                        swimmers[0].slowTimer = Math.max(swimmers[0].slowTimer, 12);
-                        createSplash(document.getElementById('swimmer' + playerSwimmer));
-                    }
-                    break;
+            break;
+          case "slow":
+            if (isPlayer) {
+              var leading = null;
+              var leadingProgress = -1;
+              for (var k = 1; k < swimmers.length; k++) {
+                if (!swimmers[k].finished) {
+                  var tp = getTotalProgress(swimmers[k]);
+                  if (tp > leadingProgress) {
+                    leadingProgress = tp;
+                    leading = swimmers[k];
+                  }
+                }
+              }
+              if (leading) {
+                leading.slowTimer = Math.max(leading.slowTimer, 12);
+                createSplash(document.getElementById("swimmer" + leading.id));
+              }
+            } else {
+              swimmers[0].slowTimer = Math.max(swimmers[0].slowTimer, 12);
+              createSplash(document.getElementById("swimmer" + playerSwimmer));
             }
-
-            var swimmerEl = document.getElementById('swimmer' + swimmer.id);
-            var msg = document.createElement('div');
-            msg.className = 'collect-msg';
-            msg.textContent = p.icon + ' ' + t('item' + p.type.charAt(0).toUpperCase() + p.type.slice(1));
-            msg.style.color = p.color;
-            msg.style.left = swimmerEl.style.left;
-            msg.style.top = (swimmerEl.offsetTop - 10) + 'px';
-            document.getElementById('gameArea').appendChild(msg);
-            setTimeout(function() { if (msg.parentNode) msg.parentNode.removeChild(msg); }, 1000);
+            break;
         }
 
-        document.addEventListener('keydown', function(e) {
-            switch (e.key) {
-                case 'Enter': if (!gameRunning && !raceFinished) startGame(); break;
-                case ' ': e.preventDefault(); if (gameRunning && boostCount > 0) useBoost(); break;
-                case 'a': case 'A':
-                case 'd': case 'D':
-                    e.preventDefault();
-                    dashForward();
-                    break;
-            }
-        });
+        var swimmerEl = document.getElementById("swimmer" + swimmer.id);
+        var msg = document.createElement("div");
+        msg.className = "collect-msg";
+        msg.textContent =
+          p.icon +
+          " " +
+          t("item" + p.type.charAt(0).toUpperCase() + p.type.slice(1));
+        msg.style.color = p.color;
+        msg.style.left = swimmerEl.style.left;
+        msg.style.top = swimmerEl.offsetTop - 10 + "px";
+        document.getElementById("gameArea").appendChild(msg);
+        setTimeout(function () {
+          if (msg.parentNode) msg.parentNode.removeChild(msg);
+        }, 1000);
+      }
 
-        document.getElementById('startBtn').addEventListener('click', startGame);
-        document.getElementById('resetBtn').addEventListener('click', initGame);
-        document.getElementById('boostBtn').addEventListener('click', useBoost);
-        document.getElementById('modalRestartBtn').addEventListener('click', function() {
-            document.getElementById('resultModal').classList.remove('active');
-            initGame();
-        });
-        document.getElementById('langToggle').addEventListener('click', toggleLang);
+      document.addEventListener("keydown", function (e) {
+        switch (e.key) {
+          case "Enter":
+            if (!gameRunning && !raceFinished) startGame();
+            break;
+          case " ":
+            e.preventDefault();
+            if (gameRunning && boostCount > 0) useBoost();
+            break;
+          case "a":
+          case "A":
+          case "d":
+          case "D":
+            e.preventDefault();
+            dashForward();
+            break;
+        }
+      });
 
-        window.addEventListener('load', function() { initGame(); applyLanguage(); });
+      document.getElementById("startBtn").addEventListener("click", startGame);
+      document.getElementById("resetBtn").addEventListener("click", initGame);
+      document.getElementById("boostBtn").addEventListener("click", useBoost);
+      document
+        .getElementById("modalRestartBtn")
+        .addEventListener("click", function () {
+          document.getElementById("resultModal").classList.remove("active");
+          initGame();
+        });
+      document
+        .getElementById("langToggle")
+        .addEventListener("click", toggleLang);
 
-        var lastTap = 0;
-        document.getElementById('gameArea').addEventListener('touchstart', function(e) {
-            lastTap = Date.now();
-            e.preventDefault();
+      window.addEventListener("load", function () {
+        initGame();
+        applyLanguage();
+      });
+
+      var lastTap = 0;
+      document
+        .getElementById("gameArea")
+        .addEventListener("touchstart", function (e) {
+          lastTap = Date.now();
+          e.preventDefault();
         });
-        document.getElementById('gameArea').addEventListener('touchmove', function(e) {
-            e.preventDefault();
+      document
+        .getElementById("gameArea")
+        .addEventListener("touchmove", function (e) {
+          e.preventDefault();
         });
-        document.getElementById('gameArea').addEventListener('touchend', function(e) {
-            var now = Date.now();
-            if (!gameRunning) { e.preventDefault(); return; }
-            if (now - lastTap < 300 && boostCount > 0) useBoost();
-            else dashForward();
+      document
+        .getElementById("gameArea")
+        .addEventListener("touchend", function (e) {
+          var now = Date.now();
+          if (!gameRunning) {
             e.preventDefault();
+            return;
+          }
+          if (now - lastTap < 300 && boostCount > 0) useBoost();
+          else dashForward();
+          e.preventDefault();
         });
     </script>
-</body>
+  </body>
 </html>

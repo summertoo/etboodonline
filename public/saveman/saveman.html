@@ -1,862 +1,993 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Save Man - Mine Rescue</title>
+    <meta
+      name="description"
+      content="Save Man - Mine Rescue — rescue trapped miners in this puzzle-action game. Dig, avoid obstacles and save everyone before time runs out."
+    />
+    <meta
+      property="og:title"
+      content="Save Man - Mine Rescue — Puzzle Action Game"
+    />
+    <meta
+      property="og:description"
+      content="Rescue trapped miners in this puzzle-action game. Dig, avoid obstacles and save everyone before time runs out."
+    />
+    <meta
+      property="og:image"
+      content="https://www.etboodonline.com/og-image.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.etboodonline.com/saveman/saveman.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Save Man - Mine Rescue" />
+    <meta
+      name="twitter:description"
+      content="Rescue trapped miners in this puzzle-action game. Dig, avoid obstacles and save everyone."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.etboodonline.com/og-image.png"
+    />
+    <link
+      rel="canonical"
+      href="https://www.etboodonline.com/saveman/saveman.html"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: #2c3e50;
-            font-family: "Segoe UI", Arial, sans-serif;
-        }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #2c3e50;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
 
-        #gameContainer {
-            width: 800px;
-            height: 600px;
-            border: 4px solid #8b4513;
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
-            background: #34495e;
-        }
+      #gameContainer {
+        width: 800px;
+        height: 600px;
+        border: 4px solid #8b4513;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        background: #34495e;
+      }
 
-        #gameCanvas {
-            display: block;
-            background: #1a232e;
-        }
+      #gameCanvas {
+        display: block;
+        background: #1a232e;
+      }
 
-        .ui-panel {
-            position: absolute;
-            top: 10px;
-            left: 0;
-            width: 100%;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            color: #fff;
-            font-size: 22px;
-            font-weight: bold;
-            text-shadow: 2px 2px 2px #000;
-            z-index: 10;
-        }
+      .ui-panel {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        font-size: 22px;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px #000;
+        z-index: 10;
+      }
 
-        .modal {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 360px;
-            padding: 30px;
-            background: rgba(0, 0, 0, 0.9);
-            border: 3px solid #f39c12;
-            border-radius: 15px;
-            text-align: center;
-            color: #fff;
-            z-index: 100;
-            display: none;
-        }
+      .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 360px;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.9);
+        border: 3px solid #f39c12;
+        border-radius: 15px;
+        text-align: center;
+        color: #fff;
+        z-index: 100;
+        display: none;
+      }
 
-        .modal h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
+      .modal h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
 
-        .modal p {
-            font-size: 20px;
-            margin-bottom: 25px;
-        }
+      .modal p {
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
 
-        .modal button {
-            padding: 12px 30px;
-            font-size: 18px;
-            background: #27ae60;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+      .modal button {
+        padding: 12px 30px;
+        font-size: 18px;
+        background: #27ae60;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+      }
 
-        .modal button:hover {
-            background: #2ecc71;
-        }
+      .modal button:hover {
+        background: #2ecc71;
+      }
 
-        #failModal {
-            border-color: #e74c3c;
-        }
+      #failModal {
+        border-color: #e74c3c;
+      }
 
-        #failModal button {
-            background: #e74c3c;
-        }
+      #failModal button {
+        background: #e74c3c;
+      }
 
-        #failModal button:hover {
-            background: #c0392b;
-        }
+      #failModal button:hover {
+        background: #c0392b;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="gameContainer">
-        <div class="ui-panel">
-            <div>Score: <span id="score">0</span></div>
-            <div>Time: <span id="time">60</span>s</div>
-        </div>
+      <div class="ui-panel">
+        <div>Score: <span id="score">0</span></div>
+        <div>Time: <span id="time">60</span>s</div>
+      </div>
 
-        <canvas id="gameCanvas" width="800" height="600"></canvas>
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
 
-        <div id="winModal" class="modal">
-            <h2>Victory!</h2>
-            <p>All people rescued!</p>
-            <p>Final Score: <span id="winScore">0</span></p>
-            <button onclick="restartGame()">Play Again</button>
-        </div>
+      <div id="winModal" class="modal">
+        <h2>Victory!</h2>
+        <p>All people rescued!</p>
+        <p>Final Score: <span id="winScore">0</span></p>
+        <button onclick="restartGame()">Play Again</button>
+      </div>
 
-        <div id="failModal" class="modal">
-            <h2>Game Over!</h2>
-            <p>Time's up! Rescue failed.</p>
-            <p>Final Score: <span id="failScore">0</span></p>
-            <button onclick="restartGame()">Try Again</button>
-        </div>
+      <div id="failModal" class="modal">
+        <h2>Game Over!</h2>
+        <p>Time's up! Rescue failed.</p>
+        <p>Final Score: <span id="failScore">0</span></p>
+        <button onclick="restartGame()">Try Again</button>
+      </div>
     </div>
 
     <script>
-        const canvas = document.getElementById('gameCanvas');
-        const ctx = canvas.getContext('2d');
-        const scoreEl = document.getElementById('score');
-        const timeEl = document.getElementById('time');
-        const winModal = document.getElementById('winModal');
-        const failModal = document.getElementById('failModal');
-        const winScoreEl = document.getElementById('winScore');
-        const failScoreEl = document.getElementById('failScore');
+      const canvas = document.getElementById("gameCanvas");
+      const ctx = canvas.getContext("2d");
+      const scoreEl = document.getElementById("score");
+      const timeEl = document.getElementById("time");
+      const winModal = document.getElementById("winModal");
+      const failModal = document.getElementById("failModal");
+      const winScoreEl = document.getElementById("winScore");
+      const failScoreEl = document.getElementById("failScore");
 
-        const game = {
-            score: 0,
-            time: 60,
-            timer: null,
-            isPlaying: true,
-            totalPeople: 5,
-            savedPeople: 0,
-            rescuedPeople: [], // tracked for display
-            savedBoxes: 0,     // collected supply crates
-            savedStones: 0     // collected stones
-        };
+      const game = {
+        score: 0,
+        time: 60,
+        timer: null,
+        isPlaying: true,
+        totalPeople: 5,
+        savedPeople: 0,
+        rescuedPeople: [], // tracked for display
+        savedBoxes: 0, // collected supply crates
+        savedStones: 0, // collected stones
+      };
 
-        const arm = {
-            x: canvas.width / 2,
-            y: 80,
-            length: 120,
-            maxLength: 550,
-            angle: 0,
-            angleSpeed: 0.03,
-            swingDir: 1,           // 1 = swinging right, -1 = swinging left
-            isSwinging: true,      // whether the claw is currently swinging
-            extendSpeed: 8,
-            retractSpeed: 12,
-            isExtending: false,
-            isRetracting: false,
-            grabTarget: null
-        };
+      const arm = {
+        x: canvas.width / 2,
+        y: 80,
+        length: 120,
+        maxLength: 550,
+        angle: 0,
+        angleSpeed: 0.03,
+        swingDir: 1, // 1 = swinging right, -1 = swinging left
+        isSwinging: true, // whether the claw is currently swinging
+        extendSpeed: 8,
+        retractSpeed: 12,
+        isExtending: false,
+        isRetracting: false,
+        grabTarget: null,
+      };
 
-        const targets = [];
+      const targets = [];
 
-        const personVariants = ['male_worker', 'male_elder', 'female_worker', 'female_elder', 'child'];
-        const skinColors = ['#fdd9b5', '#e8c9a0', '#c68642', '#f5d6c6', '#d4a574', '#a67c52', '#f0c8a0'];
+      const personVariants = [
+        "male_worker",
+        "male_elder",
+        "female_worker",
+        "female_elder",
+        "child",
+      ];
+      const skinColors = [
+        "#fdd9b5",
+        "#e8c9a0",
+        "#c68642",
+        "#f5d6c6",
+        "#d4a574",
+        "#a67c52",
+        "#f0c8a0",
+      ];
 
-        function initTargets() {
-            targets.length = 0;
+      function initTargets() {
+        targets.length = 0;
 
-            // Shuffle variants for variety
-            const shuffled = [...personVariants].sort(() => Math.random() - 0.5);
-            for (let i = 0; i < game.totalPeople; i++) {
-                targets.push({
-                    x: Math.random() * (canvas.width - 40) + 20,
-                    y: Math.random() * 350 + 200,
-                    type: 'person',
-                    size: 30,
-                    points: 1000,
-                    collected: false,
-                    variant: shuffled[i % shuffled.length],
-                    bodyScale: 0.75 + Math.random() * 0.55,   // height: short to tall
-                    widthScale: 0.75 + Math.random() * 0.6,   // width: thin to heavy
-                    skinColor: skinColors[Math.floor(Math.random() * skinColors.length)]
-                });
-            }
-
-            for (let i = 0; i < 8; i++) {
-                targets.push({
-                    x: Math.random() * (canvas.width - 30) + 15,
-                    y: Math.random() * 350 + 200,
-                    type: 'box',
-                    size: 22,
-                    points: 20,
-                    collected: false
-                });
-            }
-
-            for (let i = 0; i < 12; i++) {
-                // Pre-generate rock shape points
-                const rk = 18;
-                const rkPts = [];
-                for (let j = 0; j < 7; j++) {
-                    const angle = (j / 7) * Math.PI * 2;
-                    const rr = rk * (0.6 + Math.random() * 0.4);
-                    rkPts.push({ x: Math.cos(angle) * rr, y: Math.sin(angle) * rr * 0.8 });
-                }
-                targets.push({
-                    x: Math.random() * (canvas.width - 25) + 12,
-                    y: Math.random() * 350 + 200,
-                    type: 'stone',
-                    size: 18,
-                    points: 5,
-                    collected: false,
-                    shape: rkPts
-                });
-            }
+        // Shuffle variants for variety
+        const shuffled = [...personVariants].sort(() => Math.random() - 0.5);
+        for (let i = 0; i < game.totalPeople; i++) {
+          targets.push({
+            x: Math.random() * (canvas.width - 40) + 20,
+            y: Math.random() * 350 + 200,
+            type: "person",
+            size: 30,
+            points: 1000,
+            collected: false,
+            variant: shuffled[i % shuffled.length],
+            bodyScale: 0.75 + Math.random() * 0.55, // height: short to tall
+            widthScale: 0.75 + Math.random() * 0.6, // width: thin to heavy
+            skinColor:
+              skinColors[Math.floor(Math.random() * skinColors.length)],
+          });
         }
 
-        // ============== Drawing helpers ==============
-
-        // Draw a person with their feet at groundY
-        function drawPersonAtFeet(cx, groundY, variant, bodyScale, widthScale, skinColor) {
-            const s = 24 * bodyScale;
-            const w = Math.max(0.7, widthScale);
-            const cy = groundY - s * 1.35; // center point so feet land at groundY
-            drawPerson(cx, cy, variant, bodyScale, widthScale, skinColor);
+        for (let i = 0; i < 8; i++) {
+          targets.push({
+            x: Math.random() * (canvas.width - 30) + 15,
+            y: Math.random() * 350 + 200,
+            type: "box",
+            size: 22,
+            points: 20,
+            collected: false,
+          });
         }
 
-        // Common: draw a round face with eyes and mouth
-        function drawFace(cx, cy, r, faceColor, w) {
-            ctx.fillStyle = faceColor;
-            ctx.beginPath();
-            ctx.ellipse(cx, cy, r, r * w, 0, 0, Math.PI * 2);
-            ctx.fill();
-            // Eyes
-            ctx.fillStyle = '#333';
-            ctx.beginPath();
-            ctx.arc(cx - r * 0.35, cy - r * 0.15, r * 0.14, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.beginPath();
-            ctx.arc(cx + r * 0.35, cy - r * 0.15, r * 0.14, 0, Math.PI * 2);
-            ctx.fill();
-            // Mouth
-            ctx.strokeStyle = '#333';
-            ctx.lineWidth = 1.2;
-            ctx.beginPath();
-            ctx.arc(cx, cy + r * 0.2, r * 0.25, 0.2 * Math.PI, 0.8 * Math.PI);
-            ctx.stroke();
-        }
-
-        // Male worker: hard hat, blue overalls
-        function drawMaleWorker(cx, cy, s, w, skin) {
-            const bw = s * w; // body width
-            // Body (blue overalls)
-            ctx.fillStyle = '#2980b9';
-            ctx.fillRect(cx - bw * 0.32, cy - s * 0.1, bw * 0.64, s * 1.0);
-            // Hard hat
-            ctx.fillStyle = '#f1c40f';
-            ctx.beginPath();
-            ctx.ellipse(cx, cy - s * 0.55, bw * 0.7, s * 0.28, 0, Math.PI, 0);
-            ctx.fill();
-            ctx.fillRect(cx - bw * 0.7, cy - s * 0.55, bw * 1.4, s * 0.22);
-            // Face
-            drawFace(cx, cy - s * 0.1, s * 0.45, skin, w);
-            // Arms up
-            ctx.strokeStyle = skin;
-            ctx.lineWidth = 3 * w;
-            ctx.beginPath();
-            ctx.moveTo(cx - bw * 0.32, cy + s * 0.05);
-            ctx.lineTo(cx - bw * 0.8, cy - s * 0.5);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(cx + bw * 0.32, cy + s * 0.05);
-            ctx.lineTo(cx + bw * 0.8, cy - s * 0.5);
-            ctx.stroke();
-            // Hands
-            ctx.fillStyle = skin;
-            ctx.beginPath(); ctx.arc(cx - bw * 0.8, cy - s * 0.5, s * 0.16, 0, Math.PI * 2); ctx.fill();
-            ctx.beginPath(); ctx.arc(cx + bw * 0.8, cy - s * 0.5, s * 0.16, 0, Math.PI * 2); ctx.fill();
-            // Legs
-            ctx.strokeStyle = '#2c3e50'; ctx.lineWidth = 3 * w;
-            ctx.beginPath();
-            ctx.moveTo(cx - bw * 0.15, cy + s * 0.9);
-            ctx.lineTo(cx - bw * 0.28, cy + s * 1.35);
-            ctx.moveTo(cx + bw * 0.15, cy + s * 0.9);
-            ctx.lineTo(cx + bw * 0.28, cy + s * 1.35);
-            ctx.stroke();
-            // Boots
-            ctx.fillStyle = '#5d4037';
-            ctx.fillRect(cx - bw * 0.45, cy + s * 1.25, bw * 0.4, s * 0.25);
-            ctx.fillRect(cx + bw * 0.05, cy + s * 1.25, bw * 0.4, s * 0.25);
-        }
-
-        // Male elder: gray hair, no helmet, dark coat, walking stick
-        function drawMaleElder(cx, cy, s, w, skin) {
-            const bw = s * w;
-            // Body (dark coat)
-            ctx.fillStyle = '#5d4e37';
-            ctx.fillRect(cx - bw * 0.28, cy - s * 0.1, bw * 0.56, s * 1.0);
-            // Gray hair
-            ctx.fillStyle = '#bdc3c7';
-            ctx.beginPath();
-            ctx.arc(cx, cy - s * 0.55, bw * 0.52, Math.PI, 0);
-            ctx.fill();
-            // Face
-            drawFace(cx, cy - s * 0.1, s * 0.42, skin, w);
-            // Beard
-            ctx.fillStyle = '#bdc3c7';
-            ctx.beginPath();
-            ctx.arc(cx, cy + s * 0.15, bw * 0.3, 0, Math.PI);
-            ctx.fill();
-            // One arm up
-            ctx.strokeStyle = skin; ctx.lineWidth = 3 * w;
-            ctx.beginPath();
-            ctx.moveTo(cx + bw * 0.28, cy + s * 0.05);
-            ctx.lineTo(cx + bw * 0.72, cy - s * 0.45);
-            ctx.stroke();
-            ctx.fillStyle = skin;
-            ctx.beginPath(); ctx.arc(cx + bw * 0.72, cy - s * 0.45, s * 0.14, 0, Math.PI * 2); ctx.fill();
-            // Other arm holding cane
-            ctx.strokeStyle = skin;
-            ctx.beginPath();
-            ctx.moveTo(cx - bw * 0.28, cy + s * 0.05);
-            ctx.lineTo(cx - bw * 0.3, cy + s * 0.7);
-            ctx.stroke();
-            // Cane
-            ctx.strokeStyle = '#8b4513'; ctx.lineWidth = 3;
-            ctx.beginPath();
-            ctx.moveTo(cx - bw * 0.38, cy - s * 0.2);
-            ctx.lineTo(cx - bw * 0.25, cy + s * 1.3);
-            ctx.stroke();
-            // Legs
-            ctx.strokeStyle = '#4a3728'; ctx.lineWidth = 3 * w;
-            ctx.beginPath();
-            ctx.moveTo(cx - bw * 0.12, cy + s * 0.9);
-            ctx.lineTo(cx - bw * 0.22, cy + s * 1.35);
-            ctx.moveTo(cx + bw * 0.12, cy + s * 0.9);
-            ctx.lineTo(cx + bw * 0.22, cy + s * 1.35);
-            ctx.stroke();
-            // Shoes
-            ctx.fillStyle = '#3e2723';
-            ctx.fillRect(cx - bw * 0.38, cy + s * 1.25, bw * 0.35, s * 0.2);
-            ctx.fillRect(cx + bw * 0.05, cy + s * 1.25, bw * 0.35, s * 0.2);
-        }
-
-        // Female worker: hard hat, long hair, pink top, blue pants
-        function drawFemaleWorker(cx, cy, s, w, skin) {
-            const bw = s * w;
-            // Body (pink top)
-            ctx.fillStyle = '#e91e90';
-            ctx.fillRect(cx - bw * 0.28, cy - s * 0.1, bw * 0.56, s * 0.6);
-            // Pants
-            ctx.fillStyle = '#1565c0';
-            ctx.fillRect(cx - bw * 0.3, cy + s * 0.5, bw * 0.6, s * 0.5);
-            // Long hair (sides)
-            ctx.fillStyle = '#4a3728';
-            ctx.fillRect(cx - bw * 0.55, cy - s * 0.35, bw * 0.2, s * 0.9);
-            ctx.fillRect(cx + bw * 0.35, cy - s * 0.35, bw * 0.2, s * 0.9);
-            // Hard hat
-            ctx.fillStyle = '#f1c40f';
-            ctx.beginPath();
-            ctx.ellipse(cx, cy - s * 0.55, bw * 0.65, s * 0.25, 0, Math.PI, 0);
-            ctx.fill();
-            ctx.fillRect(cx - bw * 0.65, cy - s * 0.55, bw * 1.3, s * 0.2);
-            // Face
-            drawFace(cx, cy - s * 0.1, s * 0.4, skin, w);
-            // Arms up
-            ctx.strokeStyle = skin; ctx.lineWidth = 2.8 * w;
-            ctx.beginPath();
-            ctx.moveTo(cx - bw * 0.28, cy + s * 0.05);
-            ctx.lineTo(cx - bw * 0.72, cy - s * 0.45);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(cx + bw * 0.28, cy + s * 0.05);
-            ctx.lineTo(cx + bw * 0.72, cy - s * 0.45);
-            ctx.stroke();
-            ctx.fillStyle = skin;
-            ctx.beginPath(); ctx.arc(cx - bw * 0.72, cy - s * 0.45, s * 0.14, 0, Math.PI * 2); ctx.fill();
-            ctx.beginPath(); ctx.arc(cx + bw * 0.72, cy - s * 0.45, s * 0.14, 0, Math.PI * 2); ctx.fill();
-            // Legs
-            ctx.strokeStyle = '#0d47a1'; ctx.lineWidth = 2.5 * w;
-            ctx.beginPath();
-            ctx.moveTo(cx - bw * 0.12, cy + s * 1.0);
-            ctx.lineTo(cx - bw * 0.22, cy + s * 1.35);
-            ctx.moveTo(cx + bw * 0.12, cy + s * 1.0);
-            ctx.lineTo(cx + bw * 0.22, cy + s * 1.35);
-            ctx.stroke();
-            // Shoes
-            ctx.fillStyle = '#e91e90';
-            ctx.fillRect(cx - bw * 0.38, cy + s * 1.25, bw * 0.35, s * 0.22);
-            ctx.fillRect(cx + bw * 0.05, cy + s * 1.25, bw * 0.35, s * 0.22);
-        }
-
-        // Female elder: gray bun hair, purple shawl/dress, glasses
-        function drawFemaleElder(cx, cy, s, w, skin) {
-            const bw = s * w;
-            // Body (purple dress)
-            ctx.fillStyle = '#7b1fa2';
-            ctx.fillRect(cx - bw * 0.28, cy - s * 0.1, bw * 0.56, s * 1.1);
-            // Gray hair bun
-            ctx.fillStyle = '#cfd8dc';
-            ctx.beginPath();
-            ctx.arc(cx, cy - s * 0.45, bw * 0.5, Math.PI, 0);
-            ctx.fill();
-            ctx.beginPath();
-            ctx.arc(cx, cy - s * 0.65, bw * 0.2, 0, Math.PI * 2);
-            ctx.fill();
-            // Face
-            drawFace(cx, cy - s * 0.1, s * 0.4, skin, w);
-            // Glasses
-            ctx.strokeStyle = '#333'; ctx.lineWidth = 1.5;
-            ctx.beginPath();
-            ctx.arc(cx - bw * 0.16, cy - s * 0.12, s * 0.15, 0, Math.PI * 2);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.arc(cx + bw * 0.16, cy - s * 0.12, s * 0.15, 0, Math.PI * 2);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(cx, cy - s * 0.12);
-            ctx.lineTo(cx, cy - s * 0.05);
-            ctx.stroke();
-            // One arm up
-            ctx.strokeStyle = skin; ctx.lineWidth = 2.8 * w;
-            ctx.beginPath();
-            ctx.moveTo(cx - bw * 0.28, cy + s * 0.05);
-            ctx.lineTo(cx - bw * 0.68, cy - s * 0.4);
-            ctx.stroke();
-            ctx.fillStyle = skin;
-            ctx.beginPath(); ctx.arc(cx - bw * 0.68, cy - s * 0.4, s * 0.13, 0, Math.PI * 2); ctx.fill();
-            // Other arm
-            ctx.strokeStyle = skin;
-            ctx.beginPath();
-            ctx.moveTo(cx + bw * 0.28, cy + s * 0.05);
-            ctx.lineTo(cx + bw * 0.5, cy + s * 0.45);
-            ctx.stroke();
-            ctx.beginPath(); ctx.arc(cx + bw * 0.5, cy + s * 0.45, s * 0.13, 0, Math.PI * 2); ctx.fill();
-            // Legs
-            ctx.strokeStyle = '#4a148c'; ctx.lineWidth = 2.5 * w;
-            ctx.beginPath();
-            ctx.moveTo(cx - bw * 0.12, cy + s * 1.0);
-            ctx.lineTo(cx - bw * 0.2, cy + s * 1.35);
-            ctx.moveTo(cx + bw * 0.12, cy + s * 1.0);
-            ctx.lineTo(cx + bw * 0.2, cy + s * 1.35);
-            ctx.stroke();
-            ctx.fillStyle = '#4a148c';
-            ctx.fillRect(cx - bw * 0.35, cy + s * 1.25, bw * 0.35, s * 0.22);
-            ctx.fillRect(cx + bw * 0.05, cy + s * 1.25, bw * 0.35, s * 0.22);
-        }
-
-        // Child: small, bright red shirt, no helmet, both arms waving
-        function drawChild(cx, cy, s, w, skin) {
-            const bw = s * w;
-            // Scaled down for child
-            const cs = s * 0.8;
-            const cw = bw * 0.85;
-            // Body (bright red shirt)
-            ctx.fillStyle = '#e74c3c';
-            ctx.fillRect(cx - cw * 0.22, cy - cs * 0.05, cw * 0.44, cs * 0.55);
-            // Pants
-            ctx.fillStyle = '#1976d2';
-            ctx.fillRect(cx - cw * 0.24, cy + cs * 0.5, cw * 0.48, cs * 0.4);
-            // Hair (spiky)
-            ctx.fillStyle = '#795548';
-            ctx.beginPath();
-            ctx.arc(cx, cy - cs * 0.45, cw * 0.45, Math.PI, 0);
-            ctx.fill();
-            // Face
-            drawFace(cx, cy - cs * 0.08, cs * 0.38, skin, w);
-            // Bigger eyes for child
-            ctx.fillStyle = '#333';
-            ctx.beginPath(); ctx.arc(cx - cw * 0.14, cy - cs * 0.12, cs * 0.07, 0, Math.PI * 2); ctx.fill();
-            ctx.beginPath(); ctx.arc(cx + cw * 0.14, cy - cs * 0.12, cs * 0.07, 0, Math.PI * 2); ctx.fill();
-            // Happy mouth
-            ctx.strokeStyle = '#333'; ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.arc(cx, cy + cs * 0.02, cs * 0.15, 0.1 * Math.PI, 0.9 * Math.PI);
-            ctx.stroke();
-            // Arms up high
-            ctx.strokeStyle = skin; ctx.lineWidth = 2.5 * w;
-            ctx.beginPath();
-            ctx.moveTo(cx - cw * 0.22, cy + cs * 0.05);
-            ctx.lineTo(cx - cw * 0.7, cy - cs * 0.6);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(cx + cw * 0.22, cy + cs * 0.05);
-            ctx.lineTo(cx + cw * 0.7, cy - cs * 0.6);
-            ctx.stroke();
-            ctx.fillStyle = skin;
-            ctx.beginPath(); ctx.arc(cx - cw * 0.7, cy - cs * 0.6, cs * 0.13, 0, Math.PI * 2); ctx.fill();
-            ctx.beginPath(); ctx.arc(cx + cw * 0.7, cy - cs * 0.6, cs * 0.13, 0, Math.PI * 2); ctx.fill();
-            // Legs
-            ctx.strokeStyle = '#0d47a1'; ctx.lineWidth = 2.5 * w;
-            ctx.beginPath();
-            ctx.moveTo(cx - cw * 0.1, cy + cs * 0.9);
-            ctx.lineTo(cx - cw * 0.2, cy + cs * 1.2);
-            ctx.moveTo(cx + cw * 0.1, cy + cs * 0.9);
-            ctx.lineTo(cx + cw * 0.2, cy + cs * 1.2);
-            ctx.stroke();
-            // Sneakers
-            ctx.fillStyle = '#fff';
-            ctx.fillRect(cx - cw * 0.35, cy + cs * 1.12, cw * 0.35, cs * 0.2);
-            ctx.fillRect(cx + cw * 0.05, cy + cs * 1.12, cw * 0.35, cs * 0.2);
-        }
-
-        function drawPerson(cx, cy, variant, bodyScale, widthScale, skinColor) {
-            const s = 24 * bodyScale; // scaled height
-            const w = Math.max(0.7, widthScale); // min width to avoid invisibility
-            switch (variant) {
-                case 'male_worker': drawMaleWorker(cx, cy, s, w, skinColor); break;
-                case 'male_elder':  drawMaleElder(cx, cy, s, w, skinColor); break;
-                case 'female_worker': drawFemaleWorker(cx, cy, s, w, skinColor); break;
-                case 'female_elder': drawFemaleElder(cx, cy, s, w, skinColor); break;
-                case 'child':       drawChild(cx, cy, s, w, skinColor); break;
-                default:            drawMaleWorker(cx, cy, s, w, skinColor); break;
-            }
-        }
-
-        // Mini crate icon for stats display
-        function drawMiniCrate(cx, cy) {
-            const r = 8;
-            ctx.fillStyle = '#cd853f';
-            ctx.fillRect(cx - r, cy - r * 0.7, r * 2, r * 1.4);
-            ctx.strokeStyle = '#8b5e3c';
-            ctx.lineWidth = 1.5;
-            ctx.strokeRect(cx - r, cy - r * 0.7, r * 2, r * 1.4);
-            ctx.strokeStyle = '#a0522d';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.moveTo(cx - r, cy);
-            ctx.lineTo(cx + r, cy);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(cx, cy - r * 0.7);
-            ctx.lineTo(cx, cy + r * 0.7);
-            ctx.stroke();
-        }
-
-        // Mini rock icon for stats display
-        function drawMiniRock(cx, cy) {
-            ctx.fillStyle = '#7f8c8d';
-            ctx.beginPath();
-            ctx.moveTo(cx - 6, cy - 3);
-            ctx.lineTo(cx - 3, cy - 6);
-            ctx.lineTo(cx + 3, cy - 5);
-            ctx.lineTo(cx + 7, cy);
-            ctx.lineTo(cx + 4, cy + 5);
-            ctx.lineTo(cx - 2, cy + 4);
-            ctx.lineTo(cx - 7, cy + 1);
-            ctx.closePath();
-            ctx.fill();
-            ctx.strokeStyle = '#95a5a6';
-            ctx.lineWidth = 1;
-            ctx.stroke();
-        }
-
-        function drawCrate(cx, cy, r) {
-            // Wooden crate
-            ctx.fillStyle = '#cd853f';
-            ctx.fillRect(cx - r, cy - r * 0.8, r * 2, r * 1.6);
-
-            // Darker border
-            ctx.strokeStyle = '#8b5e3c';
-            ctx.lineWidth = 2;
-            ctx.strokeRect(cx - r, cy - r * 0.8, r * 2, r * 1.6);
-
-            // Cross straps
-            ctx.strokeStyle = '#a0522d';
-            ctx.lineWidth = 3;
-            ctx.beginPath();
-            ctx.moveTo(cx - r, cy);
-            ctx.lineTo(cx + r, cy);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(cx, cy - r * 0.8);
-            ctx.lineTo(cx, cy + r * 0.8);
-            ctx.stroke();
-
-            // Label "SUPPLIES"
-            ctx.fillStyle = '#fff';
-            ctx.font = 'bold 9px Arial';
-            ctx.textAlign = 'center';
-            ctx.fillText('SUPPLY', cx, cy + r * 0.55);
-        }
-
-        function drawRock(cx, cy, r, shapePoints) {
-            // Irregular rock shape (pre-generated)
-            ctx.fillStyle = '#7f8c8d';
-            ctx.beginPath();
-            for (let i = 0; i < shapePoints.length; i++) {
-                const px = cx + shapePoints[i].x;
-                const py = cy + shapePoints[i].y;
-                if (i === 0) ctx.moveTo(px, py);
-                else ctx.lineTo(px, py);
-            }
-            ctx.closePath();
-            ctx.fill();
-
-            // Highlight edge
-            ctx.strokeStyle = '#95a5a6';
-            ctx.lineWidth = 1.5;
-            ctx.stroke();
-
-            // Crack lines
-            ctx.strokeStyle = '#636e72';
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(cx - r * 0.3, cy - r * 0.25);
-            ctx.lineTo(cx + r * 0.15, cy + r * 0.2);
-            ctx.moveTo(cx + r * 0.2, cy - r * 0.35);
-            ctx.lineTo(cx + r * 0.4, cy - r * 0.05);
-            ctx.stroke();
-        }
-
-        function drawGame() {
-            if (!game.isPlaying) return;
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw mine ceiling
-            ctx.fillStyle = '#5d4037';
-            ctx.fillRect(0, 0, canvas.width, 100);
-            // Darker floor strip for rescued people to stand on
-            ctx.fillStyle = '#4e342e';
-            ctx.fillRect(0, 95, canvas.width, 5);
-
-            // Title
-            ctx.fillStyle = '#f1c40f';
-            ctx.font = 'bold 20px "Segoe UI", Arial, sans-serif';
-            ctx.textAlign = 'center';
-            ctx.fillText('Mine Rescue', canvas.width / 2, 28);
-
-            // Draw rescued people standing on the ceiling floor
-            const rescued = game.rescuedPeople;
-            if (rescued.length > 0) {
-                const spacing = Math.min(120, (canvas.width - 100) / rescued.length);
-                const startX = (canvas.width - spacing * (rescued.length - 1)) / 2;
-                const groundY = 94;
-                rescued.forEach((p, i) => {
-                    const px = startX + i * spacing;
-                    drawPersonAtFeet(px, groundY, p.variant, p.bodyScale, p.widthScale, p.skinColor);
-                });
-            }
-
-            // Draw collected supplies & stones counters on the right
-            const statsX = canvas.width - 60;
-            // Small crate icon
-            const crateY = 50;
-            drawMiniCrate(statsX, crateY);
-            ctx.fillStyle = '#fff';
-            ctx.font = 'bold 14px "Segoe UI", Arial, sans-serif';
-            ctx.textAlign = 'center';
-            ctx.fillText('x' + game.savedBoxes, statsX, crateY + 18);
-            // Small stone icon
-            const rockY = 80;
-            drawMiniRock(statsX, rockY);
-            ctx.fillStyle = '#fff';
-            ctx.fillText('x' + game.savedStones, statsX, rockY + 18);
-
-            // Swing only when not extending or retracting
-            if (arm.isSwinging) {
-                arm.angle += arm.angleSpeed * arm.swingDir;
-                // Swing range: -75° to +75° (wider swing)
-                if (arm.angle > Math.PI / 2.4) {
-                    arm.swingDir = -1;
-                } else if (arm.angle < -Math.PI / 2.4) {
-                    arm.swingDir = 1;
-                }
-            }
-
-            // Calculate claw endpoint - pendulum physics: sin for X, cos for Y
-            const endX = arm.x + Math.sin(arm.angle) * arm.length;
-            const endY = arm.y + Math.cos(arm.angle) * arm.length;
-
-            // Draw cable
-            ctx.strokeStyle = '#f39c12';
-            ctx.lineWidth = 4;
-            ctx.beginPath();
-            ctx.moveTo(arm.x, arm.y);
-            ctx.lineTo(endX, endY);
-            ctx.stroke();
-
-            // Draw claw
-            ctx.fillStyle = '#ecf0f1';
-            ctx.beginPath();
-            ctx.arc(endX, endY, 12, 0, Math.PI * 2);
-            ctx.fill();
-
-            // Draw all targets
-            targets.forEach(target => {
-                if (target.collected) return;
-
-                switch (target.type) {
-                    case 'person':
-                        drawPerson(target.x, target.y, target.variant, target.bodyScale, target.widthScale, target.skinColor);
-                        break;
-                    case 'box':
-                        drawCrate(target.x, target.y, target.size);
-                        break;
-                    case 'stone':
-                        drawRock(target.x, target.y, target.size, target.shape);
-                        break;
-                }
+        for (let i = 0; i < 12; i++) {
+          // Pre-generate rock shape points
+          const rk = 18;
+          const rkPts = [];
+          for (let j = 0; j < 7; j++) {
+            const angle = (j / 7) * Math.PI * 2;
+            const rr = rk * (0.6 + Math.random() * 0.4);
+            rkPts.push({
+              x: Math.cos(angle) * rr,
+              y: Math.sin(angle) * rr * 0.8,
             });
+          }
+          targets.push({
+            x: Math.random() * (canvas.width - 25) + 12,
+            y: Math.random() * 350 + 200,
+            type: "stone",
+            size: 18,
+            points: 5,
+            collected: false,
+            shape: rkPts,
+          });
+        }
+      }
 
-            // Extend logic
-            if (arm.isExtending) {
-                if (arm.length < arm.maxLength) {
-                    arm.length += arm.extendSpeed;
-                    checkGrab(endX, endY);
-                } else {
-                    startRetract();
-                }
-            }
+      // ============== Drawing helpers ==============
 
-            // Retract logic
-            if (arm.isRetracting) {
-                if (arm.length > 120) {
-                    arm.length -= arm.retractSpeed;
-                    if (arm.grabTarget) {
-                        arm.grabTarget.x = endX;
-                        arm.grabTarget.y = endY;
-                    }
-                } else {
-                    arm.isRetracting = false;
-                    if (arm.grabTarget) {
-                        collectTarget(arm.grabTarget);
-                        arm.grabTarget = null;
-                    }
-                    // Resume swinging after retraction complete
-                    arm.isSwinging = true;
-                }
-            }
+      // Draw a person with their feet at groundY
+      function drawPersonAtFeet(
+        cx,
+        groundY,
+        variant,
+        bodyScale,
+        widthScale,
+        skinColor,
+      ) {
+        const s = 24 * bodyScale;
+        const w = Math.max(0.7, widthScale);
+        const cy = groundY - s * 1.35; // center point so feet land at groundY
+        drawPerson(cx, cy, variant, bodyScale, widthScale, skinColor);
+      }
 
-            requestAnimationFrame(drawGame);
+      // Common: draw a round face with eyes and mouth
+      function drawFace(cx, cy, r, faceColor, w) {
+        ctx.fillStyle = faceColor;
+        ctx.beginPath();
+        ctx.ellipse(cx, cy, r, r * w, 0, 0, Math.PI * 2);
+        ctx.fill();
+        // Eyes
+        ctx.fillStyle = "#333";
+        ctx.beginPath();
+        ctx.arc(cx - r * 0.35, cy - r * 0.15, r * 0.14, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(cx + r * 0.35, cy - r * 0.15, r * 0.14, 0, Math.PI * 2);
+        ctx.fill();
+        // Mouth
+        ctx.strokeStyle = "#333";
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.arc(cx, cy + r * 0.2, r * 0.25, 0.2 * Math.PI, 0.8 * Math.PI);
+        ctx.stroke();
+      }
+
+      // Male worker: hard hat, blue overalls
+      function drawMaleWorker(cx, cy, s, w, skin) {
+        const bw = s * w; // body width
+        // Body (blue overalls)
+        ctx.fillStyle = "#2980b9";
+        ctx.fillRect(cx - bw * 0.32, cy - s * 0.1, bw * 0.64, s * 1.0);
+        // Hard hat
+        ctx.fillStyle = "#f1c40f";
+        ctx.beginPath();
+        ctx.ellipse(cx, cy - s * 0.55, bw * 0.7, s * 0.28, 0, Math.PI, 0);
+        ctx.fill();
+        ctx.fillRect(cx - bw * 0.7, cy - s * 0.55, bw * 1.4, s * 0.22);
+        // Face
+        drawFace(cx, cy - s * 0.1, s * 0.45, skin, w);
+        // Arms up
+        ctx.strokeStyle = skin;
+        ctx.lineWidth = 3 * w;
+        ctx.beginPath();
+        ctx.moveTo(cx - bw * 0.32, cy + s * 0.05);
+        ctx.lineTo(cx - bw * 0.8, cy - s * 0.5);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(cx + bw * 0.32, cy + s * 0.05);
+        ctx.lineTo(cx + bw * 0.8, cy - s * 0.5);
+        ctx.stroke();
+        // Hands
+        ctx.fillStyle = skin;
+        ctx.beginPath();
+        ctx.arc(cx - bw * 0.8, cy - s * 0.5, s * 0.16, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(cx + bw * 0.8, cy - s * 0.5, s * 0.16, 0, Math.PI * 2);
+        ctx.fill();
+        // Legs
+        ctx.strokeStyle = "#2c3e50";
+        ctx.lineWidth = 3 * w;
+        ctx.beginPath();
+        ctx.moveTo(cx - bw * 0.15, cy + s * 0.9);
+        ctx.lineTo(cx - bw * 0.28, cy + s * 1.35);
+        ctx.moveTo(cx + bw * 0.15, cy + s * 0.9);
+        ctx.lineTo(cx + bw * 0.28, cy + s * 1.35);
+        ctx.stroke();
+        // Boots
+        ctx.fillStyle = "#5d4037";
+        ctx.fillRect(cx - bw * 0.45, cy + s * 1.25, bw * 0.4, s * 0.25);
+        ctx.fillRect(cx + bw * 0.05, cy + s * 1.25, bw * 0.4, s * 0.25);
+      }
+
+      // Male elder: gray hair, no helmet, dark coat, walking stick
+      function drawMaleElder(cx, cy, s, w, skin) {
+        const bw = s * w;
+        // Body (dark coat)
+        ctx.fillStyle = "#5d4e37";
+        ctx.fillRect(cx - bw * 0.28, cy - s * 0.1, bw * 0.56, s * 1.0);
+        // Gray hair
+        ctx.fillStyle = "#bdc3c7";
+        ctx.beginPath();
+        ctx.arc(cx, cy - s * 0.55, bw * 0.52, Math.PI, 0);
+        ctx.fill();
+        // Face
+        drawFace(cx, cy - s * 0.1, s * 0.42, skin, w);
+        // Beard
+        ctx.fillStyle = "#bdc3c7";
+        ctx.beginPath();
+        ctx.arc(cx, cy + s * 0.15, bw * 0.3, 0, Math.PI);
+        ctx.fill();
+        // One arm up
+        ctx.strokeStyle = skin;
+        ctx.lineWidth = 3 * w;
+        ctx.beginPath();
+        ctx.moveTo(cx + bw * 0.28, cy + s * 0.05);
+        ctx.lineTo(cx + bw * 0.72, cy - s * 0.45);
+        ctx.stroke();
+        ctx.fillStyle = skin;
+        ctx.beginPath();
+        ctx.arc(cx + bw * 0.72, cy - s * 0.45, s * 0.14, 0, Math.PI * 2);
+        ctx.fill();
+        // Other arm holding cane
+        ctx.strokeStyle = skin;
+        ctx.beginPath();
+        ctx.moveTo(cx - bw * 0.28, cy + s * 0.05);
+        ctx.lineTo(cx - bw * 0.3, cy + s * 0.7);
+        ctx.stroke();
+        // Cane
+        ctx.strokeStyle = "#8b4513";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(cx - bw * 0.38, cy - s * 0.2);
+        ctx.lineTo(cx - bw * 0.25, cy + s * 1.3);
+        ctx.stroke();
+        // Legs
+        ctx.strokeStyle = "#4a3728";
+        ctx.lineWidth = 3 * w;
+        ctx.beginPath();
+        ctx.moveTo(cx - bw * 0.12, cy + s * 0.9);
+        ctx.lineTo(cx - bw * 0.22, cy + s * 1.35);
+        ctx.moveTo(cx + bw * 0.12, cy + s * 0.9);
+        ctx.lineTo(cx + bw * 0.22, cy + s * 1.35);
+        ctx.stroke();
+        // Shoes
+        ctx.fillStyle = "#3e2723";
+        ctx.fillRect(cx - bw * 0.38, cy + s * 1.25, bw * 0.35, s * 0.2);
+        ctx.fillRect(cx + bw * 0.05, cy + s * 1.25, bw * 0.35, s * 0.2);
+      }
+
+      // Female worker: hard hat, long hair, pink top, blue pants
+      function drawFemaleWorker(cx, cy, s, w, skin) {
+        const bw = s * w;
+        // Body (pink top)
+        ctx.fillStyle = "#e91e90";
+        ctx.fillRect(cx - bw * 0.28, cy - s * 0.1, bw * 0.56, s * 0.6);
+        // Pants
+        ctx.fillStyle = "#1565c0";
+        ctx.fillRect(cx - bw * 0.3, cy + s * 0.5, bw * 0.6, s * 0.5);
+        // Long hair (sides)
+        ctx.fillStyle = "#4a3728";
+        ctx.fillRect(cx - bw * 0.55, cy - s * 0.35, bw * 0.2, s * 0.9);
+        ctx.fillRect(cx + bw * 0.35, cy - s * 0.35, bw * 0.2, s * 0.9);
+        // Hard hat
+        ctx.fillStyle = "#f1c40f";
+        ctx.beginPath();
+        ctx.ellipse(cx, cy - s * 0.55, bw * 0.65, s * 0.25, 0, Math.PI, 0);
+        ctx.fill();
+        ctx.fillRect(cx - bw * 0.65, cy - s * 0.55, bw * 1.3, s * 0.2);
+        // Face
+        drawFace(cx, cy - s * 0.1, s * 0.4, skin, w);
+        // Arms up
+        ctx.strokeStyle = skin;
+        ctx.lineWidth = 2.8 * w;
+        ctx.beginPath();
+        ctx.moveTo(cx - bw * 0.28, cy + s * 0.05);
+        ctx.lineTo(cx - bw * 0.72, cy - s * 0.45);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(cx + bw * 0.28, cy + s * 0.05);
+        ctx.lineTo(cx + bw * 0.72, cy - s * 0.45);
+        ctx.stroke();
+        ctx.fillStyle = skin;
+        ctx.beginPath();
+        ctx.arc(cx - bw * 0.72, cy - s * 0.45, s * 0.14, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(cx + bw * 0.72, cy - s * 0.45, s * 0.14, 0, Math.PI * 2);
+        ctx.fill();
+        // Legs
+        ctx.strokeStyle = "#0d47a1";
+        ctx.lineWidth = 2.5 * w;
+        ctx.beginPath();
+        ctx.moveTo(cx - bw * 0.12, cy + s * 1.0);
+        ctx.lineTo(cx - bw * 0.22, cy + s * 1.35);
+        ctx.moveTo(cx + bw * 0.12, cy + s * 1.0);
+        ctx.lineTo(cx + bw * 0.22, cy + s * 1.35);
+        ctx.stroke();
+        // Shoes
+        ctx.fillStyle = "#e91e90";
+        ctx.fillRect(cx - bw * 0.38, cy + s * 1.25, bw * 0.35, s * 0.22);
+        ctx.fillRect(cx + bw * 0.05, cy + s * 1.25, bw * 0.35, s * 0.22);
+      }
+
+      // Female elder: gray bun hair, purple shawl/dress, glasses
+      function drawFemaleElder(cx, cy, s, w, skin) {
+        const bw = s * w;
+        // Body (purple dress)
+        ctx.fillStyle = "#7b1fa2";
+        ctx.fillRect(cx - bw * 0.28, cy - s * 0.1, bw * 0.56, s * 1.1);
+        // Gray hair bun
+        ctx.fillStyle = "#cfd8dc";
+        ctx.beginPath();
+        ctx.arc(cx, cy - s * 0.45, bw * 0.5, Math.PI, 0);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(cx, cy - s * 0.65, bw * 0.2, 0, Math.PI * 2);
+        ctx.fill();
+        // Face
+        drawFace(cx, cy - s * 0.1, s * 0.4, skin, w);
+        // Glasses
+        ctx.strokeStyle = "#333";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(cx - bw * 0.16, cy - s * 0.12, s * 0.15, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(cx + bw * 0.16, cy - s * 0.12, s * 0.15, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - s * 0.12);
+        ctx.lineTo(cx, cy - s * 0.05);
+        ctx.stroke();
+        // One arm up
+        ctx.strokeStyle = skin;
+        ctx.lineWidth = 2.8 * w;
+        ctx.beginPath();
+        ctx.moveTo(cx - bw * 0.28, cy + s * 0.05);
+        ctx.lineTo(cx - bw * 0.68, cy - s * 0.4);
+        ctx.stroke();
+        ctx.fillStyle = skin;
+        ctx.beginPath();
+        ctx.arc(cx - bw * 0.68, cy - s * 0.4, s * 0.13, 0, Math.PI * 2);
+        ctx.fill();
+        // Other arm
+        ctx.strokeStyle = skin;
+        ctx.beginPath();
+        ctx.moveTo(cx + bw * 0.28, cy + s * 0.05);
+        ctx.lineTo(cx + bw * 0.5, cy + s * 0.45);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(cx + bw * 0.5, cy + s * 0.45, s * 0.13, 0, Math.PI * 2);
+        ctx.fill();
+        // Legs
+        ctx.strokeStyle = "#4a148c";
+        ctx.lineWidth = 2.5 * w;
+        ctx.beginPath();
+        ctx.moveTo(cx - bw * 0.12, cy + s * 1.0);
+        ctx.lineTo(cx - bw * 0.2, cy + s * 1.35);
+        ctx.moveTo(cx + bw * 0.12, cy + s * 1.0);
+        ctx.lineTo(cx + bw * 0.2, cy + s * 1.35);
+        ctx.stroke();
+        ctx.fillStyle = "#4a148c";
+        ctx.fillRect(cx - bw * 0.35, cy + s * 1.25, bw * 0.35, s * 0.22);
+        ctx.fillRect(cx + bw * 0.05, cy + s * 1.25, bw * 0.35, s * 0.22);
+      }
+
+      // Child: small, bright red shirt, no helmet, both arms waving
+      function drawChild(cx, cy, s, w, skin) {
+        const bw = s * w;
+        // Scaled down for child
+        const cs = s * 0.8;
+        const cw = bw * 0.85;
+        // Body (bright red shirt)
+        ctx.fillStyle = "#e74c3c";
+        ctx.fillRect(cx - cw * 0.22, cy - cs * 0.05, cw * 0.44, cs * 0.55);
+        // Pants
+        ctx.fillStyle = "#1976d2";
+        ctx.fillRect(cx - cw * 0.24, cy + cs * 0.5, cw * 0.48, cs * 0.4);
+        // Hair (spiky)
+        ctx.fillStyle = "#795548";
+        ctx.beginPath();
+        ctx.arc(cx, cy - cs * 0.45, cw * 0.45, Math.PI, 0);
+        ctx.fill();
+        // Face
+        drawFace(cx, cy - cs * 0.08, cs * 0.38, skin, w);
+        // Bigger eyes for child
+        ctx.fillStyle = "#333";
+        ctx.beginPath();
+        ctx.arc(cx - cw * 0.14, cy - cs * 0.12, cs * 0.07, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(cx + cw * 0.14, cy - cs * 0.12, cs * 0.07, 0, Math.PI * 2);
+        ctx.fill();
+        // Happy mouth
+        ctx.strokeStyle = "#333";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(cx, cy + cs * 0.02, cs * 0.15, 0.1 * Math.PI, 0.9 * Math.PI);
+        ctx.stroke();
+        // Arms up high
+        ctx.strokeStyle = skin;
+        ctx.lineWidth = 2.5 * w;
+        ctx.beginPath();
+        ctx.moveTo(cx - cw * 0.22, cy + cs * 0.05);
+        ctx.lineTo(cx - cw * 0.7, cy - cs * 0.6);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(cx + cw * 0.22, cy + cs * 0.05);
+        ctx.lineTo(cx + cw * 0.7, cy - cs * 0.6);
+        ctx.stroke();
+        ctx.fillStyle = skin;
+        ctx.beginPath();
+        ctx.arc(cx - cw * 0.7, cy - cs * 0.6, cs * 0.13, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(cx + cw * 0.7, cy - cs * 0.6, cs * 0.13, 0, Math.PI * 2);
+        ctx.fill();
+        // Legs
+        ctx.strokeStyle = "#0d47a1";
+        ctx.lineWidth = 2.5 * w;
+        ctx.beginPath();
+        ctx.moveTo(cx - cw * 0.1, cy + cs * 0.9);
+        ctx.lineTo(cx - cw * 0.2, cy + cs * 1.2);
+        ctx.moveTo(cx + cw * 0.1, cy + cs * 0.9);
+        ctx.lineTo(cx + cw * 0.2, cy + cs * 1.2);
+        ctx.stroke();
+        // Sneakers
+        ctx.fillStyle = "#fff";
+        ctx.fillRect(cx - cw * 0.35, cy + cs * 1.12, cw * 0.35, cs * 0.2);
+        ctx.fillRect(cx + cw * 0.05, cy + cs * 1.12, cw * 0.35, cs * 0.2);
+      }
+
+      function drawPerson(cx, cy, variant, bodyScale, widthScale, skinColor) {
+        const s = 24 * bodyScale; // scaled height
+        const w = Math.max(0.7, widthScale); // min width to avoid invisibility
+        switch (variant) {
+          case "male_worker":
+            drawMaleWorker(cx, cy, s, w, skinColor);
+            break;
+          case "male_elder":
+            drawMaleElder(cx, cy, s, w, skinColor);
+            break;
+          case "female_worker":
+            drawFemaleWorker(cx, cy, s, w, skinColor);
+            break;
+          case "female_elder":
+            drawFemaleElder(cx, cy, s, w, skinColor);
+            break;
+          case "child":
+            drawChild(cx, cy, s, w, skinColor);
+            break;
+          default:
+            drawMaleWorker(cx, cy, s, w, skinColor);
+            break;
+        }
+      }
+
+      // Mini crate icon for stats display
+      function drawMiniCrate(cx, cy) {
+        const r = 8;
+        ctx.fillStyle = "#cd853f";
+        ctx.fillRect(cx - r, cy - r * 0.7, r * 2, r * 1.4);
+        ctx.strokeStyle = "#8b5e3c";
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(cx - r, cy - r * 0.7, r * 2, r * 1.4);
+        ctx.strokeStyle = "#a0522d";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(cx - r, cy);
+        ctx.lineTo(cx + r, cy);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - r * 0.7);
+        ctx.lineTo(cx, cy + r * 0.7);
+        ctx.stroke();
+      }
+
+      // Mini rock icon for stats display
+      function drawMiniRock(cx, cy) {
+        ctx.fillStyle = "#7f8c8d";
+        ctx.beginPath();
+        ctx.moveTo(cx - 6, cy - 3);
+        ctx.lineTo(cx - 3, cy - 6);
+        ctx.lineTo(cx + 3, cy - 5);
+        ctx.lineTo(cx + 7, cy);
+        ctx.lineTo(cx + 4, cy + 5);
+        ctx.lineTo(cx - 2, cy + 4);
+        ctx.lineTo(cx - 7, cy + 1);
+        ctx.closePath();
+        ctx.fill();
+        ctx.strokeStyle = "#95a5a6";
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+
+      function drawCrate(cx, cy, r) {
+        // Wooden crate
+        ctx.fillStyle = "#cd853f";
+        ctx.fillRect(cx - r, cy - r * 0.8, r * 2, r * 1.6);
+
+        // Darker border
+        ctx.strokeStyle = "#8b5e3c";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(cx - r, cy - r * 0.8, r * 2, r * 1.6);
+
+        // Cross straps
+        ctx.strokeStyle = "#a0522d";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(cx - r, cy);
+        ctx.lineTo(cx + r, cy);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - r * 0.8);
+        ctx.lineTo(cx, cy + r * 0.8);
+        ctx.stroke();
+
+        // Label "SUPPLIES"
+        ctx.fillStyle = "#fff";
+        ctx.font = "bold 9px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText("SUPPLY", cx, cy + r * 0.55);
+      }
+
+      function drawRock(cx, cy, r, shapePoints) {
+        // Irregular rock shape (pre-generated)
+        ctx.fillStyle = "#7f8c8d";
+        ctx.beginPath();
+        for (let i = 0; i < shapePoints.length; i++) {
+          const px = cx + shapePoints[i].x;
+          const py = cy + shapePoints[i].y;
+          if (i === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        }
+        ctx.closePath();
+        ctx.fill();
+
+        // Highlight edge
+        ctx.strokeStyle = "#95a5a6";
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        // Crack lines
+        ctx.strokeStyle = "#636e72";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(cx - r * 0.3, cy - r * 0.25);
+        ctx.lineTo(cx + r * 0.15, cy + r * 0.2);
+        ctx.moveTo(cx + r * 0.2, cy - r * 0.35);
+        ctx.lineTo(cx + r * 0.4, cy - r * 0.05);
+        ctx.stroke();
+      }
+
+      function drawGame() {
+        if (!game.isPlaying) return;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw mine ceiling
+        ctx.fillStyle = "#5d4037";
+        ctx.fillRect(0, 0, canvas.width, 100);
+        // Darker floor strip for rescued people to stand on
+        ctx.fillStyle = "#4e342e";
+        ctx.fillRect(0, 95, canvas.width, 5);
+
+        // Title
+        ctx.fillStyle = "#f1c40f";
+        ctx.font = 'bold 20px "Segoe UI", Arial, sans-serif';
+        ctx.textAlign = "center";
+        ctx.fillText("Mine Rescue", canvas.width / 2, 28);
+
+        // Draw rescued people standing on the ceiling floor
+        const rescued = game.rescuedPeople;
+        if (rescued.length > 0) {
+          const spacing = Math.min(120, (canvas.width - 100) / rescued.length);
+          const startX = (canvas.width - spacing * (rescued.length - 1)) / 2;
+          const groundY = 94;
+          rescued.forEach((p, i) => {
+            const px = startX + i * spacing;
+            drawPersonAtFeet(
+              px,
+              groundY,
+              p.variant,
+              p.bodyScale,
+              p.widthScale,
+              p.skinColor,
+            );
+          });
         }
 
-        function checkGrab(x, y) {
-            if (arm.grabTarget) return;
+        // Draw collected supplies & stones counters on the right
+        const statsX = canvas.width - 60;
+        // Small crate icon
+        const crateY = 50;
+        drawMiniCrate(statsX, crateY);
+        ctx.fillStyle = "#fff";
+        ctx.font = 'bold 14px "Segoe UI", Arial, sans-serif';
+        ctx.textAlign = "center";
+        ctx.fillText("x" + game.savedBoxes, statsX, crateY + 18);
+        // Small stone icon
+        const rockY = 80;
+        drawMiniRock(statsX, rockY);
+        ctx.fillStyle = "#fff";
+        ctx.fillText("x" + game.savedStones, statsX, rockY + 18);
 
-            targets.forEach(target => {
-                if (target.collected) return;
-
-                const dx = x - target.x;
-                const dy = y - target.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < target.size + 8) {
-                    arm.grabTarget = target;
-                    startRetract();
-                }
-            });
-        }
-
-        function startRetract() {
-            arm.isExtending = false;
-            arm.isRetracting = true;
-        }
-
-        function collectTarget(target) {
-            target.collected = true;
-            game.score += target.points;
-            scoreEl.textContent = game.score;
-
-            if (target.type === 'person') {
-                game.savedPeople++;
-                game.rescuedPeople.push({
-                    variant: target.variant,
-                    bodyScale: target.bodyScale,
-                    widthScale: target.widthScale,
-                    skinColor: target.skinColor
-                });
-                if (game.savedPeople === game.totalPeople) {
-                    gameWin();
-                }
-            } else if (target.type === 'box') {
-                game.savedBoxes++;
-            } else if (target.type === 'stone') {
-                game.savedStones++;
-            }
-        }
-
-        function startTimer() {
-            game.timer = setInterval(() => {
-                game.time--;
-                timeEl.textContent = game.time;
-
-                if (game.time <= 0) {
-                    gameFail();
-                }
-            }, 1000);
-        }
-
-        function gameWin() {
-            game.isPlaying = false;
-            clearInterval(game.timer);
-            winScoreEl.textContent = game.score;
-            winModal.style.display = 'block';
-        }
-
-        function gameFail() {
-            game.isPlaying = false;
-            clearInterval(game.timer);
-            failScoreEl.textContent = game.score;
-            failModal.style.display = 'block';
-        }
-
-        function restartGame() {
-            game.score = 0;
-            game.time = 60;
-            game.savedPeople = 0;
-            game.rescuedPeople = [];
-            game.savedBoxes = 0;
-            game.savedStones = 0;
-            game.isPlaying = true;
-
-            arm.length = 120;
-            arm.angle = 0;
-            arm.isExtending = false;
-            arm.isRetracting = false;
-            arm.grabTarget = null;
-            arm.isSwinging = true;
+        // Swing only when not extending or retracting
+        if (arm.isSwinging) {
+          arm.angle += arm.angleSpeed * arm.swingDir;
+          // Swing range: -75° to +75° (wider swing)
+          if (arm.angle > Math.PI / 2.4) {
+            arm.swingDir = -1;
+          } else if (arm.angle < -Math.PI / 2.4) {
             arm.swingDir = 1;
-
-            scoreEl.textContent = 0;
-            timeEl.textContent = 60;
-            winModal.style.display = 'none';
-            failModal.style.display = 'none';
-
-            initTargets();
-            clearInterval(game.timer);
-            startTimer();
-            drawGame();
+          }
         }
 
-        // Click / Space to release claw
-        document.addEventListener('keydown', (e) => {
-            if (e.code === 'Space' && !arm.isExtending && !arm.isRetracting && game.isPlaying && arm.isSwinging) {
-                arm.isSwinging = false;
-                arm.isExtending = true;
-            }
+        // Calculate claw endpoint - pendulum physics: sin for X, cos for Y
+        const endX = arm.x + Math.sin(arm.angle) * arm.length;
+        const endY = arm.y + Math.cos(arm.angle) * arm.length;
+
+        // Draw cable
+        ctx.strokeStyle = "#f39c12";
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.moveTo(arm.x, arm.y);
+        ctx.lineTo(endX, endY);
+        ctx.stroke();
+
+        // Draw claw
+        ctx.fillStyle = "#ecf0f1";
+        ctx.beginPath();
+        ctx.arc(endX, endY, 12, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Draw all targets
+        targets.forEach((target) => {
+          if (target.collected) return;
+
+          switch (target.type) {
+            case "person":
+              drawPerson(
+                target.x,
+                target.y,
+                target.variant,
+                target.bodyScale,
+                target.widthScale,
+                target.skinColor,
+              );
+              break;
+            case "box":
+              drawCrate(target.x, target.y, target.size);
+              break;
+            case "stone":
+              drawRock(target.x, target.y, target.size, target.shape);
+              break;
+          }
         });
 
-        canvas.addEventListener('click', () => {
-            if (!arm.isExtending && !arm.isRetracting && game.isPlaying && arm.isSwinging) {
-                arm.isSwinging = false;
-                arm.isExtending = true;
+        // Extend logic
+        if (arm.isExtending) {
+          if (arm.length < arm.maxLength) {
+            arm.length += arm.extendSpeed;
+            checkGrab(endX, endY);
+          } else {
+            startRetract();
+          }
+        }
+
+        // Retract logic
+        if (arm.isRetracting) {
+          if (arm.length > 120) {
+            arm.length -= arm.retractSpeed;
+            if (arm.grabTarget) {
+              arm.grabTarget.x = endX;
+              arm.grabTarget.y = endY;
             }
+          } else {
+            arm.isRetracting = false;
+            if (arm.grabTarget) {
+              collectTarget(arm.grabTarget);
+              arm.grabTarget = null;
+            }
+            // Resume swinging after retraction complete
+            arm.isSwinging = true;
+          }
+        }
+
+        requestAnimationFrame(drawGame);
+      }
+
+      function checkGrab(x, y) {
+        if (arm.grabTarget) return;
+
+        targets.forEach((target) => {
+          if (target.collected) return;
+
+          const dx = x - target.x;
+          const dy = y - target.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < target.size + 8) {
+            arm.grabTarget = target;
+            startRetract();
+          }
         });
+      }
+
+      function startRetract() {
+        arm.isExtending = false;
+        arm.isRetracting = true;
+      }
+
+      function collectTarget(target) {
+        target.collected = true;
+        game.score += target.points;
+        scoreEl.textContent = game.score;
+
+        if (target.type === "person") {
+          game.savedPeople++;
+          game.rescuedPeople.push({
+            variant: target.variant,
+            bodyScale: target.bodyScale,
+            widthScale: target.widthScale,
+            skinColor: target.skinColor,
+          });
+          if (game.savedPeople === game.totalPeople) {
+            gameWin();
+          }
+        } else if (target.type === "box") {
+          game.savedBoxes++;
+        } else if (target.type === "stone") {
+          game.savedStones++;
+        }
+      }
+
+      function startTimer() {
+        game.timer = setInterval(() => {
+          game.time--;
+          timeEl.textContent = game.time;
+
+          if (game.time <= 0) {
+            gameFail();
+          }
+        }, 1000);
+      }
+
+      function gameWin() {
+        game.isPlaying = false;
+        clearInterval(game.timer);
+        winScoreEl.textContent = game.score;
+        winModal.style.display = "block";
+      }
+
+      function gameFail() {
+        game.isPlaying = false;
+        clearInterval(game.timer);
+        failScoreEl.textContent = game.score;
+        failModal.style.display = "block";
+      }
+
+      function restartGame() {
+        game.score = 0;
+        game.time = 60;
+        game.savedPeople = 0;
+        game.rescuedPeople = [];
+        game.savedBoxes = 0;
+        game.savedStones = 0;
+        game.isPlaying = true;
+
+        arm.length = 120;
+        arm.angle = 0;
+        arm.isExtending = false;
+        arm.isRetracting = false;
+        arm.grabTarget = null;
+        arm.isSwinging = true;
+        arm.swingDir = 1;
+
+        scoreEl.textContent = 0;
+        timeEl.textContent = 60;
+        winModal.style.display = "none";
+        failModal.style.display = "none";
 
         initTargets();
-        drawGame();
+        clearInterval(game.timer);
         startTimer();
+        drawGame();
+      }
+
+      // Click / Space to release claw
+      document.addEventListener("keydown", (e) => {
+        if (
+          e.code === "Space" &&
+          !arm.isExtending &&
+          !arm.isRetracting &&
+          game.isPlaying &&
+          arm.isSwinging
+        ) {
+          arm.isSwinging = false;
+          arm.isExtending = true;
+        }
+      });
+
+      canvas.addEventListener("click", () => {
+        if (
+          !arm.isExtending &&
+          !arm.isRetracting &&
+          game.isPlaying &&
+          arm.isSwinging
+        ) {
+          arm.isSwinging = false;
+          arm.isExtending = true;
+        }
+      });
+
+      initTargets();
+      drawGame();
+      startTimer();
     </script>
-</body>
+  </body>
 </html>
