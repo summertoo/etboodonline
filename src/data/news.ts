@@ -31,6 +31,256 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-04",
+    date: "2026-07-04",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-07-04",
+      en: "🤖 AI HOT Daily · Jul 4, 2026",
+    },
+    summary: {
+      zh: "生数科技发布Vidu S1实时交互视频生成，Wan Video推出音乐伴舞功能，Safari MCP服务器开放Web开发者工具，JoyAI上线UGC数字人可捏专属虚拟玩伴，面壁智能ForgeTrain 8小时追平Megatron-LM，Claude Code v2.1.200更改默认权限模式，网信办新增AI服务专章征求意见，全球首例AI Agent勒索攻击自主完成，Google DeepMind与A24首次合作，阿里达摩院Elements Claw筛选6.8万超导候选材料，pxpipe通过图像化压缩降低59-70%token成本。",
+      en: "Shengshu Tech launches Vidu S1 real-time interactive video generation, Wan Video adds music+dance feature, Safari MCP Server opens for web developers, JoyAI launches UGC digital avatar creation, ForgeTrain catches Megatron-LM in 8 hours with AI-written framework, Claude Code v2.1.200 changes default permission mode, China proposes new AI service regulation chapter, first AI Agent ransomware attack fully autonomous, Google DeepMind partners with A24, Alibaba DAMO Elements Claw screens 68K superconductor candidates, pxpipe compresses tokens via images cutting costs 59-70%.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "生数科技发布 Vidu S1 实时交互视频生成",
+          en: "Shengshu Tech Launches Vidu S1 Real-Time Interactive Video",
+        },
+        description: {
+          zh: "Vidu S1支持实时视频通话和语音控制视频走向，实现无限时长连续互动。540P下25FPS实时生成，一张图片即可创建角色并自定义音色，已开启内测。",
+          en: "Vidu S1 supports real-time video calls and voice-controlled video direction with unlimited continuous interaction. 25FPS at 540P, create characters from a single image. Now in beta.",
+        },
+      },
+      {
+        title: {
+          zh: "Wan Video 推出音乐伴舞新功能",
+          en: "Wan Video Launches Music + Dance Feature",
+        },
+        description: {
+          zh: "阿里云Wan Video推出音乐伴舞新功能，进一步丰富视频生成能力。",
+          en: "Alibaba Cloud Wan Video adds music+dance feature, expanding its video generation capabilities.",
+        },
+      },
+      {
+        title: {
+          zh: "Safari MCP 服务器为 Web 开发者开放",
+          en: "Safari MCP Server Opens for Web Developers",
+        },
+        description: {
+          zh: "Safari Technology Preview 247推出MCP服务器，允许MCP兼容客户端连接Safari，智能体可自主完成调试、性能分析、可访问性检查等任务。",
+          en: "Safari TP 247 introduces MCP server, letting MCP-compatible clients connect to Safari. Agents can autonomously debug, profile, and check accessibility.",
+        },
+      },
+      {
+        title: {
+          zh: "JoyAI 上线 UGC 数字人功能",
+          en: "JoyAI Launches UGC Digital Avatar Feature",
+        },
+        description: {
+          zh: "上传一张照片即可生成专属虚拟数字分身，支持一键复刻写实形象或重塑为卡通风格，集成全双工对话，支持随时打断自然接话。",
+          en: "Upload one photo to generate a personalized digital avatar. Supports realistic recreation or cartoon restyling with full-duplex conversation and natural interruption.",
+        },
+      },
+      {
+        title: {
+          zh: "面壁智能 ForgeTrain：AI自动编写训练框架",
+          en: "ForgeTrain: AI Auto-Writes Training Framework, Catches Megatron-LM in 8 Hours",
+        },
+        description: {
+          zh: "面壁智能发布全球首个AI全自动预训练框架ForgeTrain，针对特定模型和硬件从零锻造专用训练代码，8小时追平Megatron-LM，FLOPS利用率提升约8-10%。",
+          en: "ForgeTrain is the world's first fully AI-written production training framework. Catches Megatron-LM in 8 hours, achieves 8-10% higher FLOPS utilization in 1.5-2 days.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.200 发布",
+          en: "Claude Code v2.1.200 Released",
+        },
+        description: {
+          zh: "AskUserQuestion对话框默认改为不自动继续，默认权限模式改为Manual。修复了配置文件格式崩溃、后台会话休眠停止等问题。",
+          en: "AskUserQuestion dialog no longer auto-continues by default. Permission mode defaults to Manual. Fixes config crash and background session freeze on sleep/wake.",
+        },
+      },
+      {
+        title: {
+          zh: "网信办首设智能信息服务专章征求意见",
+          en: "China Proposes First AI Service Chapter in Internet Regulations",
+        },
+        description: {
+          zh: "网信办就互联网信息服务管理办法再次征求意见，新增AI服务专章，要求公示训练数据来源、标识生成内容，禁止强制用户使用AI服务。",
+          en: "China's CAC proposes new 'AI Service' chapter requiring disclosure of training data sources, content labeling, and bans on forced AI usage. Public comment open until Aug 2.",
+        },
+      },
+      {
+        title: {
+          zh: "全球首例 AI Agent 勒索攻击曝光",
+          en: "First AI Agent Ransomware Attack Documented",
+        },
+        description: {
+          zh: "安全厂商记录到AI Agent JADEPUFFER自动完成勒索攻击，从漏洞利用到收集API密钥、横向移动到MySQL和Nacos服务器，加密全部1342条配置数据，全程自主完成。",
+          en: "Sysdig documents JADEPUFFER AI Agent autonomously executing a ransomware attack — exploiting Langflow, harvesting API keys, lateral movement, and encrypting 1,342 config records.",
+        },
+      },
+      {
+        title: {
+          zh: "Google DeepMind 与 A24 达成研究合作",
+          en: "Google DeepMind Partners with A24 Studio",
+        },
+        description: {
+          zh: "DeepMind与电影制作工作室A24首次研究合作，将AI创新嵌入创作过程，帮助艺术家开发新工作流程和技术，扩展叙事可能性。",
+          en: "DeepMind and A24 announce first research partnership, embedding AI innovation into the creative process to help artists develop new workflows and expand storytelling.",
+        },
+      },
+      {
+        title: {
+          zh: "阿里达摩院发布超导材料发现AI智能体 Elements Claw",
+          en: "Alibaba DAMO Launches Superconductor AI Agent Elements Claw",
+        },
+        description: {
+          zh: "Elements Claw基于1B参数原子模型，超导性判断AUC达0.996。仅用28个GPU小时筛选240万晶体结构，预测6.8万候选材料，4种已合成验证。",
+          en: "Elements Claw uses a 1B-param atomic foundation model achieving 0.996 AUC on superconductivity. Screens 2.4M crystal structures in 28 GPU hours, predicts 68K candidates, 4 validated.",
+        },
+      },
+      {
+        title: {
+          zh: "pxpipe：图像化压缩token降低Claude Code成本",
+          en: "pxpipe: Compress Tokens via Images to Cut Claude Code Costs",
+        },
+        description: {
+          zh: "本地代理将密集文本渲染为PNG图像，利用图像token按像素计价的特性压缩输入。25k文本token压缩为约2.7k图像token，端到端账单降低59-70%。",
+          en: "Local proxy renders dense text as PNG images, exploiting pixel-based image token pricing. Compresses ~25k text tokens to ~2.7k image tokens, cutting costs 59-70% end-to-end.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-04-hot",
+    date: "2026-07-04",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-04",
+      en: "🔥 Hot Topics · Jul 4, 2026",
+    },
+    summary: {
+      zh: "阿根廷3-2险胜佛得角晋级16强，佛得角两度扳平虽败犹荣门将沃齐尼亚成超级网红，各地多举措防御台风来袭，一天3款新车上市造手机的沉默了，中国银行重启5年期大额存单，女球迷偶遇C罗获3次拥抱，中央巡查组质问你们上去过吗，普京突穿军装亮相，中国船员被韩海警扣押期间死亡，克罗地亚媒体炮轰C罗靠施舍获最佳，法拉利被4名儿童划损家长道歉。",
+      en: "Argentina beats Cape Verde 3-2 in a thriller, Cape Verde's heroic fight and goalkeeper Vozinha becomes viral sensation, multiple regions brace for typhoon, 3 new car models launch in one day, Bank of China restarts 5-year CDs, female fan meets Ronaldo gets 3 hugs, central inspection team confronts officials, Putin appears in military uniform, Chinese fisherman dies in ROK coast guard custody, Croatian media slams Ronaldo's 'charity' MVP award, Ferrari scratched by 4 children parents apologize.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "阿根廷3-2险胜佛得角 晋级16强",
+          en: "Argentina Edges Cape Verde 3-2 to Reach Round of 16",
+        },
+        description: {
+          zh: "世界杯1/16决赛阿根廷3-2艰难战胜佛得角，50多万人口的岛国佛得角两度扳平，虽败犹荣。赛后阿根廷官方点赞佛得角称伟大的对手。",
+          en: "Argentina beats Cape Verde 3-2 in a nail-biting Round of 32 match. The tiny island nation of 500K+ people equalizes twice, earning global respect. Argentina hails Cape Verde as 'great opponent'.",
+        },
+      },
+      {
+        title: {
+          zh: "佛得角门将沃齐尼亚成超级网红",
+          en: "Cape Verde Goalkeeper Vozinha Becomes Viral Sensation",
+        },
+        description: {
+          zh: "佛得角门将沃齐尼亚在对阵阿根廷比赛中表现神勇，赛后梗图走红网络，成超级网红。佛得角虽告别世界杯但获得全球掌声。",
+          en: "Cape Verde goalkeeper Vozinha goes viral after heroic performance against Argentina. Memes flood the internet. Cape Verde exits World Cup but earns standing ovation from the world.",
+        },
+      },
+      {
+        title: {
+          zh: "各地多举措防御台风",
+          en: "Multiple Regions Brace for Typhoon",
+        },
+        description: {
+          zh: "各地启动多项防御措施应对台风来袭，保障人民生命财产安全。",
+          en: "Multiple regions activate typhoon defense measures to protect lives and property as storm approaches.",
+        },
+      },
+      {
+        title: {
+          zh: "一天3款新车上市 造手机的沉默了",
+          en: "3 New Car Models Launch in a Single Day",
+        },
+        description: {
+          zh: "汽车行业一天内3款新车集中上市，竞争激烈程度让跨界造手机的厂商都沉默了。",
+          en: "Three new car models launch on the same day, intense competition leaves even phone-makers eyeing the car market speechless.",
+        },
+      },
+      {
+        title: {
+          zh: "中国银行重启5年期大额存单",
+          en: "Bank of China Restarts 5-Year Large-Value CDs",
+        },
+        description: {
+          zh: "中国银行重启5年期大额存单发行，为储户提供更多长期理财选择。",
+          en: "Bank of China resumes issuing 5-year large-value certificates of deposit, offering savers more long-term investment options.",
+        },
+      },
+      {
+        title: {
+          zh: "中国女球迷电梯偶遇C罗获3次拥抱",
+          en: "Chinese Fan Meets Ronaldo in Elevator, Gets 3 Hugs",
+        },
+        description: {
+          zh: "一位中国女球迷在电梯中偶遇C罗，获得3次拥抱的暖心互动，引发网友羡慕。",
+          en: "A Chinese female fan meets Ronaldo in an elevator and gets 3 hugs in a heartwarming encounter that sparks envy online.",
+        },
+      },
+      {
+        title: {
+          zh: "中央巡查组厉声质问：你们上去过吗",
+          en: "Central Inspection Team Confronts Officials: 'Have You Ever Been Up There?'",
+        },
+        description: {
+          zh: "中央巡查组在某地检查时厉声质问当地官员是否亲自上去检查过，引发社会热议。",
+          en: "Central inspection team sternly questions local officials whether they've personally inspected a site, sparking widespread discussion on accountability.",
+        },
+      },
+      {
+        title: {
+          zh: "普京突然穿上军装",
+          en: "Putin Appears in Military Uniform",
+        },
+        description: {
+          zh: "普京罕见穿上军装公开亮相，引发外界对其意图的广泛猜测。",
+          en: "Putin appears in military uniform in a rare public appearance, fueling speculation about his intentions.",
+        },
+      },
+      {
+        title: {
+          zh: "中国船员被韩海警扣押期间死亡",
+          en: "Chinese Fisherman Dies in ROK Coast Guard Custody",
+        },
+        description: {
+          zh: "一名中国船员在被韩国海警扣押期间死亡，引发外交关注。",
+          en: "A Chinese fisherman dies while in custody of ROK coast guard, drawing diplomatic attention.",
+        },
+      },
+      {
+        title: {
+          zh: "克罗地亚媒体炮轰C罗靠施舍获最佳",
+          en: "Croatian Media Slams Ronaldo's 'Charity' MVP Award",
+        },
+        description: {
+          zh: "克罗地亚媒体开炮批评C罗在葡萄牙对克罗地亚比赛中靠施舍获得最佳球员称号，质疑评选公正性。",
+          en: "Croatian media criticizes Ronaldo's MVP award as 'charity' after Portugal-Croatia match, questioning the fairness of the selection.",
+        },
+      },
+      {
+        title: {
+          zh: "法拉利被4名儿童划损 家长均道歉",
+          en: "Ferrari Scratched by 4 Children, Parents Apologize",
+        },
+        description: {
+          zh: "一辆法拉利被4名儿童划损，涉事家长均已向车主道歉致歉，事件得到妥善解决。",
+          en: "A Ferrari is scratched by 4 children. All parents apologize to the owner, and the matter is resolved amicably.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-03-hot",
     date: "2026-07-03",
     title: {
