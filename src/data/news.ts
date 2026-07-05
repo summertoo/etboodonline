@@ -31,6 +31,166 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-05-hot",
+    date: "2026-07-05",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-05",
+      en: "🔥 Hot Topics · Jul 5, 2026",
+    },
+    summary: {
+      zh: "巴拉圭法国冲突门将赛后用球砸姆巴佩，王力宏演唱会摔倒耳朵缝27针脸缝12针，法国1-0小胜巴拉圭晋级8强，摩洛哥3-0加拿大晋级8强东道主首支出局，到底是谁取消了有线耳机引热议，王曼昱蒯曼击败日本组合夺WTT女双冠军，iPhone 18 Pro配苹果史上最大电池，金价结束四周连跌，超强台风巴威很可能登陆我国，5条狗出逃3小时致1死1伤主人获刑。",
+      en: "Paraguay-France clash: goalkeeper hits Mbappe with ball after match, Wang Leehom falls on stage needs 27 stitches in ear 12 in face, France beats Paraguay 1-0 to reach quarterfinals, Morocco crushes Canada 3-0 first host eliminated, who killed the headphone jack debate, Wang Manyu/Kuaiman win WTT women's doubles, iPhone 18 Pro gets biggest battery ever, gold ends 4-week losing streak, super typhoon Bavi likely to hit China, dog owner sentenced after 5 dogs kill 1 person in 3 hours.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "巴拉圭法国冲突，门将赛后用球砸姆巴佩",
+          en: "Paraguay-France Clash: Goalkeeper Hits Mbappe with Ball After Match",
+        },
+        description: {
+          zh: "世界杯1/8决赛法国1-0小胜巴拉圭，比赛中库巴斯拉拽姆巴佩引发冲突。终场哨响后巴拉圭门将用球砸姆巴佩后背，姆巴佩毫无反应。",
+          en: "France beats Paraguay 1-0 in Round of 16. Kubas grabs Mbappe sparking conflict. After final whistle, Paraguay's goalkeeper hits Mbappe in the back with the ball. Mbappe doesn't react.",
+        },
+      },
+      {
+        title: {
+          zh: "王力宏演唱会摔倒，耳朵缝27针脸缝12针",
+          en: "Wang Leehom Falls on Stage: 27 Stitches in Ear, 12 in Face",
+        },
+        description: {
+          zh: "王力宏成都演唱会不慎摔倒，脚被钢丝卷到后头撞金属舞台边缘，左耳外耳软骨撞碎。CT检查显示脑部和头骨无受伤。",
+          en: "Wang Leehom falls at Chengdu concert, foot caught by wire, head hits metal stage edge, shattering left ear cartilage. CT scan shows no brain or skull damage.",
+        },
+      },
+      {
+        title: {
+          zh: "法国1-0小胜巴拉圭晋级8强",
+          en: "France Beats Paraguay 1-0, Advances to Quarterfinals",
+        },
+        description: {
+          zh: "姆巴佩点球命中，法国1-0小胜巴拉圭晋级8强。巴拉圭球员在点球点疯狂踩草皮干扰，姆总未受影响稳稳命中。",
+          en: "Mbappe converts penalty as France beats Paraguay 1-0. Paraguay players frantically stomp the penalty spot trying to disrupt him, but Mbappe stays calm and scores.",
+        },
+      },
+      {
+        title: {
+          zh: "摩洛哥3-0加拿大晋级8强",
+          en: "Morocco Crushes Canada 3-0, Advances to Quarterfinals",
+        },
+        description: {
+          zh: "世界杯1/8决赛加拿大0-3不敌摩洛哥，成为本届世界杯首个被淘汰的东道主球队。摩洛哥主帅称已不是黑马而是豪强。",
+          en: "Canada loses 3-0 to Morocco in Round of 16, becoming the first host nation eliminated. Morocco coach: 'We're not dark horses anymore, we're a powerhouse.'",
+        },
+      },
+      {
+        title: {
+          zh: "到底是谁取消了有线耳机",
+          en: "Who Killed the Headphone Jack?",
+        },
+        description: {
+          zh: "话题引发网友热议，苹果2016年发布iPhone 7取消3.5mm耳机孔推出AirPods是转折点，各大厂商纷纷跟进，称可节省机身空间提升防水性能。",
+          en: "Viral debate: Apple's iPhone 7 removing the headphone jack in 2016 and launching AirPods was the tipping point. Other manufacturers followed, citing space savings and water resistance.",
+        },
+      },
+      {
+        title: {
+          zh: "王曼昱蒯曼击败日本组合夺冠",
+          en: "Wang Manyu/Kuaiman Win WTT Women's Doubles Title",
+        },
+        description: {
+          zh: "WTT美国大满贯女双决赛，中国组合王曼昱/蒯曼3-1击败日本组合早田希娜/张本美和，成功夺得冠军。",
+          en: "WTT US Smash women's doubles final: Wang Manyu/Kuaiman beat Japan's Hina Hayata/Miwa Harimoto 3-1 to claim the title.",
+        },
+      },
+      {
+        title: {
+          zh: "iPhone 18 Pro配苹果史上最大电池",
+          en: "iPhone 18 Pro Gets Apple's Biggest Battery Ever",
+        },
+        description: {
+          zh: "iPhone 18 Pro系列电池通过3C认证，Pro Max电池5391mAh（美版5567mAh），较上代增加近500mAh，配合2nm A20 Pro芯片续航将显著提升。",
+          en: "iPhone 18 Pro batteries certified: Pro Max 5391mAh (US 5567mAh), ~500mAh increase over previous gen. Combined with 2nm A20 Pro chip for major battery life improvement.",
+        },
+      },
+      {
+        title: {
+          zh: "金价结束四周连跌",
+          en: "Gold Ends 4-Week Losing Streak",
+        },
+        description: {
+          zh: "伦敦现货黄金报4174美元/盎司涨1.18%，周涨约2.1%。国内品牌足金饰品价格同步上调至约1260元/克，较前两日上涨约30元/克。",
+          en: "London spot gold at $4,174/oz, up 1.18%. Weekly gain ~2.1%. Domestic gold jewelry prices rise to ~1,260 yuan/gram, up ~30 yuan from two days ago.",
+        },
+      },
+      {
+        title: {
+          zh: "超强台风巴威很可能登陆我国",
+          en: "Super Typhoon Bavi Likely to Hit China",
+        },
+        description: {
+          zh: "台风巴威两天内从强热带风暴加强为超强台风，传统数值模式显示登陆我国的可能性已大于不登陆的可能性。五预警齐发。",
+          en: "Typhoon Bavi intensifies from severe tropical storm to super typhoon in 2 days. Models show landfall in China more likely than not. Five weather warnings issued simultaneously.",
+        },
+      },
+      {
+        title: {
+          zh: "5条狗出逃3小时致1死1伤 主人获刑",
+          en: "Dog Owner Sentenced After 5 Dogs Kill 1 Person in 3 Hours",
+        },
+        description: {
+          zh: "黑龙江尚志市58岁男子饲养5条大型犬从破损猪圈出逃，3小时内连续咬伤1人咬死1人，被以过失致人死亡罪判处3年有期徒刑。",
+          en: "A 58-year-old man's 5 large dogs escape through broken pigpen in Shangzhi, Heilongjiang, biting 1 person and killing another within 3 hours. Sentenced to 3 years for negligent homicide.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-05",
+    date: "2026-07-05",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-07-05",
+      en: "🤖 AI HOT Daily · Jul 5, 2026",
+    },
+    summary: {
+      zh: "我国研制全球首款忆阻器神经动力学芯片，NVIDIA 联合多校提出 ASPIRE 自我改进机器人框架零样本成功率提升77分，26000名学生研究显示AI隐藏学习成本需两年才显现。",
+      en: "China develops world's first memristor neuromorphic chip, NVIDIA and universities propose ASPIRE self-improving robotics framework boosting zero-shot success by 77 points, 26,000-student study shows AI's hidden learning cost takes 2 years to surface.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "我国研制全球首款基于可控存内计算的忆阻器神经动力学芯片",
+          en: "China Develops World's First Memristor Neuromorphic Chip",
+        },
+        description: {
+          zh: "北京大学联合中科院上海微系统所发布全球首款基于可控存内计算的忆阻器神经动力学芯片，单步运算时延2.12毫秒，采用40纳米工艺，总面积0.28平方毫米。",
+          en: "Peking University and CAS Shanghai Institute unveil world's first memristor neuromorphic chip with controlled in-memory computing. Single-step latency 2.12ms, 40nm process, 0.28mm² area.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA 联合多校提出 ASPIRE 自我改进机器人框架",
+          en: "NVIDIA & Universities Propose ASPIRE Self-Improving Robotics",
+        },
+        description: {
+          zh: "联合密歇根大学、UIUC、UC Berkeley等提出ASPIRE，通过协调器-执行器架构、闭环执行引擎、技能库和进化搜索，零样本成功率最高提升77分。",
+          en: "ASPIRE framework by NVIDIA, Michigan, UIUC, UC Berkeley uses coordinator-executor architecture, closed-loop execution, skill library, and evolutionary search. Zero-shot success up 77 points.",
+        },
+      },
+      {
+        title: {
+          zh: "26000名学生研究显示AI隐藏学习成本需两年才显现",
+          en: "26,000-Student Study: AI's Hidden Learning Cost Takes 2 Years",
+        },
+        description: {
+          zh: "追踪26000名中学生30个月发现：使用AI后作业分数提升18%，完成时间缩减，但闭卷考试分数下降20%，升学考试成绩下降18%至24%，影响约两年后完全显现。",
+          en: "30-month study of 26K students: AI use boosts homework scores 18% and cuts time, but closed-book exam scores drop 20%, entrance exam scores drop 18-24%. Full impact emerges after ~2 years.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-04",
     date: "2026-07-04",
     title: {
