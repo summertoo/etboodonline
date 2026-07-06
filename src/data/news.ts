@@ -31,6 +31,206 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-06-hot",
+    date: "2026-07-06",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-06",
+      en: "🔥 Hot Topics · Jul 6, 2026",
+    },
+    summary: {
+      zh: "哈兰德梅开二度挪威爆冷淘汰巴西，内马尔从巴西国家队退役赛后痛哭，英格兰闪电2分钟2球，老人看牙遭全口拔光医院被顶格处罚，我不是药神原型陆勇达到停药标准，地球连续24小时地磁暴，99万赛博女友续航仅2-4小时，孙颖莎晋级美国大满贯决赛，四川绵竹半小时3次地震，佛得角队载誉而归门将感谢中国。",
+      en: "Haaland brace shocks Brazil out of World Cup, Neymar retires from national team in tears, England scores 2 goals in 2 minutes, elderly man has all teeth pulled hospital fined, 'Dying to Survive' real-life subject reaches medication-free milestone, Earth hit by 24-hour geomagnetic storm, $140K robot girlfriend only lasts 2-4 hours, Sun Yingsha reaches US Smash final, 3 earthquakes hit Mianzhu in 30 minutes, Cape Verde team returns home goalkeeper thanks China.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "哈兰德梅开二度 挪威爆冷淘汰巴西",
+          en: "Haaland Brace Shocks Brazil Out of World Cup",
+        },
+        description: {
+          zh: "世界杯1/8决赛挪威2-1淘汰巴西，哈兰德梅开二度。赛后敲鼓带领球迷维京划船庆祝，巴西名宿大罗小罗看台目送球队回家。",
+          en: "Norway shocks Brazil 2-1 in Round of 16 with Haaland brace. Haaland drums as fans do Viking ship celebration. Brazilian legends Ronaldo and Ronaldinho watch from stands.",
+        },
+      },
+      {
+        title: {
+          zh: "内马尔从巴西国家队退役",
+          en: "Neymar Retires from Brazilian National Team",
+        },
+        description: {
+          zh: "巴西1-2不敌挪威无缘8强后，内马尔宣布退出国家队：我已经尽力了，一切都结束了。赛后痛哭流涕告别最后一届世界杯。",
+          en: "After Brazil's 1-2 loss to Norway, Neymar announces retirement from national team: 'I gave my all, it's over.' Cries tears as he says goodbye to his final World Cup.",
+        },
+      },
+      {
+        title: {
+          zh: "英格兰闪电2分钟2球",
+          en: "England Scores 2 Goals in 2 Minutes",
+        },
+        description: {
+          zh: "世界杯1/8决赛墨西哥vs英格兰，贝林厄姆梅开二度，英格兰闪电2分钟连进2球。",
+          en: "England vs Mexico in Round of 16: Bellingham scores twice as England nets 2 goals in just 2 minutes.",
+        },
+      },
+      {
+        title: {
+          zh: "老人看牙遭全口拔光 医院被顶格处罚",
+          en: "Elderly Man Has All Teeth Pulled, Hospital Fined",
+        },
+        description: {
+          zh: "陕西宝鸡63岁老人本想治疗一颗牙，却被口腔医院一次拔除12颗牙并种植10颗。卫健局认定存在过度诊疗虚假宣传，责令整改并顶格行政处罚。",
+          en: "A 63-year-old in Baoji, Shaanxi went in for one tooth but had 12 pulled and 10 implants. Health authorities find excessive treatment and false advertising, impose maximum penalty.",
+        },
+      },
+      {
+        title: {
+          zh: "《我不是药神》原型陆勇达到停药标准",
+          en: "'Dying to Survive' Inspiration Reaches Medication-Free Milestone",
+        },
+        description: {
+          zh: "电影上映8周年，原型陆勇表示在与药为伴24年后身体良好，已达到停药标准。今年10月将尝试没有格列卫的日常生活。",
+          en: "8 years after the film's release, real-life subject Lu Yong says after 24 years of medication his health is good enough to stop. Will try life without Gleevec this October.",
+        },
+      },
+      {
+        title: {
+          zh: "地球连续24小时地磁暴",
+          en: "Earth Hit by 24-Hour Geomagnetic Storm",
+        },
+        description: {
+          zh: "从7月4日早8点开始地球磁场连续24小时发生磁暴，为今年1月以来的较强地磁活动。",
+          en: "Earth's magnetic field experiences continuous storming for 24 hours starting 8 AM July 4. Strongest geomagnetic activity since January.",
+        },
+      },
+      {
+        title: {
+          zh: "99万赛博女友续航仅2-4小时",
+          en: "$140K Robot Girlfriend Only Lasts 2-4 Hours",
+        },
+        description: {
+          zh: "优必选U1系列超仿生人形机器人售价11.98万至99万元，部分型号因高精度拟人化模块续航仅2-4小时。",
+          en: "UBTECH's U1 series lifelike humanoid robots priced 119,800-990,000 yuan. High-end models with precision anthropomorphic modules only last 2-4 hours per charge.",
+        },
+      },
+      {
+        title: {
+          zh: "孙颖莎晋级美国大满贯决赛",
+          en: "Sun Yingsha Reaches WTT US Smash Final",
+        },
+        description: {
+          zh: "WTT美国大满贯女单半决赛，世界第一孙颖莎4-1击败队友王艺迪，成功闯入决赛。",
+          en: "WTT US Smash women's singles semifinal: World No.1 Sun Yingsha beats teammate Wang Yidi 4-1 to advance to the final.",
+        },
+      },
+      {
+        title: {
+          zh: "四川绵竹半小时3次地震",
+          en: "3 Earthquakes Hit Mianzhu in 30 Minutes",
+        },
+        description: {
+          zh: "7月5日晚四川德阳市绵竹市连续发生3次地震，最大4.5级，震源深度18千米。",
+          en: "Three earthquakes strike Mianzhu, Deyang, Sichuan on the evening of July 5. The largest is magnitude 4.5 at 18km depth.",
+        },
+      },
+      {
+        title: {
+          zh: "佛得角队载誉而归 门将感谢中国",
+          en: "Cape Verde Team Returns Home, Goalkeeper Thanks China",
+        },
+        description: {
+          zh: "首次参赛的佛得角国家队结束世界杯征程返回首都普拉亚，数千球迷迎接。门将沃西尼亚：感谢所有中国球迷的支持！",
+          en: "Cape Verde's debut World Cup campaign ends. Thousands welcome team back in Praia. Goalkeeper Vozinha: 'Thank you to all Chinese fans for your support!'",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-06",
+    date: "2026-07-06",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-07-06",
+      en: "🤖 AI HOT Daily · Jul 6, 2026",
+    },
+    summary: {
+      zh: "美团 LongCat-2.0 完全开源 MIT 许可开放权重与推理代码，扎克伯格宣布建千兆瓦级 Prometheus AI 集群，NVIDIA Kyber NVL144 延迟超12个月至2028，欧盟理事会快速通道强制推行 Chat Control 2.0 加密扫描，Anthropic Claude Design 反向工程提示词开源更新，LlamaIndex 发布 legal-kb 法律文档知识库，父亲为自闭症儿子开发沟通应用意外创办公司。",
+      en: "Meituan LongCat-2.0 fully open-sourced under MIT with weights and inference code, Zuckerberg announces gigawatt-scale Prometheus AI cluster, NVIDIA Kyber NVL144 delayed 12+ months to 2028, EU Council fast-tracks Chat Control 2.0 mandating encrypted message scanning, Anthropic Claude Design reverse-engineered prompts open-sourced, LlamaIndex launches legal-kb legal document knowledge base, father accidentally starts company building communication app for non-verbal autistic son.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "美团 LongCat-2.0 完全开源（MIT 许可）",
+          en: "Meituan LongCat-2.0 Fully Open-Sourced Under MIT",
+        },
+        description: {
+          zh: "公开模型权重与推理代码，MoE架构总参数1.6T，每token激活约48B，支持1M token上下文。",
+          en: "Model weights and inference code released under MIT. 1.6T MoE with ~48B active per token, 1M token context support.",
+        },
+      },
+      {
+        title: {
+          zh: "扎克伯格：建千兆瓦级 Prometheus AI 集群",
+          en: "Zuckerberg: Building Gigawatt-Scale Prometheus AI Cluster",
+        },
+        description: {
+          zh: "Meta 正在建设首个千兆瓦以上单一集群 Prometheus，投入数千亿美元资本。扎克伯格称其职责就是集中精英人才、资本和基础设施。",
+          en: "Meta builds Prometheus, the first single cluster over 1 gigawatt, with hundreds of billions in capital. Zuckerberg's mission: concentrate elite talent, capital, and infrastructure.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA Kyber NVL144 延迟超12个月至2028",
+          en: "NVIDIA Kyber NVL144 Delayed 12+ Months to 2028",
+        },
+        description: {
+          zh: "Jensen 在 GTC 展示 Kyber NVL144 仅3个月后，该项目遭遇重大挫折，已推迟超过12个月延至2028年。",
+          en: "Just 3 months after Jensen's GTC showcase, Kyber NVL144 faces major setbacks, delayed over 12 months to 2028.",
+        },
+      },
+      {
+        title: {
+          zh: "欧盟理事会强制推行 Chat Control 2.0 加密扫描",
+          en: "EU Council Forces Chat Control 2.0 Encrypted Message Scanning",
+        },
+        description: {
+          zh: "欧盟理事会通过快速通道强制要求科技集团对加密通信进行无差别扫描，批评者指责该做法试图破坏端到端加密。",
+          en: "EU Council fast-tracks regulation forcing tech companies to indiscriminately scan encrypted communications. Critics say it undermines end-to-end encryption.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic Claude Design 反向工程提示词开源",
+          en: "Anthropic Claude Design Reverse-Engineered Prompts Open-Sourced",
+        },
+        description: {
+          zh: "Claude Design 的反向工程系统提示词在 GitHub 以 MIT 开源，包含20章提示词和14项技能，覆盖内容纪律、美学、无障碍等。",
+          en: "Reverse-engineered Claude Design system prompts open-sourced on GitHub under MIT. 20 prompt chapters and 14 skills covering content discipline, aesthetics, accessibility.",
+        },
+      },
+      {
+        title: {
+          zh: "LlamaIndex 发布 legal-kb 法律文档知识库",
+          en: "LlamaIndex Launches legal-kb Legal Document Knowledge Base",
+        },
+        description: {
+          zh: "基于 Index v2 的法律文档知识库参考应用，采用 Retrieval Harness 模式赋予 Agent 检索、查找、阅读和 grep 工具。",
+          en: "Legal document knowledge base reference app built on Index v2. Uses Retrieval Harness pattern with retrieve, find, read, and grep tools.",
+        },
+      },
+      {
+        title: {
+          zh: "父亲为自闭症儿子开发沟通应用意外创办公司",
+          en: "Father Accidentally Starts Company Building Communication App for Autistic Son",
+        },
+        description: {
+          zh: "一位父亲为患有自闭症的非语言儿子开发沟通应用，在言语治疗室展示时所有非语言儿童的母亲都流泪。他意外发现产品市场匹配，决定腾出时间让更多孩子能用上。",
+          en: "A father builds a communication app for his non-verbal autistic son. When shown in speech therapy, every mother of a non-verbal child bursts into tears. He accidentally finds product-market fit.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-05-hot",
     date: "2026-07-05",
     title: {
