@@ -31,6 +31,233 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-07-hot",
+    date: "2026-07-07",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-07",
+      en: "🔥 Hot Topics · Jul 7, 2026",
+    },
+    summary: {
+      zh: "比利时4-1大胜美国，东道主全部出局；西班牙1-0补时绝杀葡萄牙晋级8强；C罗最后一舞遗憾落幕；多地紧急响应防汛抢险，湖北强对流已致8死1失联；LV被指垄断中国古纹样；19岁大学生立遗嘱将2千万财产给发小；香港黑帮头目垄断工地盒饭年入1200万；韩国股市集体跳水；天水市政府大楼被鉴定为D级危楼；捷豹路虎停售所有国产车型。",
+      en: "Belgium 4-1 USA, all host nations eliminated; Spain 1-0 stoppage time winner vs Portugal; Ronaldo's final World Cup ends in tears; emergency response to severe flooding, 8 dead in Hubei; LV accused of monopolizing Chinese traditional patterns; 19-year-old wills $2.8M to childhood friend; Hong Kong gang lord made millions from box lunch monopoly; Korea stock market crashes; Tianshui government building declared dangerous; Jaguar Land Rover ends China-made model sales.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "比利时4-1大胜美国，东道主全部出局",
+          en: "Belgium 4-1 USA, All Host Nations Eliminated",
+        },
+        description: {
+          zh: "美加墨世界杯1/8决赛，美国队1-4不敌比利时，至此三支东道主球队全部出局。美国门将弗里兹出现致命失误被断球，比利时范纳肯快速跟进打门得分。",
+          en: "World Cup Round of 16: USA loses 1-4 to Belgium, all three host nations eliminated. US goalkeeper Fritz's fatal error led to a goal by Vanaken.",
+        },
+      },
+      {
+        title: {
+          zh: "西班牙1-0补时绝杀葡萄牙晋级8强",
+          en: "Spain 1-0 Stoppage Time Winner vs Portugal",
+        },
+        description: {
+          zh: "世界杯1/8决赛西班牙1-0补时绝杀葡萄牙成功晋级八强。亚马尔赛后主动拥抱C罗，葡萄牙主帅马丁内斯宣布离任。",
+          en: "Spain beats Portugal 1-0 with stoppage time winner. Yamal embraces Ronaldo post-match; Portugal coach Martinez resigns.",
+        },
+      },
+      {
+        title: {
+          zh: "C罗最后一舞遗憾落幕",
+          en: "Ronaldo's Final World Cup Ends in Tears",
+        },
+        description: {
+          zh: "41岁的C罗完成职业生涯最后一届世界杯征程，赛后含泪绕场告别球迷。C罗表示为葡萄牙夺得3冠已问心无愧。",
+          en: "41-year-old Ronaldo ends his 6th and final World Cup journey in tears. 'I gave my all,' says Portugal's captain.",
+        },
+      },
+      {
+        title: {
+          zh: "多地紧急响应全力防汛抢险",
+          en: "Emergency Flood Response Nationwide",
+        },
+        description: {
+          zh: "受台风影响多地强降雨，湖北强对流天气已致8死1失联，广西一家三口被洪水浸泡10小时获救，多地齐发预警全力抢险。",
+          en: "Severe flooding nationwide: 8 dead in Hubei; 3 rescued after 10 hours trapped in floodwaters in Guangxi. Multiple warnings issued.",
+        },
+      },
+      {
+        title: {
+          zh: "LV被指垄断中国古纹样",
+          en: "LV Accused of Monopolizing Chinese Patterns",
+        },
+        description: {
+          zh: "LV起诉茉莉奶白侵权商标案一审判决赔1030万，争议焦点在于LV图案被指模仿唐代宝相花、柿蒂纹等中国传统纹样，引发文化符号垄断质疑。",
+          en: "LV wins trademark case against tea brand, awarded $1.4M. Controversy: LV patterns resemble Tang Dynasty traditional Chinese motifs, sparking cultural monopoly debate.",
+        },
+      },
+      {
+        title: {
+          zh: "19岁大学生立遗嘱将2千万财产给发小",
+          en: "19-Year-Old Wills $2.8M to Childhood Friend",
+        },
+        description: {
+          zh: "19岁大学生李同学因父母重组家庭关系疏离，通过中华遗嘱库订立遗嘱，将名下约2000万元财产全部遗赠给发小。",
+          en: "A 19-year-old college student, estranged from remarried parents, wills his approximately $2.8M entirely to his childhood friend.",
+        },
+      },
+      {
+        title: {
+          zh: "香港黑帮头目垄断工地盒饭年入1200万",
+          en: "HK Gang Lord Made Millions from Box Lunch Monopoly",
+        },
+        description: {
+          zh: "香港警方代号利针行动捣毁以垄断工地盒饭牟利的黑社会团伙，年营业额1200万港元，以暴力手段驱逐合规商贩，125人被捕。",
+          en: "Hong Kong police 'Operation Needle' busts a gang monopolizing construction site box lunches, earning HK$12M annually. 125 arrested.",
+        },
+      },
+      {
+        title: { zh: "韩国股市集体跳水", en: "Korea Stock Market Crashes" },
+        description: {
+          zh: "7月7日韩国股市集体跳水，KOSPI综指跌3.89%，三星电子跌超6%、SK海力士跌超3%。日经225指数跌0.37%。",
+          en: "Korea's stock market plunges on Jul 7: KOSPI down 3.89%, Samsung -6%, SK Hynix -3%. Japan's Nikkei 225 down 0.37%.",
+        },
+      },
+      {
+        title: {
+          zh: "天水市政府大楼被鉴定为D级危楼",
+          en: "Tianshui Government Building Declared Dangerous",
+        },
+        description: {
+          zh: "甘肃天水市政府大楼因地基下沉、墙体倾斜开裂被鉴定为D级危楼，市政府决定于7月9日搬迁至建筑科技中心办公。",
+          en: "Tianshui city government building in Gansu declared D-grade dangerous due to foundation sinking and wall cracks. Relocation scheduled for Jul 9.",
+        },
+      },
+      {
+        title: {
+          zh: "捷豹路虎停售所有国产车型",
+          en: "Jaguar Land Rover Ends China-Made Model Sales",
+        },
+        description: {
+          zh: "捷豹路虎中国经销商停止进购所有国产车型，奇瑞捷豹路虎国产车正式退出市场。国产车型十年间单车平均亏损约3万元。",
+          en: "JLR China dealers halt all domestically-produced model purchases. JV models lost ~$4,200 per car over a decade.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-07",
+    date: "2026-07-07",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-07",
+      en: "🤖 AI Daily · Jul 7, 2026",
+    },
+    summary: {
+      zh: "通义实验室发布Fun-ASR-Realtime语音识别模型，覆盖30种语言16种方言；xAI为Grok Voice新增21个旗舰语音；Claude Code v2.1.202新增动态工作流设置；2026年科技公司AI裁员浪潮持续；Meta被曝外包人员伪装未成年人诱导AI；SK海力士启动280亿美元美股上市；阿尔伯塔省用Claude Code审查4.66亿行代码；AI颠覆初级程序员就业市场；SGLang集成DSpark推测解码；OfficeCLI开源AI智能体Office套件。",
+      en: "Alibaba releases Fun-ASR-Realtime covering 30 languages & 16 dialects; xAI adds 21 flagship voices to Grok Voice; Claude Code v2.1.202 adds dynamic workflow sizing; 2026 tech AI layoffs continue; Meta reportedly used contractors posing as minors to bait rival AI; SK Hynix launches $28B US IPO; Alberta uses Claude Code to review 466M lines of code; AI disrupts junior developer job market; SGLang integrates DSpark speculative decoding; OfficeCLI open-source Office suite for AI agents.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Fun-ASR-Realtime 发布：30种语言16种方言识别",
+          en: "Fun-ASR-Realtime: 30 Languages, 16 Dialects",
+        },
+        description: {
+          zh: "通义实验室发布Fun-ASR-Realtime实时语音识别模型，单模型覆盖30种语言及16种方言，针对东亚、东南亚地区重点优化，方言识别语义准确率达87.8%。",
+          en: "Alibaba's Tongyi Lab releases Fun-ASR-Realtime, a single model covering 30 languages and 16 dialects with 87.8% semantic accuracy for dialect recognition.",
+        },
+      },
+      {
+        title: {
+          zh: "OfficeCLI：专为AI智能体设计的开源Office套件",
+          en: "OfficeCLI: Open-Source Office Suite for AI Agents",
+        },
+        description: {
+          zh: "OfficeCLI以单二进制文件运行，无需安装Office，可将.docx/.xlsx/.pptx转换为HTML或Markdown，内置HTML渲染引擎。",
+          en: "OfficeCLI runs as a single binary with zero dependencies, converts Office files to HTML/Markdown, designed specifically for AI agents.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI为Grok Voice新增21个旗舰语音",
+          en: "xAI Adds 21 Flagship Voices to Grok Voice",
+        },
+        description: {
+          zh: "xAI发布21个新旗舰语音，加入原有的5个语音，所有新语音均支持多语言，已接入Voice Agent API和Text to Speech API。",
+          en: "xAI launches 21 new flagship multilingual voices for Grok Voice, integrated with Voice Agent API and Text to Speech API.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.202 发布",
+          en: "Claude Code v2.1.202 Released",
+        },
+        description: {
+          zh: "Claude Code v2.1.202 在/config中新增Dynamic workflow size设置，可控制动态工作流的agent数量规模（小/中/大）。",
+          en: "Claude Code v2.1.202 adds Dynamic workflow size setting in /config to control agent count (small/medium/large).",
+        },
+      },
+      {
+        title: {
+          zh: "SGLang 集成 DSpark 推测解码",
+          en: "SGLang Integrates DSpark Speculative Decoding",
+        },
+        description: {
+          zh: "SGLang团队将DSpark推测解码算法集成到开源推理引擎中，采用半自回归块起草器与置信度头动态分配可变验证长度，提高推理效率。",
+          en: "SGLang integrates DSpark speculative decoding with semi-autoregressive block drafters and confidence-based variable verification length for efficient inference.",
+        },
+      },
+      {
+        title: {
+          zh: "2026年科技公司AI裁员名单持续扩大",
+          en: "2026 Tech AI Layoffs Continue to Mount",
+        },
+        description: {
+          zh: "Microsoft裁减约4800人（2.1%），Oracle裁减21000人（13%），GitLab裁减350人（14%），多家公司以投资AI基础设施为由大规模裁员。",
+          en: "Microsoft cuts ~4,800 (2.1%), Oracle cuts 21,000 (13%), GitLab cuts 350 (14%) as companies cite AI infrastructure investment for mass layoffs.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta被曝让外包人员伪装未成年人诱导AI",
+          en: "Meta Used Contractors Posing as Minors to Bait AI",
+        },
+        description: {
+          zh: "据《连线》报道，Meta通过外包公司开展代号Cannes的项目，让数百名外包人员伪装成未成年人，向OpenAI ChatGPT、谷歌Gemini及Character.AI诱导生成敏感内容。",
+          en: "Wired reports Meta's 'Cannes' project used hundreds of contractors posing as minors to bait OpenAI, Google, and Character.AI into generating sensitive content.",
+        },
+      },
+      {
+        title: {
+          zh: "SK海力士启动280亿美元美股上市",
+          en: "SK Hynix Launches $28B US IPO",
+        },
+        description: {
+          zh: "SK海力士启动规模约280亿美元的美股上市计划，将在纳斯达克通过存托凭证发行新股，有望成为史上第二大IPO。",
+          en: "SK Hynix begins ~$28B US IPO on Nasdaq via depositary receipts, potentially the second-largest IPO in history.",
+        },
+      },
+      {
+        title: {
+          zh: "阿尔伯塔省用Claude进行政府系统安全审查",
+          en: "Alberta Uses Claude for Gov't Security Review",
+        },
+        description: {
+          zh: "阿尔伯塔省用Claude Code扫描全部27个省级部门4.66亿行代码，50个智能体20小时内并行审查，发现传统工具遗漏的漏洞并直接生成修复方案。",
+          en: "Alberta uses Claude Code to scan 466M lines of code across 27 departments. 50 agents reviewed in 20 hours, finding previously missed vulnerabilities.",
+        },
+      },
+      {
+        title: {
+          zh: "AI颠覆初级程序员就业市场",
+          en: "AI Disrupts Junior Developer Job Market",
+        },
+        description: {
+          zh: "斯坦福研究显示美国22-25岁软件开发人员就业较2022年峰值下降19%，入门级岗位招聘减少28%，计算机科学毕业生失业率达6.1%。",
+          en: "Stanford study: US software developer employment aged 22-25 down 19% from 2022 peak; entry-level hiring down 28%; CS grad unemployment at 6.1%.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-06-hot",
     date: "2026-07-06",
     title: {
