@@ -31,6 +31,233 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-08-hot",
+    date: "2026-07-08",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-08",
+      en: "🔥 Hot Topics · Jul 8, 2026",
+    },
+    summary: {
+      zh: "世界杯8强出炉；阿根廷3-2惊天逆转埃及，裁判争议引爆舆论；甘肃陇南滑坡致21人遇难；多地强对流天气，江苏因台风巴威紧急停课；中国试射潜射导弹日本抗议；伊朗多地传出爆炸声；300元澳州进口保健品成本仅40元；比利时4-1大胜美国，特朗普电话门风波；四川宜宾5.0级地震连发；瑞士点球胜哥伦比亚晋级8强。",
+      en: "World Cup quarterfinals set; Argentina 3-2 comeback vs Egypt sparks referee controversy; 21 dead in Gansu landslide; severe weather nationwide, Jiangsu suspends classes for Typhoon Bavi; China test-fires submarine missile, Japan protests; explosions reported in Iran; $42 'Australian' supplements cost only $5.50; Belgium 4-1 USA, Trump phone-call scandal; 5.0 earthquake hits Sichuan Yibin; Switzerland beats Colombia on penalties.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: { zh: "世界杯8强全部出炉", en: "World Cup Quarterfinals Set" },
+        description: {
+          zh: "2026美加墨世界杯8强全部出炉：法国、摩洛哥、西班牙、比利时、英格兰、挪威、阿根廷及瑞士。三个东道主球队均止步16强。",
+          en: "World Cup quarterfinals set: France, Morocco, Spain, Belgium, England, Norway, Argentina, Switzerland. All three host nations eliminated in Round of 16.",
+        },
+      },
+      {
+        title: {
+          zh: "阿根廷3-2惊天逆转埃及，裁判争议引爆舆论",
+          en: "Argentina 3-2 Comeback vs Egypt Sparks Referee Controversy",
+        },
+        description: {
+          zh: "阿根廷15分钟连进3球3-2逆转埃及，但埃及2-0领先后进球被吹、点球漏判引发巨大争议。埃及足协正式申诉，球迷吐槽裁判穿阿根廷球衣，两队球迷爆发冲突。",
+          en: "Argentina scores 3 goals in 15 minutes to overturn 0-2 deficit. Egypt's goal disallowed, penalty claims ignored. Egypt files official protest, fans clash.",
+        },
+      },
+      {
+        title: {
+          zh: "甘肃陇南滑坡致21人遇难",
+          en: "21 Dead in Gansu Landslide",
+        },
+        description: {
+          zh: "据央视新闻消息，甘肃陇南发生严重滑坡灾害，已造成21人遇难。救援工作正在进行中。",
+          en: "A severe landslide in Longnan, Gansu has claimed 21 lives. Rescue operations are underway.",
+        },
+      },
+      {
+        title: {
+          zh: "多地强对流天气，江苏因台风巴威紧急停课",
+          en: "Severe Weather: Jiangsu Suspends Classes for Typhoon Bavi",
+        },
+        description: {
+          zh: "台风巴威中心风力达17级以上，预计7月10日影响江苏。江苏紧急通知中小学幼儿园7月9日下午起停课。广西灾后村民含泪面对被洪水冲毁的家园。",
+          en: "Typhoon Bavi with winds of 17+ levels approaches Jiangsu. Schools suspend classes from Jul 9 afternoon. Guangxi villagers mourn homes destroyed by floods.",
+        },
+      },
+      {
+        title: {
+          zh: "中国试射潜射导弹，日本急什么",
+          en: "China Test-Fires Submarine Missile, Japan Protests",
+        },
+        description: {
+          zh: "中国宣布向太平洋公海成功试射潜射战略导弹。日本政府连续发表声明要求中方重新考虑，中方强调此次试射不针对特定国家。",
+          en: "China successfully test-fires a submarine-launched strategic missile into the Pacific. Japan issues two statements demanding reconsideration.",
+        },
+      },
+      {
+        title: {
+          zh: "伊朗多地传出爆炸声",
+          en: "Explosions Reported Across Iran",
+        },
+        description: {
+          zh: "伊朗格什姆岛附近村庄传出6次爆炸声，南部锡里克商业码头和渔业码头被炮弹击中。",
+          en: "Six explosions near Qeshm Island, commercial and fishing docks hit in southern Sirik, Iran.",
+        },
+      },
+      {
+        title: {
+          zh: "300多元澳州进口保健品成本仅40元",
+          en: "$42 'Australian' Supplements Cost Only $5.50",
+        },
+        description: {
+          zh: "浙江公安破获特大跨境保健品虚假经营案，经香港中转贴牌的高价保健品实际成本仅40余元，售价却高达300元以上。",
+          en: "Zhejiang police bust major cross-border health supplement fraud. Products costing ~$5.50 sold for $42+ with fake Australian branding via Hong Kong.",
+        },
+      },
+      {
+        title: {
+          zh: "比利时4-1大胜美国，特朗普电话门风波",
+          en: "Belgium 4-1 USA: Trump Phone-Call Scandal",
+        },
+        description: {
+          zh: "比利时4-1大胜美国。赛前特朗普致电国际足联主席，让本应禁赛的美国球员巴洛贡得以首发，引发比利时震怒，赛后比利时球员嘲讽：我看谁还打电话？",
+          en: "Belgium crushes USA 4-1. Pre-match, Trump called FIFA president to allow suspended US player Balogun to play, sparking outrage. Belgian players mock: 'Who's calling now?'",
+        },
+      },
+      {
+        title: {
+          zh: "四川宜宾发生5.0级地震连发多次",
+          en: "5.0 Earthquake Hits Sichuan Yibin",
+        },
+        description: {
+          zh: "7月8日四川宜宾高县发生5.0级地震，震源深度8公里，成都、重庆等多地有震感，连发多次余震。",
+          en: "A 5.0 magnitude earthquake strikes Yibin, Sichuan at 6:12 AM, depth 8km. Felt in Chengdu and Chongqing with multiple aftershocks.",
+        },
+      },
+      {
+        title: {
+          zh: "瑞士点球胜哥伦比亚搭上8强末班车",
+          en: "Switzerland Beats Colombia on Penalties for Last QF Spot",
+        },
+        description: {
+          zh: "世界杯1/8决赛瑞士0-0战平哥伦比亚后点球4-3获胜，门将科贝尔扑出关键点球，瑞士搭上八强末班车。",
+          en: "Switzerland beats Colombia 4-3 on penalties after 0-0 draw. GK Kobel saves crucial penalty to secure last quarterfinal spot.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-08",
+    date: "2026-07-08",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-08",
+      en: "🤖 AI Daily · Jul 8, 2026",
+    },
+    summary: {
+      zh: "Meta发布Muse Image和Muse Video媒体生成模型；MIRA可玩多人世界模型20FPS实时生成；Rowboat开源本地优先桌面AI助手；Grok Imagine支持15秒视频；Claude Cowork向移动端和网页端开放；中国拟限制外国访问最强AI模型；微软Copilot用自研MAI模型替代OpenAI和Anthropic；苹果研究：单个神经元即可绕过LLM安全对齐；美国首批自主地面车辆在乌克兰参战；YC CEO日部署3.7万行代码引争议。",
+      en: "Meta releases Muse Image & Muse Video generative models; MIRA playable multiplayer world model at 20 FPS; Rowboat open-source local-first desktop AI assistant; Grok Imagine supports 15-second video; Claude Cowork expands to mobile & web; China plans to restrict foreign access to top AI models; Microsoft replaces OpenAI/Anthropic models with in-house MAI; Apple study: single neuron bypasses LLM safety alignment; US autonomous ground vehicles deployed in Ukraine; YC CEO's 37K daily AI code claim sparks controversy.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Meta 发布 Muse Image 和 Muse Video",
+          en: "Meta Releases Muse Image & Muse Video",
+        },
+        description: {
+          zh: "Meta Superintelligence Labs发布首个媒体生成模型Muse Image和Muse Video。Muse Image为目前最先进图像生成模型，能精确遵循指令进行生成和编辑。",
+          en: "Meta Superintelligence Labs debuts Muse Image & Muse Video, its first media generation models. Muse Image is the most advanced image generator with precise instruction following.",
+        },
+      },
+      {
+        title: {
+          zh: "MIRA：可玩多人世界模型，20FPS实时生成",
+          en: "MIRA: Playable Multiplayer World Model at 20 FPS",
+        },
+        description: {
+          zh: "MIRA是基于10k小时机器人数据训练的可玩多人世界模型，能根据按键实时生成游戏画面，帧率达20 FPS，被形容为火箭联盟的梦。",
+          en: "MIRA is a playable multiplayer world model trained on 10K hours of robot data, generating game frames at 20 FPS based on button inputs.",
+        },
+      },
+      {
+        title: {
+          zh: "Rowboat：开源本地优先桌面AI助手",
+          en: "Rowboat: Open-Source Local-First Desktop AI Assistant",
+        },
+        description: {
+          zh: "Rowboat将邮件、会议、Slack等数据索引为知识图谱，提供持久上下文记忆，内置邮件客户端、浏览器、会议记录器和代码模式。",
+          en: "Rowboat indexes emails, meetings, Slack into knowledge graphs with persistent context memory. Built-in email client, browser, meeting recorder & code mode.",
+        },
+      },
+      {
+        title: {
+          zh: "Grok Imagine 更新：支持15秒视频",
+          en: "Grok Imagine Update: 15-Second Video Support",
+        },
+        description: {
+          zh: "xAI的Grok Imagine更新支持生成15秒视频。Elon Musk称质量令人难以置信，用户需更新Grok应用使用。",
+          en: "xAI's Grok Imagine now supports 15-second video generation. Elon Musk says quality is incredible.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Cowork 向移动端和网页端开放",
+          en: "Claude Cowork Expands to Mobile & Web",
+        },
+        description: {
+          zh: "Claude Cowork正在向移动端和网页端开放，会话和文件可跨设备同步。Beta版将首先面向Max用户推出。",
+          en: "Claude Cowork is rolling out to mobile and web with cross-device sync. Beta coming first to Max users in coming weeks.",
+        },
+      },
+      {
+        title: {
+          zh: "中国拟限制外国访问最强AI模型",
+          en: "China Plans to Restrict Foreign Access to Top AI Models",
+        },
+        description: {
+          zh: "中国计划限制外国访问其最强AI模型，与阿里巴巴、字节跳动等企业会谈，拟将先进模型留在中国国内，属出口管制性质。",
+          en: "China plans to restrict foreign access to its most advanced AI models, consulting Alibaba, ByteDance and others. Covers both closed and open-source models.",
+        },
+      },
+      {
+        title: {
+          zh: "微软Copilot用自研MAI模型替代OpenAI和Anthropic",
+          en: "Microsoft Replaces OpenAI/Anthropic with In-House MAI",
+        },
+        description: {
+          zh: "微软为降低支出在Copilot中用自研MAI模型替换OpenAI和Anthropic模型。MAI已在Excel和Outlook中处理每周数万次请求。",
+          en: "Microsoft replaces OpenAI and Anthropic models in Copilot with its own MAI models to cut costs. MAI already handles tens of thousands of weekly requests in Excel and Outlook.",
+        },
+      },
+      {
+        title: {
+          zh: "苹果研究：单个神经元即可绕过LLM安全对齐",
+          en: "Apple: Single Neuron Bypasses LLM Safety Alignment",
+        },
+        description: {
+          zh: "苹果研究发现安全对齐由拒绝神经元和概念神经元调控，在1.7B至70B参数的七个模型中，仅需抑制单个拒绝神经元即可绕过安全对齐。",
+          en: "Apple finds safety alignment is controlled by rejection and concept neurons. Inhibiting just one rejection neuron bypasses safety in models from 1.7B to 70B parameters.",
+        },
+      },
+      {
+        title: {
+          zh: "美国首批自主地面车辆在乌克兰参战",
+          en: "First US Autonomous Ground Vehicles Deployed in Ukraine",
+        },
+        description: {
+          zh: "Forterra公司过去九个月向乌克兰部署超100辆Lancer自主地面车辆，基于Polaris ATV，可携带750公斤货物，汽油动力。",
+          en: "Forterra has deployed 100+ Lancer autonomous ground vehicles to Ukraine over 9 months. Based on Polaris ATV, carrying 750kg of cargo.",
+        },
+      },
+      {
+        title: {
+          zh: "YC CEO日部署3.7万行代码引争议",
+          en: "YC CEO's 37K Daily AI Code Claims Spark Controversy",
+        },
+        description: {
+          zh: "Y Combinator CEO Garry Tan宣称与AI编码代理每天部署37000行代码。开发者审查发现其前端代码大量臃肿低效，引发AI编程质量争议。",
+          en: "YC CEO Garry Tan claims 37K lines of AI-generated code daily. Developer review reveals bloated, inefficient frontend code, sparking quality debate.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-07-hot",
     date: "2026-07-07",
     title: {
