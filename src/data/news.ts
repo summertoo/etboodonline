@@ -31,6 +31,236 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-09-hot",
+    date: "2026-07-09",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-09",
+      en: "🔥 Hot Topics · Jul 9, 2026",
+    },
+    summary: {
+      zh: "超强台风巴威体型覆盖9个浙江，可能正面登陆；新华社批国足造谣乱象；32岁程序员加班猝死家属索赔10万；机甲平台驶入洪水校园救援6000名学生；村民在养猪场旁挖出1400年前佛首；工人坠亡近百万元赔偿金无人继承；丈夫脱险后游1公里返回寻找被困妻子；韦东奕获国家自然科学奖二等奖；四川宜宾再发4.8级地震；长鑫科技7月16日科创板申购。",
+      en: "Super Typhoon Bavi covers 9× Zhejiang's area, poised to make landfall; Xinhua criticizes false rumors about national football team; 32-year-old programmer dies from overwork, family seeks $14K compensation; military vehicles rescue 6,000 trapped students in flooded campus; 1,400-year-old Buddha head unearthed near pig farm; $140K death compensation unclaimed; man swims 1km back to find wife after escaping flood; Wei Dongyi wins National Natural Science Award; 4.8 quake hits Sichuan Yibin; CXMT starts IPO subscription on Jul 16.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "超强台风巴威体型可覆盖9个浙江",
+          en: "Super Typhoon Bavi Could Cover 9× Zhejiang's Area",
+        },
+        description: {
+          zh: "台风巴威体型巨大几乎可覆盖9个浙江，已减弱为16级，预计7月11日登陆浙闽沿海。杭州主要影响时段在10-12日，最大风力可达12级以上。江苏已通知中小学停课。",
+          en: "Super Typhoon Bavi, large enough to cover 9 Zhejiang provinces, downgraded to category 16. Expected to hit Zhejiang-Fujian coast Jul 11. Hangzhou braces for winds up to level 12+. Jiangsu schools suspend classes.",
+        },
+      },
+      {
+        title: {
+          zh: "新华社：国足成绩再不好也不能造谣",
+          en: "Xinhua: Don't Spread Rumors About National Football Team",
+        },
+        description: {
+          zh: "针对佛得角邀国足踢友谊赛被婉拒的传闻，中国足协辟谣称未收到正式函件。新华社评论：球迷批评和键盘侠造谣有本质区别。",
+          en: "China Football Association denies rumor that Cape Verde's friendly invitation was rejected. Xinhua: criticism and rumor-mongering are fundamentally different.",
+        },
+      },
+      {
+        title: {
+          zh: "32岁程序员加班猝死，家属索赔10万",
+          en: "32-Year-Old Programmer Dies from Overwork, Family Sues",
+        },
+        description: {
+          zh: "广州32岁程序员加班猝死案在广州开庭审理，家属起诉公司主张10万元精神赔偿。律师表示这是多方商议的结果。",
+          en: "Court hears case of a 32-year-old programmer who died from overwork in Guangzhou. Family seeks $14K in compensation.",
+        },
+      },
+      {
+        title: {
+          zh: "机甲平台驶入洪水校园，6000名学生沸腾",
+          en: "Military Vehicles Rescue 6,000 Students in Flooded Campus",
+        },
+        description: {
+          zh: "广西贵港西江教育园区因洪水致6000余名学生被困，中国安能救援队采用模块化动力舟桥搭建水上通道，单次可转运500人，学生目睹救援平台时欢呼沸腾。",
+          en: "China Aneng rescue team uses modular bridges to rescue 6,000+ students trapped by floods in Guangxi. Students cheer as military vehicles arrive.",
+        },
+      },
+      {
+        title: {
+          zh: "村民在养猪场旁挖出1400年前佛首",
+          en: "1,400-Year-Old Buddha Head Unearthed Near Pig Farm",
+        },
+        description: {
+          zh: "山西汾阳村民在地里挖到一颗佛首，已无偿交给博物馆。经鉴定为北魏时期佛立像的佛首，距今至少有1400年。",
+          en: "A farmer in Shanxi unearthed a Buddha head dating back to the Northern Wei Dynasty (over 1,400 years). Donated to the local museum.",
+        },
+      },
+      {
+        title: {
+          zh: "工人坠亡近百万元赔偿金无人继承",
+          en: "$140K Death Compensation Unclaimed After Worker's Fall",
+        },
+        description: {
+          zh: "四川一钢筋工高处坠落死亡，因无配偶子女、父亲去世、母亲姐姐杳无音讯，近百万元死亡赔偿金无人可领取。",
+          en: "A Sichuan construction worker dies in fall with no legal heirs. Nearly $140K in death compensation sits unclaimed with no beneficiaries found.",
+        },
+      },
+      {
+        title: {
+          zh: "丈夫脱险后游1公里返回寻找被困妻子",
+          en: "Man Swims 1km Back to Find Wife After Escaping Flood",
+        },
+        description: {
+          zh: "广西横州一男子脱险后因担忧被困妻子，在湍急水流中游泳一公里返回寻找。妻子回应称丈夫不放心她的安全而冒险返回。",
+          en: "After escaping Guangxi floods, a man swims 1km through raging currents to return to his trapped wife, unable to bear leaving her behind.",
+        },
+      },
+      {
+        title: {
+          zh: "韦东奕获国家自然科学奖二等奖",
+          en: "Wei Dongyi Wins National Natural Science Award",
+        },
+        description: {
+          zh: "北大韦东奕与章志飞教授合作的流动转捩机理数学研究项目获2025年度国家自然科学奖二等奖，为湍流研究提供新数学框架。",
+          en: "Peking University's Wei Dongyi and Prof. Zhang Zhifei win 2nd prize for mathematical research on flow transition mechanisms, advancing turbulence theory.",
+        },
+      },
+      {
+        title: {
+          zh: "四川宜宾再发4.8级地震",
+          en: "4.8 Earthquake Strikes Sichuan Yibin Again",
+        },
+        description: {
+          zh: "7月9日四川宜宾高县发生4.8级地震，震源深度6公里。此前该地区已发生5.0级地震及多次余震。",
+          en: "A 4.8 magnitude earthquake hits Yibin, Sichuan on Jul 9 at depth 6km. Follows yesterday's 5.0 quake and multiple aftershocks.",
+        },
+      },
+      {
+        title: {
+          zh: "长鑫科技7月16日开启科创板新股申购",
+          en: "CXMT Starts STAR Market IPO Subscription Jul 16",
+        },
+        description: {
+          zh: "中国存储巨头长鑫科技披露科创板上市招股意向书，网下和网上申购日均为7月16日，代码688825。",
+          en: "Chinese memory chip giant CXMT (ChangXin Memory Technologies) discloses STAR Market IPO prospectus. Subscription date: Jul 16, code 688825.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-09",
+    date: "2026-07-09",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-09",
+      en: "🤖 AI Daily · Jul 9, 2026",
+    },
+    summary: {
+      zh: "Grok 4.5发布，Cursor与SpaceXAI联合训练聚焦编程与智能体；OpenAI发布GPT-Live全双工语音模型；美国商务部批准GPT-5.6 Sol大规模发布；Anthropic利润超10亿美元秘密提交IPO；GitHub AI代理提示词注入漏洞GitLost可泄露私有仓库；加拿大BC省拟起诉OpenAI未上报暴力对话致校园枪击；蚂蚁集团开源LingBot-Vision边界中心视觉模型；工信部发布Claude Code后门安全风险提示；Replit推出社区档案与力量排名；Claude Code v2.1.205发布。",
+      en: "Grok 4.5 released by Cursor & SpaceXAI for coding & agents; OpenAI launches GPT-Live full-duplex voice model; US Commerce Dept approves GPT-5.6 Sol mass release; Anthropic profits top $1B, files secret IPO; GitLost prompt injection vulnerability leaks GitHub private repos; British Columbia to sue OpenAI over unreported violent chat leading to school shooting; Ant Group open-sources LingBot-Vision; China MIIT warns of Claude Code backdoor; Replit launches community profiles & power rankings; Claude Code v2.1.205 released.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Grok 4.5 发布：Cursor与SpaceXAI联合训练",
+          en: "Grok 4.5 Released: Trained by Cursor & SpaceXAI",
+        },
+        description: {
+          zh: "Cursor与SpaceXAI联合训练混合专家模型Grok 4.5，在数万亿tokens用户交互数据上训练，聚焦软件工程、数据科学、金融、法律等领域，在数万块NVIDIA GB300 GPU上完成训练。",
+          en: "Cursor & SpaceXAI co-train Grok 4.5 MoE model on trillions of tokens of user interaction data, focused on software engineering, data science, finance & law. Trained on tens of thousands of NVIDIA GB300 GPUs.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布 GPT-Live 全双工语音模型",
+          en: "OpenAI Launches GPT-Live Full-Duplex Voice Model",
+        },
+        description: {
+          zh: "GPT-Live基于全双工架构实现同时听与说，支持自然打断与实时回馈，每秒多次判断是否说话、倾听、打断或调用工具，将复杂任务委托给后台GPT-5.5。",
+          en: "GPT-Live features full-duplex architecture for simultaneous listening and speaking, supporting natural interruptions and real-time feedback. Delegates complex tasks to background GPT-5.5.",
+        },
+      },
+      {
+        title: {
+          zh: "美国商务部批准GPT-5.6 Sol大规模发布",
+          en: "US Commerce Dept Approves GPT-5.6 Sol Mass Release",
+        },
+        description: {
+          zh: "美国商务部批准OpenAI大规模发布GPT-5.6。三版本Sol、Terra和Luna面向公众推出，此前因国家安全考量要求分阶段发布。",
+          en: "US Commerce Department approves mass release of GPT-5.6. Three variants - Sol, Terra, and Luna - launch to the public after national security review.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic利润超10亿美元，秘密提交IPO",
+          en: "Anthropic Profits Top $1B, Files Secret IPO",
+        },
+        description: {
+          zh: "Anthropic第三季度利润预计超10亿美元，已于6月1日秘密提交IPO申请，有望成为规模最大AI实验室IPO。其与OpenAI的ARR合计接近1000亿美元。",
+          en: "Anthropic expects Q3 profits over $1B, filed confidential IPO on Jun 1. Could become largest AI lab IPO. Combined ARR with OpenAI approaching $100B.",
+        },
+      },
+      {
+        title: {
+          zh: "GitLost：GitHub AI代理提示词注入漏洞",
+          en: "GitLost: Prompt Injection Leaks GitHub Private Repos",
+        },
+        description: {
+          zh: "Noma Labs在GitHub Agentic Workflows中发现严重提示词注入漏洞，未认证攻击者通过公共仓库中嵌有恶意指令的Issue即可诱骗AI代理泄露私有仓库内容。",
+          en: "Noma Labs discovers critical prompt injection in GitHub Agentic Workflows. Unauthenticated attackers can trick AI agents into leaking private repos via malicious Issues.",
+        },
+      },
+      {
+        title: {
+          zh: "加拿大BC省拟起诉OpenAI未上报暴力对话",
+          en: "British Columbia to Sue OpenAI Over Unreported Violent Chat",
+        },
+        description: {
+          zh: "加拿大不列颠哥伦比亚省将起诉OpenAI，指控其未向执法部门上报一名ChatGPT用户封禁前的暴力对话内容，该用户随后制造校园枪击案致8人死亡。",
+          en: "British Columbia plans to sue OpenAI for failing to report violent ChatGPT conversations of a user later responsible for a school shooting that killed 8.",
+        },
+      },
+      {
+        title: {
+          zh: "蚂蚁集团开源LingBot-Vision边界中心视觉模型",
+          en: "Ant Group Open-Sources LingBot-Vision",
+        },
+        description: {
+          zh: "蚂蚁集团旗下Robbyant开源LingBot-Vision，1.1B参数自监督视觉Transformer，专为密集空间感知设计，采用掩膜边界建模训练。",
+          en: "Ant Group's Robbyant open-sources LingBot-Vision, a 1.1B parameter self-supervised ViT for dense spatial perception using masked boundary modeling.",
+        },
+      },
+      {
+        title: {
+          zh: "工信部发布Claude Code后门安全风险提示",
+          en: "China MIIT Warns of Claude Code Backdoor Risk",
+        },
+        description: {
+          zh: "工信部发布风险提示指出Claude Code 2.1.91至2.1.196版本内置监控机制，未经过用户同意即向远程服务器回传地域、身份标识等敏感信息。",
+          en: "China's MIIT warns Claude Code v2.1.91-2.1.196 has built-in surveillance that sends user location and identity data to remote servers without consent.",
+        },
+      },
+      {
+        title: {
+          zh: "Replit推出社区档案与力量排名",
+          en: "Replit Launches Community Profiles & Power Rankings",
+        },
+        description: {
+          zh: "Replit上线社区档案功能，展示智能体使用和检查点活跃度图表，同时推出面向专业用户的Replit力量排名。",
+          en: "Replit launches community profiles showing agent usage and checkpoint activity charts, plus Power Rankings for professional users.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.205 发布",
+          en: "Claude Code v2.1.205 Released",
+        },
+        description: {
+          zh: "Claude Code v2.1.205修复多项bug，包括--json-schema在schema无效时静默输出非结构化结果、Windows下工作树删除误删文件等。",
+          en: "Claude Code v2.1.205 fixes multiple bugs including silent unstructured output for invalid --json-schema, and Windows working tree deletion issues.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-08-hot",
     date: "2026-07-08",
     title: {
