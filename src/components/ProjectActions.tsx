@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import ProjectCommentModal from "@/components/ProjectCommentModal";
 import {
   fetchProjectComments,
@@ -9,6 +10,7 @@ import {
   type ProjectCommentRecord,
   type ProjectSocialStat,
 } from "@/lib/social";
+import { useLang } from "./LangProvider";
 
 interface ProjectActionsProps {
   projectId: string;
@@ -16,6 +18,7 @@ interface ProjectActionsProps {
   onRequireLogin?: () => void;
   isLoggedIn: boolean;
   projectTitle?: string;
+  projectUrl?: string;
 }
 
 export default function ProjectActions({
@@ -24,6 +27,7 @@ export default function ProjectActions({
   onRequireLogin,
   isLoggedIn,
   projectTitle = "Project",
+  projectUrl,
 }: ProjectActionsProps) {
   const [stat, setStat] = useState<ProjectSocialStat>(
     initialStat || {
@@ -37,11 +41,33 @@ export default function ProjectActions({
   const [loading, setLoading] = useState<"like" | "favorite" | null>(null);
   const [commentOpen, setCommentOpen] = useState(false);
   const [commentCount, setCommentCount] = useState(0);
+  const [showShareMenu, setShowShareMenu] = useState(false);
+  const [shareMenuPos, setShareMenuPos] = useState({ top: 0, right: 0 });
+  const [copied, setCopied] = useState(false);
+  const shareRef = useRef<HTMLDivElement>(null);
+  const shareBtnRef = useRef<HTMLDivElement>(null);
+  const { t } = useLang();
 
   useEffect(() => {
     if (!initialStat) return;
     setStat(initialStat);
   }, [initialStat]);
+
+  useEffect(() => {
+    if (!showShareMenu) return;
+    function handleClickOutside(e: MouseEvent) {
+      if (
+        shareBtnRef.current &&
+        !shareBtnRef.current.contains(e.target as Node) &&
+        shareRef.current &&
+        !shareRef.current.contains(e.target as Node)
+      ) {
+        setShowShareMenu(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [showShareMenu]);
 
   useEffect(() => {
     fetchProjectComments(projectId)
@@ -91,15 +117,41 @@ export default function ProjectActions({
     }
   }
 
-  function handleShare() {
-    const shareUrl =
+  function getFullUrl(): string {
+    const base =
       typeof window !== "undefined"
         ? window.location.origin
         : "https://www.etboodonline.com";
-    const projectUrl = `${shareUrl}/project`;
-    const text = `Check out ${projectTitle} on ZD Tech`;
-    const xUrl = `https://x.com/intent/post?text=${encodeURIComponent(text)}&url=${encodeURIComponent(projectUrl)}`;
+    if (projectUrl?.startsWith("http")) return projectUrl;
+    if (projectUrl?.startsWith("/")) return `${base}${projectUrl}`;
+    return `${base}/project`;
+  }
+
+  function handleShareToX() {
+    const fullUrl = getFullUrl();
+    const text = `${t("share.tryText")} ${projectTitle}!`;
+    const xUrl = `https://x.com/intent/post?text=${encodeURIComponent(text)}&url=${encodeURIComponent(fullUrl)}`;
     window.open(xUrl, "_blank", "noopener,noreferrer");
+    setShowShareMenu(false);
+  }
+
+  async function handleCopyLink() {
+    const fullUrl = getFullUrl();
+    try {
+      await navigator.clipboard.writeText(fullUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = fullUrl;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+    setShowShareMenu(false);
   }
 
   function ActionIcon({
@@ -129,7 +181,8 @@ export default function ProjectActions({
         className={`inline-flex h-9 w-9 items-center justify-center rounded-full border shadow-sm backdrop-blur transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 ${
           active
             ? colorClass
-            : baseClass || "border-slate-300/80 bg-slate-800 text-white hover:bg-slate-700"
+            : baseClass ||
+              "border-slate-300/80 bg-slate-800 text-white hover:bg-slate-700"
         }`}
       >
         {children}
@@ -195,7 +248,13 @@ export default function ProjectActions({
             }}
             label="Comment"
           >
-            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <svg
+              viewBox="0 0 24 24"
+              className="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+            >
               <path d="M7 17.25 3.75 20V6.75A2.25 2.25 0 0 1 6 4.5h12a2.25 2.25 0 0 1 2.25 2.25v8.5A2.25 2.25 0 0 1 18 17.5H7Z" />
             </svg>
           </ActionIcon>
@@ -204,18 +263,76 @@ export default function ProjectActions({
           </span>
         </div>
 
-        <ActionIcon
-          colorClass="border-violet-200 bg-violet-50 text-violet-500"
-          baseClass="border-slate-300/80 bg-slate-800 text-white hover:bg-violet-700"
-          onClick={handleShare}
-          label="Share"
-        >
-          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8">
-            <path d="M14.5 5.25h4.25V9.5" />
-            <path d="m10.25 13.75 8.5-8.5" />
-            <path d="M19.5 13v4.75A1.75 1.75 0 0 1 17.75 19.5H6.25A1.75 1.75 0 0 1 4.5 17.75V6.25A1.75 1.75 0 0 1 6.25 4.5H11" />
-          </svg>
-        </ActionIcon>
+        <div ref={shareBtnRef}>
+          <ActionIcon
+            colorClass="border-violet-200 bg-violet-50 text-violet-500"
+            baseClass="border-slate-300/80 bg-slate-800 text-white hover:bg-violet-700"
+            onClick={() => {
+              if (shareBtnRef.current) {
+                const rect = shareBtnRef.current.getBoundingClientRect();
+                setShareMenuPos({
+                  top: rect.bottom + 4,
+                  right: window.innerWidth - rect.right,
+                });
+              }
+              setShowShareMenu((v) => !v);
+            }}
+            label="Share"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+            >
+              <path d="M14.5 5.25h4.25V9.5" />
+              <path d="m10.25 13.75 8.5-8.5" />
+              <path d="M19.5 13v4.75A1.75 1.75 0 0 1 17.75 19.5H6.25A1.75 1.75 0 0 1 4.5 17.75V6.25A1.75 1.75 0 0 1 6.25 4.5H11" />
+            </svg>
+          </ActionIcon>
+          {showShareMenu &&
+            createPortal(
+              <div
+                ref={shareRef}
+                className="fixed z-[9999] w-44 rounded-xl border border-slate-200 bg-white py-1 shadow-xl"
+                style={{ top: shareMenuPos.top, right: shareMenuPos.right }}
+              >
+                <button
+                  onClick={handleShareToX}
+                  className="flex w-full items-center gap-2 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4"
+                    fill="currentColor"
+                  >
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                  {t("share.shareToX")}
+                </button>
+                <button
+                  onClick={handleCopyLink}
+                  className="flex w-full items-center gap-2 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                  >
+                    <path d="M15.75 6.75 18.25 9 15.75 11.25" />
+                    <path d="M8.25 17.25 5.75 15 8.25 12.75" />
+                    <path d="m9.25 14.75 5.5-5.5" />
+                    <path d="M10.5 3.75h7.75A1.75 1.75 0 0 1 20 5.5v13a1.75 1.75 0 0 1-1.75 1.75H5.75A1.75 1.75 0 0 1 4 18.5v-9A1.75 1.75 0 0 1 5.75 7.75H10" />
+                  </svg>
+                  {copied ? t("share.copied") : t("share.copyLink")}
+                </button>
+              </div>,
+              document.body,
+            )}
+        </div>
       </div>
 
       <ProjectCommentModal

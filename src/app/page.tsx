@@ -176,6 +176,7 @@ function ProjectCard({
               <ProjectActions
                 projectId={id}
                 projectTitle={displayTitle}
+                projectUrl={liveUrl}
                 initialStat={socialStat}
                 isLoggedIn={isLoggedIn}
                 onRequireLogin={onRequireLogin}
@@ -298,6 +299,7 @@ function GameCard({
               <ProjectActions
                 projectId={id}
                 projectTitle={title}
+                projectUrl={liveUrl}
                 initialStat={socialStat}
                 isLoggedIn={isLoggedIn}
                 onRequireLogin={onRequireLogin}

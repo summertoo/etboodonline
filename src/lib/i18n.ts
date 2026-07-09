@@ -223,6 +223,12 @@ export const translations: Record<Lang, Record<string, string>> = {
     // Novels
     "novels.read": "Read →",
 
+    // Share
+    "share.tryText": "Come try",
+    "share.shareToX": "Share to X",
+    "share.copyLink": "Copy Link",
+    "share.copied": "Copied!",
+
     // OPC Network
     "opc.title": "🌐 OPC Network",
     "opc.subtitle": "Open Person Company collaborative network projects.",
@@ -473,6 +479,12 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Novels
     "novels.read": "阅读 →",
+
+    // Share
+    "share.tryText": "快来体验",
+    "share.shareToX": "分享到 X",
+    "share.copyLink": "复制链接",
+    "share.copied": "已复制！",
 
     // OPC Network
     "opc.title": "🌐 开源一人公司（OPC）协作网络",

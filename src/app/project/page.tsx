@@ -386,6 +386,7 @@ export default function ProjectPage() {
                           projectTitle={
                             project.title || t(project.titleKey || "")
                           }
+                          projectUrl={project.liveUrl}
                           initialStat={socialStats[project.id]}
                           isLoggedIn={isLoggedIn}
                           onRequireLogin={() => setAuthOpen(true)}
