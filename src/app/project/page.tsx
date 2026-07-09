@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
 import AuthModal from "@/components/AuthModal";
 import ProjectActions from "@/components/ProjectActions";
+import { HelpDialog } from "@/components/HelpDialog";
 import TrackedProjectButton from "@/components/TrackedProjectButton";
 import {
   projects,
@@ -228,6 +229,7 @@ export default function ProjectPage() {
             </a>
           </Button>
         )}
+        {p.helpUrl && <HelpDialog projectId={p.id} />}
       </div>
     );
   };

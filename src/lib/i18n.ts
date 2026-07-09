@@ -39,6 +39,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dapps.title": "🚀 DApps & Projects",
     "dapps.subtitle": "Decentralized applications built on Sui Network.",
     "dapps.visit": "Visit",
+    "dapps.help": "Help",
     "dapps.github": "GitHub",
 
     // Web Games
@@ -200,6 +201,7 @@ export const translations: Record<Lang, Record<string, string>> = {
       "A Decentralized Check-In Triggered Timed Transfer DApp On Sui Network",
     "dapp.write3Desc":
       "A platform for novel authors to upload novels on Sui blockchain.",
+    "dapp.charactertoolDesc": "Novel Creation Toolkit Series",
 
     // Open Source
     "os.suiBP": "Sui Best Practices",
@@ -211,6 +213,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dapp.miniSoccer": "Mini Soccer",
     "dapp.suiWrite3": "Sui Write3",
     "dapp.handBattle": "Hand Battle",
+    "dapp.charactertool": "Character Builder",
 
     // Articles
     "articles.title": "📝 Articles & Tutorials",
@@ -301,6 +304,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dapps.title": "🚀 DApp 和项目",
     "dapps.subtitle": "基于 Sui 网络构建的去中心化应用。",
     "dapps.visit": "访问",
+    "dapps.help": "帮助",
     "dapps.github": "GitHub",
 
     // Web Games
@@ -449,6 +453,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     // DApp descriptions
     "dapp.ruokDesc": "基于 Sui 网络的去中心化签到触发定时转账 DApp",
     "dapp.write3Desc": "基于 Sui 区块链的小说创作与上传平台。",
+    "dapp.charactertoolDesc": "小说创作工具集系列",
 
     // Open Source
     "os.suiBP": "Sui 最佳实践",
@@ -459,6 +464,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dapp.miniSoccer": "Mini Soccer",
     "dapp.suiWrite3": "Sui Write3",
     "dapp.handBattle": "Hand Battle",
+    "dapp.charactertool": "角色设定工具",
 
     // Articles
     "articles.title": "📝 技术文章",

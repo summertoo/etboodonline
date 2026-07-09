@@ -12,6 +12,7 @@ import Link from "next/link";
 import FeedbackForm from "@/components/FeedbackForm";
 import AuthModal from "@/components/AuthModal";
 import ProjectActions from "@/components/ProjectActions";
+import { HelpDialog } from "@/components/HelpDialog";
 import SiteUpdateNotice from "@/components/SiteUpdateNotice";
 import TrackedProjectButton from "@/components/TrackedProjectButton";
 import { fetchProjectSocialStats, type ProjectSocialStat } from "@/lib/social";
@@ -69,6 +70,7 @@ function ProjectCard({
   logoUrl,
   liveUrl,
   githubUrl,
+  helpUrl,
   status,
   index,
   t,
@@ -84,6 +86,7 @@ function ProjectCard({
   logoUrl: string;
   liveUrl?: string;
   githubUrl?: string;
+  helpUrl?: string;
   status?: "live" | "coming" | "new";
   index: number;
   t: (k: string) => string;
@@ -168,6 +171,7 @@ function ProjectCard({
                     </a>
                   </Button>
                 )}
+                {helpUrl && <HelpDialog projectId={id} />}
               </div>
               <ProjectActions
                 projectId={id}
@@ -616,6 +620,7 @@ export default function Homepage() {
                 logoUrl={dapp.logoUrl}
                 liveUrl={dapp.liveUrl}
                 githubUrl={dapp.githubUrl}
+                helpUrl={dapp.helpUrl}
                 status={dapp.status}
                 index={i}
                 t={t}

@@ -22,6 +22,7 @@ export interface Project {
   logoUrl: string;
   liveUrl?: string;
   githubUrl?: string;
+  helpUrl?: string;
   platformLabel?: string;
   publishedAt?: string;
   tags?: ProjectTag[];
@@ -249,6 +250,17 @@ export const projects: Project[] = [
     status: "coming",
     logoUrl: "/avatars/sui-write3.png",
     githubUrl: "https://github.com/etboodXJ/SuiWrite3",
+  },
+  {
+    id: "dapp-charactertool",
+    title: "Character Builder",
+    titleKey: "dapp.charactertool",
+    descKey: "dapp.charactertoolDesc",
+    category: "dapp",
+    status: "live",
+    logoUrl: "/avatars/webtool.jpg",
+    liveUrl: "/webtool/index.html",
+    helpUrl: "#guide",
   },
   {
     id: "opc-hub",
