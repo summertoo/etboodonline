@@ -202,6 +202,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dapp.write3Desc":
       "A platform for novel authors to upload novels on Sui blockchain.",
     "dapp.charactertoolDesc": "Novel Creation Toolkit Series",
+    "dapp.collabaiDesc": "Novel Creation Collab AI",
 
     // Open Source
     "os.suiBP": "Sui Best Practices",
@@ -214,6 +215,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dapp.suiWrite3": "Sui Write3",
     "dapp.handBattle": "Hand Battle",
     "dapp.charactertool": "Character Builder",
+    "dapp.collabai": "Fic Collab AI",
 
     // Articles
     "articles.title": "📝 Articles & Tutorials",
@@ -460,6 +462,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dapp.ruokDesc": "基于 Sui 网络的去中心化签到触发定时转账 DApp",
     "dapp.write3Desc": "基于 Sui 区块链的小说创作与上传平台。",
     "dapp.charactertoolDesc": "小说创作工具集系列",
+    "dapp.collabaiDesc": "小说创作协作AI",
 
     // Open Source
     "os.suiBP": "Sui 最佳实践",
@@ -471,62 +474,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dapp.suiWrite3": "Sui Write3",
     "dapp.handBattle": "Hand Battle",
     "dapp.charactertool": "角色设定工具",
-
-    // Articles
-    "articles.title": "📝 技术文章",
-    "articles.subtitle": "技术分享与区块链教程。",
-    "articles.read": "阅读 →",
-
-    // Novels
-    "novels.read": "阅读 →",
-
-    // Share
-    "share.tryText": "快来体验",
-    "share.shareToX": "分享到 X",
-    "share.copyLink": "复制链接",
-    "share.copied": "已复制！",
-
-    // OPC Network
-    "opc.title": "🌐 开源一人公司（OPC）协作网络",
-    "opc.subtitle": "开源一人公司协作网络相关项目集合。",
-    "opc.visit": "GitHub →",
-
-    // Stable Gateway
-    "gateway.title": "🚉 稳定的中转站",
-    "gateway.subtitle": "推荐稳定可用的 AI 接入与中转工具。",
-    "gateway.visit": "立即访问 →",
-
-    // Auth
-    "nav.login": "登录",
-    "nav.logout": "退出登录",
-    "nav.user": "用户",
-    "auth.login": "登录",
-    "auth.register": "注册",
-    "auth.email": "邮箱",
-    "auth.password": "密码",
-    "auth.nickname": "昵称（可选）",
-    "auth.processing": "处理中...",
-    "auth.close": "关闭",
-    "auth.error.emailRegistered": "该邮箱已注册，请登录",
-    "auth.error.registerFailed": "注册失败，请重试",
-    "auth.error.registerSuccess": "注册成功！请查看邮箱确认。",
-    "auth.error.loginFailed": "邮箱或密码错误",
-    "auth.error.loginFailed2": "登录失败，请重试",
-    "auth.error.unknown": "操作失败，请重试",
-
-    // Confirm
-    "confirm.title": "邮箱确认",
-    "confirm.verifying": "确认中...",
-    "confirm.failed": "确认失败：",
-    "confirm.success": "邮箱确认成功！请返回登录。",
-    "confirm.invalidLink": "确认链接无效，请确保点击的是完整邮件链接",
-    "confirm.invalid": "无效的确认链接",
-    "confirm.backHome": "返回首页",
-
-    // News
-    "news.title": "📰 最新动态",
-    "news.subtitle": "热点资讯、AI 日报与科技动态精选。",
-    "game.grandpaFarmDesc":
-      "经营爷爷的沙漠农场，种植作物、慢慢扩建，把一片荒地变成生机勃勃的绿洲。",
+    "dapp.collabai": "综影视协作AI",
   },
 };

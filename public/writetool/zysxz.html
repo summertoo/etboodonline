@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>综影视写作AI辅助器</title>
+<style>
+:root{--bg-dark:#0a0a14;--bg-card:#12122a;--bg-input:#1a1a3e;--accent:#7c5cfc;--accent2:#6344e0;--accent-glow:rgba(124,92,252,0.3);--gold:#ffc857;--gold-dim:rgba(255,200,87,0.15);--text:#e8e8f0;--text-dim:#7a7a9e;--text-bright:#fff;--border:#2a2a5a;--success:#0f9b58;--tag-bg:rgba(124,92,252,0.12);--tag-border:rgba(124,92,252,0.35);--world1:#ff6b8a;--world2:#4ecdc4;--world3:#ffe66d;--world4:#a8e6cf;--world5:#ff8b94}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Microsoft YaHei','PingFang SC',sans-serif;background:var(--bg-dark);color:var(--text);min-height:100vh;overflow-x:hidden}
+.topbar{background:linear-gradient(135deg,#12122a,#1a1a3e);border-bottom:1px solid var(--border);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.topbar-left{display:flex;align-items:center;gap:10px}
+.logo{font-size:20px;font-weight:900;background:linear-gradient(135deg,var(--accent),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
+.logo-sub{font-size:11px;color:var(--text-dim)}
+.topbar-right{display:flex;gap:8px;align-items:center}
+.btn{padding:7px 14px;border-radius:7px;border:none;cursor:pointer;font-size:12px;font-weight:600;transition:all 0.2s;display:inline-flex;align-items:center;gap:5px}
+.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:var(--accent2);box-shadow:0 0 16px var(--accent-glow)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#ffaa00);color:#1a1a2e}.btn-gold:hover{box-shadow:0 0 16px rgba(255,200,87,0.4)}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--border)}.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.btn-sm{padding:5px 10px;font-size:11px}.btn-xs{padding:2px 8px;font-size:10px;border-radius:5px}
+.main-layout{display:grid;grid-template-columns:350px 1fr 370px;height:calc(100vh - 48px);overflow:hidden}
+.left-panel{background:var(--bg-card);border-right:1px solid var(--border);overflow-y:auto;overflow-x:hidden;padding:12px;height:100%}
+.panel-title{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:6px;letter-spacing:1px}
+.panel-title::before{content:'';width:3px;height:14px;background:linear-gradient(var(--accent),var(--gold));border-radius:2px}
+.section{margin-bottom:14px}
+.section-header{font-size:12px;font-weight:600;color:var(--text-bright);margin-bottom:6px;padding:5px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:6px;cursor:pointer}
+.section-header .arrow{transition:transform 0.2s;font-size:9px;color:var(--text-dim)}
+.section-header.collapsed .arrow{transform:rotate(-90deg)}
+.section-body{padding-top:6px}.section-body.hidden{display:none}
+.tag-group{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.tag{padding:4px 10px;border-radius:16px;font-size:11px;background:var(--tag-bg);border:1px solid var(--tag-border);color:var(--text);cursor:pointer;transition:all 0.2s;user-select:none}
+.tag:hover{border-color:var(--accent);background:rgba(124,92,252,0.25)}.tag.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tag-gold{background:var(--gold-dim);border-color:rgba(255,200,87,0.4)}.tag-gold:hover{border-color:var(--gold);background:rgba(255,200,87,0.25)}.tag-gold.active{background:var(--gold);color:#1a1a2e;border-color:var(--gold)}
+.input-group{margin-bottom:8px}
+.input-group label{display:block;font-size:11px;color:var(--text-dim);margin-bottom:3px}
+.input-group input,.input-group textarea,.input-group select{width:100%;padding:6px 10px;border-radius:5px;background:var(--bg-input);border:1px solid var(--border);color:var(--text);font-size:12px;outline:none;font-family:inherit}
+.input-group input:focus,.input-group textarea:focus,.input-group select:focus{border-color:var(--accent)}
+.input-group textarea{resize:vertical;min-height:50px}.input-group select{cursor:pointer}
+.card-list{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.card-item{background:var(--bg-input);border:1px solid var(--border);border-radius:6px;padding:8px 10px}
+.card-item .card-title{font-size:12px;font-weight:600;color:var(--accent);margin-bottom:4px;display:flex;align-items:center;justify-content:space-between}
+.card-item .card-body{font-size:11px;color:var(--text-dim);line-height:1.5}
+.card-item .card-body .input-group{margin-bottom:5px}
+.card-item .card-body .input-group label{font-size:10px}
+.card-item .card-body .input-group input,.card-item .card-body .input-group textarea,.card-item .card-body .input-group select{font-size:11px;padding:5px 8px}
+.card-item .card-body .input-group textarea{min-height:36px}
+.card-remove{background:none;border:none;color:#666;cursor:pointer;font-size:14px;padding:0 4px;line-height:1}.card-remove:hover{color:var(--accent)}
+.add-card-btn{width:100%;padding:6px;border-radius:5px;font-size:11px;background:transparent;border:1px dashed var(--border);color:var(--text-dim);cursor:pointer;transition:all 0.2s}
+.add-card-btn:hover{border-color:var(--accent);color:var(--accent)}
+.world-card{border-left:3px solid var(--accent)}
+.center-panel{display:flex;flex-direction:column;background:var(--bg-dark);overflow:hidden;height:100%}
+.editor-toolbar{background:var(--bg-card);border-bottom:1px solid var(--border);padding:8px 14px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;flex-shrink:0}
+.editor-toolbar .spacer{flex:1}.char-count{font-size:11px;color:var(--text-dim)}
+.editor-area{flex:1;padding:16px 24px;overflow-y:auto;overflow-x:hidden;background:var(--bg-dark)}
+.editor-area textarea{width:100%;height:100%;min-height:100%;background:transparent;border:none;color:var(--text);font-size:15px;line-height:1.9;resize:none;outline:none;font-family:'Microsoft YaHei',sans-serif}
+.editor-area textarea::placeholder{color:var(--text-dim)}
+.right-panel{background:var(--bg-card);border-left:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;height:100%}
+.ai-header{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.ai-status{display:flex;align-items:center;gap:5px;font-size:11px}
+.status-dot{width:7px;height:7px;border-radius:50%}
+.status-dot.connected{background:var(--success);box-shadow:0 0 6px rgba(15,155,88,0.5)}.status-dot.disconnected{background:#666}
+.ai-chat{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:10px}
+.msg{padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.7;max-width:95%;word-break:break-word;white-space:pre-wrap}
+.msg-user{background:rgba(124,92,252,0.15);align-self:flex-end;border:1px solid rgba(124,92,252,0.3)}
+.msg-ai{background:var(--bg-input);align-self:flex-start;border:1px solid var(--border)}
+.msg-system{background:rgba(255,255,255,0.05);align-self:center;font-size:10px;color:var(--text-dim);text-align:center;border:none;padding:5px 10px}
+.msg-label{font-size:10px;color:var(--text-dim);margin-bottom:3px;font-weight:600}
+.msg-actions{margin-top:6px;display:flex;gap:4px}
+.ai-input-area{padding:10px 14px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:6px;flex-shrink:0}
+.ai-input-row{display:flex;gap:6px}
+.ai-input-row textarea{flex:1;padding:8px 10px;border-radius:6px;background:var(--bg-input);border:1px solid var(--border);color:var(--text);font-size:12px;resize:none;outline:none;font-family:inherit;min-height:40px;max-height:100px}
+.ai-input-row textarea:focus{border-color:var(--accent)}
+.quick-group{margin-bottom:6px}.quick-group-label{font-size:10px;color:var(--text-dim);margin-bottom:4px;font-weight:600}
+.quick-group-label .gold{color:var(--gold)}
+.quick-actions{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.quick-btn{padding:6px 4px;border-radius:5px;font-size:10px;background:rgba(124,92,252,0.1);border:1px solid rgba(124,92,252,0.25);color:var(--text);cursor:pointer;transition:all 0.2s;text-align:center;font-weight:500}
+.quick-btn:hover{background:rgba(124,92,252,0.25);border-color:var(--accent);color:var(--accent)}
+.quick-btn.highlight{background:var(--gold-dim);border-color:rgba(255,200,87,0.4);color:var(--gold)}.quick-btn.highlight:hover{background:rgba(255,200,87,0.3);border-color:var(--gold)}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:200;align-items:center;justify-content:center}
+.modal-overlay.show{display:flex}
+.modal{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:20px;width:520px;max-width:90vw;max-height:80vh;overflow-y:auto}
+.modal h2{font-size:16px;margin-bottom:14px;color:var(--accent)}.modal .input-group{margin-bottom:12px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}
+.kb-content{font-size:12px;line-height:1.8;color:var(--text)}.kb-content h3{color:var(--accent);margin:12px 0 6px;font-size:14px}
+.kb-content table{width:100%;border-collapse:collapse;margin:6px 0}
+.kb-content th,.kb-content td{padding:5px 8px;border:1px solid var(--border);font-size:11px;text-align:left}
+.kb-content th{background:var(--bg-input);color:var(--accent);font-weight:600}
+.kb-content blockquote{border-left:3px solid var(--accent);padding:6px 10px;margin:6px 0;background:rgba(124,92,252,0.08);border-radius:0 5px 5px 0;font-style:italic;color:var(--text-dim)}
+.toast-container{position:fixed;top:60px;right:16px;z-index:300;display:flex;flex-direction:column;gap:6px}
+.toast{padding:8px 14px;border-radius:6px;font-size:12px;background:var(--bg-card);border:1px solid var(--border);color:var(--text);box-shadow:0 4px 16px rgba(0,0,0,0.4);animation:slideIn 0.3s ease}
+.toast.success{border-color:var(--success)}.toast.error{border-color:var(--accent)}
+@keyframes slideIn{from{transform:translateX(80px);opacity:0}to{transform:translateX(0);opacity:1}}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.tab-bar{display:flex;gap:2px;margin-bottom:10px;background:var(--bg-input);border-radius:6px;padding:2px}
+.tab-btn{flex:1;padding:5px 3px;border:none;border-radius:4px;background:transparent;color:var(--text-dim);font-size:10px;cursor:pointer;transition:all 0.2s;font-weight:600;text-align:center}
+.tab-btn.active{background:var(--accent);color:#fff}.tab-btn:hover:not(.active){color:var(--text)}
+.tab-content{display:none}.tab-content.active{display:block}
+.quick-scroll{overflow-y:auto;overflow-x:hidden;padding:8px 14px;flex-shrink:0;max-height:42vh}
+.divider{height:1px;background:var(--border);margin:8px 0}
+.msg-loading{position:relative}
+.loading-dots{display:inline-flex;gap:4px;padding:4px 0}
+.loading-dots span{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:dotPulse 1.4s infinite ease-in-out both}
+.loading-dots span:nth-child(1){animation-delay:-0.32s}
+.loading-dots span:nth-child(2){animation-delay:-0.16s}
+.loading-dots span:nth-child(3){animation-delay:0s}
+@keyframes dotPulse{0%,80%,100%{transform:scale(0.4);opacity:0.4}40%{transform:scale(1);opacity:1}}
+.loading-text{font-size:11px;color:var(--text-dim);margin-top:4px;animation:fadeInOut 2s infinite}
+@keyframes fadeInOut{0%,100%{opacity:0.5}50%{opacity:1}}
+.msg-content{line-height:1.7}
+</style>
+</head>
+<body>
+<div class="topbar">
+<div class="topbar-left"><span class="logo">综影视写作AI</span><span class="logo-sub">v1.0</span></div>
+<div class="topbar-right">
+<button class="btn btn-outline btn-sm" onclick="showKB()">知识库</button>
+<button class="btn btn-outline btn-sm" onclick="exportAll()">导出</button>
+<button class="btn btn-outline btn-sm" onclick="saveAll()">保存</button>
+<button class="btn btn-primary btn-sm" onclick="openApi()">API设置</button>
+</div>
+</div>
+<div class="main-layout">
+<div class="left-panel">
+<div class="panel-title">创作设定</div>
+<div class="tab-bar">
+<button class="tab-btn active" onclick="swTab('tab-world',this)">世界</button>
+<button class="tab-btn" onclick="swTab('tab-chars',this)">人物</button>
+<button class="tab-btn" onclick="swTab('tab-plot',this)">剧情</button>
+<button class="tab-btn" onclick="swTab('tab-cool',this)">爽点</button>
+<button class="tab-btn" onclick="swTab('tab-config',this)">配置</button>
+</div>
+<div class="tab-content active" id="tab-world">
+<div class="input-group"><label>书名</label><input id="bookTitle" placeholder="例：综影视之桃花妖的成仙路"></div>
+<div class="input-group"><label>一句话简介</label><input id="bookSummary" placeholder="例：桃花精夭夭穿梭各影视世界，完成愿望成仙"></div>
+<div class="input-group"><label>穿越类型</label><select id="crossType"><option value="system">系统流</option><option value="reborn">重生流</option><option value="trans">穿越流</option><option value="fast">快穿流</option><option value="live">直播流</option></select></div>
+<div class="input-group"><label>金手指类型</label><select id="cheatType"><option value="system">系统（任务+奖励）</option><option value="space">空间（囤货/种植）</option><option value="mind">读心/心声</option><option value="memory">超强记忆/学习</option><option value="power">妖力/修为</option><option value="plot">预知剧情</option><option value="sign">签到/合成/抽奖</option></select></div>
+<div class="input-group"><label>金手指说明</label><textarea id="cheatDesc" rows="2" placeholder="例：桃花精夭夭自带妖力，吸收龙气可增强修为"></textarea></div>
+<div class="input-group"><label>金手指限制</label><input id="cheatLimit" placeholder="例：妖力不能在人前使用"></div>
+<div class="divider"></div>
+<div style="font-size:12px;font-weight:600;color:var(--gold);margin-bottom:6px">影视世界规划</div>
+<div class="tag-group" style="margin-bottom:6px">
+<span class="tag tag-gold" onclick="addPresetWorld('甄嬛传')">甄嬛传</span>
+<span class="tag tag-gold" onclick="addPresetWorld('如懿传')">如懿传</span>
+<span class="tag tag-gold" onclick="addPresetWorld('知否')">知否</span>
+<span class="tag tag-gold" onclick="addPresetWorld('欢乐颂')">欢乐颂</span>
+<span class="tag tag-gold" onclick="addPresetWorld('步步惊心')">步步惊心</span>
+<span class="tag tag-gold" onclick="addPresetWorld('三生三世')">三生三世</span>
+<span class="tag tag-gold" onclick="addPresetWorld('香蜜')">香蜜</span>
+<span class="tag tag-gold" onclick="addPresetWorld('陈情令')">陈情令</span>
+<span class="tag tag-gold" onclick="addPresetWorld('庆余年')">庆余年</span>
+<span class="tag tag-gold" onclick="addPresetWorld('父母爱情')">父母爱情</span>
+</div>
+<div class="card-list" id="worldList"></div>
+<button class="add-card-btn" onclick="addWorld()">+ 添加影视世界</button>
+</div>
+<div class="tab-content" id="tab-chars">
+<div class="section"><div class="section-header" onclick="togSec(this)"><span class="arrow">▼</span> 穿越者设定</div><div class="section-body">
+<div class="input-group"><label>穿越者姓名</label><input id="mcName" placeholder="例：夭夭"></div>
+<div class="input-group"><label>穿越者身份</label><input id="mcIdentity" placeholder="例：桃花精/现代白领"></div>
+<div class="input-group"><label>核心性格</label><input id="mcTrait" placeholder="例：爱美贪吃撒娇但有底线"></div>
+<div class="input-group"><label>说话风格</label><input id="mcVoice" placeholder="例：撒娇语气、爱用叠词"></div>
+<div class="input-group"><label>致命弱点</label><input id="mcWeakness" placeholder="例：心软、贪吃"></div>
+<div class="input-group"><label>前世/真实身份背景</label><textarea id="mcBack" rows="2" placeholder="例：修炼千年的桃花精"></textarea></div>
+</div></div>
+<div class="divider"></div>
+<div style="font-size:12px;font-weight:600;color:var(--accent);margin-bottom:6px">各世界人物档案</div>
+<div class="card-list" id="charList"></div>
+<button class="add-card-btn" onclick="addChar()">+ 添加人物</button>
+</div>
+<div class="tab-content" id="tab-plot">
+<div class="input-group"><label>总体章节大纲</label><textarea id="chapterOutline" rows="6" placeholder="按世界列出，例如：&#10;世界1 甄嬛传（第1-80章）&#10;  进入：穿越为安陵容&#10;  布局：远离甄嬛、接近皇帝&#10;  高潮：从答应到皇后&#10;  收尾：废后宜修、任务完成"></textarea></div>
+<div class="divider"></div>
+<div style="font-size:12px;font-weight:600;color:var(--accent);margin-bottom:6px">事件卡片</div>
+<div class="card-list" id="eventList"></div>
+<button class="add-card-btn" onclick="addEvt()">+ 添加事件</button>
+</div>
+<div class="tab-content" id="tab-cool">
+<div class="section"><div class="section-header" onclick="togSec(this)"><span class="arrow">▼</span> 爽点类型</div><div class="section-body"><div class="tag-group" id="coolTypeTags">
+<span class="tag active" data-val="face_slap" onclick="selTag(this,'coolType')">打脸爽</span>
+<span class="tag" data-val="solo_favor" onclick="selTag(this,'coolType')">独宠爽</span>
+<span class="tag" data-val="fate_change" onclick="selTag(this,'coolType')">改命爽</span>
+<span class="tag" data-val="crush" onclick="selTag(this,'coolType')">碾压爽</span>
+<span class="tag" data-val="revenge" onclick="selTag(this,'coolType')">复仇爽</span>
+<span class="tag" data-val="rise" onclick="selTag(this,'coolType')">逆袭爽</span>
+</div></div></div>
+<div class="section"><div class="section-header" onclick="togSec(this)"><span class="arrow">▼</span> 爽点节奏</div><div class="section-body"><div class="tag-group" id="rhythmTags">
+<span class="tag" data-val="fast" onclick="selTag(this,'rhythm')">快（每3章一爽）</span>
+<span class="tag active" data-val="mid" onclick="selTag(this,'rhythm')">中（每5-8章一爽）</span>
+<span class="tag" data-val="slow" onclick="selTag(this,'rhythm')">慢（每10+章一爽）</span>
+</div></div></div>
+<div class="section"><div class="section-header" onclick="togSec(this)"><span class="arrow">▼</span> 甜虐比例</div><div class="section-body"><div class="tag-group" id="ratioTags">
+<span class="tag" data-val="7s3a" onclick="selTag(this,'ratio')">7甜3虐</span>
+<span class="tag active" data-val="5s5a" onclick="selTag(this,'ratio')">5甜5虐</span>
+<span class="tag" data-val="3s7a" onclick="selTag(this,'ratio')">3甜7虐</span>
+<span class="tag" data-val="pure" onclick="selTag(this,'ratio')">纯甜无虐</span>
+</div></div></div>
+<div style="font-size:12px;font-weight:600;color:var(--gold);margin-bottom:6px">爽点规划卡片</div>
+<div class="card-list" id="coolList"></div>
+<button class="add-card-btn" onclick="addCool()">+ 添加爽点</button>
+</div>
+<div class="tab-content" id="tab-config">
+<div class="section"><div class="section-header" onclick="togSec(this)"><span class="arrow">▼</span> 目标平台</div><div class="section-body"><div class="tag-group" id="platformTags">
+<span class="tag active" data-val="fanqie" onclick="selTag(this,'platform')">番茄</span>
+<span class="tag" data-val="qimao" onclick="selTag(this,'platform')">七猫</span>
+<span class="tag" data-val="qidian" onclick="selTag(this,'platform')">起点</span>
+<span class="tag" data-val="jjwxc" onclick="selTag(this,'platform')">晋江</span>
+</div></div></div>
+<div class="section"><div class="section-header" onclick="togSec(this)"><span class="arrow">▼</span> 写作风格</div><div class="section-body">
+<div class="input-group"><label>叙事视角</label><select id="narrativePOV"><option value="first">第一人称（番茄主流）</option><option value="third">第三人称（起点主流）</option><option value="dual">双视角交替</option><option value="multi">多视角</option></select></div>
+<div class="input-group"><label>文风要求</label><textarea id="styleNote" rows="2" placeholder="例：对话体为主，节奏明快"></textarea></div>
+<div class="input-group"><label>输出字数</label><select id="outputLength"><option value="500">约500字</option><option value="1000" selected>约1000字</option><option value="2000">约2000字</option><option value="3000">约3000字</option></select></div>
+<div class="input-group"><label>额外备注</label><textarea id="extraNote" rows="2" placeholder="其他补充要求"></textarea></div>
+</div></div>
+<div class="section"><div class="section-header" onclick="togSec(this)"><span class="arrow">▼</span> <span style="color:var(--gold)">原剧尊重原则</span></div><div class="section-body">
+<div style="font-size:10px;color:var(--gold);margin-bottom:6px;line-height:1.6">AI已内置以下铁律：<br>① 尊重原剧基础剧情线、人物关系和世界观<br>② 主角在原剧框架内选择性干预，不过度偏离<br>③ 新增设定有机融合原剧世界观<br>④ 原剧未发生的情节不得凭空编造<br>⑤ 原剧人物核心人设不得随意篡改</div>
+<div class="input-group"><label>补充原剧关键设定（必填）</label><textarea id="canonRules" rows="4" placeholder="列出必须遵守的原剧设定，例如：&#10;1. 余嫣红未嫁给顾廷烨&#10;2. 盛明兰先嫁贺弘文后嫁顾廷烨&#10;3. 齐衡未能娶明兰&#10;4. ..."></textarea></div>
+</div></div>
+</div>
+</div>
+<div class="center-panel">
+<div class="editor-toolbar">
+<select id="currentWorldSel" style="padding:4px 8px;border-radius:5px;background:var(--bg-input);border:1px solid var(--border);color:var(--gold);font-size:11px;font-weight:700;outline:none;cursor:pointer" onchange="onWorldChange(this)" title="选择当前写作的影视世界，AI将按此世界设定生成内容">
+<option value="-1">未设定世界</option>
+</select>
+<button class="btn btn-outline btn-sm" onclick="insTpl('enter')">穿越</button>
+<button class="btn btn-outline btn-sm" onclick="insTpl('sweet')">甜段</button>
+<button class="btn btn-outline btn-sm" onclick="insTpl('face')">打脸</button>
+<button class="btn btn-outline btn-sm" onclick="insTpl('climax')">高潮</button>
+<button class="btn btn-outline btn-sm" onclick="insTpl('transition')">过渡</button>
+<div class="spacer"></div><span class="char-count" id="charCount">0 字</span>
+<button class="btn btn-outline btn-sm" style="color:var(--danger);border-color:var(--danger)" onclick="clearEditor()">清空</button>
+<button class="btn btn-gold btn-sm" onclick="sendAI('continue')">AI续写</button>
+</div>
+<div class="editor-area"><textarea id="editor" placeholder="在这里开始你的综影视创作...&#10;&#10;左侧完成设定后，右侧AI可基于世界/人物/爽点设定生成内容&#10;快捷键：Ctrl+Enter 发送给AI续写"></textarea></div>
+</div>
+<div class="right-panel">
+<div class="ai-header"><span style="font-size:13px;font-weight:700">AI写作助手</span><div style="display:flex;align-items:center;gap:8px"><button class="btn btn-outline btn-xs" onclick="clearChat()" style="font-size:9px">清除聊天</button><div class="ai-status"><span class="status-dot disconnected" id="statusDot"></span><span id="statusText" style="color:var(--text-dim)">未连接</span></div></div></div>
+<div class="quick-scroll">
+<div class="quick-group"><div class="quick-group-label">结构生成</div><div class="quick-actions">
+<button class="quick-btn" onclick="sendAI('gen_worlds')">生成世界规划</button>
+<button class="quick-btn" onclick="sendAI('gen_chars')">生成人物档案</button>
+<button class="quick-btn" onclick="sendAI('gen_plot')">生成剧情线</button>
+<button class="quick-btn" onclick="sendAI('gen_cool_plan')">生成爽点规划</button>
+</div></div>
+<div class="quick-group"><div class="quick-group-label"><span class="gold">按设定写正文（核心）</span></div><div class="quick-actions">
+<button class="quick-btn highlight" onclick="sendAI('write_enter')">写穿越进入</button>
+<button class="quick-btn highlight" onclick="sendAI('write_chapter')">按大纲写章节</button>
+<button class="quick-btn highlight" onclick="sendAI('write_cool')">按爽点写高潮</button>
+<button class="quick-btn highlight" onclick="sendAI('write_char_scene')">按人物写场景</button>
+<button class="quick-btn" onclick="sendAI('write_face')">写打脸场景</button>
+<button class="quick-btn" onclick="sendAI('write_sweet')">写甜蜜互动</button>
+<button class="quick-btn" onclick="sendAI('write_full')">全设定综合写</button>
+<button class="quick-btn" onclick="sendAI('write_ending')">写世界收尾</button>
+</div></div>
+<div class="quick-group"><div class="quick-group-label">综影视专项</div><div class="quick-actions">
+<button class="quick-btn" onclick="sendAI('rewrite_fate')">改写原剧命运</button>
+<button class="quick-btn" onclick="sendAI('dual_pov')">双视角切换</button>
+<button class="quick-btn" onclick="sendAI('system_task')">系统任务场景</button>
+<button class="quick-btn" onclick="sendAI('cheat_scene')">金手指使用</button>
+<button class="quick-btn" onclick="sendAI('villain_fall')">反派落败</button>
+<button class="quick-btn" onclick="sendAI('world_transition')">世界过渡</button>
+</div></div>
+<div class="quick-group"><div class="quick-group-label">诊断与优化</div><div class="quick-actions">
+<button class="quick-btn" onclick="sendAI('review')">爽点诊断</button>
+<button class="quick-btn" onclick="sendAI('enhance')">增强爽感</button>
+<button class="quick-btn" onclick="sendAI('check_ooc')">OOC检查</button>
+<button class="quick-btn" onclick="sendAI('rhythm')">节奏诊断</button>
+</div></div>
+</div>
+<div class="ai-chat" id="aiChat"></div>
+<div class="ai-input-area">
+<div class="ai-input-row">
+<textarea id="aiInput" placeholder="自由提问或补充要求..." rows="2"></textarea>
+<button class="btn btn-primary btn-sm" onclick="sendAI('custom')" style="align-self:flex-end">发送</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-overlay" id="apiModal"><div class="modal">
+<h2>API设置</h2>
+<div style="font-size:11px;color:var(--gold);margin-bottom:8px">快捷预设：</div>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+<button class="btn btn-outline btn-sm" onclick="setPreset('https://api.deepseek.com/v1/chat/completions','deepseek-v4-flash')">DeepSeek Flash</button>
+<button class="btn btn-outline btn-sm" onclick="setPreset('https://api.deepseek.com/v1/chat/completions','deepseek-v4-pro')">DeepSeek Pro</button>
+<button class="btn btn-outline btn-sm" onclick="setPreset('https://open.bigmodel.cn/api/paas/v4/chat/completions','glm-4-flash')">GLM-4 Flash</button>
+<button class="btn btn-outline btn-sm" onclick="setPreset('https://api.moonshot.cn/v1/chat/completions','moonshot-v1-8k')">月之暗面</button>
+<button class="btn btn-outline btn-sm" onclick="setPreset('https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions','qwen-turbo')">通义千问</button>
+<button class="btn btn-outline btn-sm" onclick="setPreset('https://api.openai.com/v1/chat/completions','gpt-4o-mini')">OpenAI</button>
+</div>
+<div class="input-group"><label>API地址</label><input id="apiUrl" placeholder="例：https://api.deepseek.com/v1/chat/completions"></div>
+<div class="input-group"><label>API Key</label><input id="apiKey" type="password" placeholder="sk-..."></div>
+<div class="input-group"><label>模型名称</label><input id="apiModel" placeholder="例：deepseek-v4-flash / deepseek-v4-pro / gpt-4o-mini"></div>
+<div class="input-group"><label>Temperature（创意度 0-2）</label><input id="apiTemp" type="number" step="0.1" min="0" max="2" value="0.8"></div>
+<div class="input-group"><label>Max Tokens（最大输出）</label><input id="apiMaxTokens" type="number" value="4096"></div>
+<div style="font-size:11px;color:var(--text-dim);margin-top:6px">提示：必须通过 http://localhost 打开，直接双击HTML文件无法连接API</div>
+<div class="modal-actions"><button class="btn btn-outline" onclick="closeApi()">取消</button><button class="btn btn-outline" onclick="testAPI()">测试连接</button><button class="btn btn-primary" onclick="saveApi()">保存并连接</button></div>
+</div></div>
+<div class="modal-overlay" id="kbModal"><div class="modal" style="width:600px">
+<h2>综影视写作知识库</h2>
+<div class="kb-content" id="kbContent"></div>
+<div class="modal-actions"><button class="btn btn-primary" onclick="document.getElementById('kbModal').classList.remove('show')">关闭</button></div>
+</div></div>
+<div class="toast-container" id="toastC"></div>
+<script>
+// ============================================================
+// 综影视写作AI辅助器 v1.0 - 核心逻辑（内嵌版）
+// ============================================================
+
+// ===== 全局状态 =====
+const appData = {
+  worlds: [],
+  chars: [],
+  events: [],
+  coolPoints: [],
+  chatHistory: [],
+  selectedCoolType: 'face_slap',
+  selectedRhythm: 'mid',
+  selectedRatio: '5s5a',
+  selectedPlatform: 'fanqie',
+  apiUrl: '',
+  apiKey: '',
+  apiModel: '',
+  apiTemp: 0.8,
+  apiMaxTokens: 4096,
+  apiConnected: false
+};
+
+// ===== 工具函数 =====
+function showToast(msg, type) {
+  type = type || '';
+  const c = document.getElementById('toastC');
+  const el = document.createElement('div');
+  el.className = 'toast ' + type;
+  el.textContent = msg;
+  c.appendChild(el);
+  setTimeout(function() { el.remove(); }, 3000);
+}
+
+function genId() {
+  return 'id_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
+}
+
+function gid(id) { return document.getElementById(id); }
+function gval(id) { return gid(id).value; }
+
+// ===== 持久化 =====
+function saveAll() {
+  const d = {
+    worlds: appData.worlds,
+    chars: appData.chars,
+    events: appData.events,
+    coolPoints: appData.coolPoints,
+    chatHistory: appData.chatHistory,
+    selectedCoolType: appData.selectedCoolType,
+    selectedRhythm: appData.selectedRhythm,
+    selectedRatio: appData.selectedRatio,
+    selectedPlatform: appData.selectedPlatform,
+    apiUrl: appData.apiUrl,
+    apiKey: appData.apiKey,
+    apiModel: appData.apiModel,
+    apiTemp: appData.apiTemp,
+    apiMaxTokens: appData.apiMaxTokens
+  };
+  localStorage.setItem('zongyingshi_data', JSON.stringify(d));
+  // 同时保存左侧面板的文本输入
+  const inputs = {};
+  ['bookTitle','bookSummary','mcName','mcIdentity','mcTrait','mcVoice','mcWeakness','mcBack',
+   'chapterOutline','canonRules','styleNote','extraNote','cheatDesc','cheatLimit'].forEach(function(k) {
+    inputs[k] = gval(k);
+  });
+  ['crossType','cheatType','narrativePOV','outputLength'].forEach(function(k) {
+    inputs[k] = gval(k);
+  });
+  localStorage.setItem('zongyingshi_inputs', JSON.stringify(inputs));
+  localStorage.setItem('zongyingshi_editor', gid('editor').value);
+  showToast('所有数据已保存', 'success');
+}
+
+function loadAll() {
+  try {
+    const raw = localStorage.getItem('zongyingshi_data');
+    if (raw) {
+      const d = JSON.parse(raw);
+      if (d.worlds) appData.worlds = d.worlds;
+      if (d.chars) appData.chars = d.chars;
+      if (d.events) appData.events = d.events;
+      if (d.coolPoints) appData.coolPoints = d.coolPoints;
+      if (d.chatHistory) appData.chatHistory = d.chatHistory;
+      if (d.selectedCoolType) appData.selectedCoolType = d.selectedCoolType;
+      if (d.selectedRhythm) appData.selectedRhythm = d.selectedRhythm;
+      if (d.selectedRatio) appData.selectedRatio = d.selectedRatio;
+      if (d.selectedPlatform) appData.selectedPlatform = d.selectedPlatform;
+      if (d.apiUrl) { appData.apiUrl = d.apiUrl; gid('apiUrl').value = d.apiUrl; }
+      if (d.apiKey) { appData.apiKey = d.apiKey; gid('apiKey').value = d.apiKey; }
+      if (d.apiModel) { appData.apiModel = d.apiModel; gid('apiModel').value = d.apiModel; }
+      if (d.apiTemp != null) { appData.apiTemp = d.apiTemp; gid('apiTemp').value = d.apiTemp; }
+      if (d.apiMaxTokens) { appData.apiMaxTokens = d.apiMaxTokens; gid('apiMaxTokens').value = d.apiMaxTokens; }
+    }
+    const inputs = localStorage.getItem('zongyingshi_inputs');
+    if (inputs) {
+      const inp = JSON.parse(inputs);
+      for (var k in inp) {
+        var el = gid(k);
+        if (el) el.value = inp[k] || '';
+      }
+    }
+    const ed = localStorage.getItem('zongyingshi_editor');
+    if (ed) gid('editor').value = ed;
+  } catch(e) {}
+  refreshWorlds();
+  refreshChars();
+  refreshEvents();
+  refreshCoolPoints();
+  updateWorldSel();
+  updateCharCount();
+  renderChat();
+  // 恢复tag状态
+  restoreTagState('coolType', appData.selectedCoolType);
+  restoreTagState('rhythm', appData.selectedRhythm);
+  restoreTagState('ratio', appData.selectedRatio);
+  restoreTagState('platform', appData.selectedPlatform);
+}
+
+function restoreTagState(group, val) {
+  var tags = document.querySelectorAll('[data-val][onclick*="' + group + '"]');
+  tags.forEach(function(t) {
+    var v = t.getAttribute('data-val');
+    if (v === val) t.classList.add('active');
+    else t.classList.remove('active');
+  });
+}
+
+function exportAll() {
+  saveAll();
+  const data = {
+    settings: {
+      bookTitle: gval('bookTitle'),
+      bookSummary: gval('bookSummary'),
+      crossType: gval('crossType'),
+      cheatType: gval('cheatType'),
+      cheatDesc: gval('cheatDesc'),
+      cheatLimit: gval('cheatLimit'),
+      mcName: gval('mcName'),
+      mcIdentity: gval('mcIdentity'),
+      mcTrait: gval('mcTrait'),
+      mcVoice: gval('mcVoice'),
+      mcWeakness: gval('mcWeakness'),
+      mcBack: gval('mcBack'),
+      chapterOutline: gval('chapterOutline'),
+      canonRules: gval('canonRules'),
+      styleNote: gval('styleNote'),
+      extraNote: gval('extraNote'),
+      narrativePOV: gval('narrativePOV'),
+      outputLength: gval('outputLength'),
+      selectedCoolType: appData.selectedCoolType,
+      selectedRhythm: appData.selectedRhythm,
+      selectedRatio: appData.selectedRatio,
+      selectedPlatform: appData.selectedPlatform
+    },
+    worlds: appData.worlds,
+    chars: appData.chars,
+    events: appData.events,
+    coolPoints: appData.coolPoints,
+    currentText: gid('editor').value,
+    chatHistory: appData.chatHistory
+  };
+  const json = JSON.stringify(data, null, 2);
+  const blob = new Blob([json], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = '综影视创作数据_' + new Date().toISOString().slice(0,10) + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('导出完成', 'success');
+}
+
+// ===== UI 交互 =====
+function swTab(tabId, btn) {
+  document.querySelectorAll('.tab-content').forEach(function(t) { t.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(t) { t.classList.remove('active'); });
+  var tab = gid(tabId);
+  if (tab) tab.classList.add('active');
+  if (btn) btn.classList.add('active');
+}
+
+function togSec(header) {
+  header.classList.toggle('collapsed');
+  var body = header.nextElementSibling;
+  if (body) body.classList.toggle('hidden');
+}
+
+function selTag(el, group) {
+  var parent = el.parentElement;
+  if (!parent) return;
+  parent.querySelectorAll('.tag').forEach(function(t) { t.classList.remove('active'); });
+  el.classList.add('active');
+  var val = el.getAttribute('data-val');
+  if (group === 'coolType') appData.selectedCoolType = val;
+  else if (group === 'rhythm') appData.selectedRhythm = val;
+  else if (group === 'ratio') appData.selectedRatio = val;
+  else if (group === 'platform') appData.selectedPlatform = val;
+}
+
+// ===== 影视世界管理 =====
+function refreshWorlds() {
+  var list = gid('worldList');
+  list.innerHTML = '';
+  appData.worlds.forEach(function(w, i) {
+    var card = document.createElement('div');
+    card.className = 'card-item world-card';
+    card.innerHTML =
+      '<div class="card-title">' +
+      '<span>' + escHtml(w.name || '未命名世界') + '</span>' +
+      '<button class="card-remove" onclick="removeCard(\'world\',' + i + ')" title="删除">✕</button>' +
+      '</div>' +
+      '<div class="card-body">' +
+      '<div class="input-group"><label>影视作品名</label><input value="' + escAttr(w.name) + '" onchange="updWorld(' + i + ',\'name\',this.value)"></div>' +
+      '<div class="input-group"><label>穿越节点 / 进入方式</label><textarea rows="2" onchange="updWorld(' + i + ',\'entry\',this.value)">' + escHtml(w.entry) + '</textarea></div>' +
+      '<div class="input-group"><label>核心剧情规划</label><textarea rows="3" onchange="updWorld(' + i + ',\'plot\',this.value)">' + escHtml(w.plot) + '</textarea></div>' +
+      '<div class="input-group"><label>关键人物</label><input value="' + escAttr(w.keyChars) + '" onchange="updWorld(' + i + ',\'keyChars\',this.value)"></div>' +
+      '<div class="input-group"><label>该世界金手指表现形式</label><input value="' + escAttr(w.cheatForm) + '" onchange="updWorld(' + i + ',\'cheatForm\',this.value)"></div>' +
+      '<div class="input-group"><label>任务目标</label><textarea rows="2" onchange="updWorld(' + i + ',\'mission\',this.value)">' + escHtml(w.mission) + '</textarea></div>' +
+      '</div>';
+    list.appendChild(card);
+  });
+  updateWorldSel();
+}
+
+function addWorld() {
+  appData.worlds.push({ id: genId(), name: '', entry: '', plot: '', keyChars: '', cheatForm: '', mission: '' });
+  refreshWorlds();
+  showToast('已添加影视世界');
+}
+
+function addPresetWorld(name) {
+  var presets = {
+    '甄嬛传': { entry: '穿越为安陵容/浣碧选秀时期', keyChars: '甄嬛、皇帝、皇后、华妃、安陵容、沈眉庄', cheatForm: '凭借预知剧情避开陷阱' },
+    '如懿传': { entry: '穿越为海兰/惢心，如懿入冷宫时期', keyChars: '如懿、乾隆、令妃、海兰、凌云彻', cheatForm: '预知宫斗事件，暗中助如懿' },
+    '知否': { entry: '穿越为盛明兰/盛墨兰，盛家学堂时期', keyChars: '盛明兰、顾廷烨、齐衡、盛老太太', cheatForm: '利用现代思维经营产业' },
+    '欢乐颂': { entry: '穿越为22楼新住户，五美时期', keyChars: '安迪、樊胜美、曲筱绡、邱莹莹、关雎尔', cheatForm: '空间囤货/预知商业机会' },
+    '步步惊心': { entry: '穿越为马尔泰若曦/若兰，选秀前', keyChars: '四爷、八爷、十三爷、十四爷、若曦', cheatForm: '预知九龙夺嫡结局' },
+    '三生三世': { entry: '穿越为素锦/少辛/新角色，昆仑虚时期', keyChars: '白浅、夜华、素锦、墨渊、凤九', cheatForm: '妖力/修为碾压' },
+    '香蜜': { entry: '穿越为穗禾/新角色，锦觅上天庭时期', keyChars: '锦觅、旭凤、润玉、穗禾、鎏英', cheatForm: '预知陨丹真相' },
+    '陈情令': { entry: '穿越为江厌离/新角色，云深求学时期', keyChars: '魏无羡、蓝忘机、江澄、江厌离、金光瑶', cheatForm: '预知悲剧提前干预' },
+    '庆余年': { entry: '穿越为范若若/林婉儿，澹州时期', keyChars: '范闲、庆帝、陈萍萍、林婉儿、范若若', cheatForm: '预知叶轻眉真相和庆帝布局' },
+    '父母爱情': { entry: '穿越为安杰/安欣/新角色，相亲时期', keyChars: '安杰、江德福、安欣、欧阳懿、江德华', cheatForm: '预知时代变迁提前准备' }
+  };
+  var preset = presets[name] || { entry: '', keyChars: '' };
+  appData.worlds.push({
+    id: genId(), name: name,
+    entry: preset.entry, plot: '', keyChars: preset.keyChars,
+    cheatForm: preset.cheatForm || '', mission: ''
+  });
+  refreshWorlds();
+  showToast('已添加「' + name + '」');
+}
+
+function updWorld(idx, field, val) {
+  if (appData.worlds[idx]) appData.worlds[idx][field] = val;
+}
+
+function removeCard(type, idx) {
+  var listName = type === 'world' ? 'worlds' : type === 'char' ? 'chars' : type === 'event' ? 'events' : 'coolPoints';
+  if (appData[listName] && appData[listName][idx] !== undefined) {
+    appData[listName].splice(idx, 1);
+    if (type === 'world') refreshWorlds();
+    else if (type === 'char') refreshChars();
+    else if (type === 'event') refreshEvents();
+    else if (type === 'cool') refreshCoolPoints();
+    showToast('已删除');
+  }
+}
+
+function updateWorldSel() {
+  var sel = gid('currentWorldSel');
+  var cur = sel.value;
+  sel.innerHTML = '<option value="-1">未设定世界</option>';
+  appData.worlds.forEach(function(w, i) {
+    var name = w.name || '世界' + (i+1);
+    sel.innerHTML += '<option value="' + i + '">' + escHtml(name) + '</option>';
+  });
+  if (cur && appData.worlds[parseInt(cur)]) sel.value = cur;
+}
+
+function onWorldChange(sel) {
+  var idx = parseInt(sel.value);
+  if (idx >= 0 && appData.worlds[idx]) {
+    showToast('已切换到「' + (appData.worlds[idx].name || '第'+(idx+1)+'个世界') + '」', 'success');
+  }
+}
+
+// ===== 人物管理 =====
+function refreshChars() {
+  var list = gid('charList');
+  list.innerHTML = '';
+  appData.chars.forEach(function(c, i) {
+    var worlds = [];
+    appData.worlds.forEach(function(w) { if (w.name) worlds.push(w.name); });
+    var card = document.createElement('div');
+    card.className = 'card-item';
+    card.innerHTML =
+      '<div class="card-title">' +
+      '<span>' + escHtml(c.name || '未命名人物') + '</span>' +
+      '<button class="card-remove" onclick="removeCard(\'char\',' + i + ')" title="删除">✕</button>' +
+      '</div>' +
+      '<div class="card-body">' +
+      '<div class="input-group"><label>姓名</label><input value="' + escAttr(c.name) + '" onchange="updChar(' + i + ',\'name\',this.value)"></div>' +
+      '<div class="input-group"><label>所属世界</label><select onchange="updChar(' + i + ',\'world\',this.value)"><option value="">- 选择 -</option>' + worlds.map(function(w) { return '<option value="' + escAttr(w) + '"' + (c.world === w ? ' selected' : '') + '>' + escHtml(w) + '</option>'; }).join('') + '</select></div>' +
+      '<div class="input-group"><label>角色定位</label><input value="' + escAttr(c.role) + '" onchange="updChar(' + i + ',\'role\',this.value)" placeholder="男主/女主/反派/配角"></div>' +
+      '<div class="input-group"><label>性格特质</label><input value="' + escAttr(c.trait) + '" onchange="updChar(' + i + ',\'trait\',this.value)"></div>' +
+      '<div class="input-group"><label>与穿越者关系</label><input value="' + escAttr(c.relation) + '" onchange="updChar(' + i + ',\'relation\',this.value)"></div>' +
+      '<div class="input-group"><label>原剧人设锚点（不可违背）</label><textarea rows="2" onchange="updChar(' + i + ',\'anchor\',this.value)">' + escHtml(c.anchor) + '</textarea></div>' +
+      '<div class="input-group"><label>关系发展线</label><textarea rows="2" onchange="updChar(' + i + ',\'arc\',this.value)">' + escHtml(c.arc) + '</textarea></div>' +
+      '</div>';
+    list.appendChild(card);
+  });
+}
+
+function addChar() {
+  appData.chars.push({ id: genId(), name: '', world: '', role: '', trait: '', relation: '', anchor: '', arc: '' });
+  refreshChars();
+  showToast('已添加人物');
+}
+
+function updChar(idx, field, val) {
+  if (appData.chars[idx]) appData.chars[idx][field] = val;
+}
+
+// ===== 事件管理 =====
+function refreshEvents() {
+  var list = gid('eventList');
+  list.innerHTML = '';
+  appData.events.forEach(function(ev, i) {
+    var card = document.createElement('div');
+    card.className = 'card-item';
+    card.innerHTML =
+      '<div class="card-title">' +
+      '<span>' + escHtml(ev.title || '未命名事件') + '</span>' +
+      '<button class="card-remove" onclick="removeCard(\'event\',' + i + ')" title="删除">✕</button>' +
+      '</div>' +
+      '<div class="card-body">' +
+      '<div class="input-group"><label>事件名称</label><input value="' + escAttr(ev.title) + '" onchange="updEvt(' + i + ',\'title\',this.value)"></div>' +
+      '<div class="input-group"><label>所属章节</label><input value="' + escAttr(ev.chapter) + '" onchange="updEvt(' + i + ',\'chapter\',this.value)" placeholder="第X章"></div>' +
+      '<div class="input-group"><label>事件类型</label><select onchange="updEvt(' + i + ',\'type\',this.value)"><option value="enter"' + (ev.type === 'enter' ? ' selected' : '') + '>穿越进入</option><option value="conflict"' + (ev.type === 'conflict' ? ' selected' : '') + '>冲突</option><option value="cool"' + (ev.type === 'cool' ? ' selected' : '') + '>爽点</option><option value="sweet"' + (ev.type === 'sweet' ? ' selected' : '') + '>甜蜜</option><option value="transition"' + (ev.type === 'transition' ? ' selected' : '') + '>过渡</option></select></div>' +
+      '<div class="input-group"><label>事件描述</label><textarea rows="3" onchange="updEvt(' + i + ',\'desc\',this.value)">' + escHtml(ev.desc) + '</textarea></div>' +
+      '</div>';
+    list.appendChild(card);
+  });
+}
+
+function addEvt() {
+  appData.events.push({ id: genId(), title: '', chapter: '', type: 'conflict', desc: '' });
+  refreshEvents();
+  showToast('已添加事件');
+}
+
+function updEvt(idx, field, val) {
+  if (appData.events[idx]) appData.events[idx][field] = val;
+}
+
+// ===== 爽点管理 =====
+function refreshCoolPoints() {
+  var list = gid('coolList');
+  list.innerHTML = '';
+  appData.coolPoints.forEach(function(cp, i) {
+    var card = document.createElement('div');
+    card.className = 'card-item';
+    card.innerHTML =
+      '<div class="card-title">' +
+      '<span>' + escHtml(cp.title || '未命名爽点') + '</span>' +
+      '<button class="card-remove" onclick="removeCard(\'cool\',' + i + ')" title="删除">✕</button>' +
+      '</div>' +
+      '<div class="card-body">' +
+      '<div class="input-group"><label>爽点名称</label><input value="' + escAttr(cp.title) + '" onchange="updCool(' + i + ',\'title\',this.value)"></div>' +
+      '<div class="input-group"><label>所属章节</label><input value="' + escAttr(cp.chapter) + '" onchange="updCool(' + i + ',\'chapter\',this.value)" placeholder="第X章"></div>' +
+      '<div class="input-group"><label>爽点类型</label><select onchange="updCool(' + i + ',\'type\',this.value)"><option value="face_slap"' + (cp.type === 'face_slap' ? ' selected' : '') + '>打脸爽</option><option value="solo_favor"' + (cp.type === 'solo_favor' ? ' selected' : '') + '>独宠爽</option><option value="fate_change"' + (cp.type === 'fate_change' ? ' selected' : '') + '>改命爽</option><option value="crush"' + (cp.type === 'crush' ? ' selected' : '') + '>碾压爽</option><option value="revenge"' + (cp.type === 'revenge' ? ' selected' : '') + '>复仇爽</option><option value="rise"' + (cp.type === 'rise' ? ' selected' : '') + '>逆袭爽</option></select></div>' +
+      '<div class="input-group"><label>爽点细节描述</label><textarea rows="3" onchange="updCool(' + i + ',\'desc\',this.value)">' + escHtml(cp.desc) + '</textarea></div>' +
+      '</div>';
+    list.appendChild(card);
+  });
+}
+
+function addCool() {
+  appData.coolPoints.push({ id: genId(), title: '', chapter: '', type: 'face_slap', desc: '' });
+  refreshCoolPoints();
+  showToast('已添加爽点');
+}
+
+function updCool(idx, field, val) {
+  if (appData.coolPoints[idx]) appData.coolPoints[idx][field] = val;
+}
+
+// ===== 编辑器 =====
+function updateCharCount() {
+  var text = gid('editor').value;
+  gid('charCount').textContent = text.length + ' 字';
+}
+
+gid('editor').addEventListener('input', updateCharCount);
+
+function insTpl(type) {
+  var editor = gid('editor');
+  var templates = {
+    'enter': '\n\n【穿越进入】\n白光闪过，{名字}睁开眼睛，发现自己躺在一张古色古香的床上。\n"这里是……"她环顾四周，脑中涌入大量不属于自己的记忆。\n她穿越了。而且穿越到了——{世界名称}。\n',
+    'sweet': '\n\n【甜蜜时刻】\n他低头看着她，眼睛里有她从未见过的温柔。\n"你刚才说的事，我答应了。"\n她的心跳漏了一拍。面上却还强撑着："答应什么？我只是随便说说的。"\n他微微一笑，那笑容让她觉得，全世界都亮了。\n',
+    'face': '\n\n【打脸时刻】\n"她不过是一个废物，你凭什么护着她？"\n话音未落，一道凌厉的目光扫过来。\n那人缓缓开口，声音不大，却让整个大殿鸦雀无声：\n"就凭——她是本座的人。"\n满座皆惊。刚才说话的人，脸色瞬间煞白。\n',
+    'climax': '\n\n【高潮段落】\n所有人的目光都集中在她身上。\n她一步一步走上前，每走一步，周围的气压就低一分。\n"你们都说我是废物。"\n"说我不配待在这里。"\n她停下，回头看着那些曾经嘲笑过她的人。嘴角勾起一个冰冷的弧度。\n"那么现在呢？"\n',
+    'transition': '\n\n【场景过渡】\n转眼已是三月后。\n桃花开了又谢，而她也从一个刚穿越过来的懵懂少女，逐渐适应了这个世界的生活。\n只是她不知道，更大的风暴正在酝酿。\n'
+  };
+  var tpl = templates[type] || '';
+  if (tpl) {
+    var start = editor.selectionStart || editor.value.length;
+    editor.value = editor.value.slice(0, start) + tpl + editor.value.slice(start);
+    editor.focus();
+    updateCharCount();
+  }
+}
+
+function clearEditor() {
+  gid('editor').value = '';
+  updateCharCount();
+  showToast('编辑器已清空');
+}
+
+// ===== API 设置 =====
+function openApi() {
+  gid('apiModal').classList.add('show');
+}
+
+function closeApi() {
+  gid('apiModal').classList.remove('show');
+}
+
+function setPreset(url, model) {
+  gid('apiUrl').value = url;
+  gid('apiModel').value = model;
+}
+
+function saveApi() {
+  appData.apiUrl = gval('apiUrl');
+  appData.apiKey = gval('apiKey');
+  appData.apiModel = gval('apiModel');
+  appData.apiTemp = parseFloat(gval('apiTemp')) || 0.8;
+  appData.apiMaxTokens = parseInt(gval('apiMaxTokens')) || 4096;
+  closeApi();
+  updateApiStatus();
+  showToast('API设置已保存', 'success');
+}
+
+function normalizeApiUrl(url) {
+  url = url.replace(/\/+$/, '');
+  if (!/\/chat\/completions$/.test(url)) {
+    url += '/chat/completions';
+  }
+  return url;
+}
+
+function testAPI() {
+  var url = normalizeApiUrl(gval('apiUrl'));
+  var key = gval('apiKey');
+  var model = gval('apiModel');
+  if (!url || !key || !model) {
+    showToast('请填写完整API信息', 'error');
+    return;
+  }
+  gid('apiUrl').value = url;
+  var headers = { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + key };
+  var body = JSON.stringify({
+    model: model,
+    messages: [{role:'user',content:'你好，请回复"连接成功"'}],
+    max_tokens: 50,
+    temperature: 0.5
+  });
+  appData.apiUrl = url;
+  appData.apiKey = key;
+  appData.apiModel = model;
+  showToast('正在测试连接...');
+  fetch(url, { method: 'POST', headers: headers, body: body })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.choices && data.choices[0]) {
+        appData.apiConnected = true;
+        updateApiStatus();
+        showToast('连接成功', 'success');
+      } else if (data.error) {
+        showToast('连接失败: ' + data.error.message, 'error');
+      } else {
+        showToast('连接失败: 未知响应格式', 'error');
+      }
+    })
+    .catch(function(e) {
+      showToast('连接失败: ' + e.message, 'error');
+    });
+}
+
+function updateApiStatus() {
+  // 加载时从localStorage恢复
+  if (!appData.apiUrl && !appData.apiKey) {
+    try {
+      var raw = localStorage.getItem('zongyingshi_data');
+      if (raw) {
+        var d = JSON.parse(raw);
+        if (d.apiUrl) appData.apiUrl = d.apiUrl;
+        if (d.apiKey) appData.apiKey = d.apiKey;
+        if (d.apiModel) appData.apiModel = d.apiModel;
+      }
+    } catch(e) {}
+  }
+  if (appData.apiUrl && appData.apiKey) {
+    gid('apiUrl').value = appData.apiUrl;
+    gid('apiKey').value = appData.apiKey;
+    gid('apiModel').value = appData.apiModel || '';
+  }
+  if (appData.apiUrl && appData.apiKey && appData.apiModel) {
+    appData.apiConnected = true;
+    gid('statusDot').className = 'status-dot connected';
+    gid('statusText').textContent = '已连接 ' + appData.apiModel;
+    gid('statusText').style.color = 'var(--success)';
+  }
+}
+
+// ===== 构建系统提示词 =====
+function buildSystemPrompt(action) {
+  var parts = ['你是一位专业的网文作家，专门创作"综影视"类型的穿越爽文。'];
+
+  // 平台风格
+  var platformMap = { 'fanqie': '番茄小说', 'qimao': '七猫', 'qidian': '起点', 'jjwxc': '晋江' };
+  parts.push('目标平台：' + (platformMap[appData.selectedPlatform] || '番茄小说') + '。');
+
+  // 书籍基础设定
+  var title = gval('bookTitle');
+  var summary = gval('bookSummary');
+  if (title) parts.push('书名：《' + title + '》。');
+  if (summary) parts.push('一句话简介：' + summary + '。');
+
+  // 穿越设定
+  var crossType = gval('crossType');
+  var crossMap = { 'system': '系统流', 'reborn': '重生流', 'trans': '穿越流', 'fast': '快穿流', 'live': '直播流' };
+  parts.push('穿越类型：' + (crossMap[crossType] || '穿越流') + '。');
+
+  // 金手指
+  var cheatType = gval('cheatType');
+  var cheatDesc = gval('cheatDesc');
+  var cheatLimit = gval('cheatLimit');
+  if (cheatDesc) parts.push('金手指：' + cheatDesc + '。');
+  if (cheatLimit) parts.push('金手指限制：' + cheatLimit + '。');
+
+  // 穿越者设定
+  var mcName = gval('mcName') || '主角';
+  var mcIdentity = gval('mcIdentity');
+  var mcTrait = gval('mcTrait');
+  var mcVoice = gval('mcVoice');
+  var mcWeakness = gval('mcWeakness');
+  var mcBack = gval('mcBack');
+  parts.push('穿越者：' + mcName + '。');
+  if (mcIdentity) parts.push('身份：' + mcIdentity + '。');
+  if (mcTrait) parts.push('性格：' + mcTrait + '。');
+  if (mcVoice) parts.push('说话风格：' + mcVoice + '。');
+  if (mcWeakness) parts.push('弱点：' + mcWeakness + '。');
+  if (mcBack) parts.push('背景：' + mcBack + '。');
+
+  // 影视世界
+  if (appData.worlds.length > 0) {
+    var worldInfo = [];
+    appData.worlds.forEach(function(w, i) {
+      var info = '';
+      if (w.name) info += w.name;
+      if (w.entry) info += '（' + w.entry + '）';
+      if (w.plot) info += '，剧情：' + w.plot;
+      if (w.keyChars) info += '，关键人物：' + w.keyChars;
+      if (w.cheatForm) info += '，金手指形式：' + w.cheatForm;
+      if (w.mission) info += '，任务：' + w.mission;
+      if (info) worldInfo.push(info);
+    });
+    if (worldInfo.length > 0) {
+      parts.push('影视世界规划：');
+      worldInfo.forEach(function(wi) { parts.push('- ' + wi); });
+    }
+  }
+
+  // 当前选中的世界
+  var curWorldIdx = parseInt(gid('currentWorldSel').value);
+  if (curWorldIdx >= 0 && appData.worlds[curWorldIdx]) {
+    var cw = appData.worlds[curWorldIdx];
+    parts.push('【当前写作的世界】' + (cw.name || '第'+(curWorldIdx+1)+'个世界') + '。请严格按该世界的设定进行创作。');
+    if (cw.entry) parts.push('当前世界穿越节点：' + cw.entry + '。');
+    if (cw.keyChars) parts.push('当前世界关键人物（必须还原原剧人设）：' + cw.keyChars + '。');
+    if (cw.plot) parts.push('当前世界剧情规划：' + cw.plot + '。');
+    if (cw.mission) parts.push('当前世界任务目标：' + cw.mission + '。');
+  }
+
+  // 人物
+  if (appData.chars.length > 0) {
+    var charInfo = [];
+    appData.chars.forEach(function(c) {
+      var ci = '';
+      if (c.name) ci += c.name;
+      if (c.role) ci += '[' + c.role + ']';
+      if (c.trait) ci += '，性格：' + c.trait;
+      if (c.relation) ci += '，与主角关系：' + c.relation;
+      if (c.anchor) ci += '，原剧锚点（不可违背）：' + c.anchor;
+      if (c.arc) ci += '，关系发展线：' + c.arc;
+      if (ci) charInfo.push(ci);
+    });
+    if (charInfo.length > 0) {
+      parts.push('人物档案：');
+      charInfo.forEach(function(ci) { parts.push('- ' + ci); });
+    }
+  }
+
+  // 剧情大纲
+  var outline = gval('chapterOutline');
+  if (outline) parts.push('章节大纲：' + outline + '。');
+
+  // 事件
+  if (appData.events.length > 0) {
+    var evtInfo = [];
+    appData.events.forEach(function(ev) {
+      var ei = '';
+      if (ev.title) ei += ev.title;
+      if (ev.chapter) ei += '（第' + ev.chapter + '章）';
+      if (ev.type) ei += '[' + ev.type + ']';
+      if (ev.desc) ei += '：' + ev.desc;
+      if (ei) evtInfo.push(ei);
+    });
+    if (evtInfo.length > 0) {
+      parts.push('关键事件：');
+      evtInfo.forEach(function(ei) { parts.push('- ' + ei); });
+    }
+  }
+
+  // 爽点
+  if (appData.coolPoints.length > 0) {
+    var coolInfo = [];
+    appData.coolPoints.forEach(function(cp) {
+      var ci = '';
+      if (cp.title) ci += cp.title;
+      if (cp.chapter) ci += '（第' + cp.chapter + '章）';
+      if (cp.desc) ci += '：' + cp.desc;
+      if (ci) coolInfo.push(ci);
+    });
+    if (coolInfo.length > 0) {
+      parts.push('爽点规划：');
+      coolInfo.forEach(function(ci) { parts.push('- ' + ci); });
+    }
+  }
+
+  // 爽点类型
+  var coolMap = { 'face_slap': '打脸爽', 'solo_favor': '独宠爽', 'fate_change': '改命爽', 'crush': '碾压爽', 'revenge': '复仇爽', 'rise': '逆袭爽' };
+  parts.push('主打爽点类型：' + (coolMap[appData.selectedCoolType] || '打脸爽') + '。');
+
+  // 节奏
+  var rhythmMap = { 'fast': '快节奏（每3章一个爽点）', 'mid': '中节奏（每5-8章一个爽点）', 'slow': '慢节奏（每10章以上一个爽点）' };
+  parts.push('爽点节奏：' + (rhythmMap[appData.selectedRhythm] || '中节奏') + '。');
+
+  // 甜虐比例
+  parts.push('甜虐比例：' + appData.selectedRatio + '。');
+
+  // 写作风格
+  var povMap = { 'first': '第一人称', 'third': '第三人称', 'dual': '双视角交替', 'multi': '多视角' };
+  parts.push('叙事视角：' + (povMap[gval('narrativePOV')] || '第三人称') + '。');
+  var styleNote = gval('styleNote');
+  if (styleNote) parts.push('文风要求：' + styleNote + '。');
+
+  // 原剧尊重原则
+  parts.push('【铁律】必须遵守以下原剧尊重原则：');
+  parts.push('1. 尊重原剧基础剧情线、人物关系和世界观，不过度偏离。');
+  parts.push('2. 主角在原剧框架内选择性干预，不凭空改写原剧核心剧情。');
+  parts.push('3. 新增设定必须有机融合原剧世界观，不能突兀。');
+  parts.push('4. 原剧中未发生的情节，不得凭空编造。');
+  parts.push('5. 原剧人物核心人设不得随意篡改，必须还原角色原有的行为逻辑和性格特征。');
+  var canonRules = gval('canonRules');
+  if (canonRules) {
+    parts.push('补充原剧关键设定：');
+    parts.push(canonRules);
+  }
+
+  // 额外备注
+  var extraNote = gval('extraNote');
+  if (extraNote) parts.push('额外要求：' + extraNote + '。');
+
+  // 字数
+  var lenMap = { '500': '约500字', '1000': '约1000字', '2000': '约2000字', '3000': '约3000字' };
+  parts.push('输出字数：' + (lenMap[gval('outputLength')] || '约1000字') + '。');
+
+  // 番茄小说创作铁律
+  parts.push('【番茄小说通用铁律】');
+  parts.push('- 前300字必须有冲突或悬念。');
+  parts.push('- 短句为主，单句尽量不超过20字。');
+  parts.push('- 多对话，少描述，强画面感，强情绪。');
+  parts.push('- 每段不超过3行。');
+  parts.push('- 严禁文艺腔、大段环境描写、作者评论。');
+  parts.push('- 结束必须有钩子（悬念/新信息/反转）。');
+
+  return parts.join('\n');
+}
+
+// ===== AI 动作提示词 =====
+function getActionPrompt(action) {
+  var prompts = {
+    'gen_worlds': '请根据设定，规划完整的影视世界穿梭顺序。输出每个世界的名称、进入方式、核心剧情、任务目标和收尾方式。确保世界之间的过渡自然合理。',
+    'gen_chars': '请根据已设定的影视世界，生成每个世界中的关键人物档案。包括：角色在原剧中的定位、与穿越者的关系、性格锚点（不可违背的原剧人设）、以及关系发展线。',
+    'gen_plot': '请根据设定和影视世界，生成完整的章节剧情线。分世界列出大纲，包括每个世界的进入方式、布局阶段、冲突升级、高潮收尾。',
+    'gen_cool_plan': '请根据目前所有设定，规划完整的爽点分布。按照指定的节奏（每X章一个爽点），列出每个爽点的章节位置、类型、内容和预期读者反应。',
+    'write_enter': '请写穿越进入场景。主角刚穿过来的第一反应、环境描写、记忆融合、第一次接触原剧角色。要突出金手指的特殊性和与原剧世界的差异感。不要超过设定字数。',
+    'write_chapter': '请根据大纲和当前世界的设定，按顺序写一章内容。注意推进剧情、埋设伏笔、保持角色一致性、结尾留钩子。不要超过设定字数。',
+    'write_cool': '请写一个高潮爽点场景。要制造前期压抑→积累期待→爆发释放的完整情绪曲线。爽点类型为设定中的主打类型。当场打脸、当场释放。不要超过设定字数。',
+    'write_char_scene': '请根据当前世界的关键人物和穿越者设定，写一个以人物互动为核心推进的场景。你要还原原剧角色的核心人设和说话风格，同时展现穿越者与角色的化学反应。不要超过设定字数。',
+    'write_face': '请写一个打脸场景。前期制造轻视/羞辱，中间积蓄压力，最后主角亮出实力/身份/底牌，全场震惊。要求：打脸要有铺垫，反转要合理，爽感要拉满。不要超过设定字数。',
+    'write_sweet': '请写一个甜蜜互动场景。注意：甜不是直白说"我爱你"，而是通过细节、动作、眼神、留白来体现。要有暧昧的拉锯感。不要超过设定字数。',
+    'write_full': '请综合所有设定（世界、人物、大纲、爽点、风格），写一章完整内容。这是最重要的全设定综合写作模式，务必充分利用所有已提供的设定信息。不要超过设定字数。',
+    'write_ending': '请为当前世界写收尾章节。前期所有伏笔这里回收、所有矛盾这里解决、给出一个让读者满足的结局。同时为下一个世界做铺垫。不要超过设定字数。',
+    'continue': '请续写编辑器中的内容。保持之前的文风、人设、剧情连贯性，从当前断点无缝衔接继续写。需要先理解已写内容的情节进展和情绪位置，再自然地推进。不要超过设定字数。',
+    'rewrite_fate': '请写一个改写原剧命运的段落。在原剧框架内（不违背基础剧情线和人物关系），通过穿越者的干预让某个角色的命运走向不同的方向。要求：干预要合理、不突兀、让读者觉得"本该如此"。不要超过设定字数。',
+    'dual_pov': '请用双视角交替的方式写一个场景。从穿越者和另一个关键角色各自的视角，呈现同一场景中完全不同的内心感受。两个视角要有信息差——读者知道两边在想什么，但他们彼此不知道。不要超过设定字数。',
+    'system_task': '请写一个系统发布任务的场景。系统界面出现→任务描述→奖励预览→主角的心理反应→执行任务的过程。系统风格要与穿越类型匹配。不要超过设定字数。',
+    'cheat_scene': '请写一个金手指使用的场景。结合金手指的设定和限制条件，展现主角利用金手指解决困境的智慧。注意：不是简单粗暴开挂，而是有策略地使用，让读者觉得聪明。不要超过设定字数。',
+    'villain_fall': '请写一个反派落败的场景。注意：反派不能是纯粹的工具人，要有自己的逻辑和挣扎。落败的过程要有层次——从嘴硬到动摇到崩溃。主角的胜利要有智力含量。不要超过设定字数。',
+    'world_transition': '请写一个世界过渡场景。前一个世界收尾之后，主角进入下一个世界的过渡阶段。包括：系统结算/任务奖励/新世界预告/主角的心理调整。要自然地桥接两个世界。不要超过设定字数。',
+    'review': '请对编辑器中的内容进行爽点诊断。分析：爽点密度、爽点类型分布、情绪曲线是否合理、是否有延迟满足、打脸是否有铺垫。给出具体修改建议。',
+    'enhance': '请对编辑器中的内容进行爽感增强。保持原有剧情不变，在关键位置增加爽点释放的力度：强化对比、放慢爆发瞬间、增加旁观者反应、丰富打脸细节。直接输出修改后的版本。',
+    'check_ooc': '请对照原剧角色设定，检查编辑器中的内容是否存在OOC（角色崩坏）问题。分析每个原剧角色的行为是否符合其核心人设，指出不符合之处并给出修改建议。',
+    'rhythm': '请对编辑器中的内容进行节奏诊断。分析：快慢段落分布、对话与描写的比例、读者情绪曲线起伏、是否有拖沓段落、是否有赶进度的问题。给出具体调整建议。',
+    'custom': ''
+  };
+  return prompts[action] || '';
+}
+
+// ===== AI 通信 =====
+function sendAI(action) {
+  var apiUrl = normalizeApiUrl(appData.apiUrl || gval('apiUrl'));
+  var apiKey = appData.apiKey || gval('apiKey');
+  var apiModel = appData.apiModel || gval('apiModel');
+
+  if (!apiUrl || !apiKey || !apiModel) {
+    showToast('请先设置API（点击顶部"API设置"按钮）', 'error');
+    return;
+  }
+
+  var editorText = gid('editor').value;
+  var systemPrompt = buildSystemPrompt(action);
+  var actionPrompt = getActionPrompt(action);
+  var customInput = gval('aiInput');
+
+  var userContent = '';
+  if (action === 'custom') {
+    if (!customInput.trim()) {
+      showToast('请输入问题或要求', 'error');
+      return;
+    }
+    userContent = customInput;
+    if (editorText.trim()) {
+      userContent += '\n\n---\n以下是编辑器中的当前内容，供你参考：\n' + editorText;
+    }
+    gid('aiInput').value = '';
+  } else if (action === 'continue') {
+    userContent = actionPrompt + '\n\n---\n以下是编辑器中的当前内容，请从这里续写：\n' + editorText;
+  } else if (action === 'review' || action === 'enhance' || action === 'check_ooc' || action === 'rhythm') {
+    userContent = actionPrompt + '\n\n---\n以下是需要分析的内容：\n' + editorText;
+  } else {
+    userContent = actionPrompt;
+    if (editorText.trim()) {
+      userContent += '\n\n---\n以下是编辑器中的当前内容（供参考上下文，请按设定写新内容而非修改已有内容）：\n' + editorText;
+    }
+  }
+
+  // 对话历史
+  var messages = [{ role: 'system', content: systemPrompt }];
+  // 取最近6轮对话
+  var recentHistory = appData.chatHistory.slice(-12);
+  recentHistory.forEach(function(msg) {
+    messages.push({ role: msg.role, content: msg.content });
+  });
+  messages.push({ role: 'user', content: userContent });
+
+  // 标签
+  var actionLabels = {
+    'gen_worlds': '生成世界规划', 'gen_chars': '生成人物档案', 'gen_plot': '生成剧情线',
+    'gen_cool_plan': '生成爽点规划', 'write_enter': '写穿越进入', 'write_chapter': '按大纲写章节',
+    'write_cool': '按爽点写高潮', 'write_char_scene': '按人物写场景', 'write_face': '写打脸场景',
+    'write_sweet': '写甜蜜互动', 'write_full': '全设定综合写', 'write_ending': '写世界收尾',
+    'continue': 'AI续写', 'rewrite_fate': '改写原剧命运', 'dual_pov': '双视角切换',
+    'system_task': '系统任务场景', 'cheat_scene': '金手指使用', 'villain_fall': '反派落败',
+    'world_transition': '世界过渡', 'review': '爽点诊断', 'enhance': '增强爽感',
+    'check_ooc': 'OOC检查', 'rhythm': '节奏诊断', 'custom': customInput || '自由提问'
+  };
+  var label = actionLabels[action] || 'AI请求';
+
+  addMsg('user', userContent, label);
+
+  // Loading
+  var loadingId = addLoadingMsg();
+
+  var headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer ' + apiKey
+  };
+  var body = JSON.stringify({
+    model: apiModel,
+    messages: messages,
+    max_tokens: appData.apiMaxTokens || 4096,
+    temperature: appData.apiTemp || 0.8
+  });
+
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: headers,
+    body: body
+  })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      removeLoadingMsg(loadingId);
+      var reply = '';
+      if (data.choices && data.choices[0] && data.choices[0].message) {
+        reply = data.choices[0].message.content;
+      } else if (data.error) {
+        reply = '【错误】' + data.error.message;
+      } else {
+        reply = '【错误】未知响应格式，请检查API设置。';
+      }
+      addMsg('assistant', reply, 'AI回复');
+      appData.chatHistory.push({ role: 'user', content: userContent });
+      appData.chatHistory.push({ role: 'assistant', content: reply });
+    })
+    .catch(function(e) {
+      removeLoadingMsg(loadingId);
+      addMsg('assistant', '【网络错误】' + e.message + '\n\n请确认：\n1. 是否通过 http://localhost 打开（不能双击HTML文件直接打开）\n2. API地址和Key是否正确\n3. 网络是否可访问API', '错误');
+    });
+}
+
+// ===== 聊天UI =====
+function addMsg(role, content, label) {
+  var chat = gid('aiChat');
+  var msg = document.createElement('div');
+  msg.className = 'msg msg-' + role;
+  var html = '';
+  if (label) html += '<div class="msg-label">' + escHtml(label) + '</div>';
+  html += '<div class="msg-content">' + escHtml(content) + '</div>';
+  if (role === 'assistant' && content.length > 50 && !content.startsWith('【错误】') && !content.startsWith('【网络错误】')) {
+    html += '<div class="msg-actions"><button class="btn btn-outline btn-xs" onclick="copyToEditor(this)">插入编辑器</button></div>';
+  }
+  msg.innerHTML = html;
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function addLoadingMsg() {
+  var chat = gid('aiChat');
+  var id = genId();
+  var msg = document.createElement('div');
+  msg.className = 'msg msg-ai msg-loading';
+  msg.setAttribute('data-loading-id', id);
+  msg.innerHTML = '<div class="loading-dots"><span></span><span></span><span></span></div><div class="loading-text">AI正在生成中...</div>';
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+  return id;
+}
+
+function removeLoadingMsg(id) {
+  var el = document.querySelector('[data-loading-id="' + id + '"]');
+  if (el) el.remove();
+}
+
+function renderChat() {
+  var chat = gid('aiChat');
+  chat.innerHTML = '';
+  appData.chatHistory.forEach(function(msg) {
+    var role = msg.role === 'user' ? 'user' : 'ai';
+    var label = role === 'user' ? '你' : 'AI';
+    var div = document.createElement('div');
+    div.className = 'msg msg-' + (role === 'user' ? 'user' : 'ai');
+    div.innerHTML = '<div class="msg-label">' + label + '</div><div class="msg-content">' + escHtml(msg.content) + '</div>';
+    if (role === 'ai' && msg.content.length > 50) {
+      div.innerHTML += '<div class="msg-actions"><button class="btn btn-outline btn-xs" onclick="copyToEditor(this)">插入编辑器</button></div>';
+    }
+    chat.appendChild(div);
+  });
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function copyToEditor(btn) {
+  var msgEl = btn.closest('.msg');
+  if (!msgEl) return;
+  var contentEl = msgEl.querySelector('.msg-content');
+  if (!contentEl) return;
+  var text = contentEl.textContent;
+  var editor = gid('editor');
+  editor.value = editor.value + '\n\n' + text + '\n';
+  updateCharCount();
+  showToast('已插入编辑器', 'success');
+  editor.focus();
+  editor.scrollTop = editor.scrollHeight;
+}
+
+function clearChat() {
+  appData.chatHistory = [];
+  gid('aiChat').innerHTML = '';
+  showToast('聊天已清除');
+}
+
+// ===== 知识库 =====
+function showKB() {
+  var content = gid('kbContent');
+  content.innerHTML = '' +
+    '<h3>一、综影视核心概念</h3>' +
+    '<p>综影视 = 综合影视同人。一个角色穿梭于多个影视世界，在每个世界中完成任务、改变剧情、收获感情。核心要素：穿越系统 + 金手指 + 多个世界 + 原剧尊重。</p>' +
+    '<h3>二、综影视黄金结构</h3>' +
+    '<table><tr><th>阶段</th><th>占比</th><th>内容</th></tr>' +
+    '<tr><td>穿越进入</td><td>5%</td><td>快速建立世界观，展示金手指</td></tr>' +
+    '<tr><td>融入与布局</td><td>30%</td><td>与原剧角色互动、积累资源</td></tr>' +
+    '<tr><td>冲突升级</td><td>30%</td><td>主动改写原剧关键事件</td></tr>' +
+    '<tr><td>高潮反转</td><td>25%</td><td>最终事件解决、爽点集中爆发</td></tr>' +
+    '<tr><td>收尾过渡</td><td>10%</td><td>结算任务、为下一世界铺垫</td></tr></table>' +
+    '<h3>三、番茄平台铁律</h3>' +
+    '<p>1. 前300字必须有冲突或悬念<br>2. 每章结尾必须有钩子<br>3. 每3章一个小高潮，每10章一个大反转<br>4. 短句为主（≤20字），多对话，强画面<br>5. 严禁文艺腔、大段环境描写、作者评论<br>6. 单章1500-2500字（番茄碎片化阅读习惯）</p>' +
+    '<h3>四、综影视爽点类型</h3>' +
+    '<table><tr><th>类型</th><th>模式</th><th>示例</th></tr>' +
+    '<tr><td>打脸爽</td><td>被轻视 → 亮实力 → 全场惊</td><td>皇子以为她是废物，她当场炼丹</td></tr>' +
+    '<tr><td>独宠爽</td><td>众人求而不得 → 只对她特别</td><td>高冷仙尊只对她笑</td></tr>' +
+    '<tr><td>改命爽</td><td>原剧悲剧改写 → 新结局</td><td>安陵容不再依附甄嬛</td></tr>' +
+    '<tr><td>碾压爽</td><td>跨世界知识降维打击</td><td>用现代医学碾压古代太医</td></tr>' +
+    '<tr><td>复仇爽</td><td>前世今生的清算</td><td>带着记忆找背叛者算账</td></tr>' +
+    '<tr><td>逆袭爽</td><td>从底层一步步爬到顶端</td><td>从宫女到掌控全局</td></tr></table>' +
+    '<h3>五、原剧尊重原则</h3>' +
+    '<blockquote>综影视最大禁忌是OOC（角色崩坏）。原剧角色的核心人设不可篡改——华妃必须嚣张、甄嬛必须聪明、蓝忘机必须话少。在此基础上，通过穿越者的干预让故事走向新的可能。</blockquote>' +
+    '<h3>六、金手指设计原则</h3>' +
+    '<p>1. 有上限——不能无限使用<br>2. 有代价——越强大的能力代价越大<br>3. 有成长——随着剧情推进逐步解锁<br>4. 有机融合——不能破坏原剧世界观</p>';
+  gid('kbModal').classList.add('show');
+}
+
+// ===== 辅助函数 =====
+function escHtml(str) {
+  if (!str) return '';
+  str = String(str);
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function escAttr(str) {
+  if (!str) return '';
+  str = String(str);
+  return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// ===== 快捷键 =====
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && e.key === 'Enter') {
+    e.preventDefault();
+    gid('editor').focus();
+    sendAI('continue');
+  }
+  if (e.ctrlKey && e.key === 's') {
+    e.preventDefault();
+    saveAll();
+  }
+});
+
+// ===== 初始化 =====
+(function init() {
+  loadAll();
+  updateApiStatus();
+})();
+</script>
+</body>
+</html>

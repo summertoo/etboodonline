@@ -263,6 +263,16 @@ export const projects: Project[] = [
     helpUrl: "#guide",
   },
   {
+    id: "dapp-collab-ai",
+    title: "Fic Collab AI",
+    titleKey: "dapp.collabai",
+    descKey: "dapp.collabaiDesc",
+    category: "dapp",
+    status: "live",
+    logoUrl: "/avatars/writetool.png",
+    liveUrl: "/writetool/zysxz.html",
+  },
+  {
     id: "opc-hub",
     title: "OPC Hub",
     descKey: "dapp.ruokDesc",
