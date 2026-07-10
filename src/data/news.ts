@@ -31,6 +31,236 @@ export const newsCategoryMeta: Record<
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-10-hot",
+    date: "2026-07-10",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-10",
+      en: "🔥 Hot Topics · Jul 10, 2026",
+    },
+    summary: {
+      zh: "台风巴威预计登陆，中央气象台三预警齐发，北京发布暴雨橙色预警；法国2-0摩洛哥晋级四强，姆巴佩刷新8大纪录；福建晋江鞋厂火灾致28死，负责人被控制；贵港动物园3只狮子溺亡，解放军军车驰援；兰州机场捕鼠办是一家三口狸花猫；上海48个玻璃雕像被指诡异；日本遗孤后代长期反华引热议；哈兰德声援姆巴佩；中国试射潜射导弹美日澳新吵四天；大疆免费维修广西救援无人机。",
+      en: "Typhoon Bavi to make landfall, triple warnings issued, Beijing orange rain alert; France 2-0 Morocco reach semi-finals, Mbappe breaks 8 World Cup records; 28 dead in Fujian shoe factory fire, owner detained; 3 lions drown in Guangxi zoo flood, PLA trucks deploy; Lanzhou airport 'mouse patrol' is a family of 3 cats; Shanghai's 48 eerie glass statues spark debate; Japan war orphan's descendant sparks backlash for anti-China stance; Haaland backs Mbappe; China SLBM test sparks 4-day US-Japan-Aus-NZ row; DJI offers free drone repairs for Guangxi rescue efforts.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "台风巴威预计登陆，三预警齐发，北京暴雨橙色预警",
+          en: "Typhoon Bavi to Land, Triple Warnings, Beijing Orange Alert",
+        },
+        description: {
+          zh: "中央气象台发布台风橙色、暴雨黄色、强对流蓝色三预警。台风巴威预计7月11日登陆浙闽沿海。北京发布今年首个全市暴雨橙色预警，10-12日有大暴雨。圆通中通韵达等快件将延误。",
+          en: "China issues typhoon orange, rain yellow, and severe convection blue warnings. Typhoon Bavi expected to hit Zhejiang-Fujian coast Jul 11. Beijing issues first citywide orange rain alert. Express deliveries delayed.",
+        },
+      },
+      {
+        title: {
+          zh: "法国2-0摩洛哥晋级四强，姆巴佩刷新8大纪录",
+          en: "France 2-0 Morocco Reach Semis, Mbappe Breaks 8 Records",
+        },
+        description: {
+          zh: "世界杯1/4决赛法国2-0淘汰摩洛哥率先晋级四强。姆巴佩传射建功刷新8大世界杯纪录，包括连续5场进球等。赛后姆巴佩回应脚踝伤势无碍。马克龙发文为法国队骄傲。",
+          en: "France beats Morocco 2-0 in World Cup QF to reach semis. Mbappe scores and assists, breaking 8 World Cup records. Macron celebrates, Mbappe says ankle injury is fine.",
+        },
+      },
+      {
+        title: {
+          zh: "福建晋江鞋厂火灾致28死，负责人被控制",
+          en: "28 Dead in Fujian Shoe Factory Fire, Owner Detained",
+        },
+        description: {
+          zh: "福建晋江辉腾鞋业公司厂房发生火灾造成28人死亡。企业负责人和相关负责人已被控制，企业账户已冻结。该厂年产约300万双鞋。",
+          en: "A fire at Fujian Jinjiang's Huiteng Shoe factory kills 28. Company owner and management detained, accounts frozen. Factory produced ~3M pairs of shoes annually.",
+        },
+      },
+      {
+        title: {
+          zh: "贵港动物园3只狮子溺亡，解放军军车驰援",
+          en: "3 Lions Drown in Guiyang Zoo Flood, PLA Deploys",
+        },
+        description: {
+          zh: "广西贵港动物园因洪灾3只狮子溺亡，草食动物几乎全部被冲走，幸存狮子被洪水吓呆。解放军和武警部队奔赴贵港抢险，军车一眼望不到头。",
+          en: "3 lions drown, nearly all herbivores swept away in Guangxi zoo flood. Survivors traumatized. PLA and armed police deploy massive rescue convoy to Guigang.",
+        },
+      },
+      {
+        title: {
+          zh: "兰州机场捕鼠办是一家三口狸花猫",
+          en: "Lanzhou Airport 'Mouse Patrol' Is a Family of 3 Cats",
+        },
+        description: {
+          zh: "兰州中川机场捕鼠办现有三只狸花猫是一家三口，住在玻璃墙猫舍内由专人照顾。网友大赞暖心。",
+          en: "Lanzhou Zhongchuan Airport's 'mouse patrol office' consists of 3 tabby cats - a family of three. Housed in a glass cat room with dedicated caretakers.",
+        },
+      },
+      {
+        title: {
+          zh: "上海一景区48个玻璃人形雕像被指诡异",
+          en: "Shanghai's 48 Eerie Glass Statues Spark Debate",
+        },
+        description: {
+          zh: "上海东方绿舟景区48个彩色玻璃人形雕像被游客吐槽模样怪异吓人。景区回应称该雕塑为法国艺术家2010年创作，旨在体现人与自然的对话。",
+          en: "48 colored glass humanoid statues at Shanghai's Oriental Land resort called 'creepy' by visitors. Venue says they're 2010 French artwork about human-nature dialogue.",
+        },
+      },
+      {
+        title: {
+          zh: "日本遗孤后代反华引热议",
+          en: "Japan War Orphan's Descendant's Anti-China Stance Sparks Outrage",
+        },
+        description: {
+          zh: "日本裔媒体人矢板明夫作为被中国家庭抚养的日本遗孤后代，常年与台独势力勾结发表反华言论，近日在活动现场被男子挥拳击中面部。",
+          en: "Yaita Akio, a Japan war orphan descendant raised by a Chinese family, long known for anti-China and pro-Taiwan independence rhetoric, was punched at a event.",
+        },
+      },
+      {
+        title: {
+          zh: "哈兰德声援姆巴佩：罚点球等5分钟太久",
+          en: "Haaland Backs Mbappe: '5-Minute Penalty Wait Too Long'",
+        },
+        description: {
+          zh: "法国vs摩洛哥比赛中姆巴佩主罚点球因VAR介入等待5分钟后罚丢。哈兰德发文声援：罚一个点球需要等5分钟还是太久了。",
+          en: "Mbappe misses a penalty after a 5-minute VAR delay in France vs Morocco. Haaland voices support: 'Waiting 5 minutes for a penalty is too long.'",
+        },
+      },
+      {
+        title: {
+          zh: "中国试射潜射导弹，美日澳新吵四天",
+          en: "China SLBM Test Sparks 4-Day US-Japan-Aus-NZ Row",
+        },
+        description: {
+          zh: "中国向太平洋成功试射潜射战略导弹后，美日澳新等国相继表达关切，质疑中方通报程序。评论员：日本要习惯中国不再惯着。",
+          en: "After China's successful SLBM test, US, Japan, Australia, NZ express concerns over notification procedures. Commentator: 'Japan must get used to China not pandering.'",
+        },
+      },
+      {
+        title: {
+          zh: "大疆：免费维修参与广西救援无人机",
+          en: "DJI Offers Free Repairs for Guangxi Rescue Drones",
+        },
+        description: {
+          zh: "大疆宣布为参与广西洪水救援的无人机提供免费维修服务，飞手可凭救援飞行记录或飞行日志作为凭证。",
+          en: "DJI offers free repair service for drones used in Guangxi flood rescue operations. Pilots can provide flight logs as proof of rescue missions.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-10",
+    date: "2026-07-10",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-10",
+      en: "🤖 AI Daily · Jul 10, 2026",
+    },
+    summary: {
+      zh: "OpenAI推出ChatGPT Work跨应用自主智能体，发布GPT-5.6最强模型；蚂蚁灵波连续开源LingBot-World 2.0世界模型与LingBot-Video MoE视频基模；微软发布Flint面向AI智能体的可视化语言；Claude推出反思功能Beta；Google推出LiteRT.js Web AI推理运行时；Elon Musk称赞Anthropic为AI领导者并承诺不切断算力；特斯拉Optimus Gen 3定型即将量产；Ollama开发者达890万完成B轮融资；Bun被Anthropic收购后用Rust重写月下载2200万。",
+      en: "OpenAI launches ChatGPT Work cross-app autonomous agent & GPT-5.6; Ant Group open-sources LingBot-World 2.0 & LingBot-Video MoE; Microsoft unveils Flint visual language for AI agents; Claude introduces Reflect feature Beta; Google launches LiteRT.js web AI inference; Elon Musk praises Anthropic as AI leader, promises not to cut compute; Tesla Optimus Gen 3 finalized for production; Ollama reaches 8.9M developers, closes Series B; Bun rewritten in Rust after Anthropic acquisition, now 22M monthly downloads.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI推出ChatGPT Work跨应用自主AI智能体",
+          en: "OpenAI Launches ChatGPT Work Cross-App Autonomous Agent",
+        },
+        description: {
+          zh: "ChatGPT Work能跨应用和文件收集信息，将复杂项目分解为小步骤独立完成并持续工作数小时，内置Codex技术，每周超500万用户使用。",
+          en: "ChatGPT Work collects info across apps and files, breaks complex projects into steps, works autonomously for hours. Built on Codex, 5M+ weekly users.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI发布GPT-5.6最强模型",
+          en: "OpenAI Releases GPT-5.6, Their Best Model Yet",
+        },
+        description: {
+          zh: "Sam Altman称GPT-5.6为有史以来最好的模型。美国商务部此前已批准其大规模发布，三版本Sol、Terra和Luna面向公众推出。",
+          en: "Sam Altman calls GPT-5.6 'our best model ever.' US Commerce Dept approved mass release. Three variants: Sol, Terra, and Luna now available.",
+        },
+      },
+      {
+        title: {
+          zh: "蚂蚁灵波开源LingBot-World 2.0与LingBot-Video MoE",
+          en: "Ant Open-Sources LingBot-World 2.0 & LingBot-Video MoE",
+        },
+        description: {
+          zh: "蚂蚁灵波开源14B参数实时交互世界模型LingBot-World 2.0，以及全球首个面向具身智能的MoE视频基模LingBot-Video（30B参数，推理仅激活3B）。",
+          en: "Ant's Robbyant open-sources LingBot-World 2.0 (14B) real-time world model and LingBot-Video, the first MoE video foundation model for embodied AI (30B params, 3B active).",
+        },
+      },
+      {
+        title: {
+          zh: "微软发布Flint：面向AI智能体的可视化语言",
+          en: "Microsoft Unveils Flint: Visual Language for AI Agents",
+        },
+        description: {
+          zh: "微软研究院推出Flint可视化中间语言，让AI智能体通过简洁的人类可编辑spec自动生成美观图表，支持坐标轴、配色、布局等底层参数推导。",
+          en: "Microsoft Research introduces Flint, a visual intermediate language for AI agents to auto-generate charts from human-editable specs, handling axes, colors, layouts.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude推出反思功能Beta",
+          en: "Claude Launches Reflect Feature Beta",
+        },
+        description: {
+          zh: "Anthropic为Claude推出反思功能Beta，用户可回顾过去1-12个月的活动总结，涵盖关键主题、使用频率和任务类型，帮助追踪使用模式。",
+          en: "Anthropic launches Claude Reflect Beta, letting users review 1-12 month activity summaries covering key topics, frequency, and task types.",
+        },
+      },
+      {
+        title: {
+          zh: "Google推出LiteRT.js高性能Web AI推理运行时",
+          en: "Google Launches LiteRT.js High-Performance Web AI Runtime",
+        },
+        description: {
+          zh: "LiteRT.js是LiteRT跨平台边缘AI运行时的JavaScript版本，可在浏览器中直接运行机器学习模型，基于WebGPU加速。",
+          en: "LiteRT.js brings LiteRT's cross-platform edge AI runtime to JavaScript, running ML models directly in browsers with WebGPU acceleration.",
+        },
+      },
+      {
+        title: {
+          zh: "Elon Musk称赞Anthropic并承诺不切断算力",
+          en: "Elon Musk Praises Anthropic, Promises Not to Cut Compute",
+        },
+        description: {
+          zh: "Elon Musk在X上承认此前对Anthropic判断有误，称其显然是当前AI领域领导者，盛赞Mythos/Fable模型目前最好，并承诺不会恶意切断其计算资源。",
+          en: "Musk admits he was wrong about Anthropic, calling it 'clearly the AI leader' and Mythos/Fable 'the best models.' Promises not to cut off their compute.",
+        },
+      },
+      {
+        title: {
+          zh: "特斯拉Optimus Gen 3初步定型即将量产",
+          en: "Tesla Optimus Gen 3 Finalized for Mass Production",
+        },
+        description: {
+          zh: "特斯拉Optimus Gen 3经马斯克评审通过即将量产，要求供应商9月产能达1000台/周，年底升至2000-2500台/周，届时年产能可达10万台。",
+          en: "Tesla's Optimus Gen 3 humanoid robot passes Musk's review. Supply chain target: 1K/week by Sep, 2-2.5K/week by year-end, reaching 100K annual capacity.",
+        },
+      },
+      {
+        title: {
+          zh: "Ollama开发者达890万，完成B轮融资",
+          en: "Ollama Reaches 8.9M Developers, Closes Series B",
+        },
+        description: {
+          zh: "Ollama拥有890万开发者、6.7万集成，让开源模型在本地或云端轻松运行。B轮融资由Theory领投。",
+          en: "Ollama now has 8.9M developers and 67K integrations for running open-source models locally or in cloud. Series B led by Theory Ventures.",
+        },
+      },
+      {
+        title: {
+          zh: "Bun被Anthropic收购后用Rust重写，月下载超2200万",
+          en: "Bun Rewritten in Rust After Anthropic Acquisition, 22M Downloads",
+        },
+        description: {
+          zh: "Bun于2025年12月被Anthropic收购，作者使用Claude Fable 5进行了大量Rust重写。目前CLI月下载超2200万次。",
+          en: "Bun acquired by Anthropic in Dec 2025, rewritten in Rust using Claude Fable 5. Now surpasses 22M monthly CLI downloads.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-09-hot",
     date: "2026-07-09",
     title: {
