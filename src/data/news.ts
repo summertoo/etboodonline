@@ -1,4 +1,13 @@
-export type NewsCategory = "ai-daily" | "hot-news";
+import type { NewsCategory } from "@/data/news-meta";
+
+export type { NewsCategory } from "@/data/news-meta";
+export { newsCategoryMeta } from "@/data/news-meta";
+
+export interface NewsSource {
+  title: string;
+  url: string;
+  publisher?: string;
+}
 
 export interface NewsItem {
   id: string;
@@ -9,25 +18,10 @@ export interface NewsItem {
   items: {
     title: { zh: string; en: string };
     description: { zh: string; en: string };
+    sources?: NewsSource[];
   }[];
+  sources?: NewsSource[];
 }
-
-export const newsCategoryMeta: Record<
-  NewsCategory,
-  {
-    label: { zh: string; en: string };
-    badgeClassName: string;
-  }
-> = {
-  "ai-daily": {
-    label: { zh: "AI 日报", en: "AI Daily" },
-    badgeClassName: "bg-orange-50 text-orange-700",
-  },
-  "hot-news": {
-    label: { zh: "热点新闻", en: "Hot News" },
-    badgeClassName: "bg-rose-50 text-rose-700",
-  },
-};
 
 export const newsList: NewsItem[] = [
   {

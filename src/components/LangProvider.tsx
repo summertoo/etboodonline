@@ -16,13 +16,13 @@ interface LangContextType {
 }
 
 const LangContext = createContext<LangContextType>({
-  lang: "en",
+  lang: "zh",
   toggleLang: () => {},
   t: (key: string) => key,
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>("en");
+  const [lang, setLang] = useState<Lang>("zh");
   const [mounted, setMounted] = useState(false);
 
   // Detect language on first mount

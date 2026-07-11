@@ -4,6 +4,7 @@ import { CardContent, Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import { useLang } from "@/components/LangProvider";
+import AdSlot from "@/components/AdSlot";
 
 export default function Blog() {
   const { t, lang } = useLang();
@@ -17,7 +18,7 @@ export default function Blog() {
           ? "在登链社区连载的 Sui Move 开发系列教程，从零基础到实战项目。"
           : "A Sui Move development tutorial series on LearnBlockchain, from beginner to real-world projects.",
       platform: "登链社区",
-      url: "https://learnblockchain.cn/column/47",
+      url: `/${lang}/project/article-sui-move-series`,
       category: "tutorial",
     },
     {
@@ -28,7 +29,7 @@ export default function Blog() {
           ? "星航计划实战项目，从零开发 Web3 去中心化任务平台 DApp。"
           : "Star Voyage project: building a decentralized task platform DApp on Web3.",
       platform: "登链社区",
-      url: "https://learnblockchain.cn/column/43",
+      url: `/${lang}/project/article-detask`,
       category: "tutorial",
     },
   ];
@@ -42,7 +43,7 @@ export default function Blog() {
           ? "一个程序员意外穿越到平民世界，用代码思维解决古代生活难题的故事。连载于番茄小说。"
           : "A web novel about a coder who transmigrates to the common people's world. Serialized on Fanqie Novel.",
       platform: "番茄小说",
-      url: "https://fanqienovel.com/page/7516472366981975102",
+      url: `/${lang}/project/novel-coder-transmigrate`,
     },
     {
       id: "warlord-heroes",
@@ -52,7 +53,7 @@ export default function Blog() {
           ? "重温经典武侠，群雄逐鹿的江湖故事。连载于番茄小说。"
           : "Relive classic wuxia tales of heroes contending for supremacy. Serialized on Fanqie Novel.",
       platform: "番茄小说",
-      url: "https://fanqienovel.com/page/7631541666125450302",
+      url: `/${lang}/project/novel-warlord-heroes`,
     },
     {
       id: "mulan-first-battle",
@@ -79,6 +80,11 @@ export default function Blog() {
             {t("blog.subtitle")}
           </p>
         </section>
+
+        <AdSlot
+          slot={process.env.NEXT_PUBLIC_ADSENSE_CONTENT_SLOT}
+          label={lang === "zh" ? "广告" : "Advertisement"}
+        />
 
         <section className="py-12">
           <h3 className="text-3xl font-bold text-center mb-2 cyber-title">
@@ -111,8 +117,12 @@ export default function Blog() {
                     </span>
                     <a
                       href={article.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={article.url.startsWith("http") ? "_blank" : undefined}
+                      rel={
+                        article.url.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                     >
                       <Button className="cyber-button-small">
                         {t("articles.read")}
@@ -154,8 +164,12 @@ export default function Blog() {
                     </span>
                     <a
                       href={novel.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={novel.url.startsWith("http") ? "_blank" : undefined}
+                      rel={
+                        novel.url.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                     >
                       <Button className="cyber-button-small">
                         {t("novels.read")}

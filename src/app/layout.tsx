@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "@/components/component/homepage.css";
 import { Providers } from "./providers";
 import "./globals.css";
 import {
-  breadcrumbJsonLd,
   organizationJsonLd,
-  sectionListJsonLd,
   siteConfig,
   websiteJsonLd,
 } from "@/lib/seo";
+import LegalFooter from "@/components/LegalFooter";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -56,9 +54,6 @@ export const metadata: Metadata = {
     },
   },
   category: "technology",
-  other: {
-    "llms.txt": "/llms.txt",
-  },
 };
 
 export default function RootLayout({
@@ -70,62 +65,24 @@ export default function RootLayout({
     <html lang="zh-CN" suppressHydrationWarning>
       <head />
       <body>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-MPXWZKWM9W"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-MPXWZKWM9W');
-            `,
-          }}
-        />
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9035468310087485"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        <Script
+        <script
           id="schema-org"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
-        <Script
+        <script
           id="website-schema"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteJsonLd),
           }}
         />
-        <Script
-          id="section-list-schema"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(sectionListJsonLd),
-          }}
-        />
-        <Script
-          id="breadcrumb-schema"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(breadcrumbJsonLd),
-          }}
-        />
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <LegalFooter />
+        </Providers>
       </body>
     </html>
   );

@@ -11,6 +11,7 @@ import ProjectActions from "@/components/ProjectActions";
 import { HelpDialog } from "@/components/HelpDialog";
 import TrackedProjectButton from "@/components/TrackedProjectButton";
 import {
+  getProjectDetailPath,
   projects,
   type Category,
   type Status,
@@ -174,54 +175,17 @@ export default function ProjectPage() {
   };
 
   const getActionButton = (p: Project) => {
-    if (p.status === "coming") {
-      return (
-        <Button className="cyber-button-small" disabled>
-          {t("project.comingSoon")}
-        </Button>
-      );
-    }
-
-    if ((p.category === "roblox" || p.category === "webgame") && p.liveUrl) {
-      return (
-        <TrackedProjectButton
-          projectId={p.id}
-          href={p.liveUrl}
-          sourcePage="project"
-          className="cyber-button-small"
-        >
-          {t("project.play")}
-        </TrackedProjectButton>
-      );
-    }
-
-    if (p.category === "article" || p.category === "novel") {
-      return (
-        <TrackedProjectButton
-          projectId={p.id}
-          href={p.liveUrl!}
-          sourcePage="project"
-          className="cyber-button-small"
-          target="_blank"
-        >
-          {t("project.read")}
-        </TrackedProjectButton>
-      );
-    }
-
     return (
       <div className="flex flex-wrap gap-2">
-        {p.liveUrl && (
-          <TrackedProjectButton
-            projectId={p.id}
-            href={p.liveUrl}
-            sourcePage="project"
-            className="cyber-button-small"
-            target={p.liveUrl.startsWith("http") ? "_blank" : "_self"}
-          >
-            {t("project.visit")}
-          </TrackedProjectButton>
-        )}
+        <TrackedProjectButton
+          projectId={p.id}
+          href={getProjectDetailPath(p, lang)}
+          sourcePage="project"
+          className="cyber-button-small"
+          target="_self"
+        >
+          {lang === "zh" ? "查看详情" : "View details"}
+        </TrackedProjectButton>
         {p.githubUrl && (
           <Button className="cyber-button-small" asChild>
             <a href={p.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -386,7 +350,7 @@ export default function ProjectPage() {
                           projectTitle={
                             project.title || t(project.titleKey || "")
                           }
-                          projectUrl={project.liveUrl}
+                          projectUrl={getProjectDetailPath(project, lang)}
                           initialStat={socialStats[project.id]}
                           isLoggedIn={isLoggedIn}
                           onRequireLogin={() => setAuthOpen(true)}

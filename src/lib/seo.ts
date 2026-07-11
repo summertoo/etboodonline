@@ -1,4 +1,4 @@
-import type { Metadata, MetadataRoute } from "next";
+import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "ZD Tech",
@@ -15,20 +15,16 @@ export const siteConfig = {
     "etboodonline",
     "网页游戏",
     "Roblox 游戏",
-    "Roblox game studio",
     "HTML5 games",
     "browser games",
     "Sui",
-    "Sui blockchain",
     "Web3",
     "DApp",
     "creative tools",
     "indie games",
     "AI news",
-    "hot topics",
     "独立游戏",
     "创意工具",
-    "自媒体工作室",
   ],
 } as const;
 
@@ -56,9 +52,7 @@ export function buildPageMetadata({
     title,
     description,
     keywords: allKeywords,
-    alternates: {
-      canonical: path === "/" ? siteConfig.url : `${siteConfig.url}${path}`,
-    },
+    alternates: { canonical: url },
     openGraph: {
       type: "website",
       locale: siteConfig.locale,
@@ -108,6 +102,7 @@ export function buildPageMetadata({
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${siteConfig.url}/#organization`,
   name: siteConfig.name,
   alternateName: ["etboodonline", "ZD Tech Studio"],
   url: siteConfig.url,
@@ -134,225 +129,10 @@ export const organizationJsonLd = {
 export const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${siteConfig.url}/#website`,
   name: siteConfig.name,
   url: siteConfig.url,
   description: siteConfig.description,
   inLanguage: ["zh-CN", "en"],
-  publisher: {
-    "@type": "Organization",
-    name: siteConfig.name,
-  },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${siteConfig.url}/search?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
+  publisher: { "@id": `${siteConfig.url}/#organization` },
 };
-
-export const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  name: "ZD Tech Navigation",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: siteConfig.url,
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Projects",
-      item: `${siteConfig.url}/project`,
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "News",
-      item: `${siteConfig.url}/news`,
-    },
-    {
-      "@type": "ListItem",
-      position: 4,
-      name: "Blog",
-      item: `${siteConfig.url}/blog`,
-    },
-    {
-      "@type": "ListItem",
-      position: 5,
-      name: "What We Do",
-      item: `${siteConfig.url}/what-we-do`,
-    },
-    {
-      "@type": "ListItem",
-      position: 6,
-      name: "Service",
-      item: `${siteConfig.url}/service`,
-    },
-    {
-      "@type": "ListItem",
-      position: 7,
-      name: "Contact",
-      item: `${siteConfig.url}/contact`,
-    },
-  ],
-};
-
-export const sectionListJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "ZD Tech Main Sections",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      url: `${siteConfig.url}/`,
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Projects",
-      url: `${siteConfig.url}/project`,
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "News",
-      url: `${siteConfig.url}/news`,
-    },
-    {
-      "@type": "ListItem",
-      position: 4,
-      name: "Blog",
-      url: `${siteConfig.url}/blog`,
-    },
-    {
-      "@type": "ListItem",
-      position: 5,
-      name: "Contact",
-      url: `${siteConfig.url}/contact`,
-    },
-    {
-      "@type": "ListItem",
-      position: 6,
-      name: "Hot Dance Crew",
-      url: `${siteConfig.url}/hotdance/hotdance.html`,
-    },
-  ],
-};
-
-export const sitemapEntries: MetadataRoute.Sitemap = [
-  {
-    url: siteConfig.url,
-    lastModified: new Date(),
-    changeFrequency: "daily",
-    priority: 1,
-  },
-  {
-    url: `${siteConfig.url}/project`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.95,
-  },
-  {
-    url: `${siteConfig.url}/news`,
-    lastModified: new Date(),
-    changeFrequency: "daily",
-    priority: 0.92,
-  },
-  {
-    url: `${siteConfig.url}/blog`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.82,
-  },
-  {
-    url: `${siteConfig.url}/what-we-do`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.78,
-  },
-  {
-    url: `${siteConfig.url}/service`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.74,
-  },
-  {
-    url: `${siteConfig.url}/contact`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.64,
-  },
-  {
-    url: `${siteConfig.url}/hotdance/hotdance.html`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.86,
-  },
-  {
-    url: `${siteConfig.url}/crazybird/`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.72,
-  },
-  {
-    url: `${siteConfig.url}/bladedart/bladedart.html`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.72,
-  },
-  {
-    url: `${siteConfig.url}/dropafriend/dropafriend.html`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.72,
-  },
-  {
-    url: `${siteConfig.url}/zombiesiege/shotdemo01.html`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  },
-  {
-    url: `${siteConfig.url}/swim/`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  },
-  {
-    url: `${siteConfig.url}/killerh5/`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  },
-  {
-    url: `${siteConfig.url}/saveman/saveman.html`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  },
-  {
-    url: `${siteConfig.url}/football/football-game.html`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.72,
-  },
-  {
-    url: `${siteConfig.url}/summit/summit.html`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.68,
-  },
-  {
-    url: `${siteConfig.url}/h5game01/${encodeURIComponent("龙虾跑酷.html")}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  },
-];

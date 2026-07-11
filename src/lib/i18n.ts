@@ -171,6 +171,8 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Assassin H5 Game - Analyze the scene, identify targets, use props wisely, and become a legendary assassin!",
     "game.swimDesc":
       "100m Freestyle Swimming Race - Sprint, dash, collect power-ups, and win the championship!",
+    "game.zombieSiegeDesc":
+      "Survive the apocalypse, defend your base, upgrade weapons, and fight endless zombie hordes.",
     "game.comingSoonDesc": "Coming soon. Stay tuned!",
 
     "game.grandpaFarmDesc":
@@ -436,6 +438,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.swimDesc": "百米自由泳比赛 — 极速冲刺，收集道具，勇夺冠军！",
     "game.zombieSiegeDesc":
       "在末日丧尸围城中生存下来！守卫基地，升级武器，击退无尽尸潮。",
+    "game.grandpaFarmDesc":
+      "建设爷爷的沙漠农场，种植作物，把安静的沙地经营成繁荣绿洲。",
     "game.comingSoonDesc": "即将上线，敬请期待！",
     "game.hotDanceDesc":
       "100 级节奏闯关网页游戏，跟随下落箭头打出连击，触发电弧爆炸，并冲击前十排行榜。",
