@@ -277,7 +277,6 @@ export const projects: Project[] = [
   },
   {
     id: "dapp-collab-ai",
-    title: "Fic Collab AI",
     titleKey: "dapp.collabai",
     descKey: "dapp.collabaiDesc",
     category: "dapp",
@@ -479,8 +478,7 @@ export function getProjectDetailPath(
 
 export function isEmbeddableWebGame(project: Project): boolean {
   return (
-    project.category === "webgame" &&
-    Boolean(project.liveUrl?.startsWith("/"))
+    project.category === "webgame" && Boolean(project.liveUrl?.startsWith("/"))
   );
 }
 

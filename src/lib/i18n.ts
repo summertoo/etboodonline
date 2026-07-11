@@ -458,7 +458,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.dropafriendTitle": "🪨 扔掉一个朋友",
     "game.bladeDartTitle": "🗡️ 剑出飞镖",
     "game.summitTitle": "⛰️ 登峰造极",
-    "game.crazyBirdTitle": "🐦 愤怒的小鸡",
+    "game.crazyBirdTitle": "🐦 疯狂的小鸡",
     "game.crazyBirdDesc":
       "用弹弓精准发射小鸟！撞倒顽固的猪头，冲破砖块堡垒，征服基于物理引擎的趣味关卡。",
 
