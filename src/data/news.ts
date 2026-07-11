@@ -25,6 +25,236 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-11-hot",
+    date: "2026-07-11",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-11",
+      en: "🔥 Hot Topics · Jul 11, 2026",
+    },
+    summary: {
+      zh: "台风巴威再度增强为强台风级，波及浙闽台京冀辽鲁，北京已转移近10万人；西班牙2-1绝杀比利时晋级四强，连刷7大纪录；福建晋江鞋厂火灾楼顶蓄水池打捞出多具遗体；客机舷窗炸裂乘客头部被吸出舱外；双胞胎姐妹657分和652分双双考上同一所军校；35岁女高管立遗嘱将千万资产赠小姨；亚马尔14岁曾庆祝摩洛哥淘汰西班牙，被调侃卧底藏了4年；我国火箭首次海上网系可控回收；今年七下八上是否提前专家回应；为防车辆被淹台州高架桥停满车。",
+      en: "Typhoon Bavi intensifies to severe typhoon, affecting Zhejiang, Fujian, Taiwan, Beijing, Hebei, Liaoning, Shandong; Beijing evacuates nearly 100K; Spain 2-1 Belgium in QF thriller, breaks 7 records; Jinjiang shoe factory fire: multiple bodies recovered from rooftop water tank; plane window shatters mid-flight, passenger's head sucked out; twin sisters both accepted to same military university (657 & 652); 35yo female executive wills $1.4M to aunt; Yamal joked as '4-year spy' for once celebrating Morocco's win over Spain; China's first offshore net recovery rocket; expert: extreme weather rising but flood season not early; Taizhou viaducts packed with cars fleeing Typhoon Bavi.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "台风巴威再度增强，波及多省，北京转移近10万人",
+          en: "Typhoon Bavi Intensifies, Beijing Evacuates 100K",
+        },
+        description: {
+          zh: "巴威再度增强为强台风级（14级），预计登陆浙闽沿海，波及台湾、河北、北京、天津、辽宁、吉林、山东。北京已转移近10万人，台州高架桥上停满避灾车辆。",
+          en: "Typhoon Bavi re-intensifies to severe typhoon (category 14). Expected to hit Zhejiang-Fujian coast, affecting N China. Beijing evacuates ~100K, Taizhou viaducts packed with cars.",
+        },
+      },
+      {
+        title: {
+          zh: "西班牙2-1绝杀比利时，时隔16年重返四强",
+          en: "Spain 2-1 Belgium, Back in Semis After 16 Years",
+        },
+        description: {
+          zh: "世界杯1/4决赛西班牙2-1绝杀比利时晋级四强，半决赛将对阵法国。西班牙连刷7大纪录，主帅13连胜足坛第一。18岁亚马尔放话：不惧任何强敌。",
+          en: "Spain beats Belgium 2-1 in QF thriller, reaching semis for first time since 2010. 7 records broken. Coach on 13-match unbeaten streak. 18yo Yamal: 'Not afraid of anyone.'",
+        },
+      },
+      {
+        title: {
+          zh: "晋江鞋厂火灾：楼顶蓄水池打捞出多具遗体",
+          en: "Jinjiang Fire: Multiple Bodies Found in Rooftop Water Tank",
+        },
+        description: {
+          zh: "福建晋江鞋厂火灾起火位置初步确定，楼顶蓄水池打捞出多具遗体。应急管理部工作组已赴现场勘验。此前火灾已致28人死亡。",
+          en: "Initial investigation identifies fire origin. Multiple bodies recovered from rooftop water tank. MIIT work team on site. Death toll previously reported at 28.",
+        },
+      },
+      {
+        title: {
+          zh: "客机飞行中舷窗炸裂，乘客头部被吸出",
+          en: "Plane Window Shatters Mid-Flight, Passenger's Head Sucked Out",
+        },
+        description: {
+          zh: "瑞安航空客机飞行中舷窗突然破裂，强气流将61岁男子头部吸出舱外，妻子与乘客合力将其拉回。飞机紧急返航，男子受伤送医。",
+          en: "Ryanair flight window shatters, 61yo man's head sucked out by pressure differential. Wife and passengers pull him back. Emergency landing, hospitalized.",
+        },
+      },
+      {
+        title: {
+          zh: "双胞胎姐妹双双考上同一所军校",
+          en: "Twin Sisters Both Accepted to Same Military University",
+        },
+        description: {
+          zh: "山东菏泽双胞胎姐妹赵国颖657分、赵国玉652分，双双被网络空间部队信息工程大学录取，圆梦同一所军校。",
+          en: "Twin sisters from Heze, Shandong score 657 and 652 on Gaokao, both admitted to the same military university.",
+        },
+      },
+      {
+        title: {
+          zh: "35岁女高管立遗嘱将千万资产赠小姨",
+          en: "35yo Female Executive Wills $1.4M to Aunt",
+        },
+        description: {
+          zh: "沈阳35岁未婚女高管将千万个人资产遗赠给悉心照料她的小姨。与父母关系疏远，办理流程合规并增设资产隔离条款。",
+          en: "A 35-year-old unmarried female executive in Shenyang wills her millions to the aunt who cared for her, estranged from parents. Legally compliant with asset protection.",
+        },
+      },
+      {
+        title: {
+          zh: "亚马尔被调侃：这个卧底藏了4年",
+          en: "Yamal Joked as '4-Year Spy' for Past Celebration",
+        },
+        description: {
+          zh: "亚马尔14岁时曾穿摩洛哥训练服庆祝其淘汰西班牙，如今他带队西班牙晋级半决赛。球迷调侃：亚马尔这个卧底藏了4年。",
+          en: "14-year-old Yamal once celebrated Morocco eliminating Spain in 2022. Now he leads Spain to the semis. Fans joke: 'This spy hid for 4 years.'",
+        },
+      },
+      {
+        title: {
+          zh: "我国火箭首次海上网系可控回收",
+          en: "China's First Offshore Net Recovery Rocket",
+        },
+        description: {
+          zh: "7月10日我国运载火箭首次实现可控回收，也是全球首创海上网系回收。火箭一级成本占总成本60-70%，回收技术支撑高频次太空物流。",
+          en: "China achieves its first controlled rocket recovery with global-first offshore net recovery system. Stage 1 costs 60-70% of total; reusability key for high-frequency space logistics.",
+        },
+      },
+      {
+        title: {
+          zh: "今年七下八上是否提前？专家回应",
+          en: "Has China's Flood Season Come Early? Expert Responds",
+        },
+        description: {
+          zh: "今年6月华北降雨异常充沛引发七下八上是否提前的讨论。专家：属强对流天气所致，汛期并未提前，但极端天气增多。",
+          en: "Unusually heavy June rainfall in N China sparks debate. Expert: caused by severe convection, flood season not early but extreme weather is increasing.",
+        },
+      },
+      {
+        title: {
+          zh: "为防车辆被淹，台州高架桥上停满车",
+          en: "Taizhou Viaducts Packed with Cars Fleeing Typhoon",
+        },
+        description: {
+          zh: "台风巴威逐渐靠近，台州市民为防车辆被淹将高架桥当作临时停车场。全市综合行政执法局对应急临时停车一律不贴单。",
+          en: "Taizhou residents park cars on viaducts to escape Typhoon Bavi flooding. City waives parking tickets for emergency临时 parking.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-11",
+    date: "2026-07-11",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-11",
+      en: "🤖 AI Daily · Jul 11, 2026",
+    },
+    summary: {
+      zh: "Apple起诉OpenAI窃取商业机密；百度搭子在成都AI Day发布四项更新；Claude Code桌面版新增应用内浏览器；扎克伯格首度回应Meta算力过剩：租出去更赚钱；蚂蚁集团开源高性能推理框架SGLang；Claude Code v2.1.206发布；宇树G1人形机器人完成首例活体微创手术；小红书发布大模型新架构PIPO；DeepSeek-V4 Flash登陆AMD Instinct MI355X GPU；Cognition如何信任Claude Fable 5通宵工作。",
+      en: "Apple sues OpenAI for trade secret theft; Baidu AI Day unveils 4 Dazi updates; Claude Code desktop gets in-app browser; Zuckerberg denies Meta compute surplus: renting is more profitable; Ant Group open-sources SGLang inference framework; Claude Code v2.1.206; Unitree G1 humanoid performs first live minimally invasive surgery; Xiaohongshu unveils PIPO architecture; DeepSeek-V4 Flash lands on AMD MI355X GPUs; How Cognition trusts Claude Fable 5 to work overnight.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Apple起诉OpenAI窃取商业机密",
+          en: "Apple Sues OpenAI for Trade Secret Theft",
+        },
+        description: {
+          zh: "Apple向美国加州北区联邦法院起诉OpenAI窃取商业机密并违反合同，称OpenAI高级领导层指使前Apple员工在招聘过程中窃取机密信息。",
+          en: "Apple files lawsuit alleging OpenAI stole trade secrets and breached contracts. Claims OpenAI execs directed former Apple employees to steal confidential info during hiring.",
+        },
+      },
+      {
+        title: {
+          zh: "百度搭子发布四项更新",
+          en: "Baidu Dazi Unveils 4 Major Updates",
+        },
+        description: {
+          zh: "百度搭子在成都AI Day发布个人版（浏览器调用、智能路由降20%耗时）、自媒体套件、企业版及搭子联盟四大更新。",
+          en: "Baidu Dazi updates: personal version with browser调用 & smart routing (-20% latency), creator suite, enterprise edition, and Dazi Alliance.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code桌面版新增应用内浏览器",
+          en: "Claude Code Desktop Gets In-App Browser",
+        },
+        description: {
+          zh: "Claude Code桌面版新增应用内浏览器，Claude可调取文档、设计稿等网页，像操作本地开发服务器一样阅读、点击和交互，采用沙盒机制。",
+          en: "Claude Code desktop now has an in-app browser. Claude can view documents, designs, and websites, interacting like a local dev server. Sandboxed and configurable.",
+        },
+      },
+      {
+        title: {
+          zh: "扎克伯格首度回应Meta算力过剩",
+          en: "Zuckerberg Denies Meta Compute Surplus",
+        },
+        description: {
+          zh: "扎克伯格否认Meta算力过剩，称内部算力满负荷运转。但表示将部分AI基础设施对外出租在财务上更划算。",
+          en: "Zuckerberg denies Meta has excess compute, says internal demand is at full capacity. But acknowledges renting out AI infra is more profitable.",
+        },
+      },
+      {
+        title: {
+          zh: "蚂蚁集团开源高性能推理框架SGLang",
+          en: "Ant Group Open-Sources SGLang Inference Framework",
+        },
+        description: {
+          zh: "蚂蚁集团通过GitHub开源SGLang，一个面向大语言模型和多模态模型的高性能推理服务框架。",
+          en: "Ant Group open-sources SGLang, a high-performance inference serving framework for LLMs and multimodal models on GitHub.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.206 发布",
+          en: "Claude Code v2.1.206 Released",
+        },
+        description: {
+          zh: "Claude Code v2.1.206新增/cd命令目录路径建议、/doctor检查建议修剪CLAUDE.md、/check改进等多项更新。",
+          en: "Claude Code v2.1.206 adds directory suggestions for /cd, /doctor to trim CLAUDE.md, and improved /check.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树G1人形机器人完成首例活体微创手术",
+          en: "Unitree G1 Humanoid Performs First Live Minimally Invasive Surgery",
+        },
+        description: {
+          zh: "加州大学圣地亚哥团队使用宇树G1人形机器人，以常规手术器械完成对活猪的腹腔镜胆囊切除术，耗时32分钟，为首例人形机器人完成的活体标准微创手术。",
+          en: "UCSD team uses Unitree G1 humanoid robot to perform laparoscopic cholecystectomy on live pigs - first standard minimally invasive surgery by a humanoid robot.",
+        },
+      },
+      {
+        title: {
+          zh: "小红书发布大模型新架构PIPO",
+          en: "Xiaohongshu Unveils PIPO Architecture",
+        },
+        description: {
+          zh: "小红书提出PIPO架构，通过输入压缩将两个token折叠为一个latent，输出侧展开为额外token，实现输入长度减半、每步输出翻倍。",
+          en: "Xiaohongshu proposes PIPO architecture: compresses 2 tokens into 1 latent on input, expands on output, halving input length and doubling per-step output.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek-V4 Flash登陆AMD Instinct MI355X",
+          en: "DeepSeek-V4 Flash Lands on AMD MI355X GPUs",
+        },
+        description: {
+          zh: "DeepSeek-V4 Flash的强化学习训练现已在AMD Instinct MI355X GPU上通过Miles框架获得支持，基于ROCm软件栈，模型2840亿参数MoE。",
+          en: "DeepSeek-V4 Flash RL training now supported on AMD Instinct MI355X GPUs via Miles framework on ROCm. The 284B parameter MoE model runs on AMD hardware.",
+        },
+      },
+      {
+        title: {
+          zh: "Cognition如何信任Claude Fable 5通宵工作",
+          en: "How Cognition Trusts Claude Fable 5 to Work Overnight",
+        },
+        description: {
+          zh: "Cognition高级副总裁表示其AI软件工程师Devin测试了几乎所有Claude模型，Claude Fable 5是首个能信任其通宵运行的模型。",
+          en: "Cognition's SVP says Devin tested nearly all Claude models; Claude Fable 5 is the first trustworthy enough to run unsupervised through the night.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-10-hot",
     date: "2026-07-10",
     title: {
