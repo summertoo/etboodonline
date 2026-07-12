@@ -143,7 +143,11 @@ function getEntitySchema(
     ...common,
     "@type": "SoftwareApplication",
     applicationCategory:
-      project.category === "dapp" ? "BlockchainApplication" : "UtilitiesApplication",
+      project.category === "dapp"
+        ? "BlockchainApplication"
+        : project.category === "writingtool"
+          ? "ProductivityApplication"
+          : "UtilitiesApplication",
     operatingSystem: "Web",
   };
 }

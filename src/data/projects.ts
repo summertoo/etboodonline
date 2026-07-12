@@ -3,6 +3,7 @@ export type Category =
   | "roblox"
   | "webgame"
   | "dapp"
+  | "writingtool"
   | "tool"
   | "article"
   | "novel";
@@ -269,7 +270,7 @@ export const projects: Project[] = [
     title: "Character Builder",
     titleKey: "dapp.charactertool",
     descKey: "dapp.charactertoolDesc",
-    category: "dapp",
+    category: "writingtool",
     status: "live",
     logoUrl: "/avatars/webtool.jpg",
     liveUrl: "/webtool/index.html",
@@ -279,7 +280,7 @@ export const projects: Project[] = [
     id: "dapp-collab-ai",
     titleKey: "dapp.collabai",
     descKey: "dapp.collabaiDesc",
-    category: "dapp",
+    category: "writingtool",
     status: "live",
     logoUrl: "/avatars/writetool.png",
     liveUrl: "/writetool/zysxz.html",
@@ -485,6 +486,8 @@ export function isEmbeddableWebGame(project: Project): boolean {
 export function isEmbeddableProject(project: Project): boolean {
   return (
     Boolean(project.liveUrl?.startsWith("/")) &&
-    (project.category === "webgame" || project.category === "dapp")
+    (project.category === "webgame" ||
+      project.category === "dapp" ||
+      project.category === "writingtool")
   );
 }

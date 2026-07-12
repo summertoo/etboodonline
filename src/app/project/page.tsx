@@ -12,6 +12,7 @@ import { HelpDialog } from "@/components/HelpDialog";
 import TrackedProjectButton from "@/components/TrackedProjectButton";
 import {
   getProjectDetailPath,
+  getProjectTitle,
   projects,
   type Category,
   type Status,
@@ -65,6 +66,7 @@ export default function ProjectPage() {
     { value: "roblox", labelKey: "project.category.roblox" },
     { value: "webgame", labelKey: "project.category.webgame" },
     { value: "dapp", labelKey: "project.category.dapp" },
+    { value: "writingtool", labelKey: "project.category.writingtool" },
     { value: "tool", labelKey: "project.category.tool" },
     { value: "article", labelKey: "project.category.article" },
     { value: "novel", labelKey: "project.category.novel" },
@@ -98,14 +100,14 @@ export default function ProjectPage() {
         const matchesCategory =
           selectedCategory === "all" || p.category === selectedCategory;
         const matchesTag = !selectedTag || p.tags?.includes(selectedTag);
-        const displayTitle = p.title || t(p.titleKey || "");
+        const displayTitle = getProjectTitle(p, lang, t);
         const matchesSearch =
           searchQuery === "" ||
           displayTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
           (p.desc && p.desc.toLowerCase().includes(searchQuery.toLowerCase()));
         return matchesCategory && matchesTag && matchesSearch;
       });
-  }, [selectedCategory, selectedTag, searchQuery, t]);
+  }, [selectedCategory, selectedTag, searchQuery, t, lang]);
 
   const getStatusBadge = (status: Status) => {
     switch (status) {
@@ -136,6 +138,7 @@ export default function ProjectPage() {
       roblox: t("project.category.roblox"),
       webgame: t("project.category.webgame"),
       dapp: t("project.category.dapp"),
+      writingtool: t("project.category.writingtool"),
       tool: t("project.category.tool"),
       article: t("project.category.article"),
       novel: t("project.category.novel"),
@@ -149,6 +152,7 @@ export default function ProjectPage() {
       roblox: "bg-red-100 text-red-700",
       webgame: "bg-cyan-100 text-cyan-700",
       dapp: "bg-blue-100 text-blue-700",
+      writingtool: "bg-pink-100 text-pink-700",
       tool: "bg-green-100 text-green-700",
       article: "bg-amber-100 text-amber-700",
       novel: "bg-rose-100 text-rose-700",
@@ -285,7 +289,7 @@ export default function ProjectPage() {
                       <div className="w-14 h-14 rounded-xl overflow-hidden shadow-md flex-shrink-0">
                         <img
                           src={project.logoUrl}
-                          alt={project.title || t(project.titleKey || "")}
+                          alt={getProjectTitle(project, lang, t)}
                           className="w-full h-full object-cover"
                           loading="lazy"
                           onError={(e) => {
@@ -313,7 +317,7 @@ export default function ProjectPage() {
                       <div className="flex-1 min-w-0">
                         <div className="flex flex-wrap items-center gap-2 mb-2">
                           <h4 className="w-full min-w-0 font-semibold text-base leading-6 break-words sm:w-auto sm:flex-1 sm:text-lg sm:truncate">
-                            {project.title || t(project.titleKey || "")}
+                            {getProjectTitle(project, lang, t)}
                           </h4>
                           {getStatusBadge(project.status)}
                           <span
@@ -347,9 +351,7 @@ export default function ProjectPage() {
                         {getActionButton(project)}
                         <ProjectActions
                           projectId={project.id}
-                          projectTitle={
-                            project.title || t(project.titleKey || "")
-                          }
+                          projectTitle={getProjectTitle(project, lang, t)}
                           projectUrl={getProjectDetailPath(project, lang)}
                           initialStat={socialStats[project.id]}
                           isLoggedIn={isLoggedIn}
