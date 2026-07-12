@@ -25,6 +25,216 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-12-hot",
+    date: "2026-07-12",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-12",
+      en: "🔥 Hot Topics · Jul 12, 2026",
+    },
+    summary: {
+      zh: "英格兰2-1挪威晋级四强，贝林厄姆梅开二度哈兰德悲情出局；台风巴威登陆浙江树连根拔起，上海中心千吨阻尼器摆动；各地全力防范巴威三预警齐发；世界杯阿根廷vs瑞士冲击四强；镇干部台风采访全程挡脸：太像作秀了；国际足联主席考虑世界杯扩军至64队；妈妈去世4个月女儿同样确诊红斑狼疮；两倍价格买100吨西瓜爱心助农反向砍价；霍尔木兹海峡暂时关闭；上半年电视剧收视率排名出炉。",
+      en: "England 2-1 Norway reach semis, Bellingham brace sends Haaland out; Typhoon Bavi makes landfall in Zhejiang, trees uprooted, Shanghai Tower's 1000-ton damper swings; nationwide typhoon response with triple warnings; Argentina vs Switzerland in QF; town official blocks face during interview: 'too much like show'; FIFA president considers expanding World Cup to 64 teams; mother dies of lupus, daughter diagnosed 4 months later; double-price 100-ton watermelons charity buy; Strait of Hormuz temporarily closed; H1 TV drama ratings released.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "英格兰2-1挪威晋级四强，贝林厄姆双响哈兰德出局",
+          en: "England 2-1 Norway Reach Semis, Bellingham Brace",
+        },
+        description: {
+          zh: "世界杯1/4决赛英格兰加时2-1战胜挪威，贝林厄姆梅开二度。哈兰德推人犯规进球无效，加时半场被换下，赛后含泪与贝林厄姆拥抱。英格兰半决赛将对阵阿根廷与瑞士的胜者。",
+          en: "England beats Norway 2-1 in QF extra time. Bellingham scores twice. Haaland's goal disallowed for foul, substituted in extra time. England to face Argentina/Switzerland in semis.",
+        },
+      },
+      {
+        title: {
+          zh: "台风巴威登陆浙江，树连根拔起",
+          en: "Typhoon Bavi Makes Landfall in Zhejiang",
+        },
+        description: {
+          zh: "台风巴威先后在浙江玉环和乐清登陆，登陆十分钟风云骤变，树被连根拔起。已减弱为强热带风暴级，中央气象台发布台风黄色、暴雨橙色、强对流黄色三预警。",
+          en: "Typhoon Bavi makes landfall in Yuhuan and Yueqing, Zhejiang. Trees uprooted within minutes. Downgraded to severe tropical storm. Triple warnings issued.",
+        },
+      },
+      {
+        title: {
+          zh: "上海中心千吨阻尼器明显摆动",
+          en: "Shanghai Tower's 1000-Ton Damper Swings",
+        },
+        description: {
+          zh: "受台风巴威影响，上海中心大厦583米处的千吨阻尼器出现明显摆动，申城高楼间风起云涌。市民为避台风将车停进隧道形成数百米车队。",
+          en: "Shanghai Tower's 1,000-ton tuned mass damper at 583m swings visibly as Typhoon Bavi hits. Residents park cars in tunnels forming kilometer-long lines.",
+        },
+      },
+      {
+        title: {
+          zh: "世界杯：阿根廷vs瑞士，卫冕冠军冲击四强",
+          en: "World Cup QF: Argentina vs Switzerland",
+        },
+        description: {
+          zh: "北京时间7月12日上午，2026世界杯最后一场1/4决赛，卫冕冠军阿根廷对阵瑞士，争夺最后一个四强席位，胜者将对阵英格兰。",
+          en: "The final World Cup quarterfinal: defending champion Argentina takes on Switzerland for the last semifinal spot. Winner faces England.",
+        },
+      },
+      {
+        title: {
+          zh: "镇干部台风采访全程挡脸：太像作秀了",
+          en: "Town Official Blocks Face During Typhoon Interview",
+        },
+        description: {
+          zh: "浙江苍南霞关镇干部赵蓓蕾在台风应急转移中全程挡脸拒拍采访，称太像作秀了，引发网友点赞。",
+          en: "Cangnan town official Zhao Beilei blocks her face throughout a typhoon emergency interview, saying 'it's too much like a show.' Netizens applaud.",
+        },
+      },
+      {
+        title: {
+          zh: "国际足联主席：考虑世界杯扩军至64队",
+          en: "FIFA President Considers Expanding World Cup to 64 Teams",
+        },
+        description: {
+          zh: "国际足联主席因凡蒂诺称48队扩军百分之百正确，并考虑将世界杯进一步扩军至64队，给小国更多参赛机会。",
+          en: "FIFA President Infantino says expansion to 48 teams was '100% right' and considers further expansion to 64 teams to give smaller nations opportunities.",
+        },
+      },
+      {
+        title: {
+          zh: "妈妈去世4个月后女儿同样确诊红斑狼疮",
+          en: "Daughter Diagnosed with Lupus 4 Months After Mother's Death",
+        },
+        description: {
+          zh: "河南驻马店14岁女孩月月在母亲因红斑狼疮去世4个月后确诊同一种病。月月说不治病了费钱妹妹得上学，父亲表示多少钱都要治。",
+          en: "A 14-year-old girl in Henan diagnosed with lupus 4 months after her mother died of the same disease. Father: 'No matter the cost, we will treat her.'",
+        },
+      },
+      {
+        title: {
+          zh: "两倍价格买100吨西瓜，爱心助农反向砍价",
+          en: "Double-Price 100-Ton Watermelon Charity Buy",
+        },
+        description: {
+          zh: "河南西瓜滞销价格同比降40%，当地景区企业以两倍市场价格收购100吨西瓜，反向砍价让瓜农笑逐颜开。",
+          en: "Henan watermelons in surplus, prices down 40% YoY. Local businesses buy 100 tons at double the market price, bringing smiles to farmers.",
+        },
+      },
+      {
+        title: {
+          zh: "霍尔木兹海峡暂时关闭",
+          en: "Strait of Hormuz Temporarily Closed",
+        },
+        description: {
+          zh: "霍尔木兹海峡暂时关闭，地缘局势紧张加剧。",
+          en: "The Strait of Hormuz has been temporarily closed, escalating geopolitical tensions.",
+        },
+      },
+      {
+        title: {
+          zh: "上半年电视剧收视率排名出炉",
+          en: "H1 2026 TV Drama Ratings Released",
+        },
+        description: {
+          zh: "国家广电总局发布2026上半年收视报告，《主角》位居央视黄金时段榜首。粤产剧《风与潮》《我的山与海》分列第五、第八。",
+          en: "China's TV watchdog releases H1 2026 ratings report. 'Protagonist' tops CCTV prime-time chart. Cantonese dramas rank 5th and 8th.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-12",
+    date: "2026-07-12",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-12",
+      en: "🤖 AI Daily · Jul 12, 2026",
+    },
+    summary: {
+      zh: "蚂蚁集团发布LingBot-VA 2.0原生具身基础模型；GPT-5.6-Sol删光AI创业者硬盘；博科圣地使用ChatGPT等主流AI策划袭击；11天Claude Fable 5写超100万行代码Rust重构Bun；彭博社揭秘Apple起诉OpenAI内幕；OpenAI发布GPT-5.6医疗评估结果；Claude Code v2.1.207发布；Ghost Font人类能读懂但AI无法识别的反AI字体。",
+      en: "Ant Group releases LingBot-VA 2.0 native embodied foundation model; GPT-5.6-Sol wipes AI founder's Mac硬盘; Boko Haram uses ChatGPT and other AIs for attack planning; Claude Fable 5 writes 1M+ lines in 11 days to rewrite Bun in Rust; Bloomberg reveals Apple-OAI lawsuit inside story; OpenAI releases GPT-5.6 medical benchmark results; Claude Code v2.1.207; Ghost Font: human-readable, AI-unreadable font.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "蚂蚁集团发布LingBot-VA 2.0原生具身基础模型",
+          en: "Ant Group Unveils LingBot-VA 2.0 Embodied Foundation Model",
+        },
+        description: {
+          zh: "蚂蚁旗下Robbyant发布LingBot-VA 2.0，首个原生具身基础模型。采用因果DiT架构，视频专家约13B参数（1.9B激活），训练规模约15万小时视频。",
+          en: "Ant's Robbyant launches LingBot-VA 2.0, the first native embodied foundation model. Causal DiT architecture, 13B params (1.9B active), trained on ~150K hours of video.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-5.6-Sol 删光AI创业者硬盘",
+          en: "GPT-5.6-Sol Wipes AI Founder's Mac Drive",
+        },
+        description: {
+          zh: "知名AI创业者Matt Shumer的Mac硬盘被GPT-5.6-Sol彻底清空。他在本地Agent上开启Full Access权限，让模型自主操作导致灾难性后果。",
+          en: "AI founder Matt Shumer's Mac hard drive wiped clean by GPT-5.6-Sol after granting Full Access to the local agent for autonomous operation.",
+        },
+      },
+      {
+        title: {
+          zh: "博科圣地使用ChatGPT等主流AI策划袭击",
+          en: "Boko Haram Uses ChatGPT & Other AIs for Attack Planning",
+        },
+        description: {
+          zh: "剑桥大学对27名前博科圣地成员访谈显示，该组织系统性使用ChatGPT、Claude、Gemini、Grok等主流AI聊天机器人进行袭击策划与武器开发。",
+          en: "Cambridge study of 27 former Boko Haram members reveals systematic use of ChatGPT, Claude, Gemini, Grok for attack planning and weapons development.",
+        },
+      },
+      {
+        title: {
+          zh: "11天Claude Fable 5写超100万行代码重构Bun",
+          en: "Claude Fable 5 Writes 1M+ Lines to Rewrite Bun in Rust",
+        },
+        description: {
+          zh: "开发者Jarred Sumner借助Claude Fable 5，11天内用Rust重构Bun，64个实例并行编写超100万行代码。API费用约16.5万美元。重写主因是Zig频繁内存错误。",
+          en: "Developer Jarred Sumner uses Claude Fable 5 to rewrite Bun from Zig to Rust in 11 days. 64 parallel instances wrote 1M+ lines of code. API cost ~$165K.",
+        },
+      },
+      {
+        title: {
+          zh: "彭博社揭秘Apple起诉OpenAI内幕",
+          en: "Bloomberg Reveals Apple-OAI Lawsuit Inside Story",
+        },
+        description: {
+          zh: "苹果诉OpenAI窃密案细节曝光：前工程师离职带走未归还MacBook并利用漏洞持续访问苹果内网，一句哈哈我发现还能访问成关键证据。",
+          en: "Details emerge: former Apple engineer kept MacBook after leaving, exploited vulnerability to access internal network. 'Haha, I still have access' becomes key evidence.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI发布GPT-5.6医疗评估结果",
+          en: "OpenAI Releases GPT-5.6 Medical Benchmark Results",
+        },
+        description: {
+          zh: "最小变体GPT-5.6 Luna在最低推理强度即超越最高强度的GPT-5.5，且成本低25倍。最大变体GPT-5.6 Sol达到新高度。",
+          en: "Smallest GPT-5.6 Luna outperforms max-strength GPT-5.5 at min inference, 25x cheaper. Largest variant GPT-5.6 Sol reaches new heights.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.207 发布",
+          en: "Claude Code v2.1.207 Released",
+        },
+        description: {
+          zh: "Claude Code v2.1.207中Auto模式在Bedrock、Vertex AI和Foundry上无需环境变量即可使用，简化部署。",
+          en: "Claude Code v2.1.207: Auto mode now works on Bedrock, Vertex AI, and Foundry without environment variables, simplifying deployment.",
+        },
+      },
+      {
+        title: {
+          zh: "Ghost Font：人类能读懂但AI无法识别的反AI字体",
+          en: "Ghost Font: Human-Readable, AI-Unreadable Font",
+        },
+        description: {
+          zh: "Ghost Font利用运动、视频、噪点和诱饵隐藏文字，生成视频片段中的字母由与背景完全相同的点组成，单帧截图无法显示任何信息，人类肉眼却能识别。",
+          en: "Ghost Font uses motion, video, noise to hide text. Letters composed of dots identical to background - invisible in single frames but readable by human eyes in motion.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-11-hot",
     date: "2026-07-11",
     title: {
