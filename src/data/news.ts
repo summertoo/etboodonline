@@ -25,6 +25,236 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-13-hot",
+    date: "2026-07-13",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-13",
+      en: "🔥 Hot Topics · Jul 13, 2026",
+    },
+    summary: {
+      zh: "巴威北上影响东北，沈阳全市停课停工暴雨红色预警，青岛巨浪；外交部就南海仲裁案发表郑重声明；《功夫女足》票房破5亿打破9项影史纪录；挪威球员未传哈兰德被骂7万条；中国游客在韩国救下司机昏迷大巴；辽宁严肃追责24名公职人员；上海300多株倒伏树木一夜清零；浙江28人借巴威造谣被查处；格雷厄姆死因主动脉夹层猝死；女子被误认怀孕后取出50颗子宫肌瘤。",
+      en: "Typhoon Bavi moves north affecting NE China, Shenyang suspends work and school with red rain alert, Qingdao sees massive waves; Foreign Ministry issues solemn statement on South China Sea arbitration; 'Kung Fu Women's Football' grosses 500M yuan, breaks 9 box office records; Norwegian player receives 70K hate comments for not passing to Haaland; Chinese tourists save unconscious bus driver in Korea; Liaoning disciplines 24 officials over bus crash; Shanghai clears 300+ toppled trees overnight; Zhejiang punishes 28 for spreading typhoon rumors; Senator Graham's cause of death: aortic dissection; woman has 50 uterine fibroids removed.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "巴威北上影响东北，沈阳停课停工暴雨红色预警",
+          en: "Typhoon Bavi Hits NE China, Shenyang Shuts Down",
+        },
+        description: {
+          zh: "台风巴威北上影响东北，沈阳发布暴雨红色预警，全市停课停工。青岛沿海巨浪淹没道路，大桥被淹没。巴威带来强降雨将持续至15日，东北需警惕极端特大暴雨。",
+          en: "Typhoon Bavi moves north: Shenyang issues red rain alert, halts work and schools. Qingdao waves flood roads, bridges submerged. Heavy rain to last through Jul 15.",
+        },
+      },
+      {
+        title: {
+          zh: "外交部就南海仲裁案发表郑重声明",
+          en: "China Issues Solemn Statement on South China Sea Arbitration",
+        },
+        description: {
+          zh: "外交部就有关国家炒作南海仲裁案裁决出台十年发表声明，重申中国立场：仲裁案违反国际法基本原则和《联合国海洋法公约》本身。同日就日方恶劣言行提出严正交涉。",
+          en: "Foreign Ministry reiterates China's stance on South China Sea arbitration: violates international law and UNCLOS. Also protests Japan's actions on the same day.",
+        },
+      },
+      {
+        title: {
+          zh: "《功夫女足》票房破5亿打破9项影史纪录",
+          en: "'Kung Fu Women's Football' Breaks 9 Box Office Records",
+        },
+        description: {
+          zh: "周星驰新片《功夫女足》上映两日票房破5亿，打破9项中国影史纪录，猫眼预测最终票房或达25亿。广东江苏浙江位列票仓前三。",
+          en: "Stephen Chow's new film grosses 500M yuan in 2 days, breaking 9 Chinese box office records. Maoyan predicts 2.5B yuan final gross.",
+        },
+      },
+      {
+        title: {
+          zh: "挪威球员未传哈兰德被骂7万条",
+          en: "Norwegian Player Gets 70K Hate Comments for Not Passing to Haaland",
+        },
+        description: {
+          zh: "世界杯挪威1-2负英格兰，前锋瑟洛特在2打1绝佳机会中未传给空位哈兰德而是内切射门被封堵，赛后遭7万条评论网暴。本人回应：不是不想传，是没能力传过去。",
+          en: "Norway's Sorloth chooses to shoot instead of passing to open Haaland in a 2v1 break, shot blocked. Faces 70K hate comments. Responds: 'I couldn't make the pass.'",
+        },
+      },
+      {
+        title: {
+          zh: "中国游客在韩国救下司机昏迷大巴",
+          en: "Chinese Tourists Save Unconscious Bus Driver in Korea",
+        },
+        description: {
+          zh: "韩国首尔机场大巴行驶中司机突然失去意识，多名中国乘客协作控制车辆、报警并实施心肺复苏，避免了更严重事故。",
+          en: "Seoul airport bus driver loses consciousness mid-drive. Chinese passengers cooperate to control the vehicle, call police, and perform CPR, preventing a major accident.",
+        },
+      },
+      {
+        title: {
+          zh: "辽宁严肃追责24名公职人员",
+          en: "Liaoning Disciplines 24 Officials Over Bus Crash",
+        },
+        description: {
+          zh: "2025年抚顺客运车侧翻致4死5伤事故调查报告公布，认定驾驶人超速操作失误、全员未系安全带。辽宁深挖安全管理漏洞，严肃追责问责24名公职人员。",
+          en: "2025 Fushun bus rollover killing 4, injuring 5: driver overspeed and unbelted passengers blamed. Liaoning holds 24 officials accountable for safety oversight failures.",
+        },
+      },
+      {
+        title: {
+          zh: "上海300多株倒伏树木一夜清零",
+          en: "Shanghai Clears 300+ Toppled Trees Overnight",
+        },
+        description: {
+          zh: "台风巴威致上海203株行道树和100株小区树木倒伏，截至12日发稿时已基本处置完毕。上海防汛响应高效。",
+          en: "Typhoon Bavi topples 203 street trees and 100 residential trees in Shanghai. All cleared by morning, demonstrating efficient emergency response.",
+        },
+      },
+      {
+        title: {
+          zh: "浙江28人借台风巴威造谣被查处",
+          en: "Zhejiang Punishes 28 for Typhoon Bavi Rumors",
+        },
+        description: {
+          zh: "浙江公安查处28起虚构汛情案件，9人被行政拘留。造谣者通过移花接木视频、虚构灾情文案散布不实信息制造恐慌。",
+          en: "Zhejiang police handle 28 cases of typhoon-related fake news. 9 detained for spreading doctored videos and fabricated disaster stories causing public panic.",
+        },
+      },
+      {
+        title: {
+          zh: "格雷厄姆死因披露：主动脉夹层猝死",
+          en: "Senator Graham's Cause of Death: Aortic Dissection",
+        },
+        description: {
+          zh: "美国共和党参议员林赛·格雷厄姆猝死死因公布，法医初步调查结论为动脉粥样硬化性心血管疾病引发主动脉夹层。",
+          en: "US Senator Lindsey Graham's cause of death released: aortic dissection due to atherosclerotic cardiovascular disease, per preliminary medical examiner findings.",
+        },
+      },
+      {
+        title: {
+          zh: "女子被误认怀孕后取出50颗子宫肌瘤",
+          en: "Woman Has 50 Uterine Fibroids Removed",
+        },
+        description: {
+          zh: "42岁王女士腹部隆起常被误认怀孕，就医后腹腔镜手术剔除50颗子宫肌瘤，最大直径8厘米。医生提醒女性需定期妇科检查。",
+          en: "A 42-year-old woman often mistaken as pregnant undergoes laparoscopic surgery to remove 50 uterine fibroids, largest 8cm. Doctor urges regular gynecological exams.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-13",
+    date: "2026-07-13",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-13",
+      en: "🤖 AI Daily · Jul 13, 2026",
+    },
+    summary: {
+      zh: "腾讯混元发布Hy3模型295B MoE服务10亿+微信用户；GPT-5.6 Sol Ultra一小时证明50年图论难题；苹果诉OpenAI挖角400名员工或重创其硬件计划；Codex与ChatGPT Work取消5小时限制；纳德拉提出反向信息悖论；Mesh LLM分布式AI计算；xAI Grok Build传全部文件引隐私担忧；OpenAI Altman改口称AI净创造就业；开源模型面临未来6个月生存考验；Mindwalk可视化代码回放工具。",
+      en: "Tencent Hunyuan releases Hy3 295B MoE serving 1B+ WeChat users; GPT-5.6 Sol Ultra proves 50-year graph theory conjecture in 1 hour; Apple sues OpenAI for poaching 400 employees, may cripple hardware plans; Codex & ChatGPT Work remove 5-hour limit; Nadella proposes 'Reverse Information Paradox'; Mesh LLM distributed AI computing; xAI Grok Build uploads all files raising privacy concerns; Altman pivots: AI is net job creating; Open-source models face 6-month survival test; Mindwalk visual coding agent replay tool.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "腾讯混元发布Hy3模型：295B MoE服务10亿+用户",
+          en: "Tencent Hunyuan Hy3: 295B MoE Serving 1B+ Users",
+        },
+        description: {
+          zh: "腾讯混元发布Hy3模型，295B总参数21B激活的MoE架构，推理效率可打平2-5倍参数规模旗舰模型。定位为Agent向LLM，已集成微信服务10亿+用户。",
+          en: "Tencent Hunyuan's Hy3: 295B total, 21B active MoE. Inference efficiency matches 2-5x larger models. Agent-oriented LLM integrated into WeChat serving 1B+ users.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-5.6 Sol Ultra一小时证明50年图论猜想",
+          en: "GPT-5.6 Sol Ultra Proves 50-Year Graph Theory Conjecture",
+        },
+        description: {
+          zh: "OpenAI宣布GPT-5.6 Sol Ultra在不到一小时内生成循环双覆盖猜想的完整证明。该图论难题由数学家Szekeres和Seymour于50年前提出。",
+          en: "OpenAI's GPT-5.6 Sol Ultra produces a complete proof of the Cycle Double Cover conjecture in under an hour. The problem stood for 50 years.",
+        },
+      },
+      {
+        title: {
+          zh: "Apple诉OpenAI挖角400名员工或重创硬件计划",
+          en: "Apple Sues OpenAI for Poaching 400, May Cripple Hardware Plans",
+        },
+        description: {
+          zh: "苹果起诉OpenAI挖角400名员工、窃取工程机和机密文件。分析师称即使指控未证实，OpenAI硬件计划仍可能受拖累，双方合作将恶化。",
+          en: "Apple alleges OpenAI poached 400 employees, stole engineering devices and confidential files. Analysts say hardware plans may suffer even if unproven.",
+        },
+      },
+      {
+        title: {
+          zh: "Codex与ChatGPT Work取消5小时使用限制",
+          en: "Codex & ChatGPT Work Remove 5-Hour Limit",
+        },
+        description: {
+          zh: "OpenAI暂时取消所有Plus、Business和Pro计划的5小时使用限制，并正在推出使GPT-5.6 Sol在Work中可用的变更。",
+          en: "OpenAI temporarily removes 5-hour usage limit for all Plus, Business, and Pro plans. Rolling out changes to make GPT-5.6 Sol available in Work.",
+        },
+      },
+      {
+        title: {
+          zh: "纳德拉提出反向信息悖论",
+          en: "Nadella Proposes 'Reverse Information Paradox'",
+        },
+        description: {
+          zh: "微软CEO纳德拉指出AI时代企业为使用AI需暴露专有知识，这些智力废气被模型学习导致信息不对称向卖家倾斜。企业需要真正的数据保护。",
+          en: "Microsoft CEO warns companies expose proprietary knowledge when using AI, creating 'intellectual exhaust' that trains models. Calls for real data protection.",
+        },
+      },
+      {
+        title: {
+          zh: "Mesh LLM：分布式AI计算开源项目",
+          en: "Mesh LLM: Open-Source Distributed AI Computing",
+        },
+        description: {
+          zh: "Mesh LLM可将多台机器GPU和内存池化，对外暴露兼容OpenAI的API。通过iroh网络库实现点对点连接，无需中央服务器，请求可在本地GPU运行。",
+          en: "Mesh LLM pools GPU and memory across machines, exposing OpenAI-compatible API. Peer-to-peer via iroh networking, no central server needed.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI Grok Build上传全部文件引隐私担忧",
+          en: "xAI Grok Build Uploads All Files, Privacy Concerns",
+        },
+        description: {
+          zh: "对Grok Build编码CLI的网络流量分析显示，该工具向xAI明文发送读取的文件内容（包括.env密钥）、全部git历史和仓库描述等敏感信息。",
+          en: "Network analysis reveals Grok Build CLI sends plaintext file contents (including .env secrets), full git history, and repo descriptions to xAI servers.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI Altman改口称AI净创造就业",
+          en: "Altman Pivots: AI Is Net Job Creating",
+        },
+        description: {
+          zh: "OpenAI CEO Sam Altman表示相当确信AI迄今为止净创造了就业，承认这并非他预期。此前他曾警告AI影响可能快得有点吓人。Anthropic CEO也修正了早期言论。",
+          en: "Sam Altman now 'pretty sure' AI has net created jobs, admitting it's not what he expected. Previously warned AI's impact might be 'scary fast.' Anthropic CEO also revises stance.",
+        },
+      },
+      {
+        title: {
+          zh: "开源模型面临未来6个月生存考验",
+          en: "Open-Source Models Face 6-Month Survival Test",
+        },
+        description: {
+          zh: "美国白宫讨论通过新行政令管理开源模型，可能在未来6个月内禁止或限制能力接近GPT-5.5等前沿水平的开源权重模型发布。",
+          en: "White House considers executive order to regulate open-source models, potentially banning releases approaching GPT-5.5-level capabilities within 6 months.",
+        },
+      },
+      {
+        title: {
+          zh: "Mindwalk：3D代码库地图回放编码代理会话",
+          en: "Mindwalk: 3D Code Map Replay for Coding Agents",
+        },
+        description: {
+          zh: "Mindwalk将Claude Code和Codex的会话日志在代码库3D地图上回放。仓库绘制成夜间地图，代理搜索、读取和编辑过的文件发光，未触及区域保持黑暗。",
+          en: "Mindwalk visualizes Claude Code and Codex sessions on a 3D codebase map. Repository renders as a night map: files touched by agents glow, untouched areas stay dark.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-12-hot",
     date: "2026-07-12",
     title: {
