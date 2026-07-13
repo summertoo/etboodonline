@@ -353,7 +353,7 @@ export const projects: Project[] = [
     category: "tool",
     status: "live",
     logoUrl: "/avatars/stable-gateway.png",
-    liveUrl: "https://moligate.com/sign-up?aff=vGbL",
+    liveUrl: "https://api.gavinteam.online/register?aff=WAG6SLWDUDP4",
     sponsored: true,
   },
   {
