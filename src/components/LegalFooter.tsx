@@ -16,6 +16,12 @@ export default function LegalFooter() {
         </Link>
         <CookieSettingsButton />
         <a
+          href="mailto:admin@etboodonline.com"
+          className="hover:text-[var(--cyber-primary)]"
+        >
+          admin@etboodonline.com
+        </a>
+        <a
           href="mailto:etbood@gmail.com"
           className="hover:text-[var(--cyber-primary)]"
         >

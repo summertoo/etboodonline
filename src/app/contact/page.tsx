@@ -26,12 +26,20 @@ export default function Contact() {
           <div className="p-8 rounded-xl border border-[var(--cyber-border)] bg-white space-y-6">
             <div className="text-center space-y-2">
               <p className="font-semibold text-lg">{t("contact.email")}</p>
-              <a
-                href="mailto:etbood@gmail.com"
-                className="text-[var(--cyber-primary)] hover:underline"
-              >
-                etbood@gmail.com
-              </a>
+              <div className="space-y-1">
+                <a
+                  href="mailto:admin@etboodonline.com"
+                  className="block text-[var(--cyber-primary)] hover:underline"
+                >
+                  admin@etboodonline.com
+                </a>
+                <a
+                  href="mailto:etbood@gmail.com"
+                  className="block text-[var(--cyber-primary)] hover:underline"
+                >
+                  etbood@gmail.com
+                </a>
+              </div>
             </div>
             <hr className="border-[var(--cyber-border)]" />
             <div className="text-center">

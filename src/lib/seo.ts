@@ -9,6 +9,7 @@ export const siteConfig = {
     "ZD Tech 是一个独立创意工作室，发布网页游戏、Roblox 游戏、Sui / Web3 DApp、创意工具，以及中英双语的 AI 与热点资讯更新。",
   ogImage: "/og-image.png",
   email: "etbood@gmail.com",
+  adminEmail: "admin@etboodonline.com",
   locale: "zh_CN",
   keywords: [
     "ZD Tech",

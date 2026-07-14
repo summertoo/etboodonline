@@ -1,4 +1,7 @@
-D:\sui\learn3\zdhome\zdhome\README.md
+增加了管理员邮箱：
+admin@etboodonline.com
+看一下加在哪个页面里比较好。
+
 ```
 npm create @mysten/dapp
 ```
