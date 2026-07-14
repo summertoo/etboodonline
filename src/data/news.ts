@@ -25,6 +25,236 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-14-hot",
+    date: "2026-07-14",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-14",
+      en: "🔥 Hot Topics · Jul 14, 2026",
+    },
+    summary: {
+      zh: "今年秋冬季将形成超强厄尔尼诺事件；伊朗称袭击美海军第五舰队司令部，特朗普通知国会伊朗战事重开；法国vs西班牙半决赛前将默哀悼念尼斯恐袭；总理座谈会于东来等8人成座上宾；遭仅退款老板千里维权坐30小时无座；超250万人请愿将阿根廷逐出世界杯；海南禁售燃油车释放什么信号；天津医院主任APP答题受贿20年敛财千万；69岁老人为救女子被咬掉鼻子；阿根廷队想给广西捐赠物资。",
+      en: "Super El Nino expected this fall/winter; Iran claims attack on US 5th Fleet HQ, Trump notifies Congress of renewed Iran war; France-Spain semi to hold minute of silence for Nice attack; Premier Li hosts expert symposium with 8 guests; shopkeeper travels 3,000km to confront 'refund-only' scammers; 2.5M sign petition to expel Argentina from World Cup; Hainan to ban gas vehicle sales by 2030; hospital director amassed $1.4M via custom app bribery; 69yo hero's nose bitten off rescuing woman; Argentina national team donates to Guangxi flood relief.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "今年秋冬季将形成超强厄尔尼诺事件",
+          en: "Super El Nino Expected This Fall/Winter",
+        },
+        description: {
+          zh: "国家海洋环境预报中心研判今年秋冬季将形成超强厄尔尼诺事件，不排除赶超1997/1998年史上最强厄尔尼诺的可能，需防范极端气候。",
+          en: "China's ocean forecast center predicts a super El Nino event this fall/winter, potentially rivaling the record-breaking 1997/1998 event.",
+        },
+      },
+      {
+        title: {
+          zh: "伊朗称袭击美海军第五舰队司令部",
+          en: "Iran Claims Attack on US 5th Fleet HQ",
+        },
+        description: {
+          zh: "伊朗媒体报道伊方导弹袭击位于巴林的美国海军第五舰队司令部。特朗普已通知国会伊朗战事重新爆发。美国海军一艘补给舰同日突发火灾。",
+          en: "Iranian media reports missile attack on US 5th Fleet HQ in Bahrain. Trump notifies Congress of renewed Iran war. US Navy supply ship also catches fire.",
+        },
+      },
+      {
+        title: {
+          zh: "法国vs西班牙半决赛前将默哀悼念尼斯恐袭",
+          en: "France-Spain Semi to Hold Minute of Silence for Nice Attack",
+        },
+        description: {
+          zh: "世界杯半决赛法国对阵西班牙开球前将举行一分钟默哀，悼念尼斯恐袭遇难者。当天正值事件发生十周年，国际足联已批准。",
+          en: "A minute of silence will be held before France vs Spain World Cup semi to commemorate Nice attack victims on the tragedy's 10th anniversary. FIFA approved.",
+        },
+      },
+      {
+        title: {
+          zh: "总理座谈会于东来等8人成座上宾",
+          en: "Premier Li Hosts Expert Symposium with 8 Guests",
+        },
+        description: {
+          zh: "国务院总理李强主持召开经济形势专家和企业家座谈会，黄汉权、于东来等8位代表就经济运行中的矛盾和问题提出意见建议。",
+          en: "Premier Li Qiang chairs economic symposium with 8 experts and entrepreneurs including Pangdonglai founder Yu Donglai to discuss economic challenges.",
+        },
+      },
+      {
+        title: {
+          zh: "遭仅退款老板千里维权坐30小时无座",
+          en: "Shopkeeper Travels 3,000km to Confront 'Refund-Only' Scammers",
+        },
+        description: {
+          zh: "新疆一老板王秀芹辗转3000多公里到河南农村挨家挨户寻找5名仅退款买家维权，返程买30多小时无座火车票引热议。",
+          en: "Xinjiang shopkeeper Wang Xiuqin travels 3,000km to rural Henan to confront 5 'refund-only' online shoppers. Returns on 30-hour train without seat.",
+        },
+      },
+      {
+        title: {
+          zh: "超250万人请愿将阿根廷逐出世界杯",
+          en: "2.5M Sign Petition to Expel Argentina from World Cup",
+        },
+        description: {
+          zh: "一份要求取消阿根廷世界杯参赛资格的请愿书获超250万人签名，因阿根廷对阵埃及比赛中争议判罚引发全球球迷不满。",
+          en: "Petition to expel Argentina from World Cup garners 2.5M+ signatures following controversial refereeing in Argentina vs Egypt match.",
+        },
+      },
+      {
+        title: {
+          zh: "海南禁售燃油车，释放什么信号",
+          en: "Hainan to Ban Gas Vehicle Sales by 2030",
+        },
+        description: {
+          zh: "海南发布十五五规划提出2030年禁售燃油车，成为我国首个告别燃油车销售的省份。业内预判珠三角长三角或成下一批跟进地区。",
+          en: "Hainan becomes China's first province to ban gas car sales by 2030. Pearl River Delta and Yangtze River Delta expected to follow.",
+        },
+      },
+      {
+        title: {
+          zh: "天津医院主任APP答题受贿20年敛财千万",
+          en: "Hospital Director Amassed $1.4M via Custom App Bribery",
+        },
+        description: {
+          zh: "天津一医院放射科主任自创APP答题受贿洗钱，手握设备采购大权20年敛财千万、坐拥18套房产，获刑12年罚金130万。",
+          en: "A Tianjin hospital radiology director created a custom Q&A app for bribery. Over 20 years, amassed millions and 18 properties. Sentenced to 12 years.",
+        },
+      },
+      {
+        title: {
+          zh: "69岁老人为救女子被咬掉鼻子",
+          en: "69yo Hero's Nose Bitten Off Rescuing Woman",
+        },
+        description: {
+          zh: "郴州69岁村民曾凡林勇救遭歹徒挟持女子，搏斗中鼻子被咬掉，缝115针。入选见义勇为勇士榜，本人称只是小事。",
+          en: "69-year-old Zeng Fanlin in Chenzhou has his nose bitten off while rescuing a woman from an attacker. Required 115 stitches. Named a bravery role model.",
+        },
+      },
+      {
+        title: {
+          zh: "阿根廷队想给广西捐赠物资",
+          en: "Argentina National Team Donates to Guangxi Flood Relief",
+        },
+        description: {
+          zh: "阿根廷国家足球队官方发布声明，表示已关注到广西洪水灾情，有心捐赠一批国家队官方物资助力灾后恢复，回馈中国球迷支持。",
+          en: "Argentina's national football team announces donation of official team merchandise to support Guangxi flood recovery, thanking Chinese fans.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-14",
+    date: "2026-07-14",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-14",
+      en: "🤖 AI Daily · Jul 14, 2026",
+    },
+    summary: {
+      zh: "腾讯混元发布HyOCR-1.5端到端OCR大模型全栈开源；德国AI协会发布Soofi S 30B开源模型；Cloudflare推出Precursor检测AI智能体行为；xAI Grok CLI被曝静默上传整个代码库及密钥；Meta扩建路易斯安那数据中心至5GW投500亿美元；黄仁勋称英伟达季度收入逼近千亿美元；Hebbia测试Claude Fable 5金融基准提升20%；OpenAI发布面向普通用户提示词指南；Seedream 5.0 Pro图像编辑门槛爆降；前沿模型tokenizer差异导致隐性涨价。",
+      en: "Tencent Hunyuan open-sources HyOCR-1.5 full-stack OCR model; German AI consortium releases Soofi S 30B open model; Cloudflare launches Precursor for AI agent detection; xAI Grok CLI found uploading entire codebase and keys; Meta expands Louisiana data center to 5GW ($50B); Huang says NVIDIA nearing $100B quarterly revenue; Hebbia tests Claude Fable 5 with 20% financial benchmark gain; OpenAI publishes prompting guide for general users; Seedream 5.0 Pro slashes image editing barrier; tokenizer differences cause hidden cost increases in frontier models.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "腾讯混元发布HyOCR-1.5端到端OCR大模型全栈开源",
+          en: "Tencent Open-Sources HyOCR-1.5 Full-Stack OCR Model",
+        },
+        description: {
+          zh: "腾讯混元发布HyOCR-1.5，端到端OCR大模型领域首个将训练、推理、模型权重完整开源的专家模型。仅1B参数覆盖8种以上任务，推理提速6.37倍。",
+          en: "Tencent Hunyuan's HyOCR-1.5: first fully open-source end-to-end OCR expert model. 1B params covering 8+ tasks, 6.37x inference speedup.",
+        },
+      },
+      {
+        title: {
+          zh: "德国AI协会发布Soofi S 30B开源模型",
+          en: "German AI Consortium Releases Soofi S 30B Open Model",
+        },
+        description: {
+          zh: "德国AI协会发布Soofi S 30B-A3B开源大语言模型，316亿总参数量，每token仅激活约3.2B，采用Mamba-2与标准注意力混合MoE架构。",
+          en: "German AI consortium releases Soofi S 30B-A3B open LLM. 31.6B total params, only 3.2B active per token. Mamba-2 + standard attention hybrid MoE.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare推出Precursor检测AI智能体行为",
+          en: "Cloudflare Launches Precursor for AI Agent Detection",
+        },
+        description: {
+          zh: "Cloudflare发布Precursor持续行为验证引擎，通过将用户会话级别行为转化为机器人检测信号，精确识别高级自动化行为同时减少对合法用户干扰。",
+          en: "Cloudflare's Precursor uses continuous behavioral verification to detect AI agents, converting session-level behavior into bot detection signals with minimal false positives.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI Grok CLI被曝静默上传整个代码库及密钥",
+          en: "xAI Grok CLI Found Uploading Entire Codebase & Keys",
+        },
+        description: {
+          zh: "安全研究者发现xAI官方Grok CLI会在每轮任务前后将当前工作目录打包上传至xAI服务器，包括.env密钥文件、全部git历史等敏感信息。",
+          en: "Researchers discover xAI's official Grok CLI uploads the entire working directory (including .env secrets and full git history) to xAI servers before and after each task.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta扩建路易斯安那数据中心至5GW",
+          en: "Meta Expands Louisiana Data Center to 5GW ($50B)",
+        },
+        description: {
+          zh: "Meta将路易斯安那州数据中心算力扩至5GW，总投资超500亿美元。Meta承诺承担全部能源及水资源费用，并另投超10亿改善当地基础设施。",
+          en: "Meta expands Louisiana data center to 5GW, $50B+ total investment. Meta covers all energy and water costs, plus $1B for local infrastructure improvements.",
+        },
+      },
+      {
+        title: {
+          zh: "黄仁勋：英伟达季度收入逼近千亿美元",
+          en: "Huang: NVIDIA Nearing $100B Quarterly Revenue",
+        },
+        description: {
+          zh: "英伟达CEO黄仁勋表示季度营收即将逼近1000亿美元，否认下一代Rubin Ultra架构延期传闻，称仍按计划明年出货。",
+          en: "NVIDIA CEO Jensen Huang says quarterly revenue approaching $100B. Denies Rubin Ultra architecture delays, confirms on-schedule for next year.",
+        },
+      },
+      {
+        title: {
+          zh: "Hebbia测试Claude Fable 5金融基准提升20%",
+          en: "Hebbia: Claude Fable 5 Boosts Financial Benchmarks 20%",
+        },
+        description: {
+          zh: "为机构金融提供AI平台的Hebbia测试Claude Fable 5，在金融专用文档问答与引证测试上实现约20%相对准确率提升，创团队最佳纪录。",
+          en: "AI platform Hebbia tests Claude Fable 5 on financial benchmarks: ~20% relative accuracy improvement on document QA and citation tests, setting new records.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI发布面向普通用户的提示词指南",
+          en: "OpenAI Publishes Prompting Guide for General Users",
+        },
+        description: {
+          zh: "OpenAI整合面向普通用户的提示词指南，涵盖目标、上下文、输出格式和边界四个模块。建议以结果而非步骤开头，用硬性规则替代逐步骤脚本。",
+          en: "OpenAI releases prompting guide for general users with 4 modules: goal, context, format, boundaries. Recommends starting with results, not step-by-step instructions.",
+        },
+      },
+      {
+        title: {
+          zh: "Seedream 5.0 Pro：图像编辑门槛爆降",
+          en: "Seedream 5.0 Pro Slashes Image Editing Barrier",
+        },
+        description: {
+          zh: "字节跳动Seedream 5.0 Pro图像质量追平GPT-Image 2.0，核心亮点是可编辑交互：用户在图上打点、画框、涂鸦，提示词中可直接标记区域。",
+          en: "ByteDance's Seedream 5.0 Pro matches GPT-Image 2.0 quality. Key feature: interactive editing - users can dot, box, doodle on images and tag regions in prompts.",
+        },
+      },
+      {
+        title: {
+          zh: "前沿模型tokenizer差异导致隐性涨价",
+          en: "Tokenizer Differences Cause Hidden Cost Increases",
+        },
+        description: {
+          zh: "同一份TypeScript文件在GPT-5.x上681个token，在Claude最新tokenizer下1,178个，相差1.73倍。Anthropic新tokenizer对代码类输入更贵。",
+          en: "Same TypeScript file: 681 tokens on GPT-5.x vs 1,178 on Claude's new tokenizer (1.73x difference). Anthropic's tokenizer costs more for code inputs.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-13-hot",
     date: "2026-07-13",
     title: {
