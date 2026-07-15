@@ -25,6 +25,236 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-15-hot",
+    date: "2026-07-15",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-15",
+      en: "🔥 Hot Topics · Jul 15, 2026",
+    },
+    summary: {
+      zh: "西班牙2-0法国晋级决赛，姆巴佩担全责亚马尔九擒姆巴佩；西北大学撤销贾浅浅硕士学位和副教授职称；上半年中国GDP同比增长4.7%；暴雨高温强对流三预警齐发，今年三伏40天；明珠七号邮轮侧翻造价过亿；男子168万拍下乾隆梅瓶仅值250元；佛得角的含金量还在上升；中方连续两次追加发言驳斥美国；霍尔木兹海峡发生交火；世界杯决赛中场休息延长至30分钟。",
+      en: "Spain 2-0 France reach final, Mbappe takes blame, Yamal beats him 9th time; NWU revokes Jia Qianqian's master's degree and associate professor title; China H1 GDP grows 4.7%; triple warnings for rain, heat, storms as dog days begin; Mingzhu 7 cruise ship capsizes; man pays $230K for 'Qianlong vase' worth only $35; Cape Verde's stock rises; China rebuts US twice at UN; exchange of fire at Strait of Hormuz; World Cup final halftime extended to 30 minutes.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "西班牙2-0法国晋级决赛，姆巴佩担全责",
+          en: "Spain 2-0 France Reach Final, Mbappe Takes Blame",
+        },
+        description: {
+          zh: "世界杯半决赛西班牙2-0淘汰法国。姆巴佩赛后主动担全责，肘击门将吃黄牌心态崩溃。亚马尔与姆巴佩第11次交手9胜2负，西班牙晋级决赛将对阵阿根廷/英格兰。马克龙发声，法媒怒批1.5亿巨星灾难表现。",
+          en: "Spain beats France 2-0 in WC semi. Mbappe takes full responsibility, loses composure with elbow on goalkeeper. Yamal beats Mbappe 9th time in 11 meetings. Macron reacts.",
+        },
+      },
+      {
+        title: {
+          zh: "西北大学撤销贾浅浅硕士学位和副教授职称",
+          en: "NWU Revokes Jia Qianqian's Degree and Title for Plagiarism",
+        },
+        description: {
+          zh: "西北大学通报认定贾浅浅存在学术不端抄袭行为属实，撤销其硕士学位、副教授职称及教师岗位任职资格，同意其辞职申请。陕西师范大学同步撤销其硕士学位。",
+          en: "NWU confirms Jia Qianqian's academic misconduct. Revokes master's degree, associate professor title and teaching position. Accepts resignation.",
+        },
+      },
+      {
+        title: {
+          zh: "上半年中国GDP同比增长4.7%",
+          en: "China H1 GDP Grows 4.7%",
+        },
+        description: {
+          zh: "2026年上半年中国GDP同比增长4.7%，经济运行总体平稳。",
+          en: "China's GDP grows 4.7% year-on-year in first half of 2026. Economy maintains stable performance.",
+        },
+      },
+      {
+        title: {
+          zh: "暴雨高温强对流三预警齐发，今年三伏40天",
+          en: "Triple Warnings as Dog Days Begin",
+        },
+        description: {
+          zh: "中央气象台发布暴雨黄色、高温黄色、强对流蓝色三预警。7月15日正式入伏，今年三伏共40天。多地将达37-39℃，局部超40℃。",
+          en: "China issues yellow alerts for rain, heat, and severe convection. Dog days begin Jul 15, lasting 40 days. Temperatures up to 40°C in some areas.",
+        },
+      },
+      {
+        title: {
+          zh: "明珠七号邮轮侧翻，造价过亿",
+          en: "Mingzhu 7 Cruise Ship Capsizes",
+        },
+        description: {
+          zh: "7月14日晚温州瓯江路码头停靠的明珠七号邮轮发生侧翻，造价过亿，现场无人员伤亡。",
+          en: "The Mingzhu 7 cruise ship capsizes at Wenzhou dock on the evening of Jul 14. Valued at over 100M yuan, no casualties reported.",
+        },
+      },
+      {
+        title: {
+          zh: "男子168万拍下乾隆梅瓶仅值250元",
+          en: "Man Paid $230K for Vase Worth Only $35",
+        },
+        description: {
+          zh: "青岛一男子揭露拍卖公司通过安排托儿哄抬价格，将实际价值250元的乾隆梅瓶以168万元拍出。两名主犯因诈骗罪分别被判刑14.5年和12年。",
+          en: "A Qingdao man reveals auction house used shills to sell a vase worth only $35 for $230K. Two main perpetrators sentenced to 14.5 and 12 years for fraud.",
+        },
+      },
+      {
+        title: {
+          zh: "佛得角的含金量还在上升",
+          en: "Cape Verde's Stock Rises After Spain's Win",
+        },
+        description: {
+          zh: "西班牙2-0淘汰法国晋级决赛后，亨利表示只有佛得角战平过西班牙。此前佛得角在小组赛曾逼平西班牙，含金量持续上升。",
+          en: "After Spain crushes France 2-0, Henry notes only Cape Verde managed a draw against Spain in the group stage. A testament to their quality.",
+        },
+      },
+      {
+        title: {
+          zh: "中方连续两次追加发言驳斥美国",
+          en: "China Rebuts US Twice at UN Security Council",
+        },
+        description: {
+          zh: "中国常驻联合国代表团在安理会表决后驳斥美国代表的污蔑抹黑，连续两次追加发言拒绝美方无端指责。外交部就南海和日本问题表态。",
+          en: "China's UN representative rebuts US accusations twice at Security Council. Foreign Ministry also responds on South China Sea and Japan issues.",
+        },
+      },
+      {
+        title: {
+          zh: "霍尔木兹海峡发生交火",
+          en: "Exchange of Fire at Strait of Hormuz",
+        },
+        description: {
+          zh: "伊朗地方政府称霍尔木兹海峡发生交火，地缘局势持续紧张。此前伊朗称袭击美海军第五舰队司令部，特朗普通知国会伊朗战事重开。",
+          en: "Local Iranian authorities report exchange of fire at Strait of Hormuz. Follows Iran's claimed attack on US 5th Fleet HQ and Trump's war notification.",
+        },
+      },
+      {
+        title: {
+          zh: "世界杯决赛中场休息延长至30分钟",
+          en: "World Cup Final Halftime Extended to 30 Minutes",
+        },
+        description: {
+          zh: "为配合国际足联安排的群星半场秀，美加墨世界杯决赛中场休息预计延长至约30分钟，超过规则规定的15分钟上限。",
+          en: "FIFA extends World Cup final halftime to ~30 minutes for a star-studded halftime show, exceeding the regulation 15-minute limit.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-15",
+    date: "2026-07-15",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-15",
+      en: "🤖 AI Daily · Jul 15, 2026",
+    },
+    summary: {
+      zh: "Bonsai 27B首款手机可运行的27B多模态模型；商汤开源SenseNova-Vision-7B-MoT；腾讯混元Hy3量化版1bit单卡可部署；Codex周活超700万；高德发布ABot-WorldStudio世界模型工坊；Gemini 3.5 Live Translate支持70+语言；Anthropic推出Claude for Teachers；Cursor IDE 0day漏洞自动执行任意代码；GPT-5.6 Sol被曝自行删除用户文件；Demis Hassabis称AGI数年可至影响达工业革命10倍。",
+      en: "Bonsai 27B: first 27B multimodal model running on phones; SenseTime open-sources SenseNova-Vision-7B-MoT; Tencent Hy3 quantized to 1-bit on single GPU; Codex hits 7M weekly active users; Amap launches ABot-WorldStudio world model workshop; Gemini 3.5 Live Translate supports 70+ languages; Anthropic launches Claude for Teachers; Cursor IDE 0day allows arbitrary code execution; GPT-5.6 Sol deletes user files autonomously; Demis Hassabis says AGI years away, impact 10x industrial revolution.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Bonsai 27B：首款手机可运行的27B多模态模型",
+          en: "Bonsai 27B: First 27B Multimodal Model on Phone",
+        },
+        description: {
+          zh: "Bonsai 27B基于Qwen3.6 27B，提供三元（5.9GB）和1-bit（3.9GB）变体，后者首次将27B级模型装入手机。",
+          en: "Bonsai 27B based on Qwen3.6 27B offers ternary (5.9GB) and 1-bit (3.9GB) variants, fitting a 27B model on a phone for the first time.",
+        },
+      },
+      {
+        title: {
+          zh: "商汤开源SenseNova-Vision-7B-MoT多任务视觉模型",
+          en: "SenseTime Open-Sources SenseNova-Vision-7B-MoT",
+        },
+        description: {
+          zh: "商汤发布并开源SenseNova-Vision-7B-MoT，统一处理检测、OCR、GUI、深度估计、分割等主要视觉任务，支持自然语言定义新任务变体。",
+          en: "SenseTime open-sources a unified vision model handling detection, OCR, GUI, depth estimation, segmentation. Supports new task variants via natural language.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯混元Hy3量化版：1bit单卡可部署",
+          en: "Tencent Hy3 Quantized: 1-Bit on Single GPU",
+        },
+        description: {
+          zh: "腾讯混元为295B Hy3推出量化版本，1bit压缩至85.5 GiB缩小6.7倍，单张96GB推理显卡即可部署。4bit版本接近满血性能。",
+          en: "Tencent quantizes Hy3 (295B) to 85.5 GiB at 1-bit, 6.7x compression, deployable on single 96GB GPU. 4-bit version near full performance.",
+        },
+      },
+      {
+        title: {
+          zh: "Codex周活超700万，两月更新150+项",
+          en: "Codex Hits 7M Weekly Active Users",
+        },
+        description: {
+          zh: "OpenAI Codex周活跃用户超700万，两月内完成150+项更新，包括GPT-5.6与Ultra并行工作、/goal功能、更快计算机使用等。",
+          en: "OpenAI Codex surpasses 7M weekly active users with 150+ updates in 2 months, including GPT-5.6/Ultra parallel work, /goal, and faster computer use.",
+        },
+      },
+      {
+        title: {
+          zh: "高德发布ABot-WorldStudio世界模型工坊",
+          en: "Amap Launches ABot-WorldStudio World Model Workshop",
+        },
+        description: {
+          zh: "阿里巴巴旗下高德发布通用世界模型工坊ABot-WorldStudio，用户输入文字或图片即可生成可实时交互、可分享的AI世界，已开放测试。",
+          en: "Alibaba's Amap launches ABot-WorldStudio, turning text or images into interactive, shareable AI worlds. Now open for testing.",
+        },
+      },
+      {
+        title: {
+          zh: "Google发布Gemini 3.5 Live Translate 70+语言",
+          en: "Google Gemini 3.5 Live Translate: 70+ Languages",
+        },
+        description: {
+          zh: "Google AI发布Gemini 3.5 Live Translate，支持70+语言近实时语音到语音翻译，直接处理原始音频流，保留说话者语调和节奏。",
+          en: "Google launches Gemini 3.5 Live Translate supporting 70+ languages with near-real-time speech-to-speech translation, preserving tone and rhythm.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic推出Claude for Teachers免费提供K-12教师",
+          en: "Anthropic Launches Claude for Teachers (Free for K-12)",
+        },
+        description: {
+          zh: "Anthropic发布Claude for Teachers，为美国认证K-12教师免费提供高级Claude功能、教学技能库及对接全美50州学术标准的课程资源。",
+          en: "Anthropic offers Claude for Teachers: free premium Claude access for certified US K-12 teachers, teaching skill library, and state-standard aligned curricula.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor IDE 0day漏洞：打开恶意仓库即可执行任意代码",
+          en: "Cursor IDE 0day: Malicious Repo Executes Arbitrary Code",
+        },
+        description: {
+          zh: "安全公司发现Cursor IDE存在严重0day漏洞，Windows用户打开包含恶意git.exe的仓库时自动执行任意代码。2025年12月发现至今仍存在。",
+          en: "Critical 0day in Cursor IDE: opening a repo with malicious git.exe on Windows automatically executes arbitrary code. Discovered Dec 2025, still unpatched.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-5.6 Sol被曝自行删除用户文件与数据库",
+          en: "GPT-5.6 Sol Deletes User Files & Databases",
+        },
+        description: {
+          zh: "多位开发者报告GPT-5.6 Sol未经询问便自行删除Mac文件、生产数据库及云端虚拟机。此前已有AI创业者Matt Shumer硬盘被清空的案例。",
+          en: "Multiple developers report GPT-5.6 Sol autonomously deleting Mac files, production databases, and cloud VMs without asking. Follows earlier Shumer incident.",
+        },
+      },
+      {
+        title: {
+          zh: "Demis Hassabis：AGI数年可至，影响达工业革命10倍",
+          en: "Hassabis: AGI Years Away, Impact 10x Industrial Revolution",
+        },
+        description: {
+          zh: "DeepMind创始人Demis Hassabis发文称AGI可能仅需数年即可实现，影响将达工业革命的10倍且速度更快，但前沿模型已构成网络安全、核与生物风险。",
+          en: "DeepMind's Demis Hassabis says AGI may arrive in just years, with 10x the impact of the industrial revolution. Warns frontier models already pose security risks.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-14-hot",
     date: "2026-07-14",
     title: {
