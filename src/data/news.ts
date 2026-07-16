@@ -25,6 +25,233 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-16-hot",
+    date: "2026-07-16",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-16",
+      en: "🔥 Hot Topics · Jul 16, 2026",
+    },
+    summary: {
+      zh: "阿根廷2-1英格兰晋级决赛战西班牙，贝林厄姆赛后暴怒，英阿大战变自由搏击；二季度GDP增长4.3%；佛得角严选冠亚军均被其逼平；四川宝兴县交通事故致6死11伤；日韩股市集体大跌；美军对驶往伊朗油轮射地狱火导弹；泽连斯基拧瓶盖引争议；黄日华宣布复出；《功夫女足》5天票房8亿王晶评近十年最佳。",
+      en: "Argentina 2-1 England to face Spain in final, Bellingham enraged after match; Q2 GDP grows 4.3%; Cape Verde 'certified' both finalists after draws; 6 dead 11 injured in Sichuan bus crash; Japan-Korea stock markets plunge; US fires Hellfire missile at Iran-bound oil tanker; Zelenskyy bottle cap controversy; Felix Wong announces comeback; 'Kung Fu Women's Football' grosses 800M in 5 days, Wong Jing calls it best in decade.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "阿根廷2-1绝杀英格兰，决赛战西班牙",
+          en: "Argentina 2-1 England to Face Spain in Final",
+        },
+        description: {
+          zh: "世界杯半决赛阿根廷2-1逆转英格兰晋级决赛，7月20日将与西班牙争冠。劳塔罗替补头球绝杀赛后痛哭。贝林厄姆赛后暴怒推搡，凯恩喷主帅图赫尔保守。英阿大战半场19次犯规变自由搏击。",
+          en: "Argentina beats England 2-1 in WC semi. Lautaro's header wins it. Bellingham furious post-match. Kane slams Tuchel's conservative tactics. Match turns into brawl with 19 fouls.",
+        },
+      },
+      {
+        title: {
+          zh: "二季度GDP增长4.3%，怎么看",
+          en: "China Q2 GDP Grows 4.3%",
+        },
+        description: {
+          zh: "上半年GDP增长4.7%，其中一季度5.0%、二季度4.3%。二季度增速有所回落，专家分析经济下行压力仍存但总体平稳。",
+          en: "H1 GDP grows 4.7% (Q1: 5.0%, Q2: 4.3%). Q2 slowdown reflects ongoing economic pressure but overall stability maintained.",
+        },
+      },
+      {
+        title: {
+          zh: "世界杯决赛对阵图：西班牙vs阿根廷",
+          en: "World Cup Final: Spain vs Argentina",
+        },
+        description: {
+          zh: "2026美加墨世界杯决赛对阵正式确定，西班牙与阿根廷会师决赛，7月20日争夺大力神杯。西班牙2-0法国，阿根廷2-1英格兰。",
+          en: "World Cup final set: Spain vs Argentina on Jul 20. Spain beat France 2-0, Argentina beat England 2-1 in semifinals.",
+        },
+      },
+      {
+        title: {
+          zh: "佛得角严选：冠亚军均被逼平",
+          en: "Cape Verde 'Certified': Drew with Both Finalists",
+        },
+        description: {
+          zh: "佛得角在小组赛常规90分钟内接连逼平杀入决赛的西班牙（0-0）和阿根廷（1-1），网友戏称冠军必须得过佛得角这关。",
+          en: "Cape Verde drew with both finalists Spain (0-0) and Argentina (1-1) in group stage. Fans joke: 'You must pass Cape Verde to win the World Cup.'",
+        },
+      },
+      {
+        title: {
+          zh: "四川宝兴县交通事故致6死11伤",
+          en: "6 Dead, 11 Injured in Sichuan Bus Crash",
+        },
+        description: {
+          zh: "四川雅安宝兴县一辆中巴车碰撞护栏后坠入河滩，事故造成6人死亡、11人受伤（含1人重伤、10人轻伤），事故调查已展开。",
+          en: "A bus crashes through guardrail into riverbed in Baoxing County, Sichuan. 6 dead, 11 injured (1 critical, 10 minor). Investigation underway.",
+        },
+      },
+      {
+        title: {
+          zh: "日韩股市集体大跌",
+          en: "Japan-Korea Stock Markets Plunge",
+        },
+        description: {
+          zh: "7月16日日韩股市集体跳水，韩国KOSPI跌5.75%，三星电子跌超6%、SK海力士跌超10%。日经225跌超2.5%。韩国启动SIDECAR暂停程序化交易。",
+          en: "Japan and Korea stock markets crash. KOSPI down 5.75%, Samsung -6%, SK Hynix -10%. Nikkei down 2.5%. Korea halts program trading.",
+        },
+      },
+      {
+        title: {
+          zh: "美军对驶往伊朗油轮射地狱火导弹",
+          en: "US Fires Hellfire Missile at Iran-Bound Oil Tanker",
+        },
+        description: {
+          zh: "美军对驶往伊朗港口的空载油轮M/T Belma发射地狱火导弹使其丧失航行能力，因违反美方封锁令且无视多次警告。伊朗称无意谈判再袭美军基地。",
+          en: "US military fires Hellfire missile at empty oil tanker heading to Iran, disabling it for violating blockade. Iran 'not interested in talks,' strikes US base again.",
+        },
+      },
+      {
+        title: {
+          zh: "泽连斯基拧瓶盖引发巨大争议",
+          en: "Zelenskyy Bottle Cap Controversy",
+        },
+        description: {
+          zh: "乌克兰总统泽连斯基在巴黎活动中完全拧开塑料瓶盖，被指违反欧盟连体瓶盖环保规定，引发网友热议。",
+          en: "Ukrainian President Zelenskyy fully removes a plastic bottle cap in Paris, allegedly violating EU's attached cap environmental regulation.",
+        },
+      },
+      {
+        title: { zh: "黄日华宣布复出", en: "Felix Wong Announces Comeback" },
+        description: {
+          zh: "64岁香港演员黄日华在好友演唱会上宣布复出，这是2020年妻子去世后首次重返舞台，哽咽感叹世事无常。",
+          en: "64-year-old Hong Kong actor Felix Wong announces his return to stage at a friend's concert, his first since his wife's passing in 2020.",
+        },
+      },
+      {
+        title: {
+          zh: "《功夫女足》5天票房8亿，王晶评近十年最佳",
+          en: "Kung Fu Women's Football: 800M in 5 Days",
+        },
+        description: {
+          zh: "周星驰《功夫女足》上映5天票房破8亿领跑暑期档。王晶评价为其近十年最佳作品，但文戏略显不足。口碑两极分化但市场强劲。",
+          en: "Stephen Chow's film crosses 800M yuan in 5 days. Wong Jing calls it his best in a decade despite mixed reviews and weak dramatic scenes.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-16",
+    date: "2026-07-16",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-16",
+      en: "🤖 AI Daily · Jul 16, 2026",
+    },
+    summary: {
+      zh: "阿里Qwen-Audio-3.0-Realtime语音推理第一；Thinking Machines发布975B Inkling多模态模型；OpenAI发布GPT-Red自动化红队测试84%成功率远超人类；xAI开源Grok Build编程智能体；国行Apple智能完成备案阿里千问将集成；WPS Comate AI办公客户端发布；Claude Code新增MCP连接器调用；前谷歌DeepMind研究员因军事AI协议离职；OpenAI呼吁反向联邦主义推动AI安全；GPT-Red攻破几乎所有此前模型。",
+      en: "Alibaba Qwen-Audio-3.0-Realtime tops speech reasoning; Thinking Machines unveils 975B Inkling multimodal model; OpenAI releases GPT-Red automated red-teaming with 84% success; xAI open-sources Grok Build coding agent; Apple Intelligence approved in China with Qwen integration; WPS Comate AI office client launched; Claude Code adds MCP connector calling; Ex-DeepMind researcher quits over military AI deal; OpenAI pushes 'reverse federalism' for AI safety; GPT-Red breaks nearly all prior models.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "阿里Qwen-Audio-3.0-Realtime语音推理排名第一",
+          en: "Alibaba Qwen-Audio-3.0-Realtime Tops Speech Reasoning",
+        },
+        description: {
+          zh: "阿里通义实验室发布Qwen-Audio-3.0-Realtime实时语音交互模型，在Artificial Analysis语音推理子项中综合排名第一，超越OpenAI等对手。",
+          en: "Alibaba's Tongyi Lab releases real-time speech model Qwen-Audio-3.0-Realtime, ranking #1 in Artificial Analysis Speech Reasoning, beating OpenAI.",
+        },
+      },
+      {
+        title: {
+          zh: "Thinking Machines发布975B Inkling多模态模型",
+          en: "Thinking Machines Unveils 975B Inkling Multimodal Model",
+        },
+        description: {
+          zh: "Thinking Machines Lab发布Inkling多模态模型（975B参数），支持文本、图像和音频模态推理，上下文窗口达1M token，将提供完整权重。",
+          en: "Thinking Machines Lab launches Inkling, a 975B parameter multimodal model for text, image, and audio. 1M context window. Full weights to be released.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI发布GPT-Red自动化红队测试，84%成功率远超人类",
+          en: "OpenAI GPT-Red: 84% Attack Success, Crushes Human 13%",
+        },
+        description: {
+          zh: "OpenAI训练自动化红队模型GPT-Red，通过自我对弈强化学习模拟提示词注入等攻击，成功率84%，而人类红队仅13%。攻击直接用于对抗训练GPT-5.6 Sol。",
+          en: "OpenAI's GPT-Red uses self-play RL to simulate prompt injection attacks with 84% success vs human red team's 13%. Used to adversarially train GPT-5.6 Sol.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI开源Grok Build编程智能体",
+          en: "xAI Open-Sources Grok Build Coding Agent",
+        },
+        description: {
+          zh: "xAI已将Grok Build的源代码在GitHub上开源。Grok Build是SpaceXAI的编程智能体与终端UI，开源后可自行编译、完全本地运行，指向本地推理后端。",
+          en: "xAI open-sources Grok Build, SpaceXAI's coding agent and TUI. Users can now compile and run fully locally pointing to local inference backends.",
+        },
+      },
+      {
+        title: {
+          zh: "国行Apple智能完成备案，阿里千问将集成",
+          en: "Apple Intelligence Approved in China with Qwen Integration",
+        },
+        description: {
+          zh: "苹果技术开发(上海)的Apple智能大模型于7月8日完成备案。阿里千问将作为AI能力集成至Apple智能，为中国iOS/iPadOS/macOS/visionOS用户提供AI功能。",
+          en: "Apple Intelligence model licensed in China on Jul 8. Alibaba's Qwen will integrate as AI capability for Chinese iOS/iPadOS/macOS/visionOS users.",
+        },
+      },
+      {
+        title: {
+          zh: "金山办公推出WPS Comate AI办公客户端",
+          en: "WPS Comate AI Office Client Launched",
+        },
+        description: {
+          zh: "金山办公在2026 AI生产力大会上推出WPS Comate AI办公客户端，提供AI岗位专家、Skill技能生态、自动化任务等六大模块，支持云端与本地双模式。",
+          en: "Kingsoft launches WPS Comate AI client with 6 modules: AI role experts, skill ecosystem, automated tasks. Supports both cloud and local modes.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code新增MCP连接器调用功能",
+          en: "Claude Code Adds MCP Connector Calling",
+        },
+        description: {
+          zh: "Claude Code的artifacts现在可以调用MCP连接器，可构建按需为每位查看者获取信息并执行操作的仪表盘和应用，适用于Pro/Max/Team/Enterprise。",
+          en: "Claude Code artifacts can now call MCP connectors, building dashboards and apps that fetch info and perform actions on demand. Available for Pro, Max, Team, Enterprise.",
+        },
+      },
+      {
+        title: {
+          zh: "前谷歌DeepMind研究员因军事AI协议离职",
+          en: "Ex-DeepMind Researcher Quits Over Military AI Deal",
+        },
+        description: {
+          zh: "前DeepMind研究员Alex Turner因谷歌向国土安全部出售云服务并签署无限制军事AI协议而离职。他曾起草提案要求加入禁止杀手机器人条款但未被采纳。",
+          en: "Researcher Alex Turner leaves DeepMind after Google signs unrestricted military AI deal with Homeland Security. His proposal to ban killer robots was ignored.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI呼吁反向联邦主义推动AI安全",
+          en: "OpenAI Pushes 'Reverse Federalism' for AI Safety",
+        },
+        description: {
+          zh: "OpenAI主张通过反向联邦主义让各州先通过相似立法形成事实上的国家标准。加州、纽约州和伊利诺伊州已通过相关AI安全法案。",
+          en: "OpenAI advocates 'reverse federalism' where states pass similar AI safety laws creating de facto national standards. CA, NY, IL have passed relevant bills.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-Red可攻破此前几乎所有模型",
+          en: "GPT-Red Breaks Nearly All Prior Models",
+        },
+        description: {
+          zh: "GPT-Red能攻破此前几乎所有模型，其发现的漏洞直接用于对抗训练GPT-5.6 Sol，使该模型抵抗红队攻击的能力从0分位提升至90分位。",
+          en: "GPT-Red breaks nearly all prior models. Discovered vulnerabilities used to adversarially train GPT-5.6 Sol, boosting resistance from 0th to 90th percentile.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-15-hot",
     date: "2026-07-15",
     title: {
