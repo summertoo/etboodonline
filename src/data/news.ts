@@ -25,6 +25,236 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-17-hot",
+    date: "2026-07-17",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-17",
+      en: "🔥 Hot Topics · Jul 17, 2026",
+    },
+    summary: {
+      zh: "外露式半隐藏门把手集体回归；周星驰连发3个问号疑被偷票房；乌克兰九天袭击超110艘俄船只；岛内88%青年愿上战场民调翻车；气象台不敢报40℃权威回应；空调房成新冠传播隐患6月新增7.9万例；FIFA回应是否处罚阿根廷；创业板指跌逾3%算力领跌；芬兰来华机票暴涨1240%；格斗赛机器人头被打飞甄子丹看呆。",
+      en: "Hidden door handles make a comeback; Stephen Chow questions box office fraud; Ukraine strikes 110+ Russian vessels in 9 days; Taiwan poll claiming 88% youth willing to fight backfires; weather bureau explains why it doesn't forecast 40°C; AC rooms become COVID transmission risk (79K new cases in June); FIFA responds on Argentina sanctions; ChiNext drops 3%, tech leads losses; Finland-China flights surge 1240%; robot's head knocked off at fighting match, Donnie Yen stunned.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "外露式半隐藏门把手集体回归",
+          en: "Hidden Door Handles Make a Comeback",
+        },
+        description: {
+          zh: "小鹏MONA L03、理想L6、魏牌V9X、五菱星光L等新车均采用半隐藏式或传统外露式门把手，曾经标配的隐藏式门把手正被车企重新审视。",
+          en: "XPeng, Li Auto, Great Wall, and Wuling new models adopt semi-hidden or traditional door handles, signaling a shift away from fully hidden designs.",
+        },
+      },
+      {
+        title: {
+          zh: "周星驰连发3个问号回应疑被偷票房",
+          en: "Stephen Chow Questions Box Office Fraud",
+        },
+        description: {
+          zh: "周星驰社交媒体晒网友票根回应《功夫女足》被偷票房一事，连发3个问号。电影官方声明倡导文明观影，抵制偷漏瞒报票房行为。",
+          en: "Stephen Chow posts fan ticket stubs questioning box office fraud for 'Kung Fu Women's Football.' Official statement calls for抵制 fraudulent reporting.",
+        },
+      },
+      {
+        title: {
+          zh: "乌克兰九天袭击超110艘俄船只",
+          en: "Ukraine Strikes 110+ Russian Vessels in 9 Days",
+        },
+        description: {
+          zh: "乌克兰称九天内在亚速海对超过110艘俄罗斯船只发动袭击，为有史以来最集中的针对船只的袭击之一，旨在破坏俄燃料和后勤补给线。",
+          en: "Ukraine claims strikes on 110+ Russian vessels in the Sea of Azov over 9 days, the most concentrated ship attacks ever, targeting fuel and supply lines.",
+        },
+      },
+      {
+        title: {
+          zh: "岛内88%青年愿上战场民调翻车",
+          en: "Taiwan Poll Claiming 88% Youth Willing to Fight Backfires",
+        },
+        description: {
+          zh: "岛内民调称88%台湾青年愿为台而战引发广泛质疑。多位岛内人士认为问卷设计带有引导性，与台军招募困难、提前退伍增加等现实明显不符。",
+          en: "Poll claiming 88% of Taiwan youth willing to fight questioned as biased and inconsistent with military recruitment difficulties and early discharges.",
+        },
+      },
+      {
+        title: {
+          zh: "气象台不敢报40℃？权威回应",
+          en: "Weather Bureau: Why We Don't Forecast 40°C",
+        },
+        description: {
+          zh: "网友质疑气象台刻意不报40℃。专家回应预报气温为百叶箱标准测温，路面温度会高出数度，体感温度还受湿度等影响，二者不能等同。",
+          en: "Experts explain: forecast temps are measured in standardized shelters. Road surface can be much higher. Perceived temp also affected by humidity.",
+        },
+      },
+      {
+        title: {
+          zh: "空调房成新冠传播隐患，6月新增7.9万例",
+          en: "AC Rooms Become COVID Risk, 79K New Cases in June",
+        },
+        description: {
+          zh: "国家疾控局数据显示6月新冠新增7.9万例，维持低流行态势。专家提醒密闭空调环境大幅提升室内病毒传播风险，需重点防范。",
+          en: "China CDC reports 79K new COVID cases in June. Experts warn密闭 AC environments significantly increase indoor virus transmission risk.",
+        },
+      },
+      {
+        title: {
+          zh: "FIFA回应是否处罚阿根廷",
+          en: "FIFA Responds on Argentina Sanctions",
+        },
+        description: {
+          zh: "国际足联回应阿根廷球员展示马岛属于阿根廷横幅事件，称独立纪律委员会正评估比赛报告。媒体称阿根廷足协或面临罚款，球员预计不会被禁赛。",
+          en: "FIFA says disciplinary committee is evaluating the 'Falklands belong to Argentina' banner incident. Argentina may face fines but players likely not suspended.",
+        },
+      },
+      {
+        title: {
+          zh: "创业板指跌逾3%，算力硬件领跌",
+          en: "ChiNext Drops 3%, Tech Leads Losses",
+        },
+        description: {
+          zh: "A股三大指数集体走弱，创业板指跌超3%，算力硬件、半导体芯片及CRO板块领跌。日韩股市此前也集体大跌。",
+          en: "China's ChiNext falls 3%, led by computing hardware and semiconductor stocks. Follows Japan-Korea market rout.",
+        },
+      },
+      {
+        title: {
+          zh: "芬兰来华机票暴涨1240%，中国避暑火了",
+          en: "Finland-China Flights Surge 1240% as Summer Travel Booms",
+        },
+        description: {
+          zh: "外国游客来华避暑游升温，芬兰赴华机票销量同比暴涨12.4倍，希腊游客增长近2倍。深圳、上海、成都等城市入境游订单增加。",
+          en: "Inbound summer tourism to China surges: Finland-China flights up 12.4x, Greece up 2x. Shenzhen, Shanghai, Chengdu see major increases.",
+        },
+      },
+      {
+        title: {
+          zh: "格斗赛机器人头被打飞，甄子丹看呆",
+          en: "Robot's Head Knocked Off at Fighting Match, Donnie Yen Stunned",
+        },
+        description: {
+          zh: "众擎URKL全球人形机器人自由格斗联赛揭幕赛在深圳举行，机器人头部被打飞，台下甄子丹一脸震惊。历史首次世界杯冠军将获冠军戒指。",
+          en: "World's first humanoid robot fighting league kicks off in Shenzhen. A robot's head is knocked off, shocking Donnie Yen in the audience.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-17",
+    date: "2026-07-17",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-17",
+      en: "🤖 AI Daily · Jul 17, 2026",
+    },
+    summary: {
+      zh: "Grok推出Automations定时邮件自动执行任务；ChatGPT工作区支持文档表格编辑；天工短剧工作台Agent智能分镜；面壁智能开源StaffDeck数字员工平台；xAI起诉Grok用户制作儿童性虐待内容；欧盟裁定Google必须向竞争对手开放；台积电上调资本支出至640亿美元；世界AI合作组织签署总部设上海；54%企业已遭AI智能体安全事件；Anthropic用Claude Code迁移百万行Zig到Rust。",
+      en: "Grok launches Automations for scheduled/email-triggered tasks; ChatGPT workspace edits documents, tables, slides; Tiangong short drama Agent storyboard; OpenBMB open-sources StaffDeck digital employee platform; xAI sues Grok user for CSAM; EU orders Google to open Android/Search to rivals; TSMC raises 2026 capex to $64B; World AI Cooperation Organization signs, HQ in Shanghai; 54% of enterprises hit by AI agent security incidents; Anthropic migrates 1M lines Zig to Rust with Claude Code.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Grok推出Automations定时邮件自动执行任务",
+          en: "Grok Launches Automations for Scheduled/Email Tasks",
+        },
+        description: {
+          zh: "xAI为Grok引入Automations功能，用户可描述任务让Grok按计划（一次/每日/工作日/每月）或邮件触发自动运行并汇报结果。",
+          en: "xAI introduces Grok Automations: describe a task, set schedule (once/daily/weekly/monthly) or email trigger, and Grok executes and reports automatically.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT工作区支持文档表格幻灯片编辑",
+          en: "ChatGPT Workspace Edits Docs, Tables, Slides",
+        },
+        description: {
+          zh: "ChatGPT工作区新增创建和编辑文档、电子表格和幻灯片功能，用户可直接在ChatGPT中完成办公文档的全流程编辑。",
+          en: "ChatGPT workspace now supports creating and editing documents, spreadsheets, and slides directly within the chat interface.",
+        },
+      },
+      {
+        title: {
+          zh: "天工短剧工作台推出Agent智能分镜",
+          en: "Tiangong Short Drama Agent Storyboard",
+        },
+        description: {
+          zh: "昆仑万维天工短剧工作台推出双轨创作模式，通过导演Agent自动解析剧本、规划站位与机位，解决AI短剧角色变脸和站位漂移问题。",
+          en: "Kunlun's Tiangong short drama platform launches dual-track mode with Director Agent auto-analyzing scripts and planning camera positions.",
+        },
+      },
+      {
+        title: {
+          zh: "面壁智能开源StaffDeck企业AI数字员工平台",
+          en: "OpenBMB Open-Sources StaffDeck Digital Employee Platform",
+        },
+        description: {
+          zh: "面壁智能联合多团队开源StaffDeck，用于将专业知识、SOP和决策规则转化为持续工作、改进并保留组织知识的数字员工。",
+          en: "OpenBMB open-sources StaffDeck for building digital employees that retain organizational knowledge, follow SOPs, and improve continuously.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI起诉Grok用户制作儿童性虐待内容",
+          en: "xAI Sues Grok User for CSAM, Shifts Stance",
+        },
+        description: {
+          zh: "xAI首次对Grok用户提起诉讼，指控其利用模型制作儿童性虐待图像。此前xAI一直否认Grok能生成此类内容，此次诉讼标志着立场转变。",
+          en: "xAI files first lawsuit against a Grok user for generating CSAM. Marks a shift from previous denial that Grok could produce such content.",
+        },
+      },
+      {
+        title: {
+          zh: "欧盟裁定Google必须向竞争对手开放",
+          en: "EU Orders Google to Open Android/Search to Rivals",
+        },
+        description: {
+          zh: "欧盟依据DMA裁定Google必须向竞争对手开放Android和Search的关键部分，包括允许第三方AI助手和搜索引擎获得更大访问权限。",
+          en: "EU rules Google must open key Android and Search components to rivals under DMA, including granting greater access to third-party AI assistants and search engines.",
+        },
+      },
+      {
+        title: {
+          zh: "台积电上调2026资本支出至640亿美元",
+          en: "TSMC Raises 2026 Capex to $64B",
+        },
+        description: {
+          zh: "台积电在Q2财报说明会将2026年资本支出预测上调至600-640亿美元。A14制程（1.4nm）开发进展顺利，预计2028年量产。",
+          en: "TSMC raises 2026 capex forecast to $60-64B. A14 process (1.4nm) development on track for 2028 mass production.",
+        },
+      },
+      {
+        title: {
+          zh: "世界AI合作组织签署，总部设上海",
+          en: "World AI Cooperation Organization Signs, HQ in Shanghai",
+        },
+        description: {
+          zh: "成立世界人工智能合作组织协定在上海签署，王毅代表中国政府签署。该组织为独立政府间国际组织，总部设在上海。",
+          en: "Agreement to establish the World AI Cooperation Organization signed in Shanghai by Foreign Minister Wang Yi. Independent intergovernmental org HQ'd in Shanghai.",
+        },
+      },
+      {
+        title: {
+          zh: "54%企业已遭AI智能体安全事件",
+          en: "54% of Enterprises Hit by AI Agent Security Incidents",
+        },
+        description: {
+          zh: "调查107家企业发现54%已遭遇AI智能体安全事件（18%确认事故，36%险些酿祸）。仅32%为每个智能体分配独立身份凭证。",
+          en: "Survey of 107 enterprises: 54% experienced AI agent security incidents (18% confirmed, 36% near misses). Only 32% assign unique credentials per agent.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic用Claude Code迁移百万行Zig到Rust",
+          en: "Anthropic Migrates 1M Lines Zig to Rust with Claude Code",
+        },
+        description: {
+          zh: "Anthropic工程师用Claude Code在两周内将Bun的百万行Zig代码迁移至Rust，100%测试通过。合并后仅19个回归问题已全部修复。",
+          en: "Anthropic engineers use Claude Code to migrate 1M lines of Bun from Zig to Rust in 2 weeks. 100% tests pass, only 19 regressions fixed post-merge.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-16-hot",
     date: "2026-07-16",
     title: {
