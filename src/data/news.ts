@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-18-hot",
+    date: "2026-07-18",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-18",
+      en: "🔥 Hot Topics · Jul 18, 2026",
+    },
+    summary: {
+      zh: "锂电池恢复征收消费税；世界人工智能大会在上海开幕；中国AI出大招后美政府考虑设立AI监管机构；重庆彭水山体崩塌网格员被碎石击中；《八仙！》预测票房破11亿；《功夫女足》越骂越火进入年度票房前五；飞天茅台涨价至1639元；洪秀柱在海峡论坛称快80了等不及了；英国国有化中资钢铁公司引发担忧；95后夫妻AI漫剧播放破41亿；世界杯或致美国117亿美元生产力损失；清华一页纸录取通知书走红。",
+      en: "Lithium batteries face new consumption tax; WAIC 2026 opens in Shanghai; US considers AI regulatory body after China's Kimi K3 launch; Chongqing landslide hero grid worker injured; 'Eight Immortals' projected 1.1B yuan box office; 'Kung Fu Women's Football' enters top 5 despite mixed reviews; Feitian Moutai price hikes to 1,639 yuan; Hung Hsiu-chu: 'I'm almost 80, can't wait any longer' at cross-strait forum; UK nationalizes Chinese-owned British Steel; 95s couple's AI comic drama hits 4.1B views; World Cup may cost US $11.7B in productivity; Tsinghua's minimalist admission letter goes viral.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "锂电池要和成品油一样交消费税了",
+          en: "Lithium Batteries Face New Consumption Tax",
+        },
+        description: {
+          zh: "三部门联合公告，自2026年9月1日起对锂电池分步恢复征收消费税，实施了超十年的电动汽车电池免税政策正式退出。",
+          en: "China to restore consumption tax on lithium batteries from Sep 1, 2026, ending over a decade of EV battery tax exemption policy.",
+        },
+      },
+      {
+        title: {
+          zh: "世界人工智能大会在上海开幕",
+          en: "WAIC 2026 Opens in Shanghai",
+        },
+        description: {
+          zh: "2026世界人工智能大会在上海开幕，记者探馆感受AI的「智」与「志」，展商对AI赛道充满信心，机器人像水一样融入生活成为愿景。",
+          en: "WAIC 2026 kicks off in Shanghai. Exhibitors show strong confidence in AI赛道, envisioning robots flowing into daily life like water.",
+        },
+      },
+      {
+        title: {
+          zh: "中国AI出大招后美政府考虑设立AI监管机构",
+          en: "US Considers AI Regulatory Body After China's Kimi K3 Launch",
+        },
+        description: {
+          zh: "月之暗面发布Kimi K3后引发美股下跌，特朗普政府考虑设立类似FINRA的AI独立监管机构，前白宫AI负责人称美国「作茧自缚」。",
+          en: "After Kimi K3 launch triggered US stock dip, Trump admin considers AI regulatory body modeled after FINRA. Former AI czar says US 'tied its own hands.'",
+        },
+      },
+      {
+        title: {
+          zh: "重庆彭水山体崩塌，最早喊撤离的网格员被碎石击中",
+          en: "Chongqing Landslide: Hero Grid Worker Injured While Evacuating Residents",
+        },
+        description: {
+          zh: "重庆彭水县汉葭街道发生山体崩塌，最大山石相当于1栋楼体积，多栋房屋倒塌。最早喊居民撤离的网格员走在队伍最后被碎石击中。",
+          en: "Massive rockslide in Chongqing Pengshui buries buildings. The community grid worker who first alerted residents was struck by debris while bringing up the rear.",
+        },
+      },
+      {
+        title: {
+          zh: "《八仙！》预测总票房破11亿",
+          en: "'Eight Immortals' Projected Box Office Exceeds 1.1B Yuan",
+        },
+        description: {
+          zh: "郭帆发文力荐动画电影《八仙！》，影片取材传统八仙神话讲述平凡人集结对抗天命的故事。猫眼预测总票房11.62亿。",
+          en: "Director Guo Fan recommends animated film 'Eight Immortals!' about ordinary people defying fate. Maoyan projects 1.16B yuan total box office.",
+        },
+      },
+      {
+        title: {
+          zh: "飞天茅台再涨价至1639元",
+          en: "Feitian Moutai Price Hikes to 1,639 Yuan",
+        },
+        description: {
+          zh: "贵州茅台公告自7月18日起将i茅台平台飞天茅台零售价从1539元调整为1639元，销售合同价从1269元调整为1369元。",
+          en: "Kweichow Moutai raises Feitian Moutai retail price from 1,539 to 1,639 yuan on its iMoutai platform, contract price from 1,269 to 1,369 yuan.",
+        },
+      },
+      {
+        title: {
+          zh: "洪秀柱：我快80了，我等不及了",
+          en: "Hung Hsiu-chu: 'I'm Almost 80, I Can't Wait Any Longer'",
+        },
+        description: {
+          zh: "国民党前主席洪秀柱在第九届海峡两岸青年发展论坛上感慨浙台近在咫尺却隔海相望七八十年，直言快80了等不及了。",
+          en: "Former KMT chair Hung Hsiu-chu at the 9th Cross-Strait Youth Development Forum laments 80 years of separation, says 'I can't wait any longer.'",
+        },
+      },
+      {
+        title: {
+          zh: "英国国有化中资钢铁公司，敬业集团12亿英镑投资或打水漂",
+          en: "UK Nationalizes Chinese-Owned British Steel, Jingye's £1.2B Investment at Risk",
+        },
+        description: {
+          zh: "英国政府宣布将「英国钢铁公司」国有化，中企敬业集团6年心血12亿英镑投资面临损失。媒体称中国不能总当「东郭先生」。",
+          en: "UK nationalizes British Steel, putting Chinese firm Jingye Group's £1.2B investment at risk. Media warns China against being 'Mr. Dongguo' (naively kind).",
+        },
+      },
+      {
+        title: {
+          zh: "95后夫妻手搓AI漫剧全网爆火",
+          en: "95s Couple's AI Comic Drama Goes Viral with 4.1B Views",
+        },
+        description: {
+          zh: "一对定居四川巴中的95后夫妻用AI制作古风种田漫剧，全网抖音播放量破41亿，无明星无投流，纯AI制作成现象级黑马。",
+          en: "A 95s couple in Sichuan creates pure AI-generated period comic drama, racking up 4.1B views on Douyin with no stars or ad spend.",
+        },
+      },
+      {
+        title: {
+          zh: "世界杯或致美国117亿美元生产力损失",
+          en: "World Cup May Cost US $11.7B in Lost Productivity",
+        },
+        description: {
+          zh: "世界杯热潮席卷美国，超四分之一员工迟到早退或居家看球。人力资源机构测算美国面临117亿美元生产力损失，全球达170亿美元。",
+          en: "World Cup fever grips US: over 25% of employees late or absent. HR firm estimates $11.7B US productivity loss, $17B globally.",
+        },
+      },
+      {
+        title: {
+          zh: "《功夫女足》越骂越火进入年度票房前五",
+          en: "'Kung Fu Women's Football' Enters Annual Box Office Top 5",
+        },
+        description: {
+          zh: "周星驰《功夫女足》上映7天票房破10.68亿进入2026年度前五。零宣发空降，张柏芝等包场支持，好看与难看词条齐上热搜。",
+          en: "Stephen Chow's 'Kung Fu Women's Football' hits 1.068B yuan in 7 days. Zero-marketing release draws polarizing reviews but packed theaters.",
+        },
+      },
+      {
+        title: {
+          zh: "清华「一页纸」录取通知书走红",
+          en: "Tsinghua's Minimalist Admission Letter Goes Viral",
+        },
+        description: {
+          zh: "清华大学2026年录取通知书陆续送达，素简一页的设计引发热议，简约形式中承载院校底蕴。",
+          en: "Tsinghua University's 2026 admission letter features minimalist one-page design that goes viral for its elegant simplicity.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-18",
+    date: "2026-07-18",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-18",
+      en: "🤖 AI Daily · Jul 18, 2026",
+    },
+    summary: {
+      zh: "Sora 2视频深度克隆真假难辨；Kimi K3登顶前端编码榜；NVIDIA发布Nemotron 3 Embed系列；通义Wan-Streamer v0.2端到端延迟仅550ms；Apple起诉OpenAI法律战升级；月之暗面在GTC披露Kimi K2.5技术路线；Schema Harness在ARC-AGI-3公开集达99%；Claude Fable 5在CursorBench创72.9%新高；OpenAI提出「有用智能每美元」记分卡；Anthropic发布智能体AI风险评估框架；八天四款前沿模型发布AI竞赛白热化。",
+      en: "Sora 2 achieves indistinguishable deep video cloning; Kimi K3 tops Frontend Code Arena leaderboard; NVIDIA releases Nemotron 3 Embed series; Tongyi's Wan-Streamer v0.2 hits 550ms end-to-end latency; Apple sues OpenAI, legal battle escalates; Moonshot AI reveals Kimi K2.5 technical路線 at GTC 2026; Schema Harness scores 99% on ARC-AGI-3 public set; Claude Fable 5 reaches 72.9% on CursorBench; OpenAI proposes 'Useful Intelligence per Dollar' scorecard; Anthropic publishes agentic AI risk assessment framework; 4 frontier models launched in 8 days.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Sora 2视频深度克隆效果惊人，真假难辨",
+          en: "Sora 2 Achieves Indistinguishable Deep Video Cloning",
+        },
+        description: {
+          zh: "Sora 2的视频深度克隆捕捉到了每一块面部肌肉运动，截取一帧完全无法判断真假。",
+          en: "Sora 2's deep video cloning captures every facial muscle movement. A single frame is indistinguishable from real footage.",
+        },
+      },
+      {
+        title: {
+          zh: "Kimi K3登顶前端编码榜，开放权重挑战闭源巨头",
+          en: "Kimi K3 Tops Frontend Coding Leaderboard, Open-Source Challenger",
+        },
+        description: {
+          zh: "Kimi K3在Frontend Code Arena以1679分登顶，力压Claude Fable 5与GPT-5.6 Sol，7个细分赛道拿下6个第一，为2.8万亿参数开源模型。",
+          en: "Kimi K3 scores 1,679 on Frontend Code Arena, beating Claude Fable 5 and GPT-5.6 Sol. The 2.8T-parameter open-source model wins 6 of 7 sub-categories.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA发布Nemotron 3 Embed系列",
+          en: "NVIDIA Releases Nemotron 3 Embed Series",
+        },
+        description: {
+          zh: "NVIDIA发布Nemotron 3 Embed系列，包含三个开源checkpoint，8B版在RTEB基准以78.46平均NDCG@10排名第一。",
+          en: "NVIDIA releases Nemotron 3 Embed with three open-source checkpoints. 8B version ranks #1 on RTEB with 78.46 average NDCG@10.",
+        },
+      },
+      {
+        title: {
+          zh: "通义Wan-Streamer v0.2发布，端到端延迟仅550ms",
+          en: "Tongyi's Wan-Streamer v0.2: 550ms End-to-End Multimodal Model",
+        },
+        description: {
+          zh: "通义实验室发布Wan-Streamer v0.2，将「听、看、说、演」统一进单个Transformer，端到端响应延迟仅550ms。",
+          en: "Tongyi Lab releases Wan-Streamer v0.2, unifying listening, seeing, speaking, and acting in a single Transformer with 550ms response latency.",
+        },
+      },
+      {
+        title: {
+          zh: "Apple起诉OpenAI，法律战持续升级",
+          en: "Apple Sues OpenAI, Legal Battle Escalates",
+        },
+        description: {
+          zh: "Apple对OpenAI提起诉讼指控多项不当行为，并向约40名前员工发出律师函要求保存文件，外界猜测与新版Siri AI竞争有关。",
+          en: "Apple sues OpenAI alleging multiple misconducts, sends legal letters to ~40 former employees. Analysts link the move to Apple's new Siri AI competition.",
+        },
+      },
+      {
+        title: {
+          zh: "月之暗面在GTC 2026披露Kimi K2.5技术路线",
+          en: "Moonshot AI Reveals Kimi K2.5 Technical路線 at GTC 2026",
+        },
+        description: {
+          zh: "月之暗面CEO杨植麟在GTC 2026披露Kimi K2.5三大组件：MuonClip优化器提升数据效率近一倍，Kimi Linear线性注意力在百万Token下超越全注意力，以及Agent Swarm架构。",
+          en: "Moonshot AI CEO reveals Kimi K2.5 at GTC 2026: MuonClip optimizer (2x data efficiency), Kimi Linear attention (beats full attention at 1M tokens), and Agent Swarm architecture.",
+        },
+      },
+      {
+        title: {
+          zh: "Schema Harness在ARC-AGI-3公开集达99%",
+          en: "Schema Harness Reaches 99% on ARC-AGI-3 Public Set",
+        },
+        description: {
+          zh: "Schema框架在ARC-AGI-3公开集上使用Claude Opus 4.8和Fable 5达99% RHAE分数，用GPT-5.6 Sol达95.35%，不修改模型权重。",
+          en: "Schema Harness scores 99% RHAE on ARC-AGI-3 public set with Claude Opus 4.8 and Fable 5, and 95.35% with GPT-5.6 Sol, without modifying model weights.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Fable 5在CursorBench创72.9%新高",
+          en: "Claude Fable 5 Hits 72.9% on CursorBench",
+        },
+        description: {
+          zh: "Cursor评估负责人确认Claude Fable 5在CursorBench内部基准以Max effort模式达72.9%新高，在SWE-bench等多项评测中也表现优异。",
+          en: "Cursor's eval lead confirms Claude Fable 5 reaches 72.9% on CursorBench (Max effort mode), excelling on SWE-bench and other benchmarks.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI提出「有用智能每美元」记分卡",
+          en: "OpenAI Proposes 'Useful Intelligence per Dollar' Scorecard",
+        },
+        description: {
+          zh: "OpenAI提出「Useful Intelligence per Dollar」指标，从完成的有用工作量、任务实际成本、结果可靠性三个维度评估AI投资回报。",
+          en: "OpenAI proposes 'Useful Intelligence per Dollar' metric, measuring AI ROI across useful work completed, actual cost, and result reliability.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic发布智能体AI风险评估框架",
+          en: "Anthropic Publishes Agentic AI Risk Assessment Framework",
+        },
+        description: {
+          zh: "Anthropic副首席信息安全官分享智能体AI风险评估框架，通过四个核心问题评估数据调用范围、工具权限和结果影响。",
+          en: "Anthropic's deputy CISO shares agentic AI risk framework with four core questions evaluating data access scope, tool permissions, and result impact.",
+        },
+      },
+      {
+        title: {
+          zh: "八天四款前沿模型发布，AI竞赛白热化",
+          en: "4 Frontier Models in 8 Days: AI Race Heats Up",
+        },
+        description: {
+          zh: "过去八天内Grok 4.5、GPT-5.6、Muse Spark 1.1与Kimi K3四款前沿模型相继发布，Artificial Analysis Intelligence Index竞争加剧。",
+          en: "Grok 4.5, GPT-5.6, Muse Spark 1.1, and Kimi K3 all launched within 8 days, intensifying competition on the Artificial Analysis Intelligence Index.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-17-hot",
     date: "2026-07-17",
     title: {
