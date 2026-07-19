@@ -25,6 +25,166 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-19-hot",
+    date: "2026-07-19",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-19",
+      en: "🔥 Hot Topics · Jul 19, 2026",
+    },
+    summary: {
+      zh: "英格兰6-4法国夺世界杯季军；姆巴佩加冕世界杯历史射手王；德尚结束14年法国队执教生涯；新能源营运车电芯鼓包集中爆发；高考估分715查分299系AI编造发帖人被拘；95后夫妻500集AI漫剧爆火；《八仙！》上映首日票房破亿；孙颖莎王楚钦爆冷出局；澳洲游客转向中国搜索量暴涨44%；女孩卧室囤积大量吧唧致中毒；泰总理夜游成都宽窄巷子吃冰淇淋。",
+      en: "England 6-4 France wins World Cup third place; Mbappe crowned all-time WC top scorer; Deschamps ends 14-year France tenure; EV battery swelling defects surge; 'Score 715 but got 299' college exam AI fake news creator detained; 95s couple's 500-episode AI comic drama goes viral; 'Eight Immortals!' hits 100M on opening day; Sun Yingsha Wang Chuqin upset in mixed doubles; Australian tourists flock to China, searches up 44%; Girl poisoned by excessive anime badge collection; Thai PM strolling Chengdu's Kuanzhai Alley eating ice cream.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "英格兰6-4法国夺得世界杯季军，姆巴佩加冕历史射手王",
+          en: "England 6-4 France Wins WC Third Place; Mbappe Becomes All-Time Top Scorer",
+        },
+        description: {
+          zh: "世界杯季军赛英格兰6-4战胜法国，双方共打入10球创季军赛纪录。姆巴佩梅开二度，以22粒世界杯进球登顶历史总射手榜。",
+          en: "England beats France 6-4 in WC third-place match, setting a 10-goal record. Mbappe scores twice, reaching 22 WC goals to become all-time top scorer.",
+        },
+      },
+      {
+        title: {
+          zh: "英法进球大战：裁判累抽筋，贝林厄姆一条龙破门",
+          en: "England-France Goal Fest: Referee Cramps, Bellingham Solo Run",
+        },
+        description: {
+          zh: "季军赛上半场法国0-4落后，下半场对攻激烈。主裁判因体能消耗过大抽筋，贝林厄姆最后时刻一条龙破门锁定胜局。",
+          en: "France down 0-4 at half, then an open second half. Referee suffers cramp from intense running; Bellingham seals win with a solo goal.",
+        },
+      },
+      {
+        title: {
+          zh: "德尚结束14年法国队执教生涯",
+          en: "Deschamps Ends 14-Year Tenure as France Manager",
+        },
+        description: {
+          zh: "季军赛是德尚执教法国队的最后一战。执掌14年间率队夺得世界杯和欧国联冠军，这场10球大战为其生涯画上句号。",
+          en: "The third-place match marks Deschamps' final game after 14 years as France manager, having won the World Cup and Nations League. A 10-goal thriller ends his era.",
+        },
+      },
+      {
+        title: {
+          zh: "新能源营运车电芯鼓包集中爆发",
+          en: "EV Battery Swelling Defects Surge in Commercial Fleet",
+        },
+        description: {
+          zh: "投诉平台显示搭载某品牌177Ah磷酸铁锂电芯的营运车辆集中出现鼓包、漏液问题，第三方检测指向制造缺陷，中创新航将联合主机厂回应。",
+          en: "Commercial EVs with certain 177Ah LFP batteries report swelling and leakage defects. Third-party tests point to manufacturing flaws; CALB to respond with OEMs.",
+        },
+      },
+      {
+        title: {
+          zh: "高考估分715查分299系AI编造，发帖人被拘",
+          en: "'Score 715 but Got 299' College Exam Post Was AI-Generated Fake, Creator Detained",
+        },
+        description: {
+          zh: "网文「高考估分715查分299」引发热议，警方查明内容纯属编造。发帖人周某借助AI批量生成虚假网文牟利，已被行政拘留。",
+          en: "Viral post claiming 'estimated 715 but scored 299' on college exams found to be AI-generated fake. Creator detained for using AI to mass-produce false content for profit.",
+        },
+      },
+      {
+        title: {
+          zh: "95后夫妻500集AI漫剧爆火",
+          en: "95s Couple's 500-Episode AI Comic Drama Goes Viral",
+        },
+        description: {
+          zh: "四川巴中95后夫妻用AI制作古风种田漫剧，已更新八季534集登顶漫剧热播榜榜首，抖音播放破41亿。",
+          en: "A 95s couple in Sichuan produces AI-generated period comic drama, updating 534 episodes across 8 seasons, topping charts with 4.1B Douyin views.",
+        },
+      },
+      {
+        title: {
+          zh: "《八仙！》上映首日票房破亿",
+          en: "'Eight Immortals!' Hits 100M Yuan on Opening Day",
+        },
+        description: {
+          zh: "动画电影《八仙！》7月18日上映首日票房破亿，暑期档已有百部影片定档，涵盖喜剧、科幻、动画等多元类型。",
+          en: "Animated film 'Eight Immortals!' surpasses 100M yuan on its opening day. Summer season features 100+ films across comedy, sci-fi, animation genres.",
+        },
+      },
+      {
+        title: {
+          zh: "孙颖莎王楚钦爆冷出局，无缘混双决赛",
+          en: "Sun Yingsha Wang Chuqin Upset, Out of Mixed Doubles Final",
+        },
+        description: {
+          zh: "北京时间7月18日晚，孙颖莎/王楚钦2-3不敌辽宁组合，爆冷无缘混双决赛。",
+          en: "Table tennis stars Sun Yingsha and Wang Chuqin lose 2-3 to Liaoning pair in a stunning upset, missing the mixed doubles final.",
+        },
+      },
+      {
+        title: {
+          zh: "放弃日本后，澳洲人正疯狂涌向中国",
+          en: "Australian Tourists Flock to China, Searches Up 44%",
+        },
+        description: {
+          zh: "旅游平台数据显示澳洲人对中国航班搜索量同比暴涨44%，超过日本。旅行社中国目的地预订量同比增长超100%，赴华澳洲游客增长16.5%。",
+          en: "Skyscanner shows Australia-China flight searches up 44% YoY, surpassing Japan. Travel agencies report 100%+ growth in China bookings.",
+        },
+      },
+      {
+        title: {
+          zh: "女孩卧室囤积大量二次元周边致中毒",
+          en: "Girl Poisoned by Excessive Anime Merch Collection in Bedroom",
+        },
+        description: {
+          zh: "一名网友因卧室囤积大量「吧唧」等二次元周边出现头晕不适，清空后恢复。事件引发关于手办谷子安全问题的关注。",
+          en: "A netizen develops dizziness from excessive anime badge ('badge') collection in her bedroom. Symptoms resolve after clearing the room, sparking safety concerns.",
+        },
+      },
+      {
+        title: {
+          zh: "泰总理夜游成都宽窄巷子，边走边吃冰淇淋",
+          en: "Thai PM Visits Chengdu's Kuanzhai Alley, Eating Ice Cream",
+        },
+        description: {
+          zh: "泰国总理阿努廷访华期间夜游成都宽窄巷子，边走边吃冰淇淋展现亲民形象。",
+          en: "Thai PM Anutin visits Chengdu's historic Kuanzhai Alley during China trip, eating ice cream while strolling in a display of approachability.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-19",
+    date: "2026-07-19",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-19",
+      en: "🤖 AI Daily · Jul 19, 2026",
+    },
+    summary: {
+      zh: "Claude Code v2.1.214修复权限绕过漏洞与Bash权限检查改进；Index Ventures联合创始人称AI财富将面临再分配，呼吁科技领袖主导自愿分配。",
+      en: "Claude Code v2.1.214 fixes permission bypass on Windows PowerShell and improves Bash permission checks; Index Ventures co-founder Neil Rimer says AI wealth faces redistribution, urges tech leaders to lead voluntary efforts.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Claude Code v2.1.214发布：修复权限绕过与Bash权限检查",
+          en: "Claude Code v2.1.214: Permission Bypass Fix & Bash Check Improvements",
+        },
+        description: {
+          zh: "Claude Code v2.1.214修复了Windows PowerShell 5.1中的权限检查绕过漏洞，以及Bash权限检查对超长命令和zsh变量下标比较的误判问题。",
+          en: "Claude Code v2.1.214 fixes a permission check bypass in Windows PowerShell 5.1, plus false positives for long commands (>10K chars) and zsh subscript comparisons.",
+        },
+      },
+      {
+        title: {
+          zh: "Index Ventures联合创始人：AI财富将面临再分配",
+          en: "Index Ventures Co-Founder: AI Wealth Faces Redistribution",
+        },
+        description: {
+          zh: "Index Ventures联合创始人Neil Rimer认为围绕AI积累的巨额财富将面临自愿或强制的再分配，呼吁科技领袖主导自愿分配，同时加州正考虑对亿万富翁征收5%一次性财富税。",
+          en: "Neil Rimer warns AI-accumulated wealth faces redistribution (voluntary or forced), urging tech leaders to lead. California considers 5% one-time wealth tax on billionaires.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-18-hot",
     date: "2026-07-18",
     title: {
