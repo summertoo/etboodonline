@@ -25,6 +25,226 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-20",
+    date: "2026-07-20",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-07-20",
+      en: "🤖 AI HOT Daily · Jul 20, 2026",
+    },
+    summary: {
+      zh: "阿里Qwen3.8开源发布2.4T参数模型，昆仑万维宣布2026为世界模型元年发布Matrix-Game 3.5，面壁智能开源MiniCPM-Robot具身智能系列并发布MiniCPM5-2B端侧模型，transcribe.cpp跨平台语音转录库发布，ChatGPT Work上线建站邮件文档处理功能，黄仁勋访日宣布建设Vera Rubin AI工厂，从业者称AI热潮导致全球决策机制瓦解项目成功率0%。",
+      en: "Alibaba Qwen3.8 open-sources 2.4T parameter model, Kunlun declares 2026 as 'World Model Year' with Matrix-Game 3.5, OpenBMB open-sources MiniCPM-Robot embodied AI series and MiniCPM5-2B edge model, transcribe.cpp cross-platform speech transcription library released, ChatGPT Work launches website/email/document features, Jensen Huang visits Japan announces Vera Rubin AI factory, industry insider says AI mania is eviscerating global decision-making with 0% project success rate.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "阿里 Qwen3.8 开源发布，2.4T参数模型上线",
+          en: "Alibaba Qwen3.8 Open-Sourced: 2.4T Parameter Model Released",
+        },
+        description: {
+          zh: "阿里Qwen团队发布Qwen3.8，2.4万亿参数模型正式开源上线，刷新开源大模型规模上限。",
+          en: "Alibaba Qwen team releases Qwen3.8, a 2.4T parameter model now open-source, pushing the frontier of open-weight LLM scale.",
+        },
+      },
+      {
+        title: {
+          zh: "昆仑万维宣布2026为世界模型元年，发布Matrix-Game 3.5",
+          en: "Kunlun Declares 2026 'World Model Year', Launches Matrix-Game 3.5",
+        },
+        description: {
+          zh: "昆仑万维在WAIC上发布Matrix-Game 3.5世界模型，实现Patch级记忆注入，5B模型单卡720P可达20FPS实时生成，核心架构已开源。同时发布Mureka v9.5与O3音乐模型。",
+          en: "Kunlun unveils Matrix-Game 3.5 world model with patch-level memory injection. 5B model runs 20FPS at 720P on single GPU. Core architecture open-sourced. Also launches Mureka v9.5 and O3 music models.",
+        },
+      },
+      {
+        title: {
+          zh: "面壁智能开源 MiniCPM-Robot 具身智能模型系列",
+          en: "OpenBMB Open-Sources MiniCPM-Robot Embodied AI Series",
+        },
+        description: {
+          zh: "面壁智能开源首个具身AI模型系列，包含1.5B参数的VLA模型MiniCPM-RobotManip和目标跟踪模型MiniCPM-RobotTrack，同时发布高性能推理框架PhyAI。",
+          en: "First open-source embodied AI series: 1.5B param VLA model MiniCPM-RobotManip and tracking model MiniCPM-RobotTrack, plus high-performance inference framework PhyAI.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniCPM5-2B发布：4B以下全球性能第一",
+          en: "MiniCPM5-2B: #1 Performance Under 4B Parameters",
+        },
+        description: {
+          zh: "2B参数端侧模型在AA-Index榜单获4B以下最高分17分，超越Qwen3.5-2B等竞品。原生支持混合思考与512K上下文，已完成华为昇腾、英伟达等9款芯片Day0适配。",
+          en: "2B edge model scores 17 on AA-Index, highest under 4B, surpassing Qwen3.5-2B. Native hybrid thinking, 512K context, Day0 support for 9 chips including Ascend and NVIDIA.",
+        },
+      },
+      {
+        title: {
+          zh: "transcribe.cpp 发布：跨平台语音转录库",
+          en: "transcribe.cpp: Cross-Platform Speech Transcription Library Released",
+        },
+        description: {
+          zh: "基于ggml的语音转录库v0.1.0发布，支持16个ASR模型族（60+模型），通过Vulkan、Metal、CUDA和TinyBLAS实现GPU加速。",
+          en: "ggml-based v0.1.0 release supports 16 ASR model families (60+ models) with GPU acceleration via Vulkan, Metal, CUDA, and TinyBLAS.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT Work 上线：建站、邮件、文档处理",
+          en: "ChatGPT Work Launches: Websites, Email, Documents",
+        },
+        description: {
+          zh: "ChatGPT Work适用于创建托管网站、管理电子邮件、总结海量文档、制作文档表格幻灯片，已在移动端及网页端提供，包含在Plus/Pro/Business/Enterprise套餐中。",
+          en: "ChatGPT Work enables creating websites, managing emails, summarizing documents, and making docs/sheets/slides. Available on mobile and web for Plus/Pro/Business/Enterprise plans.",
+        },
+      },
+      {
+        title: {
+          zh: "黄仁勋访日：Nvidia 联手日本打造物理 AI 时代",
+          en: "Jensen Huang in Japan: Nvidia Builds Physical AI with Japan",
+        },
+        description: {
+          zh: "黄仁勋宣布为日本建设Vera Rubin AI工厂，配备13,750颗Vera CPU和27,500颗Rubin GPU，预计2028年投运。同时宣布Noetra主权AI工厂与Cosmos机器人联盟落地日本。",
+          en: "Nvidia announces Vera Rubin AI factory for Japan with 13,750 Vera CPUs and 27,500 Rubin GPUs, targeting 2028. Also launches Noetra sovereign AI factory and Cosmos robotics alliance.",
+        },
+      },
+      {
+        title: {
+          zh: "AI热潮正在瓦解全球决策机制，项目成功率0%",
+          en: "AI Mania Is Eviscerating Global Decision-Making, 0% Success Rate",
+        },
+        description: {
+          zh: "从业者观察全球公私机构陷入集体性AI狂热，过去一年半所有AI项目均以失败告终。失败原因常与LLM能力无关，而是企业本就难以有效运行软件项目，AI叠加了额外风险。",
+          en: "Industry insider observes global institutions in collective AI frenzy: all AI projects in the past 18 months failed. Causes unrelated to LLM capabilities — organizations already struggle with software, and AI adds extra risk layers.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-20-hot",
+    date: "2026-07-20",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-20",
+      en: "🔥 Hot Topics · Jul 20, 2026",
+    },
+    summary: {
+      zh: "西班牙加时1-0阿根廷夺世界杯冠军，阿根廷主帅泪崩哭到说不出话，姆巴佩10球夺金靴罗德里获金球，西班牙阿根廷赛后爆发冲突，教育部官宣27个新专业急用先上，阿根廷无缘冠军全国仍放假一天，A股创业板涨超2%两大央企深夜增持，于东来反向砍价意外带火一个村，世界杯48强最终排名出炉，自发去车库抗洪失联男子已遇难，卫健委辟谣韩红基金会物资分配不均，西班牙冠军奖金5000万美元。",
+      en: "Spain beats Argentina 1-0 in extra time to win World Cup, Argentina coach breaks down in tears, Mbappe wins Golden Boot with 10 goals Rodri wins Golden Ball, post-match clash erupts between Spain and Argentina, Ministry of Education announces 27 new urgent majors, Argentina gets national holiday despite loss, A-shares rally with 2% ChiNext gain and state-owned enterprise buybacks, Donglai's reverse bargaining accidentally makes a village famous, World Cup final 48-team ranking released, man who went to flood garage found dead, Health Commission denies Hanhong Foundation supply irregularities, Spain's champion prize is $50M.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "西班牙加时1-0阿根廷 夺世界杯冠军",
+          en: "Spain Wins World Cup: 1-0 Over Argentina in Extra Time",
+        },
+        description: {
+          zh: "世界杯决赛西班牙加时赛1-0击败阿根廷夺冠。西班牙唯一没赢过的对手是佛得角。西班牙冠军奖金5000万美元，世界杯48强最终排名出炉。",
+          en: "Spain beats Argentina 1-0 in extra time to win the World Cup. The only team Spain didn't beat: Cape Verde. Spain takes home $50M champion prize. Full 48-team ranking released.",
+        },
+      },
+      {
+        title: {
+          zh: "阿根廷主帅泪崩 哭到说不出话",
+          en: "Argentina Coach Breaks Down in Tears After Final Loss",
+        },
+        description: {
+          zh: "世界杯决赛失利后，阿根廷主帅在新闻发布会上泪崩哭到说不出话。阿根廷无缘冠军但全国仍将放假一天。",
+          en: "Argentina's coach breaks down sobbing at the press conference after the final loss. Despite the defeat, Argentina declares a national holiday anyway.",
+        },
+      },
+      {
+        title: {
+          zh: "姆巴佩10球夺金靴 罗德里获金球奖",
+          en: "Mbappe Wins Golden Boot (10 Goals), Rodri Wins Golden Ball",
+        },
+        description: {
+          zh: "姆巴佩以10粒进球夺得世界杯金靴奖，罗德里获世界杯金球奖，西班牙门将获金手套。费兰托雷斯被赞400年才出一个，亚马尔收获1冠1吻。",
+          en: "Mbappe wins Golden Boot with 10 goals, Rodri wins Golden Ball, Spain's goalkeeper wins Golden Glove. Ferran Torres hailed as once-in-400-years talent, Yamal gets 1 trophy and 1 kiss.",
+        },
+      },
+      {
+        title: {
+          zh: "西班牙阿根廷赛后爆发冲突",
+          en: "Post-Match Clash Erupts Between Spain and Argentina",
+        },
+        description: {
+          zh: "世界杯决赛结束后西班牙与阿根廷球员爆发冲突，双方发生肢体接触，世界杯决赛主裁判罚也引发争议。",
+          en: "Clash erupts between Spain and Argentina players after the World Cup final. The referee's decisions during the match also spark controversy.",
+        },
+      },
+      {
+        title: {
+          zh: "教育部官宣27个新专业 急用先上",
+          en: "Ministry of Education Announces 27 New Urgent Majors",
+        },
+        description: {
+          zh: "教育部官宣新增27个专业，以急用先上为原则，快速响应社会对新兴领域人才的需求。",
+          en: "China's Ministry of Education announces 27 new university majors with an 'urgent first' principle, rapidly responding to emerging talent demands.",
+        },
+      },
+      {
+        title: {
+          zh: "A股大涨 两大央企深夜宣布增持",
+          en: "A-Share Rally: Two State-Owned Enterprises Announce Buybacks",
+        },
+        description: {
+          zh: "A股开盘创业板指涨超2%，两大央企深夜宣布增持A股，提振市场信心。",
+          en: "ChiNext surges over 2% at open. Two major state-owned enterprises announce A-share buybacks late at night, boosting market confidence.",
+        },
+      },
+      {
+        title: {
+          zh: "2030年世界杯3国举办6国办赛",
+          en: "2030 World Cup: 3 Host Countries, 6 Nations to Co-Host",
+        },
+        description: {
+          zh: "2030年世界杯将由3国联合举办，总计6个国家参与办赛，世界杯扩军至48队后的新格局引发关注。",
+          en: "2030 World Cup will be co-hosted by 3 countries across 6 nations. The expanded 48-team format creates a new tournament landscape.",
+        },
+      },
+      {
+        title: {
+          zh: "于东来反向砍价意外带火一个村",
+          en: "Donglai's Reverse Bargaining Accidentally Makes a Village Famous",
+        },
+        description: {
+          zh: "胖东来创始人于东来反向砍价行为意外带火一个村庄，引发网友热议和关注。",
+          en: "Pangdonglai founder Donglai's 'reverse bargaining' goes viral, accidentally making a small village famous and sparking widespread discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "男子自发去车库抗洪失联已遇难",
+          en: "Man Who Went to Flood Garage Found Dead",
+        },
+        description: {
+          zh: "一名男子自发前往地下车库抗洪后失联，最终被确认已遇难，引发社会对防汛安全的关注。",
+          en: "A man who voluntarily went to a flooded underground garage to fight flooding goes missing and is later found dead, raising flood safety concerns.",
+        },
+      },
+      {
+        title: {
+          zh: "卫健委辟谣韩红基金会物资分配不均",
+          en: "Health Commission Denies Hanhong Foundation Supply Irregularities",
+        },
+        description: {
+          zh: "针对韩红基金会物资分配不均的传闻，卫健委正式辟谣澄清，回应社会关切。",
+          en: "Health Commission officially denies rumors of Hanhong Foundation's supply distribution irregularities, clarifying the situation to the public.",
+        },
+      },
+      {
+        title: {
+          zh: "4年后的世界杯中国队能否上场",
+          en: "Can China Play in the World Cup in 4 Years?",
+        },
+        description: {
+          zh: "世界杯落幕，中国球迷热议4年后中国队能否站上世界杯赛场，引发对国足未来发展的讨论。",
+          en: "As the World Cup concludes, Chinese fans debate whether China's national team can qualify for the tournament in 4 years.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-19-hot",
     date: "2026-07-19",
     title: {
