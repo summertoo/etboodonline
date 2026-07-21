@@ -25,6 +25,246 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-21-hot",
+    date: "2026-07-21",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-21",
+      en: "🔥 Hot Topics · Jul 21, 2026",
+    },
+    summary: {
+      zh: "十五五城市更新：新开工改造老旧小区11.5万个；新能源营运车电芯鼓包中创新航将回应；夏天来了却没人穿凉鞋了；广东闹市区现巨蜥原为标本；《八仙！》上映首日票房破亿；95后夫妻500集AI漫剧登顶热播榜；孙颖莎王楚钦爆冷出局无缘混双决赛；佛得角门将受邀参加传奇球星赛；辽宁抚顺暴雨全市停课；季军赛英格兰奖金1.96亿法国1.82亿。",
+      en: "'15th Five-Year' city renewal: 115K old residential communities to be renovated; EV battery swelling defects prompt CALB response; Sandals disappear from summer streets; Monitor lizard specimen appears in Guangdong bus stop; 'Eight Immortals!' surpasses 100M yuan opening day; 95s couple's 500-ep AI comic drama tops charts; Sun Yingsha Wang Chuqin upset in mixed doubles; Cape Verde goalkeeper invited to FIFA legends match; Fushun suspends all schools due to heavy rain; WC third place: England $29M prize, France $27M.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "十五五城市更新：新开工改造城镇老旧小区11.5万个",
+          en: "'15th Five-Year' City Renewal: 115K Old Communities to Be Renovated",
+        },
+        description: {
+          zh: "「十五五」时期将新开工改造城镇老旧小区11.5万个，调高住房层高提高隔声性能，建设改造「小而美」全民健身场地设施。",
+          en: "China's 15th Five-Year Plan targets renovation of 115,000 old urban communities, higher ceilings, better soundproofing, and 'small but beautiful' fitness facilities.",
+        },
+      },
+      {
+        title: {
+          zh: "新能源营运车电芯鼓包，中创新航将联合主机厂回应",
+          en: "EV Battery Swelling Defects: CALB to Respond Jointly with OEMs",
+        },
+        description: {
+          zh: "搭载某品牌177Ah磷酸铁锂电芯的营运车辆集中出现鼓包、漏液、绝缘故障，第三方检测指向制造缺陷，中创新航称近期将正式回应。",
+          en: "Commercial EVs with certain 177Ah LFP batteries report swelling, leakage, and insulation failures. Third-party tests point to manufacturing defects; CALB says formal response coming soon.",
+        },
+      },
+      {
+        title: {
+          zh: "夏天来了，却没人穿凉鞋了",
+          en: "Summer Arrives but Sandals Disappear from Streets",
+        },
+        description: {
+          zh: "全国各地气温突破35°C，往年满街的凉鞋似乎在城市里消失了。从时尚趋势到消费习惯变化，凉鞋真的「凉」了吗？",
+          en: "Temperatures exceed 35°C nationwide, but sandals have vanished from city streets. From fashion trends to changing habits — have sandals truly 'cooled off'?",
+        },
+      },
+      {
+        title: {
+          zh: "《八仙！》上映首日票房破亿",
+          en: "'Eight Immortals!' Surpasses 100M Yuan on Opening Day",
+        },
+        description: {
+          zh: "动画电影《八仙！》7月18日上映首日票房破亿。暑期档已有百部影片定档，涵盖喜剧、科幻、动画、历史等多种类型。",
+          en: "Animated film 'Eight Immortals!' debuts with 100M+ yuan on opening day. The summer season features 100+ films spanning comedy, sci-fi, animation, and historical genres.",
+        },
+      },
+      {
+        title: {
+          zh: "95后夫妻500集AI漫剧登顶热播榜",
+          en: "95s Couple's 500-Episode AI Comic Drama Tops Charts",
+        },
+        description: {
+          zh: "四川巴中95后夫妻用AI制作的古风种田漫剧已更新八季534集，登顶漫剧热播榜榜首，全网播放量破41亿，无明星无投流的纯AI制作成为现象级爆款。",
+          en: "A 95s couple's AI-generated period drama reaches 534 episodes across 8 seasons, topping charts with 4.1B total views. Pure AI production with no stars or ad spend becomes a phenomenon.",
+        },
+      },
+      {
+        title: {
+          zh: "孙颖莎王楚钦爆冷出局，无缘混双决赛",
+          en: "Sun Yingsha Wang Chuqin Stunningly Eliminated from Mixed Doubles Final",
+        },
+        description: {
+          zh: "7月18日晚，孙颖莎/王楚钦2-3不敌辽宁组合，爆冷无缘混双决赛，引发广泛关注。",
+          en: "Table tennis stars Sun Yingsha and Wang Chuqin lose 2-3 to Liaoning pair in a huge upset, missing the mixed doubles final.",
+        },
+      },
+      {
+        title: {
+          zh: "佛得角门将受邀参加FIFA传奇球星赛",
+          en: "Cape Verde Goalkeeper Invited to FIFA Legends Match",
+        },
+        description: {
+          zh: "佛得角门将沃齐尼亚凭借世界杯出色表现，受邀参加FIFA主办的传奇球星赛，与卡福、萨内蒂等名将同场竞技。",
+          en: "Cape Verde goalkeeper Vozinha earns FIFA Legends match invitation alongside Cafu, Zanetti, and other football icons after his impressive World Cup performance.",
+        },
+      },
+      {
+        title: {
+          zh: "辽宁抚顺暴雨，全市停课",
+          en: "Fushun Suspends All Schools Due to Heavy Rain",
+        },
+        description: {
+          zh: "辽宁抚顺市教育局通知7月19日全市有大雨局部特大暴雨，所有中小学校、幼儿园、校外培训机构停课保障师生安全。",
+          en: "Fushun education bureau suspends all schools, kindergartens, and training institutions on Jul 19 due to forecast of heavy to extreme rain.",
+        },
+      },
+      {
+        title: {
+          zh: "世界杯季军赛：英格兰奖金1.96亿，法国1.82亿",
+          en: "World Cup Third Place Prize: England $29M, France $27M",
+        },
+        description: {
+          zh: "英格兰6-4战胜法国夺得世界杯季军，季军获得2900万美元（约1.96亿人民币），殿军法国获得2700万美元（约1.82亿人民币）。",
+          en: "England beats France 6-4 for WC third place, earning $29M (¥196M). France as fourth place receives $27M (¥182M).",
+        },
+      },
+      {
+        title: {
+          zh: "广东闹市区现巨蜥，官方确认是标本",
+          en: "Monitor蜥 Appears at Guangdong Bus Stop, Confirmed as Specimen",
+        },
+        description: {
+          zh: "广东中山一公交站出现长约60厘米形似圆鼻巨蜥的动物，官方勘验确认是无标识的五爪金龙标本，已暂存救护中心追查来源。",
+          en: "A 60cm monitor蜥-like creature appears at a Zhongshan bus stop. Officials confirm it's an unmarked water monitor specimen, now in rescue center pending source investigation.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-21",
+    date: "2026-07-21",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-21",
+      en: "🤖 AI Daily · Jul 21, 2026",
+    },
+    summary: {
+      zh: "面壁智能发布MiniCPM-Robot具身智能系列；NVIDIA开源Cosmos 3 Edge 4B世界模型；通义Qwen-Audio-3.0-TTS实时语音合成发布；上海科学智能研究院开源「神珍」多模态模型；Grok for Excel发布支持自然语言写公式；Cursor测试规划者+执行者AI智能体集群；Claude Code v2.1.216修复长会话卡顿；《第九区》导演发布首部完全AI生成短片；Hugging Face遭自主AI智能体入侵；Ollama获8800万美元融资。",
+      en: "OpenBMB releases MiniCPM-Robot embodied AI series; NVIDIA open-sources Cosmos 3 Edge 4B world model; Tongyi launches Qwen-Audio-3.0-TTS real-time speech synthesis; Shanghai AI Lab open-sources 'Shenzhen' multimodal model; Grok for Excel supports natural language formulas; Cursor tests planner+executor AI agent swarm; Claude Code v2.1.216 fixes long-session lag; District 9 director releases first fully AI-generated short film; Hugging Face hacked by autonomous AI agent; Ollama raises $88M funding.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "面壁智能发布MiniCPM-Robot具身智能系列",
+          en: "OpenBMB Releases MiniCPM-Robot Embodied AI Series",
+        },
+        description: {
+          zh: "面壁智能联合OpenBMB开源MiniCPM-Robot系列，含1.5B参数VLA模型MiniCPM-RobotManip与0.9B移动跟踪模型MiniCPM-RobotTrack。",
+          en: "OpenBMB open-sources MiniCPM-Robot series: 1.5B VLA model MiniCPM-RobotManip for manipulation and 0.9B tracking model MiniCPM-RobotTrack.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA开源Cosmos 3 Edge：4B参数世界模型",
+          en: "NVIDIA Open-Sources Cosmos 3 Edge: 4B Parameter World Model",
+        },
+        description: {
+          zh: "NVIDIA在Hugging Face开源40亿参数世界模型Cosmos 3 Edge，为机器人和视觉AI提供边缘设备上的实时环境理解与动作生成能力。",
+          en: "NVIDIA open-sources Cosmos 3 Edge, a 4B parameter world model for robots and vision AI agents to understand environments and generate actions in real-time on edge devices.",
+        },
+      },
+      {
+        title: {
+          zh: "通义Qwen-Audio-3.0-TTS发布，支持16种语言20种方言",
+          en: "Tongyi Qwen-Audio-3.0-TTS: 16 Languages, 20 Chinese Dialects",
+        },
+        description: {
+          zh: "通义实验室发布Qwen-Audio-3.0-TTS，含Flash版（首包延迟约300ms）和Plus版。Plus在榜单夺冠，WER低至3.87，说话人相似度最高达82.75。",
+          en: "Tongyi Lab releases Qwen-Audio-3.0-TTS with Flash (~300ms latency) and Plus versions. Plus tops the leaderboard with WER as low as 3.87 and speaker similarity up to 82.75.",
+        },
+      },
+      {
+        title: {
+          zh: "上海科学智能研究院开源「神珍」多模态基础模型",
+          en: "Shanghai AI Lab Open-Sources 'Shenzhen' Multimodal Foundation Model",
+        },
+        description: {
+          zh: "「神珍」约110亿参数，可处理DNA、RNA、蛋白质、小分子、地球系统和医学影像六类数据，在生物序列9/20任务取得最优，医学影像分割Dice达91.20。",
+          en: "'Shenzhen' (~11B params) handles DNA, RNA, proteins, molecules, earth systems, and medical imaging. Achieves best results on 9/20 bio tasks; medical image segmentation Dice score 91.20.",
+        },
+      },
+      {
+        title: {
+          zh: "Grok for Excel发布：自然语言写公式、运行场景",
+          en: "Grok for Excel: Natural Language Formulas and Scenarios",
+        },
+        description: {
+          zh: "xAI将Grok引入Microsoft Excel推出免费加载项，用户可用自然语言提问、写公式、运行场景，答案引用具体单元格，图表可直接插入。",
+          en: "xAI brings Grok to Excel as a free add-in. Users ask questions, write formulas, and run scenarios in natural language, with answers referencing specific cells and charts.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor测试AI智能体集群：规划者+执行者分工",
+          en: "Cursor Tests AI Agent Swarm: Planner + Executor Architecture",
+        },
+        description: {
+          zh: "Cursor新集群将任务分解为规划者（最强模型）和执行者（快速廉价模型）。使用Grok 4.5时4小时通过80% SQL测试，已用于构建浏览器和修复漏洞。",
+          en: "Cursor's new agent swarm splits tasks into a planner (strongest model) and executors (fast cheap models). Using Grok 4.5, passes 80% of SQL tests in 4 hours.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.216修复长会话卡顿",
+          en: "Claude Code v2.1.216 Fixes Long-Session Lag, Agent Issues",
+        },
+        description: {
+          zh: "修复了长会话中消息归一化成本二次增长导致的数秒停顿，以及OAuth token过期误判、子智能体重启配置恢复、工作树隔离git目录重定向等问题。",
+          en: "Fixes quadratic growth of message normalization cost causing multi-second pauses in long sessions, plus OAuth false positives, sub-agent config reset, and git directory isolation issues.",
+        },
+      },
+      {
+        title: {
+          zh: "《第九区》导演发布首部完全AI生成短片《Nightborne》",
+          en: "District 9 Director Releases First Fully AI-Generated Short Film 'Nightborne'",
+        },
+        description: {
+          zh: "Neill Blomkamp发布13分钟科幻恐怖短片《Nightborne》，完全使用Seedance 2.0逐帧生成。计划以相同格式拍摄长片并已创立AI电影工作室。",
+          en: "Neill Blomkamp releases 13-min sci-fi horror short 'Nightborne,' entirely frame-by-frame generated by Seedance 2.0. Plans feature film and has founded AI film studio.",
+        },
+      },
+      {
+        title: {
+          zh: "Hugging Face遭自主AI智能体入侵，用AI反击",
+          en: "Hugging Face Hacked by Autonomous AI Agent, Fights Back with AI",
+        },
+        description: {
+          zh: "Hugging Face披露其基础设施遭自主AI智能体入侵，攻击者利用数据集处理管道代码执行漏洞窃取内部数据和凭证。该公司部署LLM分析智能体，数小时完成17,000+条攻击行为的取证。",
+          en: "Hugging Face reveals an autonomous AI agent breached its infrastructure via dataset pipeline code execution. Deployed LLM-powered analysis agent to complete取证 of 17,000+ attack events in hours.",
+        },
+      },
+      {
+        title: {
+          zh: "Ollama获8800万美元融资，已服务890万开发者",
+          en: "Ollama Raises $88M, Serves 8.9M Developers",
+        },
+        description: {
+          zh: "Ollama完成8800万美元融资，由Benchmark等领投。已服务890万开发者，85%财富500强企业使用，云端token用量月均翻倍。",
+          en: "Ollama raises $88M led by Benchmark. Serves 8.9M developers, used by 85% of Fortune 500, with cloud token usage doubling monthly.",
+        },
+      },
+      {
+        title: {
+          zh: "ArXiv超30%新投稿文本特征与AI撰写一致",
+          en: "Over 30% of New ArXiv Submissions Show AI-Writing Characteristics",
+        },
+        description: {
+          zh: "对12,750篇ArXiv论文检测显示，约32%新投稿文本特征与AI撰写一致，计算机科学领域高达65%，数学领域最低0.7%。",
+          en: "Analysis of 12,750 ArXiv papers shows ~32% of new submissions exhibit AI-writing characteristics. Computer science leads at 65%, mathematics lowest at 0.7%.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-20",
     date: "2026-07-20",
     title: {
