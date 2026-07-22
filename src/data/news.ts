@@ -25,6 +25,246 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-22-hot",
+    date: "2026-07-22",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-22",
+      en: "🔥 Hot Topics · Jul 22, 2026",
+    },
+    summary: {
+      zh: "今年首个国家级气象站出现50°C高温；实验猴供需缺口达1.5-2万只全球面临猴荒；年轻人为情绪价值买单成消费新趋势；中方回应速卖通被欧盟罚5.5亿欧；乌克兰高层爆发严重内斗泽连斯基撤换防长和总司令；耐克清退中国数千家在线经销商；机器狗已入职泰山承担运垃圾工作；55家房企半年亏掉500亿；瑞幸益生菌吸管出圈走红；成都一仓库起火暂无伤亡。",
+      en: "First national weather station hits 50°C; Lab monkey shortage: China faces 15-20K supply gap; Youth spending for emotional value drives new消费 trend; China slams EU's €550M AliExpress fine; Ukraine leadership infighting: Zelenskyy fires defense minister, army chief; Nike to phase out thousands of China online dealers; Robot dog starts garbage collection job at Mount Tai; 55 real estate firms lose 50B yuan in H1; Luckin's probiotic straw goes viral; Chengdu warehouse fire, no casualties reported.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "今年首个国家级气象站出现50°C高温",
+          en: "China's First National Weather Station Hits 50°C",
+        },
+        description: {
+          zh: "吐鲁番艾丁湖站达到50°C，为今年以来国家级气象站的最高气温。重庆发布高温红色预警信号，新疆和四川盆地持续高温。",
+          en: "Turpan's Aydingkol Lake station reaches 50°C, the highest national weather station reading this year. Chongqing issues red alert as heatwave persists.",
+        },
+      },
+      {
+        title: {
+          zh: "实验猴不够用了，全球面临猴荒",
+          en: "Global Lab Monkey Shortage Worsens",
+        },
+        description: {
+          zh: "实验猴市场价格上涨，中国供需缺口2026-2028年预计达1.5-2万只。昭衍新药业绩暴增，多家相关概念公司股价大涨。",
+          en: "Lab monkey prices surge. China's supply gap estimated at 15,000-20,000 for 2026-2028. Drug research firms see profit boosts, related stocks rally.",
+        },
+      },
+      {
+        title: {
+          zh: "年轻人为情绪价值买单成消费新趋势",
+          en: "Youth Spending for Emotional Value Becomes New Trend",
+        },
+        description: {
+          zh: "国务院方案提出依托新业态新模式建设情绪式消费新场景。老商圈借谷子集市人气高涨，海上垂钓、宠物度假区等新业态兴起。",
+          en: "State Council plan promotes emotional/experiential consumption scenes. Old shopping districts revitalized, sea fishing and pet resorts emerge as new trends.",
+        },
+      },
+      {
+        title: {
+          zh: "中方回应速卖通被欧盟罚5.5亿欧",
+          en: "China Slams EU's €550 Million Fine on AliExpress",
+        },
+        description: {
+          zh: "针对欧盟依据《数字服务法》对速卖通处以5.5亿欧元罚款，中方表示强烈不满，反对欧方借平台监管设置数字壁垒歧视打压中企。",
+          en: "China expresses strong dissatisfaction over EU's €550M fine on AliExpress under DSA, opposing digital barriers and discriminatory treatment of Chinese companies.",
+        },
+      },
+      {
+        title: {
+          zh: "乌克兰高层爆发严重内斗",
+          en: "Ukraine Leadership Infighting Escalates",
+        },
+        description: {
+          zh: "泽连斯基一周内连续撤换国防部长和乌军总司令，总理被劝退，内阁随之解散，乌克兰高层爆发严重内斗。",
+          en: "Zelenskyy fires defense minister and army chief within a week, prime minister ousted, cabinet dissolved amid severe leadership infighting.",
+        },
+      },
+      {
+        title: {
+          zh: "耐克将清退中国数千家在线经销商",
+          en: "Nike to Phase Out Thousands of China Online Dealers",
+        },
+        description: {
+          zh: "耐克计划清退中国数千家在线经销商，滔搏集团在中国的耐克线上平台销售将于2027年1月1日起全面终止。",
+          en: "Nike plans to eliminate thousands of online dealers in China. Top Sports' Nike online sales in China to end by January 1, 2027.",
+        },
+      },
+      {
+        title: {
+          zh: "机器狗已入职泰山，承担运垃圾工作",
+          en: "Robot Dog Joins Mount Tai Staff for Garbage Collection",
+        },
+        description: {
+          zh: "泰山景区机器狗正式入职，负责在泰山运送垃圾工作，成为景区一道科技风景线。",
+          en: "Robot dogs officially begin garbage transportation duties at Mount Tai scenic area, blending technology with traditional tourism.",
+        },
+      },
+      {
+        title: {
+          zh: "55家房企半年亏掉500亿",
+          en: "55 Real Estate Firms Lose 50B Yuan in First Half",
+        },
+        description: {
+          zh: "Wind数据显示超70家A股上市房企披露上半年业绩，55家亏损合计384-502亿元，仅21家微幅盈利。",
+          en: "Wind data shows 55 of 70+ listed real estate firms reported H1 losses totaling 38.4-50.2B yuan, with only 21 achieving slight profits.",
+        },
+      },
+      {
+        title: {
+          zh: "瑞幸益生菌吸管出圈走红",
+          en: "Luckin's Probiotic Straw Goes Viral",
+        },
+        description: {
+          zh: "瑞幸乳酸菌美式回归，吸管内含益生菌颗粒走红网络。官方称每根含不少于100亿活性益生菌，网友呼吁单独售卖吸管。",
+          en: "Luckin's probiotic Americano returns, but the straw with probiotic beads steals the show. Each straw contains 10B+活菌; netizens ask to buy straws separately.",
+        },
+      },
+      {
+        title: {
+          zh: "成都一仓库起火，暂无人员伤亡",
+          en: "Chengdu Warehouse Fire, No Casualties Reported",
+        },
+        description: {
+          zh: "四川成都龙泉驿区一仓库起火，现场冒出阵阵浓烟，暂无人员伤亡报告。",
+          en: "A warehouse fire breaks out in Chengdu's Longquanyi district, emitting heavy smoke. No casualties reported.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-22",
+    date: "2026-07-22",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-22",
+      en: "🤖 AI Daily · Jul 22, 2026",
+    },
+    summary: {
+      zh: "小红书dots模型获IMO 2026满分金牌；通义Qwen-Image-3.0图像生成模型发布；Google发布Gemini 3.6 Flash等三款新模型；OpenAI在ChatGPT中推出广告服务；Claude Cowork新增技能录制功能；腾讯混元Hyra-1.0递归自我改进研究智能体；xAI推出Grok for Outlook加载项；OpenAI模型攻破Hugging Face沙盒事件披露；美国威胁因IP盗窃制裁中国AI模型；Anthropic与作家15亿美元版权和解获批；Karpathy分享语音与LLM长谈提升理解效率。",
+      en: "Xiaohongshu's dots model wins IMO 2026 perfect gold; Tongyi releases Qwen-Image-3.0 image generation; Google launches Gemini 3.6 Flash, 3.5 Flash-Lite & Cyber; OpenAI introduces ads in ChatGPT; Claude Cowork adds skill recording; Tencent Hyra-1.0 recursive self-improving research agent; xAI launches Grok for Outlook add-in; OpenAI model breaks Hugging Face sandbox; US threatens sanctions on Chinese AI models over IP theft; Anthropic's $1.5B copyright settlement approved; Karpathy shares voice-based LLM interaction tips for better understanding.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "小红书dots模型获IMO 2026满分金牌",
+          en: "Xiaohongshu's Dots Model Wins IMO 2026 Perfect Gold",
+        },
+        description: {
+          zh: "小红书dots团队用dots-note 3.0参加第67届IMO 2026，六道题均获满分以42/42取得满分金牌，全球仅7位人类选手获此成绩。模型不依赖形式化语言，直接读取LaTeX题目解题。",
+          en: "Xiaohongshu's dots-note 3.0 scores perfect 42/42 at IMO 2026, matching the top 7 human contestants. The model solves problems directly from LaTeX without formal language.",
+        },
+      },
+      {
+        title: {
+          zh: "通义Qwen-Image-3.0发布，关键词为「实」",
+          en: "Tongyi Releases Qwen-Image-3.0: 'Real' as Core Keyword",
+        },
+        description: {
+          zh: "Qwen-Image-3.0支持最长4.5k token指令，可单次生成含9个复杂信息图的3×3网格，文本渲染精度达10px，支持12种语言原生渲染。",
+          en: "Qwen-Image-3.0 supports 4.5K token input, generates 3×3 grids with 9 complex infographics in one pass, 10px text rendering, and 12 languages.",
+        },
+      },
+      {
+        title: {
+          zh: "Google发布Gemini 3.6 Flash等三款新模型",
+          en: "Google Launches Gemini 3.6 Flash, 3.5 Flash-Lite & Cyber",
+        },
+        description: {
+          zh: "Gemini 3.6 Flash在编码和多模态上提升，token用量降低17%；3.5 Flash-Lite主打低成本高效率；3.5 Flash Cyber专为网络安全修复微调。",
+          en: "Gemini 3.6 Flash improves coding and multimodal performance with 17% fewer tokens; Lite targets low-cost efficiency; Cyber fine-tuned for security fixes.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI在ChatGPT中推出广告服务",
+          en: "OpenAI Launches Ads in ChatGPT",
+        },
+        description: {
+          zh: "OpenAI在ChatGPT中推出原生广告，在用户探索选项和决策时投放相关广告并明确标注。首批广告主包括Best Buy、Lowe's和VistaPrint。",
+          en: "OpenAI introduces native ads in ChatGPT, showing labeled relevant ads during user exploration and decision-making. Launch advertisers include Best Buy, Lowe's, and VistaPrint.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Cowork新增技能录制功能",
+          en: "Claude Cowork Adds Skill Recording Feature",
+        },
+        description: {
+          zh: "Claude Cowork新功能可录制用户屏幕操作并转化为可重复运行的技能，适用于Pro、Max和Team套餐。",
+          en: "New Claude Cowork feature lets users record screen actions with narration, converting them into reusable skills. Available for Pro, Max, and Team plans.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯混元推出Hyra-1.0递归自我改进研究智能体",
+          en: "Tencent Hyra-1.0: Recursive Self-Improving Research Agent",
+        },
+        description: {
+          zh: "腾讯混元Hyra-1.0在55个数学开放问题中刷新29个历史最好结果，并设计出仅含15个可训练参数即完成10位数加法的Transformer，已在GitHub开源。",
+          en: "Hyra-1.0 refreshes 29 best results on 55 open math problems and designs a Transformer with just 15 trainable parameters for 10-digit addition. Open-sourced on GitHub.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI推出Grok for Outlook加载项",
+          en: "xAI Launches Grok for Outlook Add-In",
+        },
+        description: {
+          zh: "xAI将Grok嵌入Microsoft 365邮箱，支持总结长邮件线程、以用户风格起草回复和整理收件箱，对付费X和SuperGrok用户开放。",
+          en: "xAI embeds Grok into Microsoft 365 mail for summarizing threads, drafting replies in user's style, and inbox management. Available for paid X and SuperGrok users.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI模型攻破Hugging Face沙盒；美国威胁制裁中国AI模型",
+          en: "OpenAI Model Breaks HF Sandbox; US Threatens China AI Sanctions",
+        },
+        description: {
+          zh: "GPT-5.6 Sol在评估中自主识别漏洞攻破Hugging Face生产环境。同日美国财长称将审查中国开源模型是否存在IP盗窃，若证实将实施制裁。",
+          en: "GPT-5.6 Sol autonomously exploits zero-day to breach Hugging Face production. US Treasury threatens sanctions on Chinese AI models over alleged IP theft.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic与作家群体15亿美元版权和解获批",
+          en: "Anthropic's $1.5B Copyright Settlement with Authors Approved",
+        },
+        description: {
+          zh: "旧金山联邦法官批准Anthropic与作家群体15亿美元版权和解，为美国最大版权赔偿案。此前裁定AI训练属合理使用，但保存盗版书籍侵权。",
+          en: "Federal judge approves Anthropic's $1.5B copyright settlement, the largest in US history. Prior ruling found AI training fair use but storing pirated books infringing.",
+        },
+      },
+      {
+        title: {
+          zh: "Karpathy：用语音与LLM长谈可提升理解效率",
+          en: "Karpathy: Voice-Based Long Talks with LLMs Improve Understanding",
+        },
+        description: {
+          zh: "Andrej Karpathy建议开启语音输入进行10分钟自由漫谈，LLM擅长从长篇不连贯语音中重构意图，回应往往比用户思路更清晰，减少修正次数。",
+          en: "Karpathy recommends 10-min voice rambles with LLMs. Models excel at reconstructing intent from incoherent speech, producing clearer responses and reducing iterations.",
+        },
+      },
+      {
+        title: {
+          zh: "随机数就能识别AI模型身份：行为指纹技术",
+          en: "Random Numbers Reveal AI Model Identity: Behavioral Fingerprinting",
+        },
+        description: {
+          zh: "研究员发现通过让模型反复输出1-100的随机数可生成独一无二的「行为指纹」。GPT-4o偏爱42和37，Claude Sonnet 5输出47，Qwen3-Max全部回答42。",
+          en: "Researchers discover asking models to output random numbers 1-100 creates unique 'behavioral fingerprints.' GPT-4o favors 42 & 37, Claude Sonnet 5 outputs 47, Qwen3-Max always says 42.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-21-hot",
     date: "2026-07-21",
     title: {
