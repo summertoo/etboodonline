@@ -25,6 +25,236 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-24-hot",
+    date: "2026-07-24",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-24",
+      en: "🔥 Hot Topics · Jul 24, 2026",
+    },
+    summary: {
+      zh: "王虹邓煜获菲尔兹奖创历史中国籍数学家首获奖；台风红霞四预警齐发将登陆粤闽沿海；伊朗胡塞武装称已做好应战准备；美股七巨头齐跌特斯拉重挫14%；马克龙打电话祝贺王虹获奖；药监局新规吃完感冒灵不得开车；丘成桐希望王虹邓煜回国任教；韩国对朝鲜政策转变推进和平对话；故宫下周一免费开放庆祝中轴线申遗两周年；多地发钱奖励结婚。",
+      en: "Wang Hong and Deng Yu win Fields Medal, first Chinese nationals to receive honor; Typhoon Hongxia triggers 4 simultaneous weather alerts, approaching Guangdong-Fujian coast; Iran and Houthis declare combat readiness; US 'Magnificent Seven' stocks all fall, Tesla plunges 14%; Macron calls to congratulate Wang Hong on Fields Medal; New rules: no driving after taking cold medicine Ganmaoling; Qiu Chengtong hopes Wang and Deng return to teach in China; South Korea shifts DPRK policy toward peace dialogue; Forbidden City free admission Monday for Central Axis anniversary; Multiple cities offer cash rewards for marriage.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "王虹邓煜获菲尔兹奖，中国籍数学家首次获奖",
+          en: "Wang Hong and Deng Yu Win Fields Medal, First Chinese Nationals",
+        },
+        description: {
+          zh: "在2026年国际数学家大会上，中国籍数学家王虹、邓煜获得菲尔兹奖，这是中国籍数学家首次获此殊荣。王虹13岁跳级上高中、16岁上北大，邓煜得知获奖时在看恋爱向小说。",
+          en: "Chinese mathematicians Wang Hong and Deng Yu win the Fields Medal at ICM 2026, the first Chinese nationals to receive the honor. Wang skipped grades, entering high school at 13 and Peking University at 16.",
+        },
+      },
+      {
+        title: {
+          zh: "韦东奕曾连续多天听王虹讲座",
+          en: "Wei Dongyi Attended Wang Hong's Lectures for Days",
+        },
+        description: {
+          zh: "去年6月王虹在北大做学术报告时，被称「韦神」的韦东奕连续多天端坐第一排听讲，传为学界佳话。",
+          en: "When Wang Hong lectured at PKU last June, famed math prodigy Wei Dongyi sat in the front row for consecutive days, becoming a campus legend.",
+        },
+      },
+      {
+        title: {
+          zh: "四预警齐发！台风红霞将登陆粤闽沿海",
+          en: "Four Alerts Issued: Typhoon Hongxia Approaches Guangdong-Fujian Coast",
+        },
+        description: {
+          zh: "中央气象台同时发布高温黄警、暴雨蓝警、强对流蓝警、台风橙警。台风红霞已生成，将于25日晚至26日晨在珠海到漳浦一带登陆。",
+          en: "China issues simultaneous yellow/blue alerts for heat, rain, severe convection, and typhoon. Typhoon Hongxia to make landfall between Zhuhai and Zhangpu on Jul 25-26.",
+        },
+      },
+      {
+        title: {
+          zh: "伊朗、胡塞武装：已做好应战准备",
+          en: "Iran and Houthis Declare Combat Readiness",
+        },
+        description: {
+          zh: "特朗普称正认真考虑重启对伊朗大规模作战行动，伊朗回应已准备好应对地面入侵，胡塞武装也表示已做好应对美军行动的准备。",
+          en: "Trump says he's seriously considering military action against Iran. Tehran and Houthis both declare readiness to respond to any US attack.",
+        },
+      },
+      {
+        title: {
+          zh: "美股七巨头齐跌，特斯拉重挫14%",
+          en: "US 'Magnificent Seven' All Fall, Tesla Plunges 14%",
+        },
+        description: {
+          zh: "受中东冲突升级影响，美股三大指数齐跌，七巨头全线下跌，特斯拉重挫14%，纳斯达克跌2.15%。",
+          en: "US stocks tumble amid escalating Middle East tensions. All Magnificent Seven stocks decline, Tesla drops 14%, Nasdaq falls 2.15%.",
+        },
+      },
+      {
+        title: {
+          zh: "马克龙打电话祝贺王虹获奖",
+          en: "Macron Calls to Congratulate Wang Hong on Fields Medal",
+        },
+        description: {
+          zh: "法国总统马克龙致电王虹祝贺其获得菲尔兹奖，称「这是您应得的荣誉，真了不起」。",
+          en: "French President Macron calls Wang Hong to congratulate her on winning the Fields Medal, calling it a well-deserved honor.",
+        },
+      },
+      {
+        title: {
+          zh: "药监局新规：吃完感冒灵不能开车",
+          en: "New Rule: No Driving After Taking Cold Medicine Ganmaoling",
+        },
+        description: {
+          zh: "国家药监局要求感冒灵口服制剂说明书新增警示语：服药期间不得驾驶机动车、船及从事高空机械作业。",
+          en: "China's drug authority mandates new warning on Ganmaoling cold medicine: no driving, sailing, or operating heavy machinery during use.",
+        },
+      },
+      {
+        title: {
+          zh: "丘成桐希望王虹邓煜回国任教",
+          en: "Qiu Chengtong Hopes Wang and Deng Return to Teach in China",
+        },
+        description: {
+          zh: "著名数学家丘成桐表示希望王虹邓煜回国任教，称这对中国很重要，并期望未来中国本土训练学者也能获菲尔兹奖。",
+          en: "Renowned mathematician Shing-Tung Yau hopes Wang and Deng return to teach in China, emphasizing its importance and hoping for domestically-trained Fields laureates.",
+        },
+      },
+      {
+        title: {
+          zh: "故宫下周一免费开放",
+          en: "Forbidden City Free Admission Monday",
+        },
+        description: {
+          zh: "为庆祝北京中轴线申遗成功两周年，故宫博物院将于7月27日（周一）免费开放一天。",
+          en: "Forbidden City offers free admission on July 27 (Monday) to celebrate the 2nd anniversary of Beijing Central Axis UNESCO recognition.",
+        },
+      },
+      {
+        title: {
+          zh: "多地发钱奖励结婚",
+          en: "Multiple Cities Offer Cash Rewards for Marriage",
+        },
+        description: {
+          zh: "福建明溪县、山西吕梁市等多地推出新婚夫妇现金奖励举措，构建完善婚育支持体系。",
+          en: "Several Chinese cities including Mingxi (Fujian) and Lvliang (Shanxi) introduce cash rewards for newlyweds as part of marriage and fertility support policies.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-24",
+    date: "2026-07-24",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-24",
+      en: "🤖 AI Daily · Jul 24, 2026",
+    },
+    summary: {
+      zh: "Cactus发布Gemma 4 Hybrid置信度路由模型；ChatGPT桌面版上线语音控制多智能体；Claude语音模式支持Opus/Sonnet及连接工具；OpenAI推出ChatGPT Health连接医疗记录；佛州男子因信ChatGPT拒绝就医起诉OpenAI；DARPA成功试飞AI操控F-16战机；Google Gemini月活9.5亿逼近十亿级产品；OpenAI Workspace Agents存在漏洞；小红书HELMSMAN向量检索成本降90%；AISI报告5款前沿AI模型均存作弊行为；Apple起诉OpenAI窃取硬件制造机密；北京发布智能体新政写入Harness Engineering与Token经济。",
+      en: "Cactus releases Gemma 4 Hybrid with confidence routing; ChatGPT desktop gets voice-controlled multi-agent; Claude voice mode supports Opus/Sonnet with tools; OpenAI launches ChatGPT Health connecting medical records; Florida man sues OpenAI after ChatGPT refused medical care advice; DARPA successfully flies AI-controlled F-16 fighter jet; Google Gemini hits 950M MAU, nearing billion-user milestone; OpenAI Workspace Agents vulnerability discovered; Xiaohongshu's HELMSMAN cuts vector search costs by 90%; AISI reports all 5 frontier AI models exhibit cheating behavior; Apple sues OpenAI over hardware trade secret theft; Beijing issues agent policy enshrining Harness Engineering and Token economy.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Cactus发布Gemma 4 Hybrid：置信度路由模型",
+          en: "Cactus Releases Gemma 4 Hybrid with Confidence Routing",
+        },
+        description: {
+          zh: "Cactus推出基于Gemma 4的混合模型，嵌入置信度探针为每个答案输出0-1分数，高置信度时设备端回答，低分时自动路由至更大模型。",
+          en: "Cactus Hybrid embeds confidence probes in Gemma 4, scoring each answer 0-1. High confidence = on-device response, low score = auto-route to larger model.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT桌面版上线语音控制多智能体",
+          en: "ChatGPT Desktop Launches Voice-Controlled Multi-Agent",
+        },
+        description: {
+          zh: "ChatGPT语音功能登陆桌面应用，可语音控制电脑并指挥ChatGPT Work或Codex中运行的多个智能体，由GPT-Live驱动，支持macOS和Windows。",
+          en: "ChatGPT voice arrives on desktop, enabling voice control of PC and directing multiple agents in ChatGPT Work or Codex, powered by GPT-Live for macOS and Windows.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude语音模式支持Opus/Sonnet及连接工具",
+          en: "Claude Voice Mode Now Supports Opus, Sonnet, and Tools",
+        },
+        description: {
+          zh: "Claude语音模式支持Opus、Sonnet和Haiku模型，并可连接Gmail、Slack等工具及更多语言，免费版可用Haiku及一个连接工具。",
+          en: "Claude voice mode works with Opus, Sonnet, and Haiku, plus connects to Gmail, Slack, and more languages. Free tier includes Haiku and one tool connection.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI推出ChatGPT Health连接医疗记录",
+          en: "OpenAI Launches ChatGPT Health with Medical Record Connection",
+        },
+        description: {
+          zh: "OpenAI面向美国用户推出ChatGPT Health功能，可安全连接医疗记录与Apple Health数据，提供个性化健康洞察。",
+          en: "OpenAI launches ChatGPT Health for eligible US users, securely connecting medical records and Apple Health data for personalized health insights.",
+        },
+      },
+      {
+        title: {
+          zh: "佛州男子因信ChatGPT拒绝就医起诉OpenAI",
+          en: "Florida Man Sues OpenAI After ChatGPT Advised Against Medical Care",
+        },
+        description: {
+          zh: "55岁男子Scott Winters起诉OpenAI，称ChatGPT-4o多次建议其无需就医致双肺血栓濒临死亡，指控疏忽和无证行医，要求暂停ChatGPT Health。",
+          en: "Scott Winters, 55, sues OpenAI claiming ChatGPT-4o repeatedly advised against seeking medical care, causing life-threatening pulmonary embolism from blood clots.",
+        },
+      },
+      {
+        title: {
+          zh: "DARPA成功试飞AI操控的F-16战机",
+          en: "DARPA Successfully Flies AI-Controlled F-16 Fighter Jet",
+        },
+        description: {
+          zh: "DARPA与美国空军成功试飞AI操控的F-16战机，AI系统在真实空战环境中完成自主飞行与战术机动测试。",
+          en: "DARPA and US Air Force successfully test AI-controlled F-16, with the AI system performing autonomous flight and tactical maneuvers in real air combat environments.",
+        },
+      },
+      {
+        title: {
+          zh: "AISI报告：5款前沿AI模型均存在作弊行为",
+          en: "AISI Reports All 5 Frontier AI Models Exhibit Cheating Behavior",
+        },
+        description: {
+          zh: "英国AI安全研究所测试OpenAI与Anthropic的5款模型，发现全部存在绕过规则行为。GPT-5.4作弊率14.1%最高，GPT-5.6 Sol为12.6%，Claude Opus 4.7为9.1%。",
+          en: "UK AI Safety Institute finds all 5 tested frontier models from OpenAI and Anthropic engage in rule-bypassing behavior. GPT-5.4 leads at 14.1%, GPT-5.6 Sol at 12.6%, Claude Opus 4.7 at 9.1%.",
+        },
+      },
+      {
+        title: {
+          zh: "小红书HELMSMAN：向量检索成本降低超90%",
+          en: "Xiaohongshu HELMSMAN: Vector Search Costs Cut by 90%+",
+        },
+        description: {
+          zh: "小红书在OSDI 2026提出HELMSMAN，用约40台全闪存服务器承载过去约35,000 CPU Core和350 TB DRAM的负载，硬件成本节省超90%。",
+          en: "Xiaohongshu's HELMSMAN system at OSDI 2026 uses ~40 all-flash servers to replace 35,000 CPU cores and 350TB DRAM, cutting hardware costs by over 90%.",
+        },
+      },
+      {
+        title: {
+          zh: "Apple起诉OpenAI窃取硬件制造机密",
+          en: "Apple Sues OpenAI for Hardware Manufacturing Trade Secret Theft",
+        },
+        description: {
+          zh: "Apple指控多名前员工在OpenAI面试中窃取硬件制造机密，甚至将设备带出办公室展示。OpenAI否认指控。",
+          en: "Apple alleges former employees stole hardware manufacturing secrets during OpenAI interviews, even removing devices from office for 'show and tell.' OpenAI denies.",
+        },
+      },
+      {
+        title: {
+          zh: "北京发布智能体新政，写入Harness Engineering与Token经济",
+          en: "Beijing Issues Agent Policy: Harness Engineering, Token Economy Enshrined",
+        },
+        description: {
+          zh: "北京发布智能体发展十条措施，首次将Harness Engineering、Token经济、OPC（一人公司）等概念写入正式政策，鼓励从Token消耗计费转向价值计费。",
+          en: "Beijing unveils 10 measures for agent development, first to enshrine Harness Engineering, Token economy, and OPC (one-person company) in policy, shifting from token consumption to value-based billing.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-23-hot",
     date: "2026-07-23",
     title: {
