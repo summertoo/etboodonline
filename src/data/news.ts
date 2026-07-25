@@ -25,6 +25,236 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-25-hot",
+    date: "2026-07-25",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-25",
+      en: "🔥 Hot Topics · Jul 25, 2026",
+    },
+    summary: {
+      zh: "王小洪会见FBI局长帕特尔深化执法合作；携程因滥用市场支配地位被罚没51.79亿创反垄断纪录；中国式安全感海外圈粉上半年刑事案件降16.5%；井泉大使三问菲律宾闹什么闹；马斯克财富一周蒸发1300亿美元；景德镇手工瓷业遗存列入世界遗产成中国第61项；台风红霞直逼广东多地停运停航停课；詹姆斯降薪4862万加盟76人两年800万；王楚钦爆冷不敌张煜东；男生中考699分偷改志愿读中职。",
+      en: "Wang Xiaohong meets FBI Director Patel to deepen law enforcement cooperation; Ctrip fined record 5.179B yuan for market monopoly; 'Chinese-style security' goes viral globally as crime drops 16.5%; Chinese envoy to Philippines issues stern warning; Musk loses $130B in a week as Tesla, SpaceX stocks plunge; Jingdezhen ceramic heritage becomes China's 61st World Heritage site; Typhoon Hongxia approaches Guangdong, triggering transport and school suspensions; LeBron James takes 90% pay cut to join 76ers for $8M/2yr; Wang Chuqin upset in table tennis league; 699-score student secretly changes to vocational school for programming.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "王小洪会见FBI局长帕特尔",
+          en: "Wang Xiaohong Meets FBI Director Patel",
+        },
+        description: {
+          zh: "国务委员、公安部部长王小洪在北京会见美国联邦调查局局长帕特尔，双方同意在执法领域继续深化交流合作。",
+          en: "China's State Councilor and Public Security Minister Wang Xiaohong meets FBI Director Patel in Beijing, agreeing to deepen law enforcement cooperation.",
+        },
+      },
+      {
+        title: {
+          zh: "携程被罚没51.79亿元，创反垄断纪录",
+          en: "Ctrip Fined Record 5.179B Yuan for Monopoly Abuse",
+        },
+        description: {
+          zh: "市场监管总局认定携程滥用市场支配地位，罚没合计51.79亿元，责令退还强制扣除酒店订单储备金1.22亿元。携程回应诚恳接受。",
+          en: "SAMR fines Ctrip 5.179B yuan for abusing market dominance, orders refund of 122M yuan forcibly deducted from hotels. Ctrip says it accepts the penalty.",
+        },
+      },
+      {
+        title: {
+          zh: "「中国式安全感」圈粉世界",
+          en: "'Chinese-Style Security' Goes Global",
+        },
+        description: {
+          zh: "公安部介绍上半年刑事案件、治安案件同比分别下降16.5%和11.3%，「中国式安全感」成为海外社交平台热门话题。",
+          en: "China's crime rate drops 16.5% in H1 2026. 'Chinese-style security' trends globally as overseas social media users praise public safety.",
+        },
+      },
+      {
+        title: {
+          zh: "驻菲大使井泉三问菲律宾",
+          en: "Chinese Envoy to Philippines Issues Stern Warning",
+        },
+        description: {
+          zh: "中国驻菲律宾大使井泉针对菲方在仁爱礁附近频繁挑衅行为连发三问：闹什么闹，承担得起后果吗？呼吁珍惜东亚和平。",
+          en: "Chinese Ambassador to Philippines Jing Quan questions Manila's provocations at Ren'ai Jiao, warning of consequences and urging preservation of East Asian peace.",
+        },
+      },
+      {
+        title: {
+          zh: "马斯克财富一周蒸发8800亿元",
+          en: "Musk Loses $130B in a Week as Tesla Plunges",
+        },
+        description: {
+          zh: "特斯拉股价本周累计跌18%创2022年来最大单周跌幅，SpaceX股价亦跌至上市以来最低点，马斯克财富蒸发约1300亿美元。",
+          en: "Tesla stock drops 18% in a week, worst since 2022. SpaceX also hits all-time low. Musk's net worth evaporates ~$130B in seven days.",
+        },
+      },
+      {
+        title: {
+          zh: "中国世界遗产+1：景德镇手工瓷业遗存",
+          en: "China's 61st World Heritage: Jingdezhen Ceramic Heritage",
+        },
+        description: {
+          zh: "「景德镇手工瓷业遗存」成功列入《世界遗产名录》，成为中国第61项世界遗产，填补了「瓷」主题的世界遗产空白。",
+          en: "Jingdezhen's handmade porcelain heritage sites are inscribed on the UNESCO World Heritage List as China's 61st entry, filling the 'ceramics' thematic gap.",
+        },
+      },
+      {
+        title: {
+          zh: "台风红霞直逼广东，多地停运停航停课",
+          en: "Typhoon Hongxia Approaches Guangdong, Transport and Schools Suspended",
+        },
+        description: {
+          zh: "台风红霞加强为台风级直逼粤闽沿海，国家防总启动四级应急响应，广东福建多地发布停运、停航、停课措施，245宗大中型水库预泄腾库。",
+          en: "Typhoon Hongxia intensifies approaching Guangdong-Fujian coast. National flood control activates Level 4 response. 245 reservoirs pre-discharged.",
+        },
+      },
+      {
+        title: {
+          zh: "詹姆斯降薪4862万美元加盟76人",
+          en: "LeBron James Takes 90% Pay Cut to Join 76ers",
+        },
+        description: {
+          zh: "詹姆斯与76人签下两年800万美元合同，从湖人时期5262万年薪降至400万，降幅达4862万美元，引发热议。",
+          en: "LeBron James signs 2-year, $8M deal with Philadelphia 76ers, down from $52.6M with Lakers — a 90% pay cut that shocks the NBA world.",
+        },
+      },
+      {
+        title: {
+          zh: "王楚钦爆冷不敌张煜东",
+          en: "Wang Chuqin Upset in Table Tennis League",
+        },
+        description: {
+          zh: "乒超联赛焦点战，奥运冠军王楚钦代表山东魏桥出战，苦战3局后1-2不敌四川丰谷队前国手张煜东。",
+          en: "Olympic champion Wang Chuqin loses 1-2 to former national team player Zhang Yudong in a closely contested China Table Tennis Super League match.",
+        },
+      },
+      {
+        title: {
+          zh: "男生中考699分偷改志愿读中职学编程",
+          en: "699-Score Student Secretly Changes to Vocational School for Programming",
+        },
+        description: {
+          zh: "广州15岁考生林崇远中考699分，在父亲不知情下将普高志愿改为职业学校软件专业。他热爱编程，认为AI只是辅助，扎实技术仍有竞争力。",
+          en: "Guangzhou teen Lin Chongyuan, scoring 699 on exams, secretly changes his application to a vocational school for software development, driven by passion for programming.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-25",
+    date: "2026-07-25",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-25",
+      en: "🤖 AI Daily · Jul 25, 2026",
+    },
+    summary: {
+      zh: "Anthropic发布Claude Opus 5智能接近Fable 5价格减半；蚂蚁百灵Ling-3.0-flash原生混合推理124B参数仅5.1B激活；Black Forest Labs发布FLUX 3多模态模型支持20秒视频与原生音频；Midjourney V8.2专注美学提升；Runway Agent推出自然语言工作流；Claude Code v2.1.219支持Opus 5与1M上下文；英伟达微软Meta联合警告勿过度监管开放权重模型；Kimi K3网络安全测试大幅落后美国前沿模型；Anthropic发布Drone-Bench评估AI操控无人机；Apple提出LEAD破解长程推理瓶颈。",
+      en: "Anthropic launches Claude Opus 5: near-Fable intelligence at half price; Ant Group's Ling-3.0-flash: 124B params, only 5.1B activated for hybrid reasoning; Black Forest Labs releases FLUX 3 multimodal model supporting 20-sec video with native audio; Midjourney V8.2 focuses on aesthetic quality; Runway Agent introduces natural language workflow builder; Claude Code v2.1.219 adds Opus 5 with 1M context; NVIDIA, Microsoft, Meta jointly warn against over-regulating open-weight AI models; Kimi K3 trails US frontier models on cyber exploit tests; Anthropic launches Drone-Bench for AI drone control evaluation; Apple proposes LEAD to solve long-horizon reasoning bottlenecks.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Anthropic发布Claude Opus 5，智能接近Fable价格减半",
+          en: "Anthropic Launches Claude Opus 5: Near-Fable Intelligence at Half Price",
+        },
+        description: {
+          zh: "Claude Opus 5智能水平接近Fable 5但价格减半，Frontier-Bench性能超Opus 4.8两倍以上，ARC-AGI 3得分是次优模型三倍，成为Claude Max默认模型。",
+          en: "Claude Opus 5 offers near-Fable 5 intelligence at half the price. Doubles Opus 4.8 on Frontier-Bench, triples runner-up on ARC-AGI 3. Default model for Claude Max.",
+        },
+      },
+      {
+        title: {
+          zh: "蚂蚁百灵Ling-3.0-flash：124B参数仅5.1B激活",
+          en: "Ant Ling-3.0-flash: 124B Params, Only 5.1B Activated",
+        },
+        description: {
+          zh: "蚂蚁百灵发布Ling-3.0-flash原生混合推理模型，124B总参数仅5.1B激活，对标超越上一代旗舰Ring-2.6-1T，采用线性注意力与1/64稀疏MoE架构。",
+          en: "Ant Group's Ling-3.0-flash hybrid reasoning model uses 124B total params with only 5.1B activated, surpassing predecessor Ring-2.6-1T with linear attention and 1/64 sparse MoE.",
+        },
+      },
+      {
+        title: {
+          zh: "Black Forest Labs发布FLUX 3，支持20秒视频与原生音频",
+          en: "Black Forest Labs Releases FLUX 3: 20-Second Video with Native Audio",
+        },
+        description: {
+          zh: "FLUX 3多模态基础模型联合训练图像、视频和音频，单次生成最长20秒视频并附带原生音频，已与机器人公司mimic合作在奥迪生产线测试。",
+          en: "FLUX 3 jointly trains image, video, and audio, generating up to 20-second videos with native audio in one pass. Partners with mimic for Audi production line testing.",
+        },
+      },
+      {
+        title: {
+          zh: "Midjourney V8.2发布：专注美学提升",
+          en: "Midjourney V8.2: Aesthetic Quality Focus",
+        },
+        description: {
+          zh: "Midjourney推出V8.2图像模型，重点提升美学质量与个性化表现，低质量图像频率显著降低，个性化功能更精准理解用户审美偏好。",
+          en: "Midjourney V8.2 enhances aesthetic quality and personalization, significantly reducing low-quality outputs with better understanding of user style preferences.",
+        },
+      },
+      {
+        title: {
+          zh: "Runway Agent推出自然语言工作流功能",
+          en: "Runway Agent Launches Natural Language Workflow Builder",
+        },
+        description: {
+          zh: "Runway Agent引入自然语言构建、运行或编辑节点工作流功能，可大规模解锁高质量视频输出。",
+          en: "Runway Agent now supports building, running, and editing node-based workflows via natural language, unlocking high-quality video output at scale.",
+        },
+      },
+      {
+        title: {
+          zh: "英伟达微软Meta联合警告：勿过度监管开放权重模型",
+          en: "NVIDIA, Microsoft, Meta Warn Against Over-Regulating Open-Weight Models",
+        },
+        description: {
+          zh: "三家公司签署公开信警告过度监管将削弱美国AI竞争力，强调开放权重模型促进创新降低门槛。OpenAI和Anthropic未签署。",
+          en: "NVIDIA, Microsoft, and Meta sign open letter warning over-regulation of open-weight models would hurt US AI competitiveness. OpenAI and Anthropic did not sign.",
+        },
+      },
+      {
+        title: {
+          zh: "Kimi K3网络安全测试大幅落后美国前沿模型",
+          en: "Kimi K3 Trails US Frontier Models on Cyber Security Tests",
+        },
+        description: {
+          zh: "英美联合评估显示，Kimi K3在ExploitBench上得分32.2%，远低于美国领先模型的76.2%，但优于智谱GLM-5.2的24.4%，知识蒸馏或为原因。",
+          en: "UK-US joint evaluation: Kimi K3 scores 32.2% on ExploitBench vs 76.2% for US frontier models, but ahead of GLM-5.2 at 24.4%. Knowledge distillation may explain gap.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic发布Drone-Bench：评估AI自主操控无人机",
+          en: "Anthropic Launches Drone-Bench for AI Drone Control Evaluation",
+        },
+        description: {
+          zh: "Anthropic与Andon Labs推出Drone-Bench，测试AI模型自主操控四旋翼无人机在室内定位追踪人员的能力，分解为3D重建、导航、目标检测等子任务。",
+          en: "Anthropic and Andon Labs introduce Drone-Bench, testing AI models' ability to autonomously pilot quadcopter drones for indoor person定位 and tracking.",
+        },
+      },
+      {
+        title: {
+          zh: "Apple提出LEAD方法破解长程推理瓶颈",
+          en: "Apple Proposes LEAD to Solve Long-Horizon Reasoning Bottlenecks",
+        },
+        description: {
+          zh: "Apple研究发现LLM在长程执行中存在「不可恢复瓶颈」，提出LEAD方法通过短程未来验证与聚合打破少数困难步骤的持续错误累积。",
+          en: "Apple research identifies 'no-recovery bottlenecks' in LLM long-horizon tasks. LEAD method breaks error accumulation via short-horizon future verification and aggregation.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 5代模型上下文工程新规则：系统提示精简超80%",
+          en: "Claude 5th Gen Context Engineering: System Prompts Reduced by 80%+",
+        },
+        description: {
+          zh: "Anthropic为Opus 5和Fable 5等新模型删除了Claude Code超过80%的系统提示词，编码评测无显著损失，重新定义上下文工程规则。",
+          en: "Anthropic removes 80%+ of Claude Code system prompts for Opus 5 and Fable 5 without significant coding benchmark degradation, redefining context engineering.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-24-hot",
     date: "2026-07-24",
     title: {
