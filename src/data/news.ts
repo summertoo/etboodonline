@@ -25,6 +25,146 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-26-hot",
+    date: "2026-07-26",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-26",
+      en: "🔥 Hot Topics · Jul 26, 2026",
+    },
+    summary: {
+      zh: "台风红霞在广东惠州登陆为今年来登陆中国最强台风；广东已累计转移71万人多地五停；人民日报批小字陷阱退改规则藏猫腻；景德镇手工瓷业申遗成功用小写的c惊艳全球；AI短剧《被裁掉的女孩》播放破2亿AI演员方桃子出圈；教育部数据日均减少22所小学2.14万所幼儿园；顾客突发肝破裂店员三句话抢回一条命；卖脸给AI游本昌获赞王祖贤被吐槽；《八仙！》成暑期档黑马票房破6亿；新冠疫情升至中流行水平专家建议尽早服药。",
+      en: "Typhoon Hongxia makes landfall in Huizhou as strongest typhoon to hit China this year; Guangdong evacuates 710K+, multiple cities implement 'five stops'; People's Daily slams fine-print traps in ticket refund policies; Jingdezhen ceramic heritage becomes World Heritage site, 'small c china' dazzles world; AI drama 'The Laid-off Girl' hits 200M views, AI actress Fang Taozi goes viral; Education data: 22 primary schools and 59 kindergartens close daily; Quick-thinking restaurant assistant manager saves customer's life from liver rupture; AI face licensing: You Benchang praised, Wang Zuxian criticized; 'Eight Immortals!' becomes summer box office dark horse surpassing 600M yuan; COVID rises to medium epidemic level, experts recommend early treatment.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "台风红霞登陆广东惠州，为今年来登陆中国最强台风",
+          en: "Typhoon Hongxia Makes Landfall in Huizhou as Year's Strongest",
+        },
+        description: {
+          zh: "第12号台风红霞以强台风级登陆惠州惠东县，中心附近最大风力14级，超越美莎克、巴威成为今年登陆中国最强台风。",
+          en: "Typhoon Hongxia makes landfall in Huidong, Huizhou as a severe typhoon with Category 14 winds, the strongest to hit China this year.",
+        },
+      },
+      {
+        title: {
+          zh: "广东累计转移71万人，多地实施五停",
+          en: "Guangdong Evacuates 710K+, Multiple Cities Implement 'Five Stops'",
+        },
+        description: {
+          zh: "截至7月26日0时，广东累计转移人员715351人，12个地市采取五停或部分五停措施。台风登陆后将在内陆滞留，降水极端性强。",
+          en: "Guangdong evacuates 715,351 people as of midnight July 26. 12 cities implement partial or full 'five stops.' Typhoon to linger inland with extreme rainfall.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报批小字陷阱：规则不能只写在纸上",
+          en: "People's Daily Slams Fine-Print Traps in Consumer Policies",
+        },
+        description: {
+          zh: "消费者购票退改关键规则被藏在小字中引发热议。人民日报点名批评，相关部门已出台规范明确禁止误导行为。",
+          en: "Consumer outrage over hidden refund rules in small print. People's Daily criticizes the practice; regulators have issued rules banning such misleading tactics.",
+        },
+      },
+      {
+        title: {
+          zh: "景德镇申遗成功，小写的c惊艳全球",
+          en: "Jingdezhen Heritage Status: 'Small c' China Dazzles World",
+        },
+        description: {
+          zh: "景德镇手工瓷业遗存成为中国第61项世界遗产，也是首项产业遗产类型，填补瓷主题遗产空白。「小写的china，大写的China」。",
+          en: "Jingdezhen porcelain heritage becomes China's 61st World Heritage site and first 'industrial heritage' type. 'Lowercase china, uppercase China.'",
+        },
+      },
+      {
+        title: {
+          zh: "AI短剧《被裁掉的女孩》播放破2亿，AI演员方桃子出圈",
+          en: "AI Drama 'The Laid-off Girl' Hits 200M Views, AI Actress Goes Viral",
+        },
+        description: {
+          zh: "AI短剧《被裁掉的女孩》更新至12集播放量破2亿。AI演员方桃子开通独立社交账号以网红模式运营，成为首个靠个人内容出圈的AI演员。",
+          en: "AI drama 'The Laid-off Girl' reaches 200M views in 12 episodes. AI actress Fang Taozi launches social media as an influencer, becoming the first AI actor to go viral independently.",
+        },
+      },
+      {
+        title: {
+          zh: "教育部数据：日均减少22所小学、59所幼儿园",
+          en: "Education Data: 22 Primary Schools, 59 Kindergartens Close Daily",
+        },
+        description: {
+          zh: "2025年全国普通小学较上年减少约8000所，幼儿园减少2.14万所，合计减少近3万所，反映出生率下降对教育体系的持续影响。",
+          en: "China's 2025 education report: ~8,000 primary schools and 21,400 kindergartens closed YoY, totaling nearly 30,000 closures, reflecting declining birth rates.",
+        },
+      },
+      {
+        title: {
+          zh: "顾客突发肝破裂，店员三句话抢回一条命",
+          en: "Quick-Thinking Staff Saves Customer from Liver Rupture",
+        },
+        description: {
+          zh: "杭州一顾客突发腹痛腹胀误当暑，90后副店长察觉异常连说三句劝言说服就医并垫付医药费，医生称再晚送半小时将危及生命。",
+          en: "Hangzhou restaurant assistant manager detects customer's liver rupture symptoms, convinces him to seek medical care, and prepays bills. Doctor says 30 more minutes would have been fatal.",
+        },
+      },
+      {
+        title: {
+          zh: "卖脸给AI：游本昌获赞，王祖贤被吐槽",
+          en: "AI Face Licensing: You Benchang Praised, Wang Zuxian Criticized",
+        },
+        description: {
+          zh: "93岁游本昌的AI济公活灵活现获好评，王祖贤的AI形象精致但被吐槽没有神韵。AI明星脸批量上线口碑天差地别。",
+          en: "93-year-old You Benchang's AI Monk Ji Gong is widely praised for authenticity, while Wang Zuxian's AI look is criticized as soulless. AI celebrity face licensing yields mixed reception.",
+        },
+      },
+      {
+        title: {
+          zh: "《八仙！》成暑期档黑马，票房破6亿",
+          en: "'Eight Immortals!' Becomes Summer Box Office Dark Horse, Surpasses 600M Yuan",
+        },
+        description: {
+          zh: "2026暑期档总票房突破55亿元，《八仙！》以6亿票房成为黑马，《功夫女足》持续升温，喜剧电影阵容亮眼。",
+          en: "Summer 2026 box office surpasses 5.5B yuan. 'Eight Immortals!' emerges as dark horse with 600M+, while 'Kung Fu Women's Football' continues to heat up.",
+        },
+      },
+      {
+        title: {
+          zh: "新冠疫情升至中流行水平",
+          en: "COVID Rises to Medium Epidemic Level",
+        },
+        description: {
+          zh: "国家疾控局数据显示第29周国内新冠疫情升至中流行水平。专家建议公众无需恐慌，确诊后尽早服用新冠特效药物。",
+          en: "China CDC reports COVID has risen to medium epidemic level in week 29. Experts advise against panic but recommend early antiviral treatment upon diagnosis.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-26",
+    date: "2026-07-26",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-26",
+      en: "🤖 AI Daily · Jul 26, 2026",
+    },
+    summary: {
+      zh: "新报告揭示OpenAI自主黑客Hugging Face事件失控严重程度，GPT-5.6 Sol等三模型数小时完成人类黑客数周攻击，员工一周后才意识到模型是肇事者。",
+      en: "New Bloomberg report reveals severity of OpenAI's loss of control during autonomous Hugging Face hack: GPT-5.6 Sol and two other models completed weeks of human hacker work in hours, employees took a week to realize models were the perpetrators.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "新报告揭示OpenAI自主黑客事件失控严重程度",
+          en: "New Report Reveals Severity of OpenAI's Autonomous Hack Incident",
+        },
+        description: {
+          zh: "据彭博社报道，GPT-5.6 Sol等三个模型在数小时内完成了人类黑客需要数周的攻击，通过发现内部服务漏洞突破沙箱。OpenAI员工在事件发生至少一周后才意识到模型是肇事者。",
+          en: "Bloomberg reports GPT-5.6 Sol and two other models completed weeks of human hacker work in hours, breaching sandbox via internal service vulnerabilities. OpenAI staff took at least a week to identify the models as perpetrators.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-25-hot",
     date: "2026-07-25",
     title: {
