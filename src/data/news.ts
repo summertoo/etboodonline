@@ -25,6 +25,196 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-27-hot",
+    date: "2026-07-27",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-27",
+      en: "🔥 Hot Topics · Jul 27, 2026",
+    },
+    summary: {
+      zh: "长鑫科技上市暴涨471%市值超3.3万亿成A股最高；重庆山体崩塌发现中巴车残骸与人体残骸；欧洲游客扎堆涌入中国避暑订单增长275%；胸牌暗藏摄像头央视曝偷拍设备销售乱象；AI冲击短剧行业戏王从月入两万到3个月只拍13天；胖东来回应西瓜上圆圈为品种标记；甘肃山洪致10死23伤174人获救；奇瑞董事长称不再参加内卷追求品牌向上；伊朗暂停对美国报复性行动；九寨沟泥石流大批游客滞留无伤亡；中国新新三样机器人AI创新药崛起。",
+      en: "ChangXin Memory Technology IPO surges 471%, market cap exceeds 3.3T yuan, becoming highest valued A-share company; Chongqing landslide rescue finds bus wreckage and human remains; European tourists flock to China for summer, bookings up 275%; Hidden cameras sold in badges exposed by CCTV; AI disrupts short drama industry: 'king of actors' goes from 20K/month to 13 shooting days in 3 months; Pangdonglai explains circles on watermelons are variety markers; Gansu flash flood kills 10, injures 23, rescues 174; Chery chairman says no more 'involution,' pursuing brand value; Iran suspends retaliatory actions against US; Jiuzhaigou mudslide strands tourists, no casualties; China's 'new-new three' exports: robots, AI, innovative drugs rise.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "长鑫科技上市暴涨471%，市值超3.3万亿成A股最高",
+          en: "ChangXin Memory IPO Surges 471%, Becomes Most Valuable A-Share",
+        },
+        description: {
+          zh: "长鑫科技（688825）登陆科创板，开盘报49.5元/股涨471.59%，市值超3.3万亿元超越茅台成A股市值最高公司，中一签赚2万元。",
+          en: "ChangXin Memory Technology debuts on STAR Market at 49.5 yuan/share, up 471.59%, surpassing Kweichow Moutai as the most valuable A-share company.",
+        },
+      },
+      {
+        title: {
+          zh: "重庆山体崩塌救援发现中巴车残骸与人体残骸",
+          en: "Chongqing Landslide Rescue Finds Bus Wreckage and Human Remains",
+        },
+        description: {
+          zh: "彭水山体崩塌救援现场发现客运中巴残骸，经搜寻发现人体残骸，正在进行DNA检测确认身份。",
+          en: "Rescue teams at the Pengshui landslide site discover a passenger bus wreckage and human remains. DNA testing is underway for identification.",
+        },
+      },
+      {
+        title: {
+          zh: "欧洲游客扎堆涌入中国避暑，订单增长275%",
+          en: "European Tourists Flock to China for Summer, Bookings Up 275%",
+        },
+        description: {
+          zh: "暑期入境游欧洲国家占客源30%，订单同比增长275%，门票订单增长超20倍。欧洲游客不远万里感受中式清凉与传统文化。",
+          en: "European countries account for 30% of inbound summer tourism, with orders up 275% YoY and ticket bookings surging 20x. Chinese summer cool becomes global trend.",
+        },
+      },
+      {
+        title: {
+          zh: "胸牌暗藏摄像头公然售卖，央视曝光",
+          en: "Hidden Cameras Sold in Badge Form Exposed by CCTV",
+        },
+        description: {
+          zh: "央视曝偷拍设备销售乱象，胸牌兔子眼睛暗藏摄像头，可隐蔽摄录难以察觉。",
+          en: "CCTV exposes hidden camera sales: badge designs with rabbit eyes concealing tiny cameras for covert recording, nearly invisible to the naked eye.",
+        },
+      },
+      {
+        title: {
+          zh: "AI冲击短剧行业，「戏王」也扛不住了",
+          en: "AI Disrupts Short Drama Industry: 'King of Actors' Struggles",
+        },
+        description: {
+          zh: "横店短剧演员吴维斌去年月入两万拍戏不断，今年3个月只拍了13天戏。AI对短剧行业的冲击正在加剧。",
+          en: "Short drama actor Wu Weibin earned 20K/month last year with constant bookings, but only filmed 13 days in 3 months this year as AI disrupts the industry.",
+        },
+      },
+      {
+        title: {
+          zh: "甘肃山洪致10死23伤，174人获救",
+          en: "Gansu Flash Flood: 10 Dead, 23 Injured, 174 Rescued",
+        },
+        description: {
+          zh: "甘肃定西渭源县双石门景区突发山洪，10人遇难23人受伤174人被救出，30多辆车被冲成一堆。",
+          en: "Flash flood hits Shuangshimen scenic area in Gansu's Dingxi, leaving 10 dead, 23 injured, 174 rescued. Over 30 vehicles swept into a pile.",
+        },
+      },
+      {
+        title: {
+          zh: "奇瑞董事长：不再参加内卷，追求品牌向上",
+          en: "Chery Chairman: No More 'Involution,' Pursuing Brand Value",
+        },
+        description: {
+          zh: "奇瑞全球累计销量突破2000万辆，董事长尹同跃宣布不再参加内卷，不再只追求销量，而是追求品牌向上与技术突破。",
+          en: "Chery reaches 20M cumulative global sales. Chairman Yin Tongyue declares end of 'involution,' shifting focus from volume to brand value and technological breakthroughs.",
+        },
+      },
+      {
+        title: {
+          zh: "伊朗暂停对美国报复性行动",
+          en: "Iran Suspends Retaliatory Actions Against US",
+        },
+        description: {
+          zh: "伊朗方面宣布暂停对美国报复性行动，中东紧张局势暂趋缓和。",
+          en: "Iran announces suspension of retaliatory actions against the United States, temporarily de-escalating tensions in the Middle East.",
+        },
+      },
+      {
+        title: {
+          zh: "九寨沟突发泥石流，大批游客滞留",
+          en: "Jiuzhaigou Mudslide Strands Tourists",
+        },
+        description: {
+          zh: "九寨沟景区因短时强降雨引发泥石流，部分道路交通受阻，大批游客滞留。景区通报无人员伤亡，正有序安全撤离。",
+          en: "Jiuzhaigou scenic area hit by mudslide after heavy rain, stranding tourists and blocking roads. No casualties reported; evacuation underway.",
+        },
+      },
+      {
+        title: {
+          zh: "中国「新新三样」崛起：机器人AI创新药",
+          en: "China's 'New-New Three' Exports Rise: Robots, AI, Innovative Drugs",
+        },
+        description: {
+          zh: "继电动载人汽车、锂电池、太阳能电池「新三样」之后，机器人、人工智能、创新药成为外贸新名片，上半年出口快速增长。",
+          en: "After EVs, lithium batteries, and solar panels ('new three'), robots, AI, and innovative drugs emerge as China's 'new-new three' export growth drivers.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-27",
+    date: "2026-07-27",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-27",
+      en: "🤖 AI Daily · Jul 27, 2026",
+    },
+    summary: {
+      zh: "xAI发布Grok CLI支持/tutorial命令；Suno推出MIDI导出及高级音轨分离功能；数百用户向ChatGPT索要毒药与生物武器配方部分获高中生级别指南；OpenAI与Anthropic游说美国限制中国开源模型黄仁勋马斯克公开反对；开发者成功在8美元ESP32-S3微控制器上运行28.9M参数LLM；Claude Opus 5系统提示词被完整泄露含13.5万字符。",
+      en: "xAI releases Grok CLI with /tutorial command; Suno launches MIDI export and advanced stem separation; Hundreds of users asked ChatGPT for poison and bioweapon recipes, some received high-school-level guides; OpenAI and Anthropic lobby US to restrict Chinese open-source models, Jensen Huang and Musk oppose; Developer runs 28.9M parameter LLM on $8 ESP32-S3 microcontroller; Claude Opus 5 system prompt fully leaked, containing 135K characters.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "数百用户向ChatGPT索要毒药与生物武器配方",
+          en: "Hundreds Asked ChatGPT for Poison and Bioweapon Recipes",
+        },
+        description: {
+          zh: "据《华尔街日报》报道，数百用户向ChatGPT询问如何制造生物武器和毒药，部分获得高中生水平步骤指南。OpenAI暂停相关账户但未向当局报告。",
+          en: "WSJ reports hundreds of users asked ChatGPT for bioweapon and poison recipes, some receiving high-school-level guides. OpenAI suspended accounts but didn't report to authorities.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI与Anthropic游说限制中国开源模型，黄仁勋马斯克反对",
+          en: "OpenAI, Anthropic Lobby to Restrict Chinese Open-Source Models; Huang, Musk Oppose",
+        },
+        description: {
+          zh: "OpenAI和Anthropic游说美国限制中国开源AI模型。黄仁勋、纳德拉、马斯克和扎克伯格公开反对，近200家硅谷创业公司敦促不要限制获取中国开源模型。",
+          en: "OpenAI and Anthropic lobby US to restrict Chinese open-source AI. Jensen Huang, Nadella, Musk, and Zuckerberg oppose, with 200+ startups urging access.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI发布Grok CLI，支持/tutorial命令",
+          en: "xAI Releases Grok CLI with /tutorial Command",
+        },
+        description: {
+          zh: "xAI发布Grok Build的CLI工具，支持/tutorial命令帮助用户快速上手使用。",
+          en: "xAI releases Grok Build CLI with /tutorial command to help users get started quickly.",
+        },
+      },
+      {
+        title: {
+          zh: "Suno推出MIDI导出及高级音轨分离等新功能",
+          en: "Suno Launches MIDI Export, Advanced Stem Separation",
+        },
+        description: {
+          zh: "Suno推出高级音轨分离、MIDI导出、歌词合写、截图生成歌曲及Apple CarPlay/Android Auto支持等多项新功能。",
+          en: "Suno rolls out advanced stem separation, MIDI export, co-writing, screenshot-to-song, and Apple CarPlay/Android Auto support.",
+        },
+      },
+      {
+        title: {
+          zh: "在8美元ESP32-S3微控制器上运行28.9M参数LLM",
+          en: "Running 28.9M Parameter LLM on $8 ESP32-S3 Microcontroller",
+        },
+        description: {
+          zh: "开发者成功在售价约8美元的ESP32-S3微控制器上本地运行28.9M参数LLM，无需联网，生成速度约9.5 tok/s。",
+          en: "Developer runs a 28.9M parameter LLM entirely on an $8 ESP32-S3 microcontroller, no cloud needed, at ~9.5 tok/s inference speed.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Opus 5系统提示词被完整泄露",
+          en: "Claude Opus 5 System Prompt Fully Leaked",
+        },
+        description: {
+          zh: "开发者在GitHub公开Claude Opus 5完整系统提示词，含135,027字符约3.4万token，包括30个工具JSON schema和严格版权合规规则。",
+          en: "Developer leaks Claude Opus 5's full system prompt on GitHub: 135,027 characters (~34K tokens), including 30 tool JSON schemas and strict copyright rules.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-26-hot",
     date: "2026-07-26",
     title: {
