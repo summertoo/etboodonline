@@ -25,6 +25,196 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-28-hot",
+    date: "2026-07-28",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-28",
+      en: "🔥 Hot Topics · Jul 28, 2026",
+    },
+    summary: {
+      zh: "网红景区山洪10人遇难三次预警为何失效；携程被罚51.79亿后CEO发内部全员信；中国入境游上半年外国人2291万免签占78%；泽连斯基称乌克兰与伊朗已处于战争中；韩国股市暴跌超8%触发熔断；美股芯片股血流成河AMD跌5.17%；唐山大地震50周年今年震生50岁了；日方拆解宇树机器人后认输承认短期内难追上中国；哈工大学生团队手搓5cm超薄卫星成功发射；雷军打新长鑫科技浮盈7亿。",
+      en: "10 killed in flash flood at popular scenic spot, three warnings失效; Ctrip CEO issues internal memo after record 5.179B fine; China inbound tourism上半年: 22.9M foreigners, 78% visa-free; Zelenskyy says Ukraine is already at war with Iran; South Korea stock market crashes 8%+, triggering circuit breaker; US chip stocks bleed: AMD down 5.17%; 50th anniversary of Tangshan earthquake, 'quake-born' generation turns 50; Japan admits defeat after dismantling Unitree robot, concedes gap with China; HIT student team launches 5cm ultra-thin satellite; Lei Jun nets 700M yuan paper profit from ChangXin IPO.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "网红景区山洪致10人遇难，三次预警为何失效",
+          en: "10 Killed in Flash Flood at Popular Scenic Spot: Why Did Three Warnings Fail?",
+        },
+        description: {
+          zh: "甘肃渭源县双石门景区山洪致10死23伤。事发前曾有三次预警，但未能阻止灾害发生，公众质疑预警体系有效性。",
+          en: "Gansu flash flood kills 10, injures 23 at Shuangshimen scenic area. Three prior warnings failed to prevent the disaster, raising questions about the alert system.",
+        },
+      },
+      {
+        title: {
+          zh: "携程被罚51.79亿后CEO发全员信",
+          en: "Ctrip CEO Issues Internal Memo After Record 5.179B Fine",
+        },
+        description: {
+          zh: "市场监管总局对携程垄断处罚后，CEO孙洁发布内部信称业务运转平稳，已拟定完整整改方案，明确员工对外沟通准则。",
+          en: "After SAMR's record monopoly fine, Ctrip CEO Sun Jie assures staff of stable operations, complete remediation plan, and guidelines for external communication.",
+        },
+      },
+      {
+        title: {
+          zh: "中国入境游圈粉世界，上半年外国人2291万",
+          en: "China Inbound Tourism Booms: 22.9M Foreign Visitors in H1",
+        },
+        description: {
+          zh: "上半年入境外国人2291.4万人次，免签入境1781.5万，同比增20.4%和30.6%。China Travel从打卡到体验，政策与文化魅力叠加。",
+          en: "H1 2026 sees 22.9M foreign visitors to China, 17.8M visa-free, up 20.4% and 30.6% YoY. 'China Travel' shifts from check-in to deep experience.",
+        },
+      },
+      {
+        title: {
+          zh: "泽连斯基：乌克兰与伊朗已处于战争中",
+          en: "Zelenskyy: Ukraine Is Already at War with Iran",
+        },
+        description: {
+          zh: "乌军袭击伊朗商船后紧张升级，泽连斯基表示伊朗早已通过向俄提供军事资产袭击乌克兰，双方关系急剧恶化。",
+          en: "After Ukraine strikes Iranian merchant vessel, Zelenskyy declares Iran has been attacking Ukraine through military supplies to Russia, escalating bilateral tensions.",
+        },
+      },
+      {
+        title: {
+          zh: "韩国股市暴跌超8%触发熔断",
+          en: "South Korea Stock Market Crashes 8%+, Triggers Circuit Breaker",
+        },
+        description: {
+          zh: "7月28日韩国KOSPI指数盘中大跌超8%触发熔断机制，为今年以来第八次熔断。",
+          en: "South Korea's KOSPI index plunges over 8% intraday, triggering a circuit breaker for the eighth time this year.",
+        },
+      },
+      {
+        title: {
+          zh: "美股芯片股血流成河",
+          en: "US Chip Stocks Bleed Across the Board",
+        },
+        description: {
+          zh: "半导体ETF跌2.25%，闪迪跌11%、SK海力士跌7.5%、AMD跌5.2%、美光跌2.3%，芯片板块延续跌势。",
+          en: "Semiconductor ETF drops 2.25%. SanDisk -11%, SK Hynix -7.5%, AMD -5.2%, Micron -2.3% as chip stocks continue freefall.",
+        },
+      },
+      {
+        title: {
+          zh: "唐山大地震50周年，今年「震生」50岁了",
+          en: "Tangshan Earthquake 50th Anniversary: 'Quake-Born' Generation Turns 50",
+        },
+        description: {
+          zh: "1976年7月28日唐山7.8级地震致24.2万人遇难。废墟上诞生的婴儿被赋予「震生」之名，今年他们50岁了。",
+          en: "The 1976 Tangshan earthquake (magnitude 7.8) killed 242,769 people. Babies born amid the ruins, named 'Zhensheng' (quake-born), turn 50 this year.",
+        },
+      },
+      {
+        title: {
+          zh: "日方拆解宇树机器人后认输：短期内难追上中国",
+          en: "Japan Admits Defeat After Dismantling Unitree Robot",
+        },
+        description: {
+          zh: "日经xTECH拆解中国宇树科技G1人形机器人后感叹技术水平之高，结论称日本在短时间内缩小与中国的差距恐不现实。",
+          en: "Nikkei xTECH dismantles Unitree's G1 humanoid robot, marvels at its technology, and concludes Japan cannot realistically close the gap with China anytime soon.",
+        },
+      },
+      {
+        title: {
+          zh: "哈工大学生团队手搓5cm超薄卫星成功发射",
+          en: "HIT Student Team Launches 5cm Ultra-Thin Satellite",
+        },
+        description: {
+          zh: "哈工大紫丁香团队平均年龄22岁，成功发射主体厚度不足5厘米的超扁平盘式卫星「紫丁香三号」，创青年航天攻关新纪录。",
+          en: "HIT's Lilac student team (avg. age 22) successfully launches 'Lilac-3,' an ultra-flat satellite under 5cm thick, setting a new youth aerospace record.",
+        },
+      },
+      {
+        title: {
+          zh: "雷军打新长鑫科技浮盈7亿",
+          en: "Lei Jun Nets 700M Yuan Paper Profit from ChangXin IPO",
+        },
+        description: {
+          zh: "长鑫科技上市首日涨466%，小米全资子公司获配1824万股，雷军间接持有对应浮盈7.17亿元。",
+          en: "ChangXin Memory surges 466% on debut. Xiaomi's subsidiary allocated 18.24M shares; Lei Jun's indirect stake yields 717M yuan paper profit.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-28",
+    date: "2026-07-28",
+    title: {
+      zh: "🤖 AI 日报 · 2026-07-28",
+      en: "🤖 AI Daily · Jul 28, 2026",
+    },
+    summary: {
+      zh: "Kimi K3 2.8T MoE开源含技术报告与高性能内核；Google AI Overviews搜索结果出现率升至43%；NVIDIA微软等联合成立Open Secure AI Alliance推动AI安全开源；Anthropic澄清立场从未主张全面禁止开源权重模型主张芯片出口管制与安全测试；OpenAI数据显示43.5%员工用ChatGPT做其他岗位工作；GitHub Copilot发布Harness工作流覆盖完整开发流程。",
+      en: "Kimi K3 2.8T MoE open-sourced with technical report and high-performance kernels; Google AI Overviews now appears in 43% of search results; NVIDIA, Microsoft, others launch Open Secure AI Alliance for open-source AI safety; Anthropic clarifies it never advocated banning open-weight models, supports chip export controls and safety testing; OpenAI data shows 43.5% of workers use ChatGPT for other job functions; GitHub Copilot launches 'Harness' workflow covering the full development lifecycle.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Kimi K3 2.8T MoE开源，含技术报告与高性能内核",
+          en: "Kimi K3 2.8T MoE Open-Sourced with Technical Report",
+        },
+        description: {
+          zh: "月之暗面开源Kimi K3，2.8T参数MoE模型，原生视觉理解与1M上下文。新架构每单位计算提升2.5倍智能，开源高性能注意力内核、MoE通信库及智能体基础设施。",
+          en: "Moonshot AI open-sources Kimi K3: 2.8T MoE with native vision and 1M context. New architecture delivers 2.5x intelligence per compute. Includes attention kernels, MoE comms, and agent infra.",
+        },
+      },
+      {
+        title: {
+          zh: "Google AI Overviews搜索结果出现率升至43%",
+          en: "Google AI Overviews Now Appears in 43% of Search Results",
+        },
+        description: {
+          zh: "Google AI Overviews一年内出现率从15%升至43%，AI Mode月访问量从1.26亿增至2.79亿，用户搜索从短关键词转向自然对话式查询。",
+          en: "Google AI Overviews prevalence jumps from 15% to 43% in a year. AI Mode monthly visits grow from 126M to 279M as queries shift to conversational length.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA微软等成立Open Secure AI Alliance",
+          en: "NVIDIA, Microsoft Launch Open Secure AI Alliance",
+        },
+        description: {
+          zh: "NVIDIA、微软、Hugging Face、IBM等数十家机构联合成立Open Secure AI Alliance，通过开源模型、工具和框架构建可审查的AI安全防御体系。",
+          en: "NVIDIA, Microsoft, Hugging Face, IBM and dozens more launch Open Secure AI Alliance, building auditable AI security defenses through open-source models and tools.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic澄清：不禁止开源权重，主张芯片出口管制",
+          en: "Anthropic Clarifies: Doesn't Ban Open-Weight, Supports Chip Export Controls",
+        },
+        description: {
+          zh: "Anthropic CEO澄清从未主张全面禁止开源权重模型，提出三项措施：对华芯片出口管制、打击知识蒸馏、对强大模型强制安全测试。",
+          en: "Anthropic CEO clarifies it never advocated banning open-weight models. Proposes: chip export controls on China, crack down on distillation, mandatory safety testing for powerful models.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI：43.5%员工用ChatGPT做其他岗位的工作",
+          en: "OpenAI: 43.5% of Workers Use ChatGPT for Other Job Functions",
+        },
+        description: {
+          zh: "OpenAI分析80万+条工作相关ChatGPT消息发现，43.5%的岗位查询涉及另一职业，营销与工程交叉最多，员工用AI做合同审查、数据分析等非本职任务。",
+          en: "Analyzing 800K+ work-related ChatGPT messages, OpenAI finds 43.5% of job-specific queries involve another profession. Marketing and engineering crossover most common.",
+        },
+      },
+      {
+        title: {
+          zh: "GitHub Copilot发布Harness工作流：单一工具完成完整开发",
+          en: "GitHub Copilot Launches 'Harness' Workflow for Full-Stack Development",
+        },
+        description: {
+          zh: "GitHub Copilot推出Harness工作流，让开发者用单一AI工具完成从原型设计、规划、实现到代码审查的完整软件开发流程，减少工具切换损耗。",
+          en: "GitHub Copilot's 'Harness' workflow enables developers to complete the entire software lifecycle—from prototyping to code review—with a single AI tool.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-27-hot",
     date: "2026-07-27",
     title: {
