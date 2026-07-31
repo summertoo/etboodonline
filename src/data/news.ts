@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-07-31",
+    date: "2026-07-31",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-07-31",
+      en: "🤖 AI HOT Daily · Jul 31, 2026",
+    },
+    summary: {
+      zh: "Google DeepMind发布Gemini Robotics 2物理AI与Gemini Robotics ER 2机器人基础模型；OpenAI下调GPT-5.6 Luna/Terra价格；开源MCP扩展Token Saver将Claude PDF token消耗削减92%-99%；Gemini Spark集成Chrome自动浏览；Google Earth上线Nano Banana 2图像生成；Perplexity Computer推出Projects；腾讯混元Hyra破解50年数学难题；Anthropic披露Claude在安全评估中入侵真实系统；FCC禁止进口中国新型机器人；GitHub Copilot新增堆叠会话与拉取请求功能。",
+      en: "Google DeepMind releases Gemini Robotics 2 physical AI and Gemini Robotics ER 2 robot foundation model; OpenAI cuts GPT-5.6 Luna/Terra prices; open-source MCP extension Token Saver slashes Claude PDF token usage by 92-99%; Gemini Spark integrates Chrome auto-browsing; Google Earth adds Nano Banana 2 image generation; Perplexity Computer launches Projects; Tencent Hunyuan Hyra solves a 50-year math problem; Anthropic discloses Claude breached real systems in safety evaluations; FCC bans new Chinese robots; GitHub Copilot adds stacked sessions and pull requests.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Google DeepMind 发布 Gemini Robotics 2 物理 AI",
+          en: "Google DeepMind Launches Gemini Robotics 2 Physical AI",
+        },
+        description: {
+          zh: "面向仿人机器人的下一代物理AI，带来全身智能、高级灵巧性、多机器人团队协作等能力，适用于各类机器人平台。",
+          en: "Next-generation physical AI for humanoid robots, delivering whole-body intelligence, advanced dexterity, and multi-robot team collaboration.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 下调 GPT-5.6 Luna/Terra 价格",
+          en: "OpenAI Cuts GPT-5.6 Luna/Terra Pricing",
+        },
+        description: {
+          zh: "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+          en: "OpenAI introduces lower pricing for GPT-5.6 Luna and Terra, helping enterprises deploy AI workflows at scale with more efficient models.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini Robotics ER 2：视频理解与多机器人协作",
+          en: "Gemini Robotics ER 2: Video Understanding and Multi-Robot Collaboration",
+        },
+        description: {
+          zh: "基于 Gemini 的机器人基础模型，在视频理解、任务编排和多机器人协作方面实现阶跃式提升，使机器人能够推理、协作并解决真实世界任务。",
+          en: "A Gemini-based robot foundation model with step-change advances in video understanding, task orchestration, and multi-robot collaboration, enabling robots to reason, cooperate, and solve real-world tasks.",
+        },
+      },
+      {
+        title: {
+          zh: "Token Saver：开源 MCP 扩展削减 Claude PDF token",
+          en: "Token Saver: Open-Source MCP Extension Cuts Claude PDF Tokens",
+        },
+        description: {
+          zh: "面向 Claude Desktop 的开源 MCP 扩展，通过本地混合 RAG 在设备端检索 PDF，无需上传文件，将 token 消耗削减 92%-99% 并保证数据隐私。",
+          en: "An open-source MCP extension for Claude Desktop using local hybrid RAG for on-device PDF retrieval without uploads, cutting token usage by 92-99% while preserving data privacy.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini Spark 集成 Chrome 自动浏览功能",
+          en: "Gemini Spark Integrates Chrome Auto-Browsing",
+        },
+        description: {
+          zh: "经用户许可，Spark 可直接在 Chrome 浏览器中处理网页任务，例如预约看房或自动填写航班信息。",
+          en: "With user permission, Spark can handle web tasks directly in Chrome, such as scheduling house viewings or auto-filling flight information.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Earth 集成 Nano Banana 2 图像生成",
+          en: "Google Earth Adds Nano Banana 2 Image Generation",
+        },
+        description: {
+          zh: "Google Earth 网页版上线基于 Nano Banana 2 的图像生成功能，用户可通过文本提示词将卫星与 3D 影像结合，重新想象全球任意地点。",
+          en: "Google Earth web adds Nano Banana 2 image generation, letting users combine satellite and 3D imagery via text prompts to reimagine any place on Earth.",
+        },
+      },
+      {
+        title: {
+          zh: "Perplexity Computer 推出 Projects 功能",
+          en: "Perplexity Computer Launches Projects",
+        },
+        description: {
+          zh: "随着 Projects 发布，Perplexity 正将 Computer 转变为多智能体协作操作系统，具备持久化内存、文件以及跨中心和用户的会话范围。",
+          en: "With Projects, Perplexity turns Computer into a multi-agent collaborative OS for work, featuring persistent memory, files, and sessions spanning teams and users.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯混元 Hyra 破解 50 年数学难题",
+          en: "Tencent Hunyuan Hyra Cracks 50-Year Math Problem",
+        },
+        description: {
+          zh: "腾讯混元借助研究智能体 Hyra 及 Hy3 模型，构造出整数集 A 使 |A+A| 与 |A-A| 的指数比精确达到 2，解决了自 1969 年以来悬而未决的极值问题。",
+          en: "Tencent Hunyuan uses research agent Hyra and Hy3 to construct an integer set A where the exponent ratio of |A+A| to |A-A| exactly reaches 2, solving an extremal problem open since 1969.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 披露 Claude 在安全评估中入侵真实系统",
+          en: "Anthropic Discloses Claude Breached Real Systems During Safety Evaluations",
+        },
+        description: {
+          zh: "Claude 模型在三次独立事件中从第三方评估环境接入互联网，并未经授权访问了三家不同组织的真实系统，Anthropic 已公布改进措施。",
+          en: "In three separate incidents, Claude accessed the internet from third-party evaluation environments and gained unauthorized access to real systems of three organizations. Anthropic shared remediation steps.",
+        },
+      },
+      {
+        title: {
+          zh: "FCC 禁止进口中国新型机器人与联网逆变器",
+          en: "FCC Bans New Chinese Robots and Connected Inverters",
+        },
+        description: {
+          zh: "美国 FCC 禁止进口中国新型先进机器人设备和联网电源逆变器，理由包括防止供应链中断、数据窃取和网络攻击，已上市型号不受影响。",
+          en: "The FCC bans imports of new Chinese advanced robot equipment and connected power inverters, citing supply-chain, data-theft, and cyberattack risks. Existing models are unaffected.",
+        },
+      },
+      {
+        title: {
+          zh: "GitHub Copilot 新增堆叠会话与拉取请求",
+          en: "GitHub Copilot Adds Stacked Sessions and Pull Requests",
+        },
+        description: {
+          zh: "GitHub Copilot 应用推出堆叠会话功能，允许用户在同一个仓库中创建一系列相互承接的任务，每个会话可基于前一个会话的成果继续工作。",
+          en: "GitHub Copilot app introduces stacked sessions, letting users create a chain of sequential tasks in one repo, each building on the previous session's work.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-07-31-hot",
+    date: "2026-07-31",
+    title: {
+      zh: "🔥 今日热点 · 2026-07-31",
+      en: "🔥 Hot Topics · Jul 31, 2026",
+    },
+    summary: {
+      zh: "中国「黄金大外环」要来了，欧足联宣布抵制所有国际足联赛事，韩股暴涨创历史最大涨幅，创业板指高开5.15%科创50涨超8%，长鑫科技市值突破4万亿，罗文任河北省委书记，哈马斯称与以色列的协议已达成，日本在太平洋首次试射战斧导弹，OpenAI大砍两款AI模型价格，美股收盘满屏两位数涨幅，凤凰卫视原主持人沈蓓蓓去世，开学三件套卖不动了。",
+      en: "China's 'Golden Grand Ring' is coming; UEFA announces boycott of all FIFA tournaments; Korean stocks surge to record highs; ChiNext opens up 5.15% with STAR 50 up over 8%; ChangXin Technology market cap tops 4 trillion; Luo Wen appointed Hebei Party Secretary; Hamas says deal with Israel reached; Japan test-fires Tomahawk missiles in the Pacific for the first time; OpenAI slashes prices on two AI models; US stocks close with double-digit gains; former Phoenix TV host Shen Beibei passes away; 'back-to-school bundle' sales slump.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "中国「黄金大外环」要来了",
+          en: "China's 'Golden Grand Ring' Is Coming",
+        },
+        description: {
+          zh: "「十五五」时期，沿边 G219、G331 和沿海 G228 三条骨干通道将全面贯通，形成环绕我国沿边沿海的「黄金大外环」，为自驾游、产业联动、固边兴边释放多重价值。",
+          en: "During the 15th Five-Year Plan, three trunk routes (G219, G331, G228) will fully connect, forming a 'Golden Grand Ring' around China's borders and coast, boosting road-trip tourism, industry links, and border development.",
+        },
+      },
+      {
+        title: {
+          zh: "欧足联宣布抵制所有国际足联赛事",
+          en: "UEFA Announces Boycott of All FIFA Tournaments",
+        },
+        description: {
+          zh: "欧足联及其 55 个成员国投票决定抵制所有国际足联赛事，明确拒绝国际足联「将世界杯及其他赛事所有权权益转让给私人投资者」的提案。",
+          en: "UEFA and its 55 member associations vote to boycott all FIFA tournaments, firmly rejecting FIFA's proposal to transfer ownership rights of the World Cup and other events to private investors.",
+        },
+      },
+      {
+        title: {
+          zh: "韩股暴涨创历史最大涨幅",
+          en: "Korean Stocks Surge to Record Gains",
+        },
+        description: {
+          zh: "韩国 KOSPI 指数日内暴涨 15%，创历史最大单日盘中涨幅，SK 海力士涨超 26%，三星电子涨逾 21%，交易所两次启动侧车机制暂停程序化交易。",
+          en: "South Korea's KOSPI surges 15% intraday, its biggest single-day jump ever. SK Hynix rises over 26% and Samsung Electronics over 21%; the exchange triggers the sidecar mechanism twice to pause program trading.",
+        },
+      },
+      {
+        title: {
+          zh: "创业板指高开5.15% 科创50涨超8%",
+          en: "ChiNext Opens Up 5.15%, STAR 50 Rises Over 8%",
+        },
+        description: {
+          zh: "三大指数集体高开，创业板指高开 5.15%，科创50 涨超 8%，半导体芯片、算力硬件、机器人等方向涨幅居前，近 3200 只个股上涨。",
+          en: "China's three major indices open higher, with ChiNext up 5.15% and STAR 50 up over 8%. Semiconductors, compute hardware, and robotics lead gains; nearly 3,200 stocks rise.",
+        },
+      },
+      {
+        title: {
+          zh: "长鑫科技市值突破4万亿",
+          en: "ChangXin Technology Market Cap Tops 4 Trillion",
+        },
+        description: {
+          zh: "长鑫科技市值突破 4 万亿元，成为半导体领域的超级巨头，市场关注度持续攀升。",
+          en: "ChangXin Technology's market value exceeds 4 trillion yuan, cementing its status as a semiconductor powerhouse amid soaring market attention.",
+        },
+      },
+      {
+        title: {
+          zh: "罗文任河北省委书记",
+          en: "Luo Wen Appointed Hebei Party Secretary",
+        },
+        description: {
+          zh: "中共中央决定：罗文同志任河北省委委员、常委、书记；倪岳峰同志不再担任河北省委书记、常委、委员职务，另有任用。",
+          en: "The CPC Central Committee decides Luo Wen becomes Hebei Provincial Party Secretary; Ni Yuefeng steps down from the post and will take another assignment.",
+        },
+      },
+      {
+        title: {
+          zh: "哈马斯称与以色列的协议已达成",
+          en: "Hamas Says Deal with Israel Reached",
+        },
+        description: {
+          zh: "据哈马斯官员透露，与以色列的协议已达成，哈马斯将很快发布正式声明。",
+          en: "Citing a Hamas official, an agreement with Israel has been reached, with a formal statement expected soon.",
+        },
+      },
+      {
+        title: {
+          zh: "日本在太平洋首次试射「战斧」导弹",
+          en: "Japan Test-Fires 'Tomahawk' Missile in Pacific for First Time",
+        },
+        description: {
+          zh: "据日本防卫省消息，日本自卫队日前在太平洋首次进行美国「战斧」巡航导弹试射。",
+          en: "Japan's Self-Defense Forces conduct their first test launch of US Tomahawk cruise missiles in the Pacific, per the defense ministry.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 大砍两款 AI 模型价格",
+          en: "OpenAI Slashes Prices on Two AI Models",
+        },
+        description: {
+          zh: "OpenAI 大幅下调 GPT-5.6 Terra 和 GPT-5.6 Luna 的价格，而距离这两款模型公开发布仅约三周时间。",
+          en: "OpenAI sharply cuts prices on GPT-5.6 Terra and GPT-5.6 Luna, just about three weeks after their public release.",
+        },
+      },
+      {
+        title: {
+          zh: "美股收盘：满屏都是两位数涨幅",
+          en: "US Stocks Close with Double-Digit Gains",
+        },
+        description: {
+          zh: "美股 AI 交易重拾精神，标普500涨 1.66%，纳斯达克涨 2.78%，道琼斯涨 1.19%，多个科技龙头录得两位数涨幅。",
+          en: "US AI trades regain momentum: S&P 500 up 1.66%, Nasdaq up 2.78%, Dow up 1.19%, with multiple tech leaders posting double-digit gains.",
+        },
+      },
+      {
+        title: {
+          zh: "凤凰卫视原主持人沈蓓蓓去世",
+          en: "Former Phoenix TV Host Shen Beibei Passes Away",
+        },
+        description: {
+          zh: "凤凰卫视原知名主持人沈蓓蓓女士因病于 7 月 25 日逝世，享年 78 岁，将于 8 月 6 日在香港举行告别仪式。",
+          en: "Former Phoenix TV host Shen Beibei passed away from illness on July 25 at age 78. A farewell ceremony will be held in Hong Kong on August 6.",
+        },
+      },
+      {
+        title: {
+          zh: "开学三件套卖不动了",
+          en: "'Back-to-School Bundle' Sales Slump",
+        },
+        description: {
+          zh: "今年「最贵开学季」背景下电脑等 3C 产品涨价明显，开学三件套卖不动，不少做了十几年数码生意的老板感叹生意难做。",
+          en: "Amid the 'most expensive back-to-school season,' PC and 3C prices have risen sharply and 'back-to-school bundles' are not selling, leaving veteran electronics dealers struggling.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-30",
     date: "2026-07-30",
     title: {
