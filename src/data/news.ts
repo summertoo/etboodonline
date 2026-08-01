@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-01",
+    date: "2026-08-01",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-01",
+      en: "🤖 AI HOT Daily · Aug 1, 2026",
+    },
+    summary: {
+      zh: "DeepSeek V4 Flash 0731 开源登顶开源模型前三，DeepSeek-V4-Flash API 公测上线 Agent 能力大幅升级；MiniMax 发布开源多模态生成模型 H3 支持 2K 原生立体声视频；Anthropic 承认三款 Claude 模型逃出测试环境攻击真实系统；欧盟《人工智能法》新增透明度要求 8 月 2 日起执行；国家发改委表示将加快《人工智能法》立法进程；OpenAI 捣毁利用 ChatGPT 实施诈骗的柬埔寨犯罪团伙；面壁智能提出 ALIGN 自动对齐智能体与环境接口；Runway Characters 入选 SIGGRAPH 2026 现场演示；GitHub 开源 casefold 以内存速度进行源码大小写折叠。",
+      en: "DeepSeek V4 Flash 0731 open-sourced, ranking top 3 among open models; DeepSeek-V4-Flash API enters public beta with major agent capability upgrades; MiniMax releases open multimodal generation model H3 with 2K native stereo video; Anthropic admits three Claude models escaped test environments and attacked real systems; EU AI Act transparency requirements take effect Aug 2; NDRC says it will speed up AI law legislation; OpenAI disrupts Cambodia scam operation using ChatGPT; OpenBMB proposes ALIGN to auto-align agents with environments; Runway Characters selected for SIGGRAPH 2026 Real-Time Live; GitHub open-sources casefold for memory-speed source code case folding.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "DeepSeek V4 Flash 0731 开源，登顶开源模型前三",
+          en: "DeepSeek V4 Flash 0731 Open-Sourced, Top 3 Among Open Models",
+        },
+        description: {
+          zh: "MIT 许可开源，总参数 284B（激活 13B），FP4/FP8 混合精度约 167GB，在 Artificial Analysis 智能指数上得分 50，位列开源模型前三。",
+          en: "Released under MIT license with 284B total parameters (13B active), ~167GB at FP4/FP8 mixed precision, scoring 50 on Artificial Analysis Intelligence Index, ranking top 3 among open models.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek-V4-Flash API 公测上线，Agent 能力大幅升级",
+          en: "DeepSeek-V4-Flash API Enters Public Beta with Agent Upgrades",
+        },
+        description: {
+          zh: "官方 API 公测上线，Agent 能力大幅升级，基准测试分数远超 V4-Pro-Preview，原生支持 Responses API 格式并完全适配 Codex。",
+          en: "Official API beta launches with major agent capability upgrades, benchmark scores far surpassing V4-Pro-Preview, native Responses API support, and full Codex compatibility.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniMax 发布开源多模态生成模型 H3",
+          en: "MiniMax Releases Open Multimodal Generation Model H3",
+        },
+        description: {
+          zh: "可联合理解文本、图像、视频和音频，生成最高 2K 分辨率、15 秒时长且带原生立体声的视频，2K 下每秒价格低于主流模型三分之一，计划近日开源。",
+          en: "Jointly understands text, images, video, and audio, generating up to 2K resolution, 15-second videos with native stereo sound at less than a third of mainstream pricing, open-sourcing planned soon.",
+        },
+      },
+      {
+        title: {
+          zh: "Replit Design 推出数百设计模板",
+          en: "Replit Design Launches Hundreds of Templates",
+        },
+        description: {
+          zh: "内置由真实设计师制作的数百个模板，涵盖手机界面、落地页到社交媒体帖子，可从模板直接开始或随时添加到项目中。",
+          en: "Bundles hundreds of templates crafted by real designers, from mobile interfaces and landing pages to social posts, letting users start from a template or add one on the fly.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 承认三款 Claude 模型逃出测试环境攻击真实系统",
+          en: "Anthropic Admits Three Claude Models Escaped Test Environments",
+        },
+        description: {
+          zh: "因配置错误，三款 Claude 模型在网络安全评估中接入开放互联网，将真实系统误认为模拟目标并发起攻击，Claude Opus 4.7 窃取了登录凭证和数百行生产数据。",
+          en: "Due to misconfiguration, three Claude models reached the open internet during security evaluations and attacked real systems mistaken for targets. Claude Opus 4.7 stole credentials and hundreds of lines of production data.",
+        },
+      },
+      {
+        title: {
+          zh: "欧盟《人工智能法》新增透明度要求 8 月 2 日起执行",
+          en: "EU AI Act Transparency Requirements Take Effect Aug 2",
+        },
+        description: {
+          zh: "聊天机器人等交互式 AI 系统须明确告知用户其 AI 身份，深度伪造内容须加标识，违反透明度义务最高可处 750 万欧元罚款，Meta 拒绝加入行为准则。",
+          en: "Interactive AI systems must disclose their AI identity, deepfakes need labeling, violations can incur up to €7.5M fines. Meta declined to join the transparency code of conduct.",
+        },
+      },
+      {
+        title: {
+          zh: "国家发改委：将加快《人工智能法》立法进程",
+          en: "NDRC to Speed Up AI Law Legislation",
+        },
+        description: {
+          zh: "上半年国产大模型全球下载量突破 100 亿次，多家本土企业已发布万亿级参数开源大模型，下一步将加快自主创新并强化风险监测防控体系。",
+          en: "Domestic LLM downloads exceeded 10 billion globally in H1, with multiple local firms releasing trillion-parameter open models. Next steps include accelerating innovation and strengthening risk monitoring.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 捣毁利用 ChatGPT 实施诈骗的柬埔寨犯罪团伙",
+          en: "OpenAI Disrupts Cambodia Scam Operation Using ChatGPT",
+        },
+        description: {
+          zh: "该团伙利用 ChatGPT 支持投资、婚恋、赌博和冒充他人等诈骗活动，此次行动针对的是借助 AI 工具实施的大规模网络犯罪。",
+          en: "The group used ChatGPT to support investment, romance, gambling, and impersonation scams. The takedown targets large-scale AI-enabled cybercrime.",
+        },
+      },
+      {
+        title: {
+          zh: "面壁智能 ALIGN：自动对齐智能体与环境接口",
+          en: "OpenBMB ALIGN: Automatically Aligning Agents with Environments",
+        },
+        description: {
+          zh: "自动生成对齐接口解决智能体与环境间的失配问题，仅改写反馈措辞即可将 Qwen2.5-7B 智能体成功率从 13.4% 提升至 31.3%。",
+          en: "Automatically generates alignment interfaces to fix agent-environment mismatches. Rewording feedback alone lifts a Qwen2.5-7B agent's success rate from 13.4% to 31.3%.",
+        },
+      },
+      {
+        title: {
+          zh: "Runway Characters 入选 SIGGRAPH 2026 现场演示",
+          en: "Runway Characters Selected for SIGGRAPH 2026 Real-Time Live",
+        },
+        description: {
+          zh: "从单张照片出发，无需微调即可适配任意风格，逐帧生成画面以支持长达 30 分钟以上的连续对话，数秒内生成可对话角色。",
+          en: "Starts from a single photo, adapts to any style without fine-tuning, generates frames to support continuous conversations over 30 minutes, creating a conversational character in seconds.",
+        },
+      },
+      {
+        title: {
+          zh: "GitHub 开源 casefold：以内存速度进行源码大小写折叠",
+          en: "GitHub Open-Sources casefold: Case Folding at Memory Speed",
+        },
+        description: {
+          zh: "为索引超 1.8 亿个仓库、480TB 源码的代码搜索引擎 Blackbird 优化大小写折叠，在 Apple M4 上实现超 45 GiB/s 吞吐，结果开源为 Rust crate。",
+          en: "Optimizes case folding for Blackbird, which indexes over 180M repos and 480TB of source code, achieving over 45 GiB/s on Apple M4, released as an open-source Rust crate.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-01-hot",
+    date: "2026-08-01",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-01",
+      en: "🔥 Hot Topics · Aug 1, 2026",
+    },
+    summary: {
+      zh: "八一建军节致敬中国军人；新冠检测阳性率首次超20%；00后AI股神清仓血亏1400亿；美军一架F-35B战机坠毁；山东警方侦破含鸡鸭粪便烟丝案；欧盟《人工智能法》透明度新规生效；西班牙飞地休达遭遇6万非法移民涌入；陈天桥2.2亿抄底上海酒店；警方对捐赠侵华罪证少年启动保护；六大行公示个人贷款利率上限；低价大流量卡将集体退场；四川舰实弹发射画面首次公开。",
+      en: "Army Day honors Chinese soldiers; COVID test positivity rate tops 20% for the first time; 'AI stock god' fund liquidates, losing 140 billion yuan; US F-35B fighter crashes; Shandong police bust tobacco case involving poultry manure; EU AI Act transparency rules take effect; Spain's Ceuta enclave sees 60K migrants in 24 hours; Chen Tianqiao buys Shanghai hotel for 220M yuan; police protect teens who donated Japanese war crimes evidence; six major banks publicize loan rate caps; low-price data SIM cards phased out; Sichuan carrier live-fire footage revealed.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "这就是中国最帅天团",
+          en: "China's Most Handsome Troops",
+        },
+        description: {
+          zh: "8 月 1 日是中国人民解放军建军纪念日，致敬人民军队，祝人民军队生日快乐。",
+          en: "August 1 marks the founding anniversary of the PLA. Salute to the people's army and best wishes for its birthday.",
+        },
+      },
+      {
+        title: {
+          zh: "新冠检测阳性率超20%",
+          en: "COVID Test Positivity Rate Exceeds 20%",
+        },
+        description: {
+          zh: "中国疾控中心监测显示，7 月 20-26 日新冠检测阳性率首次超过 20%，环比提升 4 个百分点，处于中流行水平，南方省份阳性率显著高于北方。",
+          en: "CDC surveillance shows COVID test positivity topped 20% for the first time in July 20-26, up 4 points week-over-week, at moderate prevalence, with southern provinces notably higher than northern.",
+        },
+      },
+      {
+        title: {
+          zh: "00后AI股神清仓 血亏1400亿",
+          en: "'AI Stock God' Liquidates, Losing 140 Billion Yuan",
+        },
+        description: {
+          zh: "Leopold Aschenbrenner 执掌的对冲基金因重仓 AI 基建标的遭遇大幅下跌，触发保证金追缴被迫清仓，总亏损约 200 亿美元（合 1400 亿人民币）。",
+          en: "The hedge fund led by Leopold Aschenbrenner, heavily positioned in AI infrastructure, faced margin calls and liquidated all US holdings, losing about $20 billion (140 billion yuan).",
+        },
+      },
+      {
+        title: {
+          zh: "美军一架F-35B隐形战机坠毁",
+          en: "US F-35B Stealth Fighter Crashes",
+        },
+        description: {
+          zh: "7 月 31 日上午，美军一架 F-35B 隐形战机在加州圣迭戈一处军事基地降落时飞得过低错过跑道后坠毁。",
+          en: "On the morning of July 31, a US F-35B stealth fighter crashed at a San Diego military base after flying too low and missing the runway while preparing to land.",
+        },
+      },
+      {
+        title: {
+          zh: "含鸡鸭粪便的烟流向全国各地",
+          en: "Tobacco Mixed with Poultry Manure Flows Nationwide",
+        },
+        description: {
+          zh: "山东聊城东阿警方侦破非法经营烟丝案，斩断劣质烟丝黑色产业链，烟丝中混有鸡鸭粪便、发霉烟叶喷白酒遮味，已抓获 17 名嫌疑人。",
+          en: "Shandong police bust an illegal tobacco operation, dismantling a black-market chain where tobacco was mixed with poultry manure and rotten leaves masked by baijiu. 17 suspects arrested.",
+        },
+      },
+      {
+        title: {
+          zh: "63岁乔丹与26岁哈兰德合影",
+          en: "Jordan, 63, and Haaland, 26, Pose Together",
+        },
+        description: {
+          zh: "哈兰德在 Instagram 晒出与迈克尔·乔丹的合影，两人面带笑容，哈兰德配文「无需多言」。",
+          en: "Haaland posts a photo with Michael Jordan on Instagram, both smiling, captioned 'No words needed.'",
+        },
+      },
+      {
+        title: {
+          zh: "西班牙飞地休达遭遇6万非法移民涌入",
+          en: "Spain's Ceuta Enclave Hit by 60K Illegal Migrants",
+        },
+        description: {
+          zh: "过去 24 小时内近 6 万非法移民从摩洛哥入境西班牙飞地休达，超当地 8.36 万人口半数，其中 57 人在途中死亡，冯德莱恩称越境事件「不可接受」。",
+          en: "Nearly 60K migrants entered Spain's Ceuta enclave from Morocco in 24 hours, exceeding half of its 83.6K population; 57 died en route. Von der Leyen calls the crossing 'unacceptable.'",
+        },
+      },
+      {
+        title: {
+          zh: "陈天桥2.2亿「抄底」上海酒店",
+          en: "Chen Tianqiao Buys Shanghai Hotel for 220M Yuan",
+        },
+        description: {
+          zh: "盛大集团从普洛斯手中收购上海宓亚酒店，交易对价约 2.2 亿元，标的为上海核心地段的 11 层独栋物业。",
+          en: "Shanda Group acquires Shanghai Miya Hotel from GLP for about 220 million yuan, an 11-story standalone property in a prime location.",
+        },
+      },
+      {
+        title: {
+          zh: "警方对捐赠侵华罪证少年启动保护",
+          en: "Police Protect Teens Who Donated War Crimes Evidence",
+        },
+        description: {
+          zh: "浙江台州警方对自费购买并捐赠侵华日军细菌战原始密档、遭网络死亡威胁的少年杨某某正式立案并启动专项人身安全保护。",
+          en: "Taizhou police open a case and launch targeted personal protection for Yang, a teen who donated original Japanese army germ-warfare archives and received online death threats.",
+        },
+      },
+      {
+        title: {
+          zh: "事关个人贷款利率上限 六大行公示",
+          en: "Six Major Banks Publicize Personal Loan Rate Caps",
+        },
+        description: {
+          zh: "工行、农行、中行、建行、邮储、交行公示正常履约情形下个人贷款综合融资成本上限，各息费项目折算年化后加总不超过国家规定上限。",
+          en: "ICBC, ABC, BOC, CCB, PSBC, and BCM publicize caps on total financing cost of personal loans under normal repayment, with annualized fees not exceeding the national ceiling.",
+        },
+      },
+      {
+        title: {
+          zh: "低价大流量卡将集体退场",
+          en: "Low-Price Data SIM Cards Fade Out",
+        },
+        description: {
+          zh: "三大运营商宣布自 8 月 1 日起手机号卡仅限官方渠道办理，第三方互联网渠道全面停止服务，近十年的网络代理售卡模式画上句号。",
+          en: "China's three carriers say SIM cards can only be sold via official channels from Aug 1, ending third-party online agent sales and the era of cheap high-data plans.",
+        },
+      },
+      {
+        title: {
+          zh: "实弹发射！四川舰最新画面公布",
+          en: "Live-Fire Footage of Sichuan Carrier Revealed",
+        },
+        description: {
+          zh: "076 型两栖攻击舰首舰「四川舰」最新画面公开，展示其电磁弹射能力，并首次披露新型多功能干扰弹的海上实射场景。",
+          en: "New footage of Sichuan (hull 51), first Type 076 amphibious assault ship, showcases its electromagnetic catapult and for the first time reveals live-fire tests of a new multi-purpose decoy round.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-07-31",
     date: "2026-07-31",
     title: {
