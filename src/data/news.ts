@@ -25,6 +25,176 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-02",
+    date: "2026-08-02",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-02",
+      en: "🤖 AI HOT Daily · Aug 2, 2026",
+    },
+    summary: {
+      zh: "德国慕尼黑法院裁定 AI 音乐生成器 Suno 在训练及输出中均侵犯版权，并驳回合理使用抗辩；OpenAI 用下一代模型 Astra 内部版以约 2000 美元成本证明了数学与理论计算机科学领域 10 项重大进展，包括推翻 Connes 刚性猜想。",
+      en: "A Munich court rules AI music generator Suno infringed copyright in training and output, rejecting its fair-use defense; OpenAI's next-gen model Astra internally proves 10 major advances in math and theoretical computer science for about $2,000, including toppling the Connes rigidity conjecture.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "德国法院裁定 Suno 侵犯版权，驳回合理使用抗辩",
+          en: "German Court Rules Suno Infringed Copyright, Rejects Fair Use",
+        },
+        description: {
+          zh: "慕尼黑法院认定 Suno 3.5 和 4 版本可复现六首知名歌曲的原创元素，构成「记忆化」侵权，责任归于 Suno 而非用户，且美国版权法下的合理使用不适用于此案。",
+          en: "A Munich court found Suno 3.5 and 4 can reproduce original elements of six well-known songs, constituting 'memorization' infringement attributed to Suno, not users, with US fair use deemed inapplicable.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI Astra 以约2000美元证明10项数学难题",
+          en: "OpenAI Astra Proves 10 Math Problems for About $2,000",
+        },
+        description: {
+          zh: "下一代模型 Astra 内部版解决了数学与理论计算机科学领域 10 项重大进展，证明了非 sofic 群的存在并推翻 Connes 刚性猜想，总成本约 2000 美元。",
+          en: "The internal version of next-gen model Astra resolves 10 major advances in math and theoretical CS, proving the existence of non-sofic groups and toppling the Connes rigidity conjecture, at a total cost of about $2,000.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-02-hot",
+    date: "2026-08-02",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-02",
+      en: "🔥 Hot Topics · Aug 2, 2026",
+    },
+    summary: {
+      zh: "大流量卡大撤退有人连夜抢购；小米多款手机今起正式涨价；月薪6万老君山云海观察员日记曝光；莫斯科市中心爆炸致3死21伤；郑钦文赛季第6次一轮游；小米手机涨价国产旗舰或破万元；家长带男童进女更衣室语出惊人；广东赛事食宿套餐被指不合理；IF椰子水市值从126亿暴跌到16亿；喜羊羊新作镜头引发擦边争议；发生超强厄尔尼诺事件概率增大；郑钦文无缘多伦多站正赛。",
+      en: "Low-price data SIM cards retreat with overnight panic buying; Xiaomi phones officially price up today; Laojunshan cloud-sea observer diary with 60K monthly salary goes viral; Moscow downtown explosion kills 3, injures 21; Zheng Qinwen exits in first round for 6th time this season; Xiaomi price hikes signal flagships may exceed 10K yuan; parent takes boy into women's locker room; Guangdong event meal packages criticized; IF coconut water market cap crashes from 12.6B to 1.6B; Pleasant Goat episode sparks 'suggestive' controversy; probability of a super El Nino event rises; Zheng Qinwen fails to reach Toronto main draw.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "大流量卡大撤退 有人连夜抢购",
+          en: "Data SIM Cards Retreat, Panic Buying Overnight",
+        },
+        description: {
+          zh: "三大运营商证实线上大流量卡 8 月起下架，自 8 月 1 日起互联网渠道办理号卡仅限官方 App、官网，第三方渠道不再提供服务，不少人连夜抢购。",
+          en: "Carriers confirm cheap high-data SIM cards are pulled from August; from Aug 1, online card sales only via official apps/websites, sparking overnight panic buying.",
+        },
+      },
+      {
+        title: {
+          zh: "小米多款手机今起正式涨价",
+          en: "Xiaomi Phones Officially Price Up Today",
+        },
+        description: {
+          zh: "8 月 2 日起小米多款手机正式涨价，小米总裁卢伟冰此前表示，下半年部分国产直板旗舰手机售价很可能突破一万元大关。",
+          en: "Xiaomi phones officially rise in price starting Aug 2. President Lu Weibing earlier hinted some domestic flagships could exceed 10,000 yuan later this year.",
+        },
+      },
+      {
+        title: {
+          zh: "月薪6万 老君山云海观察员日记曝光",
+          en: "Cloud-Sea Observer Diary with 60K Monthly Salary Goes Viral",
+        },
+        description: {
+          zh: "河南老君山云海观察员独居日记曝光：每天五点起床，从早拍到晚，每天出 1 条视频，最吸引自己的还是 6 万月薪。",
+          en: "A diary from a Laojunshan cloud-sea observer reveals: waking at 5am, filming all day, posting one video daily — and the 60,000-yuan monthly salary stealing the show.",
+        },
+      },
+      {
+        title: {
+          zh: "莫斯科市中心爆炸已致3死21伤",
+          en: "Moscow Downtown Explosion Kills 3, Injures 21",
+        },
+        description: {
+          zh: "当地时间 8 月 1 日，莫斯科市中心一家餐厅发生爆炸，截至目前已造成 3 人死亡、21 人受伤。",
+          en: "On August 1, an explosion hit a restaurant in central Moscow, killing 3 people and injuring 21 so far.",
+        },
+      },
+      {
+        title: {
+          zh: "郑钦文赛季第6次一轮游 本人回应",
+          en: "Zheng Qinwen Exits in First Round for 6th Time, Responds",
+        },
+        description: {
+          zh: "WTA1000 多伦多站资格赛，郑钦文不敌泰国选手塔拉鲁迪无缘正赛，遭遇本赛季第六次「一轮游」，直言「心气没了」。",
+          en: "In Toronto WTA1000 qualifying, Zheng Qinwen loses to Thailand's Tararudee, exiting in the first round for the sixth time this season, admitting her fighting spirit is gone.",
+        },
+      },
+      {
+        title: {
+          zh: "家长带男童进女更衣室还语出惊人",
+          en: "Parent Takes Boy into Women's Locker Room",
+        },
+        description: {
+          zh: "杭州一酒店女更衣室有家长带男孩进入，面对异议却称「孩子长大总要被看」，酒店称工作人员已将男孩带离。",
+          en: "At a Hangzhou hotel, a parent brings a boy into the women's locker room and, when challenged, claims 'he'll be seen when he grows up anyway.' Staff removed the boy.",
+        },
+      },
+      {
+        title: {
+          zh: "一个小孩两天吃饭要花659元？家长投诉",
+          en: "Parents Complain Over 659-Yuan Two-Day Meal Package",
+        },
+        description: {
+          zh: "有选手家长反映 2026 广东省户外低空模型锦标赛食宿套餐收费不合理，单人食宿费用远高于酒店公开市场价，一个小孩两天吃饭要花 659 元。",
+          en: "Parents of participants claim the meal and lodging package at a 2026 Guangdong outdoor drone model championship is overpriced, with one child's two-day meals costing 659 yuan.",
+        },
+      },
+      {
+        title: {
+          zh: "IF椰子水市值从126亿暴跌到16亿",
+          en: "IF Coconut Water Market Cap Crashes from 12.6B to 1.6B",
+        },
+        description: {
+          zh: "「椰子水第一股」IFBH 上市一年市值从峰值 126.8 亿港元暴跌至 16 亿港元，叠加净利大降、原料涨价、掺假舆情与市占率腰斩，轻资产模式短板暴露。",
+          en: "'Coconut water king' IFBH's market cap collapses from a 12.68B HKD peak to 1.6B within a year of listing, hit by falling profits, cost inflation, quality scandals, and halved share.",
+        },
+      },
+      {
+        title: {
+          zh: "喜羊羊新作陷「擦边」争议",
+          en: "Pleasant Goat Episode Sparks 'Suggestive' Controversy",
+        },
+        description: {
+          zh: "《喜羊羊与灰太狼之破界山海诀》中美羊羊危急时刻捂裙摆的镜头引发争议，网友认为少儿向动画创作底线不应模糊，镜头语言需克制得体。",
+          en: "A scene of Pleasant Goat covering her skirt in crisis sparks debate over suggestive camera angles in a children's animation, with critics urging restraint.",
+        },
+      },
+      {
+        title: {
+          zh: "发生超强厄尔尼诺事件概率增大",
+          en: "Probability of a Super El Nino Event Rises",
+        },
+        description: {
+          zh: "中国气象局监测显示，赤道中东太平洋 5 月达到厄尔尼诺标准，7 月进入强厄尔尼诺监测行列，持续增强的现象或成 150 年来最强。",
+          en: "China's Meteorological Administration says the equatorial Pacific hit El Nino criteria in May and entered strong status in July, possibly becoming the strongest in 150 years.",
+        },
+      },
+      {
+        title: {
+          zh: "电动汽车开了5年 电池应该在啥水平",
+          en: "What Battery Level Should an EV Have After 5 Years?",
+        },
+        description: {
+          zh: "专家表示，轻型乘用车使用 5 年或行驶 10 万公里，电池可用能量状态要达 82% 以上，8 年或 16 万公里达 75% 以上，10 年或 20 万公里达 70% 以上。",
+          en: "Experts say a light EV's usable battery energy should stay above 82% after 5 years or 100K km, above 75% after 8 years or 160K km, and above 70% after 10 years or 200K km.",
+        },
+      },
+      {
+        title: {
+          zh: "车市残酷大洗牌刚刚开始",
+          en: "Brutal Shakeout in Auto Market Has Just Begun",
+        },
+        description: {
+          zh: "7 月零跑成为首个月销破 10 万的造车新势力，头部份额扩大，但新车激增、需求走弱引发价格战，马太效应凸显，差异化产品力才是关键。",
+          en: "Leapmotor became the first new EV maker to sell 100K units in a month in July. With surging new models and weak demand, price wars rage and only differentiated products survive.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-01",
     date: "2026-08-01",
     title: {
