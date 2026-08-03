@@ -25,6 +25,206 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-03",
+    date: "2026-08-03",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-03",
+      en: "🤖 AI HOT Daily · Aug 3, 2026",
+    },
+    summary: {
+      zh: "xAI 的 Grok 现可分析任意视频；Cloudflare 开启为期五天的 Agents Week 探讨面向智能体的 Agent Cloud 形态；Codex 高阶玩法用 Sol 指挥 Luna Max 省额度翻倍产出；Gary Marcus 认为 OpenAI 新模型 Astra 数学表现出色但被过度吹捧；Thinking Machines 发布首个开源模型 Inkling（975B-A41B 多模态 MoE）。",
+      en: "xAI's Grok can now analyze any video; Cloudflare kicks off a five-day Agents Week exploring the shape of agent-native Agent Cloud; advanced Codex trick uses Sol to command Luna Max, doubling output on a budget; Gary Marcus says OpenAI's new Astra is impressive at math but vastly oversold; Thinking Machines releases first open model Inkling (975B-A41B multimodal MoE).",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Grok 支持分析任意视频",
+          en: "Grok Can Now Analyze Any Video",
+        },
+        description: {
+          zh: "xAI 的 Grok 现已支持分析任意视频内容，用户可直接上传或分享视频链接进行理解与分析。",
+          en: "xAI's Grok now supports analyzing any video, letting users upload or share a video link for understanding and analysis.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 开启 Agents Week：探讨 Agent Cloud 形态",
+          en: "Cloudflare Kicks Off Agents Week: The Shape of Agent Cloud",
+        },
+        description: {
+          zh: "Cloudflare 启动为期五天的 Agents Week，认为现有云和网络皆为人设计，Agent Cloud 需构建面向智能体原生的底层能力，并充当现有网络与智能体网络之间的转换层。",
+          en: "Cloudflare launches a five-day Agents Week, arguing existing clouds and networks are built for humans. Agent Cloud needs agent-native infrastructure while bridging current and agent networks.",
+        },
+      },
+      {
+        title: {
+          zh: "Codex 用 Sol 指挥 Luna Max 省额度翻倍产出",
+          en: "Codex Uses Sol to Command Luna Max, Doubling Output",
+        },
+        description: {
+          zh: "Codex 高阶玩法：让 Sol 创建 Luna Max 子代理，模型设为 gpt-5.6-luna、reasoning effort 设为 max，Sol 负责拆任务与审代码，具体实现自动委托给 Luna Max，可省额度并翻倍产出。",
+          en: "Advanced Codex trick: let Sol create a Luna Max sub-agent (gpt-5.6-luna, max reasoning) to split tasks and review code, delegating implementation to Luna Max to save credits and double output.",
+        },
+      },
+      {
+        title: {
+          zh: "Gary Marcus：OpenAI Astra 数学惊艳但被过度吹捧",
+          en: "Gary Marcus: OpenAI's Astra Impressive at Math, Vastly Oversold",
+        },
+        description: {
+          zh: "Marcus 指出相关讨论犯了「合成谬误」：擅长某类数学不等于擅长所有认知任务，数学便于符号验证与合成数据生成，而开放世界问题无法如此模拟。",
+          en: "Marcus warns of a 'compositional fallacy': excelling at certain math doesn't mean mastering all cognition. Math is easy to verify symbolically and cheap to synthesize, unlike open-world problems.",
+        },
+      },
+      {
+        title: {
+          zh: "Thinking Machines 发布开源模型 Inkling",
+          en: "Thinking Machines Releases Open Model Inkling",
+        },
+        description: {
+          zh: "首个模型 Inkling 为 975B-A41B 多模态 MoE，支持文本、图像和音频输入，并推出 276B-A12B 的小版本。",
+          en: "First model Inkling is a 975B-A41B multimodal MoE supporting text, image, and audio inputs, with a 276B-A12B small variant.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-03-hot",
+    date: "2026-08-03",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-03",
+      en: "🔥 Hot Topics · Aug 3, 2026",
+    },
+    summary: {
+      zh: "7名赛里木湖打人工作人员被拘留，自驾收费改为按车收费；微信地震预警上线「震感上报」能力；2026暑期档电影票房破71亿；近120万辆特斯拉因悬架故障遭调查；韩股又跌「熔断」三星电子跌超7%；A股低开光刻机概念走弱；新冠阳性率连续数周上升；显卡价格跳涨热门产品一日一价；一年倒闭8.5万家烘焙店开不下去；歼20、歼16、歼10C「三龙」聚首。",
+      en: "Seven Sayram Lake staff detained for assault, self-drive fee switches to per-car; WeChat earthquake alert adds 'shaking report' feature; 2026 summer box office tops 7.1 billion yuan; nearly 1.2M Teslas under probe over suspension failures; Korean stocks fall again with Samsung down 7%+; A-shares open lower with lithography weakness; COVID positivity rises for weeks; GPU prices jump with daily changes; 85K bakeries close in a year; J-20, J-16, J-10C 'three dragons' gather.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "7名赛里木湖打人工作人员被拘留",
+          en: "Seven Sayram Lake Staff Detained for Assault",
+        },
+        description: {
+          zh: "赛里木湖景区工作人员殴打旅游车司机事件，7 名工作人员被处 10 至 15 日行政拘留并各罚款 1000 元，联合工作组已进驻景区全面整改。",
+          en: "Seven Sayram Lake scenic-area staff who assaulted a tour-bus driver receive 10-15 days detention plus 1,000 yuan fines each; a joint task force has entered the site for rectification.",
+        },
+      },
+      {
+        title: {
+          zh: "微信一项能力升级 关键时刻能救命",
+          en: "WeChat Upgrade That Can Save Lives in a Crisis",
+        },
+        description: {
+          zh: "中国地震台网微信小程序上线「震感上报」能力，用户收到地震预警后可上报位置与震感，经处理形成震感分布图。平台已预警超 700 次地震，订阅用户超 6000 万。",
+          en: "The China Earthquake Networks Center WeChat mini-program adds 'shaking report,' letting users report location and felt intensity to build shake maps. It has issued 700+ alerts to 60M+ subscribers.",
+        },
+      },
+      {
+        title: {
+          zh: "2026暑期档电影票房破71亿",
+          en: "2026 Summer Box Office Tops 7.1 Billion Yuan",
+        },
+        description: {
+          zh: "2026 暑期档电影票房（含预售）已超 71 亿元，年度票房超 228 亿元，国家电影局与市场监管总局鼓励影院打造综合文化空间。",
+          en: "Summer 2026 box office (incl. presales) tops 7.1 billion yuan; annual total exceeds 22.8 billion. Regulators encourage cinemas to become comprehensive cultural spaces.",
+        },
+      },
+      {
+        title: {
+          zh: "近120万辆特斯拉汽车遭调查",
+          en: "Nearly 1.2M Teslas Under Investigation",
+        },
+        description: {
+          zh: "因收到 156 起悬架故障投诉，美国国家公路交通安全管理局对近 120 万辆特斯拉展开初步调查，故障表现为前下横向连杆脱落，极端情况可能失控。",
+          en: "After 156 suspension-failure complaints, NHTSA opens a preliminary probe into nearly 1.2M Teslas, where front lower lateral links detach and can cause loss of control.",
+        },
+      },
+      {
+        title: {
+          zh: "韩股又跌「熔断」！三星电子跌超7%",
+          en: "Korean Stocks Fall Again, Samsung Down Over 7%",
+        },
+        description: {
+          zh: "韩国股市持续下跌，KOSDAQ 启动侧车机制暂停程序化交易 5 分钟，KOSPI 指数跌 4.32%，三星电子、SK 海力士均跌超 7%。",
+          en: "Korean stocks keep falling as KOSDAQ triggers the sidecar, pausing program trading for 5 minutes. KOSPI drops 4.32%, with Samsung Electronics and SK Hynix both down over 7%.",
+        },
+      },
+      {
+        title: {
+          zh: "A股开盘：光刻机概念股走弱",
+          en: "A-Shares Open Lower, Lithography Stocks Weaken",
+        },
+        description: {
+          zh: "8 月 3 日 A 股集体低开，存储器、HBM、半导体材料、PCB、光刻机概念走弱，核聚变、人形机器人、AI 应用、PEEK 材料指数走强。",
+          en: "A-shares open broadly lower on Aug 3, with memory, HBM, semicon materials, PCB, and lithography weak while fusion, humanoid robots, AI apps, and PEEK materials gain.",
+        },
+      },
+      {
+        title: {
+          zh: "新冠阳性率连续数周上升",
+          en: "COVID Positivity Rises for Weeks Running",
+        },
+        description: {
+          zh: "全国哨点医院流感样病例呼吸道样本新冠检测阳性率升至 20.3%，环比上升 4 个百分点，居所有监测病原体首位，连续数周上升。",
+          en: "COVID test positivity at sentinel hospitals rose to 20.3%, up 4 points week-over-week and topping all monitored pathogens, with increases for several consecutive weeks.",
+        },
+      },
+      {
+        title: {
+          zh: "显卡价格跳涨 热门产品「一日一价」",
+          en: "GPU Prices Jump, Changing Daily",
+        },
+        description: {
+          zh: "显卡自 7 月 25 日起涨价，基本「一日一价」，大显存型号涨幅明显，分析师认为系显存等上游核心物料成本上升所致。",
+          en: "GPUs have been rising since July 25, basically changing daily, with high-VRAM models surging most — attributed by analysts to higher costs of upstream parts like memory.",
+        },
+      },
+      {
+        title: {
+          zh: "一年倒闭8.5万家 烘焙店开不下去了",
+          en: "85,000 Bakeries Shut in a Year",
+        },
+        description: {
+          zh: "一年间全国面包烘焙门店净减少 8.17 万家，商超凭借冷冻面团模式成本更低价格更便宜，对传统门店形成「降维打击」。",
+          en: "Nationwide bakery stores shrank by 81,700 net in a year. Supermarkets' central-plant frozen-dough model undercuts traditional shops on cost and price.",
+        },
+      },
+      {
+        title: {
+          zh: "歼20、歼16、歼10C「三龙」聚首",
+          en: "J-20, J-16, J-10C 'Three Dragons' Gather",
+        },
+        description: {
+          zh: "现场直击歼-20、歼-16、歼-10C 大机群体系对抗，「三龙」聚首引发关注。",
+          en: "Footage shows J-20, J-16, and J-10C in large-formation system-of-systems exercises as the 'three dragons' gather.",
+        },
+      },
+      {
+        title: {
+          zh: "赛里木湖自驾按人收费改按车收费",
+          en: "Sayram Lake Self-Drive Fee Switches to Per-Car",
+        },
+        description: {
+          zh: "赛里木湖 75 元/人自驾服务费调整为按车收费，5 座及以下 120 元/车至 20 座及以上 600 元/车不等，方案自 8 月 20 日起执行。",
+          en: "Sayram Lake's 75 yuan-per-person self-drive fee changes to per-vehicle pricing, from 120 yuan for 5 seats or fewer up to 600 yuan for 20+ seats, effective Aug 20.",
+        },
+      },
+      {
+        title: {
+          zh: "「九门」开播带火赵丽颖版尹新月",
+          en: "'The Nine Gates' Revives Zhao Liying's Yin Xinyue",
+        },
+        description: {
+          zh: "新《九门》因续集换脸不换声遭吐槽，网友翻出十年前赵丽颖饰演的尹新月旧片段，「赵丽颖版尹新月的含金量还在上升」话题刷屏。",
+          en: "The new 'The Nine Gates' is criticized for replacing Zhao Liying's face while keeping her voice. Fans revisit her 2016 scenes as 'Yin Xinyue's value keeps rising' trends.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-02",
     date: "2026-08-02",
     title: {
