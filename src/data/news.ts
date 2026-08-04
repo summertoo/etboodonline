@@ -25,6 +25,256 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-04",
+    date: "2026-08-04",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-04",
+      en: "🤖 AI HOT Daily · Aug 4, 2026",
+    },
+    summary: {
+      zh: "Qwen3.8-Max 发布 2.4T 参数首次开源 Qwen-Max 级权重；商汤发布 SenseNova U1.5-Lite 轻量多模态模型；OpenAI 发布 GPT-Live 实时音频新架构可边说边听；微软开源 Orchard 智能体训练框架；Cloudflare 推出 @cloudflare/computer 智能体运行时与 Billable Usage API；欧盟《人工智能法案》透明度规则生效违规最高罚 1500 万欧元；AirLLM 实现单块 4GB GPU 运行 70B 模型；Gary Marcus 称 Anthropic 数学家 24 小时复现 OpenAI Astra 半数结果。",
+      en: "Qwen3.8-Max launches with 2.4T parameters, first open Qwen-Max-level weights; SenseTime releases SenseNova U1.5-Lite lightweight multimodal model; OpenAI unveils GPT-Live real-time audio architecture that listens while speaking; Microsoft open-sources Orchard agent training framework; Cloudflare launches @cloudflare/computer agent runtime and Billable Usage API; EU AI Act transparency rules take effect with fines up to €15M; AirLLM runs 70B models on a single 4GB GPU; Gary Marcus says Anthropic mathematicians reproduced half of OpenAI Astra's results in 24 hours.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Qwen3.8-Max 发布：开源最强编码与协作模型",
+          en: "Qwen3.8-Max: Strongest Open Coding and Collaboration Model",
+        },
+        description: {
+          zh: "Qwen 家族迄今最强模型，2.4T 参数（95B 激活），首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
+          en: "Qwen's strongest model yet, with 2.4T parameters (95B active), the first Qwen-Max-level open weights, to be released next week.",
+        },
+      },
+      {
+        title: {
+          zh: "商汤发布 SenseNova U1.5-Lite-Preview 开源模型",
+          en: "SenseTime Releases SenseNova U1.5-Lite-Preview Open Model",
+        },
+        description: {
+          zh: "基于 NEO-Unify 架构的轻量级原生统一多模态模型，仅 8B-MoT 参数即可达到商业闭源模型的生成与编辑质量。",
+          en: "A lightweight native unified multimodal model on NEO-Unify architecture, reaching commercial closed-source generation and editing quality with just 8B-MoT parameters.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-Live 实时音频新架构发布",
+          en: "GPT-Live: New Architecture for Real-Time Audio",
+        },
+        description: {
+          zh: "GPT-Live 可以在说话的同时聆听，从客户端到模型重建了语音栈，让音频持续流动，更深入的推理和工具使用不会打断对话。",
+          en: "GPT-Live can listen while speaking. Rebuilding the voice stack from client to model keeps audio flowing so deeper reasoning and tool use don't interrupt the conversation.",
+        },
+      },
+      {
+        title: {
+          zh: "微软开源 Orchard 智能体训练框架",
+          en: "Microsoft Open-Sources Orchard Agent Training Framework",
+        },
+        description: {
+          zh: "面向研究社区的开源框架，用于跨任务类型训练和评估 AI 智能体，降低复杂性并让较小模型也能实现强劲性能。",
+          en: "An open framework for the research community to train and evaluate AI agents across task types, reducing complexity so even smaller models perform strongly.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 推出 @cloudflare/computer 智能体运行时",
+          en: "Cloudflare Launches @cloudflare/computer Agent Runtime",
+        },
+        description: {
+          zh: "开源智能体运行时，为每个智能体提供虚拟文件系统，并支持在 isolate、容器沙箱或浏览器中执行代码。",
+          en: "An open-source agent runtime providing each agent a virtual file system and supporting code execution in isolates, container sandboxes, or browsers.",
+        },
+      },
+      {
+        title: {
+          zh: "欧盟《人工智能法案》透明度规则生效",
+          en: "EU AI Act Transparency Rules Take Effect",
+        },
+        description: {
+          zh: "8 月 2 日起生效，要求公司披露用户何时与 AI 互动，并为合成音视频和文本添加机器可读标记，违规最高罚 1500 万欧元或全球年营业额 3%。",
+          en: "Effective Aug 2, companies must disclose when users interact with AI and machine-readably mark synthetic media, with fines up to €15M or 3% of global turnover.",
+        },
+      },
+      {
+        title: {
+          zh: "AirLLM：单块 4GB GPU 运行 70B 模型推理",
+          en: "AirLLM: Running 70B Models on a Single 4GB GPU",
+        },
+        description: {
+          zh: "开源项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置，在 Hacker News 引发关注。",
+          en: "An open-source project runs 70B-parameter model inference on a single 4GB GPU without multi-GPU or large memory setups, gaining traction on Hacker News.",
+        },
+      },
+      {
+        title: {
+          zh: "Gary Marcus：Anthropic 24 小时复现 OpenAI Astra 半数结果",
+          en: "Gary Marcus: Anthropic Reproduces Half of Astra's Results in 24h",
+        },
+        description: {
+          zh: "Anthropic 数学家 Levent Alpöge 用已公开的 Fable 模型在 24 小时内复现了 OpenAI 声称的半数结果，质疑 Astra 是否为真正的突破。",
+          en: "Anthropic mathematician Levent Alpöge reproduced half of OpenAI's claimed results in 24 hours using the public Fable model, raising doubts about Astra's breakthrough status.",
+        },
+      },
+      {
+        title: {
+          zh: "Palantir CEO：前沿 AI 实验室带「马克思主义色彩」",
+          en: "Palantir CEO Calls Frontier AI Labs 'Marxist'",
+        },
+        description: {
+          zh: "Alex Karp 在股东信中称前沿实验室意图「占有合作伙伴的生产资料」，Palantir 二季度营收 19 亿美元同比增长 93%，主张提供模型无关的 AI 与分布式方案。",
+          en: "Alex Karp warns frontier labs seek to 'seize partners' means of production.' Palantir Q2 revenue hit $1.9B, up 93% YoY, championing model-agnostic AI and distributed approaches.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 推出 Billable Usage API",
+          en: "Cloudflare Launches Billable Usage API",
+        },
+        description: {
+          zh: "为自助账户提供单一端点，一次调用返回按产品和计费周期拆分的用量与成本，覆盖 Workers、R2、D1、Workers AI、Vectorize、Images 和 Stream。",
+          en: "A single endpoint returns usage and cost broken down by product and billing period for self-serve accounts, covering Workers, R2, D1, Workers AI, Vectorize, Images, and Stream.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-04-hot",
+    date: "2026-08-04",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-04",
+      en: "🔥 Hot Topics · Aug 4, 2026",
+    },
+    summary: {
+      zh: "国家出手新能源汽车充电将全面升级，多地发文鼓励居民装修既有住房；香港传奇影星葛兰去世享年93岁；委内瑞拉强震死亡人数升至6125人；DeepSeek V4 Flash「斩杀线」重塑大模型价格战，OpenAI等巨头大幅降价对标；瑙鲁正式更改国名中文译名不变；法院执行局长骚扰女当事人索贿被停职；进口豪车在华卖不动了；智驾「小蓝灯」管控渐近；「江西球王」单场轰101分。",
+      en: "State moves to comprehensively upgrade EV charging; multiple regions encourage renovation of existing homes; Hong Kong legendary actress Ge Lan dies at 93; Venezuela earthquake death toll rises to 6,125; DeepSeek V4 Flash 'kill line' reshapes LLM price wars as OpenAI and giants slash prices; Nauru officially changes its name, Chinese name unchanged; court execution bureau chief suspended over harassment; imported luxury cars slump in China; intelligent-driving 'blue light' regulation looms; 'Jiangxi ball king' scores 101 points in one game.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "国家出手 新能源汽车充电将全面升级",
+          en: "State Moves to Comprehensively Upgrade EV Charging",
+        },
+        description: {
+          zh: "发改委、能源局印发《新型电力系统建设「十五五」规划》，到 2030 年充电设施总量超 4000 万个，形成支撑超 1.1 亿辆电动汽车的充电服务能力。",
+          en: "NDRC and NEA issue the 15th Five-Year new power system plan: 40M+ charging points by 2030, supporting over 110 million EVs with upgraded highway and rural networks.",
+        },
+      },
+      {
+        title: {
+          zh: "多地发文鼓励居民装修既有住房",
+          en: "Multiple Regions Encourage Renovating Existing Homes",
+        },
+        description: {
+          zh: "山东、珠海等地出台政策鼓励既有住房装修和局部升级改造，中国家装市场规模已超 3.2 万亿元，每年二次装修需求高达 1.5 万亿元。",
+          en: "Shandong, Zhuhai and others push policies encouraging home renovation and upgrades. China's home-improvement market exceeds 3.2 trillion yuan, with reno demand of 1.5 trillion yearly.",
+        },
+      },
+      {
+        title: {
+          zh: "香港传奇影星葛兰去世 享年93岁",
+          en: "Hong Kong Legendary Actress Ge Lan Dies at 93",
+        },
+        description: {
+          zh: "华语影坛著名歌手及演员葛兰于 8 月 3 日下午安详离世，享年 93 岁，曾主演多部经典华语歌舞片，被誉为一代歌舞巨星。",
+          en: "Ge Lan, celebrated singer-actress of Chinese-language cinema, passed away peacefully on the afternoon of Aug 3 at 93, famed for classic musical films of the 1950s-60s.",
+        },
+      },
+      {
+        title: {
+          zh: "委内瑞拉强震死亡人数上升至6125人",
+          en: "Venezuela Earthquake Death Toll Rises to 6,125",
+        },
+        description: {
+          zh: "委内瑞拉全国代表大会主席通报，该国 6 月 24 日发生的两次强震遇难人数上升至 6125 人，6462 人获救。",
+          en: "Venezuela's National Assembly president reports the June 24 twin earthquakes' death toll has risen to 6,125, with 6,462 people rescued.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 斩杀线斩的是什么",
+          en: "What Does DeepSeek's 'Kill Line' Cut?",
+        },
+        description: {
+          zh: "DeepSeek V4 Flash 定价 2 元/百万 Token，仅 Claude Opus 4.8 的 1/85，单日 Token 消耗超 8 万亿，正迫使定价偏高的中间层模型加速出局。",
+          en: "DeepSeek V4 Flash at 2 yuan per million tokens is 1/85th of Claude Opus 4.8's price with 8 trillion daily tokens, forcing overpriced mid-tier models out of the market.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI等巨头大幅降价对标DeepSeek",
+          en: "OpenAI and Giants Slash Prices to Match DeepSeek",
+        },
+        description: {
+          zh: "为应对 DeepSeek V4 Flash 的竞争，OpenAI 将 ChatGPT 5.6 Luna 价格降低 80%，中端模型 5.6 Terra 下调 20%，行业进入新阶段。",
+          en: "To counter DeepSeek V4 Flash, OpenAI cuts ChatGPT 5.6 Luna by 80% and mid-tier 5.6 Terra by 20%, as the industry enters a new price-competition phase.",
+        },
+      },
+      {
+        title: {
+          zh: "瑙鲁正式更改国名 中文译名不变",
+          en: "Nauru Officially Changes Its Name, Chinese Name Unchanged",
+        },
+        description: {
+          zh: "瑙鲁国名由「Nauru」正式更改为「Naoero」，联合国已更新相关语言表述，但其中文名「瑙鲁」维持不变。",
+          en: "Nauru officially changes its name from 'Nauru' to 'Naoero,' with the UN updating language versions, while the Chinese name 'Nauru' remains unchanged.",
+        },
+      },
+      {
+        title: {
+          zh: "法院执行局长骚扰女当事人索贿被停职",
+          en: "Court Execution Bureau Chief Suspended for Harassment",
+        },
+        description: {
+          zh: "邯郸丛台区法院执行局长被指骚扰女当事人并索贿，邯郸中院通报不当言论通话录音确系本人，郭红波已被停职将严肃处理。",
+          en: "Congtai District court execution chief is accused of harassing a female party and soliciting bribes; Handan court confirms the recording, suspending Guo Hongbo for serious handling.",
+        },
+      },
+      {
+        title: {
+          zh: "进口豪车在华卖不动了",
+          en: "Imported Luxury Cars Slump in China",
+        },
+        description: {
+          zh: "上半年进口豪华车市场整体收缩，多数超豪华品牌销量下滑，仅兰博基尼增长，保时捷、法拉利靠高端车型与定制业务稳住收益。",
+          en: "Imported luxury car market contracts in H1 with most ultra-premium brands' sales falling; only Lamborghini grew, while Porsche and Ferrari held profits via high-end and bespoke lines.",
+        },
+      },
+      {
+        title: {
+          zh: "智驾「小蓝灯」管控渐近",
+          en: "Regulation of Intelligent-Driving 'Blue Lights' Looms",
+        },
+        description: {
+          zh: "外置智驾小蓝灯仍无统一规范，已有车企通过 OTA 修改此前无法关闭的蓝灯，业内人士指其色彩不符合现有国标，需协调解决行业矛盾。",
+          en: "External ADAS 'blue lights' still lack unified standards; some automakers already altered unchangeable lights via OTA. Industry insiders note the color fails national standards.",
+        },
+      },
+      {
+        title: {
+          zh: "「江西球王」杨志军单场轰101分",
+          en: "'Jiangxi Ball King' Yang Zhijun Scores 101 Points",
+        },
+        description: {
+          zh: "宜春市篮球联赛中杨志军单场命中 28 记三分、三节拿下 90 分，全场爆砍 101 分率明月山队 121 比 75 大胜袁州区队。",
+          en: "In a Yichun basketball league game, Yang Zhijun hit 28 threes and scored 90 in three quarters, erupting for 101 total points in a 121-75 win for Mingyueshan.",
+        },
+      },
+      {
+        title: {
+          zh: "台风白海豚两种路径公布",
+          en: "Typhoon White Dolphin: Two Possible Paths",
+        },
+        description: {
+          zh: "今年第 13 号台风「白海豚」最大风力 15 级（强台风级），目前研判主要有两种可能影响我国的路径。",
+          en: "Typhoon White Dolphin, the 13th of the season, packs winds of force 15 (severe typhoon); forecasters see two main paths potentially affecting China.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-03",
     date: "2026-08-03",
     title: {
