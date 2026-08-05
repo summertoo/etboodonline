@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-05",
+    date: "2026-08-05",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-05",
+      en: "🤖 AI HOT Daily · Aug 5, 2026",
+    },
+    summary: {
+      zh: "NVIDIA 开放商用 Alpamayo 2 Super 面向 Robotaxi 与自动驾驶；商汤开源 SenseNova U1 统一推理与图像生成；OpenRouter 上线 FLUX 3 Video 统一多模态模型；蚂蚁百灵发布 Ling-3.0-flash 开源权重；腾讯混元发布 Hy ASR 3.0 语音识别；Swiftlet 在 Mac 上运行 80B 版 Qwen；Anthropic 与初创云公司 Volta 签署 100 亿美元算力协议；工信部发布首部 L3/L4 自动驾驶强制性国标 2027 年 7 月实施；GPT-5.6 Luna 降价 80% 永久生效；MiniMax-H3 通过 MLX 移植可在 Apple Silicon 上运行。",
+      en: "NVIDIA opens Alpamayo 2 Super for Robotaxi and autonomous driving; SenseTime open-sources SenseNova U1 unifying reasoning and image generation; OpenRouter hosts FLUX 3 Video unified multimodal model; Ant Ling releases Ling-3.0-flash open weights; Tencent Hunyuan launches Hy ASR 3.0 speech recognition; Swiftlet runs 80B Qwen on a Mac; Anthropic signs $10B compute deal with startup Volta; MIIT issues China's first mandatory L3/L4 autonomous driving standard (effective Jul 2027); GPT-5.6 Luna's 80% price cut is permanent; MiniMax-H3 now runs on Apple Silicon via MLX.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "NVIDIA Alpamayo 2 Super 开放商用",
+          en: "NVIDIA Alpamayo 2 Super Open for Commercial Use",
+        },
+        description: {
+          zh: "基于 Cosmos 3 Super Reasoner 构建，采用强化学习后训练，面向 Robotaxi 与自动驾驶，支持轨迹预测、因果链推理、元动作、自动标注及视觉问答等多任务输出。",
+          en: "Built on Cosmos 3 Super Reasoner with RL post-training for Robotaxi and autonomous driving, supporting trajectory prediction, causal reasoning, meta-actions, auto-labeling, and VQA.",
+        },
+      },
+      {
+        title: {
+          zh: "商汤 SenseNova U1 开源：统一推理与图像生成",
+          en: "SenseTime Open-Sources SenseNova U1: Unified Reasoning and Image Generation",
+        },
+        description: {
+          zh: "在统一流程中同时进行推理与图像生成，信息图模式可将单条提示词转为结构化幻灯片，交错模式则逐步生成图文内容，已上线 SenseNova Studio、HuggingFace 及 GitHub。",
+          en: "Combines reasoning and image generation in one pipeline: infographic mode turns a prompt into structured slides; interleaved mode builds image-text content step by step. Available on HuggingFace and GitHub.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 上线 FLUX 3 Video 统一多模态模型",
+          en: "OpenRouter Hosts FLUX 3 Video Unified Multimodal Model",
+        },
+        description: {
+          zh: "FLUX 3 Video 是统一的视频、音频、图像和动作预测多模态模型家族，基于统一架构联合训练，现已向所有人开放。",
+          en: "FLUX 3 Video is a unified multimodal family covering video, audio, image, and action prediction, jointly trained on a unified architecture and now open to everyone.",
+        },
+      },
+      {
+        title: {
+          zh: "蚂蚁百灵发布 Ling-3.0-flash 开源权重",
+          en: "Ant Ling Releases Ling-3.0-flash Open Weights",
+        },
+        description: {
+          zh: "官方 BF16 和 FP8 量化版本均已可用，用户可根据硬件、性能要求和部署需求选择最合适的版本。",
+          en: "Official BF16 and FP8 quantized versions are available, letting users pick the best fit for their hardware, performance needs, and deployment.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯混元发布 Hy ASR 3.0 preview 语音识别",
+          en: "Tencent Hunyuan Releases Hy ASR 3.0 Preview",
+        },
+        description: {
+          zh: "基于 LLM Hy3 与 MoE 架构，中文普通话 WER 3.34%、英语 WER 2.62%、粤语 WER 3.12%，支持上下文纠错、热词注入及高噪耳语等场景。",
+          en: "Built on LLM Hy3 with MoE: Mandarin WER 3.34%, English 2.62%, Cantonese 3.12%, with context correction, hotword injection, and noisy-whisper support.",
+        },
+      },
+      {
+        title: {
+          zh: "Swiftlet：在 Mac 上运行 80B 版 Qwen",
+          en: "Swiftlet: Running 80B Qwen on a Mac",
+        },
+        description: {
+          zh: "Swift + Metal 运行时，在普通 Apple 设备上运行 Qwen3-Next 和 Qwen3.5/3.6 MoE 混合模型，仅将小型稠密核心驻留内存，按需流式加载路由专家权重。",
+          en: "A Swift + Metal runtime running Qwen3-Next and Qwen3.5/3.6 MoE hybrid models on ordinary Apple devices, keeping only a small dense core in memory and streaming expert weights on demand.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 与 Volta 签署 100 亿美元算力协议",
+          en: "Anthropic Signs $10B Compute Deal with Volta",
+        },
+        description: {
+          zh: "Anthropic 与成立仅数月的云初创公司 Volta 签署 100 亿美元算力协议，约合每年 17 亿美元，Volta 硬件几乎全为租用，算力来自比特币矿商 Bitdeer 的挪威站点。",
+          en: "Anthropic signs a $10B (about $1.7B/year) compute deal with months-old cloud startup Volta, which rents nearly all hardware, with compute from Bitcoin miner Bitdeer's Norwegian site.",
+        },
+      },
+      {
+        title: {
+          zh: "工信部发布首部 L3/L4 自动驾驶强制性国标",
+          en: "MIIT Issues First Mandatory L3/L4 Autonomous Driving Standard",
+        },
+        description: {
+          zh: "《智能网联汽车 自动驾驶系统安全要求》强制性国标获批发布，2027 年 7 月 1 日起实施，是我国首部针对 L3 级有条件自动驾驶和 L4 级高度自动驾驶的强制性国标。",
+          en: "The mandatory national standard for intelligent connected vehicle autonomous driving system safety is approved, effective July 1, 2027 — China's first binding standard for L3 and L4 systems.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-5.6 Luna 降价 80% 永久生效",
+          en: "GPT-5.6 Luna's 80% Price Cut Is Permanent",
+        },
+        description: {
+          zh: "OpenAI 确认 GPT-5.6 Luna 降价 80% 不是临时噱头而是永久调整，效率提升不会消失。",
+          en: "OpenAI confirms the 80% price cut on GPT-5.6 Luna is a permanent adjustment, not a temporary gimmick — the efficiency gains won't go away.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniMax-H3 通过 MLX 移植可在 Apple Silicon 运行",
+          en: "MiniMax-H3 Now Runs on Apple Silicon via MLX",
+        },
+        description: {
+          zh: "MiniMax-H3 是可接受文本、图像、音频和视频并生成最长 15 秒带音频视频的全模态生成系统，Python 包将其移植到 MLX，支持 Apple Silicon 运行。",
+          en: "MiniMax-H3 accepts text, image, audio, and video to generate up to 15-second clips with sound. A Python package ports it to MLX for Apple Silicon.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布 Gemini 3.6 Flash 等三款新模型",
+          en: "Google Releases Three New Gemini Models",
+        },
+        description: {
+          zh: "Google 在 7 月推出 Gemini 3.6 Flash、3.5 Flash-Lite 和 3.5 Flash Cyber 三款新模型，面向生产级 AI 智能体，主打更高 token 效率、更低延迟和更可靠性能。",
+          en: "Google launched three new Gemini models in July — 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber — for production-grade agents, with higher token efficiency, lower latency, and better reliability.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-05-hot",
+    date: "2026-08-05",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-05",
+      en: "🔥 Hot Topics · Aug 5, 2026",
+    },
+    summary: {
+      zh: "20多名中国游客被拒登机泰国机场致歉；笔试第一名称被第二名花钱劝弃考；死刑改死缓被害人家属十年后才知晓；你家楼下的兰州拉面要改名字了；韩股又涨熔断日股也飙涨；曝美拟禁止进口中国新型号光模块；韩国高温进入国家灾难状态；马斯克一个月亏掉2.45万亿元；鸿蒙智行回应「竹知了」事件；申通快递被立案调查；兰蔻在华首家旗舰店已被搬空；8岁独居女孩考上一本。",
+      en: "Over 20 Chinese tourists denied boarding, Thailand airport apologizes; top exam scorer claims second-place paid her to withdraw; death sentence commuted to reprieve, victim's family found out 10 years later; 'Lanzhou Lamian' restaurants to be renamed; Korean stocks surge with circuit breaker as Japanese stocks rally; US reportedly mulls banning new Chinese optical modules; South Korea declares national disaster over heat; Musk loses 2.45 trillion yuan in a month; Harmony Intelligent Mobility responds to 'bamboo cicada' incident; STO Express placed under investigation; Lancome's first China flagship emptied; 8-year-old who lived alone gets into university.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "20多中国游客被拒登机 泰国机场致歉",
+          en: "Over 20 Chinese Tourists Denied Boarding, Thai Airport Apologizes",
+        },
+        description: {
+          zh: "泰航 TG674 航班 20 余人被要求退出廊桥未能成行，交涉时安保被拍到做「拉眼角」动作。泰国素万那普机场致歉，称系劝离粉丝引发，已对涉事安保作纪律处分。",
+          en: "Over 20 passengers on Thai Airways TG674 were removed from the jet bridge and missed the flight; a security guard was filmed making a 'slant-eye' gesture. Suvarnabhumi apologized and disciplined the guard.",
+        },
+      },
+      {
+        title: {
+          zh: "笔试第一称被第二名花钱劝弃考",
+          en: "Top Scorer Claims Second-Place Rival Paid Her to Withdraw",
+        },
+        description: {
+          zh: "广东雷州考生陈女士反映其作为笔试第一名遭中间人数万元利诱放弃面试，并指控招考单位泄露个人信息，雷州市教育局称已启动调查。",
+          en: "A Leizhou candidate says a middleman offered tens of thousands of yuan to drop out of her interview despite ranking first; she also accuses the recruiter of leaking her info. An investigation is underway.",
+        },
+      },
+      {
+        title: {
+          zh: "死刑改死缓 被害人家属十年后才知晓",
+          en: "Death Sentence Commuted, Family Found Out 10 Years Later",
+        },
+        description: {
+          zh: "1999 年云南宣威抢劫杀人案凶手段贤峰一审死刑二审改判死缓，全程未通知被害人家属参与庭审，家属直到十年后才知道结果，该案已于 2026 年 1 月获云南省检察院受理。",
+          en: "In a 1999 robbery-homicide in Xuanwei, Yunnan, Duan Xianfeng's death sentence was commuted on appeal without notifying the victim's family, who only learned 10 years later. Yunnan prosecutors took the case in Jan 2026.",
+        },
+      },
+      {
+        title: {
+          zh: "你家楼下的兰州拉面要改名字了",
+          en: "'Lanzhou Lamian' Restaurants to Be Renamed",
+        },
+        description: {
+          zh: "「兰州拉面」跟兰州其实没多大关系，这个被叫错了四十年的名字终于要改回来了。今年 6 月，天津 72 家拉面馆集体摘下「兰州」招牌，换上「青海拉面」门头。",
+          en: "'Lanzhou Lamian' actually has little to do with Lanzhou, and the misnamed label from 40 years is being corrected. In June, 72 Tianjin noodle shops swapped their 'Lanzhou' signs for 'Qinghai Lamian.'",
+        },
+      },
+      {
+        title: {
+          zh: "韩股又涨熔断了 日股也飙涨",
+          en: "Korean Stocks Surge with Circuit Breaker, Japanese Stocks Rally",
+        },
+        description: {
+          zh: "5 日早盘韩国交易所启动 SIDECAR 机制暂停 KOSPI 程序化买盘 5 分钟，韩综指涨幅一度扩大至 4%，SK 海力士、三星电子涨超 6%，日经 225 涨超 3%。",
+          en: "The Korean exchange triggered the SIDECAR mechanism, pausing KOSPI program buying for 5 minutes as the index rose up to 4%. SK Hynix and Samsung rose over 6%, with Nikkei 225 up over 3%.",
+        },
+      },
+      {
+        title: {
+          zh: "曝美拟禁止进口中国新型号光模块",
+          en: "US Reportedly Mulls Ban on New Chinese Optical Modules",
+        },
+        description: {
+          zh: "路透社援引知情人士称 FCC 正制定措施计划禁止进口中国新型号光模块，美国官员希望年内公布并实施，理由是无根据指控中国企业窃取数据、植入恶意软件。",
+          en: "Reuters reports the FCC is drafting measures to ban imports of new Chinese optical modules, hoping to finalize within the year, citing unsubstantiated data-theft and malware claims.",
+        },
+      },
+      {
+        title: {
+          zh: "韩国高温 李在明：进入国家灾难状态",
+          en: "South Korea Declares National Disaster Over Heat",
+        },
+        description: {
+          zh: "因高温持续，韩国正式进入「国家灾难状态」，自 5 月以来全国已报告近 2000 例高温相关疾病、16 人死亡。",
+          en: "South Korea declares a 'national disaster' over persistent heat, with nearly 2,000 heat-related illnesses and 16 deaths reported since May.",
+        },
+      },
+      {
+        title: {
+          zh: "马斯克一个月亏掉2.45万亿元",
+          en: "Musk Loses 2.45 Trillion Yuan in a Month",
+        },
+        description: {
+          zh: "马斯克遭遇「黑色七月」，一个月财富缩水约 3630 亿美元（合 2.45 万亿元人民币），相当于亏掉两个「黄仁勋」。",
+          en: "Musk's 'black July' shaved about $363 billion (2.45 trillion yuan) off his wealth in one month — roughly two 'Jensen Huangs' lost.",
+        },
+      },
+      {
+        title: {
+          zh: "鸿蒙智行回应「竹知了」事件",
+          en: "Harmony Intelligent Mobility Responds to 'Bamboo Cicada' Incident",
+        },
+        description: {
+          zh: "鸿蒙智行发布说明称相关投诉均有明确侵权事实和留存证据，不存在仅为正常把玩、制作、展示或销售「竹知了」的内容，未向任何电商平台投诉或要求下架该商品。",
+          en: "Harmony Intelligent Mobility says complaints cite clear infringement facts and evidence, deny targeting normal play/making/display/sale of 'bamboo cicadas,' and deny any requests to platforms to delist them.",
+        },
+      },
+      {
+        title: {
+          zh: "申通快递被立案调查",
+          en: "STO Express Under Investigation",
+        },
+        description: {
+          zh: "国家邮政局称使用「申通快递」商标字号经营的企业多发生产安全事故且隐患频现，申通快递对安全生产管理缺位，已被依法立案调查。",
+          en: "State Post Bureau says firms operating under the 'STO Express' brand have had recurring safety accidents and hazards; STO Express Ltd faces a formal investigation for inadequate safety management.",
+        },
+      },
+      {
+        title: {
+          zh: "兰蔻在华首家旗舰店已被搬空",
+          en: "Lancome's First Flagship in China Emptied",
+        },
+        description: {
+          zh: "北京王府井 apm 商场一层的兰蔻全球旗舰店大门紧闭、店内已搬空，这家号称兰蔻在中国首家也是最大的高档美妆门店，从开业到关闭不到 6 年。",
+          en: "Lancome's global flagship at Beijing's apm mall is shut and stripped empty. The store, once China's largest Lancome beauty outpost, closed in under six years.",
+        },
+      },
+      {
+        title: {
+          zh: "女孩8岁独居床头放菜刀现考上一本",
+          en: "Girl Who Lived Alone at 8 Now Admitted to University",
+        },
+        description: {
+          zh: "四川安岳女孩张筝 8 岁起曾独自生活两年、床头常备菜刀自卫，10 岁被老师收养，2026 年高考以 598 分考入四川师范大学公费师范生，计划返乡支教。",
+          en: "Zhang Zheng of Anyue, Sichuan, lived alone from age 8 with a kitchen knife by her bed for self-defense, was adopted by a teacher at 10, and scored 598 to enter Sichuan Normal University, planning to teach back home.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-04",
     date: "2026-08-04",
     title: {
