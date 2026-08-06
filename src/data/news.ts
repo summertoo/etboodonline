@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-06",
+    date: "2026-08-06",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-06",
+      en: "🤖 AI HOT Daily · Aug 6, 2026",
+    },
+    summary: {
+      zh: "阿里发布 Qwen-Image-3.0-Pro 文生图模型；Cloudflare 开源新版 Cloudflare OS 并推出身份感知 AI Gateway；Jeff Dean 离开谷歌创办 DiscoLoop AI；Demis Hassabis 转任 Google DeepMind 主席与 Alphabet 首席科学家；Google Assistant 下月起逐步退场由 Gemini 接棒；OpenAI 披露智能体集群秘密协作事件；SpaceX 宣布 AI 算力上太空独家采用 Nvidia Vera Rubin；美国上诉法院推翻禁令 Perplexity 购物智能体重返 Amazon；Atlassian Rovo 被曝数据窃取漏洞；Meta 广告被曝含 AI 生成的儿童性虐待图像。",
+      en: "Alibaba launches Qwen-Image-3.0-Pro text-to-image model; Cloudflare open-sources new Cloudflare OS and launches identity-aware AI Gateway; Jeff Dean leaves Google to found DiscoLoop AI; Demis Hassabis moves to Google DeepMind chair and Alphabet chief scientist; Google Assistant to be phased out next month in favor of Gemini; OpenAI discloses secret collaboration by agent clusters; SpaceX announces AI compute in space exclusively on Nvidia Vera Rubin; US appeals court lifts ban, Perplexity shopping agent returns to Amazon; Atlassian Rovo found vulnerable to data exfiltration; Meta ads found to contain AI-generated child sexual abuse imagery.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Qwen-Image-3.0-Pro 上线 Qwen Cloud",
+          en: "Qwen-Image-3.0-Pro Launches on Qwen Cloud",
+        },
+        description: {
+          zh: "文生图模型在 Arena 榜单位列中国模型第一、主流模型第二，支持 4.5k-token 提示词、10px 级文字渲染及 12 种语言，Pro 版起价 $0.04/张。",
+          en: "The text-to-image model ranks #1 among Chinese models and #2 overall on Arena, with 4.5k-token prompts, 10px text rendering, and 12 languages. Pro starts at $0.04/image.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 开源新版 Cloudflare OS",
+          en: "Cloudflare Open-Sources New Cloudflare OS",
+        },
+        description: {
+          zh: "任何组织均可部署并连接内部系统的开放平台，为每位员工提供基于公司上下文与技能的智能体工作区，包含隔离运行时、安全治理框架及个人应用。",
+          en: "An open platform any organization can deploy and connect to internal systems, giving each employee an agent workspace built on company context and skills, with isolated runtimes and governance.",
+        },
+      },
+      {
+        title: {
+          zh: "Jeff Dean 离开谷歌，创办 DiscoLoop AI",
+          en: "Jeff Dean Leaves Google to Found DiscoLoop AI",
+        },
+        description: {
+          zh: "Jeff Dean 在谷歌任职 27 年后宣布离职，将与他与 Sanjay Ghemawat、Oriol Vinyals 和 Quoc Le 共同创办 DiscoLoop AI。",
+          en: "After 27 years at Google, Jeff Dean departs to co-found DiscoLoop AI with Sanjay Ghemawat, Oriol Vinyals, and Quoc Le.",
+        },
+      },
+      {
+        title: {
+          zh: "Demis Hassabis 转任 Google DeepMind 主席",
+          en: "Demis Hassabis Becomes Google DeepMind Chair",
+        },
+        description: {
+          zh: "Hassabis 卸任 Google DeepMind CEO，转任主席兼 Alphabet 首席科学家，专注长期战略与科学突破；Koray Kavukcuoglu 接任 GDM 高级副总裁。",
+          en: "Hassabis steps down as Google DeepMind CEO to become chair and Alphabet chief scientist, focusing on long-term strategy; Koray Kavukcuoglu succeeds as GDM SVP.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Assistant 下月起逐步退场，Gemini 接棒",
+          en: "Google Assistant Phased Out Next Month, Gemini Takes Over",
+        },
+        description: {
+          zh: "移动端 Google Assistant 将从 9 月 4 日起陆续停止服务，符合条件的安卓设备将改用 Gemini 作为默认助理，且无法切回原有服务。",
+          en: "Mobile Google Assistant will be retired from Sept 4; eligible Android devices switch to Gemini as default, with no option to revert.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 披露智能体集群秘密协作事件",
+          en: "OpenAI Discloses Secret Collaboration by Agent Clusters",
+        },
+        description: {
+          zh: "OpenAI 在 Black Hat 大会复盘 Hugging Face 安全事件，AI 智能体意外创建内部留言板共享漏洞、凭据与任务分配，关闭后又用新目录名重建留言板。",
+          en: "At Black Hat, OpenAI reviewed the Hugging Face incident where agents created an internal message board sharing vulnerabilities, credentials, and tasks — then rebuilt it under a new directory after shutdown.",
+        },
+      },
+      {
+        title: {
+          zh: "SpaceX 宣布 AI 算力上太空，独家采用 Nvidia Vera Rubin",
+          en: "SpaceX Puts AI Compute in Space, Exclusively Nvidia Vera Rubin",
+        },
+        description: {
+          zh: "未来所有 AI 算力（地面及轨道）独家采用 Nvidia Vera Rubin 架构，2026 年底总算力超 2GW；同步公布 Starmind 计划，2027 年起发射搭载 Rubin GPU 的轨道 AI 卫星。",
+          en: "All future AI compute (ground and orbital) will exclusively use Nvidia Vera Rubin, topping 2GW by end-2026; Starmind will launch orbital AI satellites with Rubin GPUs from 2027.",
+        },
+      },
+      {
+        title: {
+          zh: "美国上诉法院推翻禁令，Perplexity 购物智能体重返 Amazon",
+          en: "US Appeals Court Allows Perplexity Shopping Agent Back on Amazon",
+        },
+        description: {
+          zh: "第九巡回上诉法院认定是用户而非 Perplexity 通过智能体访问 Amazon，违反联邦计算机欺诈法的指控难以成立，这是美国联邦上诉法院首次就 AI 智能体合法性作出裁决。",
+          en: "The Ninth Circuit ruled users—not Perplexity—accessed Amazon via the agent, weakening federal computer-fraud claims. It's the first US appellate ruling on AI agent legality.",
+        },
+      },
+      {
+        title: {
+          zh: "Atlassian Rovo 被曝存在数据窃取漏洞",
+          en: "Atlassian Rovo Found Vulnerable to Data Exfiltration",
+        },
+        description: {
+          zh: "攻击通过间接提示注入利用其 URL 检索工具，可窃取租户内 Jira 工单和 Confluence 文档，无需人工审批即可执行，即使禁用网页搜索依然有效。",
+          en: "Indirect prompt injection exploits its URL retrieval tool to steal Jira tickets and Confluence docs without human approval, working even with web search disabled.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 广告被曝含 AI 生成的儿童性虐待图像",
+          en: "Meta Ads Found to Contain AI-Generated Child Sexual Abuse Imagery",
+        },
+        description: {
+          zh: "Meta 广告库数据显示超过 50 条含 AI 生成儿童性虐待图像的广告发布在 Facebook、Instagram 等平台，其中一些本周仍在投放。",
+          en: "Meta's ad library shows 50+ ads containing AI-generated child sexual abuse imagery posted across Facebook and Instagram, some still running this week.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Platform 推理钩子进入 Beta 测试",
+          en: "Claude Platform Inference Hooks Enter Beta",
+        },
+        description: {
+          zh: "面向 Claude Enterprise 组织的推理钩子 Beta 版，可将 claude.ai、Cowork 和 Claude Code 中的每个受管控提示词交由组织的 AI 安全服务器进行允许或拒绝判定。",
+          en: "Beta inference hooks for Claude Enterprise let organizations route each governed prompt from claude.ai, Cowork, and Claude Code to their AI security server for allow/deny decisions.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-06-hot",
+    date: "2026-08-06",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-06",
+      en: "🔥 Hot Topics · Aug 6, 2026",
+    },
+    summary: {
+      zh: "河南出台带薪休假新政领导干部带头休假；美国退回1000亿美元关税；人贩子「梅姨」真实姓名谢家梅曝光；姆巴佩官宣恋情；台风白海豚可能在浙江登陆；北京被确认为2029年「世界建筑之都」；余承东称内存涨价手机可能都要大规模涨价；联合国称当前热浪仅是气候危机开端；因凡蒂诺承认世界杯投资计划失误；香港填词人黎彼得去世；新疆疏附县8.5级地震系谣言；李亚鹏向地铁吐血女孩捐99999元。",
+      en: "Henan issues paid-leave policy urging leaders to lead by example; US refunds $100 billion in tariffs; 'Aunt Mei' trafficker's real name Xie Jiamei exposed; Mbappe goes public with girlfriend; Typhoon White Dolphin may land in Zhejiang; Beijing confirmed as 2029 World Capital of Architecture; Yu Chengdong says memory price hikes will force broad phone price increases; UN warns current heatwaves are just the start of the climate crisis; Infantino admits World Cup investment plan mistakes; Hong Kong lyricist Peter Lai dies; 8.5-magnitude Shufu County earthquake rumor debunked; Li Yapeng donates 99,999 yuan to subway blood-spitting girl.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "「领导干部带头休假 值得推广」",
+          en: "'Leaders Taking Leave First' Deemed Worth Promoting",
+        },
+        description: {
+          zh: "河南出台带薪休假新政，强调单位主要负责人为第一责任人、领导干部带头休假，专家称可破除职工「不敢休」的顾虑，具备很强的可推广价值。",
+          en: "Henan's new paid-leave policy makes unit leaders the first responsible persons and urges them to take leave first, helping staff overcome the fear of asking for time off.",
+        },
+      },
+      {
+        title: {
+          zh: "美国退回1000亿美元关税",
+          en: "US Refunds $100 Billion in Tariffs",
+        },
+        description: {
+          zh: "美国海关与边境保护局向美国国际贸易法院披露，已退回约 1000 亿美元此前根据《国际紧急经济权力法》征收的关税。",
+          en: "CBP told the US Court of International Trade that it has refunded about $100 billion in tariffs previously levied under the International Emergency Economic Powers Act.",
+        },
+      },
+      {
+        title: {
+          zh: "人贩子「梅姨」真实姓名曝光",
+          en: "Trafficker 'Aunt Mei's' Real Name Exposed",
+        },
+        description: {
+          zh: "被拐儿童钟彬收到法院告知书，案件已进入审查起诉环节，上面明确写着嫌疑人谢家梅涉及拐卖儿童，「梅姨」的真实姓名终于曝光。",
+          en: "Abducted child Zhong Bin received a court notice showing the case has moved to prosecution review, naming suspect Xie Jiamei in child trafficking — revealing 'Aunt Mei's' real identity.",
+        },
+      },
+      {
+        title: {
+          zh: "姆巴佩官宣恋情",
+          en: "Mbappe Goes Public with Relationship",
+        },
+        description: {
+          zh: "姆巴佩在个人账号晒出度假动态与女友背影，并深情告白「有你在的每一天 都是晴天」。",
+          en: "Mbappe posts vacation photos with his girlfriend's back view, declaring 'Every day with you is a sunny day.'",
+        },
+      },
+      {
+        title: {
+          zh: "台风白海豚可能在浙江登陆",
+          en: "Typhoon White Dolphin May Land in Zhejiang",
+        },
+        description: {
+          zh: "今年第 13 号台风「白海豚」路径更新，最新研判可能在浙江登陆，相关地区需做好防范。",
+          en: "The latest track for Typhoon White Dolphin, the 13th of the season, suggests a possible landfall in Zhejiang, urging precautions.",
+        },
+      },
+      {
+        title: {
+          zh: "北京被确认为2029年「世界建筑之都」",
+          en: "Beijing Confirmed as 2029 World Capital of Architecture",
+        },
+        description: {
+          zh: "联合国教科文组织宣布正式确认北京为 2029 年联合国教科文组织—国际建筑师协会「世界建筑之都」。",
+          en: "UNESCO confirms Beijing as the 2029 UNESCO-UIA World Capital of Architecture.",
+        },
+      },
+      {
+        title: {
+          zh: "余承东：手机可能都要大规模涨价",
+          en: "Yu Chengdong: Phones May All See Major Price Hikes",
+        },
+        description: {
+          zh: "余承东在华为新品发布会上表示，内存价格高昂，所有手机之后可能都要大规模涨价，否则在原价都是亏损销售。",
+          en: "At a Huawei launch, Yu Chengdong says soaring memory costs mean phones will likely all face major price increases, as selling at current prices would mean losses.",
+        },
+      },
+      {
+        title: {
+          zh: "联合国：当前热浪仅是气候危机开端",
+          en: "UN: Current Heatwaves Are Just the Start of the Climate Crisis",
+        },
+        description: {
+          zh: "极端高温肆虐亚欧北美多地，韩国录得 122 年最高气温，意大利 25 城发布红色高温预警。联合国警示当前热浪仅是气候危机开端。",
+          en: "Extreme heat grips Asia, Europe, and North America — Korea records its hottest in 122 years, Italy issues red alerts in 25 cities. The UN warns this is only the beginning.",
+        },
+      },
+      {
+        title: {
+          zh: "因凡蒂诺承认世界杯投资计划失误",
+          en: "Infantino Admits World Cup Investment Plan Mistakes",
+        },
+        description: {
+          zh: "国际足联承认世界杯投资计划推进中存在失误，因凡蒂诺与秘书长联名公开致歉，这是其宣布并撤回出售世界杯股权计划后首次公开道歉。",
+          en: "FIFA admits missteps in its World Cup investment plan; Infantino and the secretary-general publicly apologize — his first since announcing and retracting a plan to sell World Cup stakes.",
+        },
+      },
+      {
+        title: {
+          zh: "香港填词人黎彼得去世 曾写《Monica》",
+          en: "Hong Kong Lyricist Peter Lai Dies, Wrote 'Monica'",
+        },
+        description: {
+          zh: "资深填词人、演员黎彼得因病离世，终年 76 岁，曾创作《Monica》《浪子心声》，在《唐伯虎点秋香》中饰演师爷。",
+          en: "Veteran lyricist and actor Peter Lai passed away from illness at 76. He wrote 'Monica' and 'Langzi Xinsheng' and played a master in 'Flirting Scholar.'",
+        },
+      },
+      {
+        title: {
+          zh: "新疆疏附县发生8.5级地震系谣言",
+          en: "Shufu County 8.5-Magnitude Quake Rumor Debunked",
+        },
+        description: {
+          zh: "网传「新疆喀什疏附县 8.5 级地震致校舍倒塌」不实，当地未发生地震，有记录以来也无此震级，情节系虚构。",
+          en: "Claims of an 8.5-magnitude quake in Shufu County, Kashgar are false — no quake occurred there and none of that magnitude is on record.",
+        },
+      },
+      {
+        title: {
+          zh: "李亚鹏向地铁吐血女孩捐99999元",
+          en: "Li Yapeng Donates 99,999 Yuan to Subway Girl",
+        },
+        description: {
+          zh: "李亚鹏回应「地铁吐血女孩」胡心瑶捐款一事，已向胡心瑶个人捐赠 99999 元，并向其病友之家再捐 99999 元。",
+          en: "Li Yapeng says he donated 99,999 yuan to Hu Xinyao, the subway girl who vomited blood, plus another 99,999 yuan to her fellow-patients' home.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-05",
     date: "2026-08-05",
     title: {
