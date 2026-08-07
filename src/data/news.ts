@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-07",
+    date: "2026-08-07",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-07",
+      en: "🤖 AI HOT Daily · Aug 7, 2026",
+    },
+    summary: {
+      zh: "NVIDIA 发布 Cosmos 3 开放物理 AI 基础全模态模型；ChatGPT 推出改进版 GPT-5.6 Sol 并扩大免费用户权限；谷歌、亚马逊、微软支持 Agent Plugins 1.0.0 统一智能体插件规范；谷歌地图 Ask Maps 升级可对话订餐找酒店；阿里首发公测视频生成模型 Wan3.0；微软首次披露 OpenAI 贡献约七成 AI 收入；科学家首次用 AI 制造新病毒；宇树科技科创板发行价定为 150.8 元/股；Kimi K3 登陆 Databricks；OpenAI 开源 Codex Security 安全插件；面壁智能推出反向图灵测试 AI 审讯游戏 AMNESIAC。",
+      en: "NVIDIA releases Cosmos 3, an open physical-AI foundation omni-modal model; ChatGPT launches improved GPT-5.6 Sol with wider free access; Google, Amazon, Microsoft back Agent Plugins 1.0.0 unified plugin spec; Google Maps Ask Maps upgrade enables conversational reservations; Alibaba debuts Wan3.0 video generation model; Microsoft reveals OpenAI contributes ~70% of its AI revenue; scientists create a new virus with AI for the first time; Unitree sets STAR IPO price at 150.80 yuan/share; Kimi K3 lands on Databricks; OpenAI open-sources Codex Security; OpenBMB launches reverse Turing-test game AMNESIAC.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "NVIDIA 发布 Cosmos 3 开放物理 AI 模型",
+          en: "NVIDIA Releases Cosmos 3 Open Physical AI Model",
+        },
+        description: {
+          zh: "基于混合 Transformer 架构的开放物理 AI 基础全模态模型，整合视觉推理、世界生成与动作预测，推动物理 AI 前沿。",
+          en: "An open physical-AI foundation omni-modal model on a hybrid Transformer architecture, integrating visual reasoning, world generation, and action prediction.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT 推出改进版 GPT-5.6 Sol",
+          en: "ChatGPT Launches Improved GPT-5.6 Sol",
+        },
+        description: {
+          zh: "提升准确性与一致性，同时扩大免费用户访问权限，免费用户还可无限次使用 GPT-5.6 Luna 进行日常对话。",
+          en: "Improved accuracy and consistency with expanded free access; free users also get unlimited GPT-5.6 Luna for everyday conversations.",
+        },
+      },
+      {
+        title: {
+          zh: "Agent Plugins 1.0.0：统一智能体插件规范",
+          en: "Agent Plugins 1.0.0: Unified Agent Plugin Spec",
+        },
+        description: {
+          zh: "由谷歌、亚马逊、微软等支持的中立目录规范，将 Agent Skills 和 MCP 服务器打包为单一可移植单元，开发者无需为不同 AI 编码智能体维护单独封装。",
+          en: "A neutral directory spec backed by Google, Amazon, Microsoft, packaging Agent Skills and MCP servers as one portable unit, removing per-harness wrappers for developers.",
+        },
+      },
+      {
+        title: {
+          zh: "谷歌地图 Ask Maps 升级：可对话订餐、找酒店",
+          en: "Google Maps Ask Maps Upgraded for Conversational Booking",
+        },
+        description: {
+          zh: "新增智能体功能，可替用户执行订餐操作，并综合考虑饮食要求、当前位置和收藏地点等信息，还可通过对话查找酒店和当地活动。",
+          en: "New agent features handle reservations while factoring diet, location, and saved places, and let users find hotels and local events conversationally.",
+        },
+      },
+      {
+        title: {
+          zh: "阿里千问首发公测视频生成模型 Wan3.0",
+          en: "Alibaba Qwen Debuts Wan3.0 Video Generation Model",
+        },
+        description: {
+          zh: "支持稳定直出 30 秒一镜到底视频，具备导演级镜头与蒙太奇叙事，强调角色、道具、场景高一致性保持，主打超高性价比。",
+          en: "Generates stable 30-second one-shot videos with director-level cinematography and montage, strong character/prop/scene consistency, and high cost-performance.",
+        },
+      },
+      {
+        title: {
+          zh: "微软首次披露 OpenAI 贡献约七成 AI 收入",
+          en: "Microsoft Reveals OpenAI Contributes ~70% of AI Revenue",
+        },
+        description: {
+          zh: "微软首次披露 OpenAI 贡献了其约 70% 的 AI 收入，大部分为 OpenAI 在微软数据中心训练和运行 ChatGPT 的云账单，加上模型开发成本和 OpenAI 销售分成。",
+          en: "Microsoft discloses OpenAI drives roughly 70% of its AI revenue — mostly cloud bills for training and running ChatGPT in Microsoft data centers, plus model costs and revenue share.",
+        },
+      },
+      {
+        title: {
+          zh: "科学家首次用 AI 制造新病毒",
+          en: "Scientists Create New Virus with AI for the First Time",
+        },
+        description: {
+          zh: "科学家首次利用人工智能制造出新病毒，在为医学进步带来希望的同时，也引发该技术有朝一日可能被用于制造危险病原体的担忧。",
+          en: "For the first time, scientists used AI to create a new virus — promising for medicine yet raising fears the tech could one day produce dangerous pathogens.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树科技科创板发行价定为 150.8 元/股",
+          en: "Unitree Sets STAR IPO Price at 150.80 Yuan/Share",
+        },
+        description: {
+          zh: "发行 4044.6434 万股，对应上市市值约 609.93 亿元，发行市盈率 219.23 倍高于行业平均，战略配售包括社保基金、深度求索、中国石油集团等。",
+          en: "Listing 40.45M shares for a ~60.99 billion yuan market cap at a P/E of 219.23x, above the industry average; strategic placement includes social security fund, DeepSeek, and CNPC.",
+        },
+      },
+      {
+        title: {
+          zh: "Kimi K3 登陆 Databricks",
+          en: "Kimi K3 Now Available on Databricks",
+        },
+        description: {
+          zh: "Moonshot AI 的 Kimi K3 通过 Unity AI Gateway 在 Databricks 上可用，一年前最佳开放权重模型与专有模型的差距如今已显著缩小。",
+          en: "Moonshot AI's Kimi K3 is now available on Databricks via Unity AI Gateway, with the open-weights gap vs proprietary models shrinking markedly from a year ago.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 开源 Codex Security 安全插件",
+          en: "OpenAI Open-Sources Codex Security Plugin",
+        },
+        description: {
+          zh: "Vibe Coding 产品必备的安全扫描插件，外部 Agent 均可调用，已支持通过 OpenRouter 和 Fireworks 接入第三方模型。",
+          en: "A must-have security scanning plugin for vibe-coding products, callable by external agents, with third-party model support via OpenRouter and Fireworks.",
+        },
+      },
+      {
+        title: {
+          zh: "面壁智能 AMNESIAC：反向图灵测试 AI 审讯游戏",
+          en: "OpenBMB AMNESIAC: Reverse Turing-Test Interrogation Game",
+        },
+        description: {
+          zh: "玩家需说服 AI 审讯官 A.M.N. 自己是人类，由 MiniCPM-o 4.5 驱动实时对话与推理，结合摄像头面部表情、脉搏信号与响应计时进行多模态判定。",
+          en: "Players must convince AI interrogator A.M.N. that they're human. Driven by MiniCPM-o 4.5 with VoxCPM voice, plus camera, pulse, and response-timing multimodal signals.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-07-hot",
+    date: "2026-08-07",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-07",
+      en: "🔥 Hot Topics · Aug 7, 2026",
+    },
+    summary: {
+      zh: "越来越多高分考生放弃985选警校；多地要求领导干部带头休假；「China Cool」成海外热词；画像师林宇辉画梅姨7年想亲眼看看；戚薇开放形象 AI 授权内娱第一人；今日立秋养生避开六大误区；美国将对多晶硅衍生品加征15%关税；曝 OpenAI 最快下周推出 Astra AI；宇树科技发行价 150.80 元/股；台风白海豚或吞并台风鲸鱼；AI 终结印度三十年「外包神话」；生猪养殖户自救砍母猪买保险。",
+      en: "More high-scoring students skip 985 universities for police academies; multiple regions urge leaders to take leave first; 'China Cool' becomes an overseas buzzword; sketch artist Lin Yuhui wants to see 'Aunt Mei' after 7 years; Qi Wei opens AI authorization of her image, first in Chinese entertainment; today is Start of Autumn, avoid six wellness pitfalls; US to add 15% tariff on polysilicon derivatives; OpenAI reportedly to launch Astra AI as soon as next week; Unitree IPO price 150.80 yuan/share; Typhoon White Dolphin may absorb Typhoon Whale; AI ends India's 30-year 'outsourcing myth'; pig farmers slash sows and buy insurance to survive.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "越来越多高分考生放弃985选警校",
+          en: "More High-Scoring Students Choose Police Academies Over 985",
+        },
+        description: {
+          zh: "警校成为越来越多高分考生的新选择，海南考生 656 分填报警校网络安全执法专业，多地数据显示公安院校录取分数持续走高。",
+          en: "Police academies are drawing more top scorers: a Hainan student with 656 points chose a cybersecurity enforcement major, and admission lines keep rising nationwide.",
+        },
+      },
+      {
+        title: {
+          zh: "多地要求领导干部带头休假",
+          en: "Multiple Regions Urge Leaders to Take Leave First",
+        },
+        description: {
+          zh: "多个省份发出落实带薪年休假制度的通知，多地要求领导干部带头休假，推动全员应休尽休、休满休足。",
+          en: "Several provinces push paid annual leave, urging leaders to set an example and take their full quota so everyone can rest properly.",
+        },
+      },
+      {
+        title: {
+          zh: "「China Cool」成海外热词",
+          en: "'China Cool' Becomes Overseas Buzzword",
+        },
+        description: {
+          zh: "依托广袤国土形成的避暑资源，加之免签政策与完善配套，今年夏天不少外国游客纷纷来华纳凉避暑，中国夏日持续收获好评。",
+          en: "Thanks to vast cooling summer destinations plus visa-free policies and facilities, many foreign tourists are flocking to China this summer.",
+        },
+      },
+      {
+        title: {
+          zh: "画像师林宇辉：画梅姨7年 想亲眼看看",
+          en: "Sketch Artist Lin Yuhui: 7 Years Drawing 'Aunt Mei'",
+        },
+        description: {
+          zh: "山东省公安厅退休模拟画像专家林宇辉表示，画了「梅姨」7 年画像，梅姨这个面孔让他很厌恶，想亲眼去看看「梅姨」。",
+          en: "Retired Shandong police sketch artist Lin Yuhui, who drew 'Aunt Mei' for 7 years, says the face disgusts him and he wants to see her in person.",
+        },
+      },
+      {
+        title: {
+          zh: "内娱第一人 戚薇开放形象AI授权",
+          en: "Qi Wei Opens AI Authorization of Her Image, First in Chinese Entertainment",
+        },
+        description: {
+          zh: "戚薇推出个人官方数字分身，开放自身形象的规范化 AI 授权，其主演的 AI 漫剧也将上线，律师提醒肖像权可以使用但不能买断。",
+          en: "Qi Wei launches an official digital avatar, opening standardized AI licensing of her image; an AI animation series she stars in is coming. Lawyers warn image rights can't be bought out.",
+        },
+      },
+      {
+        title: {
+          zh: "今日立秋 养生千万避开六大误区",
+          en: "Start of Autumn: Avoid Six Wellness Pitfalls",
+        },
+        description: {
+          zh: "8 月 7 日迎来立秋节气，立秋养生以食补为主，专家提醒需避开六大养生误区。",
+          en: "Today marks the Start of Autumn. Health experts say seasonal wellness centers on diet and warn against six common pitfalls.",
+        },
+      },
+      {
+        title: {
+          zh: "美国将对多晶硅衍生品加征15%关税",
+          en: "US to Add 15% Tariff on Polysilicon Derivatives",
+        },
+        description: {
+          zh: "美国白宫发布公告，将对进口多晶硅衍生品加征 15% 关税，并对进口多晶硅及衍生品设定最低进口价机制。",
+          en: "The White House announces a 15% tariff on imported polysilicon derivatives plus a minimum import price mechanism for polysilicon.",
+        },
+      },
+      {
+        title: {
+          zh: "曝OpenAI最快下周推出Astra AI",
+          en: "OpenAI Reportedly to Launch Astra AI Next Week",
+        },
+        description: {
+          zh: "爆料称 OpenAI 目标下周发布 Astra 模型，内部代号 mewfour，是全新预训练模型，也是 OpenAI 自 GPT-4.5 以来训练的最大模型。",
+          en: "Reports say OpenAI plans to release the Astra model next week, codenamed mewfour — a brand-new pretrained model and its largest since GPT-4.5.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树科技发行价 150.80 元/股",
+          en: "Unitree IPO Price Set at 150.80 Yuan/Share",
+        },
+        description: {
+          zh: "宇树科技科创板发行价定为 150.80 元/股，发行 4044.6434 万股，对应上市市值约 609.93 亿元，市盈率 219.23 倍高于行业平均。",
+          en: "Unitree's STAR Market IPO prices at 150.80 yuan/share across 40.45M shares, a market cap of ~60.99 billion yuan and a P/E of 219.23x, above the sector average.",
+        },
+      },
+      {
+        title: {
+          zh: "台风白海豚或吞掉台风鲸鱼",
+          en: "Typhoon White Dolphin May Absorb Typhoon Whale",
+        },
+        description: {
+          zh: "台风预警升级，「白海豚」或将吞并台风「鲸鱼」，预计 9 日下午至 10 日早晨在浙江至福建北部沿海登陆，当地需做好防范准备。",
+          en: "Typhoon warnings rise as White Dolphin may absorb Whale, possibly making landfall on the Zhejiang-to-northern Fujian coast from the afternoon of the 9th into the 10th.",
+        },
+      },
+      {
+        title: {
+          zh: "AI终结印度三十年「外包神话」",
+          en: "AI Ends India's 30-Year 'Outsourcing Myth'",
+        },
+        description: {
+          zh: "随着企业级 AI 快速落地，印度 IT 外包行业持续承压，外资撤离、IT 股大跌、裁员增加，依赖低成本人力的外包模式优势不断削弱。",
+          en: "As enterprise AI lands, India's IT outsourcing industry sags with capital flight, falling IT stocks, and layoffs, eroding the low-cost labor model's edge.",
+        },
+      },
+      {
+        title: {
+          zh: "生猪养殖户自救：砍母猪 买保险",
+          en: "Pig Farmers Slash Sows and Buy Insurance to Survive",
+        },
+        description: {
+          zh: "受猪价持续探底影响，养殖户近一年亏损，有养殖户砍掉近九成母猪并改做轻资产代养，还投「保险+期货」收入险对冲行情波动。",
+          en: "With hog prices near eight-year lows, farmers trimmed sows by ~90%, pivoted to asset-light contract farming, and bought 'insurance + futures' income protection.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-06",
     date: "2026-08-06",
     title: {
