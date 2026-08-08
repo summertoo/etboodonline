@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-08",
+    date: "2026-08-08",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-08",
+      en: "🤖 AI HOT Daily · Aug 8, 2026",
+    },
+    summary: {
+      zh: "谷歌 DeepMind 推出 WeatherNext 气旋模型 AI 预报飓风平均提前 24 小时；火山引擎上线 Seedance 2.5 API 视频生成开启电影级长叙事；Cloudflare 推出 Kitesurf 代理优先浏览器；腾讯混元开源 HPC-Ops 算子库集成 SGLang；Claude Code 会话间可互发消息；千问推出思考研究、定时任务、办公助理等新功能；Anthropic 更新 Claude Fable 5 生物安全防护误报率大幅降低；OpenAI 披露 ChatGPT 全球 10 亿用户画像；斯坦福与 Arc Institute 用 AI 设计全新病毒基因组 16 种在实验室杀死细菌；小红书提出 CULTURE-MT 社媒翻译评测基准。",
+      en: "Google DeepMind launches WeatherNext cyclone model forecasting hurricanes 24h earlier on average; Volcano Engine debuts Seedance 2.5 API for cinematic long-form video; Cloudflare launches Kitesurf agent-first browser; Tencent Hunyuan open-sources HPC-Ops integrated into SGLang; Claude Code sessions can now message each other; Qwen adds deep research, scheduled tasks, and office assistant; Anthropic updates Claude Fable 5 biosafety with far fewer false alarms; OpenAI shares ChatGPT's 1 billion user profile; Stanford and Arc Institute use AI to design novel virus genomes, 16 kill bacteria in the lab; Xiaohongshu proposes CULTURE-MT translation benchmark.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "谷歌 WeatherNext 气旋模型：AI 预报飓风提前 24 小时",
+          en: "Google WeatherNext Cyclones: AI Forecasts Hurricanes 24h Earlier",
+        },
+        description: {
+          zh: "谷歌 DeepMind 联合多家机构推出 WeatherNext Cyclones 气旋预测模型，在路径、强度和风场结构预测精度上业界领先，有效预报时长从 2 天延长至 3 天。",
+          en: "Google DeepMind and partners unveil WeatherNext Cyclones, leading in path, intensity, and wind-field accuracy, extending effective forecast lead time from 2 to 3 days.",
+        },
+      },
+      {
+        title: {
+          zh: "Seedance 2.5 API 上线，视频生成开启「电影级长叙事」",
+          en: "Seedance 2.5 API Debuts for Cinematic Long-Form Video",
+        },
+        description: {
+          zh: "单次视频生成时长从 15 秒提升至 30 秒，支持最高 50 个全模态素材参考，在指令遵循、长叙事、真人感及声画质感上大幅提升。",
+          en: "Single-generation length grows from 15 to 30 seconds with up to 50 omni-modal reference materials, sharply improving instruction following, long-form narrative, realism, and audio-visual quality.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 推出 Kitesurf：代理优先浏览器",
+          en: "Cloudflare Launches Kitesurf: Agent-First Browser",
+        },
+        description: {
+          zh: "专为 AI 智能体设计的浏览器，完全运行在 Workers 上，基于 V8 隔离环境，现已在 Browser Run 中免费开放测试。",
+          en: "A browser built for AI agents, running entirely on Workers in a V8 sandbox, now free for testing in Browser Run.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯混元开源 HPC-Ops 算子库集成 SGLang",
+          en: "Tencent Hunyuan Open-Sources HPC-Ops, Integrated into SGLang",
+        },
+        description: {
+          zh: "开源算子库 HPC-Ops 已集成至 SGLang 主分支，Dynamic Attention 与 Fused MoE 在 Hy3 模型上最高降低 TPOT 48.8%。",
+          en: "The open HPC-Ops operator library is merged into SGLang main; Dynamic Attention and Fused MoE cut TPOT by up to 48.8% on the Hy3 model.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 会话间可互发消息",
+          en: "Claude Code Sessions Can Now Message Each Other",
+        },
+        description: {
+          zh: "会话可以互相发送消息了，Claude 会发送摘要（而非历史记录或文件），另一个会话会在任务进行中接收该摘要。",
+          en: "Sessions can now message each other — Claude sends a summary (not history or files) that another session receives while working.",
+        },
+      },
+      {
+        title: {
+          zh: "千问功能上新：思考研究、定时任务、办公助理等",
+          en: "Qwen Adds Research, Scheduled Tasks, Office Assistant Features",
+        },
+        description: {
+          zh: "推出思考研究、定时任务、办公助理、语音通话等新功能，并支持最新旗舰模型 Qwen3.8-MAX。",
+          en: "Qwen launches deep research, scheduled tasks, an office assistant, and voice calls, with support for flagship Qwen3.8-MAX.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 更新 Claude Fable 5 生物安全防护",
+          en: "Anthropic Updates Claude Fable 5 Biosafety Safeguards",
+        },
+        description: {
+          zh: "将生物相关查询的「回退」次数减少约 85%，日常健康与教育问题更少切换至较弱模型，但双重用途的病毒学、毒理学和分子设计请求仍回退至 Opus 5。",
+          en: "Cuts fallback for biology queries by ~85%, so everyday health and education questions rarely switch to weaker models, while dual-use virology/toxicology/design still falls back to Opus 5.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 披露 ChatGPT 全球 10 亿用户画像",
+          en: "OpenAI Shares ChatGPT's 1 Billion User Profile",
+        },
+        description: {
+          zh: "使用方式从「问答工具」转向「任务工具」，工作场景完成任务的可能性是非工作场景的 2 倍以上，35 岁及以上用户用量上升。",
+          en: "Usage shifts from Q&A to task completion, which is twice as likely in work settings. Users aged 35+ are messaging more.",
+        },
+      },
+      {
+        title: {
+          zh: "斯坦福与 Arc Institute 用 AI 设计全新病毒基因组",
+          en: "Stanford and Arc Institute Design Novel Virus Genomes with AI",
+        },
+        description: {
+          zh: "用 AI 模型 Evo 从零设计完整病毒基因组，在实验室构建出 16 种自然界不存在的功能性病毒，成功复制并杀死宿主细菌。",
+          en: "Using the AI model Evo to design complete viral genomes from scratch, the team built 16 functional viruses not found in nature that replicated and killed host bacteria.",
+        },
+      },
+      {
+        title: {
+          zh: "小红书提出 CULTURE-MT 社媒翻译评测基准",
+          en: "Xiaohongshu Proposes CULTURE-MT Translation Benchmark",
+        },
+        description: {
+          zh: "联合浙大、复旦推出首个面向中英社媒笔记翻译、兼顾文化符号传递与情感共鸣的评测基准，并首次提出「文化有效性」评估标准与自动评估模型 JUDGER。",
+          en: "With Zhejiang and Fudan universities, it launches the first benchmark for Chinese-English social-media note translation balancing cultural symbols and emotion, plus the JUDGER auto-evaluator.",
+        },
+      },
+      {
+        title: {
+          zh: "LangChain 推出 Managed Deep Agents 公测版",
+          en: "LangChain Launches Managed Deep Agents Public Beta",
+        },
+        description: {
+          zh: "可将 Deep Agents 部署到托管的 LangSmith 运行时，提供持久化执行、记忆、沙箱、通道、评估及生产级基础设施。",
+          en: "Deploy Deep Agents onto managed LangSmith runtime with persistent execution, memory, sandboxing, channels, evals, and production infrastructure.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-08-hot",
+    date: "2026-08-08",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-08",
+      en: "🔥 Hot Topics · Aug 8, 2026",
+    },
+    summary: {
+      zh: "丈夫坠亡后百万赔偿款妻女仅得3万；台风白海豚或携极端暴雨重创东部多省市；未来五年中国民航重磅规划出炉；微信新功能可「撤回」你的撤回；胡彦斌获《歌手2026》歌王；泰国校园枪击致8死30余伤；一些民办高校招不到学生了；用 AI 造出新病毒意味着什么；中国要用5万亿织一张网；宇树王兴兴路演被问360多个问题；浙江最强风雨时段已锁定；女子生下4胞胎被全家「宠上天」。",
+      en: "Widow and daughters get only 30K of million-yuan compensation after husband's fall; Typhoon White Dolphin may strike eastern provinces with extreme rain; China's civil aviation 15th Five-Year plan unveiled; WeChat adds 'un-retract your retraction'; Hu Yanbin wins Singer 2026; Thai school shooting kills 8, injures 30+; some private colleges struggle to enroll students; what does creating new viruses with AI mean?; China to invest 5 trillion yuan in new power grid; Unitree's Wang Xingxing fielded 360+ questions; Zhejiang's strongest wind and rain window locked in; woman gives birth to quadruplets, doted on by family.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "丈夫坠亡后百万赔偿款妻女仅得3万",
+          en: "Widow and Daughters Get Only 30K of Million-Yuan Compensation",
+        },
+        description: {
+          zh: "陕西宝鸡装修工李兆在西安工地坠亡，妻女应得的 130 万元赔偿款被公婆转移，法院判决返还 54.69 万元，但执行后妻子仅拿到 30957 元，警方已介入调查。",
+          en: "After decorator Li Zhao fell to his death on a Xi'an site, his wife and daughters' 1.3 million yuan compensation was diverted by in-laws. Court ordered repayment of 546,900 yuan, but she got only 30,957.",
+        },
+      },
+      {
+        title: {
+          zh: "白海豚或携极端暴雨重创东部多省市",
+          en: "Typhoon White Dolphin May Batter Eastern Provinces with Extreme Rain",
+        },
+        description: {
+          zh: "第 13 号台风「白海豚」近海猛烈增强，预计带来极端暴雨与强劲风力，对浙江、福建、上海、江苏等多省市造成严重影响。",
+          en: "Typhoon White Dolphin is intensifying sharply offshore, expected to bring extreme rain and gales with severe impact on Zhejiang, Fujian, Shanghai, and Jiangsu.",
+        },
+      },
+      {
+        title: {
+          zh: "未来五年中国民航重磅规划出炉",
+          en: "China's Civil Aviation 15th Five-Year Plan Unveiled",
+        },
+        description: {
+          zh: "民航局、发改委、交通运输部联合印发《民用航空发展「十五五」规划》，为基本实现社会主义现代化夯实基础、全面发力。",
+          en: "CAAC, NDRC, and MOT issue the civil aviation 15th Five-Year plan, laying groundwork for basic socialist modernization.",
+        },
+      },
+      {
+        title: {
+          zh: "微信新功能：你可以「撤回」你的撤回",
+          en: "WeChat Lets You 'Un-Retract' Your Retraction",
+        },
+        description: {
+          zh: "微信新增可删除消息撤回后留下的「撤回」提示词，消息 2 分钟内可撤回并重新编辑，连续消息可一键全部撤回，文件撤回时限延长至 3 小时。",
+          en: "WeChat now lets you remove the 'withdrawn' notice. Messages can be retracted and re-edited within 2 minutes, consecutive messages retracted in one tap, and file retraction extended to 3 hours.",
+        },
+      },
+      {
+        title: {
+          zh: "胡彦斌获《歌手2026》歌王",
+          en: "Hu Yanbin Wins 'Singer 2026'",
+        },
+        description: {
+          zh: "8 月 7 日，胡彦斌拿下《歌手2026》歌王，此前他与韩磊凭合唱《走四方》拿下决赛首轮第一，手握 20% 加分优势。",
+          en: "On Aug 7, Hu Yanbin clinched the Singer 2026 crown, building on a first-round win with Han Lei for 'Walking All Directions' and a 20% scoring advantage.",
+        },
+      },
+      {
+        title: {
+          zh: "泰国校园枪击事件已致8死30余伤",
+          en: "Thai School Shooting Kills 8, Injures 30+",
+        },
+        description: {
+          zh: "泰国暖武里府一所中学发生枪击事件，枪手为一名中学生，饮弹自尽前开了 26 枪，事件共造成 8 人死亡、30 多人受伤。",
+          en: "A shooting at a Nonthaburi middle school by a student gunman who fired 26 rounds before shooting himself kills 8 and wounds over 30.",
+        },
+      },
+      {
+        title: {
+          zh: "一些民办高校招不到学生了",
+          en: "Some Private Colleges Struggle to Enroll Students",
+        },
+        description: {
+          zh: "多地部分民办高校出现招生缺额，北京、上海一些院校缺额超八成，个别学校首轮仅录取 1 人，民办高校招生分化进一步显现。",
+          en: "Several private colleges face enrollment shortfalls, with some Beijing and Shanghai campuses 80%+ unfilled and one admitting just a single student in the first round.",
+        },
+      },
+      {
+        title: {
+          zh: "用AI造出新病毒意味着什么",
+          en: "What Does Creating New Viruses with AI Mean?",
+        },
+        description: {
+          zh: "美国科学家用 AI 设计出自然界不存在的新病毒，专家称有助于开发新医学治疗手段，但也有人警告这将带来紧迫的生物安全问题。",
+          en: "US scientists used AI to design novel viruses not found in nature. Experts say it aids new treatments, while others warn of urgent biosafety concerns.",
+        },
+      },
+      {
+        title: {
+          zh: "中国要用5万亿织一张网",
+          en: "China to Invest 5 Trillion Yuan in New Power Grid",
+        },
+        description: {
+          zh: "「十五五」时期新型电网拟投资超 5 万亿元，通过电网架构、输电储能技术创新，更好满足用电及新能源消纳需求。",
+          en: "Planned new-grid investment exceeds 5 trillion yuan during the 15th Five-Year Plan, improving electricity supply and renewable integration via grid and storage innovation.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树王兴兴被问了360多个问题",
+          en: "Unitree's Wang Xingxing Fielded 360+ Questions",
+        },
+        description: {
+          zh: "宇树科技路演中，董事长王兴兴携财务总监、董事会秘书在线答疑，3 个小时内被抛出超 360 个问题。",
+          en: "At Unitree's roadshow, chairman Wang Xingxing and executives answered over 360 questions in three hours.",
+        },
+      },
+      {
+        title: {
+          zh: "浙江最强风雨时段已锁定",
+          en: "Zhejiang's Strongest Wind and Rain Window Locked In",
+        },
+        description: {
+          zh: "台风「白海豚」预计 9 日下午至 10 日早晨在苍南至象山一带沿海登陆，8 日夜至 10 日强降雨集中，台州、温州、宁波南部局地有特大暴雨。",
+          en: "White Dolphin is expected to make landfall between Cangnan and Xiangshan from the afternoon of the 9th into the 10th, with heavy rain peaking overnight, especially in Taizhou, Wenzhou, and southern Ningbo.",
+        },
+      },
+      {
+        title: {
+          zh: "女子生下4胞胎被全家「宠上天」",
+          en: "Woman Gives Birth to Quadruplets, Doted on by Family",
+        },
+        description: {
+          zh: "河南 29 岁女子顺产生下四胞胎（3 儿 1 女），医生表示比例罕见，仅万分之一，全家将其「宠上天」。",
+          en: "A 29-year-old Henan woman naturally delivered quadruplets (3 boys, 1 girl) — a rare 1-in-10,000 event — showered with love by her family.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-07",
     date: "2026-08-07",
     title: {
