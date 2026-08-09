@@ -25,6 +25,216 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-09",
+    date: "2026-08-09",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-09",
+      en: "🤖 AI HOT Daily · Aug 9, 2026",
+    },
+    summary: {
+      zh: "苹果 Mac 支持 Apple 智能配合阿里千问模型工作；OpenAI 桌面端 ChatGPT 上线语音交互功能可语音操控电脑执行多步骤任务；Grok Imagine 图像编辑重大升级支持悬停即时编辑；Claude Code v2.1.225 新增网关支出限额支持；Cloudflare 称 AI 机器人流量已超越人类，预计五年后人机流量比达 1:1000；Firebird 在亚美尼亚启动独联体地区最大 AI 工厂。",
+      en: "Apple's Mac now supports Apple Intelligence working with Alibaba's Qwen model; OpenAI desktop ChatGPT adds voice interaction to control computers with multi-step tasks; Grok Imagine image editing gets a major upgrade with hover-to-edit; Claude Code v2.1.225 adds gateway spend-limit support; Cloudflare says AI bot traffic has surpassed humans, projecting a 1:1000 ratio in five years; Firebird launches the CIS region's largest AI factory in Armenia.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "苹果 Mac 支持 Apple 智能配合阿里千问",
+          en: "Apple Mac Supports Apple Intelligence with Qwen",
+        },
+        description: {
+          zh: "苹果官网新增《在 Mac 上配合 Apple 智能使用千问》支持文档，适用于 macOS 26.6 或更高版本，需中国大陆 Apple 账户及机型，支持写作工具与 Siri。",
+          en: "Apple's support docs add 'Use Qwen with Apple Intelligence on Mac,' requiring macOS 26.6+ with a mainland China Apple account, supporting Writing Tools and Siri.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 桌面端 ChatGPT 上线语音交互功能",
+          en: "OpenAI Desktop ChatGPT Adds Voice Interaction",
+        },
+        description: {
+          zh: "新增对 ChatGPT Voice 的支持，用户可直接通过语音对话控制 AI 智能体在电脑上执行多步骤任务，支持 ChatGPT Work 和 Codex。",
+          en: "Adds ChatGPT Voice support, letting users control agents via voice to execute multi-step tasks on their computers, with ChatGPT Work and Codex support.",
+        },
+      },
+      {
+        title: {
+          zh: "Grok Imagine 图像编辑迎来重大升级",
+          en: "Grok Imagine Gets Major Image-Editing Upgrade",
+        },
+        description: {
+          zh: "用户可以悬停在 Grok Imagine 中的任意特定区域，并即时对该区域进行编辑。",
+          en: "Users can now hover over any specific region in Grok Imagine and edit it instantly.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.225：新增网关支出限额支持",
+          en: "Claude Code v2.1.225: Gateway Spend-Limit Support",
+        },
+        description: {
+          zh: "为用量警告新增网关支出限额支持，达到限额时显示上限、重置时间及操作者消息，并为不受信任目录中的 agents 增加工作区信任提示。",
+          en: "Adds gateway spend-limit support for usage warnings showing cap, reset time, and operator messages, plus workspace trust prompts for agents in untrusted directories.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare：AI 机器人流量已超越人类",
+          en: "Cloudflare: AI Bot Traffic Has Surpassed Humans",
+        },
+        description: {
+          zh: "AI 机器人等非人类流量已于 2026 年 5 月正式超过人类流量，公司预测若趋势延续，五年后非人类流量将达人类流量的 1000 倍。",
+          en: "Non-human (AI bot) traffic officially surpassed human traffic in May 2026, and Cloudflare projects it could reach 1000x human traffic in five years if the trend holds.",
+        },
+      },
+      {
+        title: {
+          zh: "Firebird 在亚美尼亚启动独联体地区最大 AI 工厂",
+          en: "Firebird Launches Largest AI Factory in CIS Region",
+        },
+        description: {
+          zh: "由 NVIDIA 加速计算和 Dell Technologies 基础设施驱动，在亚美尼亚启动独联体地区最大的 AI 工厂，亚美尼亚总理等官员出席开幕式。",
+          en: "Powered by NVIDIA accelerated computing and Dell Technologies infrastructure, the largest AI factory in the CIS region opens in Armenia, with the PM among attendees.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-09-hot",
+    date: "2026-08-09",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-09",
+      en: "🔥 Hot Topics · Aug 9, 2026",
+    },
+    summary: {
+      zh: "台风白海豚逼近浙江登陆，10级风圈触及台州；以军士兵把枪口对准中国记者；生产也能「拼单」共享制造兴起；上交绝杀清华姚明笑出表情包；三警齐发多地10级以上雷暴大风；2026「未录满」本科专业排行榜出炉；89岁钟南山每周健身3次；大爷听AI洒农药150亩苗一夜枯萎；车企回归实体按键；青海兰州在抢一碗面？青海日报称格局小了；台风将至超市叶菜肉类3小时售罄；情侣在平潭拍日出坠崖一死一伤。",
+      en: "Typhoon White Dolphin approaches Zhejiang with 10-level wind ring touching Taizhou; Israeli soldiers point guns at Chinese journalists; 'group-buying' for shared manufacturing emerges; SJTU stuns Tsinghua as Yao Ming bursts with joy; triple alerts for gales and storms; 2026 'unfilled' undergraduate major ranking released; 89-year-old Zhong Nanshan works out 3 times weekly; farmer follows AI pesticide advice, 150 mu of sesame withers overnight; automakers return to physical buttons; Qinghai Daily says the lamian 'fight' lacks vision; supermarkets sell out of greens and meat in 3 hours before typhoon; couple falls off cliff photographing sunrise in Pingtan, one dead one injured.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "白海豚台风眼一闭一睁",
+          en: "White Dolphin's Eye Opens and Closes",
+        },
+        description: {
+          zh: "台风「白海豚」迎第七次巅峰，登陆时间可能比预计更早，温州台州沿海 9 日上午就要做好防台准备，浙江其他地方注意防范持续强降雨。",
+          en: "Typhoon White Dolphin peaks for a seventh time; landfall may come earlier than expected, with Wenzhou and Taizhou coastal areas preparing by morning and sustained heavy rain elsewhere.",
+        },
+      },
+      {
+        title: {
+          zh: "以军士兵把枪口对准中国记者",
+          en: "Israeli Soldiers Point Guns at Chinese Journalists",
+        },
+        description: {
+          zh: "以色列军警在约旦河西岸卡兰迪亚难民营发起大规模军事行动，新华社记者现场蹲守时遭以军枪口对准，行动已致数十名巴勒斯坦人受伤、超七十人被逮捕。",
+          en: "During a large Israeli operation at Qalandia camp in the West Bank, a Xinhua journalist had a gun aimed at him. Dozens of Palestinians were wounded and over 70 arrested.",
+        },
+      },
+      {
+        title: {
+          zh: "生产也能「拼单」了",
+          en: "Production Can Now Be 'Group-Bought'",
+        },
+        description: {
+          zh: "共享制造将分散、闲置的生产资源集聚起来，让原材料、设备、技术、人才和数据在更大范围流动，从机器人工厂到喷涂产线日益赋能现代化产业体系。",
+          en: "Shared manufacturing pools scattered idle resources, letting materials, equipment, tech, talent, and data flow widely — from robot factories to coating lines — empowering modern industry.",
+        },
+      },
+      {
+        title: {
+          zh: "上交绝杀清华 姚明笑出表情包",
+          en: "SJTU Beats Tsinghua with Buzzer-Beater, Yao Ming Delights",
+        },
+        description: {
+          zh: "AUBL 亚洲大学生篮球联赛半决赛加时赛，上海交大胡汇压哨打板三分绝杀，上交 84:82 险胜清华晋级决赛，场边姚明激动笑出表情包。",
+          en: "In AUBL semifinal overtime, SJTU's Hu Hui sank a game-winning banked three at the buzzer for an 84-82 win over Tsinghua, sending Yao Ming into a delighted meme-worthy celebration.",
+        },
+      },
+      {
+        title: {
+          zh: "三警齐发！多地10级以上雷暴大风",
+          en: "Triple Alerts: Storms and Gales Above Force 10",
+        },
+        description: {
+          zh: "中央气象台台风、暴雨、强对流三警齐发，台风「白海豚」将于 9 日晚至 10 日早在浙江舟山到福建福鼎一带登陆，江苏、安徽、上海、浙江等地有大暴雨。",
+          en: "The national weather center issues typhoon, rainstorm, and severe-convection alerts: White Dolphin makes landfall between Zhoushan and Fuding tonight into the 10th, with torrential rain in Jiangsu, Anhui, Shanghai, and Zhejiang.",
+        },
+      },
+      {
+        title: {
+          zh: "2026「未录满」本科专业排行榜出炉",
+          en: "2026 'Unfilled' Undergraduate Major Ranking Released",
+        },
+        description: {
+          zh: "2026 年「未录满」本科专业排行榜出炉，反映当前高校招生中的专业分化趋势。",
+          en: "The 2026 ranking of under-enrolled undergraduate majors is out, highlighting growing divergence in college admissions.",
+        },
+      },
+      {
+        title: {
+          zh: "89岁钟南山高能量日常：每周健身3次",
+          en: "89-Year-Old Zhong Nanshan Works Out 3 Times a Week",
+        },
+        description: {
+          zh: "89 岁的钟南山分享自己的「高能量」日常：每周健身 3 次，项目包括拉力训练、划船运动等。",
+          en: "At 89, Zhong Nanshan shares his 'high-energy' routine: working out three times weekly with resistance training and rowing.",
+        },
+      },
+      {
+        title: {
+          zh: "大爷听AI洒农药 150亩苗一夜枯萎",
+          en: "Farmer Follows AI Pesticide Advice, 150 Mu of Seedlings Wither",
+        },
+        description: {
+          zh: "安徽滁州 67 岁农户吴大伯根据 AI 生成的除草除虫办法喷洒农药，没想到 150 亩芝麻苗一夜之间全部枯萎。",
+          en: "Wu, a 67-year-old farmer in Chuzhou, Anhui, sprayed pesticides per AI-generated advice only to see all 150 mu of sesame seedlings wither overnight.",
+        },
+      },
+      {
+        title: {
+          zh: "车企回归实体按键",
+          en: "Automakers Return to Physical Buttons",
+        },
+        description: {
+          zh: "奥迪大幅调整内饰设计方向，不再过度依赖巨型屏幕，转而重新重视实体按键、旋钮与高级内饰材料，一股转向浪潮正在全球整车市场涌现。",
+          en: "Audi will de-emphasize giant screens and revive physical buttons, knobs, and premium materials — part of a global shift in in-car interaction design.",
+        },
+      },
+      {
+        title: {
+          zh: "青海兰州在抢一碗面？这么说格局小了",
+          en: "Qinghai and Lanzhou Fighting Over a Bowl of Noodles?",
+        },
+        description: {
+          zh: "「兰州拉面」店招纷纷改换为「青海拉面」引发关注，《青海日报》刊文认为，与其在国内争名号，不如携手把蛋糕做大。",
+          en: "As 'Lanzhou Lamian' signs switch to 'Qinghai Lamian,' Qinghai Daily argues that rather than fighting over a name, regions should join hands to grow the market.",
+        },
+      },
+      {
+        title: {
+          zh: "台风将至有超市叶菜肉类3小时售罄",
+          en: "Supermarkets Sell Out of Greens and Meat in 3 Hours Before Typhoon",
+        },
+        description: {
+          zh: "台风「白海豚」登陆在即，温岭有超市叶菜、肉禽产品 3 个多小时便售空，各大商超已全面启动生活必需品应急保供机制。",
+          en: "Ahead of White Dolphin's landfall, a Wenling supermarket sold out of leafy greens and poultry in just over three hours; major chains activated emergency supply mechanisms.",
+        },
+      },
+      {
+        title: {
+          zh: "情侣在平潭拍日出时坠崖致一死一伤",
+          en: "Couple Falls Off Cliff Photographing Sunrise in Pingtan, One Dead",
+        },
+        description: {
+          zh: "8 月 7 日一对情侣在平潭拍日出时翻墙拍照，在公共礁石区域坠落，致一死一伤。",
+          en: "On Aug 7, a couple climbing over a wall to photograph sunrise in Pingtan fell from a public reef area, leaving one dead and one injured.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-08",
     date: "2026-08-08",
     title: {
