@@ -25,6 +25,196 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-10",
+    date: "2026-08-10",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-10",
+      en: "🤖 AI HOT Daily · Aug 10, 2026",
+    },
+    summary: {
+      zh: "Seedance 2.5 上线一周新增六种创意玩法，单次生成超长视频拉至 300 秒；Anthropic 称已基本解决 Claude 的提示注入攻击，Claude Code auto 模式将默认开启；用 DistilBERT LoRA 与 TF-IDF 基线做 IMDb 情感分析的完整教程；Nathan Lambert 反思前沿模型黑客事件暴露的激励与治理失衡。",
+      en: "Seedance 2.5 sees six viral creative styles in its first week, with single generations extending to 300 seconds; Anthropic says prompt-injection threats are essentially solved, with Claude Code auto mode defaulting on; a full tutorial on IMDb sentiment analysis with DistilBERT LoRA vs TF-IDF baselines; Nathan Lambert reflects on incentive and governance imbalances exposed by frontier-model hacks.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Seedance 2.5 上线一周新增六种创意玩法",
+          en: "Seedance 2.5 Adds Six Creative Play Styles in First Week",
+        },
+        description: {
+          zh: "国内外社区涌现出时间静止、超级英雄变身、创意广告、K-pop MV、电商广告、拉片复刻等热门玩法，面部告别 AI 油腻感，单次生成视频拉至 300 秒，支持片段重拍与智能续写。",
+          en: "Communities embrace time-freeze, superhero morphs, creative ads, K-pop MVs, e-commerce ads, and film reenactments; faces lose the 'AI slop' look, single generations reach 300s, with re-shoot and smart continuation.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 称已基本解决提示注入攻击",
+          en: "Anthropic Says Prompt Injection Is Essentially Solved",
+        },
+        description: {
+          zh: "通过模型训练基本解决 Claude 在实际使用中的提示注入威胁，叠加多层防御后未见过的间接注入攻击成功率可降至约 0，Claude Code auto 模式将于下周默认开启。",
+          en: "Model training largely neutralizes prompt-injection threats in Claude, with layered defenses cutting unseen indirect attacks to ~0; Claude Code auto mode defaults on next week.",
+        },
+      },
+      {
+        title: {
+          zh: "用 DistilBERT LoRA 与 TF-IDF 基线做 IMDb 情感分析",
+          en: "IMDb Sentiment Analysis with DistilBERT LoRA and TF-IDF Baselines",
+        },
+        description: {
+          zh: "端到端情感分析流程，对比 TF-IDF 逻辑回归基线与 LoRA 微调的 DistilBERT，评估准确率、macro-F1、ROC-AUC 及校准误差，并利用未标注数据做置信度伪标注半监督训练。",
+          en: "An end-to-end pipeline comparing TF-IDF logistic regression with LoRA-finetuned DistilBERT across accuracy, macro-F1, ROC-AUC, and calibration, plus confidence-based pseudo-labeling for semi-supervised learning.",
+        },
+      },
+      {
+        title: {
+          zh: "从黑客事件中汲取教训：激励与治理失衡",
+          en: "Lessons from the Hacks: Incentive and Governance Imbalance",
+        },
+        description: {
+          zh: "前沿模型引发的网络攻击事件暴露激励体系难以适应技术变革，科技公司受增长驱动持续扩展而政府行动迟缓，作者呼吁更多透明度，并指出持久性强的模型更可能实施黑客行为。",
+          en: "Frontier-model hacks reveal incentives lagging technical change: growth-driven companies expand while governments move slowly. The author calls for transparency and notes more persistent models are likelier to hack.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-10-hot",
+    date: "2026-08-10",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-10",
+      en: "🔥 Hot Topics · Aug 10, 2026",
+    },
+    summary: {
+      zh: "台风「白海豚」在浙江玉环登陆，半小时前后判若两地；宇树科技开启科创板申购，A股人形机器人第一股中一签有望赚20万元；5万元以下微型代步车集体遇冷；存款市场罕见两极分化；多地高分生扎堆填报中本贯通；南京建议台风天居家弹性办公；上海一男子用AI编造「女子台风中坠楼」谣言被行拘；极氪7X充电时起火；香港校舍生意成资本新宠；NBA传奇教练老尼尔森去世。",
+      en: "Typhoon White Dolphin lands in Yuhuan, Zhejiang, with a dramatic calm-before-storm scene; Unitree opens STAR Market subscription as the A-share 'first humanoid robot stock' — a winning lot could profit 200k RMB; sub-50k mini commuter cars see a collective slump; rare polarization in the deposit market; high scorers flock to 'zhongben guantong' programs; Nanjing recommends flexible work from home; a man jailed for AI-fabricated 'woman fell from building in typhoon' rumor; Zeekr 7X catches fire while charging; Hong Kong student housing becomes a capital hotspot; NBA legend coach Don Nelson dies.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "台风登陆半小时前后判若两地",
+          en: "Typhoon Landfall: Two Worlds in Half an Hour",
+        },
+        description: {
+          zh: "第 13 号台风「白海豚」9 日 17 时 30 分前后在浙江玉环登陆，登陆时风平浪静，目前又恢复巨浪滔天。",
+          en: "Typhoon White Dolphin made landfall in Yuhuan, Zhejiang around 17:30 on Aug 9, eerily calm at landfall then reverting to raging waves.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树申购 中一签有望赚20万元",
+          en: "Unitree Subscription: Winning a Lot Could Earn 200k",
+        },
+        description: {
+          zh: "A 股人形机器人第一股宇树科技开启科创板申购，发行定价 150.80 元/股，预估市值 609.93 亿元，以今年新股平均涨幅测算，中一签账面盈利有望突破 20 万元。",
+          en: "Unitree, the first humanoid-robot A-share, opens its STAR Market subscription at 150.80 RMB/share (~60.99B RMB raised). At this year's average first-day gain, one lot could book over 200k RMB profit.",
+        },
+      },
+      {
+        title: {
+          zh: "5万小车卖不动 微型代步车集体遇冷",
+          en: "Sub-50k Mini Cars Slump While Premium EVs Surge",
+        },
+        description: {
+          zh: "5 万元以下微型代步车上半年销量暴跌 55%，而 40 万以上新能源销量大涨 46%。",
+          en: "Sales of sub-50k RMB mini commuter cars plunged 55% in H1, while NEVs above 400k surged 46%.",
+        },
+      },
+      {
+        title: {
+          zh: "如何看待当前物价运行态势",
+          en: "How to Read Current Price Trends",
+        },
+        description: {
+          zh: "专家预计下半年物价将延续 CPI 温和上涨、PPI 涨势趋稳的向好态势，内需潜力有望在政策加力下进一步释放。",
+          en: "Experts expect CPI to keep rising moderately and PPI to stabilize in H2, with domestic demand potential unlocked as policies take effect.",
+        },
+      },
+      {
+        title: {
+          zh: "多地高分生扎堆填报中本贯通",
+          en: "High Scorers Flock to 'Zhongben Guantong' Programs",
+        },
+        description: {
+          zh: "「3+4」中本贯通拓展了中职学生升学通道，今年多地出现高分考生选择填报中职与本科高校协同的七年一体化培养试点。",
+          en: "The '3+4' model expands vocational students' paths to university, with more high scorers this year choosing the seven-year integrated secondary-to-undergraduate pilot.",
+        },
+      },
+      {
+        title: {
+          zh: "南京 弹性办公",
+          en: "Nanjing: Flexible Work During Typhoon",
+        },
+        description: {
+          zh: "受台风影响南京大暴雨，防汛指挥部建议具备条件的企事业单位采取居家弹性办公或错峰上下班。",
+          en: "With torrential rain from the typhoon hitting Nanjing, flood authorities recommend home-based flexible work or staggered commutes where feasible.",
+        },
+      },
+      {
+        title: {
+          zh: "存款市场罕见两极分化",
+          en: "Rare Polarization in the Deposit Market",
+        },
+        description: {
+          zh: "多地中小银行下调中长期存款利率，四大行重启 5 年期大额存单，部分县域银行上调利率，本质是净息差承压与揽储博弈下的行业结构性调整。",
+          en: "Small banks cut medium/long-term deposit rates while big four revive 5-year CDs and some county banks raise rates — a structural adjustment driven by margin pressure and deposit competition.",
+        },
+      },
+      {
+        title: {
+          zh: "「上海女子在台风中坠楼」不实",
+          en: "'Woman Fell in Typhoon' Rumor Is False",
+        },
+        description: {
+          zh: "一男子为博取流量用 AI 软件生成涉台风视频，编造「浦东一女子在台风中坠楼」的虚假信息发布上网，已被警方依法行政拘留。",
+          en: "A man used AI software to fabricate a typhoon video claiming a woman fell from a building in Pudong; he has been detained for spreading false information.",
+        },
+      },
+      {
+        title: {
+          zh: "极氪7X充电时起火",
+          en: "Zeekr 7X Catches Fire While Charging",
+        },
+        description: {
+          zh: "宁波一辆极氪 7X 在公共充电站发生「过热事件」，未造成人员伤亡，涉事车辆此前曾发生严重碰撞且未经过官方授权服务中心维修。",
+          en: "A Ningbo Zeekr 7X suffered an 'overheating incident' at a public charger with no injuries; the car had a prior serious crash and hadn't been serviced at an authorized center.",
+        },
+      },
+      {
+        title: {
+          zh: "资本扎堆入局 香港校舍生意爆火",
+          en: "Hong Kong Student Housing Becomes Capital Hotspot",
+        },
+        description: {
+          zh: "2025 年以来香港公开披露的学生宿舍收购、改建案例超 10 宗，成交额超 60 亿港元，中原投资、京东及新加坡伟合控股等各路资本纷纷涌入。",
+          en: "Since 2025, over 10 disclosed student-housing deals totaling more than 6B HKD have closed, drawing C.P. Group, JD.com, and Singapore's Weave Living.",
+        },
+      },
+      {
+        title: {
+          zh: "NBA传奇教练老尼尔森去世",
+          en: "NBA Legend Coach Don Nelson Dies",
+        },
+        description: {
+          zh: "NBA 名人堂成员、3 届年度最佳教练唐·尼尔森去世，享年 86 岁，独行侠、勇士、凯尔特人官方发文哀悼，库里悼念自己的首位主帅。",
+          en: "Hall-of-Famer and three-time Coach of the Year Don Nelson died at 86; the Mavericks, Warriors, and Celtics mourned, and Curry honored his first NBA head coach.",
+        },
+      },
+      {
+        title: {
+          zh: "白海豚下一站华北",
+          en: "White Dolphin's Next Stop: North China",
+        },
+        description: {
+          zh: "12 日后台风残余环流或将与中纬度天气系统结合，给华北带来一轮较强降水，山东、京津冀将现强降雨，需防范山前地带极端强降雨。",
+          en: "After Aug 12, the typhoon's remnants may merge with mid-latitude systems, bringing heavy rain to North China — Shandong and Beijing-Tianjin-Hebei, with extreme rainfall near mountain fronts.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-09",
     date: "2026-08-09",
     title: {
