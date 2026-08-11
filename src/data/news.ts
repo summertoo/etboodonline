@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-11",
+    date: "2026-08-11",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-11",
+      en: "🤖 AI HOT Daily · Aug 11, 2026",
+    },
+    summary: {
+      zh: "Meta 发布开源 30B 模型 Muse Glimmer，专为本地常驻智能体工作流优化；OpenAI 推出网络安全专用模型 GPT-5.6-Cyber；OpenRouter 推出市场智慧驱动的新版 Auto 路由器；千问开放平台上线路租房、寄快递等十余领域服务；英伟达联合六大机构融资 5000 亿美元建 AI 工厂；Claude 研究版将黎曼猜想零点下界从 41.6% 提升至 67.2%；tl;dv 逾 18.1 万段 AI 会议录音被公开暴露；a16z 称计算机操作智能体在 OSWorld 基准上已超人类水平。",
+      en: "Meta releases open 30B model Muse Glimmer optimized for local resident agent workflows; OpenAI launches cyber-specialized model GPT-5.6-Cyber; OpenRouter debuts a market-aware Auto router; Qwen Open Platform launches covering rentals, courier, and more; NVIDIA joins six institutions to mobilize $500B+ for AI factories; a research Claude lifts the Riemann-zeta zero lower bound from 41.6% to 67.2%; tl;dv exposes 181k+ AI meeting recordings; a16z says computer-operating agents now exceed humans on OSWorld.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Meta 发布开源模型 Muse Glimmer",
+          en: "Meta Releases Open Model Muse Glimmer",
+        },
+        description: {
+          zh: "开放权重 30B 参数模型，专为本地、常驻运行的智能体工作流优化，可在 Mac 或高性能 GPU 的 PC 上完全本地运行，关键智能体用例基准表现领先。",
+          en: "An open-weight 30B model tuned for local, always-on agent workflows, fully runnable on a Mac or a high-end GPU PC, leading key agent benchmarks.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 推出 GPT-5.6-Cyber 网络安全专用模型",
+          en: "OpenAI Launches GPT-5.6-Cyber for Cybersecurity",
+        },
+        description: {
+          zh: "面向授权的漏洞研究、漏洞验证与安全测试，可通过 Daybreak Red 获取，以应对网络防御窗口不断收窄的挑战。",
+          en: "Built for authorized vulnerability research, validation, and security testing, available via Daybreak Red to counter narrowing cyber-defense windows.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 推出新版 Auto 路由器",
+          en: "OpenRouter Launches New Auto Router",
+        },
+        description: {
+          zh: "基于每周超 55T token 的社区消费数据，按约 30 种任务类型匹配近 7 天实际使用的模型，多数任务和成本档位上优于旧版。",
+          en: "Powered by 55T+ weekly community tokens, it matches ~30 task types to models actually used in the last 7 days, beating the old router on most tasks and cost tiers.",
+        },
+      },
+      {
+        title: {
+          zh: "千问开放平台上线：十余领域服务可对话办理",
+          en: "Qwen Open Platform Goes Live",
+        },
+        description: {
+          zh: "向生态伙伴和开发者开放手机、PC 和 AI 眼镜三类终端服务接入，首批覆盖物流运输、房产居住、本地生活、理财、汽车等十多个领域，可对话完成咨询到下单全流程。",
+          en: "Opens phone, PC, and AI-glasses access to partners and developers across logistics, housing, local services, wealth, autos, and more — completing full flows via chat.",
+        },
+      },
+      {
+        title: {
+          zh: "英伟达联合六大机构融资5000亿美元建AI工厂",
+          en: "NVIDIA Mobilizes $500B for AI Factories",
+        },
+        description: {
+          zh: "与 Apollo、BlackRock、Blackstone、Brookfield、Goldman Sachs 和 KKR 合作建立独立融资平台，动员超 5000 亿美元第三方资本支持 AI 基础设施建设。",
+          en: "Teaming with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, and KKR, NVIDIA creates a financing platform to mobilize $500B+ for AI infrastructure.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 研究版提升黎曼猜想零点下界",
+          en: "Research Claude Advances Riemann Zeta Lower Bound",
+        },
+        description: {
+          zh: "Anthropic 让 Claude 尝试攻克黎曼猜想虽未成功，但未发布的研究版将满足猜想的 zeta 函数零点比例下界从 41.6% 提升至 67.2%。",
+          en: "Claude didn't crack the Riemann hypothesis, but an unpublished research version raised the proportion lower bound of zeta zeros satisfying it from 41.6% to 67.2%.",
+        },
+      },
+      {
+        title: {
+          zh: "tl;dv 逾18.1万段AI会议录音被公开暴露",
+          en: "tl;dv Exposes 181k+ AI Meeting Recordings",
+        },
+        description: {
+          zh: "AI 会议记录平台 tl;dv 的数据库缺乏租户隔离，任何已认证用户可查询全部会议记录，涉及 8.4 万用户、23 国政府及多所高校，约千场录制中的会议 ID 可被实时闯入。",
+          en: "tl;dv's Firestore lacked tenant isolation, letting any authenticated user query all 181k recordings covering 84k users, 23 governments, and many universities — ~1,000 live meetings were joinable.",
+        },
+      },
+      {
+        title: {
+          zh: "智能体真的会用电脑吗？a16z 给出答案",
+          en: "Can Agents Use a Computer? a16z's Answer",
+        },
+        description: {
+          zh: "计算机操作智能体在 OSWorld-Verified 最佳成绩从一年前 42% 升至 85%，超过人类测试者约 72% 的水平，Claude Fable 5 领先。",
+          en: "Computer-operating agents on OSWorld-Verified jumped from 42% a year ago to 85%, surpassing human testers' ~72%; Claude Fable 5 leads the pack.",
+        },
+      },
+      {
+        title: {
+          zh: "Zapier 用 ChatGPT Work 改造核心营销流程",
+          en: "Zapier Reworks Marketing with ChatGPT Work",
+        },
+        description: {
+          zh: "Zapier 用 ChatGPT Work 自动化线索漏斗优化与报告生成，每月对数千条线索执行 QA/QC，为销售团队每月带来七位数管道价值。",
+          en: "Zapier automates lead-funnel optimization and reporting with ChatGPT Work, QA/QC-ing thousands of leads monthly and driving seven-figure pipeline value for sales.",
+        },
+      },
+      {
+        title: {
+          zh: "Omnigent 上下文策略阻断「致命三重奏」攻击",
+          en: "Omnigent Contextual Policies Block the 'Lethal Trifecta'",
+        },
+        description: {
+          zh: "在组合上下文中识别并拦截多个看似无害请求叠加形成的恶意行为，在单个请求层面不设防，在不牺牲正常功能的前提下提升安全性。",
+          en: "Detects and blocks malicious behavior formed by stacking innocuous-looking requests at the context level, improving security without sacrificing normal functionality.",
+        },
+      },
+      {
+        title: {
+          zh: "开源不等于开放权重",
+          en: "Open Source Is Not the Same as Open Weight",
+        },
+        description: {
+          zh: "Gary Marcus 指出开放权重模型仅发布训练后的权重，用户无法访问训练数据、预处理或训练算法，在透明度与可定制性上与真正的开源有根本区别。",
+          en: "Gary Marcus argues open-weight models ship only trained weights, denying users training data, preprocessing, or algorithms — a fundamental gap from true open source.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-11-hot",
+    date: "2026-08-11",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-11",
+      en: "🔥 Hot Topics · Aug 11, 2026",
+    },
+    summary: {
+      zh: "曾年销超76万辆的雪佛兰退出中国新车赛道；台风「白海豚」致上海打破75年单日降水纪录；胖东来因不满房东涨租自掏65亿建「梦之城」；女子3万全款购入宝鸡40平米住房；哥伦比亚 7.5 级强震超百人遇难进入国家灾难状态；宇树科技科创板申购受热捧；豆包回应「推荐酒店抽取12%佣金」；陈思诚因《唐探》男主投票在家气哭；iPhone 18 Pro 等 7 款新品爆料亮相；武契奇称德国已落后于中国；卫诗雅凭《破·地狱》获百花奖最佳女主角。",
+      en: "Chevrolet, once selling 767k cars a year in China, quietly exits the new-car market; Typhoon White Dolphin shatters Shanghai's 75-year daily rainfall record; Pangdonglai founder, fed up with landlord rent hikes, spends 6.5B RMB on his own 'Dream City' mall; a woman buys a 40sqm Baoji home outright for 30k RMB; a 7.5-magnitude quake in Colombia kills 100+, triggering a national disaster state; Unitree's STAR Market subscription heats up; Doubao denies charging 12% hotel commission; Chen Sicheng is upset over his 'Detective Chinatown' leads' paltry votes; iPhone 18 Pro and six other rumored Apple releases leak; Vucic says Germany has fallen behind China; Michelle Wai wins Best Actress for 'The Last Dance'.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "曾年销超76万的神车要退场了",
+          en: "Chevrolet, Once Selling 767k a Year, Exits China",
+        },
+        description: {
+          zh: "科鲁兹、迈锐宝、赛欧曾是多少家庭的第一台车，2014 年雪佛兰在华卖出 76.7 万辆，如今以近乎安静的方式退出中国新车赛道。",
+          en: "Cruze, Malibu, and Sail were many families' first cars; Chevrolet sold 767k units in China in 2014 but is now quietly exiting the new-car market.",
+        },
+      },
+      {
+        title: {
+          zh: "上海降水量破纪录 学生舍不得点外卖",
+          en: "Shanghai Rainfall Record; Students Skip Delivery",
+        },
+        description: {
+          zh: "台风「白海豚」致上海打破 75 年单日降水量纪录，在沪学生表示外卖配送费涨 4 倍，舍不得点外卖。",
+          en: "White Dolphin set a 75-year daily rainfall record in Shanghai; students say delivery fees quadrupled, so they're skipping takeout.",
+        },
+      },
+      {
+        title: {
+          zh: "于东来自掏65亿建商场",
+          en: "Pangdonglai Founder Builds His Own Mall for 6.5B",
+        },
+        description: {
+          zh: "胖东来创始人于东来因不满房东不合理大幅涨租，关闭年利润超 1 亿元的老店，自掏约 65 亿元打造总建面超 57 万平方米的综合体「梦之城」。",
+          en: "Fed up with unreasonable rent hikes, Yu Donglai closed a store earning over 100M RMB a year and poured ~6.5B RMB into the 570k-sqm 'Dream City' complex.",
+        },
+      },
+      {
+        title: {
+          zh: "女子花3万全款购入宝鸡40平米住房",
+          en: "Woman Buys 40sqm Baoji Home for 30k RMB",
+        },
+        description: {
+          zh: "吕女士去年到宝鸡吃火锅时发现当地有「万元房」，随后以 3 万元全款购入一套 40 平米住房，后期装修又花 4 万多元。",
+          en: "After spotting a '10k RMB house' on a hotpot trip to Baoji, Ms. Lü bought a 40sqm home outright for 30k RMB, spending over 40k more on renovations.",
+        },
+      },
+      {
+        title: {
+          zh: "哥伦比亚7.5级强震进入国家灾难状态",
+          en: "Colombia Declares Disaster State After M7.5 Quake",
+        },
+        description: {
+          zh: "8 月 10 日哥伦比亚乔科省发生 7.5 级地震，震源深度 80 公里，已致超百人遇难，多地建筑受损倒塌、机场停运，政府宣布进入国家灾难状态。",
+          en: "A 7.5-magnitude quake (80 km deep) hit Chocó on Aug 10, killing 100+, damaging buildings, and grounding airports, prompting a national disaster declaration.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树科技申购 中一签有望赚20万元",
+          en: "Unitree Subscription Could Net 200k per Lot",
+        },
+        description: {
+          zh: "A 股「人形机器人第一股」宇树科技科创板申购，发行价 150.80 元/股，以今年新股首日平均涨幅测算，中一签账面盈利有望突破 20 万元。",
+          en: "Unitree, the A-share 'first humanoid-robot stock', opens subscription at 150.80 RMB/share; one winning lot could book 200k+ RMB at this year's average debut gain.",
+        },
+      },
+      {
+        title: {
+          zh: "豆包回应「推荐酒店抽取12%佣金」",
+          en: "Doubao Responds to '12% Hotel Commission' Claim",
+        },
+        description: {
+          zh: "针对通过豆包跳转抖音来客成交的酒店订单将执行约 12% 综合费率的消息，豆包回应称生活服务业务目前没有付费推广，推荐酒店也不收取广告费。",
+          en: "After reports that hotel orders via Doubao jumping to Douyin would carry ~12% fees, Doubao says its life-services business has no paid promotion and charges no ad fees.",
+        },
+      },
+      {
+        title: {
+          zh: "陈思诚在家气哭了",
+          en: "Chen Sicheng Upset by 'Detective Chinatown' Votes",
+        },
+        description: {
+          zh: "百花奖最佳男主角投票中，王宝强 0 票、刘昊然 1 票，陈思诚两部《唐探》男主拿到的票数让他直呼气哭。",
+          en: "At the Hundred Flowers best-actor vote, Wang Baoqiang got 0 and Liu Haoran 1 vote, leaving the director of both 'Detective Chinatown' films frustrated.",
+        },
+      },
+      {
+        title: {
+          zh: "iPhone18Pro等7款新品彻底泄密",
+          en: "iPhone 18 Pro and 7 New Apple Products Leak",
+        },
+        description: {
+          zh: "爆料称苹果秋季发布会预计有 7 款新品集中亮相，涵盖 iPhone 18 Pro 系列、首款折叠屏 iPhone Ultra、两款全新 Apple Watch 及两款智能家居新品。",
+          en: "Leaks suggest Apple's fall event will bring seven products: iPhone 18 Pro line, the first foldable iPhone Ultra, two new Apple Watches, and two smart-home devices.",
+        },
+      },
+      {
+        title: {
+          zh: "武契奇列数据：德国已经落后于中国",
+          en: "Vucic: Germany Has Fallen Behind China",
+        },
+        description: {
+          zh: "塞尔维亚总统武契奇称欧元区近六个月平均增长率仅 0.8%，与中国的 5% 无法相提并论，德国这个曾经的工业强国如今已在经济各领域落后于中国。",
+          en: "Serbian President Vucic notes the eurozone's 0.8% average six-month growth can't match China's 5%, saying once-industrial powerhouse Germany now lags China across the board.",
+        },
+      },
+      {
+        title: {
+          zh: "商场负一层遭积水倒灌 展厅车漂走",
+          en: "Underground Car Showroom Flooded, Cars Float Away",
+        },
+        description: {
+          zh: "台风暴雨致张家港曼巴特购物广场负一层积水倒灌，地下小鹏汽车展厅被大水冲灌，多台展车被浸泡并漂出店外。",
+          en: "Typhoon flooding hit the basement of Zhangjiagang's Mambat mall, deluging the underground XPeng showroom and floating multiple display cars out.",
+        },
+      },
+      {
+        title: {
+          zh: "卫诗雅获百花奖最佳女主角",
+          en: "Michelle Wai Wins Hundred Flowers Best Actress",
+        },
+        description: {
+          zh: "第 38 届大众电影百花奖颁奖典礼在京举行，卫诗雅凭借在《破·地狱》中的表演获得最佳女主角奖。",
+          en: "At the 38th Hundred Flowers Awards in Beijing, Michelle Wai won Best Actress for her performance in 'The Last Dance' (Pó dì yù).",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-10",
     date: "2026-08-10",
     title: {
