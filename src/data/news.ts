@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-12",
+    date: "2026-08-12",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-12",
+      en: "🤖 AI HOT Daily · Aug 12, 2026",
+    },
+    summary: {
+      zh: "NVIDIA 推出开源 30B MoE 模型 Nemotron 3.5 Lightning，加速本地智能体任务；蚂蚁百灵开源 Ling-3.0-tiny 原生混合推理模型；Runway Seedance 2.5 上线，支持 50 角色参考；消息称 Anthropic 最快今年 9 月上市，估值高达 9650 亿美元；Gemini 月活破 10 亿成谷歌增长最快产品；英伟达被曝研发万亿参数开源模型 Nemotron 4；OpenAI 用 Astra 模型攻克 10 道长期悬而未决的数学难题；微信朋友圈 AI 帮写与 AI 点评内测引热议。",
+      en: "NVIDIA launches open 30B MoE model Nemotron 3.5 Lightning to accelerate local agent tasks; Ant releases Ling-3.0-tiny, a native hybrid-reasoning model; Runway's Seedance 2.5 goes live with 50-character reference; Anthropic reportedly plans an IPO as soon as September at a $965B valuation; Gemini tops 1B monthly users, Google's fastest-growing product; NVIDIA reportedly building a trillion-parameter open model Nemotron 4; OpenAI's Astra model cracks 10 long-open math problems; WeChat's AI Moments writing and commenting beta stirs debate.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "NVIDIA 推出 Nemotron 3.5 Lightning",
+          en: "NVIDIA Unveils Nemotron 3.5 Lightning",
+        },
+        description: {
+          zh: "可定制的开源 30B 混合专家模型，专为常驻智能体设计，token 生成速度最高提升 4 倍、任务完成时间缩短 30%，可在 RTX PC、DGX 等设备运行。",
+          en: "A customizable open 30B MoE model built for resident agents, with up to 4x faster token generation and 30% shorter task times, running on RTX PCs and DGX systems.",
+        },
+      },
+      {
+        title: {
+          zh: "Ling-3.0-tiny 正式开源",
+          en: "Ling-3.0-tiny Goes Open Source",
+        },
+        description: {
+          zh: "蚂蚁百灵开源 7.9B 总参数、推理时仅激活 1.3B 参数的原生混合推理模型，同步提供 BF16、FP8 和 INT4 三个版本。",
+          en: "Ant's Bailing open-sources Ling-3.0-tiny, a 7.9B-param native hybrid-reasoning model activating just 1.3B at inference, in BF16, FP8, and INT4.",
+        },
+      },
+      {
+        title: {
+          zh: "Runway Seedance 2.5 上线",
+          en: "Runway Seedance 2.5 Goes Live",
+        },
+        description: {
+          zh: "支持 50 个独特角色参考，以及最长 30 秒、与音乐同步的片段生成。",
+          en: "Supports up to 50 distinct character references and music-synced clips up to 30 seconds long.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 最快今年 9 月上市",
+          en: "Anthropic IPO as Soon as September",
+        },
+        description: {
+          zh: "Anthropic 正为可能史上规模最大的 IPO 做准备，计划 9 月或 10 月初上市，估值高达 9650 亿美元，年化收入超 470 亿美元，并淡化中国 AI 企业的竞争影响。",
+          en: "Anthropic preps for a potentially record-breaking IPO in September or early October at a $965B valuation with $47B+ annualized revenue, downplaying Chinese AI competition.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 月活破 10 亿",
+          en: "Gemini Passes 1B Monthly Users",
+        },
+        description: {
+          zh: "每月已有超 10 亿人使用 Gemini 应用，成为谷歌有史以来增长最快、第 14 个达到 10 亿用户里程碑的产品。",
+          en: "Over 1B people now use Gemini each month, making it Google's fastest-growing product and its 14th to cross the 1B-user milestone.",
+        },
+      },
+      {
+        title: {
+          zh: "英伟达研发万亿参数开源模型 Nemotron 4",
+          en: "NVIDIA Building Trillion-Parameter Nemotron 4",
+        },
+        description: {
+          zh: "新一代开源模型系列最大者预计至少 1 万亿参数，目标与全球最先进开源模型竞争，最早可能今年秋末准备就绪。",
+          en: "The next-gen open model line's largest could hit at least 1T parameters, aiming to rival the world's best open models, possibly ready by late fall.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 用 Astra 模型攻克 10 道数学难题",
+          en: "OpenAI's Astra Model Cracks 10 Math Problems",
+        },
+        description: {
+          zh: "未发布的 Astra 模型解决了 10 道长期悬而未决的数学难题，涵盖球体堆积、纠错码、非 sofic 群存在性等领域，并发布超 250 页论文及 Lean 验证结果。",
+          en: "An unreleased Astra model solved 10 long-open math problems in sphere packing, error-correcting codes, and non-sofic groups, with a 250+ page paper and Lean proofs.",
+        },
+      },
+      {
+        title: {
+          zh: "微信朋友圈 AI 帮写与 AI 点评内测",
+          en: "WeChat Beta-Tests AI Moments Writing and Commenting",
+        },
+        description: {
+          zh: "朋友圈 AI 帮写可根据图片和文字生成文案，AI 点评可长按生成评价，作者担忧 AI 被置于社交核心位置，破坏朋友圈「记录美好生活」的基调。",
+          en: "AI Help-Write drafts Moments captions from photos and text; AI Comment generates reviews on long-press. Critics worry it puts AI at social media's core, eroding 'record the good life'.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA 推动 800VDC 新供电架构",
+          en: "NVIDIA Pushes 800VDC Power Architecture",
+        },
+        description: {
+          zh: "NVIDIA 主张以 800V 直流配电替代传统交流多次转换以降低损耗，与 Google、Microsoft 通过 OCP 联合制定，超 80 家设备商正据此开发产品。",
+          en: "NVIDIA advocates 800VDC distribution over traditional AC conversion to cut losses; with Google and Microsoft via OCP, 80+ vendors are developing products.",
+        },
+      },
+      {
+        title: {
+          zh: "AMIE 医疗 AI 实现实时临床视频问诊",
+          en: "AMIE Medical AI Shows Real-Time Video Consultations",
+        },
+        description: {
+          zh: "Google 的 AMIE 系统基于 Gemini 和 Project Astra，首次展示专家级实时临床视频问诊，可解读视听线索、引导虚拟体格检查并实时诊断推理。",
+          en: "Built on Gemini and Project Astra, Google's AMIE demonstrates expert-level real-time video consultations, reading audio-visual cues and guiding virtual exams.",
+        },
+      },
+      {
+        title: {
+          zh: "SaaS 龙头估值溢价：每个类别都有赢家",
+          en: "AI Winners in Every SaaS Category",
+        },
+        description: {
+          zh: "SaaS 估值整体承压但各细分赛道跑出 AI 龙头：CrowdStrike 以 34.4x 前瞻收入领跑安全（中位数 3.9x），Cloudflare 32.6x 对 17.5x。",
+          en: "SaaS valuations are under pressure but AI leaders emerge per category: CrowdStrike at 34.4x forward revenue (median 3.9x), Cloudflare 32.6x vs 17.5x.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-12-hot",
+    date: "2026-08-12",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-12",
+      en: "🔥 Hot Topics · Aug 12, 2026",
+    },
+    summary: {
+      zh: "「人民艺术家」郭兰英逝世享年97岁，1994年将演唱版权无偿捐国家；全国11.5万个城镇老旧小区将迎改造；C罗与乔治娜完婚五个孩子出席婚礼；北京、河南先后发布暴雨预警；赵一鸣零食4块牛肉干多收47元引纠纷；梁文锋跻身全球最富有50人行列，净资产一年暴涨3850%；多地试点直升高中；《影之刃零》开启预售定价268元起；8月13日将现日全食与英仙座流星雨双重天象。",
+      en: "'People's Artist' Guo Lanying dies at 97, having donated her singing copyright to the state in 1994; 115k old urban communities are slated for renovation; Cristiano Ronaldo marries Georgina with all five kids present; Beijing and Henan issue heavy-rain warnings; a Zhaoyiming snack-store overcharge on beef jerky sparks dispute; DeepSeek founder Liang Wenfeng joins the world's 50 richest with net worth up 3850% in a year; more cities pilot direct-to-high-school admission; 'Phantom Blade Zero' opens preorders at 268 RMB; Aug 13 brings a total solar eclipse and Perseid meteor shower.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "郭兰英逝世 享年97岁",
+          en: "Guo Lanying Dies at 97",
+        },
+        description: {
+          zh: "著名歌剧表演艺术家郭兰英于 8 月 11 日在广州逝世，享年 97 岁，曾获「人民艺术家」国家荣誉称号。",
+          en: "Renowned opera performer Guo Lanying, a 'People's Artist' national honoree, died in Guangzhou on Aug 11 at 97.",
+        },
+      },
+      {
+        title: {
+          zh: "你家老小区将迎巨变",
+          en: "Old Communities Face a Big Transformation",
+        },
+        description: {
+          zh: "城市更新「国家行动」启动，市场测算投资规模 5 年 15 万亿元，全国 11.5 万个老旧小区将改造、约 50 万套危旧房将更新。",
+          en: "A national urban-renewal drive begins, with an estimated 15T RMB over five years renovating 115k old communities and updating 500k dilapidated homes.",
+        },
+      },
+      {
+        title: {
+          zh: "C罗结婚 5个孩子出席婚礼",
+          en: "Ronaldo Marries Georgina with All 5 Kids Present",
+        },
+        description: {
+          zh: "C 罗在社媒晒出与乔治娜佩戴婚戒的照片宣布成婚，两人在葡萄牙举行了「私密而温馨」的婚礼，五个孩子都出席。",
+          en: "Ronaldo announced his marriage to Georgina with ring photos; the 'private and warm' ceremony in Portugal saw all five children attend.",
+        },
+      },
+      {
+        title: {
+          zh: "北京暴雨",
+          en: "Beijing Heavy Rain",
+        },
+        description: {
+          zh: "北京启动防汛二级应急响应，12 日起推行弹性错峰上班、学校视情停课，预计部分地区 24 小时累计雨量超 150 毫米。",
+          en: "Beijing activates Level-II flood response with staggered flexible work and possible school closures; some areas may see 150mm+ in 24 hours.",
+        },
+      },
+      {
+        title: {
+          zh: "河南暴雨红色预警",
+          en: "Henan Issues Red Rainstorm Warning",
+        },
+        description: {
+          zh: "河南省气象台升级发布暴雨红色预警，沿淮及其以北多地有暴雨、局部特大暴雨，并伴有短时强降水与雷暴大风。",
+          en: "Henan upgrades to a red rainstorm warning: areas along the Huai River and north face torrential rain, with intense downpours and thunderstorm gales.",
+        },
+      },
+      {
+        title: {
+          zh: "赵一鸣4块牛肉干64元 复称仅17元",
+          en: "Zhaoyiming Beef Jerky Overcharge: 64 RMB for 17 RMB Worth",
+        },
+        description: {
+          zh: "顾客在赵一鸣门店购买 4 块牛肉干被系统称重计费 64.58 元，回家复称实际仅 80 克、合理价格 17.28 元，多收 47 元，门店承认计费出错并提出整单三倍赔偿，双方暂未达成一致。",
+          en: "A customer was charged 64.58 RMB for 4 beef jerky pieces that re-weighed at 80g (worth ~17.28 RMB) — an overcharge of 47 RMB. The store admitted the error and offered triple refund, but no agreement yet.",
+        },
+      },
+      {
+        title: {
+          zh: "多地试点：直升高中",
+          en: "More Cities Pilot Direct-to-High-School Admission",
+        },
+        description: {
+          zh: "湖南娄底、四川成都、上海等地启动「十二年一贯制」贯通培养试点，并出台减少中考计分科目、增加普高学位等改革举措。",
+          en: "Loudi, Chengdu, Shanghai, and others pilot 12-year integrated programs, while cutting exam subjects and adding regular-high-school seats.",
+        },
+      },
+      {
+        title: {
+          zh: "横店短剧盯上了游客",
+          en: "Hengdian Short Dramas Target Tourists",
+        },
+        description: {
+          zh: "受 AI 短剧冲击影视业进入寒冬，横店导演转向为游客拍摄短剧，人均 200-300 元，让人人都能当主角。",
+          en: "As AI short dramas chill the industry, Hengdian directors now shoot short dramas for tourists at 200-300 RMB a head, letting everyone be a star.",
+        },
+      },
+      {
+        title: {
+          zh: "梁文锋跻身全球最富有50人之列",
+          en: "DeepSeek Founder Joins World's 50 Richest",
+        },
+        description: {
+          zh: "DeepSeek 创始人梁文锋净资产一年间从 10 亿美元飙升至 395 亿美元，增幅 3850%，创全球亿万富翁财富增速最高纪录。",
+          en: "DeepSeek founder Liang Wenfeng's net worth leapt from $1B to $39.5B in a year — a 3850% gain, the fastest billionaire wealth growth ever recorded.",
+        },
+      },
+      {
+        title: {
+          zh: "《影之刃零》开启预售 定价268元起",
+          en: "'Phantom Blade Zero' Opens Preorders at 268 RMB",
+        },
+        description: {
+          zh: "甄子丹监制的国产 3A 大作《影之刃零》开启多平台预购，数字标准版 268 元、豪华版 328 元，将于 10 月 29 日发售。",
+          en: "Donnie Yen-supervised Chinese 3A title 'Phantom Blade Zero' opens multi-platform preorders — 268 RMB standard, 328 RMB deluxe — launching Oct 29.",
+        },
+      },
+      {
+        title: {
+          zh: "流星雨 日全食",
+          en: "Meteor Shower and Total Solar Eclipse",
+        },
+        description: {
+          zh: "8 月 13 日地球昼夜两面上演双重天象：国内可观英仙座流星雨，欧洲大陆迎来 1999 年以来首次、2026 年唯一一次日全食。",
+          en: "On Aug 13 both hemispheres get a celestial double-feature: the Perseid meteor shower at home, and Europe's first total solar eclipse since 1999 — the only one of 2026.",
+        },
+      },
+      {
+        title: {
+          zh: "「8月12日地球将失重7秒」系谣言",
+          en: "'7 Seconds of Zero-G on Aug 12' Is a Rumor",
+        },
+        description: {
+          zh: "网传「8 月 12 日地球将失重 7 秒并造成上万人伤亡」，专家回应：末日警告纯属谣言。",
+          en: "Viral claims that Earth would lose gravity for 7 seconds on Aug 12, killing thousands, are dismissed by experts as pure rumor.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-11",
     date: "2026-08-11",
     title: {
