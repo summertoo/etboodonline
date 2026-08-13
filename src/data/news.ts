@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-13",
+    date: "2026-08-13",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-13",
+      en: "🤖 AI HOT Daily · Aug 13, 2026",
+    },
+    summary: {
+      zh: "xAI 发布 Grok 4.6，强化长时运行智能体能力；阿里开放 Qwen3.8-2.4T-A95B 模型权重，为 Qwen-Max 级模型首次开源；微软首发自研推理模型 MAI-Thinking-1；LTX-2.5 生成 10 秒 720P 视频仅需 6.8 秒；DeepSeek V4 Pro 与 Grok 4.6 同日发布，双双逼近 Claude Fable 5 体验；OpenRouter 推出实时网页搜索基准测试；Claude in Chrome 侧边栏升级为 Claude Cowork 会话。",
+      en: "xAI releases Grok 4.6 with stronger long-running agent capabilities; Alibaba opens Qwen3.8-2.4T-A95B weights — the first open Qwen-Max-class model; Microsoft debuts its first self-built reasoning model MAI-Thinking-1; LTX-2.5 generates 10s of 720P video in 6.8s; DeepSeek V4 Pro and Grok 4.6 launch the same day, both approaching Claude Fable 5; OpenRouter launches a live web-search benchmark; Claude in Chrome's sidebar becomes Claude Cowork sessions.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "xAI 发布 Grok 4.6",
+          en: "xAI Releases Grok 4.6",
+        },
+        description: {
+          zh: "在 Grok 4.5 基础上重点强化长时运行智能体及更复杂的交互式与视觉工作能力，在多项智能体编码与知识工作基准上达到前沿水平，综合分追平 GPT-5.6 Sol。",
+          en: "Building on Grok 4.5, it strengthens long-running agents and complex interactive/visual work, reaching frontier levels on agentic coding and knowledge benchmarks, tying GPT-5.6 Sol overall.",
+        },
+      },
+      {
+        title: {
+          zh: "阿里开放 Qwen3.8-2.4T-A95B 模型权重",
+          en: "Alibaba Opens Qwen3.8-2.4T-A95B Weights",
+        },
+        description: {
+          zh: "Qwen-Max 级别模型首次开源：总参数 2.4T，每 Token 激活 95B，原生支持 262,144 Token 上下文并可扩展至 1,010,000 Token。",
+          en: "The first open Qwen-Max-class model: 2.4T total parameters, 95B active per token, native 262K-token context extendable to 1M tokens.",
+        },
+      },
+      {
+        title: {
+          zh: "微软首发自研推理模型 MAI-Thinking-1",
+          en: "Microsoft Debuts MAI-Thinking-1 Reasoning Model",
+        },
+        description: {
+          zh: "微软首个从零构建的推理模型 MAI-Thinking-1 已在 Microsoft Foundry 上线。",
+          en: "Microsoft's first from-scratch reasoning model, MAI-Thinking-1, is now live on Microsoft Foundry.",
+        },
+      },
+      {
+        title: {
+          zh: "LTX-2.5 模型登场：10秒720P视频仅需6.8秒",
+          en: "LTX-2.5: 10s of 720P Video in 6.8 Seconds",
+        },
+        description: {
+          zh: "原生集成 ComfyUI，在 2 张 GB200 配置下生成 10 秒 720P 视频仅需 6.8 秒，Fast 版生成带音频 720p 视频成本约 0.90 美元/10 秒。",
+          en: "Natively integrated with ComfyUI, it renders 10s of 720P video in 6.8s on two GB200s; the Fast tier costs ~$0.90 per 10s audio-720p clip.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek V4 Pro 正式版上线",
+          en: "DeepSeek V4 Pro Official Release",
+        },
+        description: {
+          zh: "Agent 能力大幅提升且暂未涨价，官方测试说明还提及极简模式框架 DeepSeek Harness 即将来袭，或成为决定 Agent 能力的关键。",
+          en: "Agent capabilities jump while pricing holds; docs hint at a coming DeepSeek Harness minimal framework that may be the key to agent power.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 推出实时网页搜索基准测试",
+          en: "OpenRouter Launches Live Web-Search Benchmark",
+        },
+        description: {
+          zh: "系统评测模型、搜索引擎、搜索方法与预算四类配置组合：搜索预算增至 25 轮可使 BrowseComp 得分近乎翻倍，且模型选择比引擎更重要。",
+          en: "It benchmarks model, search engine, method, and budget combos: raising the search budget to 25 rounds nearly doubles BrowseComp scores, with model choice mattering more than engine.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude in Chrome 侧边栏升级为 Cowork 会话",
+          en: "Claude in Chrome Sidebar Becomes Cowork Sessions",
+        },
+        description: {
+          zh: "侧边栏对话保存至历史记录，技能和连接器可在浏览器中工作，任务可在桌面、网页和移动端应用间无缝切换。",
+          en: "Sidebar conversations now save to history, skills and connectors work in-browser, and tasks switch seamlessly across desktop, web, and mobile.",
+        },
+      },
+      {
+        title: {
+          zh: "WhatsApp 构建 Scam Alert 诈骗提醒功能",
+          en: "WhatsApp Builds On-Device Scam Alert",
+        },
+        description: {
+          zh: "在端到端加密保护下于设备端运行 ML 模型识别潜在诈骗消息，消息内容不离开设备，模型权重公开供独立验证。",
+          en: "An optional feature running on-device ML under E2EE to flag scam messages — content never leaves the device, weights are public for verification.",
+        },
+      },
+      {
+        title: {
+          zh: "Research Gold 号称「100%人类撰写」实为 AI 驱动",
+          en: "'100% Human-Written' Research Gold Is Entirely AI",
+        },
+        description: {
+          zh: "面向医学研究者的 Research Gold 声称服务由人类撰写并列出多名博士审稿人，但调查发现审稿人为 AI 生成并不存在，电话中「Sarah」助手也实为 AI。",
+          en: "Medical-research site Research Gold claims human-only writing with PhD reviewers — but investigators found the reviewers are AI-generated, and phone 'Sarah' is also an AI.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 研究：回忆是参数化事实性的瓶颈",
+          en: "Google: Recall Is the Factuality Bottleneck",
+        },
+        description: {
+          zh: "知识画像框架发现前沿 LLM 的事实编码接近饱和但回忆能力不足，多数事实错误源于「丢钥匙」而非「空货架」，并配套推出 WikiProfile 基准。",
+          en: "A knowledge-portrait framework finds frontier LLMs' factual encoding nears saturation while recall lags — most errors are 'lost keys', not 'empty shelves' — backed by the WikiProfile benchmark.",
+        },
+      },
+      {
+        title: {
+          zh: "AutoGPT 如何管理 AI 生成的拉取请求",
+          en: "How AutoGPT Manages AI-Generated PRs",
+        },
+        description: {
+          zh: "通过强制 PR 模板、测试计划、CI 覆盖率门槛和 CLA 签名等门控机制，将智能体提交的 PR 从「不可用」转变为「可用但不符合路线图」。",
+          en: "Using enforced PR templates, test plans, CI coverage gates, and CLA signing, AutoGPT turns agent-submitted PRs from 'unusable' into 'usable but off-roadmap'.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-13-hot",
+    date: "2026-08-13",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-13",
+      en: "🔥 Hot Topics · Aug 13, 2026",
+    },
+    summary: {
+      zh: "国务院原总理朱镕基同志逝世享年98岁；《生态环境法典》8月15日施行，禁止在居民楼开油烟餐饮；比 Lululemon 还贵的瑜伽服品牌 Alo 进入中国；DeepSeek 最新版本藏大招；胖东来许昌老店将于 12 月底关停；威少宣布退役结束18年NBA生涯；易烊千玺凭《小小的我》获百花奖最佳男主角；中国印尼海军首次在台岛以东海域联演；浙江一公司收到美国2.62亿元关税退税；李雪健已完全听不见，靠语音转写交流。",
+      en: "Former Premier Zhu Rongji dies at 98; the Ecological Environment Code takes effect Aug 15, banning fume-heavy restaurants in residential buildings; Alo, pricier than Lululemon, enters China; DeepSeek's latest version hides a big play; Pangdonglai's Xuchang old store closes at end of December; Russell Westbrook announces retirement after 18 NBA seasons; Jackson Yee wins Hundred Flowers Best Actor for 'Big World'; Chinese and Indonesian navies drill east of Taiwan for the first time; a Zhejiang firm gets a 262M RMB US tariff refund; Li Xuejian is now fully deaf, relying on speech-to-text.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "朱镕基同志逝世",
+          en: "Comrade Zhu Rongji Passes Away",
+        },
+        description: {
+          zh: "国务院原总理、中共十四届和十五届中央政治局常委朱镕基同志因病医治无效，于 8 月 12 日 11 时 06 分在北京逝世，享年 98 岁。",
+          en: "Former Premier and 14th/15th Politburo Standing Committee member Zhu Rongji died of illness in Beijing at 11:06 on Aug 12, aged 98.",
+        },
+      },
+      {
+        title: {
+          zh: "新规来了：禁止在居民楼开油烟餐饮",
+          en: "New Rule Bans Fume-Heavy Dining in Residential Buildings",
+        },
+        description: {
+          zh: "8 月 15 日施行的《中华人民共和国生态环境法典》明确禁止在居民住宅楼等新建、改建、扩建产生油烟、异味、废气的餐饮项目，拒不改正将被责令关闭并处罚款。",
+          en: "The Ecological Environment Code, effective Aug 15, bars building fume/odor/emission restaurants in residential buildings, with closure and fines for those refusing to comply.",
+        },
+      },
+      {
+        title: {
+          zh: "比Lululemon还贵的瑜伽服来中国了",
+          en: "Yoga Brand Alo, Pricier Than Lululemon, Enters China",
+        },
+        description: {
+          zh: "Alo 天猫旗舰店和微信小程序同步开售，两款赵露思同款单品累计销售额超千万元，计划 9 月在香港开设大中华区首店。",
+          en: "Alo opened its Tmall flagship and WeChat mini-program, with two Zhao Lusi-endorsed pieces topping 10M RMB in sales; a HK flagship follows in September.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek最新版本藏了一个大招",
+          en: "DeepSeek's Latest Version Hides a Big Play",
+        },
+        description: {
+          zh: "DeepSeek V4 Pro 正式版上线，Agent 能力大幅提升且暂未涨价，官方测试说明提及的极简模式框架 DeepSeek Harness 即将来袭。",
+          en: "DeepSeek V4 Pro is live with much stronger agent capabilities at unchanged prices; docs tease the coming DeepSeek Harness minimal framework.",
+        },
+      },
+      {
+        title: {
+          zh: "胖东来许昌老店关闭 周边商户发声",
+          en: "Pangdonglai Closes Its Xuchang Old Store",
+        },
+        description: {
+          zh: "于东来官宣许昌胖东来生活广场将于 2026 年 12 月底关停，周边商户坦言自身经营将受到波及。",
+          en: "Yu Donglai announced the Xuchang Life Plaza store closes at end of December 2026; nearby merchants say their business will be affected.",
+        },
+      },
+      {
+        title: {
+          zh: "威少宣布退役",
+          en: "Westbrook Announces Retirement",
+        },
+        description: {
+          zh: "8 月 13 日，拉塞尔·威斯布鲁克更新社媒宣布退役，结束 18 年的 NBA 生涯。",
+          en: "On Aug 13, Russell Westbrook announced on social media that he is retiring after an 18-year NBA career.",
+        },
+      },
+      {
+        title: {
+          zh: "医护称易烊千玺演刘春和太逼真",
+          en: "Medical Staff Praise Yi Yangqianxi's Realistic Performance",
+        },
+        description: {
+          zh: "易烊千玺凭《小小的我》中脑瘫患者「刘春和」获百花奖最佳男主角，参与拍摄的医护人员表示其表演高度还原真实患者状态。",
+          en: "Yi Yangqianxi won Best Actor for his cerebral-palsy role in 'Big World'; medical staff involved in filming say his performance faithfully mirrored real patients.",
+        },
+      },
+      {
+        title: {
+          zh: "首次！中国印尼在台岛以东联演",
+          en: "First China-Indonesia Drill East of Taiwan",
+        },
+        description: {
+          zh: "中国海军红河舰与印尼海军「莱」号护卫舰在台岛以东海域完成海上通航演练，系中外海军首次在该海域演练。",
+          en: "PLA Navy's Honghe and Indonesia's frigate Rai completed navigation drills east of Taiwan — the first time Chinese and foreign navies have exercised there.",
+        },
+      },
+      {
+        title: {
+          zh: "浙江一公司收到美国2.62亿元关税退税",
+          en: "Zhejiang Firm Receives 262M RMB US Tariff Refund",
+        },
+        description: {
+          zh: "春风动力、银都股份、众望布艺等公告境外子公司已收到美国退回的关税及利息，其中春风动力退税折合人民币约 2.62 亿元。",
+          en: "CFMOTO, Yindu, and others announced their overseas units received US tariff refunds plus interest; CFMOTO's came to about 262M RMB.",
+        },
+      },
+      {
+        title: {
+          zh: "李雪健已经完全听不见了",
+          en: "Li Xuejian Is Now Completely Deaf",
+        },
+        description: {
+          zh: "抗癌第 26 年的演员李雪健因化疗双耳完全失聪，日常交流只能依靠语音转写器或手机应用转写。",
+          en: "In his 26th year battling cancer, actor Li Xuejian has lost his hearing entirely from chemo and now communicates through speech-to-text tools.",
+        },
+      },
+      {
+        title: {
+          zh: "银行能办结婚证了",
+          en: "Banks Can Now Issue Marriage Certificates",
+        },
+        description: {
+          zh: "天津市首家银行内结婚登记点在邮储银行河西区泗水道支行启用，每周三、周四可办理内地居民结婚登记，两对新人已率先领证。",
+          en: "Tianjin's first in-bank marriage registration point opened at a PSBC branch, processing certificates Wednesdays and Thursdays; two couples have already tied the knot there.",
+        },
+      },
+      {
+        title: {
+          zh: "英仙座流星雨",
+          en: "Perseid Meteor Shower Peaks",
+        },
+        description: {
+          zh: "英仙座流星雨于 8 月 12 日至 13 日夜间迎来极大，上演夏日夜空的「重头戏」。",
+          en: "The Perseid meteor shower peaks the night of Aug 12–13, headlining the summer night sky.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-12",
     date: "2026-08-12",
     title: {
