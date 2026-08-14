@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-14",
+    date: "2026-08-14",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-14",
+      en: "🤖 AI HOT Daily · Aug 14, 2026",
+    },
+    summary: {
+      zh: "小红书开源 20 亿参数全连续端到端自回归语音合成模型 dots.tts；Google DeepMind 发布 Gemini 3.7 Flash，主打编程与智能体且价格减半；MiniMax 推出 Music 3.0 音乐生成模型，最长支持五分钟；DeepSeek Harness v0.1 开发者预览版发布并开源；Cursor 推出 builds 云智能体启动提速 3 倍并获 AIUC-1 认证；OpenAI 预览 Ultrafast 模式，GPT-5.6 Sol 速度提升最高 14 倍；OpenAI 任命 Dali Rajic 为首席营收官。",
+      en: "Xiaohongshu open-sources dots.tts, a 2B-parameter fully-continuous autoregressive TTS model; Google DeepMind ships Gemini 3.7 Flash for coding and agents at half price; MiniMax releases Music 3.0 with up to five-minute songs; DeepSeek Harness v0.1 dev preview goes open source; Cursor launches builds (3x faster cloud-agent startup) and earns AIUC-1 certification; OpenAI previews Ultrafast, running GPT-5.6 Sol up to 14x faster; OpenAI names Dali Rajic Chief Revenue Officer.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "小红书开源语音合成模型 dots.tts",
+          en: "Xiaohongshu Open-Sources TTS Model dots.tts",
+        },
+        description: {
+          zh: "20 亿参数全连续端到端自回归语音合成模型，在 Seed-TTS-Eval 三个子集上取得最佳平均内容准确度和平均说话人相似度。",
+          en: "A 2B-param fully-continuous end-to-end autoregressive TTS model topping Seed-TTS-Eval on average content accuracy and speaker similarity.",
+        },
+      },
+      {
+        title: {
+          zh: "Google DeepMind 推出 Gemini 3.7 Flash",
+          en: "Google DeepMind Launches Gemini 3.7 Flash",
+        },
+        description: {
+          zh: "距 3.6 Flash 仅三周，主打编程与智能体任务，输入/输出价格分别为每百万 token $0.75 和 $3.75，为原版一半。",
+          en: "Just three weeks after 3.6 Flash, it targets coding and agent tasks at $0.75/$3.75 per million input/output tokens — half the previous price.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniMax Music 3.0 发布",
+          en: "MiniMax Music 3.0 Released",
+        },
+        description: {
+          zh: "新一代开源权重、生产级音乐生成模型，可根据创意概念和可选歌词一次性完成整首歌的作曲、编曲、演奏与制作，最长支持五分钟。",
+          en: "A new open-weights, production-grade music model composing, arranging, performing, and producing full songs from a concept plus optional lyrics, up to five minutes.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek Harness v0.1 开发者预览版发布",
+          en: "DeepSeek Harness v0.1 Dev Preview Released",
+        },
+        description: {
+          zh: "基于 Cordis 元框架构建的智能体框架，以 MIT 许可证开源，核心设计为「一切皆插件」，模型、工具、技能、沙箱、编排及 UI 均可自由组合替换。",
+          en: "An agent framework on the Cordis meta-framework, MIT-licensed, with an everything-is-a-plugin core — models, tools, skills, sandboxes, orchestration, and UI all composable.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 推出 builds：云智能体启动提速 3 倍",
+          en: "Cursor Builds: Cloud Agents Start 3x Faster",
+        },
+        description: {
+          zh: "后台持续准备就绪的开发环境副本，云智能体启动无需从零搭建，响应速度最高提升 3 倍，8 月 17 日起所有环境默认启用。",
+          en: "Always-ready environment copies in the background let cloud agents skip cold builds, cutting startup latency up to 3x; default on for all environments from Aug 17.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 预览 Ultrafast 模式",
+          en: "OpenAI Previews Ultrafast Mode",
+        },
+        description: {
+          zh: "由 Cerebras 提供算力的新 API 服务层级，GPT-5.6 Sol 速度最高提升 14 倍，输出速率可达每秒 750 tokens，目前处于预览阶段。",
+          en: "A new Cerebras-powered API tier runs GPT-5.6 Sol up to 14x faster at up to 750 output tokens/second — currently in preview.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.232 默认启用 Subagent forking",
+          en: "Claude Code v2.1.232 Enables Subagent Forking",
+        },
+        description: {
+          zh: "子代理可继承完整对话与提示缓存，非队友代理默认后台运行，新增 GitLab 支持并修复 Windows 权限绕过等安全问题。",
+          en: "Subagents inherit full context and prompt cache, non-teammate agents run in background by default, with new GitLab support and Windows security fixes.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 获得 AIUC-1 认证",
+          en: "Cursor Earns AIUC-1 Certification",
+        },
+        description: {
+          zh: "通过独立审查与对抗性测试，标准由 100 多家财富 500 强 CISO 参与制定，测试覆盖 IDE 和云端智能体的防护机制。",
+          en: "Cursor passed independent review and adversarial tests under a standard shaped by 100+ Fortune-500 CISOs, covering IDE and cloud agent safeguards.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-5.6 构建者指南：更低成本的前沿智能体性能",
+          en: "GPT-5.6 Builders Guide: Frontier Agent Performance for Less",
+        },
+        description: {
+          zh: "新增推理持久化、原生多智能体编排和程序化工具调用等 API 能力，在 ARC-AGI-3 上 Sol 得分从 13.3% 跃升至 38.3%，输出 token 减少约 6 倍。",
+          en: "New API capabilities include reasoning persistence, native multi-agent orchestration, and programmatic tool calls; on ARC-AGI-3 Sol jumped from 13.3% to 38.3% with ~6x fewer output tokens.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 接管应用日常维护：388 个 PR 的实践",
+          en: "Claude Handles App Maintenance: 388 PRs",
+        },
+        description: {
+          zh: "Boris Cherny 让 Claude 通过 Slack 频道运行崩溃模糊测试、死代码移除等日常任务，数周内自动开出 388 个 PR，其中 180 个合并。",
+          en: "Boris Cherny let Claude run crash fuzzing, dedupe, and dead-code removal via Slack, auto-opening 388 PRs in weeks, with 180 merged after review.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 研究新兴多智能体系统的模式与问题",
+          en: "Anthropic Studies Emerging Multi-Agent Systems",
+        },
+        description: {
+          zh: "45 个协调智能体在 2700 万 token 运行中发现 266 个漏洞，而独立并行方法在 650 万 token 中发现 21 个，两者仅 12 个重叠。",
+          en: "45 coordinated agents found 266 vulnerabilities in 27M tokens, vs 21 for independent parallel methods in 6.5M tokens — only 12 overlapped.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-14-hot",
+    date: "2026-08-14",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-14",
+      en: "🔥 Hot Topics · Aug 14, 2026",
+    },
+    summary: {
+      zh: "中央气象台继续发布暴雨黄色预警，17省区市部分地区大到暴雨；华为「天才少年」宁博宇回应离职，将赴瑞典做博士后；新一代「人造太阳」要来了；哥伦比亚强震遇难人数升至281人；小米升降车标专利曝光称可提高续航；王老吉杀入能量电解质饮料赛道；贾鲁河河南周口段出现溃口；39度高温管家喊话全楼关空调；《奥德赛》近3小时引「最佳尿点」讨论；胖东来老店旁缝补摊主称会跟着走。",
+      en: "The national weather center extends a yellow rainstorm alert across parts of 17 regions; Huawei 'genius teen' Ning Boyu responds to his departure, heading to Sweden for a postdoc; a new generation of 'artificial suns' is coming; Colombia's quake death toll rises to 281; Xiaomi patents a weight-saving lifting hood emblem; Wanglaoji enters the energy-electrolyte beverage track; the Jialu River breaches in Zhoukou, Henan; a manager asks the whole building to switch off AC in 39°C heat; Nolan's 'The Odyssey' near-3-hour run sparks 'best pee-break' talk; a mending stall owner near Pangdonglai's old store says he'll follow the store.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "黄色预警！17省区市部分地区大到暴雨",
+          en: "Yellow Alert: Heavy Rain in 17 Regions",
+        },
+        description: {
+          zh: "中央气象台继续发布暴雨黄色预警，8 月 14 日 08 时至 15 日 08 时，江苏、安徽、上海、江西、湖北等 17 省区市部分地区有大到暴雨。",
+          en: "The national center keeps a yellow rainstorm warning: from 08:00 Aug 14 to 08:00 Aug 15, parts of 17 regions including Jiangsu, Anhui, Shanghai, Jiangxi, and Hubei see heavy rain.",
+        },
+      },
+      {
+        title: {
+          zh: "华为「天才少年」宁博宇回应离职",
+          en: "Huawei 'Genius Teen' Ning Boyu on Leaving",
+        },
+        description: {
+          zh: "入职华为三年多后，宁博宇因更享受与学界交流，决定前往瑞典皇家理工学院做博士后，计划结束后回国发展。",
+          en: "After three-plus years at Huawei, Ning Boyu is heading to KTH for a postdoc to enjoy academic exchange, planning to return to China afterward.",
+        },
+      },
+      {
+        title: {
+          zh: "新一代「人造太阳」要来了",
+          en: "A New Generation of 'Artificial Suns' Is Coming",
+        },
+        description: {
+          zh: "可控核聚变「人造太阳」装置在全国多地加快建设，围绕装置形成的科研、工程和产业空间同步扩展。",
+          en: "Controlled-fusion 'artificial sun' facilities are accelerating construction nationwide, with research, engineering, and industry ecosystems expanding around them.",
+        },
+      },
+      {
+        title: {
+          zh: "哥伦比亚强震已致281人遇难",
+          en: "Colombia Quake Death Toll Rises to 281",
+        },
+        description: {
+          zh: "哥伦比亚 7.5 级强震遇难人数升至 281 人，多地建筑受损倒塌、机场停运。",
+          en: "The M7.5 quake in Colombia has killed 281, with widespread building damage and airport closures.",
+        },
+      },
+      {
+        title: {
+          zh: "小米升降车标专利曝光",
+          en: "Xiaomi's Lifting Hood-Emblem Patent Surfaces",
+        },
+        description: {
+          zh: "小米汽车获《标志升降装置及车辆》实用新型专利，称现有升降装置结构复杂、重量大影响续航，新装置可提高车辆续航里程。",
+          en: "Xiaomi Auto won a utility patent for a lifting emblem device it says is lighter and simpler than current designs, boosting vehicle range.",
+        },
+      },
+      {
+        title: {
+          zh: "王老吉杀进年轻人扎堆的新赛道",
+          en: "Wanglaoji Enters the Energy-Electrolyte Track",
+        },
+        description: {
+          zh: "王老吉 WALOVI 推出天然能量电解质饮料等新品，跳出凉茶边界，通过综艺冠名与顶流代言深耕市场，目标拓展第二增长曲线。",
+          en: "WALOVI launched natural energy-electrolyte drinks, stepping beyond herbal tea with variety-show sponsorship and top-tier endorsements to build a second growth curve.",
+        },
+      },
+      {
+        title: {
+          zh: "贾鲁河河南周口川汇区段出现溃口",
+          en: "Jialu River Breaches in Chuanhui, Zhoukou",
+        },
+        description: {
+          zh: "受持续降雨影响，贾鲁河河南周口川汇区段出现溃口，相关部门正在处置。",
+          en: "Following persistent rain, the Jialu River breached at Chuanhui District in Zhoukou, Henan, with authorities responding.",
+        },
+      },
+      {
+        title: {
+          zh: "39度高温管家喊话全楼关空调",
+          en: "39°C: Property Manager Asks Everyone to Turn Off AC",
+        },
+        description: {
+          zh: "广州一回迁房小区为临时用电，高温下电路超负荷一天跳闸三四次，物业称预计 8 月底实现永久供电。",
+          en: "A Guangzhou relocation community on temporary power trips 3-4 times daily under heat load; property says permanent power arrives by end of August.",
+        },
+      },
+      {
+        title: {
+          zh: "《奥德赛》「最佳尿点」",
+          en: "'The Odyssey' Best Pee-Break Moments",
+        },
+        description: {
+          zh: "诺兰新片《奥德赛》时长近三小时，一款标记如厕空档的 APP 整理出四个安全离场时段，涵盖返乡、巨人袭击等平缓段落。",
+          en: "Nolan's near-3-hour 'The Odyssey' prompts an app to map four safe bathroom windows — homecoming, giant attack, ox sacrifice, and palace disguise scenes.",
+        },
+      },
+      {
+        title: {
+          zh: "胖东来老店旁缝补摊主：会跟着走",
+          en: "Mending Stall Owner: 'I'll Follow Pangdonglai'",
+        },
+        description: {
+          zh: "相伴 24 年的缝补摊主刘结实表示五六成生意依赖胖东来老店客流，未来计划跟随迁至时代广场店。",
+          en: "Liu Jieshi, whose mending stall has stood beside the store for 24 years, relies on it for 50-60% of business and plans to move to the Times Plaza store.",
+        },
+      },
+      {
+        title: {
+          zh: "中使馆重要提醒：中国公民尽快撤离",
+          en: "Chinese Embassy Urges Citizens to Evacuate DRC",
+        },
+        description: {
+          zh: "刚果（金）东部分别爆发新一轮埃博拉疫情，刚军与 M23 持续交火，使馆提醒在刚中国公民尽快撤离或转移至安全地区。",
+          en: "With a new Ebola outbreak and ongoing army-M23 fighting in eastern DRC, the Chinese embassy urges citizens to leave or move to safety immediately.",
+        },
+      },
+      {
+        title: {
+          zh: "A股开盘：存储芯片、半导体等板块走强",
+          en: "A-Shares Open: Memory Chips and Semiconductors Gain",
+        },
+        description: {
+          zh: "8 月 14 日 A 股开盘，存储芯片、半导体等板块走强。",
+          en: "On Aug 14, A-shares opened with memory-chip and semiconductor sectors strengthening.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-13",
     date: "2026-08-13",
     title: {
