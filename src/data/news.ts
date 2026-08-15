@@ -25,6 +25,266 @@ export interface NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-15",
+    date: "2026-08-15",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-15",
+      en: "🤖 AI HOT Daily · Aug 15, 2026",
+    },
+    summary: {
+      zh: "小红书开源 dots3-note Preview 轻量模型，280B 参数主打长程智能体与多模态推理；智谱发布 GLM-5.3，编程能力开源第一并涌现网络安全能力；DeepSeek V4 Pro 登陆硅基流动，支持 1M 上下文；Cursor 正式被 SpaceX 收购，将获全球最大 GPU 集群；Claude 将实施文本水印机制以遵守欧盟 AI 法案；OpenAI 与 Anthropic 与中国厂商打价格战；OpenRouter 数据显示 84% token 来自非前沿模型。",
+      en: "Xiaohongshu open-sources dots3-note Preview, a 280B lightweight model for long-horizon agents and multimodal reasoning; Zhipu releases GLM-5.3, open-source No.1 in coding with emerging cyber-security skills; DeepSeek V4 Pro lands on SiliconFlow with a 1M context; Cursor is officially acquired by SpaceX, gaining the world's largest GPU cluster; Claude will add text watermarking to comply with the EU AI Act; OpenAI and Anthropic wage a price war against Chinese rivals; OpenRouter data shows 84% of tokens come from non-frontier models.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "dots3-note Preview 开源：280B 轻量模型",
+          en: "dots3-note Preview Open-Sourced",
+        },
+        description: {
+          zh: "dots3 系列最轻量模型，总参数 280B、激活参数 16B，支持 512K 上下文及文本、视觉、语音多模态理解，针对复杂推理和长程 Agent 任务优化。",
+          en: "The lightest dots3 model — 280B total, 16B active — supports 512K context and text/vision/audio understanding, tuned for complex reasoning and long-horizon agent tasks.",
+        },
+      },
+      {
+        title: {
+          zh: "GLM-5.3 发布：编程能力开源第一",
+          en: "GLM-5.3: No.1 Open-Source Coding, Emerging Cyber Skills",
+        },
+        description: {
+          zh: "基于与 GLM-5.2 相同的基座，编程能力较前代提升 50%，在 Terminal Bench 3.0 等公开基准取得开源第一并接近 Claude Fable 5，白盒代码审查等安全任务表现持平 Mythos 5。",
+          en: "Built on GLM-5.2's base with extreme post-training scaling, coding jumps 50%, topping open models on Terminal Bench 3.0 near Claude Fable 5, and matching Mythos 5 on white-box review.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 3.7 Flash 全面上线 Pro 与 Ultra 用户",
+          en: "Gemini 3.7 Flash Rolls Out to Pro and Ultra",
+        },
+        description: {
+          zh: "Gemini 3.7 Flash 现已向聊天中的 Pro 和 Ultra 用户开放，提升多步骤任务推理与准确性，Gemini Spark 也运行于 3.7 Flash。",
+          en: "Gemini 3.7 Flash is now available to Pro and Ultra users in chat, improving multi-step reasoning and accuracy, with Gemini Spark also on 3.7 Flash.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek V4 Pro 登陆硅基流动",
+          en: "DeepSeek V4 Pro Arrives on SiliconFlow",
+        },
+        description: {
+          zh: "提供 Day-0 支持，具备 1M 上下文窗口及低/高/最大三档推理强度，更侧重编码、工具调用与智能体工作流，仍保持 MIT 开源协议。",
+          en: "Day-0 support with a 1M context window and low/high/max reasoning intensities, emphasizing coding, tool calling, and agent workflows — still MIT-licensed.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 正式被 SpaceX 收购",
+          en: "Cursor Officially Acquired by SpaceX",
+        },
+        description: {
+          zh: "完成自 4 月启动的收购流程，合并后 Cursor 将获得全球最大 GPU 集群，以更低成本构建更强模型，周三发布的 Grok 4.6 是合作成果的早期体现。",
+          en: "Completing the acquisition that began in April, Cursor gains the world's largest GPU cluster to build stronger models for less; Grok 4.6 is an early fruit of the tie-up.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 文本水印机制如何运作",
+          en: "How Claude's Text Watermarking Works",
+        },
+        description: {
+          zh: "未来 Claude 生成的文本将包含水印以判断其由 Claude 撰写的可能性，这是遵守欧盟 AI 法案的变更，基于 SynthID-Text 技术，对输出质量无实际影响。",
+          en: "Future Claude text will carry a watermark signaling it was AI-written, an EU AI Act compliance change built on SynthID-Text with no real impact on output quality.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 与 Anthropic 陷入价格战",
+          en: "OpenAI and Anthropic in a Price War",
+        },
+        description: {
+          zh: "价格战让 API 成本弹性成为现实，原本因账单压力转向中国厂商的用户，可能在降价后重新比较能力与价格。",
+          en: "The price war makes API cost elasticity real; users who fled to Chinese vendors over bills may now re-compare capability and price after the cuts.",
+        },
+      },
+      {
+        title: {
+          zh: "印尼首个大学 AI 中心落成",
+          en: "Indonesia's First University AI Center Opens",
+        },
+        description: {
+          zh: "印尼通信与数字事务部、Indosat、NVIDIA 与加查马达大学共同启动 UGM Indosat NVIDIA AI 技术中心（NVAITC），培养本地 AI 人才。",
+          en: "The ministry, Indosat, NVIDIA, and Gadjah Mada University launched the UGM Indosat NVIDIA AI Technology Center to nurture local AI talent.",
+        },
+      },
+      {
+        title: {
+          zh: "2026 夏季开源模型生态观察",
+          en: "Summer 2026 Open-Model Ecosystem Review",
+        },
+        description: {
+          zh: "Hugging Face 公开模型仓库增至 296 万，但 85.6% 下载量不足 200 次；中国实验室月度最大开源模型规模在 754B 至 2.78 万亿之间，明显领先美国。",
+          en: "HF public model repos grew to 2.96M, yet 85.6% have under 200 downloads; Chinese labs' largest monthly open models span 754B–2.78T params, far ahead of US labs.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 会话如何最大化 token 价值",
+          en: "Maximizing Token Value in Claude Code Sessions",
+        },
+        description: {
+          zh: "任务间运行 /clear 可减少无关上下文回传，会话中途切换模型或 effort 级别会破坏提示缓存、增加成本。",
+          en: "Running /clear between tasks trims stale context; switching models or effort mid-session busts the prompt cache and drives up cost.",
+        },
+      },
+      {
+        title: {
+          zh: "谁真的需要 SOTA 模型？84% token 来自非前沿模型",
+          en: "Who Needs SOTA? 84% of Tokens Come from Non-Frontier Models",
+        },
+        description: {
+          zh: "OpenRouter 数据显示用户最常用的六款模型性能约为前沿模型的 77%，成本仅为 Claude Fable 5 的 2.5%，最佳开源模型性能已接近前沿水平。",
+          en: "OpenRouter data shows the six most-used models perform at ~77% of frontier levels for just 2.5% of Claude Fable 5's cost; top open models keep closing the gap.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-15-hot",
+    date: "2026-08-15",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-15",
+      en: "🔥 Hot Topics · Aug 15, 2026",
+    },
+    summary: {
+      zh: "手机大规模涨价，小米等品牌上调价格；8月15日日本宣布无条件投降81周年，高市早苗向靖国神社供奉「玉串料」，自民党高层首次集体参拜；印尼 7.7 级地震引发海啸；《生态环境法典》正式施行，不可降解一次性塑料制品禁用；64岁村支书潜入水库开闸泄洪；「床车旅行」从小众走向潮流；金价银价油价齐涨；北京多区发布暴雨蓝色与冰雹黄色预警；微信回应朋友圈不会有二次编辑功能。",
+      en: "Phones see mass price hikes from Xiaomi and others; Aug 15 marks 81 years since Japan's unconditional surrender, as Takaichi Takaichi offers a 'tamagushi fee' at Yasukuni and LDP leaders make their first group visit; a M7.7 quake in Indonesia triggers a tsunami; the Ecological Environment Code takes effect, banning non-degradable single-use plastics; a 64-year-old village party chief dives to open a reservoir sluice; 'bed-car travel' goes from niche to trend; gold, silver, and oil all rise; Beijing districts issue blue rain and yellow hail alerts; WeChat explains why Moments will never get an edit button.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "大规模涨价 手机快买不起了",
+          en: "Phone Prices Surge: 'Too Expensive Now'",
+        },
+        description: {
+          zh: "小米宣布旗下 9 款手机价格上调 300-500 元不等，此前荣耀、OPPO、vivo、苹果等品牌也已陆续传出涨价消息。",
+          en: "Xiaomi raised prices on 9 models by 300-500 RMB, following similar increases from Honor, OPPO, vivo, and Apple.",
+        },
+      },
+      {
+        title: {
+          zh: "高市早苗向靖国神社供奉「玉串料」",
+          en: "Takaichi Offers Tamagushi Fee at Yasukuni",
+        },
+        description: {
+          zh: "8 月 15 日，日本首相高市早苗向靖国神社供奉「玉串料」（祭祀费）。",
+          en: "On Aug 15, Japanese PM Takaichi Takaichi made an offering of 'tamagushi-ryō' (ritual fee) at Yasukuni Shrine.",
+        },
+      },
+      {
+        title: {
+          zh: "自民党高层首次集体参拜靖国神社",
+          en: "LDP Leaders' First Group Yasukuni Visit",
+        },
+        description: {
+          zh: "8 月 15 日，日本自民党干事长、总务会长、选举对策委员长集体参拜靖国神社，系自民党高层首次集体参拜，防卫大臣小泉进次郎等也前往参拜。",
+          en: "On Aug 15, the LDP's secretary-general, affairs chief, and election chief visited Yasukuni together — a first for party leadership — with Defense Minister Koizumi also attending.",
+        },
+      },
+      {
+        title: {
+          zh: "印尼7.7级地震引发海啸",
+          en: "M7.7 Indonesia Quake Triggers Tsunami",
+        },
+        description: {
+          zh: "8 月 15 日 5 时 58 分印尼弗洛勒斯岛附近海域发生 7.7 级地震，震源深度 20 千米，海啸已在多个地点被监测到，震中附近仍在强烈震动。",
+          en: "At 05:58 on Aug 15, a M7.7 quake (20 km deep) struck near Flores, Indonesia; tsunamis were detected at multiple locations with strong aftershocks continuing.",
+        },
+      },
+      {
+        title: {
+          zh: "这些一次性塑料制品禁用",
+          en: "Single-Use Plastics Ban Takes Effect",
+        },
+        description: {
+          zh: "《生态环境法典》自 8 月 15 日起施行，对不可降解一次性塑料制品实施禁产、禁销、禁用，最高可罚 10 万元，同时鼓励可循环替代产品。",
+          en: "From Aug 15 the Ecological Environment Code bans producing, selling, and using non-degradable single-use plastics — fines up to 100k RMB — while encouraging recyclable alternatives.",
+        },
+      },
+      {
+        title: {
+          zh: "64岁村支书潜下水库开闸泄洪",
+          en: "64-Year-Old Village Chief Dives to Open Sluice",
+        },
+        description: {
+          zh: "湖北随州 64 岁村支书姚行华在持续降雨中潜入水下 1.6 米，花 20 分钟找到并打开泄洪阀门，水库水位随之回落。",
+          en: "In Suizhou, Hubei, 64-year-old village party chief Yao Xinghua dived 1.6m underwater for 20 minutes to open a reservoir sluice, easing the flood risk.",
+        },
+      },
+      {
+        title: {
+          zh: "「床车旅行」从小众到潮流 酒店慌了",
+          en: "'Bed-Car Travel' Goes Mainstream, Hotels Worry",
+        },
+        description: {
+          zh: "车载床垫等装备销量走高，住宿需求被分流，部分酒店暑期客满但营收同比下降近三成。",
+          en: "Car-mattress gear sales climb as sleeping-in-car travel diverts lodging demand; some hotels are full yet revenue falls ~30% year-on-year.",
+        },
+      },
+      {
+        title: {
+          zh: "金价银价油价都涨了",
+          en: "Gold, Silver, and Oil All Rise",
+        },
+        description: {
+          zh: "受地缘局势紧张及美元指数下跌影响，国际油价与金银价格均上涨，纽约黄金期货价格涨至每盎司 4437.30 美元。",
+          en: "On geopolitical tensions and a weaker dollar, oil and precious metals climbed, with NY gold futures reaching $4,437.30/oz.",
+        },
+      },
+      {
+        title: {
+          zh: "暴雨洪涝过后 喝水千万别大意",
+          en: "After Floods, Be Careful About Drinking Water",
+        },
+        description: {
+          zh: "短时强降雨易引发河水暴涨、城市内涝，疾控专家提醒暴雨洪涝过后要注意饮水安全。",
+          en: "Downpours cause swollen rivers and urban flooding; disease-control experts urge attention to drinking-water safety after the storms.",
+        },
+      },
+      {
+        title: {
+          zh: "北京多区暴雨蓝色预警、冰雹黄色预警",
+          en: "Beijing Districts Issue Rain and Hail Alerts",
+        },
+        description: {
+          zh: "8 月 15 日北京已有 6 区发布暴雨蓝色预警、6 区发布冰雹黄色预警，局部短时雨强较大并伴有阵风。",
+          en: "On Aug 15, six Beijing districts issued blue rain warnings and six issued yellow hail warnings, with intense local downpours and gusts.",
+        },
+      },
+      {
+        title: {
+          zh: "朋友圈永远不会有二次编辑功能",
+          en: "Moments Will Never Get an Edit Button",
+        },
+        description: {
+          zh: "微信官方回应称，朋友圈不设二次编辑并非技术所限，而是出于熟人社交的产品设计理念，避免分享演变为内容运营行为。",
+          en: "WeChat says Moments lacks an edit feature by design, not technology — to keep casual sharing from turning into content operations.",
+        },
+      },
+      {
+        title: {
+          zh: "「今天 日本已宣布无条件投降」",
+          en: "'Today, Japan Has Announced Unconditional Surrender'",
+        },
+        description: {
+          zh: "8 月 15 日是日本宣布无条件投降 81 周年，总台复刻重现延安新华广播电台播报片段，勿忘历史。",
+          en: "On the 81st anniversary of Japan's surrender, state media recreated the Yan'an Xinhua Radio broadcast that announced it — lest we forget.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-14",
     date: "2026-08-14",
     title: {
