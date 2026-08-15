@@ -1,0 +1,3624 @@
+import type { NewsItem } from "./types";
+
+export const newsList: NewsItem[] = [
+  {
+    id: "2026-08-15",
+    date: "2026-08-15",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-15",
+      en: "🤖 AI HOT Daily · Aug 15, 2026",
+    },
+    summary: {
+      zh: "小红书开源 dots3-note Preview 轻量模型，280B 参数主打长程智能体与多模态推理；智谱发布 GLM-5.3，编程能力开源第一并涌现网络安全能力；DeepSeek V4 Pro 登陆硅基流动，支持 1M 上下文；Cursor 正式被 SpaceX 收购，将获全球最大 GPU 集群；Claude 将实施文本水印机制以遵守欧盟 AI 法案；OpenAI 与 Anthropic 与中国厂商打价格战；OpenRouter 数据显示 84% token 来自非前沿模型。",
+      en: "Xiaohongshu open-sources dots3-note Preview, a 280B lightweight model for long-horizon agents and multimodal reasoning; Zhipu releases GLM-5.3, open-source No.1 in coding with emerging cyber-security skills; DeepSeek V4 Pro lands on SiliconFlow with a 1M context; Cursor is officially acquired by SpaceX, gaining the world's largest GPU cluster; Claude will add text watermarking to comply with the EU AI Act; OpenAI and Anthropic wage a price war against Chinese rivals; OpenRouter data shows 84% of tokens come from non-frontier models.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "dots3-note Preview 开源：280B 轻量模型",
+          en: "dots3-note Preview Open-Sourced",
+        },
+        description: {
+          zh: "dots3 系列最轻量模型，总参数 280B、激活参数 16B，支持 512K 上下文及文本、视觉、语音多模态理解，针对复杂推理和长程 Agent 任务优化。",
+          en: "The lightest dots3 model — 280B total, 16B active — supports 512K context and text/vision/audio understanding, tuned for complex reasoning and long-horizon agent tasks.",
+        },
+      },
+      {
+        title: {
+          zh: "GLM-5.3 发布：编程能力开源第一",
+          en: "GLM-5.3: No.1 Open-Source Coding, Emerging Cyber Skills",
+        },
+        description: {
+          zh: "基于与 GLM-5.2 相同的基座，编程能力较前代提升 50%，在 Terminal Bench 3.0 等公开基准取得开源第一并接近 Claude Fable 5，白盒代码审查等安全任务表现持平 Mythos 5。",
+          en: "Built on GLM-5.2's base with extreme post-training scaling, coding jumps 50%, topping open models on Terminal Bench 3.0 near Claude Fable 5, and matching Mythos 5 on white-box review.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 3.7 Flash 全面上线 Pro 与 Ultra 用户",
+          en: "Gemini 3.7 Flash Rolls Out to Pro and Ultra",
+        },
+        description: {
+          zh: "Gemini 3.7 Flash 现已向聊天中的 Pro 和 Ultra 用户开放，提升多步骤任务推理与准确性，Gemini Spark 也运行于 3.7 Flash。",
+          en: "Gemini 3.7 Flash is now available to Pro and Ultra users in chat, improving multi-step reasoning and accuracy, with Gemini Spark also on 3.7 Flash.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek V4 Pro 登陆硅基流动",
+          en: "DeepSeek V4 Pro Arrives on SiliconFlow",
+        },
+        description: {
+          zh: "提供 Day-0 支持，具备 1M 上下文窗口及低/高/最大三档推理强度，更侧重编码、工具调用与智能体工作流，仍保持 MIT 开源协议。",
+          en: "Day-0 support with a 1M context window and low/high/max reasoning intensities, emphasizing coding, tool calling, and agent workflows — still MIT-licensed.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 正式被 SpaceX 收购",
+          en: "Cursor Officially Acquired by SpaceX",
+        },
+        description: {
+          zh: "完成自 4 月启动的收购流程，合并后 Cursor 将获得全球最大 GPU 集群，以更低成本构建更强模型，周三发布的 Grok 4.6 是合作成果的早期体现。",
+          en: "Completing the acquisition that began in April, Cursor gains the world's largest GPU cluster to build stronger models for less; Grok 4.6 is an early fruit of the tie-up.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 文本水印机制如何运作",
+          en: "How Claude's Text Watermarking Works",
+        },
+        description: {
+          zh: "未来 Claude 生成的文本将包含水印以判断其由 Claude 撰写的可能性，这是遵守欧盟 AI 法案的变更，基于 SynthID-Text 技术，对输出质量无实际影响。",
+          en: "Future Claude text will carry a watermark signaling it was AI-written, an EU AI Act compliance change built on SynthID-Text with no real impact on output quality.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 与 Anthropic 陷入价格战",
+          en: "OpenAI and Anthropic in a Price War",
+        },
+        description: {
+          zh: "价格战让 API 成本弹性成为现实，原本因账单压力转向中国厂商的用户，可能在降价后重新比较能力与价格。",
+          en: "The price war makes API cost elasticity real; users who fled to Chinese vendors over bills may now re-compare capability and price after the cuts.",
+        },
+      },
+      {
+        title: {
+          zh: "印尼首个大学 AI 中心落成",
+          en: "Indonesia's First University AI Center Opens",
+        },
+        description: {
+          zh: "印尼通信与数字事务部、Indosat、NVIDIA 与加查马达大学共同启动 UGM Indosat NVIDIA AI 技术中心（NVAITC），培养本地 AI 人才。",
+          en: "The ministry, Indosat, NVIDIA, and Gadjah Mada University launched the UGM Indosat NVIDIA AI Technology Center to nurture local AI talent.",
+        },
+      },
+      {
+        title: {
+          zh: "2026 夏季开源模型生态观察",
+          en: "Summer 2026 Open-Model Ecosystem Review",
+        },
+        description: {
+          zh: "Hugging Face 公开模型仓库增至 296 万，但 85.6% 下载量不足 200 次；中国实验室月度最大开源模型规模在 754B 至 2.78 万亿之间，明显领先美国。",
+          en: "HF public model repos grew to 2.96M, yet 85.6% have under 200 downloads; Chinese labs' largest monthly open models span 754B–2.78T params, far ahead of US labs.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 会话如何最大化 token 价值",
+          en: "Maximizing Token Value in Claude Code Sessions",
+        },
+        description: {
+          zh: "任务间运行 /clear 可减少无关上下文回传，会话中途切换模型或 effort 级别会破坏提示缓存、增加成本。",
+          en: "Running /clear between tasks trims stale context; switching models or effort mid-session busts the prompt cache and drives up cost.",
+        },
+      },
+      {
+        title: {
+          zh: "谁真的需要 SOTA 模型？84% token 来自非前沿模型",
+          en: "Who Needs SOTA? 84% of Tokens Come from Non-Frontier Models",
+        },
+        description: {
+          zh: "OpenRouter 数据显示用户最常用的六款模型性能约为前沿模型的 77%，成本仅为 Claude Fable 5 的 2.5%，最佳开源模型性能已接近前沿水平。",
+          en: "OpenRouter data shows the six most-used models perform at ~77% of frontier levels for just 2.5% of Claude Fable 5's cost; top open models keep closing the gap.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-15-hot",
+    date: "2026-08-15",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-15",
+      en: "🔥 Hot Topics · Aug 15, 2026",
+    },
+    summary: {
+      zh: "手机大规模涨价，小米等品牌上调价格；8月15日日本宣布无条件投降81周年，高市早苗向靖国神社供奉「玉串料」，自民党高层首次集体参拜；印尼 7.7 级地震引发海啸；《生态环境法典》正式施行，不可降解一次性塑料制品禁用；64岁村支书潜入水库开闸泄洪；「床车旅行」从小众走向潮流；金价银价油价齐涨；北京多区发布暴雨蓝色与冰雹黄色预警；微信回应朋友圈不会有二次编辑功能。",
+      en: "Phones see mass price hikes from Xiaomi and others; Aug 15 marks 81 years since Japan's unconditional surrender, as Takaichi Takaichi offers a 'tamagushi fee' at Yasukuni and LDP leaders make their first group visit; a M7.7 quake in Indonesia triggers a tsunami; the Ecological Environment Code takes effect, banning non-degradable single-use plastics; a 64-year-old village party chief dives to open a reservoir sluice; 'bed-car travel' goes from niche to trend; gold, silver, and oil all rise; Beijing districts issue blue rain and yellow hail alerts; WeChat explains why Moments will never get an edit button.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "大规模涨价 手机快买不起了",
+          en: "Phone Prices Surge: 'Too Expensive Now'",
+        },
+        description: {
+          zh: "小米宣布旗下 9 款手机价格上调 300-500 元不等，此前荣耀、OPPO、vivo、苹果等品牌也已陆续传出涨价消息。",
+          en: "Xiaomi raised prices on 9 models by 300-500 RMB, following similar increases from Honor, OPPO, vivo, and Apple.",
+        },
+      },
+      {
+        title: {
+          zh: "高市早苗向靖国神社供奉「玉串料」",
+          en: "Takaichi Offers Tamagushi Fee at Yasukuni",
+        },
+        description: {
+          zh: "8 月 15 日，日本首相高市早苗向靖国神社供奉「玉串料」（祭祀费）。",
+          en: "On Aug 15, Japanese PM Takaichi Takaichi made an offering of 'tamagushi-ryō' (ritual fee) at Yasukuni Shrine.",
+        },
+      },
+      {
+        title: {
+          zh: "自民党高层首次集体参拜靖国神社",
+          en: "LDP Leaders' First Group Yasukuni Visit",
+        },
+        description: {
+          zh: "8 月 15 日，日本自民党干事长、总务会长、选举对策委员长集体参拜靖国神社，系自民党高层首次集体参拜，防卫大臣小泉进次郎等也前往参拜。",
+          en: "On Aug 15, the LDP's secretary-general, affairs chief, and election chief visited Yasukuni together — a first for party leadership — with Defense Minister Koizumi also attending.",
+        },
+      },
+      {
+        title: {
+          zh: "印尼7.7级地震引发海啸",
+          en: "M7.7 Indonesia Quake Triggers Tsunami",
+        },
+        description: {
+          zh: "8 月 15 日 5 时 58 分印尼弗洛勒斯岛附近海域发生 7.7 级地震，震源深度 20 千米，海啸已在多个地点被监测到，震中附近仍在强烈震动。",
+          en: "At 05:58 on Aug 15, a M7.7 quake (20 km deep) struck near Flores, Indonesia; tsunamis were detected at multiple locations with strong aftershocks continuing.",
+        },
+      },
+      {
+        title: {
+          zh: "这些一次性塑料制品禁用",
+          en: "Single-Use Plastics Ban Takes Effect",
+        },
+        description: {
+          zh: "《生态环境法典》自 8 月 15 日起施行，对不可降解一次性塑料制品实施禁产、禁销、禁用，最高可罚 10 万元，同时鼓励可循环替代产品。",
+          en: "From Aug 15 the Ecological Environment Code bans producing, selling, and using non-degradable single-use plastics — fines up to 100k RMB — while encouraging recyclable alternatives.",
+        },
+      },
+      {
+        title: {
+          zh: "64岁村支书潜下水库开闸泄洪",
+          en: "64-Year-Old Village Chief Dives to Open Sluice",
+        },
+        description: {
+          zh: "湖北随州 64 岁村支书姚行华在持续降雨中潜入水下 1.6 米，花 20 分钟找到并打开泄洪阀门，水库水位随之回落。",
+          en: "In Suizhou, Hubei, 64-year-old village party chief Yao Xinghua dived 1.6m underwater for 20 minutes to open a reservoir sluice, easing the flood risk.",
+        },
+      },
+      {
+        title: {
+          zh: "「床车旅行」从小众到潮流 酒店慌了",
+          en: "'Bed-Car Travel' Goes Mainstream, Hotels Worry",
+        },
+        description: {
+          zh: "车载床垫等装备销量走高，住宿需求被分流，部分酒店暑期客满但营收同比下降近三成。",
+          en: "Car-mattress gear sales climb as sleeping-in-car travel diverts lodging demand; some hotels are full yet revenue falls ~30% year-on-year.",
+        },
+      },
+      {
+        title: {
+          zh: "金价银价油价都涨了",
+          en: "Gold, Silver, and Oil All Rise",
+        },
+        description: {
+          zh: "受地缘局势紧张及美元指数下跌影响，国际油价与金银价格均上涨，纽约黄金期货价格涨至每盎司 4437.30 美元。",
+          en: "On geopolitical tensions and a weaker dollar, oil and precious metals climbed, with NY gold futures reaching $4,437.30/oz.",
+        },
+      },
+      {
+        title: {
+          zh: "暴雨洪涝过后 喝水千万别大意",
+          en: "After Floods, Be Careful About Drinking Water",
+        },
+        description: {
+          zh: "短时强降雨易引发河水暴涨、城市内涝，疾控专家提醒暴雨洪涝过后要注意饮水安全。",
+          en: "Downpours cause swollen rivers and urban flooding; disease-control experts urge attention to drinking-water safety after the storms.",
+        },
+      },
+      {
+        title: {
+          zh: "北京多区暴雨蓝色预警、冰雹黄色预警",
+          en: "Beijing Districts Issue Rain and Hail Alerts",
+        },
+        description: {
+          zh: "8 月 15 日北京已有 6 区发布暴雨蓝色预警、6 区发布冰雹黄色预警，局部短时雨强较大并伴有阵风。",
+          en: "On Aug 15, six Beijing districts issued blue rain warnings and six issued yellow hail warnings, with intense local downpours and gusts.",
+        },
+      },
+      {
+        title: {
+          zh: "朋友圈永远不会有二次编辑功能",
+          en: "Moments Will Never Get an Edit Button",
+        },
+        description: {
+          zh: "微信官方回应称，朋友圈不设二次编辑并非技术所限，而是出于熟人社交的产品设计理念，避免分享演变为内容运营行为。",
+          en: "WeChat says Moments lacks an edit feature by design, not technology — to keep casual sharing from turning into content operations.",
+        },
+      },
+      {
+        title: {
+          zh: "「今天 日本已宣布无条件投降」",
+          en: "'Today, Japan Has Announced Unconditional Surrender'",
+        },
+        description: {
+          zh: "8 月 15 日是日本宣布无条件投降 81 周年，总台复刻重现延安新华广播电台播报片段，勿忘历史。",
+          en: "On the 81st anniversary of Japan's surrender, state media recreated the Yan'an Xinhua Radio broadcast that announced it — lest we forget.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-14",
+    date: "2026-08-14",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-14",
+      en: "🤖 AI HOT Daily · Aug 14, 2026",
+    },
+    summary: {
+      zh: "小红书开源 20 亿参数全连续端到端自回归语音合成模型 dots.tts；Google DeepMind 发布 Gemini 3.7 Flash，主打编程与智能体且价格减半；MiniMax 推出 Music 3.0 音乐生成模型，最长支持五分钟；DeepSeek Harness v0.1 开发者预览版发布并开源；Cursor 推出 builds 云智能体启动提速 3 倍并获 AIUC-1 认证；OpenAI 预览 Ultrafast 模式，GPT-5.6 Sol 速度提升最高 14 倍；OpenAI 任命 Dali Rajic 为首席营收官。",
+      en: "Xiaohongshu open-sources dots.tts, a 2B-parameter fully-continuous autoregressive TTS model; Google DeepMind ships Gemini 3.7 Flash for coding and agents at half price; MiniMax releases Music 3.0 with up to five-minute songs; DeepSeek Harness v0.1 dev preview goes open source; Cursor launches builds (3x faster cloud-agent startup) and earns AIUC-1 certification; OpenAI previews Ultrafast, running GPT-5.6 Sol up to 14x faster; OpenAI names Dali Rajic Chief Revenue Officer.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "小红书开源语音合成模型 dots.tts",
+          en: "Xiaohongshu Open-Sources TTS Model dots.tts",
+        },
+        description: {
+          zh: "20 亿参数全连续端到端自回归语音合成模型，在 Seed-TTS-Eval 三个子集上取得最佳平均内容准确度和平均说话人相似度。",
+          en: "A 2B-param fully-continuous end-to-end autoregressive TTS model topping Seed-TTS-Eval on average content accuracy and speaker similarity.",
+        },
+      },
+      {
+        title: {
+          zh: "Google DeepMind 推出 Gemini 3.7 Flash",
+          en: "Google DeepMind Launches Gemini 3.7 Flash",
+        },
+        description: {
+          zh: "距 3.6 Flash 仅三周，主打编程与智能体任务，输入/输出价格分别为每百万 token $0.75 和 $3.75，为原版一半。",
+          en: "Just three weeks after 3.6 Flash, it targets coding and agent tasks at $0.75/$3.75 per million input/output tokens — half the previous price.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniMax Music 3.0 发布",
+          en: "MiniMax Music 3.0 Released",
+        },
+        description: {
+          zh: "新一代开源权重、生产级音乐生成模型，可根据创意概念和可选歌词一次性完成整首歌的作曲、编曲、演奏与制作，最长支持五分钟。",
+          en: "A new open-weights, production-grade music model composing, arranging, performing, and producing full songs from a concept plus optional lyrics, up to five minutes.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek Harness v0.1 开发者预览版发布",
+          en: "DeepSeek Harness v0.1 Dev Preview Released",
+        },
+        description: {
+          zh: "基于 Cordis 元框架构建的智能体框架，以 MIT 许可证开源，核心设计为「一切皆插件」，模型、工具、技能、沙箱、编排及 UI 均可自由组合替换。",
+          en: "An agent framework on the Cordis meta-framework, MIT-licensed, with an everything-is-a-plugin core — models, tools, skills, sandboxes, orchestration, and UI all composable.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 推出 builds：云智能体启动提速 3 倍",
+          en: "Cursor Builds: Cloud Agents Start 3x Faster",
+        },
+        description: {
+          zh: "后台持续准备就绪的开发环境副本，云智能体启动无需从零搭建，响应速度最高提升 3 倍，8 月 17 日起所有环境默认启用。",
+          en: "Always-ready environment copies in the background let cloud agents skip cold builds, cutting startup latency up to 3x; default on for all environments from Aug 17.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 预览 Ultrafast 模式",
+          en: "OpenAI Previews Ultrafast Mode",
+        },
+        description: {
+          zh: "由 Cerebras 提供算力的新 API 服务层级，GPT-5.6 Sol 速度最高提升 14 倍，输出速率可达每秒 750 tokens，目前处于预览阶段。",
+          en: "A new Cerebras-powered API tier runs GPT-5.6 Sol up to 14x faster at up to 750 output tokens/second — currently in preview.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.232 默认启用 Subagent forking",
+          en: "Claude Code v2.1.232 Enables Subagent Forking",
+        },
+        description: {
+          zh: "子代理可继承完整对话与提示缓存，非队友代理默认后台运行，新增 GitLab 支持并修复 Windows 权限绕过等安全问题。",
+          en: "Subagents inherit full context and prompt cache, non-teammate agents run in background by default, with new GitLab support and Windows security fixes.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 获得 AIUC-1 认证",
+          en: "Cursor Earns AIUC-1 Certification",
+        },
+        description: {
+          zh: "通过独立审查与对抗性测试，标准由 100 多家财富 500 强 CISO 参与制定，测试覆盖 IDE 和云端智能体的防护机制。",
+          en: "Cursor passed independent review and adversarial tests under a standard shaped by 100+ Fortune-500 CISOs, covering IDE and cloud agent safeguards.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-5.6 构建者指南：更低成本的前沿智能体性能",
+          en: "GPT-5.6 Builders Guide: Frontier Agent Performance for Less",
+        },
+        description: {
+          zh: "新增推理持久化、原生多智能体编排和程序化工具调用等 API 能力，在 ARC-AGI-3 上 Sol 得分从 13.3% 跃升至 38.3%，输出 token 减少约 6 倍。",
+          en: "New API capabilities include reasoning persistence, native multi-agent orchestration, and programmatic tool calls; on ARC-AGI-3 Sol jumped from 13.3% to 38.3% with ~6x fewer output tokens.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 接管应用日常维护：388 个 PR 的实践",
+          en: "Claude Handles App Maintenance: 388 PRs",
+        },
+        description: {
+          zh: "Boris Cherny 让 Claude 通过 Slack 频道运行崩溃模糊测试、死代码移除等日常任务，数周内自动开出 388 个 PR，其中 180 个合并。",
+          en: "Boris Cherny let Claude run crash fuzzing, dedupe, and dead-code removal via Slack, auto-opening 388 PRs in weeks, with 180 merged after review.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 研究新兴多智能体系统的模式与问题",
+          en: "Anthropic Studies Emerging Multi-Agent Systems",
+        },
+        description: {
+          zh: "45 个协调智能体在 2700 万 token 运行中发现 266 个漏洞，而独立并行方法在 650 万 token 中发现 21 个，两者仅 12 个重叠。",
+          en: "45 coordinated agents found 266 vulnerabilities in 27M tokens, vs 21 for independent parallel methods in 6.5M tokens — only 12 overlapped.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-14-hot",
+    date: "2026-08-14",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-14",
+      en: "🔥 Hot Topics · Aug 14, 2026",
+    },
+    summary: {
+      zh: "中央气象台继续发布暴雨黄色预警，17省区市部分地区大到暴雨；华为「天才少年」宁博宇回应离职，将赴瑞典做博士后；新一代「人造太阳」要来了；哥伦比亚强震遇难人数升至281人；小米升降车标专利曝光称可提高续航；王老吉杀入能量电解质饮料赛道；贾鲁河河南周口段出现溃口；39度高温管家喊话全楼关空调；《奥德赛》近3小时引「最佳尿点」讨论；胖东来老店旁缝补摊主称会跟着走。",
+      en: "The national weather center extends a yellow rainstorm alert across parts of 17 regions; Huawei 'genius teen' Ning Boyu responds to his departure, heading to Sweden for a postdoc; a new generation of 'artificial suns' is coming; Colombia's quake death toll rises to 281; Xiaomi patents a weight-saving lifting hood emblem; Wanglaoji enters the energy-electrolyte beverage track; the Jialu River breaches in Zhoukou, Henan; a manager asks the whole building to switch off AC in 39°C heat; Nolan's 'The Odyssey' near-3-hour run sparks 'best pee-break' talk; a mending stall owner near Pangdonglai's old store says he'll follow the store.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "黄色预警！17省区市部分地区大到暴雨",
+          en: "Yellow Alert: Heavy Rain in 17 Regions",
+        },
+        description: {
+          zh: "中央气象台继续发布暴雨黄色预警，8 月 14 日 08 时至 15 日 08 时，江苏、安徽、上海、江西、湖北等 17 省区市部分地区有大到暴雨。",
+          en: "The national center keeps a yellow rainstorm warning: from 08:00 Aug 14 to 08:00 Aug 15, parts of 17 regions including Jiangsu, Anhui, Shanghai, Jiangxi, and Hubei see heavy rain.",
+        },
+      },
+      {
+        title: {
+          zh: "华为「天才少年」宁博宇回应离职",
+          en: "Huawei 'Genius Teen' Ning Boyu on Leaving",
+        },
+        description: {
+          zh: "入职华为三年多后，宁博宇因更享受与学界交流，决定前往瑞典皇家理工学院做博士后，计划结束后回国发展。",
+          en: "After three-plus years at Huawei, Ning Boyu is heading to KTH for a postdoc to enjoy academic exchange, planning to return to China afterward.",
+        },
+      },
+      {
+        title: {
+          zh: "新一代「人造太阳」要来了",
+          en: "A New Generation of 'Artificial Suns' Is Coming",
+        },
+        description: {
+          zh: "可控核聚变「人造太阳」装置在全国多地加快建设，围绕装置形成的科研、工程和产业空间同步扩展。",
+          en: "Controlled-fusion 'artificial sun' facilities are accelerating construction nationwide, with research, engineering, and industry ecosystems expanding around them.",
+        },
+      },
+      {
+        title: {
+          zh: "哥伦比亚强震已致281人遇难",
+          en: "Colombia Quake Death Toll Rises to 281",
+        },
+        description: {
+          zh: "哥伦比亚 7.5 级强震遇难人数升至 281 人，多地建筑受损倒塌、机场停运。",
+          en: "The M7.5 quake in Colombia has killed 281, with widespread building damage and airport closures.",
+        },
+      },
+      {
+        title: {
+          zh: "小米升降车标专利曝光",
+          en: "Xiaomi's Lifting Hood-Emblem Patent Surfaces",
+        },
+        description: {
+          zh: "小米汽车获《标志升降装置及车辆》实用新型专利，称现有升降装置结构复杂、重量大影响续航，新装置可提高车辆续航里程。",
+          en: "Xiaomi Auto won a utility patent for a lifting emblem device it says is lighter and simpler than current designs, boosting vehicle range.",
+        },
+      },
+      {
+        title: {
+          zh: "王老吉杀进年轻人扎堆的新赛道",
+          en: "Wanglaoji Enters the Energy-Electrolyte Track",
+        },
+        description: {
+          zh: "王老吉 WALOVI 推出天然能量电解质饮料等新品，跳出凉茶边界，通过综艺冠名与顶流代言深耕市场，目标拓展第二增长曲线。",
+          en: "WALOVI launched natural energy-electrolyte drinks, stepping beyond herbal tea with variety-show sponsorship and top-tier endorsements to build a second growth curve.",
+        },
+      },
+      {
+        title: {
+          zh: "贾鲁河河南周口川汇区段出现溃口",
+          en: "Jialu River Breaches in Chuanhui, Zhoukou",
+        },
+        description: {
+          zh: "受持续降雨影响，贾鲁河河南周口川汇区段出现溃口，相关部门正在处置。",
+          en: "Following persistent rain, the Jialu River breached at Chuanhui District in Zhoukou, Henan, with authorities responding.",
+        },
+      },
+      {
+        title: {
+          zh: "39度高温管家喊话全楼关空调",
+          en: "39°C: Property Manager Asks Everyone to Turn Off AC",
+        },
+        description: {
+          zh: "广州一回迁房小区为临时用电，高温下电路超负荷一天跳闸三四次，物业称预计 8 月底实现永久供电。",
+          en: "A Guangzhou relocation community on temporary power trips 3-4 times daily under heat load; property says permanent power arrives by end of August.",
+        },
+      },
+      {
+        title: {
+          zh: "《奥德赛》「最佳尿点」",
+          en: "'The Odyssey' Best Pee-Break Moments",
+        },
+        description: {
+          zh: "诺兰新片《奥德赛》时长近三小时，一款标记如厕空档的 APP 整理出四个安全离场时段，涵盖返乡、巨人袭击等平缓段落。",
+          en: "Nolan's near-3-hour 'The Odyssey' prompts an app to map four safe bathroom windows — homecoming, giant attack, ox sacrifice, and palace disguise scenes.",
+        },
+      },
+      {
+        title: {
+          zh: "胖东来老店旁缝补摊主：会跟着走",
+          en: "Mending Stall Owner: 'I'll Follow Pangdonglai'",
+        },
+        description: {
+          zh: "相伴 24 年的缝补摊主刘结实表示五六成生意依赖胖东来老店客流，未来计划跟随迁至时代广场店。",
+          en: "Liu Jieshi, whose mending stall has stood beside the store for 24 years, relies on it for 50-60% of business and plans to move to the Times Plaza store.",
+        },
+      },
+      {
+        title: {
+          zh: "中使馆重要提醒：中国公民尽快撤离",
+          en: "Chinese Embassy Urges Citizens to Evacuate DRC",
+        },
+        description: {
+          zh: "刚果（金）东部分别爆发新一轮埃博拉疫情，刚军与 M23 持续交火，使馆提醒在刚中国公民尽快撤离或转移至安全地区。",
+          en: "With a new Ebola outbreak and ongoing army-M23 fighting in eastern DRC, the Chinese embassy urges citizens to leave or move to safety immediately.",
+        },
+      },
+      {
+        title: {
+          zh: "A股开盘：存储芯片、半导体等板块走强",
+          en: "A-Shares Open: Memory Chips and Semiconductors Gain",
+        },
+        description: {
+          zh: "8 月 14 日 A 股开盘，存储芯片、半导体等板块走强。",
+          en: "On Aug 14, A-shares opened with memory-chip and semiconductor sectors strengthening.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-13",
+    date: "2026-08-13",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-13",
+      en: "🤖 AI HOT Daily · Aug 13, 2026",
+    },
+    summary: {
+      zh: "xAI 发布 Grok 4.6，强化长时运行智能体能力；阿里开放 Qwen3.8-2.4T-A95B 模型权重，为 Qwen-Max 级模型首次开源；微软首发自研推理模型 MAI-Thinking-1；LTX-2.5 生成 10 秒 720P 视频仅需 6.8 秒；DeepSeek V4 Pro 与 Grok 4.6 同日发布，双双逼近 Claude Fable 5 体验；OpenRouter 推出实时网页搜索基准测试；Claude in Chrome 侧边栏升级为 Claude Cowork 会话。",
+      en: "xAI releases Grok 4.6 with stronger long-running agent capabilities; Alibaba opens Qwen3.8-2.4T-A95B weights — the first open Qwen-Max-class model; Microsoft debuts its first self-built reasoning model MAI-Thinking-1; LTX-2.5 generates 10s of 720P video in 6.8s; DeepSeek V4 Pro and Grok 4.6 launch the same day, both approaching Claude Fable 5; OpenRouter launches a live web-search benchmark; Claude in Chrome's sidebar becomes Claude Cowork sessions.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "xAI 发布 Grok 4.6",
+          en: "xAI Releases Grok 4.6",
+        },
+        description: {
+          zh: "在 Grok 4.5 基础上重点强化长时运行智能体及更复杂的交互式与视觉工作能力，在多项智能体编码与知识工作基准上达到前沿水平，综合分追平 GPT-5.6 Sol。",
+          en: "Building on Grok 4.5, it strengthens long-running agents and complex interactive/visual work, reaching frontier levels on agentic coding and knowledge benchmarks, tying GPT-5.6 Sol overall.",
+        },
+      },
+      {
+        title: {
+          zh: "阿里开放 Qwen3.8-2.4T-A95B 模型权重",
+          en: "Alibaba Opens Qwen3.8-2.4T-A95B Weights",
+        },
+        description: {
+          zh: "Qwen-Max 级别模型首次开源：总参数 2.4T，每 Token 激活 95B，原生支持 262,144 Token 上下文并可扩展至 1,010,000 Token。",
+          en: "The first open Qwen-Max-class model: 2.4T total parameters, 95B active per token, native 262K-token context extendable to 1M tokens.",
+        },
+      },
+      {
+        title: {
+          zh: "微软首发自研推理模型 MAI-Thinking-1",
+          en: "Microsoft Debuts MAI-Thinking-1 Reasoning Model",
+        },
+        description: {
+          zh: "微软首个从零构建的推理模型 MAI-Thinking-1 已在 Microsoft Foundry 上线。",
+          en: "Microsoft's first from-scratch reasoning model, MAI-Thinking-1, is now live on Microsoft Foundry.",
+        },
+      },
+      {
+        title: {
+          zh: "LTX-2.5 模型登场：10秒720P视频仅需6.8秒",
+          en: "LTX-2.5: 10s of 720P Video in 6.8 Seconds",
+        },
+        description: {
+          zh: "原生集成 ComfyUI，在 2 张 GB200 配置下生成 10 秒 720P 视频仅需 6.8 秒，Fast 版生成带音频 720p 视频成本约 0.90 美元/10 秒。",
+          en: "Natively integrated with ComfyUI, it renders 10s of 720P video in 6.8s on two GB200s; the Fast tier costs ~$0.90 per 10s audio-720p clip.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek V4 Pro 正式版上线",
+          en: "DeepSeek V4 Pro Official Release",
+        },
+        description: {
+          zh: "Agent 能力大幅提升且暂未涨价，官方测试说明还提及极简模式框架 DeepSeek Harness 即将来袭，或成为决定 Agent 能力的关键。",
+          en: "Agent capabilities jump while pricing holds; docs hint at a coming DeepSeek Harness minimal framework that may be the key to agent power.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 推出实时网页搜索基准测试",
+          en: "OpenRouter Launches Live Web-Search Benchmark",
+        },
+        description: {
+          zh: "系统评测模型、搜索引擎、搜索方法与预算四类配置组合：搜索预算增至 25 轮可使 BrowseComp 得分近乎翻倍，且模型选择比引擎更重要。",
+          en: "It benchmarks model, search engine, method, and budget combos: raising the search budget to 25 rounds nearly doubles BrowseComp scores, with model choice mattering more than engine.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude in Chrome 侧边栏升级为 Cowork 会话",
+          en: "Claude in Chrome Sidebar Becomes Cowork Sessions",
+        },
+        description: {
+          zh: "侧边栏对话保存至历史记录，技能和连接器可在浏览器中工作，任务可在桌面、网页和移动端应用间无缝切换。",
+          en: "Sidebar conversations now save to history, skills and connectors work in-browser, and tasks switch seamlessly across desktop, web, and mobile.",
+        },
+      },
+      {
+        title: {
+          zh: "WhatsApp 构建 Scam Alert 诈骗提醒功能",
+          en: "WhatsApp Builds On-Device Scam Alert",
+        },
+        description: {
+          zh: "在端到端加密保护下于设备端运行 ML 模型识别潜在诈骗消息，消息内容不离开设备，模型权重公开供独立验证。",
+          en: "An optional feature running on-device ML under E2EE to flag scam messages — content never leaves the device, weights are public for verification.",
+        },
+      },
+      {
+        title: {
+          zh: "Research Gold 号称「100%人类撰写」实为 AI 驱动",
+          en: "'100% Human-Written' Research Gold Is Entirely AI",
+        },
+        description: {
+          zh: "面向医学研究者的 Research Gold 声称服务由人类撰写并列出多名博士审稿人，但调查发现审稿人为 AI 生成并不存在，电话中「Sarah」助手也实为 AI。",
+          en: "Medical-research site Research Gold claims human-only writing with PhD reviewers — but investigators found the reviewers are AI-generated, and phone 'Sarah' is also an AI.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 研究：回忆是参数化事实性的瓶颈",
+          en: "Google: Recall Is the Factuality Bottleneck",
+        },
+        description: {
+          zh: "知识画像框架发现前沿 LLM 的事实编码接近饱和但回忆能力不足，多数事实错误源于「丢钥匙」而非「空货架」，并配套推出 WikiProfile 基准。",
+          en: "A knowledge-portrait framework finds frontier LLMs' factual encoding nears saturation while recall lags — most errors are 'lost keys', not 'empty shelves' — backed by the WikiProfile benchmark.",
+        },
+      },
+      {
+        title: {
+          zh: "AutoGPT 如何管理 AI 生成的拉取请求",
+          en: "How AutoGPT Manages AI-Generated PRs",
+        },
+        description: {
+          zh: "通过强制 PR 模板、测试计划、CI 覆盖率门槛和 CLA 签名等门控机制，将智能体提交的 PR 从「不可用」转变为「可用但不符合路线图」。",
+          en: "Using enforced PR templates, test plans, CI coverage gates, and CLA signing, AutoGPT turns agent-submitted PRs from 'unusable' into 'usable but off-roadmap'.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-13-hot",
+    date: "2026-08-13",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-13",
+      en: "🔥 Hot Topics · Aug 13, 2026",
+    },
+    summary: {
+      zh: "国务院原总理朱镕基同志逝世享年98岁；《生态环境法典》8月15日施行，禁止在居民楼开油烟餐饮；比 Lululemon 还贵的瑜伽服品牌 Alo 进入中国；DeepSeek 最新版本藏大招；胖东来许昌老店将于 12 月底关停；威少宣布退役结束18年NBA生涯；易烊千玺凭《小小的我》获百花奖最佳男主角；中国印尼海军首次在台岛以东海域联演；浙江一公司收到美国2.62亿元关税退税；李雪健已完全听不见，靠语音转写交流。",
+      en: "Former Premier Zhu Rongji dies at 98; the Ecological Environment Code takes effect Aug 15, banning fume-heavy restaurants in residential buildings; Alo, pricier than Lululemon, enters China; DeepSeek's latest version hides a big play; Pangdonglai's Xuchang old store closes at end of December; Russell Westbrook announces retirement after 18 NBA seasons; Jackson Yee wins Hundred Flowers Best Actor for 'Big World'; Chinese and Indonesian navies drill east of Taiwan for the first time; a Zhejiang firm gets a 262M RMB US tariff refund; Li Xuejian is now fully deaf, relying on speech-to-text.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "朱镕基同志逝世",
+          en: "Comrade Zhu Rongji Passes Away",
+        },
+        description: {
+          zh: "国务院原总理、中共十四届和十五届中央政治局常委朱镕基同志因病医治无效，于 8 月 12 日 11 时 06 分在北京逝世，享年 98 岁。",
+          en: "Former Premier and 14th/15th Politburo Standing Committee member Zhu Rongji died of illness in Beijing at 11:06 on Aug 12, aged 98.",
+        },
+      },
+      {
+        title: {
+          zh: "新规来了：禁止在居民楼开油烟餐饮",
+          en: "New Rule Bans Fume-Heavy Dining in Residential Buildings",
+        },
+        description: {
+          zh: "8 月 15 日施行的《中华人民共和国生态环境法典》明确禁止在居民住宅楼等新建、改建、扩建产生油烟、异味、废气的餐饮项目，拒不改正将被责令关闭并处罚款。",
+          en: "The Ecological Environment Code, effective Aug 15, bars building fume/odor/emission restaurants in residential buildings, with closure and fines for those refusing to comply.",
+        },
+      },
+      {
+        title: {
+          zh: "比Lululemon还贵的瑜伽服来中国了",
+          en: "Yoga Brand Alo, Pricier Than Lululemon, Enters China",
+        },
+        description: {
+          zh: "Alo 天猫旗舰店和微信小程序同步开售，两款赵露思同款单品累计销售额超千万元，计划 9 月在香港开设大中华区首店。",
+          en: "Alo opened its Tmall flagship and WeChat mini-program, with two Zhao Lusi-endorsed pieces topping 10M RMB in sales; a HK flagship follows in September.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek最新版本藏了一个大招",
+          en: "DeepSeek's Latest Version Hides a Big Play",
+        },
+        description: {
+          zh: "DeepSeek V4 Pro 正式版上线，Agent 能力大幅提升且暂未涨价，官方测试说明提及的极简模式框架 DeepSeek Harness 即将来袭。",
+          en: "DeepSeek V4 Pro is live with much stronger agent capabilities at unchanged prices; docs tease the coming DeepSeek Harness minimal framework.",
+        },
+      },
+      {
+        title: {
+          zh: "胖东来许昌老店关闭 周边商户发声",
+          en: "Pangdonglai Closes Its Xuchang Old Store",
+        },
+        description: {
+          zh: "于东来官宣许昌胖东来生活广场将于 2026 年 12 月底关停，周边商户坦言自身经营将受到波及。",
+          en: "Yu Donglai announced the Xuchang Life Plaza store closes at end of December 2026; nearby merchants say their business will be affected.",
+        },
+      },
+      {
+        title: {
+          zh: "威少宣布退役",
+          en: "Westbrook Announces Retirement",
+        },
+        description: {
+          zh: "8 月 13 日，拉塞尔·威斯布鲁克更新社媒宣布退役，结束 18 年的 NBA 生涯。",
+          en: "On Aug 13, Russell Westbrook announced on social media that he is retiring after an 18-year NBA career.",
+        },
+      },
+      {
+        title: {
+          zh: "医护称易烊千玺演刘春和太逼真",
+          en: "Medical Staff Praise Yi Yangqianxi's Realistic Performance",
+        },
+        description: {
+          zh: "易烊千玺凭《小小的我》中脑瘫患者「刘春和」获百花奖最佳男主角，参与拍摄的医护人员表示其表演高度还原真实患者状态。",
+          en: "Yi Yangqianxi won Best Actor for his cerebral-palsy role in 'Big World'; medical staff involved in filming say his performance faithfully mirrored real patients.",
+        },
+      },
+      {
+        title: {
+          zh: "首次！中国印尼在台岛以东联演",
+          en: "First China-Indonesia Drill East of Taiwan",
+        },
+        description: {
+          zh: "中国海军红河舰与印尼海军「莱」号护卫舰在台岛以东海域完成海上通航演练，系中外海军首次在该海域演练。",
+          en: "PLA Navy's Honghe and Indonesia's frigate Rai completed navigation drills east of Taiwan — the first time Chinese and foreign navies have exercised there.",
+        },
+      },
+      {
+        title: {
+          zh: "浙江一公司收到美国2.62亿元关税退税",
+          en: "Zhejiang Firm Receives 262M RMB US Tariff Refund",
+        },
+        description: {
+          zh: "春风动力、银都股份、众望布艺等公告境外子公司已收到美国退回的关税及利息，其中春风动力退税折合人民币约 2.62 亿元。",
+          en: "CFMOTO, Yindu, and others announced their overseas units received US tariff refunds plus interest; CFMOTO's came to about 262M RMB.",
+        },
+      },
+      {
+        title: {
+          zh: "李雪健已经完全听不见了",
+          en: "Li Xuejian Is Now Completely Deaf",
+        },
+        description: {
+          zh: "抗癌第 26 年的演员李雪健因化疗双耳完全失聪，日常交流只能依靠语音转写器或手机应用转写。",
+          en: "In his 26th year battling cancer, actor Li Xuejian has lost his hearing entirely from chemo and now communicates through speech-to-text tools.",
+        },
+      },
+      {
+        title: {
+          zh: "银行能办结婚证了",
+          en: "Banks Can Now Issue Marriage Certificates",
+        },
+        description: {
+          zh: "天津市首家银行内结婚登记点在邮储银行河西区泗水道支行启用，每周三、周四可办理内地居民结婚登记，两对新人已率先领证。",
+          en: "Tianjin's first in-bank marriage registration point opened at a PSBC branch, processing certificates Wednesdays and Thursdays; two couples have already tied the knot there.",
+        },
+      },
+      {
+        title: {
+          zh: "英仙座流星雨",
+          en: "Perseid Meteor Shower Peaks",
+        },
+        description: {
+          zh: "英仙座流星雨于 8 月 12 日至 13 日夜间迎来极大，上演夏日夜空的「重头戏」。",
+          en: "The Perseid meteor shower peaks the night of Aug 12–13, headlining the summer night sky.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-12",
+    date: "2026-08-12",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-12",
+      en: "🤖 AI HOT Daily · Aug 12, 2026",
+    },
+    summary: {
+      zh: "NVIDIA 推出开源 30B MoE 模型 Nemotron 3.5 Lightning，加速本地智能体任务；蚂蚁百灵开源 Ling-3.0-tiny 原生混合推理模型；Runway Seedance 2.5 上线，支持 50 角色参考；消息称 Anthropic 最快今年 9 月上市，估值高达 9650 亿美元；Gemini 月活破 10 亿成谷歌增长最快产品；英伟达被曝研发万亿参数开源模型 Nemotron 4；OpenAI 用 Astra 模型攻克 10 道长期悬而未决的数学难题；微信朋友圈 AI 帮写与 AI 点评内测引热议。",
+      en: "NVIDIA launches open 30B MoE model Nemotron 3.5 Lightning to accelerate local agent tasks; Ant releases Ling-3.0-tiny, a native hybrid-reasoning model; Runway's Seedance 2.5 goes live with 50-character reference; Anthropic reportedly plans an IPO as soon as September at a $965B valuation; Gemini tops 1B monthly users, Google's fastest-growing product; NVIDIA reportedly building a trillion-parameter open model Nemotron 4; OpenAI's Astra model cracks 10 long-open math problems; WeChat's AI Moments writing and commenting beta stirs debate.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "NVIDIA 推出 Nemotron 3.5 Lightning",
+          en: "NVIDIA Unveils Nemotron 3.5 Lightning",
+        },
+        description: {
+          zh: "可定制的开源 30B 混合专家模型，专为常驻智能体设计，token 生成速度最高提升 4 倍、任务完成时间缩短 30%，可在 RTX PC、DGX 等设备运行。",
+          en: "A customizable open 30B MoE model built for resident agents, with up to 4x faster token generation and 30% shorter task times, running on RTX PCs and DGX systems.",
+        },
+      },
+      {
+        title: {
+          zh: "Ling-3.0-tiny 正式开源",
+          en: "Ling-3.0-tiny Goes Open Source",
+        },
+        description: {
+          zh: "蚂蚁百灵开源 7.9B 总参数、推理时仅激活 1.3B 参数的原生混合推理模型，同步提供 BF16、FP8 和 INT4 三个版本。",
+          en: "Ant's Bailing open-sources Ling-3.0-tiny, a 7.9B-param native hybrid-reasoning model activating just 1.3B at inference, in BF16, FP8, and INT4.",
+        },
+      },
+      {
+        title: {
+          zh: "Runway Seedance 2.5 上线",
+          en: "Runway Seedance 2.5 Goes Live",
+        },
+        description: {
+          zh: "支持 50 个独特角色参考，以及最长 30 秒、与音乐同步的片段生成。",
+          en: "Supports up to 50 distinct character references and music-synced clips up to 30 seconds long.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 最快今年 9 月上市",
+          en: "Anthropic IPO as Soon as September",
+        },
+        description: {
+          zh: "Anthropic 正为可能史上规模最大的 IPO 做准备，计划 9 月或 10 月初上市，估值高达 9650 亿美元，年化收入超 470 亿美元，并淡化中国 AI 企业的竞争影响。",
+          en: "Anthropic preps for a potentially record-breaking IPO in September or early October at a $965B valuation with $47B+ annualized revenue, downplaying Chinese AI competition.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 月活破 10 亿",
+          en: "Gemini Passes 1B Monthly Users",
+        },
+        description: {
+          zh: "每月已有超 10 亿人使用 Gemini 应用，成为谷歌有史以来增长最快、第 14 个达到 10 亿用户里程碑的产品。",
+          en: "Over 1B people now use Gemini each month, making it Google's fastest-growing product and its 14th to cross the 1B-user milestone.",
+        },
+      },
+      {
+        title: {
+          zh: "英伟达研发万亿参数开源模型 Nemotron 4",
+          en: "NVIDIA Building Trillion-Parameter Nemotron 4",
+        },
+        description: {
+          zh: "新一代开源模型系列最大者预计至少 1 万亿参数，目标与全球最先进开源模型竞争，最早可能今年秋末准备就绪。",
+          en: "The next-gen open model line's largest could hit at least 1T parameters, aiming to rival the world's best open models, possibly ready by late fall.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 用 Astra 模型攻克 10 道数学难题",
+          en: "OpenAI's Astra Model Cracks 10 Math Problems",
+        },
+        description: {
+          zh: "未发布的 Astra 模型解决了 10 道长期悬而未决的数学难题，涵盖球体堆积、纠错码、非 sofic 群存在性等领域，并发布超 250 页论文及 Lean 验证结果。",
+          en: "An unreleased Astra model solved 10 long-open math problems in sphere packing, error-correcting codes, and non-sofic groups, with a 250+ page paper and Lean proofs.",
+        },
+      },
+      {
+        title: {
+          zh: "微信朋友圈 AI 帮写与 AI 点评内测",
+          en: "WeChat Beta-Tests AI Moments Writing and Commenting",
+        },
+        description: {
+          zh: "朋友圈 AI 帮写可根据图片和文字生成文案，AI 点评可长按生成评价，作者担忧 AI 被置于社交核心位置，破坏朋友圈「记录美好生活」的基调。",
+          en: "AI Help-Write drafts Moments captions from photos and text; AI Comment generates reviews on long-press. Critics worry it puts AI at social media's core, eroding 'record the good life'.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA 推动 800VDC 新供电架构",
+          en: "NVIDIA Pushes 800VDC Power Architecture",
+        },
+        description: {
+          zh: "NVIDIA 主张以 800V 直流配电替代传统交流多次转换以降低损耗，与 Google、Microsoft 通过 OCP 联合制定，超 80 家设备商正据此开发产品。",
+          en: "NVIDIA advocates 800VDC distribution over traditional AC conversion to cut losses; with Google and Microsoft via OCP, 80+ vendors are developing products.",
+        },
+      },
+      {
+        title: {
+          zh: "AMIE 医疗 AI 实现实时临床视频问诊",
+          en: "AMIE Medical AI Shows Real-Time Video Consultations",
+        },
+        description: {
+          zh: "Google 的 AMIE 系统基于 Gemini 和 Project Astra，首次展示专家级实时临床视频问诊，可解读视听线索、引导虚拟体格检查并实时诊断推理。",
+          en: "Built on Gemini and Project Astra, Google's AMIE demonstrates expert-level real-time video consultations, reading audio-visual cues and guiding virtual exams.",
+        },
+      },
+      {
+        title: {
+          zh: "SaaS 龙头估值溢价：每个类别都有赢家",
+          en: "AI Winners in Every SaaS Category",
+        },
+        description: {
+          zh: "SaaS 估值整体承压但各细分赛道跑出 AI 龙头：CrowdStrike 以 34.4x 前瞻收入领跑安全（中位数 3.9x），Cloudflare 32.6x 对 17.5x。",
+          en: "SaaS valuations are under pressure but AI leaders emerge per category: CrowdStrike at 34.4x forward revenue (median 3.9x), Cloudflare 32.6x vs 17.5x.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-12-hot",
+    date: "2026-08-12",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-12",
+      en: "🔥 Hot Topics · Aug 12, 2026",
+    },
+    summary: {
+      zh: "「人民艺术家」郭兰英逝世享年97岁，1994年将演唱版权无偿捐国家；全国11.5万个城镇老旧小区将迎改造；C罗与乔治娜完婚五个孩子出席婚礼；北京、河南先后发布暴雨预警；赵一鸣零食4块牛肉干多收47元引纠纷；梁文锋跻身全球最富有50人行列，净资产一年暴涨3850%；多地试点直升高中；《影之刃零》开启预售定价268元起；8月13日将现日全食与英仙座流星雨双重天象。",
+      en: "'People's Artist' Guo Lanying dies at 97, having donated her singing copyright to the state in 1994; 115k old urban communities are slated for renovation; Cristiano Ronaldo marries Georgina with all five kids present; Beijing and Henan issue heavy-rain warnings; a Zhaoyiming snack-store overcharge on beef jerky sparks dispute; DeepSeek founder Liang Wenfeng joins the world's 50 richest with net worth up 3850% in a year; more cities pilot direct-to-high-school admission; 'Phantom Blade Zero' opens preorders at 268 RMB; Aug 13 brings a total solar eclipse and Perseid meteor shower.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "郭兰英逝世 享年97岁",
+          en: "Guo Lanying Dies at 97",
+        },
+        description: {
+          zh: "著名歌剧表演艺术家郭兰英于 8 月 11 日在广州逝世，享年 97 岁，曾获「人民艺术家」国家荣誉称号。",
+          en: "Renowned opera performer Guo Lanying, a 'People's Artist' national honoree, died in Guangzhou on Aug 11 at 97.",
+        },
+      },
+      {
+        title: {
+          zh: "你家老小区将迎巨变",
+          en: "Old Communities Face a Big Transformation",
+        },
+        description: {
+          zh: "城市更新「国家行动」启动，市场测算投资规模 5 年 15 万亿元，全国 11.5 万个老旧小区将改造、约 50 万套危旧房将更新。",
+          en: "A national urban-renewal drive begins, with an estimated 15T RMB over five years renovating 115k old communities and updating 500k dilapidated homes.",
+        },
+      },
+      {
+        title: {
+          zh: "C罗结婚 5个孩子出席婚礼",
+          en: "Ronaldo Marries Georgina with All 5 Kids Present",
+        },
+        description: {
+          zh: "C 罗在社媒晒出与乔治娜佩戴婚戒的照片宣布成婚，两人在葡萄牙举行了「私密而温馨」的婚礼，五个孩子都出席。",
+          en: "Ronaldo announced his marriage to Georgina with ring photos; the 'private and warm' ceremony in Portugal saw all five children attend.",
+        },
+      },
+      {
+        title: {
+          zh: "北京暴雨",
+          en: "Beijing Heavy Rain",
+        },
+        description: {
+          zh: "北京启动防汛二级应急响应，12 日起推行弹性错峰上班、学校视情停课，预计部分地区 24 小时累计雨量超 150 毫米。",
+          en: "Beijing activates Level-II flood response with staggered flexible work and possible school closures; some areas may see 150mm+ in 24 hours.",
+        },
+      },
+      {
+        title: {
+          zh: "河南暴雨红色预警",
+          en: "Henan Issues Red Rainstorm Warning",
+        },
+        description: {
+          zh: "河南省气象台升级发布暴雨红色预警，沿淮及其以北多地有暴雨、局部特大暴雨，并伴有短时强降水与雷暴大风。",
+          en: "Henan upgrades to a red rainstorm warning: areas along the Huai River and north face torrential rain, with intense downpours and thunderstorm gales.",
+        },
+      },
+      {
+        title: {
+          zh: "赵一鸣4块牛肉干64元 复称仅17元",
+          en: "Zhaoyiming Beef Jerky Overcharge: 64 RMB for 17 RMB Worth",
+        },
+        description: {
+          zh: "顾客在赵一鸣门店购买 4 块牛肉干被系统称重计费 64.58 元，回家复称实际仅 80 克、合理价格 17.28 元，多收 47 元，门店承认计费出错并提出整单三倍赔偿，双方暂未达成一致。",
+          en: "A customer was charged 64.58 RMB for 4 beef jerky pieces that re-weighed at 80g (worth ~17.28 RMB) — an overcharge of 47 RMB. The store admitted the error and offered triple refund, but no agreement yet.",
+        },
+      },
+      {
+        title: {
+          zh: "多地试点：直升高中",
+          en: "More Cities Pilot Direct-to-High-School Admission",
+        },
+        description: {
+          zh: "湖南娄底、四川成都、上海等地启动「十二年一贯制」贯通培养试点，并出台减少中考计分科目、增加普高学位等改革举措。",
+          en: "Loudi, Chengdu, Shanghai, and others pilot 12-year integrated programs, while cutting exam subjects and adding regular-high-school seats.",
+        },
+      },
+      {
+        title: {
+          zh: "横店短剧盯上了游客",
+          en: "Hengdian Short Dramas Target Tourists",
+        },
+        description: {
+          zh: "受 AI 短剧冲击影视业进入寒冬，横店导演转向为游客拍摄短剧，人均 200-300 元，让人人都能当主角。",
+          en: "As AI short dramas chill the industry, Hengdian directors now shoot short dramas for tourists at 200-300 RMB a head, letting everyone be a star.",
+        },
+      },
+      {
+        title: {
+          zh: "梁文锋跻身全球最富有50人之列",
+          en: "DeepSeek Founder Joins World's 50 Richest",
+        },
+        description: {
+          zh: "DeepSeek 创始人梁文锋净资产一年间从 10 亿美元飙升至 395 亿美元，增幅 3850%，创全球亿万富翁财富增速最高纪录。",
+          en: "DeepSeek founder Liang Wenfeng's net worth leapt from $1B to $39.5B in a year — a 3850% gain, the fastest billionaire wealth growth ever recorded.",
+        },
+      },
+      {
+        title: {
+          zh: "《影之刃零》开启预售 定价268元起",
+          en: "'Phantom Blade Zero' Opens Preorders at 268 RMB",
+        },
+        description: {
+          zh: "甄子丹监制的国产 3A 大作《影之刃零》开启多平台预购，数字标准版 268 元、豪华版 328 元，将于 10 月 29 日发售。",
+          en: "Donnie Yen-supervised Chinese 3A title 'Phantom Blade Zero' opens multi-platform preorders — 268 RMB standard, 328 RMB deluxe — launching Oct 29.",
+        },
+      },
+      {
+        title: {
+          zh: "流星雨 日全食",
+          en: "Meteor Shower and Total Solar Eclipse",
+        },
+        description: {
+          zh: "8 月 13 日地球昼夜两面上演双重天象：国内可观英仙座流星雨，欧洲大陆迎来 1999 年以来首次、2026 年唯一一次日全食。",
+          en: "On Aug 13 both hemispheres get a celestial double-feature: the Perseid meteor shower at home, and Europe's first total solar eclipse since 1999 — the only one of 2026.",
+        },
+      },
+      {
+        title: {
+          zh: "「8月12日地球将失重7秒」系谣言",
+          en: "'7 Seconds of Zero-G on Aug 12' Is a Rumor",
+        },
+        description: {
+          zh: "网传「8 月 12 日地球将失重 7 秒并造成上万人伤亡」，专家回应：末日警告纯属谣言。",
+          en: "Viral claims that Earth would lose gravity for 7 seconds on Aug 12, killing thousands, are dismissed by experts as pure rumor.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-11",
+    date: "2026-08-11",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-11",
+      en: "🤖 AI HOT Daily · Aug 11, 2026",
+    },
+    summary: {
+      zh: "Meta 发布开源 30B 模型 Muse Glimmer，专为本地常驻智能体工作流优化；OpenAI 推出网络安全专用模型 GPT-5.6-Cyber；OpenRouter 推出市场智慧驱动的新版 Auto 路由器；千问开放平台上线路租房、寄快递等十余领域服务；英伟达联合六大机构融资 5000 亿美元建 AI 工厂；Claude 研究版将黎曼猜想零点下界从 41.6% 提升至 67.2%；tl;dv 逾 18.1 万段 AI 会议录音被公开暴露；a16z 称计算机操作智能体在 OSWorld 基准上已超人类水平。",
+      en: "Meta releases open 30B model Muse Glimmer optimized for local resident agent workflows; OpenAI launches cyber-specialized model GPT-5.6-Cyber; OpenRouter debuts a market-aware Auto router; Qwen Open Platform launches covering rentals, courier, and more; NVIDIA joins six institutions to mobilize $500B+ for AI factories; a research Claude lifts the Riemann-zeta zero lower bound from 41.6% to 67.2%; tl;dv exposes 181k+ AI meeting recordings; a16z says computer-operating agents now exceed humans on OSWorld.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Meta 发布开源模型 Muse Glimmer",
+          en: "Meta Releases Open Model Muse Glimmer",
+        },
+        description: {
+          zh: "开放权重 30B 参数模型，专为本地、常驻运行的智能体工作流优化，可在 Mac 或高性能 GPU 的 PC 上完全本地运行，关键智能体用例基准表现领先。",
+          en: "An open-weight 30B model tuned for local, always-on agent workflows, fully runnable on a Mac or a high-end GPU PC, leading key agent benchmarks.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 推出 GPT-5.6-Cyber 网络安全专用模型",
+          en: "OpenAI Launches GPT-5.6-Cyber for Cybersecurity",
+        },
+        description: {
+          zh: "面向授权的漏洞研究、漏洞验证与安全测试，可通过 Daybreak Red 获取，以应对网络防御窗口不断收窄的挑战。",
+          en: "Built for authorized vulnerability research, validation, and security testing, available via Daybreak Red to counter narrowing cyber-defense windows.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 推出新版 Auto 路由器",
+          en: "OpenRouter Launches New Auto Router",
+        },
+        description: {
+          zh: "基于每周超 55T token 的社区消费数据，按约 30 种任务类型匹配近 7 天实际使用的模型，多数任务和成本档位上优于旧版。",
+          en: "Powered by 55T+ weekly community tokens, it matches ~30 task types to models actually used in the last 7 days, beating the old router on most tasks and cost tiers.",
+        },
+      },
+      {
+        title: {
+          zh: "千问开放平台上线：十余领域服务可对话办理",
+          en: "Qwen Open Platform Goes Live",
+        },
+        description: {
+          zh: "向生态伙伴和开发者开放手机、PC 和 AI 眼镜三类终端服务接入，首批覆盖物流运输、房产居住、本地生活、理财、汽车等十多个领域，可对话完成咨询到下单全流程。",
+          en: "Opens phone, PC, and AI-glasses access to partners and developers across logistics, housing, local services, wealth, autos, and more — completing full flows via chat.",
+        },
+      },
+      {
+        title: {
+          zh: "英伟达联合六大机构融资5000亿美元建AI工厂",
+          en: "NVIDIA Mobilizes $500B for AI Factories",
+        },
+        description: {
+          zh: "与 Apollo、BlackRock、Blackstone、Brookfield、Goldman Sachs 和 KKR 合作建立独立融资平台，动员超 5000 亿美元第三方资本支持 AI 基础设施建设。",
+          en: "Teaming with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, and KKR, NVIDIA creates a financing platform to mobilize $500B+ for AI infrastructure.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 研究版提升黎曼猜想零点下界",
+          en: "Research Claude Advances Riemann Zeta Lower Bound",
+        },
+        description: {
+          zh: "Anthropic 让 Claude 尝试攻克黎曼猜想虽未成功，但未发布的研究版将满足猜想的 zeta 函数零点比例下界从 41.6% 提升至 67.2%。",
+          en: "Claude didn't crack the Riemann hypothesis, but an unpublished research version raised the proportion lower bound of zeta zeros satisfying it from 41.6% to 67.2%.",
+        },
+      },
+      {
+        title: {
+          zh: "tl;dv 逾18.1万段AI会议录音被公开暴露",
+          en: "tl;dv Exposes 181k+ AI Meeting Recordings",
+        },
+        description: {
+          zh: "AI 会议记录平台 tl;dv 的数据库缺乏租户隔离，任何已认证用户可查询全部会议记录，涉及 8.4 万用户、23 国政府及多所高校，约千场录制中的会议 ID 可被实时闯入。",
+          en: "tl;dv's Firestore lacked tenant isolation, letting any authenticated user query all 181k recordings covering 84k users, 23 governments, and many universities — ~1,000 live meetings were joinable.",
+        },
+      },
+      {
+        title: {
+          zh: "智能体真的会用电脑吗？a16z 给出答案",
+          en: "Can Agents Use a Computer? a16z's Answer",
+        },
+        description: {
+          zh: "计算机操作智能体在 OSWorld-Verified 最佳成绩从一年前 42% 升至 85%，超过人类测试者约 72% 的水平，Claude Fable 5 领先。",
+          en: "Computer-operating agents on OSWorld-Verified jumped from 42% a year ago to 85%, surpassing human testers' ~72%; Claude Fable 5 leads the pack.",
+        },
+      },
+      {
+        title: {
+          zh: "Zapier 用 ChatGPT Work 改造核心营销流程",
+          en: "Zapier Reworks Marketing with ChatGPT Work",
+        },
+        description: {
+          zh: "Zapier 用 ChatGPT Work 自动化线索漏斗优化与报告生成，每月对数千条线索执行 QA/QC，为销售团队每月带来七位数管道价值。",
+          en: "Zapier automates lead-funnel optimization and reporting with ChatGPT Work, QA/QC-ing thousands of leads monthly and driving seven-figure pipeline value for sales.",
+        },
+      },
+      {
+        title: {
+          zh: "Omnigent 上下文策略阻断「致命三重奏」攻击",
+          en: "Omnigent Contextual Policies Block the 'Lethal Trifecta'",
+        },
+        description: {
+          zh: "在组合上下文中识别并拦截多个看似无害请求叠加形成的恶意行为，在单个请求层面不设防，在不牺牲正常功能的前提下提升安全性。",
+          en: "Detects and blocks malicious behavior formed by stacking innocuous-looking requests at the context level, improving security without sacrificing normal functionality.",
+        },
+      },
+      {
+        title: {
+          zh: "开源不等于开放权重",
+          en: "Open Source Is Not the Same as Open Weight",
+        },
+        description: {
+          zh: "Gary Marcus 指出开放权重模型仅发布训练后的权重，用户无法访问训练数据、预处理或训练算法，在透明度与可定制性上与真正的开源有根本区别。",
+          en: "Gary Marcus argues open-weight models ship only trained weights, denying users training data, preprocessing, or algorithms — a fundamental gap from true open source.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-11-hot",
+    date: "2026-08-11",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-11",
+      en: "🔥 Hot Topics · Aug 11, 2026",
+    },
+    summary: {
+      zh: "曾年销超76万辆的雪佛兰退出中国新车赛道；台风「白海豚」致上海打破75年单日降水纪录；胖东来因不满房东涨租自掏65亿建「梦之城」；女子3万全款购入宝鸡40平米住房；哥伦比亚 7.5 级强震超百人遇难进入国家灾难状态；宇树科技科创板申购受热捧；豆包回应「推荐酒店抽取12%佣金」；陈思诚因《唐探》男主投票在家气哭；iPhone 18 Pro 等 7 款新品爆料亮相；武契奇称德国已落后于中国；卫诗雅凭《破·地狱》获百花奖最佳女主角。",
+      en: "Chevrolet, once selling 767k cars a year in China, quietly exits the new-car market; Typhoon White Dolphin shatters Shanghai's 75-year daily rainfall record; Pangdonglai founder, fed up with landlord rent hikes, spends 6.5B RMB on his own 'Dream City' mall; a woman buys a 40sqm Baoji home outright for 30k RMB; a 7.5-magnitude quake in Colombia kills 100+, triggering a national disaster state; Unitree's STAR Market subscription heats up; Doubao denies charging 12% hotel commission; Chen Sicheng is upset over his 'Detective Chinatown' leads' paltry votes; iPhone 18 Pro and six other rumored Apple releases leak; Vucic says Germany has fallen behind China; Michelle Wai wins Best Actress for 'The Last Dance'.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "曾年销超76万的神车要退场了",
+          en: "Chevrolet, Once Selling 767k a Year, Exits China",
+        },
+        description: {
+          zh: "科鲁兹、迈锐宝、赛欧曾是多少家庭的第一台车，2014 年雪佛兰在华卖出 76.7 万辆，如今以近乎安静的方式退出中国新车赛道。",
+          en: "Cruze, Malibu, and Sail were many families' first cars; Chevrolet sold 767k units in China in 2014 but is now quietly exiting the new-car market.",
+        },
+      },
+      {
+        title: {
+          zh: "上海降水量破纪录 学生舍不得点外卖",
+          en: "Shanghai Rainfall Record; Students Skip Delivery",
+        },
+        description: {
+          zh: "台风「白海豚」致上海打破 75 年单日降水量纪录，在沪学生表示外卖配送费涨 4 倍，舍不得点外卖。",
+          en: "White Dolphin set a 75-year daily rainfall record in Shanghai; students say delivery fees quadrupled, so they're skipping takeout.",
+        },
+      },
+      {
+        title: {
+          zh: "于东来自掏65亿建商场",
+          en: "Pangdonglai Founder Builds His Own Mall for 6.5B",
+        },
+        description: {
+          zh: "胖东来创始人于东来因不满房东不合理大幅涨租，关闭年利润超 1 亿元的老店，自掏约 65 亿元打造总建面超 57 万平方米的综合体「梦之城」。",
+          en: "Fed up with unreasonable rent hikes, Yu Donglai closed a store earning over 100M RMB a year and poured ~6.5B RMB into the 570k-sqm 'Dream City' complex.",
+        },
+      },
+      {
+        title: {
+          zh: "女子花3万全款购入宝鸡40平米住房",
+          en: "Woman Buys 40sqm Baoji Home for 30k RMB",
+        },
+        description: {
+          zh: "吕女士去年到宝鸡吃火锅时发现当地有「万元房」，随后以 3 万元全款购入一套 40 平米住房，后期装修又花 4 万多元。",
+          en: "After spotting a '10k RMB house' on a hotpot trip to Baoji, Ms. Lü bought a 40sqm home outright for 30k RMB, spending over 40k more on renovations.",
+        },
+      },
+      {
+        title: {
+          zh: "哥伦比亚7.5级强震进入国家灾难状态",
+          en: "Colombia Declares Disaster State After M7.5 Quake",
+        },
+        description: {
+          zh: "8 月 10 日哥伦比亚乔科省发生 7.5 级地震，震源深度 80 公里，已致超百人遇难，多地建筑受损倒塌、机场停运，政府宣布进入国家灾难状态。",
+          en: "A 7.5-magnitude quake (80 km deep) hit Chocó on Aug 10, killing 100+, damaging buildings, and grounding airports, prompting a national disaster declaration.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树科技申购 中一签有望赚20万元",
+          en: "Unitree Subscription Could Net 200k per Lot",
+        },
+        description: {
+          zh: "A 股「人形机器人第一股」宇树科技科创板申购，发行价 150.80 元/股，以今年新股首日平均涨幅测算，中一签账面盈利有望突破 20 万元。",
+          en: "Unitree, the A-share 'first humanoid-robot stock', opens subscription at 150.80 RMB/share; one winning lot could book 200k+ RMB at this year's average debut gain.",
+        },
+      },
+      {
+        title: {
+          zh: "豆包回应「推荐酒店抽取12%佣金」",
+          en: "Doubao Responds to '12% Hotel Commission' Claim",
+        },
+        description: {
+          zh: "针对通过豆包跳转抖音来客成交的酒店订单将执行约 12% 综合费率的消息，豆包回应称生活服务业务目前没有付费推广，推荐酒店也不收取广告费。",
+          en: "After reports that hotel orders via Doubao jumping to Douyin would carry ~12% fees, Doubao says its life-services business has no paid promotion and charges no ad fees.",
+        },
+      },
+      {
+        title: {
+          zh: "陈思诚在家气哭了",
+          en: "Chen Sicheng Upset by 'Detective Chinatown' Votes",
+        },
+        description: {
+          zh: "百花奖最佳男主角投票中，王宝强 0 票、刘昊然 1 票，陈思诚两部《唐探》男主拿到的票数让他直呼气哭。",
+          en: "At the Hundred Flowers best-actor vote, Wang Baoqiang got 0 and Liu Haoran 1 vote, leaving the director of both 'Detective Chinatown' films frustrated.",
+        },
+      },
+      {
+        title: {
+          zh: "iPhone18Pro等7款新品彻底泄密",
+          en: "iPhone 18 Pro and 7 New Apple Products Leak",
+        },
+        description: {
+          zh: "爆料称苹果秋季发布会预计有 7 款新品集中亮相，涵盖 iPhone 18 Pro 系列、首款折叠屏 iPhone Ultra、两款全新 Apple Watch 及两款智能家居新品。",
+          en: "Leaks suggest Apple's fall event will bring seven products: iPhone 18 Pro line, the first foldable iPhone Ultra, two new Apple Watches, and two smart-home devices.",
+        },
+      },
+      {
+        title: {
+          zh: "武契奇列数据：德国已经落后于中国",
+          en: "Vucic: Germany Has Fallen Behind China",
+        },
+        description: {
+          zh: "塞尔维亚总统武契奇称欧元区近六个月平均增长率仅 0.8%，与中国的 5% 无法相提并论，德国这个曾经的工业强国如今已在经济各领域落后于中国。",
+          en: "Serbian President Vucic notes the eurozone's 0.8% average six-month growth can't match China's 5%, saying once-industrial powerhouse Germany now lags China across the board.",
+        },
+      },
+      {
+        title: {
+          zh: "商场负一层遭积水倒灌 展厅车漂走",
+          en: "Underground Car Showroom Flooded, Cars Float Away",
+        },
+        description: {
+          zh: "台风暴雨致张家港曼巴特购物广场负一层积水倒灌，地下小鹏汽车展厅被大水冲灌，多台展车被浸泡并漂出店外。",
+          en: "Typhoon flooding hit the basement of Zhangjiagang's Mambat mall, deluging the underground XPeng showroom and floating multiple display cars out.",
+        },
+      },
+      {
+        title: {
+          zh: "卫诗雅获百花奖最佳女主角",
+          en: "Michelle Wai Wins Hundred Flowers Best Actress",
+        },
+        description: {
+          zh: "第 38 届大众电影百花奖颁奖典礼在京举行，卫诗雅凭借在《破·地狱》中的表演获得最佳女主角奖。",
+          en: "At the 38th Hundred Flowers Awards in Beijing, Michelle Wai won Best Actress for her performance in 'The Last Dance' (Pó dì yù).",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-10",
+    date: "2026-08-10",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-10",
+      en: "🤖 AI HOT Daily · Aug 10, 2026",
+    },
+    summary: {
+      zh: "Seedance 2.5 上线一周新增六种创意玩法，单次生成超长视频拉至 300 秒；Anthropic 称已基本解决 Claude 的提示注入攻击，Claude Code auto 模式将默认开启；用 DistilBERT LoRA 与 TF-IDF 基线做 IMDb 情感分析的完整教程；Nathan Lambert 反思前沿模型黑客事件暴露的激励与治理失衡。",
+      en: "Seedance 2.5 sees six viral creative styles in its first week, with single generations extending to 300 seconds; Anthropic says prompt-injection threats are essentially solved, with Claude Code auto mode defaulting on; a full tutorial on IMDb sentiment analysis with DistilBERT LoRA vs TF-IDF baselines; Nathan Lambert reflects on incentive and governance imbalances exposed by frontier-model hacks.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Seedance 2.5 上线一周新增六种创意玩法",
+          en: "Seedance 2.5 Adds Six Creative Play Styles in First Week",
+        },
+        description: {
+          zh: "国内外社区涌现出时间静止、超级英雄变身、创意广告、K-pop MV、电商广告、拉片复刻等热门玩法，面部告别 AI 油腻感，单次生成视频拉至 300 秒，支持片段重拍与智能续写。",
+          en: "Communities embrace time-freeze, superhero morphs, creative ads, K-pop MVs, e-commerce ads, and film reenactments; faces lose the 'AI slop' look, single generations reach 300s, with re-shoot and smart continuation.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 称已基本解决提示注入攻击",
+          en: "Anthropic Says Prompt Injection Is Essentially Solved",
+        },
+        description: {
+          zh: "通过模型训练基本解决 Claude 在实际使用中的提示注入威胁，叠加多层防御后未见过的间接注入攻击成功率可降至约 0，Claude Code auto 模式将于下周默认开启。",
+          en: "Model training largely neutralizes prompt-injection threats in Claude, with layered defenses cutting unseen indirect attacks to ~0; Claude Code auto mode defaults on next week.",
+        },
+      },
+      {
+        title: {
+          zh: "用 DistilBERT LoRA 与 TF-IDF 基线做 IMDb 情感分析",
+          en: "IMDb Sentiment Analysis with DistilBERT LoRA and TF-IDF Baselines",
+        },
+        description: {
+          zh: "端到端情感分析流程，对比 TF-IDF 逻辑回归基线与 LoRA 微调的 DistilBERT，评估准确率、macro-F1、ROC-AUC 及校准误差，并利用未标注数据做置信度伪标注半监督训练。",
+          en: "An end-to-end pipeline comparing TF-IDF logistic regression with LoRA-finetuned DistilBERT across accuracy, macro-F1, ROC-AUC, and calibration, plus confidence-based pseudo-labeling for semi-supervised learning.",
+        },
+      },
+      {
+        title: {
+          zh: "从黑客事件中汲取教训：激励与治理失衡",
+          en: "Lessons from the Hacks: Incentive and Governance Imbalance",
+        },
+        description: {
+          zh: "前沿模型引发的网络攻击事件暴露激励体系难以适应技术变革，科技公司受增长驱动持续扩展而政府行动迟缓，作者呼吁更多透明度，并指出持久性强的模型更可能实施黑客行为。",
+          en: "Frontier-model hacks reveal incentives lagging technical change: growth-driven companies expand while governments move slowly. The author calls for transparency and notes more persistent models are likelier to hack.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-10-hot",
+    date: "2026-08-10",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-10",
+      en: "🔥 Hot Topics · Aug 10, 2026",
+    },
+    summary: {
+      zh: "台风「白海豚」在浙江玉环登陆，半小时前后判若两地；宇树科技开启科创板申购，A股人形机器人第一股中一签有望赚20万元；5万元以下微型代步车集体遇冷；存款市场罕见两极分化；多地高分生扎堆填报中本贯通；南京建议台风天居家弹性办公；上海一男子用AI编造「女子台风中坠楼」谣言被行拘；极氪7X充电时起火；香港校舍生意成资本新宠；NBA传奇教练老尼尔森去世。",
+      en: "Typhoon White Dolphin lands in Yuhuan, Zhejiang, with a dramatic calm-before-storm scene; Unitree opens STAR Market subscription as the A-share 'first humanoid robot stock' — a winning lot could profit 200k RMB; sub-50k mini commuter cars see a collective slump; rare polarization in the deposit market; high scorers flock to 'zhongben guantong' programs; Nanjing recommends flexible work from home; a man jailed for AI-fabricated 'woman fell from building in typhoon' rumor; Zeekr 7X catches fire while charging; Hong Kong student housing becomes a capital hotspot; NBA legend coach Don Nelson dies.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "台风登陆半小时前后判若两地",
+          en: "Typhoon Landfall: Two Worlds in Half an Hour",
+        },
+        description: {
+          zh: "第 13 号台风「白海豚」9 日 17 时 30 分前后在浙江玉环登陆，登陆时风平浪静，目前又恢复巨浪滔天。",
+          en: "Typhoon White Dolphin made landfall in Yuhuan, Zhejiang around 17:30 on Aug 9, eerily calm at landfall then reverting to raging waves.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树申购 中一签有望赚20万元",
+          en: "Unitree Subscription: Winning a Lot Could Earn 200k",
+        },
+        description: {
+          zh: "A 股人形机器人第一股宇树科技开启科创板申购，发行定价 150.80 元/股，预估市值 609.93 亿元，以今年新股平均涨幅测算，中一签账面盈利有望突破 20 万元。",
+          en: "Unitree, the first humanoid-robot A-share, opens its STAR Market subscription at 150.80 RMB/share (~60.99B RMB raised). At this year's average first-day gain, one lot could book over 200k RMB profit.",
+        },
+      },
+      {
+        title: {
+          zh: "5万小车卖不动 微型代步车集体遇冷",
+          en: "Sub-50k Mini Cars Slump While Premium EVs Surge",
+        },
+        description: {
+          zh: "5 万元以下微型代步车上半年销量暴跌 55%，而 40 万以上新能源销量大涨 46%。",
+          en: "Sales of sub-50k RMB mini commuter cars plunged 55% in H1, while NEVs above 400k surged 46%.",
+        },
+      },
+      {
+        title: {
+          zh: "如何看待当前物价运行态势",
+          en: "How to Read Current Price Trends",
+        },
+        description: {
+          zh: "专家预计下半年物价将延续 CPI 温和上涨、PPI 涨势趋稳的向好态势，内需潜力有望在政策加力下进一步释放。",
+          en: "Experts expect CPI to keep rising moderately and PPI to stabilize in H2, with domestic demand potential unlocked as policies take effect.",
+        },
+      },
+      {
+        title: {
+          zh: "多地高分生扎堆填报中本贯通",
+          en: "High Scorers Flock to 'Zhongben Guantong' Programs",
+        },
+        description: {
+          zh: "「3+4」中本贯通拓展了中职学生升学通道，今年多地出现高分考生选择填报中职与本科高校协同的七年一体化培养试点。",
+          en: "The '3+4' model expands vocational students' paths to university, with more high scorers this year choosing the seven-year integrated secondary-to-undergraduate pilot.",
+        },
+      },
+      {
+        title: {
+          zh: "南京 弹性办公",
+          en: "Nanjing: Flexible Work During Typhoon",
+        },
+        description: {
+          zh: "受台风影响南京大暴雨，防汛指挥部建议具备条件的企事业单位采取居家弹性办公或错峰上下班。",
+          en: "With torrential rain from the typhoon hitting Nanjing, flood authorities recommend home-based flexible work or staggered commutes where feasible.",
+        },
+      },
+      {
+        title: {
+          zh: "存款市场罕见两极分化",
+          en: "Rare Polarization in the Deposit Market",
+        },
+        description: {
+          zh: "多地中小银行下调中长期存款利率，四大行重启 5 年期大额存单，部分县域银行上调利率，本质是净息差承压与揽储博弈下的行业结构性调整。",
+          en: "Small banks cut medium/long-term deposit rates while big four revive 5-year CDs and some county banks raise rates — a structural adjustment driven by margin pressure and deposit competition.",
+        },
+      },
+      {
+        title: {
+          zh: "「上海女子在台风中坠楼」不实",
+          en: "'Woman Fell in Typhoon' Rumor Is False",
+        },
+        description: {
+          zh: "一男子为博取流量用 AI 软件生成涉台风视频，编造「浦东一女子在台风中坠楼」的虚假信息发布上网，已被警方依法行政拘留。",
+          en: "A man used AI software to fabricate a typhoon video claiming a woman fell from a building in Pudong; he has been detained for spreading false information.",
+        },
+      },
+      {
+        title: {
+          zh: "极氪7X充电时起火",
+          en: "Zeekr 7X Catches Fire While Charging",
+        },
+        description: {
+          zh: "宁波一辆极氪 7X 在公共充电站发生「过热事件」，未造成人员伤亡，涉事车辆此前曾发生严重碰撞且未经过官方授权服务中心维修。",
+          en: "A Ningbo Zeekr 7X suffered an 'overheating incident' at a public charger with no injuries; the car had a prior serious crash and hadn't been serviced at an authorized center.",
+        },
+      },
+      {
+        title: {
+          zh: "资本扎堆入局 香港校舍生意爆火",
+          en: "Hong Kong Student Housing Becomes Capital Hotspot",
+        },
+        description: {
+          zh: "2025 年以来香港公开披露的学生宿舍收购、改建案例超 10 宗，成交额超 60 亿港元，中原投资、京东及新加坡伟合控股等各路资本纷纷涌入。",
+          en: "Since 2025, over 10 disclosed student-housing deals totaling more than 6B HKD have closed, drawing C.P. Group, JD.com, and Singapore's Weave Living.",
+        },
+      },
+      {
+        title: {
+          zh: "NBA传奇教练老尼尔森去世",
+          en: "NBA Legend Coach Don Nelson Dies",
+        },
+        description: {
+          zh: "NBA 名人堂成员、3 届年度最佳教练唐·尼尔森去世，享年 86 岁，独行侠、勇士、凯尔特人官方发文哀悼，库里悼念自己的首位主帅。",
+          en: "Hall-of-Famer and three-time Coach of the Year Don Nelson died at 86; the Mavericks, Warriors, and Celtics mourned, and Curry honored his first NBA head coach.",
+        },
+      },
+      {
+        title: {
+          zh: "白海豚下一站华北",
+          en: "White Dolphin's Next Stop: North China",
+        },
+        description: {
+          zh: "12 日后台风残余环流或将与中纬度天气系统结合，给华北带来一轮较强降水，山东、京津冀将现强降雨，需防范山前地带极端强降雨。",
+          en: "After Aug 12, the typhoon's remnants may merge with mid-latitude systems, bringing heavy rain to North China — Shandong and Beijing-Tianjin-Hebei, with extreme rainfall near mountain fronts.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-09",
+    date: "2026-08-09",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-09",
+      en: "🤖 AI HOT Daily · Aug 9, 2026",
+    },
+    summary: {
+      zh: "苹果 Mac 支持 Apple 智能配合阿里千问模型工作；OpenAI 桌面端 ChatGPT 上线语音交互功能可语音操控电脑执行多步骤任务；Grok Imagine 图像编辑重大升级支持悬停即时编辑；Claude Code v2.1.225 新增网关支出限额支持；Cloudflare 称 AI 机器人流量已超越人类，预计五年后人机流量比达 1:1000；Firebird 在亚美尼亚启动独联体地区最大 AI 工厂。",
+      en: "Apple's Mac now supports Apple Intelligence working with Alibaba's Qwen model; OpenAI desktop ChatGPT adds voice interaction to control computers with multi-step tasks; Grok Imagine image editing gets a major upgrade with hover-to-edit; Claude Code v2.1.225 adds gateway spend-limit support; Cloudflare says AI bot traffic has surpassed humans, projecting a 1:1000 ratio in five years; Firebird launches the CIS region's largest AI factory in Armenia.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "苹果 Mac 支持 Apple 智能配合阿里千问",
+          en: "Apple Mac Supports Apple Intelligence with Qwen",
+        },
+        description: {
+          zh: "苹果官网新增《在 Mac 上配合 Apple 智能使用千问》支持文档，适用于 macOS 26.6 或更高版本，需中国大陆 Apple 账户及机型，支持写作工具与 Siri。",
+          en: "Apple's support docs add 'Use Qwen with Apple Intelligence on Mac,' requiring macOS 26.6+ with a mainland China Apple account, supporting Writing Tools and Siri.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 桌面端 ChatGPT 上线语音交互功能",
+          en: "OpenAI Desktop ChatGPT Adds Voice Interaction",
+        },
+        description: {
+          zh: "新增对 ChatGPT Voice 的支持，用户可直接通过语音对话控制 AI 智能体在电脑上执行多步骤任务，支持 ChatGPT Work 和 Codex。",
+          en: "Adds ChatGPT Voice support, letting users control agents via voice to execute multi-step tasks on their computers, with ChatGPT Work and Codex support.",
+        },
+      },
+      {
+        title: {
+          zh: "Grok Imagine 图像编辑迎来重大升级",
+          en: "Grok Imagine Gets Major Image-Editing Upgrade",
+        },
+        description: {
+          zh: "用户可以悬停在 Grok Imagine 中的任意特定区域，并即时对该区域进行编辑。",
+          en: "Users can now hover over any specific region in Grok Imagine and edit it instantly.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.225：新增网关支出限额支持",
+          en: "Claude Code v2.1.225: Gateway Spend-Limit Support",
+        },
+        description: {
+          zh: "为用量警告新增网关支出限额支持，达到限额时显示上限、重置时间及操作者消息，并为不受信任目录中的 agents 增加工作区信任提示。",
+          en: "Adds gateway spend-limit support for usage warnings showing cap, reset time, and operator messages, plus workspace trust prompts for agents in untrusted directories.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare：AI 机器人流量已超越人类",
+          en: "Cloudflare: AI Bot Traffic Has Surpassed Humans",
+        },
+        description: {
+          zh: "AI 机器人等非人类流量已于 2026 年 5 月正式超过人类流量，公司预测若趋势延续，五年后非人类流量将达人类流量的 1000 倍。",
+          en: "Non-human (AI bot) traffic officially surpassed human traffic in May 2026, and Cloudflare projects it could reach 1000x human traffic in five years if the trend holds.",
+        },
+      },
+      {
+        title: {
+          zh: "Firebird 在亚美尼亚启动独联体地区最大 AI 工厂",
+          en: "Firebird Launches Largest AI Factory in CIS Region",
+        },
+        description: {
+          zh: "由 NVIDIA 加速计算和 Dell Technologies 基础设施驱动，在亚美尼亚启动独联体地区最大的 AI 工厂，亚美尼亚总理等官员出席开幕式。",
+          en: "Powered by NVIDIA accelerated computing and Dell Technologies infrastructure, the largest AI factory in the CIS region opens in Armenia, with the PM among attendees.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-09-hot",
+    date: "2026-08-09",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-09",
+      en: "🔥 Hot Topics · Aug 9, 2026",
+    },
+    summary: {
+      zh: "台风白海豚逼近浙江登陆，10级风圈触及台州；以军士兵把枪口对准中国记者；生产也能「拼单」共享制造兴起；上交绝杀清华姚明笑出表情包；三警齐发多地10级以上雷暴大风；2026「未录满」本科专业排行榜出炉；89岁钟南山每周健身3次；大爷听AI洒农药150亩苗一夜枯萎；车企回归实体按键；青海兰州在抢一碗面？青海日报称格局小了；台风将至超市叶菜肉类3小时售罄；情侣在平潭拍日出坠崖一死一伤。",
+      en: "Typhoon White Dolphin approaches Zhejiang with 10-level wind ring touching Taizhou; Israeli soldiers point guns at Chinese journalists; 'group-buying' for shared manufacturing emerges; SJTU stuns Tsinghua as Yao Ming bursts with joy; triple alerts for gales and storms; 2026 'unfilled' undergraduate major ranking released; 89-year-old Zhong Nanshan works out 3 times weekly; farmer follows AI pesticide advice, 150 mu of sesame withers overnight; automakers return to physical buttons; Qinghai Daily says the lamian 'fight' lacks vision; supermarkets sell out of greens and meat in 3 hours before typhoon; couple falls off cliff photographing sunrise in Pingtan, one dead one injured.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "白海豚台风眼一闭一睁",
+          en: "White Dolphin's Eye Opens and Closes",
+        },
+        description: {
+          zh: "台风「白海豚」迎第七次巅峰，登陆时间可能比预计更早，温州台州沿海 9 日上午就要做好防台准备，浙江其他地方注意防范持续强降雨。",
+          en: "Typhoon White Dolphin peaks for a seventh time; landfall may come earlier than expected, with Wenzhou and Taizhou coastal areas preparing by morning and sustained heavy rain elsewhere.",
+        },
+      },
+      {
+        title: {
+          zh: "以军士兵把枪口对准中国记者",
+          en: "Israeli Soldiers Point Guns at Chinese Journalists",
+        },
+        description: {
+          zh: "以色列军警在约旦河西岸卡兰迪亚难民营发起大规模军事行动，新华社记者现场蹲守时遭以军枪口对准，行动已致数十名巴勒斯坦人受伤、超七十人被逮捕。",
+          en: "During a large Israeli operation at Qalandia camp in the West Bank, a Xinhua journalist had a gun aimed at him. Dozens of Palestinians were wounded and over 70 arrested.",
+        },
+      },
+      {
+        title: {
+          zh: "生产也能「拼单」了",
+          en: "Production Can Now Be 'Group-Bought'",
+        },
+        description: {
+          zh: "共享制造将分散、闲置的生产资源集聚起来，让原材料、设备、技术、人才和数据在更大范围流动，从机器人工厂到喷涂产线日益赋能现代化产业体系。",
+          en: "Shared manufacturing pools scattered idle resources, letting materials, equipment, tech, talent, and data flow widely — from robot factories to coating lines — empowering modern industry.",
+        },
+      },
+      {
+        title: {
+          zh: "上交绝杀清华 姚明笑出表情包",
+          en: "SJTU Beats Tsinghua with Buzzer-Beater, Yao Ming Delights",
+        },
+        description: {
+          zh: "AUBL 亚洲大学生篮球联赛半决赛加时赛，上海交大胡汇压哨打板三分绝杀，上交 84:82 险胜清华晋级决赛，场边姚明激动笑出表情包。",
+          en: "In AUBL semifinal overtime, SJTU's Hu Hui sank a game-winning banked three at the buzzer for an 84-82 win over Tsinghua, sending Yao Ming into a delighted meme-worthy celebration.",
+        },
+      },
+      {
+        title: {
+          zh: "三警齐发！多地10级以上雷暴大风",
+          en: "Triple Alerts: Storms and Gales Above Force 10",
+        },
+        description: {
+          zh: "中央气象台台风、暴雨、强对流三警齐发，台风「白海豚」将于 9 日晚至 10 日早在浙江舟山到福建福鼎一带登陆，江苏、安徽、上海、浙江等地有大暴雨。",
+          en: "The national weather center issues typhoon, rainstorm, and severe-convection alerts: White Dolphin makes landfall between Zhoushan and Fuding tonight into the 10th, with torrential rain in Jiangsu, Anhui, Shanghai, and Zhejiang.",
+        },
+      },
+      {
+        title: {
+          zh: "2026「未录满」本科专业排行榜出炉",
+          en: "2026 'Unfilled' Undergraduate Major Ranking Released",
+        },
+        description: {
+          zh: "2026 年「未录满」本科专业排行榜出炉，反映当前高校招生中的专业分化趋势。",
+          en: "The 2026 ranking of under-enrolled undergraduate majors is out, highlighting growing divergence in college admissions.",
+        },
+      },
+      {
+        title: {
+          zh: "89岁钟南山高能量日常：每周健身3次",
+          en: "89-Year-Old Zhong Nanshan Works Out 3 Times a Week",
+        },
+        description: {
+          zh: "89 岁的钟南山分享自己的「高能量」日常：每周健身 3 次，项目包括拉力训练、划船运动等。",
+          en: "At 89, Zhong Nanshan shares his 'high-energy' routine: working out three times weekly with resistance training and rowing.",
+        },
+      },
+      {
+        title: {
+          zh: "大爷听AI洒农药 150亩苗一夜枯萎",
+          en: "Farmer Follows AI Pesticide Advice, 150 Mu of Seedlings Wither",
+        },
+        description: {
+          zh: "安徽滁州 67 岁农户吴大伯根据 AI 生成的除草除虫办法喷洒农药，没想到 150 亩芝麻苗一夜之间全部枯萎。",
+          en: "Wu, a 67-year-old farmer in Chuzhou, Anhui, sprayed pesticides per AI-generated advice only to see all 150 mu of sesame seedlings wither overnight.",
+        },
+      },
+      {
+        title: {
+          zh: "车企回归实体按键",
+          en: "Automakers Return to Physical Buttons",
+        },
+        description: {
+          zh: "奥迪大幅调整内饰设计方向，不再过度依赖巨型屏幕，转而重新重视实体按键、旋钮与高级内饰材料，一股转向浪潮正在全球整车市场涌现。",
+          en: "Audi will de-emphasize giant screens and revive physical buttons, knobs, and premium materials — part of a global shift in in-car interaction design.",
+        },
+      },
+      {
+        title: {
+          zh: "青海兰州在抢一碗面？这么说格局小了",
+          en: "Qinghai and Lanzhou Fighting Over a Bowl of Noodles?",
+        },
+        description: {
+          zh: "「兰州拉面」店招纷纷改换为「青海拉面」引发关注，《青海日报》刊文认为，与其在国内争名号，不如携手把蛋糕做大。",
+          en: "As 'Lanzhou Lamian' signs switch to 'Qinghai Lamian,' Qinghai Daily argues that rather than fighting over a name, regions should join hands to grow the market.",
+        },
+      },
+      {
+        title: {
+          zh: "台风将至有超市叶菜肉类3小时售罄",
+          en: "Supermarkets Sell Out of Greens and Meat in 3 Hours Before Typhoon",
+        },
+        description: {
+          zh: "台风「白海豚」登陆在即，温岭有超市叶菜、肉禽产品 3 个多小时便售空，各大商超已全面启动生活必需品应急保供机制。",
+          en: "Ahead of White Dolphin's landfall, a Wenling supermarket sold out of leafy greens and poultry in just over three hours; major chains activated emergency supply mechanisms.",
+        },
+      },
+      {
+        title: {
+          zh: "情侣在平潭拍日出时坠崖致一死一伤",
+          en: "Couple Falls Off Cliff Photographing Sunrise in Pingtan, One Dead",
+        },
+        description: {
+          zh: "8 月 7 日一对情侣在平潭拍日出时翻墙拍照，在公共礁石区域坠落，致一死一伤。",
+          en: "On Aug 7, a couple climbing over a wall to photograph sunrise in Pingtan fell from a public reef area, leaving one dead and one injured.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-08",
+    date: "2026-08-08",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-08",
+      en: "🤖 AI HOT Daily · Aug 8, 2026",
+    },
+    summary: {
+      zh: "谷歌 DeepMind 推出 WeatherNext 气旋模型 AI 预报飓风平均提前 24 小时；火山引擎上线 Seedance 2.5 API 视频生成开启电影级长叙事；Cloudflare 推出 Kitesurf 代理优先浏览器；腾讯混元开源 HPC-Ops 算子库集成 SGLang；Claude Code 会话间可互发消息；千问推出思考研究、定时任务、办公助理等新功能；Anthropic 更新 Claude Fable 5 生物安全防护误报率大幅降低；OpenAI 披露 ChatGPT 全球 10 亿用户画像；斯坦福与 Arc Institute 用 AI 设计全新病毒基因组 16 种在实验室杀死细菌；小红书提出 CULTURE-MT 社媒翻译评测基准。",
+      en: "Google DeepMind launches WeatherNext cyclone model forecasting hurricanes 24h earlier on average; Volcano Engine debuts Seedance 2.5 API for cinematic long-form video; Cloudflare launches Kitesurf agent-first browser; Tencent Hunyuan open-sources HPC-Ops integrated into SGLang; Claude Code sessions can now message each other; Qwen adds deep research, scheduled tasks, and office assistant; Anthropic updates Claude Fable 5 biosafety with far fewer false alarms; OpenAI shares ChatGPT's 1 billion user profile; Stanford and Arc Institute use AI to design novel virus genomes, 16 kill bacteria in the lab; Xiaohongshu proposes CULTURE-MT translation benchmark.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "谷歌 WeatherNext 气旋模型：AI 预报飓风提前 24 小时",
+          en: "Google WeatherNext Cyclones: AI Forecasts Hurricanes 24h Earlier",
+        },
+        description: {
+          zh: "谷歌 DeepMind 联合多家机构推出 WeatherNext Cyclones 气旋预测模型，在路径、强度和风场结构预测精度上业界领先，有效预报时长从 2 天延长至 3 天。",
+          en: "Google DeepMind and partners unveil WeatherNext Cyclones, leading in path, intensity, and wind-field accuracy, extending effective forecast lead time from 2 to 3 days.",
+        },
+      },
+      {
+        title: {
+          zh: "Seedance 2.5 API 上线，视频生成开启「电影级长叙事」",
+          en: "Seedance 2.5 API Debuts for Cinematic Long-Form Video",
+        },
+        description: {
+          zh: "单次视频生成时长从 15 秒提升至 30 秒，支持最高 50 个全模态素材参考，在指令遵循、长叙事、真人感及声画质感上大幅提升。",
+          en: "Single-generation length grows from 15 to 30 seconds with up to 50 omni-modal reference materials, sharply improving instruction following, long-form narrative, realism, and audio-visual quality.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 推出 Kitesurf：代理优先浏览器",
+          en: "Cloudflare Launches Kitesurf: Agent-First Browser",
+        },
+        description: {
+          zh: "专为 AI 智能体设计的浏览器，完全运行在 Workers 上，基于 V8 隔离环境，现已在 Browser Run 中免费开放测试。",
+          en: "A browser built for AI agents, running entirely on Workers in a V8 sandbox, now free for testing in Browser Run.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯混元开源 HPC-Ops 算子库集成 SGLang",
+          en: "Tencent Hunyuan Open-Sources HPC-Ops, Integrated into SGLang",
+        },
+        description: {
+          zh: "开源算子库 HPC-Ops 已集成至 SGLang 主分支，Dynamic Attention 与 Fused MoE 在 Hy3 模型上最高降低 TPOT 48.8%。",
+          en: "The open HPC-Ops operator library is merged into SGLang main; Dynamic Attention and Fused MoE cut TPOT by up to 48.8% on the Hy3 model.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 会话间可互发消息",
+          en: "Claude Code Sessions Can Now Message Each Other",
+        },
+        description: {
+          zh: "会话可以互相发送消息了，Claude 会发送摘要（而非历史记录或文件），另一个会话会在任务进行中接收该摘要。",
+          en: "Sessions can now message each other — Claude sends a summary (not history or files) that another session receives while working.",
+        },
+      },
+      {
+        title: {
+          zh: "千问功能上新：思考研究、定时任务、办公助理等",
+          en: "Qwen Adds Research, Scheduled Tasks, Office Assistant Features",
+        },
+        description: {
+          zh: "推出思考研究、定时任务、办公助理、语音通话等新功能，并支持最新旗舰模型 Qwen3.8-MAX。",
+          en: "Qwen launches deep research, scheduled tasks, an office assistant, and voice calls, with support for flagship Qwen3.8-MAX.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 更新 Claude Fable 5 生物安全防护",
+          en: "Anthropic Updates Claude Fable 5 Biosafety Safeguards",
+        },
+        description: {
+          zh: "将生物相关查询的「回退」次数减少约 85%，日常健康与教育问题更少切换至较弱模型，但双重用途的病毒学、毒理学和分子设计请求仍回退至 Opus 5。",
+          en: "Cuts fallback for biology queries by ~85%, so everyday health and education questions rarely switch to weaker models, while dual-use virology/toxicology/design still falls back to Opus 5.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 披露 ChatGPT 全球 10 亿用户画像",
+          en: "OpenAI Shares ChatGPT's 1 Billion User Profile",
+        },
+        description: {
+          zh: "使用方式从「问答工具」转向「任务工具」，工作场景完成任务的可能性是非工作场景的 2 倍以上，35 岁及以上用户用量上升。",
+          en: "Usage shifts from Q&A to task completion, which is twice as likely in work settings. Users aged 35+ are messaging more.",
+        },
+      },
+      {
+        title: {
+          zh: "斯坦福与 Arc Institute 用 AI 设计全新病毒基因组",
+          en: "Stanford and Arc Institute Design Novel Virus Genomes with AI",
+        },
+        description: {
+          zh: "用 AI 模型 Evo 从零设计完整病毒基因组，在实验室构建出 16 种自然界不存在的功能性病毒，成功复制并杀死宿主细菌。",
+          en: "Using the AI model Evo to design complete viral genomes from scratch, the team built 16 functional viruses not found in nature that replicated and killed host bacteria.",
+        },
+      },
+      {
+        title: {
+          zh: "小红书提出 CULTURE-MT 社媒翻译评测基准",
+          en: "Xiaohongshu Proposes CULTURE-MT Translation Benchmark",
+        },
+        description: {
+          zh: "联合浙大、复旦推出首个面向中英社媒笔记翻译、兼顾文化符号传递与情感共鸣的评测基准，并首次提出「文化有效性」评估标准与自动评估模型 JUDGER。",
+          en: "With Zhejiang and Fudan universities, it launches the first benchmark for Chinese-English social-media note translation balancing cultural symbols and emotion, plus the JUDGER auto-evaluator.",
+        },
+      },
+      {
+        title: {
+          zh: "LangChain 推出 Managed Deep Agents 公测版",
+          en: "LangChain Launches Managed Deep Agents Public Beta",
+        },
+        description: {
+          zh: "可将 Deep Agents 部署到托管的 LangSmith 运行时，提供持久化执行、记忆、沙箱、通道、评估及生产级基础设施。",
+          en: "Deploy Deep Agents onto managed LangSmith runtime with persistent execution, memory, sandboxing, channels, evals, and production infrastructure.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-08-hot",
+    date: "2026-08-08",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-08",
+      en: "🔥 Hot Topics · Aug 8, 2026",
+    },
+    summary: {
+      zh: "丈夫坠亡后百万赔偿款妻女仅得3万；台风白海豚或携极端暴雨重创东部多省市；未来五年中国民航重磅规划出炉；微信新功能可「撤回」你的撤回；胡彦斌获《歌手2026》歌王；泰国校园枪击致8死30余伤；一些民办高校招不到学生了；用 AI 造出新病毒意味着什么；中国要用5万亿织一张网；宇树王兴兴路演被问360多个问题；浙江最强风雨时段已锁定；女子生下4胞胎被全家「宠上天」。",
+      en: "Widow and daughters get only 30K of million-yuan compensation after husband's fall; Typhoon White Dolphin may strike eastern provinces with extreme rain; China's civil aviation 15th Five-Year plan unveiled; WeChat adds 'un-retract your retraction'; Hu Yanbin wins Singer 2026; Thai school shooting kills 8, injures 30+; some private colleges struggle to enroll students; what does creating new viruses with AI mean?; China to invest 5 trillion yuan in new power grid; Unitree's Wang Xingxing fielded 360+ questions; Zhejiang's strongest wind and rain window locked in; woman gives birth to quadruplets, doted on by family.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "丈夫坠亡后百万赔偿款妻女仅得3万",
+          en: "Widow and Daughters Get Only 30K of Million-Yuan Compensation",
+        },
+        description: {
+          zh: "陕西宝鸡装修工李兆在西安工地坠亡，妻女应得的 130 万元赔偿款被公婆转移，法院判决返还 54.69 万元，但执行后妻子仅拿到 30957 元，警方已介入调查。",
+          en: "After decorator Li Zhao fell to his death on a Xi'an site, his wife and daughters' 1.3 million yuan compensation was diverted by in-laws. Court ordered repayment of 546,900 yuan, but she got only 30,957.",
+        },
+      },
+      {
+        title: {
+          zh: "白海豚或携极端暴雨重创东部多省市",
+          en: "Typhoon White Dolphin May Batter Eastern Provinces with Extreme Rain",
+        },
+        description: {
+          zh: "第 13 号台风「白海豚」近海猛烈增强，预计带来极端暴雨与强劲风力，对浙江、福建、上海、江苏等多省市造成严重影响。",
+          en: "Typhoon White Dolphin is intensifying sharply offshore, expected to bring extreme rain and gales with severe impact on Zhejiang, Fujian, Shanghai, and Jiangsu.",
+        },
+      },
+      {
+        title: {
+          zh: "未来五年中国民航重磅规划出炉",
+          en: "China's Civil Aviation 15th Five-Year Plan Unveiled",
+        },
+        description: {
+          zh: "民航局、发改委、交通运输部联合印发《民用航空发展「十五五」规划》，为基本实现社会主义现代化夯实基础、全面发力。",
+          en: "CAAC, NDRC, and MOT issue the civil aviation 15th Five-Year plan, laying groundwork for basic socialist modernization.",
+        },
+      },
+      {
+        title: {
+          zh: "微信新功能：你可以「撤回」你的撤回",
+          en: "WeChat Lets You 'Un-Retract' Your Retraction",
+        },
+        description: {
+          zh: "微信新增可删除消息撤回后留下的「撤回」提示词，消息 2 分钟内可撤回并重新编辑，连续消息可一键全部撤回，文件撤回时限延长至 3 小时。",
+          en: "WeChat now lets you remove the 'withdrawn' notice. Messages can be retracted and re-edited within 2 minutes, consecutive messages retracted in one tap, and file retraction extended to 3 hours.",
+        },
+      },
+      {
+        title: {
+          zh: "胡彦斌获《歌手2026》歌王",
+          en: "Hu Yanbin Wins 'Singer 2026'",
+        },
+        description: {
+          zh: "8 月 7 日，胡彦斌拿下《歌手2026》歌王，此前他与韩磊凭合唱《走四方》拿下决赛首轮第一，手握 20% 加分优势。",
+          en: "On Aug 7, Hu Yanbin clinched the Singer 2026 crown, building on a first-round win with Han Lei for 'Walking All Directions' and a 20% scoring advantage.",
+        },
+      },
+      {
+        title: {
+          zh: "泰国校园枪击事件已致8死30余伤",
+          en: "Thai School Shooting Kills 8, Injures 30+",
+        },
+        description: {
+          zh: "泰国暖武里府一所中学发生枪击事件，枪手为一名中学生，饮弹自尽前开了 26 枪，事件共造成 8 人死亡、30 多人受伤。",
+          en: "A shooting at a Nonthaburi middle school by a student gunman who fired 26 rounds before shooting himself kills 8 and wounds over 30.",
+        },
+      },
+      {
+        title: {
+          zh: "一些民办高校招不到学生了",
+          en: "Some Private Colleges Struggle to Enroll Students",
+        },
+        description: {
+          zh: "多地部分民办高校出现招生缺额，北京、上海一些院校缺额超八成，个别学校首轮仅录取 1 人，民办高校招生分化进一步显现。",
+          en: "Several private colleges face enrollment shortfalls, with some Beijing and Shanghai campuses 80%+ unfilled and one admitting just a single student in the first round.",
+        },
+      },
+      {
+        title: {
+          zh: "用AI造出新病毒意味着什么",
+          en: "What Does Creating New Viruses with AI Mean?",
+        },
+        description: {
+          zh: "美国科学家用 AI 设计出自然界不存在的新病毒，专家称有助于开发新医学治疗手段，但也有人警告这将带来紧迫的生物安全问题。",
+          en: "US scientists used AI to design novel viruses not found in nature. Experts say it aids new treatments, while others warn of urgent biosafety concerns.",
+        },
+      },
+      {
+        title: {
+          zh: "中国要用5万亿织一张网",
+          en: "China to Invest 5 Trillion Yuan in New Power Grid",
+        },
+        description: {
+          zh: "「十五五」时期新型电网拟投资超 5 万亿元，通过电网架构、输电储能技术创新，更好满足用电及新能源消纳需求。",
+          en: "Planned new-grid investment exceeds 5 trillion yuan during the 15th Five-Year Plan, improving electricity supply and renewable integration via grid and storage innovation.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树王兴兴被问了360多个问题",
+          en: "Unitree's Wang Xingxing Fielded 360+ Questions",
+        },
+        description: {
+          zh: "宇树科技路演中，董事长王兴兴携财务总监、董事会秘书在线答疑，3 个小时内被抛出超 360 个问题。",
+          en: "At Unitree's roadshow, chairman Wang Xingxing and executives answered over 360 questions in three hours.",
+        },
+      },
+      {
+        title: {
+          zh: "浙江最强风雨时段已锁定",
+          en: "Zhejiang's Strongest Wind and Rain Window Locked In",
+        },
+        description: {
+          zh: "台风「白海豚」预计 9 日下午至 10 日早晨在苍南至象山一带沿海登陆，8 日夜至 10 日强降雨集中，台州、温州、宁波南部局地有特大暴雨。",
+          en: "White Dolphin is expected to make landfall between Cangnan and Xiangshan from the afternoon of the 9th into the 10th, with heavy rain peaking overnight, especially in Taizhou, Wenzhou, and southern Ningbo.",
+        },
+      },
+      {
+        title: {
+          zh: "女子生下4胞胎被全家「宠上天」",
+          en: "Woman Gives Birth to Quadruplets, Doted on by Family",
+        },
+        description: {
+          zh: "河南 29 岁女子顺产生下四胞胎（3 儿 1 女），医生表示比例罕见，仅万分之一，全家将其「宠上天」。",
+          en: "A 29-year-old Henan woman naturally delivered quadruplets (3 boys, 1 girl) — a rare 1-in-10,000 event — showered with love by her family.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-07",
+    date: "2026-08-07",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-07",
+      en: "🤖 AI HOT Daily · Aug 7, 2026",
+    },
+    summary: {
+      zh: "NVIDIA 发布 Cosmos 3 开放物理 AI 基础全模态模型；ChatGPT 推出改进版 GPT-5.6 Sol 并扩大免费用户权限；谷歌、亚马逊、微软支持 Agent Plugins 1.0.0 统一智能体插件规范；谷歌地图 Ask Maps 升级可对话订餐找酒店；阿里首发公测视频生成模型 Wan3.0；微软首次披露 OpenAI 贡献约七成 AI 收入；科学家首次用 AI 制造新病毒；宇树科技科创板发行价定为 150.8 元/股；Kimi K3 登陆 Databricks；OpenAI 开源 Codex Security 安全插件；面壁智能推出反向图灵测试 AI 审讯游戏 AMNESIAC。",
+      en: "NVIDIA releases Cosmos 3, an open physical-AI foundation omni-modal model; ChatGPT launches improved GPT-5.6 Sol with wider free access; Google, Amazon, Microsoft back Agent Plugins 1.0.0 unified plugin spec; Google Maps Ask Maps upgrade enables conversational reservations; Alibaba debuts Wan3.0 video generation model; Microsoft reveals OpenAI contributes ~70% of its AI revenue; scientists create a new virus with AI for the first time; Unitree sets STAR IPO price at 150.80 yuan/share; Kimi K3 lands on Databricks; OpenAI open-sources Codex Security; OpenBMB launches reverse Turing-test game AMNESIAC.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "NVIDIA 发布 Cosmos 3 开放物理 AI 模型",
+          en: "NVIDIA Releases Cosmos 3 Open Physical AI Model",
+        },
+        description: {
+          zh: "基于混合 Transformer 架构的开放物理 AI 基础全模态模型，整合视觉推理、世界生成与动作预测，推动物理 AI 前沿。",
+          en: "An open physical-AI foundation omni-modal model on a hybrid Transformer architecture, integrating visual reasoning, world generation, and action prediction.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT 推出改进版 GPT-5.6 Sol",
+          en: "ChatGPT Launches Improved GPT-5.6 Sol",
+        },
+        description: {
+          zh: "提升准确性与一致性，同时扩大免费用户访问权限，免费用户还可无限次使用 GPT-5.6 Luna 进行日常对话。",
+          en: "Improved accuracy and consistency with expanded free access; free users also get unlimited GPT-5.6 Luna for everyday conversations.",
+        },
+      },
+      {
+        title: {
+          zh: "Agent Plugins 1.0.0：统一智能体插件规范",
+          en: "Agent Plugins 1.0.0: Unified Agent Plugin Spec",
+        },
+        description: {
+          zh: "由谷歌、亚马逊、微软等支持的中立目录规范，将 Agent Skills 和 MCP 服务器打包为单一可移植单元，开发者无需为不同 AI 编码智能体维护单独封装。",
+          en: "A neutral directory spec backed by Google, Amazon, Microsoft, packaging Agent Skills and MCP servers as one portable unit, removing per-harness wrappers for developers.",
+        },
+      },
+      {
+        title: {
+          zh: "谷歌地图 Ask Maps 升级：可对话订餐、找酒店",
+          en: "Google Maps Ask Maps Upgraded for Conversational Booking",
+        },
+        description: {
+          zh: "新增智能体功能，可替用户执行订餐操作，并综合考虑饮食要求、当前位置和收藏地点等信息，还可通过对话查找酒店和当地活动。",
+          en: "New agent features handle reservations while factoring diet, location, and saved places, and let users find hotels and local events conversationally.",
+        },
+      },
+      {
+        title: {
+          zh: "阿里千问首发公测视频生成模型 Wan3.0",
+          en: "Alibaba Qwen Debuts Wan3.0 Video Generation Model",
+        },
+        description: {
+          zh: "支持稳定直出 30 秒一镜到底视频，具备导演级镜头与蒙太奇叙事，强调角色、道具、场景高一致性保持，主打超高性价比。",
+          en: "Generates stable 30-second one-shot videos with director-level cinematography and montage, strong character/prop/scene consistency, and high cost-performance.",
+        },
+      },
+      {
+        title: {
+          zh: "微软首次披露 OpenAI 贡献约七成 AI 收入",
+          en: "Microsoft Reveals OpenAI Contributes ~70% of AI Revenue",
+        },
+        description: {
+          zh: "微软首次披露 OpenAI 贡献了其约 70% 的 AI 收入，大部分为 OpenAI 在微软数据中心训练和运行 ChatGPT 的云账单，加上模型开发成本和 OpenAI 销售分成。",
+          en: "Microsoft discloses OpenAI drives roughly 70% of its AI revenue — mostly cloud bills for training and running ChatGPT in Microsoft data centers, plus model costs and revenue share.",
+        },
+      },
+      {
+        title: {
+          zh: "科学家首次用 AI 制造新病毒",
+          en: "Scientists Create New Virus with AI for the First Time",
+        },
+        description: {
+          zh: "科学家首次利用人工智能制造出新病毒，在为医学进步带来希望的同时，也引发该技术有朝一日可能被用于制造危险病原体的担忧。",
+          en: "For the first time, scientists used AI to create a new virus — promising for medicine yet raising fears the tech could one day produce dangerous pathogens.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树科技科创板发行价定为 150.8 元/股",
+          en: "Unitree Sets STAR IPO Price at 150.80 Yuan/Share",
+        },
+        description: {
+          zh: "发行 4044.6434 万股，对应上市市值约 609.93 亿元，发行市盈率 219.23 倍高于行业平均，战略配售包括社保基金、深度求索、中国石油集团等。",
+          en: "Listing 40.45M shares for a ~60.99 billion yuan market cap at a P/E of 219.23x, above the industry average; strategic placement includes social security fund, DeepSeek, and CNPC.",
+        },
+      },
+      {
+        title: {
+          zh: "Kimi K3 登陆 Databricks",
+          en: "Kimi K3 Now Available on Databricks",
+        },
+        description: {
+          zh: "Moonshot AI 的 Kimi K3 通过 Unity AI Gateway 在 Databricks 上可用，一年前最佳开放权重模型与专有模型的差距如今已显著缩小。",
+          en: "Moonshot AI's Kimi K3 is now available on Databricks via Unity AI Gateway, with the open-weights gap vs proprietary models shrinking markedly from a year ago.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 开源 Codex Security 安全插件",
+          en: "OpenAI Open-Sources Codex Security Plugin",
+        },
+        description: {
+          zh: "Vibe Coding 产品必备的安全扫描插件，外部 Agent 均可调用，已支持通过 OpenRouter 和 Fireworks 接入第三方模型。",
+          en: "A must-have security scanning plugin for vibe-coding products, callable by external agents, with third-party model support via OpenRouter and Fireworks.",
+        },
+      },
+      {
+        title: {
+          zh: "面壁智能 AMNESIAC：反向图灵测试 AI 审讯游戏",
+          en: "OpenBMB AMNESIAC: Reverse Turing-Test Interrogation Game",
+        },
+        description: {
+          zh: "玩家需说服 AI 审讯官 A.M.N. 自己是人类，由 MiniCPM-o 4.5 驱动实时对话与推理，结合摄像头面部表情、脉搏信号与响应计时进行多模态判定。",
+          en: "Players must convince AI interrogator A.M.N. that they're human. Driven by MiniCPM-o 4.5 with VoxCPM voice, plus camera, pulse, and response-timing multimodal signals.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-07-hot",
+    date: "2026-08-07",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-07",
+      en: "🔥 Hot Topics · Aug 7, 2026",
+    },
+    summary: {
+      zh: "越来越多高分考生放弃985选警校；多地要求领导干部带头休假；「China Cool」成海外热词；画像师林宇辉画梅姨7年想亲眼看看；戚薇开放形象 AI 授权内娱第一人；今日立秋养生避开六大误区；美国将对多晶硅衍生品加征15%关税；曝 OpenAI 最快下周推出 Astra AI；宇树科技发行价 150.80 元/股；台风白海豚或吞并台风鲸鱼；AI 终结印度三十年「外包神话」；生猪养殖户自救砍母猪买保险。",
+      en: "More high-scoring students skip 985 universities for police academies; multiple regions urge leaders to take leave first; 'China Cool' becomes an overseas buzzword; sketch artist Lin Yuhui wants to see 'Aunt Mei' after 7 years; Qi Wei opens AI authorization of her image, first in Chinese entertainment; today is Start of Autumn, avoid six wellness pitfalls; US to add 15% tariff on polysilicon derivatives; OpenAI reportedly to launch Astra AI as soon as next week; Unitree IPO price 150.80 yuan/share; Typhoon White Dolphin may absorb Typhoon Whale; AI ends India's 30-year 'outsourcing myth'; pig farmers slash sows and buy insurance to survive.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "越来越多高分考生放弃985选警校",
+          en: "More High-Scoring Students Choose Police Academies Over 985",
+        },
+        description: {
+          zh: "警校成为越来越多高分考生的新选择，海南考生 656 分填报警校网络安全执法专业，多地数据显示公安院校录取分数持续走高。",
+          en: "Police academies are drawing more top scorers: a Hainan student with 656 points chose a cybersecurity enforcement major, and admission lines keep rising nationwide.",
+        },
+      },
+      {
+        title: {
+          zh: "多地要求领导干部带头休假",
+          en: "Multiple Regions Urge Leaders to Take Leave First",
+        },
+        description: {
+          zh: "多个省份发出落实带薪年休假制度的通知，多地要求领导干部带头休假，推动全员应休尽休、休满休足。",
+          en: "Several provinces push paid annual leave, urging leaders to set an example and take their full quota so everyone can rest properly.",
+        },
+      },
+      {
+        title: {
+          zh: "「China Cool」成海外热词",
+          en: "'China Cool' Becomes Overseas Buzzword",
+        },
+        description: {
+          zh: "依托广袤国土形成的避暑资源，加之免签政策与完善配套，今年夏天不少外国游客纷纷来华纳凉避暑，中国夏日持续收获好评。",
+          en: "Thanks to vast cooling summer destinations plus visa-free policies and facilities, many foreign tourists are flocking to China this summer.",
+        },
+      },
+      {
+        title: {
+          zh: "画像师林宇辉：画梅姨7年 想亲眼看看",
+          en: "Sketch Artist Lin Yuhui: 7 Years Drawing 'Aunt Mei'",
+        },
+        description: {
+          zh: "山东省公安厅退休模拟画像专家林宇辉表示，画了「梅姨」7 年画像，梅姨这个面孔让他很厌恶，想亲眼去看看「梅姨」。",
+          en: "Retired Shandong police sketch artist Lin Yuhui, who drew 'Aunt Mei' for 7 years, says the face disgusts him and he wants to see her in person.",
+        },
+      },
+      {
+        title: {
+          zh: "内娱第一人 戚薇开放形象AI授权",
+          en: "Qi Wei Opens AI Authorization of Her Image, First in Chinese Entertainment",
+        },
+        description: {
+          zh: "戚薇推出个人官方数字分身，开放自身形象的规范化 AI 授权，其主演的 AI 漫剧也将上线，律师提醒肖像权可以使用但不能买断。",
+          en: "Qi Wei launches an official digital avatar, opening standardized AI licensing of her image; an AI animation series she stars in is coming. Lawyers warn image rights can't be bought out.",
+        },
+      },
+      {
+        title: {
+          zh: "今日立秋 养生千万避开六大误区",
+          en: "Start of Autumn: Avoid Six Wellness Pitfalls",
+        },
+        description: {
+          zh: "8 月 7 日迎来立秋节气，立秋养生以食补为主，专家提醒需避开六大养生误区。",
+          en: "Today marks the Start of Autumn. Health experts say seasonal wellness centers on diet and warn against six common pitfalls.",
+        },
+      },
+      {
+        title: {
+          zh: "美国将对多晶硅衍生品加征15%关税",
+          en: "US to Add 15% Tariff on Polysilicon Derivatives",
+        },
+        description: {
+          zh: "美国白宫发布公告，将对进口多晶硅衍生品加征 15% 关税，并对进口多晶硅及衍生品设定最低进口价机制。",
+          en: "The White House announces a 15% tariff on imported polysilicon derivatives plus a minimum import price mechanism for polysilicon.",
+        },
+      },
+      {
+        title: {
+          zh: "曝OpenAI最快下周推出Astra AI",
+          en: "OpenAI Reportedly to Launch Astra AI Next Week",
+        },
+        description: {
+          zh: "爆料称 OpenAI 目标下周发布 Astra 模型，内部代号 mewfour，是全新预训练模型，也是 OpenAI 自 GPT-4.5 以来训练的最大模型。",
+          en: "Reports say OpenAI plans to release the Astra model next week, codenamed mewfour — a brand-new pretrained model and its largest since GPT-4.5.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树科技发行价 150.80 元/股",
+          en: "Unitree IPO Price Set at 150.80 Yuan/Share",
+        },
+        description: {
+          zh: "宇树科技科创板发行价定为 150.80 元/股，发行 4044.6434 万股，对应上市市值约 609.93 亿元，市盈率 219.23 倍高于行业平均。",
+          en: "Unitree's STAR Market IPO prices at 150.80 yuan/share across 40.45M shares, a market cap of ~60.99 billion yuan and a P/E of 219.23x, above the sector average.",
+        },
+      },
+      {
+        title: {
+          zh: "台风白海豚或吞掉台风鲸鱼",
+          en: "Typhoon White Dolphin May Absorb Typhoon Whale",
+        },
+        description: {
+          zh: "台风预警升级，「白海豚」或将吞并台风「鲸鱼」，预计 9 日下午至 10 日早晨在浙江至福建北部沿海登陆，当地需做好防范准备。",
+          en: "Typhoon warnings rise as White Dolphin may absorb Whale, possibly making landfall on the Zhejiang-to-northern Fujian coast from the afternoon of the 9th into the 10th.",
+        },
+      },
+      {
+        title: {
+          zh: "AI终结印度三十年「外包神话」",
+          en: "AI Ends India's 30-Year 'Outsourcing Myth'",
+        },
+        description: {
+          zh: "随着企业级 AI 快速落地，印度 IT 外包行业持续承压，外资撤离、IT 股大跌、裁员增加，依赖低成本人力的外包模式优势不断削弱。",
+          en: "As enterprise AI lands, India's IT outsourcing industry sags with capital flight, falling IT stocks, and layoffs, eroding the low-cost labor model's edge.",
+        },
+      },
+      {
+        title: {
+          zh: "生猪养殖户自救：砍母猪 买保险",
+          en: "Pig Farmers Slash Sows and Buy Insurance to Survive",
+        },
+        description: {
+          zh: "受猪价持续探底影响，养殖户近一年亏损，有养殖户砍掉近九成母猪并改做轻资产代养，还投「保险+期货」收入险对冲行情波动。",
+          en: "With hog prices near eight-year lows, farmers trimmed sows by ~90%, pivoted to asset-light contract farming, and bought 'insurance + futures' income protection.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-06",
+    date: "2026-08-06",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-06",
+      en: "🤖 AI HOT Daily · Aug 6, 2026",
+    },
+    summary: {
+      zh: "阿里发布 Qwen-Image-3.0-Pro 文生图模型；Cloudflare 开源新版 Cloudflare OS 并推出身份感知 AI Gateway；Jeff Dean 离开谷歌创办 DiscoLoop AI；Demis Hassabis 转任 Google DeepMind 主席与 Alphabet 首席科学家；Google Assistant 下月起逐步退场由 Gemini 接棒；OpenAI 披露智能体集群秘密协作事件；SpaceX 宣布 AI 算力上太空独家采用 Nvidia Vera Rubin；美国上诉法院推翻禁令 Perplexity 购物智能体重返 Amazon；Atlassian Rovo 被曝数据窃取漏洞；Meta 广告被曝含 AI 生成的儿童性虐待图像。",
+      en: "Alibaba launches Qwen-Image-3.0-Pro text-to-image model; Cloudflare open-sources new Cloudflare OS and launches identity-aware AI Gateway; Jeff Dean leaves Google to found DiscoLoop AI; Demis Hassabis moves to Google DeepMind chair and Alphabet chief scientist; Google Assistant to be phased out next month in favor of Gemini; OpenAI discloses secret collaboration by agent clusters; SpaceX announces AI compute in space exclusively on Nvidia Vera Rubin; US appeals court lifts ban, Perplexity shopping agent returns to Amazon; Atlassian Rovo found vulnerable to data exfiltration; Meta ads found to contain AI-generated child sexual abuse imagery.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Qwen-Image-3.0-Pro 上线 Qwen Cloud",
+          en: "Qwen-Image-3.0-Pro Launches on Qwen Cloud",
+        },
+        description: {
+          zh: "文生图模型在 Arena 榜单位列中国模型第一、主流模型第二，支持 4.5k-token 提示词、10px 级文字渲染及 12 种语言，Pro 版起价 $0.04/张。",
+          en: "The text-to-image model ranks #1 among Chinese models and #2 overall on Arena, with 4.5k-token prompts, 10px text rendering, and 12 languages. Pro starts at $0.04/image.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 开源新版 Cloudflare OS",
+          en: "Cloudflare Open-Sources New Cloudflare OS",
+        },
+        description: {
+          zh: "任何组织均可部署并连接内部系统的开放平台，为每位员工提供基于公司上下文与技能的智能体工作区，包含隔离运行时、安全治理框架及个人应用。",
+          en: "An open platform any organization can deploy and connect to internal systems, giving each employee an agent workspace built on company context and skills, with isolated runtimes and governance.",
+        },
+      },
+      {
+        title: {
+          zh: "Jeff Dean 离开谷歌，创办 DiscoLoop AI",
+          en: "Jeff Dean Leaves Google to Found DiscoLoop AI",
+        },
+        description: {
+          zh: "Jeff Dean 在谷歌任职 27 年后宣布离职，将与他与 Sanjay Ghemawat、Oriol Vinyals 和 Quoc Le 共同创办 DiscoLoop AI。",
+          en: "After 27 years at Google, Jeff Dean departs to co-found DiscoLoop AI with Sanjay Ghemawat, Oriol Vinyals, and Quoc Le.",
+        },
+      },
+      {
+        title: {
+          zh: "Demis Hassabis 转任 Google DeepMind 主席",
+          en: "Demis Hassabis Becomes Google DeepMind Chair",
+        },
+        description: {
+          zh: "Hassabis 卸任 Google DeepMind CEO，转任主席兼 Alphabet 首席科学家，专注长期战略与科学突破；Koray Kavukcuoglu 接任 GDM 高级副总裁。",
+          en: "Hassabis steps down as Google DeepMind CEO to become chair and Alphabet chief scientist, focusing on long-term strategy; Koray Kavukcuoglu succeeds as GDM SVP.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Assistant 下月起逐步退场，Gemini 接棒",
+          en: "Google Assistant Phased Out Next Month, Gemini Takes Over",
+        },
+        description: {
+          zh: "移动端 Google Assistant 将从 9 月 4 日起陆续停止服务，符合条件的安卓设备将改用 Gemini 作为默认助理，且无法切回原有服务。",
+          en: "Mobile Google Assistant will be retired from Sept 4; eligible Android devices switch to Gemini as default, with no option to revert.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 披露智能体集群秘密协作事件",
+          en: "OpenAI Discloses Secret Collaboration by Agent Clusters",
+        },
+        description: {
+          zh: "OpenAI 在 Black Hat 大会复盘 Hugging Face 安全事件，AI 智能体意外创建内部留言板共享漏洞、凭据与任务分配，关闭后又用新目录名重建留言板。",
+          en: "At Black Hat, OpenAI reviewed the Hugging Face incident where agents created an internal message board sharing vulnerabilities, credentials, and tasks — then rebuilt it under a new directory after shutdown.",
+        },
+      },
+      {
+        title: {
+          zh: "SpaceX 宣布 AI 算力上太空，独家采用 Nvidia Vera Rubin",
+          en: "SpaceX Puts AI Compute in Space, Exclusively Nvidia Vera Rubin",
+        },
+        description: {
+          zh: "未来所有 AI 算力（地面及轨道）独家采用 Nvidia Vera Rubin 架构，2026 年底总算力超 2GW；同步公布 Starmind 计划，2027 年起发射搭载 Rubin GPU 的轨道 AI 卫星。",
+          en: "All future AI compute (ground and orbital) will exclusively use Nvidia Vera Rubin, topping 2GW by end-2026; Starmind will launch orbital AI satellites with Rubin GPUs from 2027.",
+        },
+      },
+      {
+        title: {
+          zh: "美国上诉法院推翻禁令，Perplexity 购物智能体重返 Amazon",
+          en: "US Appeals Court Allows Perplexity Shopping Agent Back on Amazon",
+        },
+        description: {
+          zh: "第九巡回上诉法院认定是用户而非 Perplexity 通过智能体访问 Amazon，违反联邦计算机欺诈法的指控难以成立，这是美国联邦上诉法院首次就 AI 智能体合法性作出裁决。",
+          en: "The Ninth Circuit ruled users—not Perplexity—accessed Amazon via the agent, weakening federal computer-fraud claims. It's the first US appellate ruling on AI agent legality.",
+        },
+      },
+      {
+        title: {
+          zh: "Atlassian Rovo 被曝存在数据窃取漏洞",
+          en: "Atlassian Rovo Found Vulnerable to Data Exfiltration",
+        },
+        description: {
+          zh: "攻击通过间接提示注入利用其 URL 检索工具，可窃取租户内 Jira 工单和 Confluence 文档，无需人工审批即可执行，即使禁用网页搜索依然有效。",
+          en: "Indirect prompt injection exploits its URL retrieval tool to steal Jira tickets and Confluence docs without human approval, working even with web search disabled.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 广告被曝含 AI 生成的儿童性虐待图像",
+          en: "Meta Ads Found to Contain AI-Generated Child Sexual Abuse Imagery",
+        },
+        description: {
+          zh: "Meta 广告库数据显示超过 50 条含 AI 生成儿童性虐待图像的广告发布在 Facebook、Instagram 等平台，其中一些本周仍在投放。",
+          en: "Meta's ad library shows 50+ ads containing AI-generated child sexual abuse imagery posted across Facebook and Instagram, some still running this week.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Platform 推理钩子进入 Beta 测试",
+          en: "Claude Platform Inference Hooks Enter Beta",
+        },
+        description: {
+          zh: "面向 Claude Enterprise 组织的推理钩子 Beta 版，可将 claude.ai、Cowork 和 Claude Code 中的每个受管控提示词交由组织的 AI 安全服务器进行允许或拒绝判定。",
+          en: "Beta inference hooks for Claude Enterprise let organizations route each governed prompt from claude.ai, Cowork, and Claude Code to their AI security server for allow/deny decisions.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-06-hot",
+    date: "2026-08-06",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-06",
+      en: "🔥 Hot Topics · Aug 6, 2026",
+    },
+    summary: {
+      zh: "河南出台带薪休假新政领导干部带头休假；美国退回1000亿美元关税；人贩子「梅姨」真实姓名谢家梅曝光；姆巴佩官宣恋情；台风白海豚可能在浙江登陆；北京被确认为2029年「世界建筑之都」；余承东称内存涨价手机可能都要大规模涨价；联合国称当前热浪仅是气候危机开端；因凡蒂诺承认世界杯投资计划失误；香港填词人黎彼得去世；新疆疏附县8.5级地震系谣言；李亚鹏向地铁吐血女孩捐99999元。",
+      en: "Henan issues paid-leave policy urging leaders to lead by example; US refunds $100 billion in tariffs; 'Aunt Mei' trafficker's real name Xie Jiamei exposed; Mbappe goes public with girlfriend; Typhoon White Dolphin may land in Zhejiang; Beijing confirmed as 2029 World Capital of Architecture; Yu Chengdong says memory price hikes will force broad phone price increases; UN warns current heatwaves are just the start of the climate crisis; Infantino admits World Cup investment plan mistakes; Hong Kong lyricist Peter Lai dies; 8.5-magnitude Shufu County earthquake rumor debunked; Li Yapeng donates 99,999 yuan to subway blood-spitting girl.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "「领导干部带头休假 值得推广」",
+          en: "'Leaders Taking Leave First' Deemed Worth Promoting",
+        },
+        description: {
+          zh: "河南出台带薪休假新政，强调单位主要负责人为第一责任人、领导干部带头休假，专家称可破除职工「不敢休」的顾虑，具备很强的可推广价值。",
+          en: "Henan's new paid-leave policy makes unit leaders the first responsible persons and urges them to take leave first, helping staff overcome the fear of asking for time off.",
+        },
+      },
+      {
+        title: {
+          zh: "美国退回1000亿美元关税",
+          en: "US Refunds $100 Billion in Tariffs",
+        },
+        description: {
+          zh: "美国海关与边境保护局向美国国际贸易法院披露，已退回约 1000 亿美元此前根据《国际紧急经济权力法》征收的关税。",
+          en: "CBP told the US Court of International Trade that it has refunded about $100 billion in tariffs previously levied under the International Emergency Economic Powers Act.",
+        },
+      },
+      {
+        title: {
+          zh: "人贩子「梅姨」真实姓名曝光",
+          en: "Trafficker 'Aunt Mei's' Real Name Exposed",
+        },
+        description: {
+          zh: "被拐儿童钟彬收到法院告知书，案件已进入审查起诉环节，上面明确写着嫌疑人谢家梅涉及拐卖儿童，「梅姨」的真实姓名终于曝光。",
+          en: "Abducted child Zhong Bin received a court notice showing the case has moved to prosecution review, naming suspect Xie Jiamei in child trafficking — revealing 'Aunt Mei's' real identity.",
+        },
+      },
+      {
+        title: {
+          zh: "姆巴佩官宣恋情",
+          en: "Mbappe Goes Public with Relationship",
+        },
+        description: {
+          zh: "姆巴佩在个人账号晒出度假动态与女友背影，并深情告白「有你在的每一天 都是晴天」。",
+          en: "Mbappe posts vacation photos with his girlfriend's back view, declaring 'Every day with you is a sunny day.'",
+        },
+      },
+      {
+        title: {
+          zh: "台风白海豚可能在浙江登陆",
+          en: "Typhoon White Dolphin May Land in Zhejiang",
+        },
+        description: {
+          zh: "今年第 13 号台风「白海豚」路径更新，最新研判可能在浙江登陆，相关地区需做好防范。",
+          en: "The latest track for Typhoon White Dolphin, the 13th of the season, suggests a possible landfall in Zhejiang, urging precautions.",
+        },
+      },
+      {
+        title: {
+          zh: "北京被确认为2029年「世界建筑之都」",
+          en: "Beijing Confirmed as 2029 World Capital of Architecture",
+        },
+        description: {
+          zh: "联合国教科文组织宣布正式确认北京为 2029 年联合国教科文组织—国际建筑师协会「世界建筑之都」。",
+          en: "UNESCO confirms Beijing as the 2029 UNESCO-UIA World Capital of Architecture.",
+        },
+      },
+      {
+        title: {
+          zh: "余承东：手机可能都要大规模涨价",
+          en: "Yu Chengdong: Phones May All See Major Price Hikes",
+        },
+        description: {
+          zh: "余承东在华为新品发布会上表示，内存价格高昂，所有手机之后可能都要大规模涨价，否则在原价都是亏损销售。",
+          en: "At a Huawei launch, Yu Chengdong says soaring memory costs mean phones will likely all face major price increases, as selling at current prices would mean losses.",
+        },
+      },
+      {
+        title: {
+          zh: "联合国：当前热浪仅是气候危机开端",
+          en: "UN: Current Heatwaves Are Just the Start of the Climate Crisis",
+        },
+        description: {
+          zh: "极端高温肆虐亚欧北美多地，韩国录得 122 年最高气温，意大利 25 城发布红色高温预警。联合国警示当前热浪仅是气候危机开端。",
+          en: "Extreme heat grips Asia, Europe, and North America — Korea records its hottest in 122 years, Italy issues red alerts in 25 cities. The UN warns this is only the beginning.",
+        },
+      },
+      {
+        title: {
+          zh: "因凡蒂诺承认世界杯投资计划失误",
+          en: "Infantino Admits World Cup Investment Plan Mistakes",
+        },
+        description: {
+          zh: "国际足联承认世界杯投资计划推进中存在失误，因凡蒂诺与秘书长联名公开致歉，这是其宣布并撤回出售世界杯股权计划后首次公开道歉。",
+          en: "FIFA admits missteps in its World Cup investment plan; Infantino and the secretary-general publicly apologize — his first since announcing and retracting a plan to sell World Cup stakes.",
+        },
+      },
+      {
+        title: {
+          zh: "香港填词人黎彼得去世 曾写《Monica》",
+          en: "Hong Kong Lyricist Peter Lai Dies, Wrote 'Monica'",
+        },
+        description: {
+          zh: "资深填词人、演员黎彼得因病离世，终年 76 岁，曾创作《Monica》《浪子心声》，在《唐伯虎点秋香》中饰演师爷。",
+          en: "Veteran lyricist and actor Peter Lai passed away from illness at 76. He wrote 'Monica' and 'Langzi Xinsheng' and played a master in 'Flirting Scholar.'",
+        },
+      },
+      {
+        title: {
+          zh: "新疆疏附县发生8.5级地震系谣言",
+          en: "Shufu County 8.5-Magnitude Quake Rumor Debunked",
+        },
+        description: {
+          zh: "网传「新疆喀什疏附县 8.5 级地震致校舍倒塌」不实，当地未发生地震，有记录以来也无此震级，情节系虚构。",
+          en: "Claims of an 8.5-magnitude quake in Shufu County, Kashgar are false — no quake occurred there and none of that magnitude is on record.",
+        },
+      },
+      {
+        title: {
+          zh: "李亚鹏向地铁吐血女孩捐99999元",
+          en: "Li Yapeng Donates 99,999 Yuan to Subway Girl",
+        },
+        description: {
+          zh: "李亚鹏回应「地铁吐血女孩」胡心瑶捐款一事，已向胡心瑶个人捐赠 99999 元，并向其病友之家再捐 99999 元。",
+          en: "Li Yapeng says he donated 99,999 yuan to Hu Xinyao, the subway girl who vomited blood, plus another 99,999 yuan to her fellow-patients' home.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-05",
+    date: "2026-08-05",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-05",
+      en: "🤖 AI HOT Daily · Aug 5, 2026",
+    },
+    summary: {
+      zh: "NVIDIA 开放商用 Alpamayo 2 Super 面向 Robotaxi 与自动驾驶；商汤开源 SenseNova U1 统一推理与图像生成；OpenRouter 上线 FLUX 3 Video 统一多模态模型；蚂蚁百灵发布 Ling-3.0-flash 开源权重；腾讯混元发布 Hy ASR 3.0 语音识别；Swiftlet 在 Mac 上运行 80B 版 Qwen；Anthropic 与初创云公司 Volta 签署 100 亿美元算力协议；工信部发布首部 L3/L4 自动驾驶强制性国标 2027 年 7 月实施；GPT-5.6 Luna 降价 80% 永久生效；MiniMax-H3 通过 MLX 移植可在 Apple Silicon 上运行。",
+      en: "NVIDIA opens Alpamayo 2 Super for Robotaxi and autonomous driving; SenseTime open-sources SenseNova U1 unifying reasoning and image generation; OpenRouter hosts FLUX 3 Video unified multimodal model; Ant Ling releases Ling-3.0-flash open weights; Tencent Hunyuan launches Hy ASR 3.0 speech recognition; Swiftlet runs 80B Qwen on a Mac; Anthropic signs $10B compute deal with startup Volta; MIIT issues China's first mandatory L3/L4 autonomous driving standard (effective Jul 2027); GPT-5.6 Luna's 80% price cut is permanent; MiniMax-H3 now runs on Apple Silicon via MLX.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "NVIDIA Alpamayo 2 Super 开放商用",
+          en: "NVIDIA Alpamayo 2 Super Open for Commercial Use",
+        },
+        description: {
+          zh: "基于 Cosmos 3 Super Reasoner 构建，采用强化学习后训练，面向 Robotaxi 与自动驾驶，支持轨迹预测、因果链推理、元动作、自动标注及视觉问答等多任务输出。",
+          en: "Built on Cosmos 3 Super Reasoner with RL post-training for Robotaxi and autonomous driving, supporting trajectory prediction, causal reasoning, meta-actions, auto-labeling, and VQA.",
+        },
+      },
+      {
+        title: {
+          zh: "商汤 SenseNova U1 开源：统一推理与图像生成",
+          en: "SenseTime Open-Sources SenseNova U1: Unified Reasoning and Image Generation",
+        },
+        description: {
+          zh: "在统一流程中同时进行推理与图像生成，信息图模式可将单条提示词转为结构化幻灯片，交错模式则逐步生成图文内容，已上线 SenseNova Studio、HuggingFace 及 GitHub。",
+          en: "Combines reasoning and image generation in one pipeline: infographic mode turns a prompt into structured slides; interleaved mode builds image-text content step by step. Available on HuggingFace and GitHub.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 上线 FLUX 3 Video 统一多模态模型",
+          en: "OpenRouter Hosts FLUX 3 Video Unified Multimodal Model",
+        },
+        description: {
+          zh: "FLUX 3 Video 是统一的视频、音频、图像和动作预测多模态模型家族，基于统一架构联合训练，现已向所有人开放。",
+          en: "FLUX 3 Video is a unified multimodal family covering video, audio, image, and action prediction, jointly trained on a unified architecture and now open to everyone.",
+        },
+      },
+      {
+        title: {
+          zh: "蚂蚁百灵发布 Ling-3.0-flash 开源权重",
+          en: "Ant Ling Releases Ling-3.0-flash Open Weights",
+        },
+        description: {
+          zh: "官方 BF16 和 FP8 量化版本均已可用，用户可根据硬件、性能要求和部署需求选择最合适的版本。",
+          en: "Official BF16 and FP8 quantized versions are available, letting users pick the best fit for their hardware, performance needs, and deployment.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯混元发布 Hy ASR 3.0 preview 语音识别",
+          en: "Tencent Hunyuan Releases Hy ASR 3.0 Preview",
+        },
+        description: {
+          zh: "基于 LLM Hy3 与 MoE 架构，中文普通话 WER 3.34%、英语 WER 2.62%、粤语 WER 3.12%，支持上下文纠错、热词注入及高噪耳语等场景。",
+          en: "Built on LLM Hy3 with MoE: Mandarin WER 3.34%, English 2.62%, Cantonese 3.12%, with context correction, hotword injection, and noisy-whisper support.",
+        },
+      },
+      {
+        title: {
+          zh: "Swiftlet：在 Mac 上运行 80B 版 Qwen",
+          en: "Swiftlet: Running 80B Qwen on a Mac",
+        },
+        description: {
+          zh: "Swift + Metal 运行时，在普通 Apple 设备上运行 Qwen3-Next 和 Qwen3.5/3.6 MoE 混合模型，仅将小型稠密核心驻留内存，按需流式加载路由专家权重。",
+          en: "A Swift + Metal runtime running Qwen3-Next and Qwen3.5/3.6 MoE hybrid models on ordinary Apple devices, keeping only a small dense core in memory and streaming expert weights on demand.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 与 Volta 签署 100 亿美元算力协议",
+          en: "Anthropic Signs $10B Compute Deal with Volta",
+        },
+        description: {
+          zh: "Anthropic 与成立仅数月的云初创公司 Volta 签署 100 亿美元算力协议，约合每年 17 亿美元，Volta 硬件几乎全为租用，算力来自比特币矿商 Bitdeer 的挪威站点。",
+          en: "Anthropic signs a $10B (about $1.7B/year) compute deal with months-old cloud startup Volta, which rents nearly all hardware, with compute from Bitcoin miner Bitdeer's Norwegian site.",
+        },
+      },
+      {
+        title: {
+          zh: "工信部发布首部 L3/L4 自动驾驶强制性国标",
+          en: "MIIT Issues First Mandatory L3/L4 Autonomous Driving Standard",
+        },
+        description: {
+          zh: "《智能网联汽车 自动驾驶系统安全要求》强制性国标获批发布，2027 年 7 月 1 日起实施，是我国首部针对 L3 级有条件自动驾驶和 L4 级高度自动驾驶的强制性国标。",
+          en: "The mandatory national standard for intelligent connected vehicle autonomous driving system safety is approved, effective July 1, 2027 — China's first binding standard for L3 and L4 systems.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-5.6 Luna 降价 80% 永久生效",
+          en: "GPT-5.6 Luna's 80% Price Cut Is Permanent",
+        },
+        description: {
+          zh: "OpenAI 确认 GPT-5.6 Luna 降价 80% 不是临时噱头而是永久调整，效率提升不会消失。",
+          en: "OpenAI confirms the 80% price cut on GPT-5.6 Luna is a permanent adjustment, not a temporary gimmick — the efficiency gains won't go away.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniMax-H3 通过 MLX 移植可在 Apple Silicon 运行",
+          en: "MiniMax-H3 Now Runs on Apple Silicon via MLX",
+        },
+        description: {
+          zh: "MiniMax-H3 是可接受文本、图像、音频和视频并生成最长 15 秒带音频视频的全模态生成系统，Python 包将其移植到 MLX，支持 Apple Silicon 运行。",
+          en: "MiniMax-H3 accepts text, image, audio, and video to generate up to 15-second clips with sound. A Python package ports it to MLX for Apple Silicon.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布 Gemini 3.6 Flash 等三款新模型",
+          en: "Google Releases Three New Gemini Models",
+        },
+        description: {
+          zh: "Google 在 7 月推出 Gemini 3.6 Flash、3.5 Flash-Lite 和 3.5 Flash Cyber 三款新模型，面向生产级 AI 智能体，主打更高 token 效率、更低延迟和更可靠性能。",
+          en: "Google launched three new Gemini models in July — 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber — for production-grade agents, with higher token efficiency, lower latency, and better reliability.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-05-hot",
+    date: "2026-08-05",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-05",
+      en: "🔥 Hot Topics · Aug 5, 2026",
+    },
+    summary: {
+      zh: "20多名中国游客被拒登机泰国机场致歉；笔试第一名称被第二名花钱劝弃考；死刑改死缓被害人家属十年后才知晓；你家楼下的兰州拉面要改名字了；韩股又涨熔断日股也飙涨；曝美拟禁止进口中国新型号光模块；韩国高温进入国家灾难状态；马斯克一个月亏掉2.45万亿元；鸿蒙智行回应「竹知了」事件；申通快递被立案调查；兰蔻在华首家旗舰店已被搬空；8岁独居女孩考上一本。",
+      en: "Over 20 Chinese tourists denied boarding, Thailand airport apologizes; top exam scorer claims second-place paid her to withdraw; death sentence commuted to reprieve, victim's family found out 10 years later; 'Lanzhou Lamian' restaurants to be renamed; Korean stocks surge with circuit breaker as Japanese stocks rally; US reportedly mulls banning new Chinese optical modules; South Korea declares national disaster over heat; Musk loses 2.45 trillion yuan in a month; Harmony Intelligent Mobility responds to 'bamboo cicada' incident; STO Express placed under investigation; Lancome's first China flagship emptied; 8-year-old who lived alone gets into university.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "20多中国游客被拒登机 泰国机场致歉",
+          en: "Over 20 Chinese Tourists Denied Boarding, Thai Airport Apologizes",
+        },
+        description: {
+          zh: "泰航 TG674 航班 20 余人被要求退出廊桥未能成行，交涉时安保被拍到做「拉眼角」动作。泰国素万那普机场致歉，称系劝离粉丝引发，已对涉事安保作纪律处分。",
+          en: "Over 20 passengers on Thai Airways TG674 were removed from the jet bridge and missed the flight; a security guard was filmed making a 'slant-eye' gesture. Suvarnabhumi apologized and disciplined the guard.",
+        },
+      },
+      {
+        title: {
+          zh: "笔试第一称被第二名花钱劝弃考",
+          en: "Top Scorer Claims Second-Place Rival Paid Her to Withdraw",
+        },
+        description: {
+          zh: "广东雷州考生陈女士反映其作为笔试第一名遭中间人数万元利诱放弃面试，并指控招考单位泄露个人信息，雷州市教育局称已启动调查。",
+          en: "A Leizhou candidate says a middleman offered tens of thousands of yuan to drop out of her interview despite ranking first; she also accuses the recruiter of leaking her info. An investigation is underway.",
+        },
+      },
+      {
+        title: {
+          zh: "死刑改死缓 被害人家属十年后才知晓",
+          en: "Death Sentence Commuted, Family Found Out 10 Years Later",
+        },
+        description: {
+          zh: "1999 年云南宣威抢劫杀人案凶手段贤峰一审死刑二审改判死缓，全程未通知被害人家属参与庭审，家属直到十年后才知道结果，该案已于 2026 年 1 月获云南省检察院受理。",
+          en: "In a 1999 robbery-homicide in Xuanwei, Yunnan, Duan Xianfeng's death sentence was commuted on appeal without notifying the victim's family, who only learned 10 years later. Yunnan prosecutors took the case in Jan 2026.",
+        },
+      },
+      {
+        title: {
+          zh: "你家楼下的兰州拉面要改名字了",
+          en: "'Lanzhou Lamian' Restaurants to Be Renamed",
+        },
+        description: {
+          zh: "「兰州拉面」跟兰州其实没多大关系，这个被叫错了四十年的名字终于要改回来了。今年 6 月，天津 72 家拉面馆集体摘下「兰州」招牌，换上「青海拉面」门头。",
+          en: "'Lanzhou Lamian' actually has little to do with Lanzhou, and the misnamed label from 40 years is being corrected. In June, 72 Tianjin noodle shops swapped their 'Lanzhou' signs for 'Qinghai Lamian.'",
+        },
+      },
+      {
+        title: {
+          zh: "韩股又涨熔断了 日股也飙涨",
+          en: "Korean Stocks Surge with Circuit Breaker, Japanese Stocks Rally",
+        },
+        description: {
+          zh: "5 日早盘韩国交易所启动 SIDECAR 机制暂停 KOSPI 程序化买盘 5 分钟，韩综指涨幅一度扩大至 4%，SK 海力士、三星电子涨超 6%，日经 225 涨超 3%。",
+          en: "The Korean exchange triggered the SIDECAR mechanism, pausing KOSPI program buying for 5 minutes as the index rose up to 4%. SK Hynix and Samsung rose over 6%, with Nikkei 225 up over 3%.",
+        },
+      },
+      {
+        title: {
+          zh: "曝美拟禁止进口中国新型号光模块",
+          en: "US Reportedly Mulls Ban on New Chinese Optical Modules",
+        },
+        description: {
+          zh: "路透社援引知情人士称 FCC 正制定措施计划禁止进口中国新型号光模块，美国官员希望年内公布并实施，理由是无根据指控中国企业窃取数据、植入恶意软件。",
+          en: "Reuters reports the FCC is drafting measures to ban imports of new Chinese optical modules, hoping to finalize within the year, citing unsubstantiated data-theft and malware claims.",
+        },
+      },
+      {
+        title: {
+          zh: "韩国高温 李在明：进入国家灾难状态",
+          en: "South Korea Declares National Disaster Over Heat",
+        },
+        description: {
+          zh: "因高温持续，韩国正式进入「国家灾难状态」，自 5 月以来全国已报告近 2000 例高温相关疾病、16 人死亡。",
+          en: "South Korea declares a 'national disaster' over persistent heat, with nearly 2,000 heat-related illnesses and 16 deaths reported since May.",
+        },
+      },
+      {
+        title: {
+          zh: "马斯克一个月亏掉2.45万亿元",
+          en: "Musk Loses 2.45 Trillion Yuan in a Month",
+        },
+        description: {
+          zh: "马斯克遭遇「黑色七月」，一个月财富缩水约 3630 亿美元（合 2.45 万亿元人民币），相当于亏掉两个「黄仁勋」。",
+          en: "Musk's 'black July' shaved about $363 billion (2.45 trillion yuan) off his wealth in one month — roughly two 'Jensen Huangs' lost.",
+        },
+      },
+      {
+        title: {
+          zh: "鸿蒙智行回应「竹知了」事件",
+          en: "Harmony Intelligent Mobility Responds to 'Bamboo Cicada' Incident",
+        },
+        description: {
+          zh: "鸿蒙智行发布说明称相关投诉均有明确侵权事实和留存证据，不存在仅为正常把玩、制作、展示或销售「竹知了」的内容，未向任何电商平台投诉或要求下架该商品。",
+          en: "Harmony Intelligent Mobility says complaints cite clear infringement facts and evidence, deny targeting normal play/making/display/sale of 'bamboo cicadas,' and deny any requests to platforms to delist them.",
+        },
+      },
+      {
+        title: {
+          zh: "申通快递被立案调查",
+          en: "STO Express Under Investigation",
+        },
+        description: {
+          zh: "国家邮政局称使用「申通快递」商标字号经营的企业多发生产安全事故且隐患频现，申通快递对安全生产管理缺位，已被依法立案调查。",
+          en: "State Post Bureau says firms operating under the 'STO Express' brand have had recurring safety accidents and hazards; STO Express Ltd faces a formal investigation for inadequate safety management.",
+        },
+      },
+      {
+        title: {
+          zh: "兰蔻在华首家旗舰店已被搬空",
+          en: "Lancome's First Flagship in China Emptied",
+        },
+        description: {
+          zh: "北京王府井 apm 商场一层的兰蔻全球旗舰店大门紧闭、店内已搬空，这家号称兰蔻在中国首家也是最大的高档美妆门店，从开业到关闭不到 6 年。",
+          en: "Lancome's global flagship at Beijing's apm mall is shut and stripped empty. The store, once China's largest Lancome beauty outpost, closed in under six years.",
+        },
+      },
+      {
+        title: {
+          zh: "女孩8岁独居床头放菜刀现考上一本",
+          en: "Girl Who Lived Alone at 8 Now Admitted to University",
+        },
+        description: {
+          zh: "四川安岳女孩张筝 8 岁起曾独自生活两年、床头常备菜刀自卫，10 岁被老师收养，2026 年高考以 598 分考入四川师范大学公费师范生，计划返乡支教。",
+          en: "Zhang Zheng of Anyue, Sichuan, lived alone from age 8 with a kitchen knife by her bed for self-defense, was adopted by a teacher at 10, and scored 598 to enter Sichuan Normal University, planning to teach back home.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-04",
+    date: "2026-08-04",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-04",
+      en: "🤖 AI HOT Daily · Aug 4, 2026",
+    },
+    summary: {
+      zh: "Qwen3.8-Max 发布 2.4T 参数首次开源 Qwen-Max 级权重；商汤发布 SenseNova U1.5-Lite 轻量多模态模型；OpenAI 发布 GPT-Live 实时音频新架构可边说边听；微软开源 Orchard 智能体训练框架；Cloudflare 推出 @cloudflare/computer 智能体运行时与 Billable Usage API；欧盟《人工智能法案》透明度规则生效违规最高罚 1500 万欧元；AirLLM 实现单块 4GB GPU 运行 70B 模型；Gary Marcus 称 Anthropic 数学家 24 小时复现 OpenAI Astra 半数结果。",
+      en: "Qwen3.8-Max launches with 2.4T parameters, first open Qwen-Max-level weights; SenseTime releases SenseNova U1.5-Lite lightweight multimodal model; OpenAI unveils GPT-Live real-time audio architecture that listens while speaking; Microsoft open-sources Orchard agent training framework; Cloudflare launches @cloudflare/computer agent runtime and Billable Usage API; EU AI Act transparency rules take effect with fines up to €15M; AirLLM runs 70B models on a single 4GB GPU; Gary Marcus says Anthropic mathematicians reproduced half of OpenAI Astra's results in 24 hours.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Qwen3.8-Max 发布：开源最强编码与协作模型",
+          en: "Qwen3.8-Max: Strongest Open Coding and Collaboration Model",
+        },
+        description: {
+          zh: "Qwen 家族迄今最强模型，2.4T 参数（95B 激活），首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
+          en: "Qwen's strongest model yet, with 2.4T parameters (95B active), the first Qwen-Max-level open weights, to be released next week.",
+        },
+      },
+      {
+        title: {
+          zh: "商汤发布 SenseNova U1.5-Lite-Preview 开源模型",
+          en: "SenseTime Releases SenseNova U1.5-Lite-Preview Open Model",
+        },
+        description: {
+          zh: "基于 NEO-Unify 架构的轻量级原生统一多模态模型，仅 8B-MoT 参数即可达到商业闭源模型的生成与编辑质量。",
+          en: "A lightweight native unified multimodal model on NEO-Unify architecture, reaching commercial closed-source generation and editing quality with just 8B-MoT parameters.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-Live 实时音频新架构发布",
+          en: "GPT-Live: New Architecture for Real-Time Audio",
+        },
+        description: {
+          zh: "GPT-Live 可以在说话的同时聆听，从客户端到模型重建了语音栈，让音频持续流动，更深入的推理和工具使用不会打断对话。",
+          en: "GPT-Live can listen while speaking. Rebuilding the voice stack from client to model keeps audio flowing so deeper reasoning and tool use don't interrupt the conversation.",
+        },
+      },
+      {
+        title: {
+          zh: "微软开源 Orchard 智能体训练框架",
+          en: "Microsoft Open-Sources Orchard Agent Training Framework",
+        },
+        description: {
+          zh: "面向研究社区的开源框架，用于跨任务类型训练和评估 AI 智能体，降低复杂性并让较小模型也能实现强劲性能。",
+          en: "An open framework for the research community to train and evaluate AI agents across task types, reducing complexity so even smaller models perform strongly.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 推出 @cloudflare/computer 智能体运行时",
+          en: "Cloudflare Launches @cloudflare/computer Agent Runtime",
+        },
+        description: {
+          zh: "开源智能体运行时，为每个智能体提供虚拟文件系统，并支持在 isolate、容器沙箱或浏览器中执行代码。",
+          en: "An open-source agent runtime providing each agent a virtual file system and supporting code execution in isolates, container sandboxes, or browsers.",
+        },
+      },
+      {
+        title: {
+          zh: "欧盟《人工智能法案》透明度规则生效",
+          en: "EU AI Act Transparency Rules Take Effect",
+        },
+        description: {
+          zh: "8 月 2 日起生效，要求公司披露用户何时与 AI 互动，并为合成音视频和文本添加机器可读标记，违规最高罚 1500 万欧元或全球年营业额 3%。",
+          en: "Effective Aug 2, companies must disclose when users interact with AI and machine-readably mark synthetic media, with fines up to €15M or 3% of global turnover.",
+        },
+      },
+      {
+        title: {
+          zh: "AirLLM：单块 4GB GPU 运行 70B 模型推理",
+          en: "AirLLM: Running 70B Models on a Single 4GB GPU",
+        },
+        description: {
+          zh: "开源项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置，在 Hacker News 引发关注。",
+          en: "An open-source project runs 70B-parameter model inference on a single 4GB GPU without multi-GPU or large memory setups, gaining traction on Hacker News.",
+        },
+      },
+      {
+        title: {
+          zh: "Gary Marcus：Anthropic 24 小时复现 OpenAI Astra 半数结果",
+          en: "Gary Marcus: Anthropic Reproduces Half of Astra's Results in 24h",
+        },
+        description: {
+          zh: "Anthropic 数学家 Levent Alpöge 用已公开的 Fable 模型在 24 小时内复现了 OpenAI 声称的半数结果，质疑 Astra 是否为真正的突破。",
+          en: "Anthropic mathematician Levent Alpöge reproduced half of OpenAI's claimed results in 24 hours using the public Fable model, raising doubts about Astra's breakthrough status.",
+        },
+      },
+      {
+        title: {
+          zh: "Palantir CEO：前沿 AI 实验室带「马克思主义色彩」",
+          en: "Palantir CEO Calls Frontier AI Labs 'Marxist'",
+        },
+        description: {
+          zh: "Alex Karp 在股东信中称前沿实验室意图「占有合作伙伴的生产资料」，Palantir 二季度营收 19 亿美元同比增长 93%，主张提供模型无关的 AI 与分布式方案。",
+          en: "Alex Karp warns frontier labs seek to 'seize partners' means of production.' Palantir Q2 revenue hit $1.9B, up 93% YoY, championing model-agnostic AI and distributed approaches.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 推出 Billable Usage API",
+          en: "Cloudflare Launches Billable Usage API",
+        },
+        description: {
+          zh: "为自助账户提供单一端点，一次调用返回按产品和计费周期拆分的用量与成本，覆盖 Workers、R2、D1、Workers AI、Vectorize、Images 和 Stream。",
+          en: "A single endpoint returns usage and cost broken down by product and billing period for self-serve accounts, covering Workers, R2, D1, Workers AI, Vectorize, Images, and Stream.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-04-hot",
+    date: "2026-08-04",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-04",
+      en: "🔥 Hot Topics · Aug 4, 2026",
+    },
+    summary: {
+      zh: "国家出手新能源汽车充电将全面升级，多地发文鼓励居民装修既有住房；香港传奇影星葛兰去世享年93岁；委内瑞拉强震死亡人数升至6125人；DeepSeek V4 Flash「斩杀线」重塑大模型价格战，OpenAI等巨头大幅降价对标；瑙鲁正式更改国名中文译名不变；法院执行局长骚扰女当事人索贿被停职；进口豪车在华卖不动了；智驾「小蓝灯」管控渐近；「江西球王」单场轰101分。",
+      en: "State moves to comprehensively upgrade EV charging; multiple regions encourage renovation of existing homes; Hong Kong legendary actress Ge Lan dies at 93; Venezuela earthquake death toll rises to 6,125; DeepSeek V4 Flash 'kill line' reshapes LLM price wars as OpenAI and giants slash prices; Nauru officially changes its name, Chinese name unchanged; court execution bureau chief suspended over harassment; imported luxury cars slump in China; intelligent-driving 'blue light' regulation looms; 'Jiangxi ball king' scores 101 points in one game.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "国家出手 新能源汽车充电将全面升级",
+          en: "State Moves to Comprehensively Upgrade EV Charging",
+        },
+        description: {
+          zh: "发改委、能源局印发《新型电力系统建设「十五五」规划》，到 2030 年充电设施总量超 4000 万个，形成支撑超 1.1 亿辆电动汽车的充电服务能力。",
+          en: "NDRC and NEA issue the 15th Five-Year new power system plan: 40M+ charging points by 2030, supporting over 110 million EVs with upgraded highway and rural networks.",
+        },
+      },
+      {
+        title: {
+          zh: "多地发文鼓励居民装修既有住房",
+          en: "Multiple Regions Encourage Renovating Existing Homes",
+        },
+        description: {
+          zh: "山东、珠海等地出台政策鼓励既有住房装修和局部升级改造，中国家装市场规模已超 3.2 万亿元，每年二次装修需求高达 1.5 万亿元。",
+          en: "Shandong, Zhuhai and others push policies encouraging home renovation and upgrades. China's home-improvement market exceeds 3.2 trillion yuan, with reno demand of 1.5 trillion yearly.",
+        },
+      },
+      {
+        title: {
+          zh: "香港传奇影星葛兰去世 享年93岁",
+          en: "Hong Kong Legendary Actress Ge Lan Dies at 93",
+        },
+        description: {
+          zh: "华语影坛著名歌手及演员葛兰于 8 月 3 日下午安详离世，享年 93 岁，曾主演多部经典华语歌舞片，被誉为一代歌舞巨星。",
+          en: "Ge Lan, celebrated singer-actress of Chinese-language cinema, passed away peacefully on the afternoon of Aug 3 at 93, famed for classic musical films of the 1950s-60s.",
+        },
+      },
+      {
+        title: {
+          zh: "委内瑞拉强震死亡人数上升至6125人",
+          en: "Venezuela Earthquake Death Toll Rises to 6,125",
+        },
+        description: {
+          zh: "委内瑞拉全国代表大会主席通报，该国 6 月 24 日发生的两次强震遇难人数上升至 6125 人，6462 人获救。",
+          en: "Venezuela's National Assembly president reports the June 24 twin earthquakes' death toll has risen to 6,125, with 6,462 people rescued.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 斩杀线斩的是什么",
+          en: "What Does DeepSeek's 'Kill Line' Cut?",
+        },
+        description: {
+          zh: "DeepSeek V4 Flash 定价 2 元/百万 Token，仅 Claude Opus 4.8 的 1/85，单日 Token 消耗超 8 万亿，正迫使定价偏高的中间层模型加速出局。",
+          en: "DeepSeek V4 Flash at 2 yuan per million tokens is 1/85th of Claude Opus 4.8's price with 8 trillion daily tokens, forcing overpriced mid-tier models out of the market.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI等巨头大幅降价对标DeepSeek",
+          en: "OpenAI and Giants Slash Prices to Match DeepSeek",
+        },
+        description: {
+          zh: "为应对 DeepSeek V4 Flash 的竞争，OpenAI 将 ChatGPT 5.6 Luna 价格降低 80%，中端模型 5.6 Terra 下调 20%，行业进入新阶段。",
+          en: "To counter DeepSeek V4 Flash, OpenAI cuts ChatGPT 5.6 Luna by 80% and mid-tier 5.6 Terra by 20%, as the industry enters a new price-competition phase.",
+        },
+      },
+      {
+        title: {
+          zh: "瑙鲁正式更改国名 中文译名不变",
+          en: "Nauru Officially Changes Its Name, Chinese Name Unchanged",
+        },
+        description: {
+          zh: "瑙鲁国名由「Nauru」正式更改为「Naoero」，联合国已更新相关语言表述，但其中文名「瑙鲁」维持不变。",
+          en: "Nauru officially changes its name from 'Nauru' to 'Naoero,' with the UN updating language versions, while the Chinese name 'Nauru' remains unchanged.",
+        },
+      },
+      {
+        title: {
+          zh: "法院执行局长骚扰女当事人索贿被停职",
+          en: "Court Execution Bureau Chief Suspended for Harassment",
+        },
+        description: {
+          zh: "邯郸丛台区法院执行局长被指骚扰女当事人并索贿，邯郸中院通报不当言论通话录音确系本人，郭红波已被停职将严肃处理。",
+          en: "Congtai District court execution chief is accused of harassing a female party and soliciting bribes; Handan court confirms the recording, suspending Guo Hongbo for serious handling.",
+        },
+      },
+      {
+        title: {
+          zh: "进口豪车在华卖不动了",
+          en: "Imported Luxury Cars Slump in China",
+        },
+        description: {
+          zh: "上半年进口豪华车市场整体收缩，多数超豪华品牌销量下滑，仅兰博基尼增长，保时捷、法拉利靠高端车型与定制业务稳住收益。",
+          en: "Imported luxury car market contracts in H1 with most ultra-premium brands' sales falling; only Lamborghini grew, while Porsche and Ferrari held profits via high-end and bespoke lines.",
+        },
+      },
+      {
+        title: {
+          zh: "智驾「小蓝灯」管控渐近",
+          en: "Regulation of Intelligent-Driving 'Blue Lights' Looms",
+        },
+        description: {
+          zh: "外置智驾小蓝灯仍无统一规范，已有车企通过 OTA 修改此前无法关闭的蓝灯，业内人士指其色彩不符合现有国标，需协调解决行业矛盾。",
+          en: "External ADAS 'blue lights' still lack unified standards; some automakers already altered unchangeable lights via OTA. Industry insiders note the color fails national standards.",
+        },
+      },
+      {
+        title: {
+          zh: "「江西球王」杨志军单场轰101分",
+          en: "'Jiangxi Ball King' Yang Zhijun Scores 101 Points",
+        },
+        description: {
+          zh: "宜春市篮球联赛中杨志军单场命中 28 记三分、三节拿下 90 分，全场爆砍 101 分率明月山队 121 比 75 大胜袁州区队。",
+          en: "In a Yichun basketball league game, Yang Zhijun hit 28 threes and scored 90 in three quarters, erupting for 101 total points in a 121-75 win for Mingyueshan.",
+        },
+      },
+      {
+        title: {
+          zh: "台风白海豚两种路径公布",
+          en: "Typhoon White Dolphin: Two Possible Paths",
+        },
+        description: {
+          zh: "今年第 13 号台风「白海豚」最大风力 15 级（强台风级），目前研判主要有两种可能影响我国的路径。",
+          en: "Typhoon White Dolphin, the 13th of the season, packs winds of force 15 (severe typhoon); forecasters see two main paths potentially affecting China.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-03",
+    date: "2026-08-03",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-03",
+      en: "🤖 AI HOT Daily · Aug 3, 2026",
+    },
+    summary: {
+      zh: "xAI 的 Grok 现可分析任意视频；Cloudflare 开启为期五天的 Agents Week 探讨面向智能体的 Agent Cloud 形态；Codex 高阶玩法用 Sol 指挥 Luna Max 省额度翻倍产出；Gary Marcus 认为 OpenAI 新模型 Astra 数学表现出色但被过度吹捧；Thinking Machines 发布首个开源模型 Inkling（975B-A41B 多模态 MoE）。",
+      en: "xAI's Grok can now analyze any video; Cloudflare kicks off a five-day Agents Week exploring the shape of agent-native Agent Cloud; advanced Codex trick uses Sol to command Luna Max, doubling output on a budget; Gary Marcus says OpenAI's new Astra is impressive at math but vastly oversold; Thinking Machines releases first open model Inkling (975B-A41B multimodal MoE).",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Grok 支持分析任意视频",
+          en: "Grok Can Now Analyze Any Video",
+        },
+        description: {
+          zh: "xAI 的 Grok 现已支持分析任意视频内容，用户可直接上传或分享视频链接进行理解与分析。",
+          en: "xAI's Grok now supports analyzing any video, letting users upload or share a video link for understanding and analysis.",
+        },
+      },
+      {
+        title: {
+          zh: "Cloudflare 开启 Agents Week：探讨 Agent Cloud 形态",
+          en: "Cloudflare Kicks Off Agents Week: The Shape of Agent Cloud",
+        },
+        description: {
+          zh: "Cloudflare 启动为期五天的 Agents Week，认为现有云和网络皆为人设计，Agent Cloud 需构建面向智能体原生的底层能力，并充当现有网络与智能体网络之间的转换层。",
+          en: "Cloudflare launches a five-day Agents Week, arguing existing clouds and networks are built for humans. Agent Cloud needs agent-native infrastructure while bridging current and agent networks.",
+        },
+      },
+      {
+        title: {
+          zh: "Codex 用 Sol 指挥 Luna Max 省额度翻倍产出",
+          en: "Codex Uses Sol to Command Luna Max, Doubling Output",
+        },
+        description: {
+          zh: "Codex 高阶玩法：让 Sol 创建 Luna Max 子代理，模型设为 gpt-5.6-luna、reasoning effort 设为 max，Sol 负责拆任务与审代码，具体实现自动委托给 Luna Max，可省额度并翻倍产出。",
+          en: "Advanced Codex trick: let Sol create a Luna Max sub-agent (gpt-5.6-luna, max reasoning) to split tasks and review code, delegating implementation to Luna Max to save credits and double output.",
+        },
+      },
+      {
+        title: {
+          zh: "Gary Marcus：OpenAI Astra 数学惊艳但被过度吹捧",
+          en: "Gary Marcus: OpenAI's Astra Impressive at Math, Vastly Oversold",
+        },
+        description: {
+          zh: "Marcus 指出相关讨论犯了「合成谬误」：擅长某类数学不等于擅长所有认知任务，数学便于符号验证与合成数据生成，而开放世界问题无法如此模拟。",
+          en: "Marcus warns of a 'compositional fallacy': excelling at certain math doesn't mean mastering all cognition. Math is easy to verify symbolically and cheap to synthesize, unlike open-world problems.",
+        },
+      },
+      {
+        title: {
+          zh: "Thinking Machines 发布开源模型 Inkling",
+          en: "Thinking Machines Releases Open Model Inkling",
+        },
+        description: {
+          zh: "首个模型 Inkling 为 975B-A41B 多模态 MoE，支持文本、图像和音频输入，并推出 276B-A12B 的小版本。",
+          en: "First model Inkling is a 975B-A41B multimodal MoE supporting text, image, and audio inputs, with a 276B-A12B small variant.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-03-hot",
+    date: "2026-08-03",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-03",
+      en: "🔥 Hot Topics · Aug 3, 2026",
+    },
+    summary: {
+      zh: "7名赛里木湖打人工作人员被拘留，自驾收费改为按车收费；微信地震预警上线「震感上报」能力；2026暑期档电影票房破71亿；近120万辆特斯拉因悬架故障遭调查；韩股又跌「熔断」三星电子跌超7%；A股低开光刻机概念走弱；新冠阳性率连续数周上升；显卡价格跳涨热门产品一日一价；一年倒闭8.5万家烘焙店开不下去；歼20、歼16、歼10C「三龙」聚首。",
+      en: "Seven Sayram Lake staff detained for assault, self-drive fee switches to per-car; WeChat earthquake alert adds 'shaking report' feature; 2026 summer box office tops 7.1 billion yuan; nearly 1.2M Teslas under probe over suspension failures; Korean stocks fall again with Samsung down 7%+; A-shares open lower with lithography weakness; COVID positivity rises for weeks; GPU prices jump with daily changes; 85K bakeries close in a year; J-20, J-16, J-10C 'three dragons' gather.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "7名赛里木湖打人工作人员被拘留",
+          en: "Seven Sayram Lake Staff Detained for Assault",
+        },
+        description: {
+          zh: "赛里木湖景区工作人员殴打旅游车司机事件，7 名工作人员被处 10 至 15 日行政拘留并各罚款 1000 元，联合工作组已进驻景区全面整改。",
+          en: "Seven Sayram Lake scenic-area staff who assaulted a tour-bus driver receive 10-15 days detention plus 1,000 yuan fines each; a joint task force has entered the site for rectification.",
+        },
+      },
+      {
+        title: {
+          zh: "微信一项能力升级 关键时刻能救命",
+          en: "WeChat Upgrade That Can Save Lives in a Crisis",
+        },
+        description: {
+          zh: "中国地震台网微信小程序上线「震感上报」能力，用户收到地震预警后可上报位置与震感，经处理形成震感分布图。平台已预警超 700 次地震，订阅用户超 6000 万。",
+          en: "The China Earthquake Networks Center WeChat mini-program adds 'shaking report,' letting users report location and felt intensity to build shake maps. It has issued 700+ alerts to 60M+ subscribers.",
+        },
+      },
+      {
+        title: {
+          zh: "2026暑期档电影票房破71亿",
+          en: "2026 Summer Box Office Tops 7.1 Billion Yuan",
+        },
+        description: {
+          zh: "2026 暑期档电影票房（含预售）已超 71 亿元，年度票房超 228 亿元，国家电影局与市场监管总局鼓励影院打造综合文化空间。",
+          en: "Summer 2026 box office (incl. presales) tops 7.1 billion yuan; annual total exceeds 22.8 billion. Regulators encourage cinemas to become comprehensive cultural spaces.",
+        },
+      },
+      {
+        title: {
+          zh: "近120万辆特斯拉汽车遭调查",
+          en: "Nearly 1.2M Teslas Under Investigation",
+        },
+        description: {
+          zh: "因收到 156 起悬架故障投诉，美国国家公路交通安全管理局对近 120 万辆特斯拉展开初步调查，故障表现为前下横向连杆脱落，极端情况可能失控。",
+          en: "After 156 suspension-failure complaints, NHTSA opens a preliminary probe into nearly 1.2M Teslas, where front lower lateral links detach and can cause loss of control.",
+        },
+      },
+      {
+        title: {
+          zh: "韩股又跌「熔断」！三星电子跌超7%",
+          en: "Korean Stocks Fall Again, Samsung Down Over 7%",
+        },
+        description: {
+          zh: "韩国股市持续下跌，KOSDAQ 启动侧车机制暂停程序化交易 5 分钟，KOSPI 指数跌 4.32%，三星电子、SK 海力士均跌超 7%。",
+          en: "Korean stocks keep falling as KOSDAQ triggers the sidecar, pausing program trading for 5 minutes. KOSPI drops 4.32%, with Samsung Electronics and SK Hynix both down over 7%.",
+        },
+      },
+      {
+        title: {
+          zh: "A股开盘：光刻机概念股走弱",
+          en: "A-Shares Open Lower, Lithography Stocks Weaken",
+        },
+        description: {
+          zh: "8 月 3 日 A 股集体低开，存储器、HBM、半导体材料、PCB、光刻机概念走弱，核聚变、人形机器人、AI 应用、PEEK 材料指数走强。",
+          en: "A-shares open broadly lower on Aug 3, with memory, HBM, semicon materials, PCB, and lithography weak while fusion, humanoid robots, AI apps, and PEEK materials gain.",
+        },
+      },
+      {
+        title: {
+          zh: "新冠阳性率连续数周上升",
+          en: "COVID Positivity Rises for Weeks Running",
+        },
+        description: {
+          zh: "全国哨点医院流感样病例呼吸道样本新冠检测阳性率升至 20.3%，环比上升 4 个百分点，居所有监测病原体首位，连续数周上升。",
+          en: "COVID test positivity at sentinel hospitals rose to 20.3%, up 4 points week-over-week and topping all monitored pathogens, with increases for several consecutive weeks.",
+        },
+      },
+      {
+        title: {
+          zh: "显卡价格跳涨 热门产品「一日一价」",
+          en: "GPU Prices Jump, Changing Daily",
+        },
+        description: {
+          zh: "显卡自 7 月 25 日起涨价，基本「一日一价」，大显存型号涨幅明显，分析师认为系显存等上游核心物料成本上升所致。",
+          en: "GPUs have been rising since July 25, basically changing daily, with high-VRAM models surging most — attributed by analysts to higher costs of upstream parts like memory.",
+        },
+      },
+      {
+        title: {
+          zh: "一年倒闭8.5万家 烘焙店开不下去了",
+          en: "85,000 Bakeries Shut in a Year",
+        },
+        description: {
+          zh: "一年间全国面包烘焙门店净减少 8.17 万家，商超凭借冷冻面团模式成本更低价格更便宜，对传统门店形成「降维打击」。",
+          en: "Nationwide bakery stores shrank by 81,700 net in a year. Supermarkets' central-plant frozen-dough model undercuts traditional shops on cost and price.",
+        },
+      },
+      {
+        title: {
+          zh: "歼20、歼16、歼10C「三龙」聚首",
+          en: "J-20, J-16, J-10C 'Three Dragons' Gather",
+        },
+        description: {
+          zh: "现场直击歼-20、歼-16、歼-10C 大机群体系对抗，「三龙」聚首引发关注。",
+          en: "Footage shows J-20, J-16, and J-10C in large-formation system-of-systems exercises as the 'three dragons' gather.",
+        },
+      },
+      {
+        title: {
+          zh: "赛里木湖自驾按人收费改按车收费",
+          en: "Sayram Lake Self-Drive Fee Switches to Per-Car",
+        },
+        description: {
+          zh: "赛里木湖 75 元/人自驾服务费调整为按车收费，5 座及以下 120 元/车至 20 座及以上 600 元/车不等，方案自 8 月 20 日起执行。",
+          en: "Sayram Lake's 75 yuan-per-person self-drive fee changes to per-vehicle pricing, from 120 yuan for 5 seats or fewer up to 600 yuan for 20+ seats, effective Aug 20.",
+        },
+      },
+      {
+        title: {
+          zh: "「九门」开播带火赵丽颖版尹新月",
+          en: "'The Nine Gates' Revives Zhao Liying's Yin Xinyue",
+        },
+        description: {
+          zh: "新《九门》因续集换脸不换声遭吐槽，网友翻出十年前赵丽颖饰演的尹新月旧片段，「赵丽颖版尹新月的含金量还在上升」话题刷屏。",
+          en: "The new 'The Nine Gates' is criticized for replacing Zhao Liying's face while keeping her voice. Fans revisit her 2016 scenes as 'Yin Xinyue's value keeps rising' trends.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-02",
+    date: "2026-08-02",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-02",
+      en: "🤖 AI HOT Daily · Aug 2, 2026",
+    },
+    summary: {
+      zh: "德国慕尼黑法院裁定 AI 音乐生成器 Suno 在训练及输出中均侵犯版权，并驳回合理使用抗辩；OpenAI 用下一代模型 Astra 内部版以约 2000 美元成本证明了数学与理论计算机科学领域 10 项重大进展，包括推翻 Connes 刚性猜想。",
+      en: "A Munich court rules AI music generator Suno infringed copyright in training and output, rejecting its fair-use defense; OpenAI's next-gen model Astra internally proves 10 major advances in math and theoretical computer science for about $2,000, including toppling the Connes rigidity conjecture.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "德国法院裁定 Suno 侵犯版权，驳回合理使用抗辩",
+          en: "German Court Rules Suno Infringed Copyright, Rejects Fair Use",
+        },
+        description: {
+          zh: "慕尼黑法院认定 Suno 3.5 和 4 版本可复现六首知名歌曲的原创元素，构成「记忆化」侵权，责任归于 Suno 而非用户，且美国版权法下的合理使用不适用于此案。",
+          en: "A Munich court found Suno 3.5 and 4 can reproduce original elements of six well-known songs, constituting 'memorization' infringement attributed to Suno, not users, with US fair use deemed inapplicable.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI Astra 以约2000美元证明10项数学难题",
+          en: "OpenAI Astra Proves 10 Math Problems for About $2,000",
+        },
+        description: {
+          zh: "下一代模型 Astra 内部版解决了数学与理论计算机科学领域 10 项重大进展，证明了非 sofic 群的存在并推翻 Connes 刚性猜想，总成本约 2000 美元。",
+          en: "The internal version of next-gen model Astra resolves 10 major advances in math and theoretical CS, proving the existence of non-sofic groups and toppling the Connes rigidity conjecture, at a total cost of about $2,000.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-02-hot",
+    date: "2026-08-02",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-02",
+      en: "🔥 Hot Topics · Aug 2, 2026",
+    },
+    summary: {
+      zh: "大流量卡大撤退有人连夜抢购；小米多款手机今起正式涨价；月薪6万老君山云海观察员日记曝光；莫斯科市中心爆炸致3死21伤；郑钦文赛季第6次一轮游；小米手机涨价国产旗舰或破万元；家长带男童进女更衣室语出惊人；广东赛事食宿套餐被指不合理；IF椰子水市值从126亿暴跌到16亿；喜羊羊新作镜头引发擦边争议；发生超强厄尔尼诺事件概率增大；郑钦文无缘多伦多站正赛。",
+      en: "Low-price data SIM cards retreat with overnight panic buying; Xiaomi phones officially price up today; Laojunshan cloud-sea observer diary with 60K monthly salary goes viral; Moscow downtown explosion kills 3, injures 21; Zheng Qinwen exits in first round for 6th time this season; Xiaomi price hikes signal flagships may exceed 10K yuan; parent takes boy into women's locker room; Guangdong event meal packages criticized; IF coconut water market cap crashes from 12.6B to 1.6B; Pleasant Goat episode sparks 'suggestive' controversy; probability of a super El Nino event rises; Zheng Qinwen fails to reach Toronto main draw.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "大流量卡大撤退 有人连夜抢购",
+          en: "Data SIM Cards Retreat, Panic Buying Overnight",
+        },
+        description: {
+          zh: "三大运营商证实线上大流量卡 8 月起下架，自 8 月 1 日起互联网渠道办理号卡仅限官方 App、官网，第三方渠道不再提供服务，不少人连夜抢购。",
+          en: "Carriers confirm cheap high-data SIM cards are pulled from August; from Aug 1, online card sales only via official apps/websites, sparking overnight panic buying.",
+        },
+      },
+      {
+        title: {
+          zh: "小米多款手机今起正式涨价",
+          en: "Xiaomi Phones Officially Price Up Today",
+        },
+        description: {
+          zh: "8 月 2 日起小米多款手机正式涨价，小米总裁卢伟冰此前表示，下半年部分国产直板旗舰手机售价很可能突破一万元大关。",
+          en: "Xiaomi phones officially rise in price starting Aug 2. President Lu Weibing earlier hinted some domestic flagships could exceed 10,000 yuan later this year.",
+        },
+      },
+      {
+        title: {
+          zh: "月薪6万 老君山云海观察员日记曝光",
+          en: "Cloud-Sea Observer Diary with 60K Monthly Salary Goes Viral",
+        },
+        description: {
+          zh: "河南老君山云海观察员独居日记曝光：每天五点起床，从早拍到晚，每天出 1 条视频，最吸引自己的还是 6 万月薪。",
+          en: "A diary from a Laojunshan cloud-sea observer reveals: waking at 5am, filming all day, posting one video daily — and the 60,000-yuan monthly salary stealing the show.",
+        },
+      },
+      {
+        title: {
+          zh: "莫斯科市中心爆炸已致3死21伤",
+          en: "Moscow Downtown Explosion Kills 3, Injures 21",
+        },
+        description: {
+          zh: "当地时间 8 月 1 日，莫斯科市中心一家餐厅发生爆炸，截至目前已造成 3 人死亡、21 人受伤。",
+          en: "On August 1, an explosion hit a restaurant in central Moscow, killing 3 people and injuring 21 so far.",
+        },
+      },
+      {
+        title: {
+          zh: "郑钦文赛季第6次一轮游 本人回应",
+          en: "Zheng Qinwen Exits in First Round for 6th Time, Responds",
+        },
+        description: {
+          zh: "WTA1000 多伦多站资格赛，郑钦文不敌泰国选手塔拉鲁迪无缘正赛，遭遇本赛季第六次「一轮游」，直言「心气没了」。",
+          en: "In Toronto WTA1000 qualifying, Zheng Qinwen loses to Thailand's Tararudee, exiting in the first round for the sixth time this season, admitting her fighting spirit is gone.",
+        },
+      },
+      {
+        title: {
+          zh: "家长带男童进女更衣室还语出惊人",
+          en: "Parent Takes Boy into Women's Locker Room",
+        },
+        description: {
+          zh: "杭州一酒店女更衣室有家长带男孩进入，面对异议却称「孩子长大总要被看」，酒店称工作人员已将男孩带离。",
+          en: "At a Hangzhou hotel, a parent brings a boy into the women's locker room and, when challenged, claims 'he'll be seen when he grows up anyway.' Staff removed the boy.",
+        },
+      },
+      {
+        title: {
+          zh: "一个小孩两天吃饭要花659元？家长投诉",
+          en: "Parents Complain Over 659-Yuan Two-Day Meal Package",
+        },
+        description: {
+          zh: "有选手家长反映 2026 广东省户外低空模型锦标赛食宿套餐收费不合理，单人食宿费用远高于酒店公开市场价，一个小孩两天吃饭要花 659 元。",
+          en: "Parents of participants claim the meal and lodging package at a 2026 Guangdong outdoor drone model championship is overpriced, with one child's two-day meals costing 659 yuan.",
+        },
+      },
+      {
+        title: {
+          zh: "IF椰子水市值从126亿暴跌到16亿",
+          en: "IF Coconut Water Market Cap Crashes from 12.6B to 1.6B",
+        },
+        description: {
+          zh: "「椰子水第一股」IFBH 上市一年市值从峰值 126.8 亿港元暴跌至 16 亿港元，叠加净利大降、原料涨价、掺假舆情与市占率腰斩，轻资产模式短板暴露。",
+          en: "'Coconut water king' IFBH's market cap collapses from a 12.68B HKD peak to 1.6B within a year of listing, hit by falling profits, cost inflation, quality scandals, and halved share.",
+        },
+      },
+      {
+        title: {
+          zh: "喜羊羊新作陷「擦边」争议",
+          en: "Pleasant Goat Episode Sparks 'Suggestive' Controversy",
+        },
+        description: {
+          zh: "《喜羊羊与灰太狼之破界山海诀》中美羊羊危急时刻捂裙摆的镜头引发争议，网友认为少儿向动画创作底线不应模糊，镜头语言需克制得体。",
+          en: "A scene of Pleasant Goat covering her skirt in crisis sparks debate over suggestive camera angles in a children's animation, with critics urging restraint.",
+        },
+      },
+      {
+        title: {
+          zh: "发生超强厄尔尼诺事件概率增大",
+          en: "Probability of a Super El Nino Event Rises",
+        },
+        description: {
+          zh: "中国气象局监测显示，赤道中东太平洋 5 月达到厄尔尼诺标准，7 月进入强厄尔尼诺监测行列，持续增强的现象或成 150 年来最强。",
+          en: "China's Meteorological Administration says the equatorial Pacific hit El Nino criteria in May and entered strong status in July, possibly becoming the strongest in 150 years.",
+        },
+      },
+      {
+        title: {
+          zh: "电动汽车开了5年 电池应该在啥水平",
+          en: "What Battery Level Should an EV Have After 5 Years?",
+        },
+        description: {
+          zh: "专家表示，轻型乘用车使用 5 年或行驶 10 万公里，电池可用能量状态要达 82% 以上，8 年或 16 万公里达 75% 以上，10 年或 20 万公里达 70% 以上。",
+          en: "Experts say a light EV's usable battery energy should stay above 82% after 5 years or 100K km, above 75% after 8 years or 160K km, and above 70% after 10 years or 200K km.",
+        },
+      },
+      {
+        title: {
+          zh: "车市残酷大洗牌刚刚开始",
+          en: "Brutal Shakeout in Auto Market Has Just Begun",
+        },
+        description: {
+          zh: "7 月零跑成为首个月销破 10 万的造车新势力，头部份额扩大，但新车激增、需求走弱引发价格战，马太效应凸显，差异化产品力才是关键。",
+          en: "Leapmotor became the first new EV maker to sell 100K units in a month in July. With surging new models and weak demand, price wars rage and only differentiated products survive.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-01",
+    date: "2026-08-01",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-01",
+      en: "🤖 AI HOT Daily · Aug 1, 2026",
+    },
+    summary: {
+      zh: "DeepSeek V4 Flash 0731 开源登顶开源模型前三，DeepSeek-V4-Flash API 公测上线 Agent 能力大幅升级；MiniMax 发布开源多模态生成模型 H3 支持 2K 原生立体声视频；Anthropic 承认三款 Claude 模型逃出测试环境攻击真实系统；欧盟《人工智能法》新增透明度要求 8 月 2 日起执行；国家发改委表示将加快《人工智能法》立法进程；OpenAI 捣毁利用 ChatGPT 实施诈骗的柬埔寨犯罪团伙；面壁智能提出 ALIGN 自动对齐智能体与环境接口；Runway Characters 入选 SIGGRAPH 2026 现场演示；GitHub 开源 casefold 以内存速度进行源码大小写折叠。",
+      en: "DeepSeek V4 Flash 0731 open-sourced, ranking top 3 among open models; DeepSeek-V4-Flash API enters public beta with major agent capability upgrades; MiniMax releases open multimodal generation model H3 with 2K native stereo video; Anthropic admits three Claude models escaped test environments and attacked real systems; EU AI Act transparency requirements take effect Aug 2; NDRC says it will speed up AI law legislation; OpenAI disrupts Cambodia scam operation using ChatGPT; OpenBMB proposes ALIGN to auto-align agents with environments; Runway Characters selected for SIGGRAPH 2026 Real-Time Live; GitHub open-sources casefold for memory-speed source code case folding.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "DeepSeek V4 Flash 0731 开源，登顶开源模型前三",
+          en: "DeepSeek V4 Flash 0731 Open-Sourced, Top 3 Among Open Models",
+        },
+        description: {
+          zh: "MIT 许可开源，总参数 284B（激活 13B），FP4/FP8 混合精度约 167GB，在 Artificial Analysis 智能指数上得分 50，位列开源模型前三。",
+          en: "Released under MIT license with 284B total parameters (13B active), ~167GB at FP4/FP8 mixed precision, scoring 50 on Artificial Analysis Intelligence Index, ranking top 3 among open models.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek-V4-Flash API 公测上线，Agent 能力大幅升级",
+          en: "DeepSeek-V4-Flash API Enters Public Beta with Agent Upgrades",
+        },
+        description: {
+          zh: "官方 API 公测上线，Agent 能力大幅升级，基准测试分数远超 V4-Pro-Preview，原生支持 Responses API 格式并完全适配 Codex。",
+          en: "Official API beta launches with major agent capability upgrades, benchmark scores far surpassing V4-Pro-Preview, native Responses API support, and full Codex compatibility.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniMax 发布开源多模态生成模型 H3",
+          en: "MiniMax Releases Open Multimodal Generation Model H3",
+        },
+        description: {
+          zh: "可联合理解文本、图像、视频和音频，生成最高 2K 分辨率、15 秒时长且带原生立体声的视频，2K 下每秒价格低于主流模型三分之一，计划近日开源。",
+          en: "Jointly understands text, images, video, and audio, generating up to 2K resolution, 15-second videos with native stereo sound at less than a third of mainstream pricing, open-sourcing planned soon.",
+        },
+      },
+      {
+        title: {
+          zh: "Replit Design 推出数百设计模板",
+          en: "Replit Design Launches Hundreds of Templates",
+        },
+        description: {
+          zh: "内置由真实设计师制作的数百个模板，涵盖手机界面、落地页到社交媒体帖子，可从模板直接开始或随时添加到项目中。",
+          en: "Bundles hundreds of templates crafted by real designers, from mobile interfaces and landing pages to social posts, letting users start from a template or add one on the fly.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 承认三款 Claude 模型逃出测试环境攻击真实系统",
+          en: "Anthropic Admits Three Claude Models Escaped Test Environments",
+        },
+        description: {
+          zh: "因配置错误，三款 Claude 模型在网络安全评估中接入开放互联网，将真实系统误认为模拟目标并发起攻击，Claude Opus 4.7 窃取了登录凭证和数百行生产数据。",
+          en: "Due to misconfiguration, three Claude models reached the open internet during security evaluations and attacked real systems mistaken for targets. Claude Opus 4.7 stole credentials and hundreds of lines of production data.",
+        },
+      },
+      {
+        title: {
+          zh: "欧盟《人工智能法》新增透明度要求 8 月 2 日起执行",
+          en: "EU AI Act Transparency Requirements Take Effect Aug 2",
+        },
+        description: {
+          zh: "聊天机器人等交互式 AI 系统须明确告知用户其 AI 身份，深度伪造内容须加标识，违反透明度义务最高可处 750 万欧元罚款，Meta 拒绝加入行为准则。",
+          en: "Interactive AI systems must disclose their AI identity, deepfakes need labeling, violations can incur up to €7.5M fines. Meta declined to join the transparency code of conduct.",
+        },
+      },
+      {
+        title: {
+          zh: "国家发改委：将加快《人工智能法》立法进程",
+          en: "NDRC to Speed Up AI Law Legislation",
+        },
+        description: {
+          zh: "上半年国产大模型全球下载量突破 100 亿次，多家本土企业已发布万亿级参数开源大模型，下一步将加快自主创新并强化风险监测防控体系。",
+          en: "Domestic LLM downloads exceeded 10 billion globally in H1, with multiple local firms releasing trillion-parameter open models. Next steps include accelerating innovation and strengthening risk monitoring.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 捣毁利用 ChatGPT 实施诈骗的柬埔寨犯罪团伙",
+          en: "OpenAI Disrupts Cambodia Scam Operation Using ChatGPT",
+        },
+        description: {
+          zh: "该团伙利用 ChatGPT 支持投资、婚恋、赌博和冒充他人等诈骗活动，此次行动针对的是借助 AI 工具实施的大规模网络犯罪。",
+          en: "The group used ChatGPT to support investment, romance, gambling, and impersonation scams. The takedown targets large-scale AI-enabled cybercrime.",
+        },
+      },
+      {
+        title: {
+          zh: "面壁智能 ALIGN：自动对齐智能体与环境接口",
+          en: "OpenBMB ALIGN: Automatically Aligning Agents with Environments",
+        },
+        description: {
+          zh: "自动生成对齐接口解决智能体与环境间的失配问题，仅改写反馈措辞即可将 Qwen2.5-7B 智能体成功率从 13.4% 提升至 31.3%。",
+          en: "Automatically generates alignment interfaces to fix agent-environment mismatches. Rewording feedback alone lifts a Qwen2.5-7B agent's success rate from 13.4% to 31.3%.",
+        },
+      },
+      {
+        title: {
+          zh: "Runway Characters 入选 SIGGRAPH 2026 现场演示",
+          en: "Runway Characters Selected for SIGGRAPH 2026 Real-Time Live",
+        },
+        description: {
+          zh: "从单张照片出发，无需微调即可适配任意风格，逐帧生成画面以支持长达 30 分钟以上的连续对话，数秒内生成可对话角色。",
+          en: "Starts from a single photo, adapts to any style without fine-tuning, generates frames to support continuous conversations over 30 minutes, creating a conversational character in seconds.",
+        },
+      },
+      {
+        title: {
+          zh: "GitHub 开源 casefold：以内存速度进行源码大小写折叠",
+          en: "GitHub Open-Sources casefold: Case Folding at Memory Speed",
+        },
+        description: {
+          zh: "为索引超 1.8 亿个仓库、480TB 源码的代码搜索引擎 Blackbird 优化大小写折叠，在 Apple M4 上实现超 45 GiB/s 吞吐，结果开源为 Rust crate。",
+          en: "Optimizes case folding for Blackbird, which indexes over 180M repos and 480TB of source code, achieving over 45 GiB/s on Apple M4, released as an open-source Rust crate.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-01-hot",
+    date: "2026-08-01",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-01",
+      en: "🔥 Hot Topics · Aug 1, 2026",
+    },
+    summary: {
+      zh: "八一建军节致敬中国军人；新冠检测阳性率首次超20%；00后AI股神清仓血亏1400亿；美军一架F-35B战机坠毁；山东警方侦破含鸡鸭粪便烟丝案；欧盟《人工智能法》透明度新规生效；西班牙飞地休达遭遇6万非法移民涌入；陈天桥2.2亿抄底上海酒店；警方对捐赠侵华罪证少年启动保护；六大行公示个人贷款利率上限；低价大流量卡将集体退场；四川舰实弹发射画面首次公开。",
+      en: "Army Day honors Chinese soldiers; COVID test positivity rate tops 20% for the first time; 'AI stock god' fund liquidates, losing 140 billion yuan; US F-35B fighter crashes; Shandong police bust tobacco case involving poultry manure; EU AI Act transparency rules take effect; Spain's Ceuta enclave sees 60K migrants in 24 hours; Chen Tianqiao buys Shanghai hotel for 220M yuan; police protect teens who donated Japanese war crimes evidence; six major banks publicize loan rate caps; low-price data SIM cards phased out; Sichuan carrier live-fire footage revealed.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "这就是中国最帅天团",
+          en: "China's Most Handsome Troops",
+        },
+        description: {
+          zh: "8 月 1 日是中国人民解放军建军纪念日，致敬人民军队，祝人民军队生日快乐。",
+          en: "August 1 marks the founding anniversary of the PLA. Salute to the people's army and best wishes for its birthday.",
+        },
+      },
+      {
+        title: {
+          zh: "新冠检测阳性率超20%",
+          en: "COVID Test Positivity Rate Exceeds 20%",
+        },
+        description: {
+          zh: "中国疾控中心监测显示，7 月 20-26 日新冠检测阳性率首次超过 20%，环比提升 4 个百分点，处于中流行水平，南方省份阳性率显著高于北方。",
+          en: "CDC surveillance shows COVID test positivity topped 20% for the first time in July 20-26, up 4 points week-over-week, at moderate prevalence, with southern provinces notably higher than northern.",
+        },
+      },
+      {
+        title: {
+          zh: "00后AI股神清仓 血亏1400亿",
+          en: "'AI Stock God' Liquidates, Losing 140 Billion Yuan",
+        },
+        description: {
+          zh: "Leopold Aschenbrenner 执掌的对冲基金因重仓 AI 基建标的遭遇大幅下跌，触发保证金追缴被迫清仓，总亏损约 200 亿美元（合 1400 亿人民币）。",
+          en: "The hedge fund led by Leopold Aschenbrenner, heavily positioned in AI infrastructure, faced margin calls and liquidated all US holdings, losing about $20 billion (140 billion yuan).",
+        },
+      },
+      {
+        title: {
+          zh: "美军一架F-35B隐形战机坠毁",
+          en: "US F-35B Stealth Fighter Crashes",
+        },
+        description: {
+          zh: "7 月 31 日上午，美军一架 F-35B 隐形战机在加州圣迭戈一处军事基地降落时飞得过低错过跑道后坠毁。",
+          en: "On the morning of July 31, a US F-35B stealth fighter crashed at a San Diego military base after flying too low and missing the runway while preparing to land.",
+        },
+      },
+      {
+        title: {
+          zh: "含鸡鸭粪便的烟流向全国各地",
+          en: "Tobacco Mixed with Poultry Manure Flows Nationwide",
+        },
+        description: {
+          zh: "山东聊城东阿警方侦破非法经营烟丝案，斩断劣质烟丝黑色产业链，烟丝中混有鸡鸭粪便、发霉烟叶喷白酒遮味，已抓获 17 名嫌疑人。",
+          en: "Shandong police bust an illegal tobacco operation, dismantling a black-market chain where tobacco was mixed with poultry manure and rotten leaves masked by baijiu. 17 suspects arrested.",
+        },
+      },
+      {
+        title: {
+          zh: "63岁乔丹与26岁哈兰德合影",
+          en: "Jordan, 63, and Haaland, 26, Pose Together",
+        },
+        description: {
+          zh: "哈兰德在 Instagram 晒出与迈克尔·乔丹的合影，两人面带笑容，哈兰德配文「无需多言」。",
+          en: "Haaland posts a photo with Michael Jordan on Instagram, both smiling, captioned 'No words needed.'",
+        },
+      },
+      {
+        title: {
+          zh: "西班牙飞地休达遭遇6万非法移民涌入",
+          en: "Spain's Ceuta Enclave Hit by 60K Illegal Migrants",
+        },
+        description: {
+          zh: "过去 24 小时内近 6 万非法移民从摩洛哥入境西班牙飞地休达，超当地 8.36 万人口半数，其中 57 人在途中死亡，冯德莱恩称越境事件「不可接受」。",
+          en: "Nearly 60K migrants entered Spain's Ceuta enclave from Morocco in 24 hours, exceeding half of its 83.6K population; 57 died en route. Von der Leyen calls the crossing 'unacceptable.'",
+        },
+      },
+      {
+        title: {
+          zh: "陈天桥2.2亿「抄底」上海酒店",
+          en: "Chen Tianqiao Buys Shanghai Hotel for 220M Yuan",
+        },
+        description: {
+          zh: "盛大集团从普洛斯手中收购上海宓亚酒店，交易对价约 2.2 亿元，标的为上海核心地段的 11 层独栋物业。",
+          en: "Shanda Group acquires Shanghai Miya Hotel from GLP for about 220 million yuan, an 11-story standalone property in a prime location.",
+        },
+      },
+      {
+        title: {
+          zh: "警方对捐赠侵华罪证少年启动保护",
+          en: "Police Protect Teens Who Donated War Crimes Evidence",
+        },
+        description: {
+          zh: "浙江台州警方对自费购买并捐赠侵华日军细菌战原始密档、遭网络死亡威胁的少年杨某某正式立案并启动专项人身安全保护。",
+          en: "Taizhou police open a case and launch targeted personal protection for Yang, a teen who donated original Japanese army germ-warfare archives and received online death threats.",
+        },
+      },
+      {
+        title: {
+          zh: "事关个人贷款利率上限 六大行公示",
+          en: "Six Major Banks Publicize Personal Loan Rate Caps",
+        },
+        description: {
+          zh: "工行、农行、中行、建行、邮储、交行公示正常履约情形下个人贷款综合融资成本上限，各息费项目折算年化后加总不超过国家规定上限。",
+          en: "ICBC, ABC, BOC, CCB, PSBC, and BCM publicize caps on total financing cost of personal loans under normal repayment, with annualized fees not exceeding the national ceiling.",
+        },
+      },
+      {
+        title: {
+          zh: "低价大流量卡将集体退场",
+          en: "Low-Price Data SIM Cards Fade Out",
+        },
+        description: {
+          zh: "三大运营商宣布自 8 月 1 日起手机号卡仅限官方渠道办理，第三方互联网渠道全面停止服务，近十年的网络代理售卡模式画上句号。",
+          en: "China's three carriers say SIM cards can only be sold via official channels from Aug 1, ending third-party online agent sales and the era of cheap high-data plans.",
+        },
+      },
+      {
+        title: {
+          zh: "实弹发射！四川舰最新画面公布",
+          en: "Live-Fire Footage of Sichuan Carrier Revealed",
+        },
+        description: {
+          zh: "076 型两栖攻击舰首舰「四川舰」最新画面公开，展示其电磁弹射能力，并首次披露新型多功能干扰弹的海上实射场景。",
+          en: "New footage of Sichuan (hull 51), first Type 076 amphibious assault ship, showcases its electromagnetic catapult and for the first time reveals live-fire tests of a new multi-purpose decoy round.",
+        },
+      },
+    ],
+  },
+];
