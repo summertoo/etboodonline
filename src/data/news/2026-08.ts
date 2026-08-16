@@ -2,6 +2,216 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-16",
+    date: "2026-08-16",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-16",
+      en: "🤖 AI HOT Daily · Aug 16, 2026",
+    },
+    summary: {
+      zh: "AI 生成书籍正淹没亚马逊，即便未检测到 AI 文本，人类作者的单书收入也在下滑；新研究揭示 LLM 中与性别相关的语言偏见，提问措辞显著影响输出；开发者展示用 Rust 与 GPUI 打造的原生编程智能体应用 Waku；Science 深度分析 AI 在药物发现中的现状与瓶颈；观点称 AI 工作记忆远超人脑；作者重申对 AI 热潮的怀疑态度。",
+      en: "AI-generated books are flooding Amazon and tanking human authors' per-book revenue even without detectable AI text; new research reveals gender-related language bias in LLMs, where phrasing of questions skews outputs; a developer shows Waku, a native coding-agent app built with Rust and GPUI; Science analyzes AI's progress and bottlenecks in drug discovery; an essay argues AI's working memory far exceeds the human brain; an author reaffirms skepticism toward the AI boom.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "AI 生成书籍正淹没亚马逊，拉低人类作者收入",
+          en: "AI Books Flood Amazon, Tanking Human Authors' Income",
+        },
+        description: {
+          zh: "对 14,419 本自出版电子书分析显示，2023 年 Q1 至 2026 年 Q1 书目总量增长 38.3 倍而收入仅增 8.9 倍，八个类型中七个类型的无 AI 文本书籍单书收入下降。",
+          en: "Analyzing 14,419 self-published e-books, catalog grew 38.3x vs 8.9x revenue growth from Q1 2023 to Q1 2026; per-book income for non-AI books fell in seven of eight genres.",
+        },
+      },
+      {
+        title: {
+          zh: "提问方式影响结果：LLM 中的性别语言偏见",
+          en: "It's How You Ask: Gender Bias in LLM Language",
+        },
+        description: {
+          zh: "新研究揭示 LLM 中与性别相关的语言偏见：提问时的措辞方式会显著影响模型输出，为评估和缓解大模型偏见提供新视角。",
+          en: "New research shows gender-related language bias in LLMs: the phrasing of a question significantly shapes outputs, offering a fresh lens for evaluating and mitigating bias.",
+        },
+      },
+      {
+        title: {
+          zh: "用 Rust 与 GPUI 打造原生编程智能体应用",
+          en: "A Native Coding Agent Built with Rust and GPUI",
+        },
+        description: {
+          zh: "开发者展示用 Rust 与 GPUI 框架构建的原生桌面应用 Waku，主打高性能与低资源占用，适用于本地开发工作流中的 AI 辅助编程。",
+          en: "A developer showcases Waku, a native desktop app built with Rust and the GPUI framework, emphasizing high performance and low resource use for local AI-assisted coding.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 在药物发现中的现状与未来路径",
+          en: "The State and Future of AI in Drug Discovery",
+        },
+        description: {
+          zh: "目前 AI 主要辅助靶点识别、分子设计与临床试验优化，距离完全替代传统流程仍有差距，业界正探索数据质量与模型可解释性等瓶颈。",
+          en: "AI currently aids target identification, molecular design, and trial optimization, but full replacement of traditional pipelines remains distant; bottlenecks include data quality and explainability.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 拥有的工作记忆远大于人脑",
+          en: "AI's Working Memory Far Exceeds the Human Brain",
+        },
+        description: {
+          zh: "观点文章指出 AI 可访问的工作记忆规模远超人类大脑，在长序列推理与信息整合上有天然优势，也引发对 AI 是否真正超越人类思考的讨论。",
+          en: "An essay argues AI's accessible working memory dwarfs the human brain's, giving an edge in long-horizon reasoning and integration — and reigniting the debate over whether AI truly outthinks us.",
+        },
+      },
+      {
+        title: {
+          zh: "我仍然是怀疑论者",
+          en: "I Remain a Skeptic",
+        },
+        description: {
+          zh: "面对不断刷新的模型能力宣传，作者强调应理性看待 AI 的局限与泡沫风险，呼吁关注实际落地价值而非概念炒作。",
+          en: "Against ever-bigger capability claims, the author urges rational scrutiny of AI's limits and bubble risk, calling for real-world value over hype.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-16-hot",
+    date: "2026-08-16",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-16",
+      en: "🔥 Hot Topics · Aug 16, 2026",
+    },
+    summary: {
+      zh: "博主发布进入靖国神社视频揭露其美化侵略历史；车企集体「逃离」新车发布会；上半年入境外国人达2291.4万人次同比增长20.4%；甘肃副省长程晓波主动投案；WTT瑞典站国乒3人围剿张本美和；男子用AI造谣青岛大学校徽被拘；旺旺晒出无糖低糖新品回应减糖呼声；于东来消费380硬要付600被饭店退回；余华一个月内两次「打假」；莫言谈AI写作只是拼凑旧作然后搅拌；「AI神童」爆仓引发连锁反应；青岛啤酒要卖威士忌了。",
+      en: "A blogger's video from inside Yasukuni exposes its glorification of aggression; automakers collectively 'flee' new-car launches; inbound foreigners reached 22.9M in H1, up 20.4% YoY; Gansu vice-governor Cheng Xiaobo turns himself in; three Chinese paddlers corner Miwa Harimoto at the WTT Sweden Smash; a man is detained for an AI-fabricated rumor about Qingdao University's logo; Want Want shows off sugar-free new products; Yu Donglai insists on paying 600 for a 380 meal and is refunded; writer Yu Hua debunks fakes twice in a month; Mo Yan says AI writing merely 'blends and stirs' old works; the 'AI prodigy' blow-up ripples through hedge funds; Tsingtao Beer plans to sell whiskey.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "中国博主发布进入靖国神社视频",
+          en: "Blogger Releases Video from Inside Yasukuni",
+        },
+        description: {
+          zh: "博主李升发布 4 月拍摄的进入靖国神社视频，揭露馆内系统性美化侵略历史，并走访南京、沈阳等多处抗战遗址进行史实验证，引发「铭记历史」广泛共鸣。",
+          en: "Li Sheng released an April video from inside Yasukuni exposing its systematic glorification of aggression, then verified history at Nanjing and Shenyang sites, sparking wide resonance.",
+        },
+      },
+      {
+        title: {
+          zh: "车企集体「逃离」新车发布会",
+          en: "Automakers Flee the New-Car Launch Event",
+        },
+        description: {
+          zh: "头部品牌技术发布会费用突破千万元，但投入与订单转化率关联越来越弱，魏建军曾称车市一天两到三场发布会同质化严重、「劳民伤财」。",
+          en: "Top brands' launch events now cost 10M+ RMB while conversion ties weaken; Wei Jianjun called the 2-3 samey events per day a waste of money.",
+        },
+      },
+      {
+        title: {
+          zh: "今年外国人最爱逛哪里",
+          en: "Where Are Foreigners Visiting Most This Year?",
+        },
+        description: {
+          zh: "「China Travel」成今夏最火旅游关键词，马斯克也在社交平台安利中国游，上半年入境外国人达 2291.4 万人次，同比增长 20.4%。",
+          en: "'China Travel' is the summer's hottest keyword — even Musk touts it — as H1 inbound foreigners hit 22.914M, up 20.4% year-on-year.",
+        },
+      },
+      {
+        title: {
+          zh: "「消失」近三个月的副省长 主动投案",
+          en: "Gansu Vice-Governor Turns Himself In",
+        },
+        description: {
+          zh: "甘肃省委常委、副省长程晓波涉嫌严重违纪违法，主动投案并接受中央纪委国家监委审查调查。",
+          en: "Gansu Standing Committee member and Vice-Governor Cheng Xiaobo, suspected of serious discipline violations, turned himself in for investigation.",
+        },
+      },
+      {
+        title: {
+          zh: "瑞典站国乒3人围剿张本美和",
+          en: "Three Chinese Players Corner Miwa Harimoto",
+        },
+        description: {
+          zh: "WTT 瑞典大满贯女单 1/4 决赛，国乒女队占据四强三席，形成对日本选手张本美和的「围剿」之势。",
+          en: "At the WTT Sweden Smash women's quarterfinals, China took three of four semifinal spots, forming a pincer on Japan's Miwa Harimoto.",
+        },
+      },
+      {
+        title: {
+          zh: "男子用AI造谣青岛大学校徽被拘",
+          en: "Man Detained for AI Rumor About Qingdao University Logo",
+        },
+        description: {
+          zh: "龙某为博取流量，利用 AI 编造「青岛大学新校徽像旭日旗」等不实信息发布，经核查网传校徽并非青岛大学校徽，已被行拘并罚款。",
+          en: "Long used AI to fabricate claims that Qingdao University's new logo resembled the Rising Sun flag; the viral logo wasn't even the university's. He was detained and fined.",
+        },
+      },
+      {
+        title: {
+          zh: "旺旺晒出无糖低糖新品",
+          en: "Want Want Shows Off Sugar-Free New Products",
+        },
+        description: {
+          zh: "旺旺创始人蔡衍明在内部信中将一季度业绩未达预期定性为「重大经营危机」，网友「减糖」建议登上热搜后，官方账号晒出多款无糖低糖新品回应。",
+          en: "After founder Tsai Yen-ming called Q1 a 'major business crisis' and netizens' sugar-cut advice trended, Want Want's official account showed off sugar-free and low-sugar items.",
+        },
+      },
+      {
+        title: {
+          zh: "于东来打卡小饭店消费380硬要付600",
+          en: "Yu Donglai Insists on Paying 600 for a 380 Meal",
+        },
+        description: {
+          zh: "胖东来创始人于东来在阜阳一家饭店就餐消费 380 元却坚持扫码付 600 元，店主执意退回 200 元，于东来一行最终收下退款。",
+          en: "Pangdonglai founder Yu Donglai insisted on paying 600 RMB for a 380 RMB meal in Fuyang; the owner refunded 200 RMB before he finally accepted.",
+        },
+      },
+      {
+        title: {
+          zh: "余华一个月内两次「打假」",
+          en: "Yu Hua Debunks Fakes Twice in a Month",
+        },
+        description: {
+          zh: "余华声明散文《家徽》并非其作品（实为湖北作家胡成中 1995 年作品，常被误署其名），此前还打假所谓「余华亲笔签名书」。",
+          en: "Yu Hua again declared the essay 'Family Emblem' (actually by Hu Chengzhong, 1995) wasn't his, following an earlier debunking of fake 'signed copies'.",
+        },
+      },
+      {
+        title: {
+          zh: "莫言谈AI写作：只是拼凑旧作然后搅拌",
+          en: "Mo Yan: AI Writing Just Blends and Stirs Old Works",
+        },
+        description: {
+          zh: "莫言在上海书展表示 AI 写作本质是对旧有文本的「搅拌平移」，缺乏原创性，无法创作出需要独特生命体验的作品；若人类停止原创，AI 的发展也将停滞。",
+          en: "At the Shanghai Book Fair, Mo Yan said AI writing essentially blends and shifts existing texts, lacking originality for works needing lived experience; if humans stop creating, AI stalls too.",
+        },
+      },
+      {
+        title: {
+          zh: "「AI神童」爆仓引发连锁反应",
+          en: "'AI Prodigy' Blow-Up Causes Chain Reactions",
+        },
+        description: {
+          zh: "美股 AI 板块 7 月剧烈逆转下跌，冲击多家专注 AI 的对冲基金，包括「AI 神童」阿申布伦纳旗下 Situational Awareness，简街亦为其投资者。",
+          en: "July's sharp reversal in AI stocks hit AI-focused hedge funds, including Leopold Aschenbrenner's Situational Awareness — a fund Jane Street backs.",
+        },
+      },
+      {
+        title: {
+          zh: "青岛啤酒要卖威士忌了",
+          en: "Tsingtao Beer to Sell Whiskey",
+        },
+        description: {
+          zh: "青岛啤酒与爱尔兰大北方蒸馏厂签署长期合作，将供应 3 至 21 年酒龄威士忌、联合开发亚洲定制产品，并规划自建年产约 2500 吨的威士忌产线。",
+          en: "Tsingtao signed a long-term deal with Great Northern Distillery to source 3-21 year whiskeys, co-develop Asian variants, and build its own ~2,500-tonne-a-year line.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-15",
     date: "2026-08-15",
     title: {
