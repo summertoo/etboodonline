@@ -2,6 +2,246 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-17",
+    date: "2026-08-17",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-17",
+      en: "🤖 AI HOT Daily · Aug 17, 2026",
+    },
+    summary: {
+      zh: "Qwen 3.8 27B 视觉模型发布，表现亮眼但默认推理强度过高导致过度思考；文章提示 Anthropic IPO 静默期流出的高额营收预测多基于匿名信源；Nvidia 大幅缩减对 OpenAI 基础设施融资的担保额度；Stripe 敲定超 70 亿美元收购 OpenRouter；剑桥提出将「红皇后假说」应用于自我改进型 AI；观点文章称部分模型厂商正有意限制推理上限「故意变笨」；AI Token 转售与中介生态正在形成。",
+      en: "Qwen 3.8 27B vision model launches strong but over-thinks at default reasoning intensity; an essay warns Anthropic's IPO-hype revenue figures rest on anonymous sources; Nvidia sharply cuts its guarantee for OpenAI infrastructure financing; Stripe nears a $7B+ deal for OpenRouter; Cambridge applies the Red Queen hypothesis to self-improving AI; an essay argues some vendors deliberately cap model reasoning — 'getting dumber on purpose'; a token-resale brokerage economy is forming.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Qwen 3.8 27B 表现出色，但默认推理强度过高",
+          en: "Qwen 3.8 27B Strong, but Over-Thinks by Default",
+        },
+        description: {
+          zh: "阿里发布 Apache 2 许可的 27B 参数视觉大模型 Qwen 3.8 27B，官方基准显示其超越前代 Qwen 3.6 27B 及闭源 Qwen 3.7-Plus，但默认推理强度过高导致过度思考。",
+          en: "Alibaba's Apache-2.0 27B vision model Qwen 3.8 27B beats Qwen 3.6 27B and closed Qwen 3.7-Plus on official benchmarks, though its default reasoning intensity over-thinks.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic IPO 的炒作",
+          en: "The Hyping of Anthropic's IPO",
+        },
+        description: {
+          zh: "文章提示静默期流传的 2028 年 1900 亿美元级营收预测多基于匿名信源和未披露算法，帮助读者在追踪上市进展时区分已核实数据与传闻。",
+          en: "An essay flags that circulating $190B-by-2028 revenue projections rest on anonymous sources and undisclosed math, helping readers separate verified facts from rumor.",
+        },
+      },
+      {
+        title: {
+          zh: "Nvidia 缩减对 OpenAI 基础设施融资的担保额度",
+          en: "Nvidia Scales Back OpenAI Infrastructure Guarantee",
+        },
+        description: {
+          zh: "Nvidia 显著下调其可能担保的 OpenAI 数据中心融资规模，涉及此前约 2500 亿美元级别的建设计划，反映双方在算力投资节奏与风险分担上的重新考量。",
+          en: "Nvidia sharply trimmed its potential guarantee for OpenAI data-center financing tied to a ~$250B build-out, reflecting a rethink of investment pace and risk sharing.",
+        },
+      },
+      {
+        title: {
+          zh: "Stripe 敲定超 70 亿美元收购 OpenRouter",
+          en: "Stripe Nears $7B+ Deal for OpenRouter",
+        },
+        description: {
+          zh: "Stripe 已接近完成对 AI 模型路由平台 OpenRouter 的收购，交易金额超过 70 亿美元，将强化其在 AI 开发者生态中的布局。",
+          en: "Stripe is close to buying AI model-routing platform OpenRouter for over $7 billion, strengthening its position in the AI developer ecosystem.",
+        },
+      },
+      {
+        title: {
+          zh: "Red Queen 假说：自我改进型 AI 的新出路",
+          en: "Red Queen Hypothesis: A New Path for Self-Improving AI",
+        },
+        description: {
+          zh: "剑桥大学研究人员提出将「红皇后假说」应用于自我改进型 AI：通过持续竞争与进化压力驱动模型自我迭代，探索超越静态训练范式的自改进路径。",
+          en: "Cambridge researchers apply the Red Queen hypothesis to self-improving AI — continuous competition and evolutionary pressure drive iteration beyond static training.",
+        },
+      },
+      {
+        title: {
+          zh: "MathCode：数学编程智能体",
+          en: "MathCode: A Math-Programming Agent",
+        },
+        description: {
+          zh: "发布专注数学推理与代码生成结合的编程智能体 MathCode，面向数学问题的自动化求解与验证场景。",
+          en: "MathCode combines mathematical reasoning with code generation for automated math problem-solving and verification.",
+        },
+      },
+      {
+        title: {
+          zh: "模型正在「故意变笨」",
+          en: "Models Are Getting Dumber on Purpose",
+        },
+        description: {
+          zh: "观点文章探讨部分厂商有意限制模型推理能力上限，以降低推理成本、控制过度思考，并规避安全与合规风险，引发「能力被阉割」的行业讨论。",
+          en: "An essay examines vendors deliberately capping reasoning to cut costs, curb over-thinking, and dodge safety/compliance risks, sparking talk of 'neutered' capability.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 积分（Token）转售经济",
+          en: "The AI Token Resale Economy",
+        },
+        description: {
+          zh: "随着大模型 API 用量激增，围绕 Token 配额、转售和套利的中介市场正在形成，催生新的定价与分发模式。",
+          en: "As API usage explodes, a brokerage market around token quotas, resale, and arbitrage is emerging, spawning new pricing and distribution models.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 系统提示词文档更新",
+          en: "Claude System Prompts Docs Updated",
+        },
+        description: {
+          zh: "Anthropic 平台更新了 Claude 系统提示词的发布说明文档，披露各版本系统提示词的设计与演进细节。",
+          en: "Anthropic updated the release notes for Claude's system prompts, detailing the design and evolution of each version.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-17-hot",
+    date: "2026-08-17",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-17",
+      en: "🔥 Hot Topics · Aug 17, 2026",
+    },
+    summary: {
+      zh: "央视曝光暑期游乱象，云南连夜通报对涉事旅行社展开调查；7月居民存款净减少6300亿元；DeepSeek API 调价生效，峰谷定价涨幅最高达1100%；华尔街巨头简街7月巨亏约150亿美元；南极冰川「神秘生物」系 AI 生成；胖东来被涨租逼走却从不涨商户租；国乒瑞典站2冠1亚、王曼昱女单夺冠，小勒布伦胜张本智和夺男单冠军；现货黄金再破4400美元；加油「交易即开票」新规11月起实施；埃及等八国联合声明谴责以色列；影视圈「千万大V」被查。",
+      en: "CCTV exposes summer-tour chaos; Yunnan announces overnight probes of travel agencies; household deposits fell 63B RMB in July; DeepSeek's API price change takes effect with peak-valley pricing, up to 1100% hikes; Wall Street giant Jane Street loses ~$15B in July; the Antarctic 'mystery creature' is AI-generated; Pangdonglai, forced out by rent hikes, never raised merchants' rent; China table tennis ends Sweden Smash with 2 titles and 1 runner-up, Wang Manyu winning women's singles while Felix Lebrun beats Harimoto for men's; spot gold tops $4,400 again; the 'invoice-on-transaction' fuel rule starts in November; eight nations condemn Israel in a joint statement; a film-industry '10M-follower big V' network is busted.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "央视曝光后 云南连夜通报",
+          en: "After CCTV Exposé, Yunnan Announces Overnight Probes",
+        },
+        description: {
+          zh: "央视曝光暑期游乱象：标注纯玩无购物的跟团游实际行程严重不符，隐性购物、强制消费、临时加价频发。云南官方连夜通报，已组织对涉事旅行社、导游、购物场所开展调查。",
+          en: "CCTV exposed summer-tour scams where 'pure-play, no-shopping' tours hide forced purchases and surcharges. Yunnan announced overnight probes into the travel agencies and venues involved.",
+        },
+      },
+      {
+        title: {
+          zh: "居民存款7月又少了6300亿",
+          en: "Household Deposits Fall 630B in July",
+        },
+        description: {
+          zh: "央行数据显示 7 月居民存款净减少 6300 亿元，受资本市场偏弱影响，存款向非银转移的力度减弱，「存款搬家」继续放缓。",
+          en: "PBOC data shows household deposits fell by 630B RMB in July as weak capital markets slowed the shift of deposits into non-bank channels.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek调价生效 涨幅最高达1100%",
+          en: "DeepSeek Price Change Takes Effect, Up to 1100%",
+        },
+        description: {
+          zh: "DeepSeek 采用峰谷定价：空闲时段价格为高峰时段一半，高峰时段为北京时间 9:00-12:00、14:00-18:00，新价格于 8 月 17 日 0 时生效。",
+          en: "DeepSeek moves to peak-valley pricing — off-peak at half the peak rate (peak: 9:00-12:00 and 14:00-18:00 Beijing time) — effective Aug 17.",
+        },
+      },
+      {
+        title: {
+          zh: "罕见爆仓！华尔街巨头巨亏1000亿",
+          en: "Jane Street's Rare ~$15B July Loss",
+        },
+        description: {
+          zh: "高频交易做市商简街 7 月录得约 150 亿美元（约合 1000 亿元人民币）亏损，系 2016 年以来首次交易收入为负数的月份。",
+          en: "High-frequency market maker Jane Street lost ~$15B (about 100B RMB) in July — its first month of negative trading revenue since 2016.",
+        },
+      },
+      {
+        title: {
+          zh: "南极冰川现「神秘生物」系AI生成",
+          en: "Antarctic 'Mystery Creature' Video Is AI-Generated",
+        },
+        description: {
+          zh: "网传「神秘黑色生物爬上南极冰墙」的视频系 AI 生成，多处细节不符合物理规律，源自发布超自然内容的账号。",
+          en: "The viral video of a 'mysterious black creature' climbing an Antarctic ice wall is AI-generated, with physics-defying details from a paranormal content account.",
+        },
+      },
+      {
+        title: {
+          zh: "胖东来被涨租逼走却从不涨商户租",
+          en: "Pangdonglai Never Raised Merchants' Rent",
+        },
+        description: {
+          zh: "胖东来许昌生活广场因房东涨租将于 12 月底闭店，广场内厂商代表称胖东来从未涨过入驻商户的房租。",
+          en: "Pangdonglai's Xuchang Life Plaza closes at year-end over landlord rent hikes — but merchants say Pangdonglai never raised their rents.",
+        },
+      },
+      {
+        title: {
+          zh: "国乒2冠1亚 男队状态低迷",
+          en: "China TT: 2 Titles, 1 Runner-Up; Men Slump",
+        },
+        description: {
+          zh: "WTT 瑞典大满贯落幕，国乒 2 冠 1 亚收官，女单与混双夺金，男单、男双、女双表现不佳。",
+          en: "At the WTT Sweden Smash, China closed with 2 titles and 1 runner-up, winning women's singles and mixed doubles while men's events underperformed.",
+        },
+      },
+      {
+        title: {
+          zh: "王曼昱瑞典大满贯女单夺冠",
+          en: "Wang Manyu Wins Sweden Smash Women's Singles",
+        },
+        description: {
+          zh: "WTT 瑞典大满贯女单决赛，王曼昱 4-2 战胜王艺迪，伤愈复出后强势夺冠，以标志性「比 1」手势庆祝。",
+          en: "Wang Manyu beat Wang Yidi 4-2 in the Sweden Smash final, triumphing in her return from injury and celebrating with her trademark 'number 1' gesture.",
+        },
+      },
+      {
+        title: {
+          zh: "小勒布伦战胜张本智和夺男单冠军",
+          en: "Felix Lebrun Beats Harimoto for Men's Title",
+        },
+        description: {
+          zh: "瑞典大满贯男单决赛，法国选手小勒布伦 4-1 战胜日本名将张本智和，拿下个人职业生涯首座大满贯男单冠军。",
+          en: "Felix Lebrun beat Tomokazu Harimoto 4-1 in the Sweden Smash men's final, claiming his first career Grand Smash men's singles title.",
+        },
+      },
+      {
+        title: {
+          zh: "现货黄金再次突破4400美元",
+          en: "Spot Gold Tops $4,400 Again",
+        },
+        description: {
+          zh: "8 月 17 日现货黄金盘中再次突破 4400 美元/盎司，报 4411.17 美元/盎司。",
+          en: "On Aug 17, spot gold again broke above $4,400/oz intraday, trading at $4,411.17/oz.",
+        },
+      },
+      {
+        title: {
+          zh: "加油新规11月起正式实施",
+          en: "Fuel 'Invoice-on-Transaction' Rule from November",
+        },
+        description: {
+          zh: "税务总局明确自 11 月 1 日起在全国成品油零售加油站全面推广「交易即开票」，实现加油交易与发票开具无缝衔接。",
+          en: "The tax authority will roll out 'invoice-on-transaction' nationwide at fuel retail stations from Nov 1, linking every fill-up to instant invoicing.",
+        },
+      },
+      {
+        title: {
+          zh: "埃及等八国联合声明谴责以色列",
+          en: "Eight Nations Condemn Israel in Joint Statement",
+        },
+        description: {
+          zh: "埃及、巴基斯坦、沙特、土耳其、卡塔尔、约旦、阿联酋、印尼八国外长发表联合声明，谴责以色列公开拒绝加沙和平计划路线图及拒绝建立巴勒斯坦国。",
+          en: "FMs of Egypt, Pakistan, Saudi Arabia, Turkey, Qatar, Jordan, UAE, and Indonesia condemned Israel for publicly rejecting the Gaza peace roadmap and a Palestinian state.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-16",
     date: "2026-08-16",
     title: {
