@@ -2,6 +2,266 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-18",
+    date: "2026-08-18",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-18",
+      en: "🤖 AI HOT Daily · Aug 18, 2026",
+    },
+    summary: {
+      zh: "Cursor 推出 Origin 代码托管服务，作为 GitHub 的替代方案；OpenRouter 推出 Activity 仪表盘、Analytics API 及图像生成 API；宇树科技官宣 8 月 19 日科创板上市；NVIDIA 与 SB Energy 锁定俄亥俄州园区电力容量，OpenAI 将入驻；404 Media 追踪揭露亚马逊批量购书扫描用于 AI 训练后销毁；Google 推出 PhotoScan，用手机照片估算胰岛素抵抗；OpenAI 反思低估模型网络攻击能力，加固自身防御。",
+      en: "Cursor launches Origin, a GitHub-alternative code hosting service; OpenRouter ships an Activity dashboard, Analytics API, and image-generation API; Unitree announces its Aug 19 STAR Market listing; NVIDIA and SB Energy lock Ohio site power for OpenAI as tenant; 404 Media tracks Amazon's bulk book purchases being scanned for AI training then destroyed; Google's PhotoScan estimates insulin resistance from phone photos; OpenAI reflects on underestimating model cyber-attack ability and hardens its defenses.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Cursor 推出 Origin 代码托管服务",
+          en: "Cursor Launches Origin Code Hosting",
+        },
+        description: {
+          zh: "向所有付费计划用户开放早期测试版，提供仓库、拉取请求、代码浏览及 GitHub 双向同步功能。",
+          en: "Early access for all paid plans brings repositories, pull requests, code browsing, and two-way GitHub sync.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 推出 Activity 仪表盘与 Analytics API",
+          en: "OpenRouter Adds Activity Dashboard and Analytics API",
+        },
+        description: {
+          zh: "可按智能体、模型、请求维度查看支出、token 量、缓存命中率等指标，并支持下钻至单条请求日志。",
+          en: "Track spend, token volume, and cache-hit rates by agent, model, and request, with drill-down to individual request logs.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 图像生成 API：代码优先接入",
+          en: "OpenRouter Image-Generation API Tutorial",
+        },
+        description: {
+          zh: "通过统一请求格式和单一密钥即可调用多个提供商的图像模型，向 /api/v1/images 发送请求即可获得 base64 编码图像。",
+          en: "A single key and uniform request format reach multiple providers' image models; POST to /api/v1/images returns base64-encoded image data.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树科技官宣 8 月 19 日科创板上市",
+          en: "Unitree to List on STAR Market Aug 19",
+        },
+        description: {
+          zh: "A 股「人形机器人第一股」宇树科技发行价 150.80 元/股，对应市值约 609.93 亿元，预计募资约 60.99 亿元。",
+          en: "The A-share 'first humanoid-robot stock' prices at 150.80 RMB/share, a ~60.99B RMB valuation, targeting ~6.1B RMB raised.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA 与 SB Energy 锁定俄亥俄园区电力容量",
+          en: "NVIDIA Locks Ohio Power with SB Energy; OpenAI to Move In",
+        },
+        description: {
+          zh: "双方合作锁定 PORTS-Pike 科技园区的电力容量以独家部署 NVIDIA 算力，OpenAI 将成为租户。",
+          en: "The two partners secured power capacity (LPS) at PORTS-Pike for exclusive NVIDIA compute deployment, with OpenAI as tenant.",
+        },
+      },
+      {
+        title: {
+          zh: "404 Media 追踪：亚马逊购书扫描用于 AI 训练后销毁",
+          en: "404 Media Tracks Amazon Book Scanning for AI Training",
+        },
+        description: {
+          zh: "通过在珍本图书中放置追踪设备，首次揭露亚马逊未公开的购书行动：批量购书扫描用于 AI 训练数据后销毁，书籍最终被送往 AI 训练中心。",
+          en: "Planting a tracker in a rare book, 404 Media first exposed Amazon's unannounced purchases: bulk-buying books, scanning them for AI training, then destroying them.",
+        },
+      },
+      {
+        title: {
+          zh: "PhotoScan：用手机照片估算胰岛素抵抗",
+          en: "PhotoScan: Insulin Resistance from Phone Photos",
+        },
+        description: {
+          zh: "Google Research 的深度学习框架从智能手机 2D 照片直接估算三维身体成分，可预测胰岛素抵抗，精度接近 DXA 扫描。",
+          en: "Google Research's deep-learning framework estimates 3D body composition from 2D smartphone photos, predicting insulin resistance with near-DXA accuracy.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 如何用前沿智能加固自身防御",
+          en: "OpenAI's 'The Defender's Window'",
+        },
+        description: {
+          zh: "OpenAI 反思低估了模型的真实网络攻击能力，正通过 Codex 验证代码漏洞、智能体优先分流安全告警、持续枚举攻击路径等四大支柱强化自身安全。",
+          en: "After underestimating models' real attack ability, OpenAI hardens itself via four pillars: Codex verifying code vulnerabilities, agent-first alert triage, attack-path enumeration, and more.",
+        },
+      },
+      {
+        title: {
+          zh: "用 Google ADK 构建零信任 AI 智能体",
+          en: "Zero-Trust AI Agents with Google's ADK",
+        },
+        description: {
+          zh: "开源零信任客服与退货智能体示例，通过硬件加密签名、gVisor 沙箱、确定性语义网关三层硬性机制防提示注入，而非仅依赖系统提示词。",
+          en: "An open-sourced zero-trust customer-service/returns agent uses hardware-backed signatures, gVisor sandboxing, and a semantic gateway to block prompt injection beyond system prompts.",
+        },
+      },
+      {
+        title: {
+          zh: "开源模型生态的未来：Nvidia 押注「教所有人炼 token」",
+          en: "Nvidia Bets on Teaching Everyone to Mine Tokens",
+        },
+        description: {
+          zh: "开源模型生态日益依赖 Nvidia 的资助，其已投入 260 亿美元推动近乎开源的模型开发以扩大推理芯片需求，开源社区兴趣正从全量训练转向微调现有模型。",
+          en: "The open-model ecosystem increasingly leans on Nvidia's $26B push toward near-open models to drive chip demand, with community interest shifting from full training to finetuning.",
+        },
+      },
+      {
+        title: {
+          zh: "同一集群利用率提升 33 个百分点：改变的是分配顺序",
+          en: "Same Cluster, +33 Points Utilization: It's the Allocator",
+        },
+        description: {
+          zh: "Hugging Face 的约束感知 GPU 分配器与 FIFO 相比，GPU 利用率最高提升 33 个百分点，优先级加权输出最高提升 105%。",
+          en: "HF's constraint-aware GPU allocator beats FIFO with up to +33 points utilization and +105% priority-weighted output across benchmark scenarios.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-18-hot",
+    date: "2026-08-18",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-18",
+      en: "🔥 Hot Topics · Aug 18, 2026",
+    },
+    summary: {
+      zh: "天安门下半旗悼念朱镕基同志；法拉利首款电车拍出约2.7亿元破纪录；寒武纪 124 名员工人均股票价值 557 万元将到账；《石油天然气发展「十五五」规划》印发；斯诺克中国公开赛时隔6年回归，中国斯诺克迎来爆发期；海外热梗 China Cool、China Taste 掀起来华热潮；特斯拉 Cybercab 有望本月在奥斯汀投放运营；榴莲价格彻底崩了；湘潭大学确认哥哥冒名顶替上学；招商蛇口浙江公司总经理涉嫌伤害女性被刑事拘留；中方回应100余名中国公民在巴被拘留；5岁女童误吞50克金条成功取出。",
+      en: "Tiananmen flies flags at half-mast for former Premier Zhu Rongji; Ferrari's first EV sets a ~270M RMB auction record; 124 Cambricon employees each get ~5.57M RMB worth of vested stock; the 15th Five-Year Plan for oil and gas is issued; the China Open snooker returns after six years as the sport booms; overseas memes like China Cool and China Taste fuel travel fever; Tesla's Cybercab may launch in Austin this month; durian prices collapse; Xiangtan University confirms a brother's identity-fraud admission; a CMG Zhejiang GM is detained over alleged assault on a woman; China responds to 100+ citizens detained in Pakistan; a 5-year-old who swallowed a 50g gold bar is treated successfully.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "天安门下半旗悼念朱镕基同志",
+          en: "Tiananmen Flags at Half-Mast for Zhu Rongji",
+        },
+        description: {
+          zh: "为悼念国务院原总理朱镕基同志，天安门广场下半旗志哀。",
+          en: "Tiananmen Square lowered flags to half-mast in mourning for former Premier Zhu Rongji.",
+        },
+      },
+      {
+        title: {
+          zh: "法拉利首款电车破纪录拍出约2.7亿元",
+          en: "Ferrari's First EV Sells for Record ~270M RMB",
+        },
+        description: {
+          zh: "首台量产版法拉利 Luce（0 号底盘）在蒙特雷拍卖会上以 4000 万美元成交，刷新纪录，成为史上成交价最高的新车。",
+          en: "The first production Ferrari Luce ('chassis zero') sold for $40M at Monterey, setting a record as the priciest new car ever auctioned.",
+        },
+      },
+      {
+        title: {
+          zh: "寒武纪员工大红包将到账 人均557万",
+          en: "Cambricon Employees' Bonus: 5.57M RMB Each",
+        },
+        description: {
+          zh: "寒武纪完成限制性股票激励计划归属登记，124 名激励对象获 59.76 万股，按收盘价估算价值合计 6.9 亿元，人均约 557 万元。",
+          en: "Cambricon vested restricted stock for 124 employees — 597,600 shares worth ~690M RMB at close, or about 5.57M RMB per person.",
+        },
+      },
+      {
+        title: {
+          zh: "石油天然气发展「十五五」规划印发",
+          en: "Oil & Gas 15th Five-Year Plan Issued",
+        },
+        description: {
+          zh: "国家发展改革委、国家能源局 8 月 17 日印发《石油天然气发展「十五五」规划》。",
+          en: "The NDRC and National Energy Administration issued the '15th Five-Year Plan' for oil and natural gas on Aug 17.",
+        },
+      },
+      {
+        title: {
+          zh: "中国斯诺克迎来爆发期",
+          en: "Chinese Snooker Hits a Boom Period",
+        },
+        description: {
+          zh: "斯诺克中国公开赛时隔 6 年重回世界巡回赛赛历，总奖金 120.5 万英镑，排名前 16 选手齐聚，见证中国斯诺克快速崛起。",
+          en: "The China Open returns to the world tour after six years with a £1.205M purse and the world's top 16 — a snapshot of China's snooker surge.",
+        },
+      },
+      {
+        title: {
+          zh: "海外热梗刷屏掀起来华热潮",
+          en: "Overseas Memes Fuel China Travel Fever",
+        },
+        description: {
+          zh: "China Cool（纳凉度假）、China 购、China Taste（烟火滋味）、Chinamaxxing（沉浸式中式日常）等热梗接连走红，掀起海外来华热潮。",
+          en: "Memes like China Cool, China Shopping, China Taste, and Chinamaxxing are going viral, driving a wave of inbound travel to China.",
+        },
+      },
+      {
+        title: {
+          zh: "特斯拉Cybercab有望本月投放运营",
+          en: "Tesla Cybercab May Launch This Month",
+        },
+        description: {
+          zh: "据知情人士透露，特斯拉正筹备 Cybercab 对外投放，最早本月就在美国得克萨斯州奥斯汀启动落地部署。",
+          en: "Sources say Tesla is preparing Cybercab's public rollout, with deployment in Austin, Texas as early as this month.",
+        },
+      },
+      {
+        title: {
+          zh: "榴莲价格彻底崩了",
+          en: "Durian Prices Collapse",
+        },
+        description: {
+          zh: "多地金枕榴莲售价降至 19.9 元一斤，批发价跌破 15 元；东南亚产区集中丰产、进口来源增多、物流成本下降共同压垮价格。",
+          en: "Golden-pillow durians drop to 19.9 RMB/jin with wholesale below 15 RMB, as bumper Southeast Asian harvests, more suppliers, and lower logistics crush prices.",
+        },
+      },
+      {
+        title: {
+          zh: "湘潭大学确认哥哥冒名顶替上学事实",
+          en: "Xiangtan University Confirms Identity-Fraud Admission",
+        },
+        description: {
+          zh: "弟弟举报哥哥冒名顶替其上大学，湘潭大学经多轮诉讼后重新调查，再次撤销哥哥本科学历，哥哥不服起诉，案件 8 月 18 日开庭。",
+          en: "After a brother reported being impersonated by his sibling, Xiangtan University re-investigated and again revoked the elder brother's bachelor's degree; he sued and the case opened Aug 18.",
+        },
+      },
+      {
+        title: {
+          zh: "多方回应女子杭州酒局遭伤害",
+          en: "CMG Zhejiang GM Detained Over Hangzhou Assault",
+        },
+        description: {
+          zh: "招商蛇口浙江公司总经理赵海峰在杭州商务酒局中涉嫌伤害一名女性，已被免职并被警方刑事拘留，其曾为江苏启东高考状元、清华毕业。",
+          en: "CMG Zhejiang GM Zhao Haifeng allegedly assaulted a woman at a Hangzhou business dinner; he's been removed and detained. He was once Qidong's top gaokao scorer and a Tsinghua grad.",
+        },
+      },
+      {
+        title: {
+          zh: "中方回应100余名中国公民在巴被拘留",
+          en: "China Responds to 100+ Citizens Detained in Pakistan",
+        },
+        description: {
+          zh: "外交部发言人林剑回应巴基斯坦媒体称 100 余名中国公民经营「非法呼叫中心」被拘一事，强调中国严打电诈犯罪，要求海外公民遵守当地法律。",
+          en: "Spokesperson Lin Jian addressed reports of 100+ Chinese citizens detained over 'illegal call centers' in Pakistan, stressing China's anti-fraud stance and urging compliance with local law.",
+        },
+      },
+      {
+        title: {
+          zh: "5岁女童在家中不慎吞下50g金条",
+          en: "5-Year-Old Swallows 50g Gold Bar",
+        },
+        description: {
+          zh: "5 岁女童误吞长约 4 厘米、重 50 克的金条，医院内镜团队成功实施胃镜下异物取出术，术后患儿恢复良好。",
+          en: "A 5-year-old swallowed a 4cm, 50g gold bar; an endoscopy team successfully removed it, and the child recovered well.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-17",
     date: "2026-08-17",
     title: {
