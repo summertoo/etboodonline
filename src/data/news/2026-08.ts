@@ -2,6 +2,266 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-19",
+    date: "2026-08-19",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-19",
+      en: "🤖 AI HOT Daily · Aug 19, 2026",
+    },
+    summary: {
+      zh: "Sentence Transformers v6.0 新增 MultiVectorEncoder，支持 ColBERT 风格模型；Mojo 语言正式开源，编译器与工具链全面开放；Claude 现已支持 Gmail 与 Google Drive 文件管理；OpenAI 推出 ChatGPT for Teens 青少年学习体验；OpenAI 启动新计划强化国家安全 AI 的民主监督；Claude 加速蛋白质设计与分析化学研究，15 个靶点命中 14 个；Mojo 开源、Qwen3.8-27B 登顶智能指数、OpenAI 因关键网络能力放缓模型开发节奏。",
+      en: "Sentence Transformers v6.0 adds MultiVectorEncoder for ColBERT-style models; the Mojo language goes fully open source with compiler and toolchain; Claude now manages Gmail and Google Drive files; OpenAI launches ChatGPT for Teens; OpenAI starts a program to strengthen democratic oversight of national-security AI; Claude accelerates protein design, hitting 14 of 15 targets; Qwen3.8-27B tops the intelligence index, and OpenAI paces model development over critical cyber capabilities.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Sentence Transformers v6.0 新增 MultiVectorEncoder",
+          en: "Sentence Transformers v6.0 Adds MultiVectorEncoder",
+        },
+        description: {
+          zh: "新增第四种模型类型 MultiVectorEncoder，可直接加载 PyLate、Stanford-NLP ColBERT 及 colpali-engine 检查点，用于 ColBERT 式晚期交互检索。",
+          en: "A fourth model type loads PyLate, Stanford-NLP ColBERT, and colpali-engine checkpoints directly for ColBERT-style late-interaction retrieval.",
+        },
+      },
+      {
+        title: {
+          zh: "Mojo 语言正式开源",
+          en: "The Mojo Language Goes Open Source",
+        },
+        description: {
+          zh: "Mojo 以 Apache 2.0 许可证（含 LLVM 例外）正式开源，编译器、工具链及全部源码已发布至 GitHub，标准库自 2024 年开放，编译器贡献计划年底前开放。",
+          en: "Mojo is now Apache-2.0 licensed (with LLVM exception), with compiler, toolchain, and full source on GitHub; compiler contributions open by year's end.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 现已支持 Gmail 与 Google Drive",
+          en: "Claude Now Works with Gmail and Google Drive",
+        },
+        description: {
+          zh: "Claude 可发送 Gmail 邮件并管理 Google Drive 文件，从连接器菜单中选择连接即可，用户可控制何时需要批准，所有付费套餐可用。",
+          en: "Claude can send Gmail and manage Drive files via the connectors menu, with user-controlled approval — available on all paid plans.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 推出 ChatGPT for Teens",
+          en: "OpenAI Launches ChatGPT for Teens",
+        },
+        description: {
+          zh: "为 13-17 岁用户自动启用，内置更强安全保护与家长控制，新增 Study Mode、负责任作业提醒与测验学习可视化，引导分步解题而非直接给答案。",
+          en: "Auto-enabled for ages 13-17 with stronger safety and parental controls, adding Study Mode, responsible-homework prompts, and quiz visuals that guide rather than answer.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 强化国家安全 AI 的民主监督",
+          en: "OpenAI Bolsters Democratic Oversight of National-Security AI",
+        },
+        description: {
+          zh: "OpenAI 提供 500 万美元用于监督机构的培训、技术支持和积分，试点工具帮助授权审查员检查 AI 辅助政府决策的相关记录。",
+          en: "OpenAI commits $5M in training, support, and credits to oversight bodies, piloting tools that let authorized reviewers inspect AI-assisted government decisions.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 加速蛋白质设计与分析化学研究",
+          en: "Claude Accelerates Protein Design and Chem Analysis",
+        },
+        description: {
+          zh: "Claude（Mythos Preview 和 Opus 4.8）针对 15 个靶点设计蛋白质结合剂，成功 14 个，命中率达 22.6%-35.1%。",
+          en: "Claude (Mythos Preview and Opus 4.8) designed protein binders for 15 targets, succeeding on 14 with hit rates of 22.6%-35.1%.",
+        },
+      },
+      {
+        title: {
+          zh: "智能体记忆并非越多越好",
+          en: "More Agent Memory Isn't Always Better",
+        },
+        description: {
+          zh: "八款模型评测显示记忆注入需按模型能力校准剂量：强模型适合完整指南集，较弱模型采用精选检索效果最佳（gpt-oss-120b 提升 +16.1pp）。",
+          en: "Across eight models, memory dosage must match capability: strong models take full guide sets while weaker ones do best with curated retrieval (gpt-oss-120b: +16.1pp).",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 放缓模型开发节奏",
+          en: "OpenAI Paces Model Development",
+        },
+        description: {
+          zh: "因 OpenAI-Hugging Face 事件及 Astra 模型可能达到「关键网络安全能力」阈值，OpenAI 暂停最新模型强化学习训练两周并搁置最大规模前沿 RL 运行。",
+          en: "After the OpenAI-HF incident and Astra potentially hitting 'critical cyber capability' thresholds, OpenAI paused RL training on the latest model for two weeks and shelved its biggest frontier runs.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Tag 担任 CI/CD 故障一线响应者",
+          en: "Claude Tag as First Responder for CI/CD Failures",
+        },
+        description: {
+          zh: "Anthropic 用 Claude Tag 构建值班智能体，事故后中位 14 分钟发布首份基于证据的分析，最快 3 分钟内验证修复并确认错误率恢复基线。",
+          en: "Anthropic's Claude Tag on-call agent posts its first evidence-based analysis a median 14 minutes after incidents, and verified a fix in as little as 3 minutes.",
+        },
+      },
+      {
+        title: {
+          zh: "Qwen3.8-27B 登顶智能指数",
+          en: "Qwen3.8-27B Tops the Intelligence Index",
+        },
+        description: {
+          zh: "Qwen3.8-27B 在 Artificial Analysis 智能指数中排名 135 款模型之首（得分 52），超过 Z.ai 的 753B 开源模型 GLM-5.2（51 分），笔记本模型媲美云端前沿模型。",
+          en: "Qwen3.8-27B ranks No.1 of 135 models (52) on the Artificial Analysis Intelligence Index, beating Z.ai's 753B GLM-5.2 (51) — a laptop model rivaling cloud frontier ones.",
+        },
+      },
+      {
+        title: {
+          zh: "Populous 用 Runway 呈现全球标志性场馆设计",
+          en: "Populous Uses Runway for Landmark Stadium Design",
+        },
+        description: {
+          zh: "过去完整视频需外部渲染团队至少三周且须提前冻结设计，如今 Runway 能生成传达尺度感的渲染和航拍图，大幅缩短视觉制作时间。",
+          en: "Where full videos once needed external render teams for three-plus weeks with frozen designs, Runway now generates scale-conveying renders and aerials, slashing visual production time.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-19-hot",
+    date: "2026-08-19",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-19",
+      en: "🔥 Hot Topics · Aug 19, 2026",
+    },
+    summary: {
+      zh: "四川长宁一升学宴因雨棚积水导致女儿墙倒塌致5死17伤；朱雀三号遥二发射成功，中国首次实现火箭陆地回收；宇树科技上市高开629%总市值达4449亿元，梁文锋打新浮盈11亿；国务院修改《住房公积金管理条例》9月20日起施行；胖东来澄清招聘并非无门槛接纳刑释人员；厄尔尼诺大概率成为历史最强事件；章子怡婴童护肤投资4年套现超3亿；75岁王石开健身房每小时最高308元；微信开放520大额红包限时一天；金枕榴莲进入9.9元时代；霍尔木兹海峡博弈升级；「泔水喂猪」被正式写入禁令。",
+      en: "A rainwater-soaked awning collapses at a Sichuan college-banquet, killing 5 and injuring 17; Zhuque-3 Y2 launches successfully — China's first land recovery of a rocket; Unitree lists with a 629% open surge to a 444.9B RMB market cap as Liang Wenfeng books 1.1B in paper gains; the State Council revises the Housing Fund Regulations effective Sept 20; Pangdonglai clarifies its hiring isn't open-gate for ex-convicts; El Niño is likely to become the strongest on record; Zhang Ziyi cashes out 300M+ from a 4-year baby-skin-care investment; 75-year-old Wang Shi opens a gym at up to 308 RMB/hour; WeChat lifts red-packet limits to 520 for one day; golden-pillow durians enter the 9.9 era; the Strait of Hormuz standoff escalates; feeding pigs with kitchen waste is formally banned.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "四川一升学宴突发事故致5人死亡",
+          en: "Sichuan Banquet Collapse Kills 5",
+        },
+        description: {
+          zh: "四川长宁一村民为子女办升学宴，临时雨棚积水过多拉倒女儿墙，造成 5 人死亡、17 人受伤。",
+          en: "At a Changning, Sichuan banquet, a rain-heavy temporary canopy toppled a parapet wall, killing 5 and injuring 17.",
+        },
+      },
+      {
+        title: {
+          zh: "重大突破！中国首次实现火箭陆地回收",
+          en: "China's First Land Recovery of a Rocket",
+        },
+        description: {
+          zh: "朱雀三号遥二运载火箭成功发射，一子级按预定程序着陆于民勤县着陆场，成为中国首款成功入轨并实现陆地回收的运载火箭。",
+          en: "Zhuque-3 Y2 launched successfully and its first stage landed at the Minqin site — making it China's first rocket to reach orbit and be recovered on land.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树科技高开629% 总市值达4449亿",
+          en: "Unitree Opens +629%, Market Cap 444.9B RMB",
+        },
+        description: {
+          zh: "宇树科技登陆科创板，开盘大涨 629.44% 报 1100 元/股，总市值达 4449 亿元，单签收益达 47 万元。",
+          en: "Unitree debuted on the STAR Market, opening up 629.44% at 1,100 RMB/share for a 444.9B RMB market cap — about 470k RMB profit per lot.",
+        },
+      },
+      {
+        title: {
+          zh: "梁文锋打新宇树科技浮盈11亿",
+          en: "Liang Wenfeng Nets 1.1B on Unitree",
+        },
+        description: {
+          zh: "梁文锋旗下深度求索、幻方量化和九章资产通过战略配售、网下打新合计获配约 119.16 万股，浮盈超 11 亿元。",
+          en: "Liang Wenfeng's DeepSeek, High-Flyer, and Jiuzhang vehicles secured ~1.19M shares via placements and subscription, with paper gains topping 1.1B RMB.",
+        },
+      },
+      {
+        title: {
+          zh: "事关住房公积金 有这些新变化",
+          en: "Housing Fund Rules Get New Changes",
+        },
+        description: {
+          zh: "国务院公布修改《住房公积金管理条例》的决定，共 20 条，进一步优化住房公积金提取使用等，自 2026 年 9 月 20 日起施行。",
+          en: "The State Council's 20-clause revision to the Housing Fund Regulations streamlines withdrawal and use, effective Sept 20, 2026.",
+        },
+      },
+      {
+        title: {
+          zh: "胖东来招聘不包含性侵犯罪人员",
+          en: "Pangdonglai Hiring Excludes Sex-Offense Convicts",
+        },
+        description: {
+          zh: "胖东来澄清并非无门槛接纳刑释人员：明确排除性侵、严重暴力等恶性犯罪前科人员，且需走完全相同流程并设 6 个月双向选择试用期。",
+          en: "Pangdonglai clarified it doesn't hire ex-convicts without conditions: sex-offense and violent-felony records are excluded, with full standard process and a 6-month mutual trial.",
+        },
+      },
+      {
+        title: {
+          zh: "厄尔尼诺大概率成为历史最强",
+          en: "El Niño Likely to Be the Strongest on Record",
+        },
+        description: {
+          zh: "国家气候中心预计厄尔尼诺将于 11 至 12 月前后达峰，形成一次超强事件，大概率成为历史最强，具有发展快、强度强、影响显著的特点。",
+          en: "The National Climate Center expects El Niño to peak around Nov-Dec as a super event — likely the strongest on record, developing fast with significant climate impact.",
+        },
+      },
+      {
+        title: {
+          zh: "章子怡到手3个亿 不是通过演戏",
+          en: "Zhang Ziyi Cashes Out 300M+ on Baby Brand",
+        },
+        description: {
+          zh: "上美股份收购婴童护肤品牌「一页」23% 股权，章子怡 2022 年认缴 290 万元的投资，4 年套现超 3 亿元。",
+          en: "Shenmei bought 23% of baby-skincare brand 'newpage' from Zhang Ziyi's fund — turning her 2.9M RMB 2022 stake into 300M+ RMB in four years.",
+        },
+      },
+      {
+        title: {
+          zh: "75岁王石开健身房 每小时最高308元",
+          en: "Wang Shi, 75, Opens a Gym (Up to 308 RMB/Hour)",
+        },
+        description: {
+          zh: "75 岁的王石在深圳大梅沙开设「顽石」HYROX 训练馆，自由训练 108 元/时，教练 1 对 1 带训 308 元/时。",
+          en: "At 75, Wang Shi opened a 'Wanshi' HYROX training hall in Shenzhen's Dameisha, charging 108 RMB/hour open training and 308 RMB/hour for 1-on-1 coaching.",
+        },
+      },
+      {
+        title: {
+          zh: "微信开放520大额红包 限时一天",
+          en: "WeChat Lifts Red-Packet Limit to 520 for One Day",
+        },
+        description: {
+          zh: "七夕当天，微信将个人红包限额从 200 元提升至 520 元，限时一天。",
+          en: "For Qixi, WeChat raises the personal red-packet cap from 200 to 520 RMB for one day only.",
+        },
+      },
+      {
+        title: {
+          zh: "金枕榴莲也进入9.9元时代了",
+          en: "Golden-Pillow Durians Enter the 9.9 RMB Era",
+        },
+        description: {
+          zh: "早年栽种的榴莲树集中挂果、供应大增，中老泰全铁冷链班列使运输时间缩短、损耗率降至 3% 以内，金枕榴莲零售价跌至 9.9-19.9 元/斤。",
+          en: "Bumper harvests from trees planted during the durian boom, plus the China-Laos-Thailand cold-chain rail cutting transit and losses to under 3%, push golden-pillow prices to 9.9-19.9 RMB/jin.",
+        },
+      },
+      {
+        title: {
+          zh: "「泔水喂猪」被正式写入禁令",
+          en: "Feeding Pigs with Kitchen Waste Is Now Banned",
+        },
+        description: {
+          zh: "《生态环境法典》明确禁止养殖场（含散养户）直接使用未经无害化处理的餐厨剩余物喂猪，违规最高可罚百万元。",
+          en: "The Ecological Environment Code bans farms (including backyard households) from feeding untreated kitchen waste to pigs, with fines up to a million RMB.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-18",
     date: "2026-08-18",
     title: {
