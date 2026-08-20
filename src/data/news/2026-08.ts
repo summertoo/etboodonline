@@ -2,6 +2,276 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-20",
+    date: "2026-08-20",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-20",
+      en: "🤖 AI HOT Daily · Aug 20, 2026",
+    },
+    summary: {
+      zh: "Liquid AI 发布 LFM2.5 系列 QAD 量化检查点，恢复 97% 精度损失；GLM-5.3 上线，AA 智能指数 60 分并列开源第一且成本更低；FastMetal 让 Mac 本地 30 秒生成视频；Google 搜索推出 5 项 AI 学习工具；Replit 推出由 GPT-5.6 Luna 驱动的 Free Mode；OpenRouter 宣布加入 Stripe；LMSYS 在 H20 上逼近 B300 服务 DeepSeek-V4-Pro；苹果研究 LLM 类人行为的多维度分析；GitHub Copilot app 用 My work 面板管理工作。",
+      en: "Liquid AI ships LFM2.5 QAD quantized checkpoints recovering 97% precision loss; GLM-5.3 launches, scoring 60 on the AA Intelligence Index to tie the top open-source model at lower cost; FastMetal generates a video locally on Mac in 30 seconds; Google Search adds 5 AI study tools; Replit launches Free Mode powered by GPT-5.6 Luna; OpenRouter announces it is joining Stripe; LMSYS approaches B300 performance serving DeepSeek-V4-Pro on H20; Apple analyzes LLM human-like behaviors; GitHub Copilot app manages work with the My work panel.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Liquid AI 发布 LFM2.5 系列 QAD 量化检查点",
+          en: "Liquid AI Releases LFM2.5 QAD Quantized Checkpoints",
+        },
+        description: {
+          zh: "基于量化感知蒸馏（QAD）训练的四款 Q4_0 GGUF 检查点，在保持原生内存与速度的同时，恢复 BF16 平均精度损失的 97%。",
+          en: "Four Q4_0 GGUF checkpoints trained with quantization-aware distillation recover 97% of BF16 average precision loss at native memory and speed.",
+        },
+      },
+      {
+        title: {
+          zh: "GLM-5.3 上线：AA 智能指数 60 分并列开源第一",
+          en: "GLM-5.3 Debuts: 60 on AA Index, Top Open-Source Tie",
+        },
+        description: {
+          zh: "擅长复杂编码、防御性网络安全与长程任务，在 AA 综合智能指数中取得 60 分，与闭源旗舰同级，并与 Kimi K3 并列开源第一，单任务成本为旗舰模型中最低。",
+          en: "Strong at complex coding, defensive security, and long-horizon tasks, it scores 60 on the AA index — on par with closed flagships, tied with Kimi K3 for best open model at the lowest per-task cost.",
+        },
+      },
+      {
+        title: {
+          zh: "FastMetal 让 Mac 本地 30 秒生成视频",
+          en: "FastMetal Generates Video on Mac in 30 Seconds",
+        },
+        description: {
+          zh: "5 秒 480P 视频完全在 Mac 上生成，无需 CUDA 或云端，仅占 3.9 GiB 内存，DiT、DMD 采样器和解码器均通过 MLX 在 Metal 上运行。",
+          en: "A 5-second 480P clip is generated entirely on a Mac — no CUDA, no cloud, just 3.9 GiB RAM, with DiT, DMD sampler, and decoder running on Metal via MLX.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 搜索推出 5 项 AI 学习工具",
+          en: "Google Search Adds 5 AI Study Tools",
+        },
+        description: {
+          zh: "AI Mode 的生成式 UI 英文版全球上线，支持交互式可视化与自定义模拟；练习测验在 AI Overviews 和 AI Mode 中免费提供，覆盖 ACT、SAT 等标准化考试。",
+          en: "AI Mode's generative UI goes live globally in English with interactive visuals and custom simulations, and practice quizzes are free in AI Overviews and AI Mode, covering ACT, SAT, and more.",
+        },
+      },
+      {
+        title: {
+          zh: "Replit 推出 GPT-5.6 Luna 驱动的 Free Mode",
+          en: "Replit Launches Free Mode Powered by GPT-5.6 Luna",
+        },
+        description: {
+          zh: "让用户无需担心 token 成本即可将想法转化为可运行的软件，提供快速解答、建议与项目分析，高级推理时可切换至 GPT-5.6 系列。",
+          en: "Lets users turn ideas into working software without token worries, offering quick answers, suggestions, and project analysis, switching to GPT-5.6 tier for deeper reasoning.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.236：新增默认模型环境变量",
+          en: "Claude Code v2.1.236: New Default Model Env Var",
+        },
+        description: {
+          zh: "新增 ANTHROPIC_DEFAULT_MODEL 环境变量，可设置新会话默认模型，/model 选择仍可覆盖并跨重启保留。",
+          en: "The new ANTHROPIC_DEFAULT_MODEL env var sets the default model for new sessions, while /model selections still override and persist across restarts.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 宣布加入 Stripe",
+          en: "OpenRouter Announces It Is Joining Stripe",
+        },
+        description: {
+          zh: "OpenRouter 每日处理来自 400 多个模型的 10+ 万亿 token，服务超 1000 万开发者与公司，合并后继续以原名、原使命独立运营。",
+          en: "Processing 10+ trillion tokens daily across 400+ models for 10M+ developers and companies, OpenRouter will keep operating independently under its original name and mission.",
+        },
+      },
+      {
+        title: {
+          zh: "突破 DeepSeek-V4-Pro 服务极限：H20 上的多场景优化",
+          en: "Pushing DeepSeek-V4-Pro Limits: H20 Optimization",
+        },
+        description: {
+          zh: "LMSYS 针对 1.6 万亿参数 MoE 模型，在单节点 H20 上达 271 output tokens/s，与 B300 的 383.7 tokens/s 性能差距缩小至 1.4 倍。",
+          en: "LMSYS reaches 271 output tokens/s serving the 1.6T-param MoE model on a single H20 node, narrowing the gap to B300's 383.7 tokens/s to ~1.4x.",
+        },
+      },
+      {
+        title: {
+          zh: "苹果研究：LLM 类人行为的多维度分析",
+          en: "Apple Research: Multidimensional Look at LLM Human-Like Behaviors",
+        },
+        description: {
+          zh: "分析 LLM 表达想法情绪、与用户建立关系、拒绝请求等类人行为的普遍性、影响与可控性，采用 LLM-as-a-judge 与人工评估，样本超 2.1 万条数据。",
+          en: "Examining prevalence, impact, and controllability of behaviors like expressing feelings, building rapport, and setting boundaries — using LLM-as-a-judge plus human eval over 21,000 samples.",
+        },
+      },
+      {
+        title: {
+          zh: "GitHub Copilot app：用 My work 面板管理你的工作",
+          en: "GitHub Copilot app: Manage Work with My Work Panel",
+        },
+        description: {
+          zh: "My work 面板集中管理拉取请求和问题，内置 All、Active、Review requests、Done 视图，支持自定义视图，并可批量选择条目创建智能体会话。",
+          en: "The My work panel centralizes pull requests and issues with All, Active, Review requests, and Done views, custom views, and batch-spawned agent sessions.",
+        },
+      },
+      {
+        title: {
+          zh: "Slack 如何构建人机智能体团队",
+          en: "How Slack Builds Human-Agent Teams",
+        },
+        description: {
+          zh: "Slack 首席产品官建议默认使用公开频道，让智能体从可见对话中学习，并将会议、邮件、日历等上下文连接起来，由 Claude 驱动的智能体负责起草、总结、监控等生产工作。",
+          en: "Slack's CPO advocates public-by-default channels so agents learn from visible conversation, connecting meetings, email, and calendar to cut duplication, with Claude agents handling drafting, summarizing, and monitoring.",
+        },
+      },
+      {
+        title: {
+          zh: "Databricks：从单一提示词设计高效 Genie Agents",
+          en: "Databricks: Designing Effective Genie Agents from a Single Prompt",
+        },
+        description: {
+          zh: "通用智能体处理收入等查询时往往只抓第一个相关数据表，Genie Agents 通过更精准的提示词设计更准确地定位和回答问题。",
+          en: "Where generic agents often grab only the first relevant table, Genie Agents use more precise prompting to locate and answer user questions more accurately.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-20-hot",
+    date: "2026-08-20",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-20",
+      en: "🔥 Hot Topics · Aug 20, 2026",
+    },
+    summary: {
+      zh: "12306 回应多购座位使用权归购票者本人；富士康紧急扩招备战苹果新机，新人入职奖 8800 元；南京男子花 1290 万买精装豪宅竟是样板间；犯罪片《空枪》上映恰逢李泽钜绑架案 30 周年；10 万亿住房公积金进一步激活；Moderna 与默沙东宣布首个治疗性 mRNA 黑色素瘤疫苗；日本民众排队 5 小时买中国相机；日本乐天集团被曝涉足武器装备；沙特二季度 GDP 同比降 4.8%；中国黄金协会反对美方将部分企业列入实体清单；中国赴日游客数量断崖式下跌；华为「天才少年」回应离职后卖玉米。",
+      en: "12306 confirms multi-seat buyers control their purchased seats; Foxconn launches an urgent hiring spree for Apple's new iPhone with 8,800 RMB sign-on bonuses; a Nanjing man's 12.9M RMB luxury home turns out to be a model room; crime film 'Empty Gun' lands on the 30th anniversary of the Li Ka-shing kidnapping; the 10T RMB housing fund gets further activated; Moderna and Merck announce the first therapeutic mRNA melanoma vaccine; Japanese consumers queue 5 hours for Chinese cameras; Japan's Rakuten is exposed on weapons involvement; Saudi GDP falls 4.8% YoY in Q2; the China Gold Association objects to US entity-list designations; Chinese visitor numbers to Japan plunge; Huawei's 'genius boy' responds to selling corn after resigning.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "12306回应买票放零食这座位能让吗",
+          en: "12306: Purchased Seats Belong to the Buyer",
+        },
+        description: {
+          zh: "两名女孩购三张连座票放零食引争议，客服回应购票者名下车票可由本人支配，他人使用需征得本人同意。",
+          en: "After two girls reserved three connected seats for snacks, 12306 said ticket holders control their seats and others must get their consent to use them.",
+        },
+      },
+      {
+        title: {
+          zh: "富士康紧急扩招 新人入职就奖8800元",
+          en: "Foxconn's Urgent Hiring: 8,800 RMB Sign-On Bonus",
+        },
+        description: {
+          zh: "为备战 9 月苹果新机发布会，富士康加大人力储备，新入职员工可获 8800 元奖金，提前到岗另有 500 元奖励。",
+          en: "Ramping up for Apple's September launch, Foxconn offers 8,800 RMB to new hires plus 500 RMB for early start to build staffing for iPhone production.",
+        },
+      },
+      {
+        title: {
+          zh: "男子花1290万买精装豪宅竟是样板间",
+          en: "A 12.9M RMB 'Luxury Home' Turned Out to Be a Model Room",
+        },
+        description: {
+          zh: "南京李先生花费 1290 万元购买 291 平米精装现房，验房时发现是开发商未告知的样板房且有多处质量瑕疵，销售人员否认隐瞒。",
+          en: "Li in Nanjing paid 12.9M RMB for a 291-sqm finished home only to find it was an undisclosed model room with defects; the seller denies concealment.",
+        },
+      },
+      {
+        title: {
+          zh: "《空枪》 李嘉诚儿子被绑架案",
+          en: "'Empty Gun': The Kidnapping of Li Ka-shing's Son",
+        },
+        description: {
+          zh: "犯罪片《空枪》上映，恰逢张子强绑架李泽钜大案 30 周年，当年绑匪索要 20 亿港元赎金，最终拿到 10.38 亿。",
+          en: "The crime film 'Empty Gun' premieres on the 30th anniversary of the Cheung Chi-keung kidnapping of Victor Li — a 2B HKD ransom demand, 1.038B HKD paid.",
+        },
+      },
+      {
+        title: {
+          zh: "10万亿公积金进一步激活",
+          en: "10 Trillion RMB Housing Fund Further Activated",
+        },
+        description: {
+          zh: "修订后的《住房公积金管理条例》自 9 月 20 日施行，共 20 条，从拓宽提取使用范围、提升服务效能到扩大制度覆盖面，系统性激活超 10 万亿沉淀资金。",
+          en: "The revised Housing Fund Regulations take effect Sept 20 with 20 clauses — widening withdrawal and use, improving service, and expanding coverage to activate over 10T RMB of idle funds.",
+        },
+      },
+      {
+        title: {
+          zh: "首个治疗性癌症疫苗",
+          en: "First Therapeutic Cancer Vaccine",
+        },
+        description: {
+          zh: "Moderna 与默沙东宣布全球首个成功的 mRNA 黑色素瘤肿瘤疫苗 Ⅲ 期研究，联合药物用于术后高危黑色素瘤辅助治疗，达成主要及次要终点。",
+          en: "Moderna and Merck announce the first successful Phase 3 mRNA melanoma vaccine study, combined with a drug as adjuvant therapy for high-risk post-surgery patients, hitting primary and secondary endpoints.",
+        },
+      },
+      {
+        title: {
+          zh: "日本民众排队5小时买中国相机",
+          en: "Japanese Consumers Queue 5 Hours for Chinese Cameras",
+        },
+        description: {
+          zh: "东京部分民众被中国相机圈粉，排队 5 小时购买，门店半天卖出超 300 万日元。",
+          en: "Fans of Chinese cameras in Tokyo wait up to five hours, with one store selling over 3M JPY in half a day.",
+        },
+      },
+      {
+        title: {
+          zh: "日本乐天集团被曝涉足武器装备",
+          en: "Rakuten Exposed on Weapons Involvement",
+        },
+        description: {
+          zh: "媒体曝日本乐天集团将与德国赫尔辛公司合作，向自卫队供应进攻型无人机，一家日本企业因此取消入驻其电商平台。",
+          en: "Rakuten is reported to partner with Germany's Helsing to supply attack drones to the SDF, prompting one Japanese firm to cancel joining its e-commerce platform.",
+        },
+      },
+      {
+        title: {
+          zh: "沙特「豪」不起来了",
+          en: "Saudi Arabia Feels the Squeeze",
+        },
+        description: {
+          zh: "受石油部门显著负增长拖累，沙特二季度实际 GDP 同比下降 4.8%，政府与企业都在开源节流。",
+          en: "Dragged by a sharp drop in the oil sector, Saudi real GDP fell 4.8% YoY in Q2, with both government and firms tightening belts.",
+        },
+      },
+      {
+        title: {
+          zh: "中国黄金协会严正声明",
+          en: "China Gold Association Issues Stern Statement",
+        },
+        description: {
+          zh: "反对美国将部分中国黄金企业列入「维吾尔强迫劳动预防法」实体清单，批评 LBMA 暂停相关企业合格交割资格，称相关措施缺乏事实依据。",
+          en: "It opposes the US listing of Chinese gold firms under the 'UFLPA' and criticizes LBMA's suspension of their Good Delivery status as lacking factual basis.",
+        },
+      },
+      {
+        title: {
+          zh: "中国赴日游客数量断崖式下跌",
+          en: "China-Japan Tourist Numbers Plunge",
+        },
+        description: {
+          zh: "今年前 7 个月中国内地访日游客同比下降 56.3%，7 月为连续第 8 个月同比下降，全年总量或时隔 5 年再度回落。",
+          en: "Mainland visitors to Japan fell 56.3% YoY in the first seven months, with July marking an 8th straight monthly decline — the yearly total may dip again after five years.",
+        },
+      },
+      {
+        title: {
+          zh: "华为「天才少年」回应离职后卖玉米",
+          en: "Huawei 'Genius Boy' Responds to Selling Corn",
+        },
+        description: {
+          zh: "宁博宇回应离职无关绩效、非被「体面辞退」，而是想回归学术界，他已获「玛丽·居里学者」博士后奖学金，将赴瑞典皇家理工学院开展研究。",
+          en: "Ning Boyu says leaving wasn't about performance or a 'face-saving exit' — he wants academia, having won a Marie Curie postdoc fellowship to research at KTH in Sweden.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-19",
     date: "2026-08-19",
     title: {
