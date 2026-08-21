@@ -2,6 +2,276 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-21",
+    date: "2026-08-21",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-21",
+      en: "🤖 AI HOT Daily · Aug 21, 2026",
+    },
+    summary: {
+      zh: "阿里发布 Qwen-UI-Agent，让模型真正「会用」每一块屏幕；LFM2.5 系列 DSpark 草稿模型使推理速度最高提升 3.18 倍；Mistral 推出多步检索的 Agentic Search；AlloyDB ScaNN 将向量搜索扩展到 100 亿向量；Claude Platform 上线 Computer Use、Skills API 与 Files API；Claude Code 连发两个版本；消息称 OpenAI 最迟将于 2027 年上市并推出 AI Futures 博客；苹果提出基于词汇干预的多语言知识迁移与混合预训练缩放定律。",
+      en: "Alibaba launches Qwen-UI-Agent to truly master every screen; LFM2.5 DSpark draft models boost inference up to 3.18x; Mistral ships multi-step Agentic Search; AlloyDB ScaNN scales vector search to 10B vectors; Claude Platform goes GA with Computer Use, Skills API, and Files API; Claude Code ships two releases; OpenAI reportedly tells staff it will list by 2027 and launches the AI Futures blog; Apple proposes lexical-intervention multilingual transfer and mixture-pretraining scaling laws.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "阿里发布 Qwen-UI-Agent",
+          en: "Alibaba Releases Qwen-UI-Agent",
+        },
+        description: {
+          zh: "以真实世界为中心的 GUI 智能体基座模型，覆盖移动端、电脑端、网页端及深度搜索环境，主打让模型真正「会用」每一块屏幕。",
+          en: "A real-world-centric GUI agent foundation model spanning mobile, desktop, web, and DeepSearch environments — built to truly operate every screen.",
+        },
+      },
+      {
+        title: {
+          zh: "LFM2.5 DSpark 草稿模型：推理最高提速 3.18 倍",
+          en: "LFM2.5 DSpark Draft Models: Up to 3.18x Faster Inference",
+        },
+        description: {
+          zh: "通过投机解码在不改变输出质量的前提下，GPU 吞吐最高提升 3.18 倍、端侧最高 2.87 倍，约 300M 参数的草稿模型使函数调用延迟平均降低 57%。",
+          en: "Speculative decoding lifts GPU throughput up to 3.18x (2.87x on-device) without changing outputs; the ~300M draft model cuts function-call latency by 57% on average.",
+        },
+      },
+      {
+        title: {
+          zh: "Mistral 推出 Agentic Search",
+          en: "Mistral Launches Agentic Search",
+        },
+        description: {
+          zh: "通过 search、open、navigate、read、grep 五工具的多步检索循环，让模型在长文档与多来源中查找、定位并验证信息，提升复杂文档查询准确率。",
+          en: "A multi-step retrieval loop over search, open, navigate, read, and grep lets models find, locate, and verify information across long documents and many sources.",
+        },
+      },
+      {
+        title: {
+          zh: "AlloyDB ScaNN 将向量搜索扩展到 100 亿向量",
+          en: "AlloyDB ScaNN Scales Vector Search to 10B Vectors",
+        },
+        description: {
+          zh: "全新四层树架构将查询复杂度从 O(N^1/2) 降至 O(N^1/4)，100 亿向量规模下 p95 延迟不超过 51 毫秒、召回率达 95%。",
+          en: "A new four-level tree drops query complexity from O(N^1/2) to O(N^1/4), achieving sub-51ms p95 latency at 95% recall across 10 billion vectors.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Platform 上线 Computer Use、Skills API 与 Files API",
+          en: "Claude Platform GA: Computer Use, Skills API, Files API",
+        },
+        description: {
+          zh: "Anthropic 宣布三大能力全面可用并新增浏览器操作工具，让智能体可操作软件、调用团队技能并返回成品文件。",
+          en: "Anthropic makes all three generally available plus a browser tool, letting agents operate software, invoke team skills, and return finished files.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 连发 v2.1.237 与 v2.1.238",
+          en: "Claude Code Ships v2.1.237 and v2.1.238",
+        },
+        description: {
+          zh: "v2.1.237 修复 LLM 网关提示词缓存并新增「简洁」输出风格；v2.1.238 新增 readline 键位设置与插件市场 headersHelper。",
+          en: "v2.1.237 fixes gateway prompt caching and adds a 'concise' output style; v2.1.238 adds readline keybindings and a marketplace headersHelper.",
+        },
+      },
+      {
+        title: {
+          zh: "消息称 OpenAI 最迟将于 2027 年上市",
+          en: "OpenAI Reportedly to Go Public by 2027",
+        },
+        description: {
+          zh: "CFO 在全员大会告知员工最迟 2027 年完成上市；公司已于 6 月秘密提交招股书，本季度年化营收增长 35%，企业级增长 50%，编程办公产品周活破 2000 万。",
+          en: "The CFO told staff an IPO will come by 2027 at the latest; OpenAI secretly filed in June, with annualized revenue up 35%, enterprise up 50%, and 20M+ weekly users for coding and office products.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 推出 AI Futures 博客",
+          en: "OpenAI Launches AI Futures Blog",
+        },
+        description: {
+          zh: "新设 Strategic Futures 团队，探讨自由社会应如何重构以在变革性 AI 出现时保障个人权利与自主权，指出自主系统可能削弱民众谈判地位。",
+          en: "A new Strategic Futures team asks how free societies should restructure to protect rights and autonomy amid transformative AI, warning autonomous systems could erode people's leverage.",
+        },
+      },
+      {
+        title: {
+          zh: "苹果提出基于词汇干预的多语言知识迁移",
+          en: "Apple Proposes Lexical-Intervention Multilingual Transfer",
+        },
+        description: {
+          zh: "解决低资源语言训练数据不足时难以从高资源语言获取知识的问题，无需大量平行语料、翻译系统或辅助模型。",
+          en: "Tackling low-resource knowledge gaps without massive parallel corpora, translation systems, or auxiliary models for data-constrained cross-lingual transfer.",
+        },
+      },
+      {
+        title: {
+          zh: "数据约束下的混合预训练缩放定律",
+          en: "Scaling Laws for Mixture Pretraining Under Data Constraints",
+        },
+        description: {
+          zh: "2000 余次训练实验显示：目标数据占比过低导致领域暴露不足，占比过高则因重复样本引发收益递减乃至过拟合，为混合预训练提供量化依据。",
+          en: "Across 2,000+ training runs: too little target data underexposes the domain while too much causes diminishing returns and overfitting — quantifying mixture pretraining trade-offs.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 初创公司指南：五大规则",
+          en: "Claude Code Startup Guide: Five Rules",
+        },
+        description: {
+          zh: "基于十余家高增长公司的调研，总结出「人人皆可交付、自动化繁琐工作、信任但验证、为重构而构建、原型-自用-产品化」五大规则。",
+          en: "From research across a dozen high-growth startups: everyone ships, automate the tedious, trust but verify, build for refactoring, and prototype-to-dogfood-to-productize.",
+        },
+      },
+      {
+        title: {
+          zh: "LangSmith 预览构建：合并前测试智能体变更",
+          en: "LangSmith Preview Builds: Test Agents Before Merge",
+        },
+        description: {
+          zh: "让团队在合并智能体变更前，于临时的类生产环境部署中测试拉取请求分支，降低变更上线风险。",
+          en: "Teams can test pull-request branches in temporary production-like deployments before merging agent changes, reducing release risk.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-21-hot",
+    date: "2026-08-21",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-21",
+      en: "🔥 Hot Topics · Aug 21, 2026",
+    },
+    summary: {
+      zh: "南京发布「十五五」枢纽经济规划，GDP 1.94 万亿距两万亿一步之遥；解放军融媒体片展示 750 毫米制导火箭弹，射程可达 500 公里；张雪回应机车被查扣「送到统一为止」；山东菏泽父女黄河大堤失踪持续搜寻；江苏盐城主城区突发爆响；常州团队研发灭蚊「激光炮」；女子用公用瑜伽垫感染 HPV；淄博一医院内可办结婚证；大数据杀熟 3 台手机显示 3 个价格；第 18 号台风刚生成第 19 号也将来；诺基亚被曝逐步退出中国大陆市场；低价「三蹦子」分流用户，A00 级微型电动车销量大跌 61.3%。",
+      en: "Nanjing unveils its 15th Five-Year hub-economy plan with GDP at 1.94T RMB, near the 2T mark; a PLA showcase reveals 750mm guided rockets reaching 500km; Zhang Xue vows to keep shipping e-bikes 'until reunification'; the search continues for a father and daughter missing along the Yellow River levee; loud blasts rock Yancheng; a Changzhou team builds a laser 'mosquito cannon'; a woman contracts HPV from a shared yoga mat; a Zibo hospital now hosts marriage registration; big-data price discrimination shows three prices on three phones; Typhoon 18 forms with No.19 close behind; Nokia reportedly exits mainland China step by step; cheap three-wheelers squeeze A00 EVs, whose sales plunge 61.3%.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "「准两万亿」之城要上桌了",
+          en: "The 'Near-2-Trillion' City Steps Up",
+        },
+        description: {
+          zh: "南京发布「十五五」枢纽经济发展规划，2025 年 GDP 达 1.94 万亿元，将建设高能级供应链中心、打造「五型」物流枢纽作为战略重点。",
+          en: "Nanjing's 15th Five-Year hub-economy plan targets a high-capability supply-chain center and five-type logistics hubs, with 2025 GDP at 1.94T RMB — steps from 2 trillion.",
+        },
+      },
+      {
+        title: {
+          zh: "解放军新锐武器：可覆盖台海与那国岛",
+          en: "PLA New Weapon Can Cover Taiwan Strait and Yonaguni",
+        },
+        description: {
+          zh: "融媒体片《制胜》展示陆军远箱火 750 毫米制导火箭弹，射程可达 500 公里，打击精度和威力堪比战术导弹。",
+          en: "The 'Victory' showcase features the Army's 750mm guided rocket with 500km range — precision and power rivaling tactical missiles.",
+        },
+      },
+      {
+        title: {
+          zh: "张雪：送到统一为止",
+          en: "Zhang Xue: Shipping Until Reunification",
+        },
+        description: {
+          zh: "针对机车拆解输台遭查扣，张雪喊话车主可找律师援助追回车辆、成本全由他承担，要不回来就再送，「送到统一为止」。",
+          en: "After Taiwan seized his disassembled e-bikes, Zhang Xue pledged to cover legal costs for owners, replace unrecovered bikes, and keep sending 'until reunification.'",
+        },
+      },
+      {
+        title: {
+          zh: "父女黄河大堤失踪 车上录音曝光",
+          en: "Father and Daughter Missing at Yellow River Levee",
+        },
+        description: {
+          zh: "菏泽 3 岁女童随父前往黄河大堤时疑似落水失联，父亲遗体已在下游被打捞发现，多支救援队沿河昼夜搜寻孩子仍未找到。",
+          en: "A 3-year-old in Heze vanished with her father at the levee, apparently into the river; his body was recovered downstream as rescue teams search day and night for the girl.",
+        },
+      },
+      {
+        title: {
+          zh: "江苏盐城爆响",
+          en: "Loud Blasts Rock Yancheng, Jiangsu",
+        },
+        description: {
+          zh: "盐城市主城区突发两声以上爆响，窗户明显振动，路边汽车防盗报警被触发，原因待官方通报。",
+          en: "Multiple booms shook downtown Yancheng, rattling windows and triggering car alarms, with the cause pending official explanation.",
+        },
+      },
+      {
+        title: {
+          zh: "真实版大炮打蚊子",
+          en: "A Real-Life Cannon Shooting Mosquitoes",
+        },
+        description: {
+          zh: "常州一年轻团队研发灭蚊「激光炮」，毫米级雷达实时捕捉蚊子后用高能脉冲激光精准击中蚊翅，全程无需人工操作。",
+          en: "A young Changzhou team built a mosquito-killing 'laser cannon' that tracks mosquitoes with millimeter radar and zaps wings with pulsed lasers, fully automated.",
+        },
+      },
+      {
+        title: {
+          zh: "女子用了公用瑜伽垫后感染HPV",
+          en: "Woman Contracts HPV from Shared Yoga Mat",
+        },
+        description: {
+          zh: "武汉 28 岁女子长期使用公用瑜伽垫后确诊扁平疣，医生提醒夏季湿热环境下病毒可在垫面存活数小时，皮肤破损时易感染，勿自行抠挠。",
+          en: "A 28-year-old in Wuhan developed flat warts after months on shared mats; doctors warn HPV survives hours on surfaces in humid summer conditions — don't scratch.",
+        },
+      },
+      {
+        title: {
+          zh: "医院能办结婚证了",
+          en: "You Can Now Register Marriage at a Hospital",
+        },
+        description: {
+          zh: "淄博市临淄区妇幼保健院内设婚姻登记处，婚前检查后可直接领证，该处只办结婚不办离婚。",
+          en: "Zibo's Linzi maternal hospital hosts a marriage registry — couples can register right after premarital exams (marriage only, no divorce).",
+        },
+      },
+      {
+        title: {
+          zh: "大数据杀熟 3台手机竟显示3个价格",
+          en: "Big-Data Price Bias: Three Phones, Three Prices",
+        },
+        description: {
+          zh: "同一家烤肉店团购套餐 3 台手机显示 3 个价格、最大差价 37 元，高等级会员反而支付更高，律师称属「价格歧视」，消费者有权公平交易。",
+          en: "One BBQ deal showed three prices on three phones (37 RMB apart), with premium members paying more — lawyers call it price discrimination violating fair-trading rights.",
+        },
+      },
+      {
+        title: {
+          zh: "第18号台风刚生成 第19号台风也来了",
+          en: "Typhoon 18 Forms, No.19 Close Behind",
+        },
+        description: {
+          zh: "第 18 号台风「沙德尔」生成，最强可达超强台风级，路径 25 日后才明朗；南海热带低压可能加强为第 19 号台风，江浙沪需注意防范。",
+          en: "Typhoon Satdo could reach super-typhoon strength with its path unclear until Aug 25; a South China Sea depression may become No.19 — Jiangsu-Zhejiang-Shanghai should stay alert.",
+        },
+      },
+      {
+        title: {
+          zh: "诺基亚回应退出中国大陆市场",
+          en: "Nokia Responds to China Exit Reports",
+        },
+        description: {
+          zh: "报道称诺基亚将在华分批裁员并关闭多个办公地点和工厂，未来或仅保留售后服务；诺基亚称因业务下滑正调整在华运营布局。",
+          en: "Reports say Nokia will cut China jobs in waves and close offices and plants, possibly keeping only after-sales service; Nokia says it is adjusting operations amid declining business.",
+        },
+      },
+      {
+        title: {
+          zh: "「三蹦子」也来抢市场 A00级销量大跌61.3%",
+          en: "Three-Wheelers Squeeze A00 EVs, Sales Down 61.3%",
+        },
+        description: {
+          zh: "前 7 个月 A00 级微型电动车销量同比大跌 61.3%，受政策与 A0 级车型挤压，还遭售价仅几万元的电动三轮车分流，行业或靠精品化与出海寻出路。",
+          en: "A00 micro-EV sales plunged 61.3% YoY in seven months, squeezed by policy, A0 models, and cheap electric trikes — the segment may survive via premium products and exports.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-20",
     date: "2026-08-20",
     title: {
