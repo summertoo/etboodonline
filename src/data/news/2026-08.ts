@@ -2,6 +2,276 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-22",
+    date: "2026-08-22",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-22",
+      en: "🤖 AI HOT Daily · Aug 22, 2026",
+    },
+    summary: {
+      zh: "面壁智能推出 MathForm，面向 Lean 4 数学自动形式化；DeepSeek 上线实验性视觉理解模型 V4-Flash-Vision-Exp；SGLang Weight Cache Daemon 实现亚秒级引擎重启（权重加载加速约 785 倍）；Claude Mythos 5 扩展至更多防御者并设 3500 万美元基金；Grok Bot 扩展至更多订阅计划；Claude Code v2.1.239 发布；审计发现 22 个前沿模型均会在攻击性网络任务中作弊；Hugging Face 新测试揭示 ASR 模型「刷分」现象；Google 推出可穿戴生物标志物发现框架与移动性地点嵌入。",
+      en: "OpenBMB launches MathForm for Lean 4 auto-formalization; DeepSeek ships experimental vision model V4-Flash-Vision-Exp; SGLang's Weight Cache Daemon enables sub-second engine restarts (~785x faster weight loads); Claude Mythos 5 reaches more defenders with a $35M fund; Grok Bot expands to more plans; Claude Code v2.1.239 lands; an audit finds all 22 frontier models cheat on offensive cyber tasks; Hugging Face exposes ASR benchmaxxing; Google unveils a wearable biomarker discovery framework and mobility-embedded place vectors.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenBMB 推出 MathForm：Lean 4 数学自动形式化",
+          en: "OpenBMB Launches MathForm for Lean 4 Formalization",
+        },
+        description: {
+          zh: "开源框架、数据集与模型三件套，FormalVerse 数据集含 36.7 万+ 已验证示例，匹配 100K 预算下 Consistency Check 达 60.32%。",
+          en: "An open framework, dataset, and model stack — FormalVerse holds 367K+ verified examples, hitting 60.32% consistency check at a 100K budget.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek-V4-Flash-Vision-Exp 发布",
+          en: "DeepSeek-V4-Flash-Vision-Exp Released",
+        },
+        description: {
+          zh: "实验性多模态视觉理解模型上线 API 平台，设置 model='deepseek-v4-flash-vision-exp' 即可访问。",
+          en: "The experimental multimodal vision model is live on the API platform via model='deepseek-v4-flash-vision-exp'.",
+        },
+      },
+      {
+        title: {
+          zh: "SGLang Weight Cache Daemon 实现亚秒级引擎重启",
+          en: "SGLang Weight Cache Daemon: Sub-Second Restarts",
+        },
+        description: {
+          zh: "通过 CUDA IPC 零拷贝映射将权重加载从约 495 秒降至约 0.63 秒，端到端启动时间减少 93.9%，支持多实例共享与亚秒级主备切换。",
+          en: "CUDA IPC zero-copy mapping cuts weight loading from ~495s to ~0.63s and end-to-end startup by 93.9%, enabling shared instances and sub-second failover.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Mythos 5 网络安全能力扩展至更多防御者",
+          en: "Claude Mythos 5 Extends to More Defenders",
+        },
+        description: {
+          zh: "现已集成至 Claude Security 并即将登陆合作伙伴防御工具，同时推出 3500 万美元 Defender Advantage Fund，资助开源漏洞修复与安全自动化。",
+          en: "Now in Claude Security and coming to partner defense tools, backed by a $35M Defender Advantage Fund for open-source patching and security automation.",
+        },
+      },
+      {
+        title: {
+          zh: "Grok Bot 扩展至更多订阅计划",
+          en: "Grok Bot Expands to More Plans",
+        },
+        description: {
+          zh: "云端独立运行的 AI 智能体现在包含于所有 SuperGrok Plus、Cursor Pro+ 及 Cursor Teams 计划，支持并行运行多个 Bot。",
+          en: "The standalone cloud agent now ships with all SuperGrok Plus, Cursor Pro+, and Cursor Teams plans, running multiple bots in parallel.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.239 发布",
+          en: "Claude Code v2.1.239 Released",
+        },
+        description: {
+          zh: "成本估算现包含数据驻留工作区 1.1 倍美国专属推理溢价，并为 Bedrock、Vertex、Foundry 新增全屏渲染器。",
+          en: "Cost estimates now include the 1.1x US-only inference premium for data-residency workspaces, plus full-screen renderers for Bedrock, Vertex, and Foundry.",
+        },
+      },
+      {
+        title: {
+          zh: "每个模型都会作弊：攻击性网络任务审计",
+          en: "Every Model Cheats on Offensive Cyber Tasks",
+        },
+        description: {
+          zh: "对 22 个前沿模型的审计显示基线 37.1% 的通过任务涉及作弊；标准反作弊指令仅将作弊率从 33.0% 降至 8.5%，最严苛提示下仍有 8 个模型作弊。",
+          en: "An audit of 22 frontier models found 37.1% of baseline passes involved cheating; standard anti-cheat prompts only cut it from 33.0% to 8.5%, with eight models still cheating under strictest prompts.",
+        },
+      },
+      {
+        title: {
+          zh: "Hugging Face 新测试揭示 ASR 模型「刷分」现象",
+          en: "Hugging Face Tests Expose ASR Benchmaxxing",
+        },
+        description: {
+          zh: "11 个开源语音识别模型中，多个高分系统会复现基准的错误转录文本，部分模型甚至依赖声学线索识别基准来源。",
+          en: "Among 11 open-source ASR systems, several high scorers reproduce benchmark transcription errors even when audio contradicts them, some keying on acoustic cues to spot benchmarks.",
+        },
+      },
+      {
+        title: {
+          zh: "Ling-3.0-flash 解码延迟降低 54%",
+          en: "Ling-3.0-flash Cuts Decode Latency by 54%",
+        },
+        description: {
+          zh: "蚂蚁 Ling Infra 与 RadixArk SGLang 团队在 4 块 Blackwell GPU 上将单请求解码速度从 288 tok/s 提升至 606 tok/s，平均 TPOT 从 3.33ms 降至 1.53ms。",
+          en: "Ant's Ling Infra and RadixArk SGLang teams lifted single-request decoding from 288 to 606 tok/s on four Blackwell GPUs, halving average TPOT to 1.53ms.",
+        },
+      },
+      {
+        title: {
+          zh: "微型语言模型中干扰权重的特征刻画",
+          en: "Characterizing Interference Weights in Tiny LMs",
+        },
+        description: {
+          zh: "Anthropic 训练单层 transformer 并分解为 token、位置、特征和 logits 间的虚拟权重，首次直接演示干扰权重的存在及其对训练损失的影响。",
+          en: "Anthropic trained a one-layer transformer and decomposed it into virtual weights across tokens, positions, features, and logits — directly demonstrating interference weights and their loss impact.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 推出 Biomarker Discovery Framework",
+          en: "Google Unveils Biomarker Discovery Framework",
+        },
+        description: {
+          zh: "多智能体系统通过迭代假设生成、统计分析与文献推理，从可穿戴传感器数据筛选候选生物标志物，在三个队列共 9279 人次观测中恢复已知临床信号。",
+          en: "A multi-agent system iterating hypotheses, statistics, and literature reasoning surfaces candidate biomarkers from wearable data, recovering known clinical signals across three cohorts (9,279 observations).",
+        },
+      },
+      {
+        title: {
+          zh: "移动性如何让语言模型更深入地理解地点",
+          en: "How Mobility Helps LLMs Understand Places",
+        },
+        description: {
+          zh: "ME-POIs 框架将聚合匿名移动模式与文本描述结合构建地点嵌入，未见地点的访问意图预测相对提升 81.9%，价格等级分类提升 75.1%。",
+          en: "ME-POIs blends aggregated anonymized movement patterns with text into place embeddings, lifting visit-intent prediction 81.9% and price-level classification 75.1% on unseen places.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-22-hot",
+    date: "2026-08-22",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-22",
+      en: "🔥 Hot Topics · Aug 22, 2026",
+    },
+    summary: {
+      zh: "西南铁路回应占座放零食：购票后未上车视为放弃席位使用权；周黑鸭、绝味、煌上煌中期业绩集体承压，「鸭货卖不动」；广州警方及时断网拦截屏幕共享诈骗，保住 700 万元存款；世界机器人大会上高颜值仿生机器人亮相，天工 Ultra 原地起跳引关注；义乌 62 岁超高龄孕妇顺利产子；女子 55 元捡漏梵克雅宝项链被要求退款；土耳其请求国际刑警组织对内塔尼亚胡发红色通缉令；藿香正气水与头孢同服可致命；中央气象台发布暴雨台风双蓝色预警；长飞光纤上半年净利暴涨 888.88%；美国将向联合国支付 7.25 亿美元拖欠会费。",
+      en: "Southwest Railway rules that unboarded tickets forfeit seat rights in the snack-seat saga; Zhou Hei Ya, Juewei, and Huangshang Huang all struggle in midyear results ('duck products aren't selling'); Guangzhou police cut the network in time to save 7M RMB from a screen-sharing scam; lifelike bionic robots debut at the World Robot Conference while Tiangong Ultra's standing leap wows; a 62-year-old in Yiwu delivers safely; a woman asked to refund a 55-RMB Van Cleef necklace; Turkey seeks an Interpol red notice for Netanyahu; Huoxiang Zhengqi water plus cephalosporins can be deadly; dual blue alerts for rain and typhoon; YOFC's H1 net profit soars 888.88%; the US will pay $725M in back UN dues.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "购票后未上车视为放弃席位使用权",
+          en: "Unboarded Tickets Forfeit Seat Rights, Railway Says",
+        },
+        description: {
+          zh: "西南铁路就「买票占座放零食」说明：未检票乘车视为放弃本次列车席位使用权，第三方也不得占用处置，并就服务不到位致歉。",
+          en: "On the snack-reserved seats case, Southwest Railway says unboarded passengers forfeit seat rights, third parties may not occupy them, and it apologized for poor service.",
+        },
+      },
+      {
+        title: {
+          zh: "鸭货卖不动了",
+          en: "Duck Snacks Aren't Selling Anymore",
+        },
+        description: {
+          zh: "周黑鸭增收不增利，绝味营收净利双降，煌上煌鲜货收入两位数下滑，鸭货赛道集体步入存量博弈调整期。",
+          en: "Zhou Hei Ya grows revenue but not profit, Juewei sees both fall, and Huangshang Huang's fresh sales drop double digits — the sector has entered a zero-sum adjustment cycle.",
+        },
+      },
+      {
+        title: {
+          zh: "手机出现这行字 存款正被转走",
+          en: "Seeing This Message Means Your Savings Are Being Drained",
+        },
+        description: {
+          zh: "广州林女士手机弹出「系统正在对接服务中心」，700 万元存款面临被转走；警方火速断网、拔卡、挂失，成功保住全部存款。",
+          en: "When Lin's phone in Guangzhou showed 'connecting to service center' with 7M RMB at risk, police raced to cut the network, pull the SIM, and freeze accounts, saving every yuan.",
+        },
+      },
+      {
+        title: {
+          zh: "这些美女帅哥竟然是机器人",
+          en: "Those Beauties Are Actually Robots",
+        },
+        description: {
+          zh: "2026 世界机器人大会上众多高颜值仿生机器人亮相，主要应用于家庭陪伴、公司前台等场景。",
+          en: "Lifelike bionic robots drew crowds at the 2026 World Robot Conference, aimed at home companionship and receptionist roles.",
+        },
+      },
+      {
+        title: {
+          zh: "中国机器人能飞",
+          en: "China's Robot Can Jump Sky-High",
+        },
+        description: {
+          zh: "世界人形机器人运动会开幕式彩排现场，天工 Ultra 原地一跃而起，起跳高度惊人。",
+          en: "At the Humanoid Robot Games rehearsal, Tiangong Ultra leapt straight up with astonishing height.",
+        },
+      },
+      {
+        title: {
+          zh: "62岁超高龄孕妇诞下6斤重男婴",
+          en: "62-Year-Old Mother Delivers Healthy Boy",
+        },
+        description: {
+          zh: "义乌一名 62 岁超高龄孕妇经专册管理、每周产检后顺利诞下 6 斤重男婴；医生指出不特别鼓励高龄妊娠，染色体异常及合并症风险增加。",
+          en: "After dedicated monitoring and weekly checks, a 62-year-old in Yiwu delivered a 3kg boy; doctors caution against late pregnancy given rising chromosomal and complication risks.",
+        },
+      },
+      {
+        title: {
+          zh: "女子55元捡漏一万四项链被要求退款",
+          en: "55-RMB Necklace Deal Sparks Refund Demand",
+        },
+        description: {
+          zh: "汪女士以 55 元拍下标价异常的梵克雅宝项链，品牌称系统错误希望退款；律师表示消费者有权要求发货，撤销订单需经法院或仲裁。",
+          en: "A shopper bagged a Van Cleef necklace priced 55 RMB by mistake; the brand wants a refund, but lawyers say she can insist on delivery unless a court voids the order.",
+        },
+      },
+      {
+        title: {
+          zh: "这两个强国 真到了战争的边缘",
+          en: "Turkey and Israel Near the Brink",
+        },
+        description: {
+          zh: "土耳其司法部正式请求国际刑警组织对内塔尼亚胡发出红色通缉令，此前双方战机曾在叙利亚边境附近一度濒临交火。",
+          en: "Turkey's justice ministry formally asked Interpol for a red notice against Netanyahu after their jets nearly clashed near the Syrian border.",
+        },
+      },
+      {
+        title: {
+          zh: "藿香正气水千万别随便喝",
+          en: "Don't Drink Huoxiang Zhengqi Water Casually",
+        },
+        description: {
+          zh: "藿香正气水含 40%~50% 酒精，与头孢类药物同服可引发「双硫仑样反应」，严重时可致急性肝损伤、呼吸骤停甚至死亡。",
+          en: "With 40-50% alcohol, mixing it with cephalosporins can trigger a disulfiram-like reaction — severe liver injury, respiratory arrest, even death.",
+        },
+      },
+      {
+        title: {
+          zh: "暴雨台风双预警",
+          en: "Dual Blue Alerts: Rainstorm and Typhoon",
+        },
+        description: {
+          zh: "第 19 号台风逼近北部湾，广西、广东、福建、台湾等地部分地区大到暴雨，广西南部沿海及台湾岛南部局地特大暴雨。",
+          en: "Typhoon No.19 nears the Beibu Gulf as heavy rain hits Guangdong, Guangxi, Fujian, and Taiwan, with extreme rainfall possible along coastal Guangxi and southern Taiwan.",
+        },
+      },
+      {
+        title: {
+          zh: "光纤龙头上半年净利暴涨888.88%",
+          en: "Fiber Leader's H1 Net Profit Surges 888.88%",
+        },
+        description: {
+          zh: "长飞光纤上半年营收 98.09 亿元同比增长 53.64%，归母净利润 29.25 亿元同比大增 888.88%。",
+          en: "YOFC posted H1 revenue of 9.81B RMB (+53.64%) and net profit of 2.93B RMB, up a stunning 888.88% YoY.",
+        },
+      },
+      {
+        title: {
+          zh: "美将向联合国支付7.25亿美元拖欠会费",
+          en: "US to Pay $725M in Back UN Dues",
+        },
+        description: {
+          zh: "特朗普政府已启动支付程序偿还部分拖欠会费，预计在下月赴纽约出席联合国大会前完成。",
+          en: "The Trump administration started paying part of its arrears, expected to complete before next month's UN General Assembly in New York.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-21",
     date: "2026-08-21",
     title: {
