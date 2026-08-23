@@ -2,6 +2,216 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-23",
+    date: "2026-08-23",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-23",
+      en: "🤖 AI HOT Daily · Aug 23, 2026",
+    },
+    summary: {
+      zh: "第二届世界人形机器人运动会开幕，2056 台机器人齐聚「冰丝带」，天工 Ultra 百米跑出 9.39 秒打破博尔特人类纪录；Simon Willison 探讨智能体时代的软件工程；为什么你的本地大模型感觉更「笨」——问题多在部署配置；Prime Intellect 发布 NanoGPT Speedrun Frontier 刷新 GPT 训练速度纪录；Munder Difflin 用「克隆体」智能体运营整个办公室；OzBrain 打造智能体与团队之间的共享知识大脑。",
+      en: "The second World Humanoid Robot Games opens at the 'Ice Ribbon' with 2,056 robots as Tiangong Ultra breaks Bolt's human 100m record at 9.39s; Simon Willison on software engineering in the agent era; why your local LLM feels dumber than it is — usually deployment config; Prime Intellect's NanoGPT Speedrun Frontier keeps smashing training-speed records; Munder Difflin runs an entire office of agent clones; OzBrain builds a shared knowledge brain for agents and teams.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "第二届世界人形机器人运动会开幕",
+          en: "Second World Humanoid Robot Games Opens",
+        },
+        description: {
+          zh: "666 支队伍、2056 台机器人在「冰丝带」竞技 51 赛项，队伍数较首届增长 138%；天工 Ultra 百米预赛跑出 9.39 秒打破博尔特人类纪录，荣耀「闪电」400 米 41.95 秒同样破纪录。",
+          en: "666 teams and 2,056 robots compete across 51 events — teams up 138%; Tiangong Ultra ran 9.39s in the 100m heats breaking Bolt's human record, and Honor's 'Lightning' took the 400m in 41.95s, also a record.",
+        },
+      },
+      {
+        title: {
+          zh: "Simon Willison：智能体时代的软件工程",
+          en: "Simon Willison: Software Engineering in the Agent Era",
+        },
+        description: {
+          zh: "开发者角色从亲手写代码转向设计、审查与编排 AI 智能体完成工作，总结智能体驱动开发的实践模式与经验教训。",
+          en: "Developers shift from writing code by hand to designing, reviewing, and orchestrating AI agents — a roundup of agentic development patterns and lessons.",
+        },
+      },
+      {
+        title: {
+          zh: "为什么你的本地大模型感觉比实际更「笨」",
+          en: "Why Your Local LLM Feels Dumber Than It Is",
+        },
+        description: {
+          zh: "量化精度损失、上下文配置不当、采样参数错误、提示模板不匹配是常见原因，多数情况下问题出在部署配置而非模型本身。",
+          en: "Quantization loss, wrong context settings, bad sampling params, and mismatched prompt templates are usual suspects — mostly config, not the model.",
+        },
+      },
+      {
+        title: {
+          zh: "NanoGPT Speedrun Frontier 刷新训练速度纪录",
+          en: "NanoGPT Speedrun Frontier Smashes Records",
+        },
+        description: {
+          zh: "Prime Intellect 以竞赛形式挑战在最短时间内将 GPT 训练到目标性能，持续刷新训练效率纪录，为低成本高效预训练提供公开基准。",
+          en: "Prime Intellect turns fastest-GPT-training into an ongoing competition that keeps resetting efficiency records, providing a public benchmark for low-cost pretraining.",
+        },
+      },
+      {
+        title: {
+          zh: "Munder Difflin：用克隆体运营一家办公室",
+          en: "Munder Difflin: An Office Run by Agent Clones",
+        },
+        description: {
+          zh: "实验性项目用多个 AI 智能体克隆体模拟一整个办公室的员工分工协作，探索多智能体组织自动化办公的可能性。",
+          en: "An experimental project simulates an entire office staffed by AI agent clones, exploring multi-agent organizational automation.",
+        },
+      },
+      {
+        title: {
+          zh: "OzBrain：智能体与团队的共享知识大脑",
+          en: "OzBrain: A Shared Knowledge Brain for Agents",
+        },
+        description: {
+          zh: "面向智能体的共享知识库产品，作者认为「智能体优先」的对话式界面将成为主流软件形态，复杂仪表盘 UI 将逐渐被取代。",
+          en: "A shared knowledge base for agents whose author argues agent-first conversational interfaces will become the dominant software form, replacing complex dashboards.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-23-hot",
+    date: "2026-08-23",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-23",
+      en: "🔥 Hot Topics · Aug 23, 2026",
+    },
+    summary: {
+      zh: "成都铁路局回应占座零食风波：「座位是给人坐的，不是来放零食的」；世界机器人大会显示具身智能正加速迈向应用；成都蓉城通报一名观众赛前晕倒离世；日本茨城县 5.9 级地震东京震感强烈；人民日报要求甲醛白菜处置从速从严；加拿大宣布退出对美贸易谈判并将于 9 月 8 日启动等额报复性关税；榆林男孩遭民警掌掴致颅脑损伤；三大台风影响中国，「紫檀」威胁最大；DeepSeek 调价：周末全天按低谷价计费；樊振东德甲首秀开门红；中国男篮时隔 12 年再进 U18 亚洲杯决赛；「AI 红娘」承诺三年不结婚全额退款。",
+      en: "Chengdu Railway rules 'seats are for people, not snacks' in the reserved-seat saga; the World Robot Conference shows embodied AI racing toward real work; Chengdu Rongcheng mourns a fan who collapsed before kickoff; a magnitude-5.9 quake rattles Ibaraki and Tokyo; People's Daily demands swift, strict action on formaldehyde-soaked cabbage; Canada quits US trade talks and will slap matching tariffs on Sept 8; a Yulin boy beaten by a police officer suffers brain injury; three typhoons menace China with Zitan the biggest threat; DeepSeek re-prices weekends at off-peak rates; Fan Zhendong wins his Bundesliga debut; China's U18 men reach the Asian Cup final after 12 years; an 'AI matchmaker' pledges full refunds if couples don't marry within three years.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "「座位是给人坐的 不是来放零食的」",
+          en: "'Seats Are for People, Not Snacks'",
+        },
+        description: {
+          zh: "成都局集团发布说明：未检票旅客已放弃席位使用权，另两名旅客不能占用处置该席位，列车工作人员应现场协调处置。",
+          en: "Chengdu Railway Group says the unboarded passenger forfeited the seat, the snack-storing pair couldn't claim or dispose of it, and staff should have mediated on site.",
+        },
+      },
+      {
+        title: {
+          zh: "具身智能机器人正加速迈向应用",
+          en: "Embodied Robots Accelerate Toward Real Work",
+        },
+        description: {
+          zh: "2026 世界机器人大会上 48 家央企首次组团参展，覆盖全链条布局能力，随着本体可靠性与大脑能力提升，关键词就是「干活儿」。",
+          en: "At WRC 2026, 48 central SOEs exhibit together for the first time covering the full stack; as bodies and brains improve, the watchword is simply 'getting work done.'",
+        },
+      },
+      {
+        title: {
+          zh: "成都蓉城队通报：一观众晕倒离世",
+          en: "Fan Dies After Collapsing Before Rongcheng Match",
+        },
+        description: {
+          zh: "中超开赛前观众刘某入场时突发晕倒，医疗团队第一时间抢救送医后不治，俱乐部将全力协助善后并呼吁不信谣、不传谣。",
+          en: "Spectator Liu collapsed entering the stadium before kickoff and died despite immediate aid; the club will support the family and urged fans not to spread rumors.",
+        },
+      },
+      {
+        title: {
+          zh: "日本东京震感强烈",
+          en: "Strong Quake Shakes Tokyo",
+        },
+        description: {
+          zh: "茨城县发生 5.9 级地震，最大震感 5 弱，东京震感明显；气象厅称无海啸风险，福岛第一、第二及东海核电站未发现异常。",
+          en: "A magnitude-5.9 quake off Ibaraki registered upper-5 shaking in Tokyo; no tsunami risk and no abnormalities at Fukushima Daiichi, Daini, or Tokai plants.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报：处置甲醛白菜必须从速从严",
+          en: "People's Daily: Swift, Strict Action on Formaldehyde Cabbage",
+        },
+        description: {
+          zh: "张家口康保县部分大白菜装车前蘸甲醛保鲜，当地确认属实并对相关人员车辆采取强制措施、追溯流向；评论要求顺运输链条一追到底、及时拦截。",
+          en: "Cabbage dipped in formaldehyde before loading in Kangbao was confirmed; officials detained those involved and are tracing shipments, with the paper urging interception along the whole chain.",
+        },
+      },
+      {
+        title: {
+          zh: "加拿大掀桌子了：退出对美谈判并征报复性关税",
+          en: "Canada Flips the Table: Quits Talks, Readies Tariffs",
+        },
+        description: {
+          zh: "总理卡尼宣布退出与美国的贸易谈判，痛批美方不断加税缺乏信用；因美方对 200 亿加元商品征 50% 关税，等额报复性关税将于 9 月 8 日生效。",
+          en: "PM Carney quit trade talks with Washington, blasting endless tariffs and bad faith; matching retaliation on $20B of goods takes effect Sept 8.",
+        },
+      },
+      {
+        title: {
+          zh: "男孩被两男子掌掴致伤 一人系民警",
+          en: "Boy Beaten by Two Men, One a Police Officer",
+        },
+        description: {
+          zh: "榆林定边县 13 岁男孩回家途中遭民警郭某及公积金管理部刘某无故掌掴，致闭合性颅脑损伤休学一个月，二人已被拘留 10 日、罚款 1000 元。",
+          en: "A 13-year-old in Dingbian suffered a closed brain injury after being slapped without cause by an officer and a housing-fund staffer; both got 10 days detention and fines.",
+        },
+      },
+      {
+        title: {
+          zh: "三大台风将如何影响中国",
+          en: "Three Typhoons Set Their Sights on China",
+        },
+        description: {
+          zh: "「沙德尔」移向东海、「紫檀」在北部湾回旋、「简拉维」位于台湾以东，未来 3 天对我国影响最大的是北部湾的「紫檀」。",
+          en: "Satdo heads for the East China Sea, Zitan swirls in the Beibu Gulf, and Cilawat sits east of Taiwan — Zitan poses the biggest threat over the next three days.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek再度调价：周末统一按低谷价收费",
+          en: "DeepSeek Re-prices: Weekends All Off-Peak",
+        },
+        description: {
+          zh: "8 月 23 日起周六、周日全天统一按低谷时段价格收费；此前 8 月 17 日刚实施峰谷定价，高峰价格为空闲时段两倍。",
+          en: "From Aug 23, Saturdays and Sundays bill at off-peak rates around the clock, following Aug 17's peak/off-peak scheme where peaks cost double.",
+        },
+      },
+      {
+        title: {
+          zh: "樊振东德甲新赛季开门红",
+          en: "Fan Zhendong Wins Bundesliga Debut",
+        },
+        description: {
+          zh: "代表杜塞尔多夫俱乐部出战的樊振东以两个 3-1 赢得德甲首秀，虽一度错失赛点仍顶住压力，助球队总比分 3-1 取胜。",
+          en: "Playing for Duesseldorf, Fan Zhendong took both his matches 3-1 in his German league debut, holding firm after missing match points to seal a 3-1 team win.",
+        },
+      },
+      {
+        title: {
+          zh: "中国男篮时隔12年再进U18亚洲杯决赛",
+          en: "China's U18 Men Reach Asian Cup Final After 12 Years",
+        },
+        description: {
+          zh: "半决赛 79:66 战胜新西兰，张淳智命中四记三分砍下全队最高 18 分；上一次进决赛是 2014 年多哈并夺冠，过去三届均为季军。",
+          en: "China beat New Zealand 79-66 in the semis behind Zhang Chunzhi's four threes and 18 points; their last final was 2014 Doha, where they won gold.",
+        },
+      },
+      {
+        title: {
+          zh: "「AI红娘」承诺三年不结婚就退款",
+          en: "'AI Matchmaker' Refunds If You Don't Marry in 3 Years",
+        },
+        description: {
+          zh: "良配科技推出 AI 婚恋产品，主打三年不结婚全额退款，同一时间仅支持 1v1 匹配，注册需与 AI 红娘进行 20 分钟深度交流以筛选诚意。",
+          en: "Liangpei Tech's AI dating product promises full refunds if couples don't wed within three years, allows one match at a time, and requires a 20-minute AI interview to join.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-22",
     date: "2026-08-22",
     title: {
