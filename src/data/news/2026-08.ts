@@ -2,6 +2,276 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-25",
+    date: "2026-08-25",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-25",
+      en: "🤖 AI HOT Daily · Aug 25, 2026",
+    },
+    summary: {
+      zh: "GPT-5.6 登陆软件开发智能体 Kiro，任务成本降低约 82%；NVIDIA Vera Rubin NVL72 在智能体负载下每瓦特工作量提升至 30 倍；Meta 开源面向 AI 规模以太网的 RDMA 协议 MetaRoCE；NVLink Fusion 让定制 XPU 以 3 倍低延迟接入 AI 工厂；MTIA 300 成为 Meta 首款内置 NIC 的训练芯片；Mistral 与 HUMAIN 达成数亿欧元合作推进沙特主权 AI；丰田北美用 Deep Agents 和 LangSmith 把交付周期从 6 个月缩至 4 天；苹果提出 Internalized Visual Thinking 实现零额外成本的主动视频推理。",
+      en: "GPT-5.6 lands in the coding agent Kiro cutting task costs ~82%; NVIDIA's Vera Rubin NVL72 lifts per-watt agentic throughput up to 30x; Meta open-sources MetaRoCE, an RDMA transport for AI-scale Ethernet; NVLink Fusion brings custom XPUs into AI factories with 3x lower latency; MTIA 300 is Meta's first training chip with built-in NICs; Mistral and HUMAIN strike a nine-figure sovereign-AI deal for Saudi Arabia; Toyota North America cut delivery cycles from six months to four days with Deep Agents and LangSmith; Apple's Internalized Visual Thinking enables proactive video reasoning at zero extra inference cost.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "GPT-5.6 登陆 Kiro，任务成本降低约 82%",
+          en: "GPT-5.6 Comes to Kiro, Slashing Task Costs ~82%",
+        },
+        description: {
+          zh: "Sol、Terra、Luna 三款模型进入开发智能体 Kiro，Terminal-Bench 2.1 测试中 GPT-5.6 Terra 完成任务成本降低约 82%，由 OpenAI 与 AWS 合作优化。",
+          en: "The Sol, Terra, and Luna models arrive in the dev agent Kiro, where Terra cut Terminal-Bench 2.1 task costs ~82% via OpenAI-AWS co-optimization.",
+        },
+      },
+      {
+        title: {
+          zh: "Vera Rubin NVL72：每瓦特工作量提升至 30 倍",
+          en: "Vera Rubin NVL72: Up to 30x Work per Watt",
+        },
+        description: {
+          zh: "NVIDIA 实测显示其在智能体工作负载下每兆瓦吞吐量较 GB300 NVL72 最高提升 30 倍，每百万 token 成本降低至 35 倍。",
+          en: "NVIDIA's benchmarks show up to 30x per-megawatt agentic throughput over GB300 NVL72 and per-million-token costs down 35-fold.",
+        },
+      },
+      {
+        title: {
+          zh: "MetaRoCE：为 AI 规模以太网打造的 RDMA 协议开源",
+          en: "MetaRoCE: An Open RDMA Transport for AI Ethernet",
+        },
+        description: {
+          zh: "专为通用以太网上的 AI 负载设计，经 OCP 发布规范与合规测试套件，原生支持乱序交付、多路径与双向拥塞控制，无需 PFC 即可扩展至百万卡规模。",
+          en: "Released through the OCP with specs and a compliance suite, it adds out-of-order delivery, multipath, and bidirectional congestion control without PFC, scaling toward million-GPU clusters.",
+        },
+      },
+      {
+        title: {
+          zh: "NVLink Fusion 让定制 XPU 融入 AI 工厂",
+          en: "NVLink Fusion Welcomes Custom XPUs into AI Factories",
+        },
+        description: {
+          zh: "将定制 XPU 接入 NVLink 扩展域，端到端延迟比现成以太网方案低 3 倍、数据包速率高 10 倍。",
+          en: "Plugging custom XPUs into the NVLink domain yields 3x lower end-to-end latency and 10x packet rates versus off-the-shelf Ethernet.",
+        },
+      },
+      {
+        title: {
+          zh: "MTIA 300：Meta 首款内置 NIC 的训练芯片",
+          en: "MTIA 300: Meta's First Training Chip with Built-in NICs",
+        },
+        description: {
+          zh: "封装内集成 12 个 800 Gbps RDMA NIC，提供 1.2 TB/s 总 I/O 带宽，通过 16 个消息引擎卸载通信，大规模并发时计算吞吐损耗低于 0.5%。",
+          en: "Twelve 800G RDMA NICs in-package deliver 1.2TB/s of I/O while 16 message engines offload comms, keeping compute loss under 0.5% during large-scale concurrency.",
+        },
+      },
+      {
+        title: {
+          zh: "Mistral 与 HUMAIN 合作推进沙特主权 AI",
+          en: "Mistral and HUMAIN Partner on Saudi Sovereign AI",
+        },
+        description: {
+          zh: "数亿欧元合作覆盖基础设施、模型开发与方案部署，初期聚焦网络安全与语音，并计划开发阿拉伯语表现出众的前沿模型。",
+          en: "The nine-figure deal spans infrastructure, model development, and deployment — starting with cybersecurity and voice plus a strong Arabic frontier model.",
+        },
+      },
+      {
+        title: {
+          zh: "丰田北美：Deep Agents 让交付周期从 6 个月到 4 天",
+          en: "Toyota NA: Six Months to Four Days with Deep Agents",
+        },
+        description: {
+          zh: "借助 Deep Agents 和 LangSmith 运行 50 多个生产环境智能体，并通过 LangSmith 追踪 AI 投资 ROI，支撑企业级规模化落地。",
+          en: "Running 50+ production agents on Deep Agents and LangSmith, Toyota tracks AI ROI in LangSmith to scale enterprise adoption.",
+        },
+      },
+      {
+        title: {
+          zh: "Internalized Visual Thinking：主动视频推理零开销",
+          en: "Internalized Visual Thinking: Zero-Cost Video Reasoning",
+        },
+        description: {
+          zh: "苹果提出 IVT 后训练框架，在训练阶段内化视觉思考，推理时直接进行文本预测，无需生成中间推理图像即可实现主动视频推理。",
+          en: "Apple's post-training framework internalizes visual chain-of-thought so models reason proactively over video with no intermediate images or added inference cost.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 正为一切构建 AI 智能体",
+          en: "OpenAI Is Building an Agent for Everything",
+        },
+        description: {
+          zh: "ChatGPT Work 将 Codex 改造为面向非工程师的智能体产品，最低每月 20 美元；内部 98% 员工使用 Codex，但组织订阅者仅 17%、个人不足 1%。",
+          en: "ChatGPT Work repackages Codex for non-engineers from $20/month; inside OpenAI 98% use Codex, but only 17% of orgs and under 1% of individuals subscribe.",
+        },
+      },
+      {
+        title: {
+          zh: "ADK 如何评估实时语音智能体",
+          en: "How ADK Evaluates Live Voice Agents",
+        },
+        description: {
+          zh: "Google 为 ADK 带来原生实时评估能力，可用模拟用户音频驱动实时语音智能体并对回复打分，与文本智能体共用同一评估循环。",
+          en: "Native live evals let simulated users drive voice agents with audio and score replies within the same loop used for text agents.",
+        },
+      },
+      {
+        title: {
+          zh: "Databricks 支持从本地 IDE 运行调试工作负载",
+          en: "Databricks Runs Workloads from Your Local IDE",
+        },
+        description: {
+          zh: "弥合本地开发环境与云端平台差距，开发者无需切换上下文即可完成编码、测试和部署，直接运行、调试和扩展工作负载。",
+          en: "Developers can code, test, and deploy without context switching, running, debugging, and scaling workloads straight from local IDEs.",
+        },
+      },
+      {
+        title: {
+          zh: "你的 alt 文本能通过检查不代表合格",
+          en: "Passing Alt-Text Checks Doesn't Mean It's Good",
+        },
+        description: {
+          zh: "WebAIM Million 报告显示 16.2% 的图片缺 alt 文本、10.8% 模糊或重复；GitHub 为 Accessibility Scanner 构建插件，用五条确定性规则加视觉模型审查。",
+          en: "WebAIM Million finds 16.2% of images lack alt text and 10.8% vague or duplicated; GitHub built a scanner plugin with five deterministic rules plus optional vision review.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-25-hot",
+    date: "2026-08-25",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-25",
+      en: "🔥 Hot Topics · Aug 25, 2026",
+    },
+    summary: {
+      zh: "银川一中学开学施「发型令」，不合格学生被挡校门外排起理发队；央视曝光兽药无处方销售乱象后沈阳等多地通报；人形机器人运动会中国机器人连刷人类世界纪录；湖南「扶老人被索赔」事件官方确认店主不担责、央评呼吁法律不能和稀泥；台风「艾莎尼」减弱停止编号；韩国 KOSPI 日内跌超 4%、SK 海力士跌超 6%；研究建议 35 岁前开始控糖；美国政府拟撤销多达 20 万个商务和旅游签证；载 20 名中国船员的货轮在孟加拉湾沉没；长宁地震预警出现 15 年来最大误报引发布权责之问；北大原副校长任羽中受贿一审获刑 8 年；人民日报曝光当天腾冲成立专项工作组。",
+      en: "A Yinchuan middle school turns away students whose haircuts fail inspection; CCTV exposes prescription-free veterinary drug sales with multiple cities responding; Chinese humanoid robots keep smashing human world records; officials clear the shopkeeper in Hunan's 'helped elder, got sued' case as state media slams compromise rulings; Typhoon Asona weakens and loses its number; Korea's KOSPI drops over 4% with SK Hynix down 6%; research urges blood-sugar control before 35; the US may revoke up to 200,000 business and tourist visas; a cargo ship with 20 Chinese crew sinks in the Bay of Bengal; China's worst quake-alert miscalibration in 15 years raises authority questions; Peking University's ex-vice president gets 8 years for bribery; Tengchong forms a task force the same day People's Daily exposed its villa town.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "中学施发型令：不合格不让进校门",
+          en: "School Turns Away Students Over Haircuts",
+        },
+        description: {
+          zh: "银川一中学多名学生因发型不达标被挡在校门外排队理发，评论指出教育部并未授权一刀切强制规定发型长度。",
+          en: "Yinchuan students failing hair checks queued for trims outside the gate; critics note no national rule mandates one-size-fits-all haircut standards.",
+        },
+      },
+      {
+        title: {
+          zh: "央视曝光兽药乱象后 多地接连通报",
+          en: "Cities Respond After CCTV Exposes Vet Drug Chaos",
+        },
+        description: {
+          zh: "《财经调查》报道多地兽用处方药随意卖、养殖户用药剂量全凭感觉，药物残留隐患引发担忧，节目播出后多地发布情况通报。",
+          en: "Prescription vet drugs sold freely and dosing done by feel raised residue concerns; after the broadcast, Shenyang and other cities issued statements.",
+        },
+      },
+      {
+        title: {
+          zh: "中国机器人连刷人类世界纪录",
+          en: "Chinese Robots Keep Smashing Human Records",
+        },
+        description: {
+          zh: "400 米大型组天工机器人以 38.15 秒夺金，比人类世界纪录快近 5 秒；1500 米决赛天卓队跑出 2 分 21 秒，大幅超越保持 28 年的人类纪录。",
+          en: "Tiangong took the 400m in 38.15s — nearly five seconds under the human record — while Tianzhuo's 2:21 in the 1500m crushed a mark that stood 28 years.",
+        },
+      },
+      {
+        title: {
+          zh: "官方确认帮扶老人遭索赔店主不担责",
+          en: "Shopkeeper Who Helped Fallen Elder Cleared of Liability",
+        },
+        description: {
+          zh: "祁东县有关部门确认店主无过错不担责，其出于人道主义一次性帮扶 1.9 万元；央媒评论强调调解成功不等于处理正确，法律不能和稀泥。",
+          en: "Qidong County cleared the shopkeeper, who gave 19K RMB on humanitarian grounds; state media stressed settlement doesn't equal correctness and law must not blur right and wrong.",
+        },
+      },
+      {
+        title: {
+          zh: "台风艾莎尼停止编号",
+          en: "Typhoon Asona Loses Its Number",
+        },
+        description: {
+          zh: "今年第 21 号台风「艾莎尼」在西北太平洋明显减弱，环流中心已难确定，中央气象台于 25 日 5 时对其停止编号。",
+          en: "Season's No.21 typhoon Asona weakened markedly over the western Pacific, its center unidentifiable, prompting the NMC to stop tracking it at 5am Aug 25.",
+        },
+      },
+      {
+        title: {
+          zh: "韩国股市大跌 三星跌4% SK海力士跌6%",
+          en: "Korean Stocks Slide: Samsung -4%, SK Hynix -6%",
+        },
+        description: {
+          zh: "韩国 KOSPI 指数日内跌超 4%，三星电子跌逾 4%，SK 海力士跌超 6%。",
+          en: "The KOSPI fell more than 4% intraday as Samsung Electronics dropped over 4% and SK Hynix more than 6%.",
+        },
+      },
+      {
+        title: {
+          zh: "建议这个年龄前开始控糖 很多人晚了",
+          en: "Start Cutting Sugar Before 35, Say Experts",
+        },
+        description: {
+          zh: "40 岁以下群体糖尿病发病率激增 3 倍，指南建议血糖筛查从 40 岁提前至 35 岁；35 岁前控糖可使心脏病、中风风险下降 20%。",
+          en: "With diabetes cases tripling among under-40s, guidelines move screening from 40 to 35 — controlling sugar by then cuts heart attack and stroke risk 20%.",
+        },
+      },
+      {
+        title: {
+          zh: "美欲撤销多达20万个商务和旅游签证",
+          en: "US May Revoke Up to 200,000 Visas",
+        },
+        description: {
+          zh: "针对曾申请或正寻求庇护身份的外国人，或成美国历史上规模最大的一次性签证集体撤销行动，并可能面临法律挑战。",
+          en: "Targeting foreigners who sought asylum status, the mass revocation would be the largest in US history and is likely to face legal challenges.",
+        },
+      },
+      {
+        title: {
+          zh: "载20名中国船员货轮沉没 家属发声",
+          en: "Ship with 20 Chinese Crew Sinks in Bay of Bengal",
+        },
+        description: {
+          zh: "货船 Ocean Winner 在孟加拉湾沉没，船上 24 人中仅 2 名中国船员获救，搜救仍在推进，使馆暂无更新反馈。",
+          en: "Only two of the two dozen aboard the Ocean Winner were rescued; search efforts continue as families speak out and the embassy awaits updates.",
+        },
+      },
+      {
+        title: {
+          zh: "15年来最严重误报 谁有权发地震预警",
+          en: "Worst Quake-Alert Error in 15 Years Sparks Debate",
+        },
+        description: {
+          zh: "长宁 4.7 级地震时成都高新减灾研究所误报 7.7 级，系 15 年来最大偏差；省地震局称 7 月已终止其授权，专家呼吁立法厘清预警发布权责。",
+          en: "The Chengdu institute misread Changning's M4.7 as 7.7 — its biggest miss in 15 years; the provincial bureau says its authorization ended in July, and experts want legal clarity on who may issue alerts.",
+        },
+      },
+      {
+        title: {
+          zh: "北京大学原副校长任羽中被判8年",
+          en: "Ex-PKU Vice President Jailed 8 Years for Bribery",
+        },
+        description: {
+          zh: "任羽中 2006 至 2025 年间非法收受财物共计 3195 万余元，一审以受贿罪判处有期徒刑八年、罚金二百六十万元。",
+          en: "Ren Yuzhong took over 31.95M RMB in bribes from 2006 to 2025, drawing an eight-year sentence plus a 2.6M RMB fine at first instance.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报曝光当天 腾冲成立工作组",
+          en: "Tengchong Forms Task Force Day After Exposure",
+        },
+        description: {
+          zh: "人民日报刊文曝光腾冲私挖山体、削坡建房及「别墅」扩建成数千平方米民宿等现象，当地同日成立专项整改整治工作组全面排查。",
+          en: "After People's Daily detailed illegal hillside digging and villa-to-mansion conversions in Tengchong, the city set up a task force the same day for sweeping inspections.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-24",
     date: "2026-08-24",
     title: {
