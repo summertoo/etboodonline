@@ -2,6 +2,276 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-26",
+    date: "2026-08-26",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-26",
+      en: "🤖 AI HOT Daily · Aug 26, 2026",
+    },
+    summary: {
+      zh: "Google WeatherNext 提前五天预警五级飓风，系美国国家飓风中心首次实时使用 AI 模型；吴恩达 OpenWorker 新版内置三类网络安全智能体；Claude 记忆功能全面打通聊天与 Cowork；Apple 发布搭载 M5 Max/M5 Ultra 的 Mac Studio 与搭载 M6 的 Mac mini，首款 2nm 芯片亮相；OpenAI 自研推理芯片 Jalapeño 首秀并推出 Admin 插件；Anthropic 启动 500 万美元幸福感研究资助；苹果 STARFlow2 统一文本与图像生成架构；Dylan Patel 预计两大实验室到 2028 年将控制全球大部分算力。",
+      en: "Google's WeatherNext flags a Category-5 hurricane five days out — the NHC's first real-time use of an AI model; Andrew Ng's OpenWorker adds three built-in security agents; Claude's memory now spans chat and Cowork with per-item control; Apple unveils Mac Studio with M5 Max/M5 Ultra and a Mac mini on the first 2nm M6 chip; OpenAI debuts its Jalapeño inference silicon plus an Admin plugin; Anthropic launches $5M wellbeing-research grants; Apple's STARFlow2 unifies text and image generation; Dylan Patel expects the two labs to control most global compute by 2028.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "WeatherNext：提前五天预警五级飓风",
+          en: "WeatherNext Flags Cat-5 Hurricane Five Days Out",
+        },
+        description: {
+          zh: "可同时预测风暴路径、强度和规模，比现有系统多一天预警时间；2025 飓风季提前五天预测飓风 Melissa 五级登陆牙买加，系美国国家飓风中心首次实时使用 AI 模型。",
+          en: "Predicting track, intensity, and size together with a full extra day of warning, it foresaw Hurricane Melissa's Category-5 Jamaica landfall five days ahead — the NHC's first live AI model use.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenWorker 新版内置网络安全智能体",
+          en: "OpenWorker Adds Built-in Security Agents",
+        },
+        description: {
+          zh: "吴恩达旗下开源智能体新版内置代码漏洞扫描、依赖供应链注入检测和云安全配置检查三类智能体，harness 完全开源可审计，支持本地运行开源权重模型。",
+          en: "Andrew Ng's open agent ships code-vuln scanning, supply-chain injection detection, and cloud config checks, with a fully auditable open harness and local open-weight model support.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 记忆功能全面打通聊天与 Cowork",
+          en: "Claude Memory Now Spans Chat and Cowork",
+        },
+        description: {
+          zh: "任一场景对话都能调用此前积累的上下文，记忆实时更新且可逐条查看、编辑或删除；健康信仰等敏感话题默认不存储。",
+          en: "Context carries across surfaces with real-time updates you can inspect, edit, or delete per item; sensitive topics like health stay off by default.",
+        },
+      },
+      {
+        title: {
+          zh: "Apple 发布搭载 M5 Max 与 M5 Ultra 的 Mac Studio",
+          en: "Mac Studio Arrives with M5 Max and M5 Ultra",
+        },
+        description: {
+          zh: "AI 性能最高提升 4.3 倍、图形提升 1.8 倍；M5 Ultra 支持最高 512GB 统一内存与 1.2TB/s 带宽，可完全在设备端运行大型 LLM，四台集群性能更高。",
+          en: "Up to 4.3x AI and 1.8x graphics gains; M5 Ultra offers up to 512GB unified memory at 1.2TB/s for fully on-device frontier-scale LLMs, clusterable four at a time.",
+        },
+      },
+      {
+        title: {
+          zh: "Apple 发布首款 2nm 芯片 M6 与 M5 Ultra",
+          en: "Apple Debuts First 2nm Chip M6 Alongside M5 Ultra",
+        },
+        description: {
+          zh: "M6 采用双 16 核神经引擎与最高 170GB/s 内存带宽，多线程较 M5 提升 1.2 倍，搭载于新款 Mac mini；M5 Ultra 为首款四芯片封装，36 核 CPU、80 核 GPU。",
+          en: "M6 brings dual 16-core neural engines and up to 170GB/s bandwidth in the new Mac mini; M5 Ultra is the first quad-die package with 36 CPU and 80 GPU cores.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 自研推理芯片 Jalapeño 首秀",
+          en: "OpenAI's In-House Inference Chip Jalapeño Debuts",
+        },
+        description: {
+          zh: "专为现代模型提供更快、更节能的推理，首批结果显示其在推理速度与效率上达到行业领先水平。",
+          en: "Built for faster, greener inference of modern models, with first results claiming industry-leading speed and efficiency.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 为 ChatGPT Work 和 Codex 推出 Admin 插件",
+          en: "OpenAI Ships Admin Plugin for Work and Codex",
+        },
+        description: {
+          zh: "管理员可在单一对话中查看工作区活动、管理成员权限、调整用量限制及审批支出请求，待审请求可路由至 Slack 或 Teams。",
+          en: "Admins manage activity, members, permissions, usage limits, and spend approvals in one chat, routing pending requests into Slack or Teams.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 启动 500 万美元幸福感研究资助",
+          en: "Anthropic Launches $5M Wellbeing Research Grants",
+        },
+        description: {
+          zh: "为独立研究 AI 对用户幸福感影响的团队提供资金、模型访问与技术支持，成果以开源形式发布；9 月 21 日截止申请。",
+          en: "Funding, model access, and support go to independent teams studying AI's effect on user wellbeing, with results open-sourced; applications close Sept 21.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 封禁俄罗斯虚假影响力行动账号",
+          en: "OpenAI Bans Russian Influence-Operation Accounts",
+        },
+        description: {
+          zh: "封禁一批利用 AI 推广虚构以色列智库及「主权」指数的俄罗斯来源账号，内容赞扬俄罗斯并批评西方。",
+          en: "Accounts used AI to promote a fictional Israeli think tank and 'sovereignty' index praising Russia while criticizing the West.",
+        },
+      },
+      {
+        title: {
+          zh: "STARFlow2：统一多模态生成",
+          en: "STARFlow2 Unifies Multimodal Generation",
+        },
+        description: {
+          zh: "苹果提出将自回归归一化流与语言模型统一，二者共享因果掩码与 KV-cache 机制，弥合文本与图像生成的架构差异，避免离散 token 化的保真度损失。",
+          en: "Apple unifies autoregressive normalizing flows with LLMs via shared causal masking and KV-caching, bridging text-image generation without discrete-token fidelity loss.",
+        },
+      },
+      {
+        title: {
+          zh: "Dylan Patel：两大实验室将控制全球大部分算力",
+          en: "Two Labs Will Control Most Compute by 2028",
+        },
+        description: {
+          zh: "SemiAnalysis 创始人预计 Anthropic 与 OpenAI 到 2028 年将控制全球大部分可用 FLOPs，因其能更好变现算力并出价高于其他方。",
+          en: "SemiAnalysis' Dylan Patel expects Anthropic and OpenAI to command most available FLOPs by 2028, monetizing compute well enough to outbid rivals.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 推出视频生成 API",
+          en: "OpenRouter Launches Video Generation API",
+        },
+        description: {
+          zh: "统一的异步视频生成 API 通过提交任务、轮询状态并下载 MP4 完成全流程，支持 Seedance、Veo、Wan 等模型，切换只需更改 model 标识符。",
+          en: "One async endpoint handles submit, poll, and MP4 download across Seedance, Veo, Wan, and more — switching models is just a different model ID.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-26-hot",
+    date: "2026-08-26",
+    title: {
+      zh: "🔥 今日热点 · 2026-08-26",
+      en: "🔥 Hot Topics · Aug 26, 2026",
+    },
+    summary: {
+      zh: "重庆渝中两名行人天桥下疑似触电昏迷送医；中秋国庆仅隔 3 天，「请3天假休13天」走红带动机票搜索热度涨 61%；德芙就争议文案道歉；多家航司布局付费飞机餐，中航协表态经济舱免费餐不会取消；国产动画《八仙！》登陆马来西亚超 110 家影院；星宇股份解聘 107 名应届生遭常州通报、HR 总监停职；在韩失联中国女留学生遇害，嫌疑人曾报假警；人民日报评大一新生家长群「远程干预」现象；央媒五问「店主帮扶老人遭索赔」；台风致游客被困涠洲岛 6 天；美中情局局长被曝正在莫斯科会谈；外交部提醒暂勿前往斯威士兰。",
+      en: "Two pedestrians are hospitalized after an apparent electrocution in Chongqing; '3 days off for 13' goes viral as flight searches jump 61%; Dove apologizes over a risqué ad caption; airlines roll out paid in-flight meals though economy freebies stay; Chinese animation 'Ba Xian!' opens across 110+ Malaysian cinemas; Changzhou rebukes Xingyu for axing 107 grads and suspends its HR chief; a Chinese student is found murdered in Korea, her killer having filed the missing-person report; People's Daily weighs in on freshman parent group chats; state media poses five questions on the elder-suing case; typhoon strands tourists on Weizhou Island for six days; the CIA director reportedly holds talks in Moscow; China warns citizens off Eswatini.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "重庆两行人天桥下疑似触电昏迷",
+          en: "Two Pedestrians Hospitalized After Apparent Shock",
+        },
+        description: {
+          zh: "重庆渝中区两名行人人行天桥下疑似触电倒地昏迷，民警紧急送医救治，现场已落实安全管控，相关部门正排查原因。",
+          en: "Two pedestrians collapsed under a footbridge in Yuzhong District in an apparent electrocution; they were rushed to hospital as crews secure the area and probe the cause.",
+        },
+      },
+      {
+        title: {
+          zh: "请3天假休13天 机票搜索热度大涨",
+          en: "'3 Days Off for 13' Sends Flight Searches Soaring",
+        },
+        description: {
+          zh: "2026 年中秋国庆假期仅相隔 3 天，拼假方案解锁近半月出行窗口；8 月以来假期机票搜索热度同比上涨 61%，国内热门城市预订热度增 30%。",
+          en: "With the two holidays just three days apart, the viral hack unlocks nearly half a month of travel — flight searches up 61% year over year, hotel bookings up 30%.",
+        },
+      },
+      {
+        title: {
+          zh: "德芙就争议短视频文案道歉",
+          en: "Dove Apologizes Over Controversial Ad Caption",
+        },
+        description: {
+          zh: "德芙官方旗舰店短视频文案「趁男朋友不在跟暧昧对象分享」引发争议，品牌称系第三方运营团队发布、未严格执行审核，已下架并将完善机制。",
+          en: "A flagship-store video caption implying secret flings sparked backlash; Dove says a third-party team skipped review, pulled it immediately, and pledged tighter oversight.",
+        },
+      },
+      {
+        title: {
+          zh: "付费飞机餐走红 免费餐不会取消",
+          en: "Paid Airline Meals Take Off, Free Ones Stay",
+        },
+        description: {
+          zh: "国航、东航、南航等多家航司布局付费定制飞机餐，从十几元简餐到数百元拼盘；中航协表态付费餐兴起但经济舱免费餐不会取消。",
+          en: "Air China, China Eastern, and others now sell à la carte meals from budget bites to premium platters; the aviation association confirms economy free meals aren't going away.",
+        },
+      },
+      {
+        title: {
+          zh: "《八仙！》再度过海 登陆马来西亚",
+          en: "'Ba Xian!' Sails Again into Malaysia",
+        },
+        description: {
+          zh: "中国动画电影在吉隆坡举行首映礼人气高涨，27 日起将在马来西亚全境超 110 家影院上映、日均排片超 600 场，此前已登陆斐济。",
+          en: "After a packed Kuala Lumpur premiere, the Chinese animated film opens Aug 27 across 110+ Malaysian cinemas with 600+ daily screenings, following its Fiji debut.",
+        },
+      },
+      {
+        title: {
+          zh: "公司批量劝退应届生 常州通报",
+          en: "Changzhou Rebukes Firm for Axing New Grads",
+        },
+        description: {
+          zh: "星宇股份招录 440 名 2026 届毕业生后解除其中 107 人劳动合同，协商方式简单生硬造成不良影响，HR 总监被停职，企业致歉。",
+          en: "Xingyu hired 440 fresh graduates then cut 107, with heavy-handed talks drawing public ire; its HR director is suspended and the company has apologized.",
+        },
+      },
+      {
+        title: {
+          zh: "在韩失联女生遇害 嫌疑人曾报假警",
+          en: "Student Found Dead in Korea; Killer Filed Report",
+        },
+        description: {
+          zh: "在韩国庆山失联数日的 25 岁中国女留学生被发现在害，一名 30 多岁男子被捕；其最初冒充女友报案称女子失踪，警方怀疑意在干扰调查。",
+          en: "A 25-year-old Chinese student missing days in Gyeongsan was found murdered; a man in his 30s who posed as her boyfriend to report her missing was arrested, suspected of trying to mislead police.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报评「大学生家长群」",
+          en: "People's Daily on Freshman Parent Group Chats",
+        },
+        description: {
+          zh: "大一新生家长群先行就位，部分群同步学生出勤成绩等个人信息，过度追踪演变为「远程干预」；评论呼吁分清必要沟通与过度介入，让家长群回归工具本位。",
+          en: "Parent chats tracking attendance and grades slide into remote micromanagement; the commentary urges separating needed coordination from overreach.",
+        },
+      },
+      {
+        title: {
+          zh: "央媒五问「店主帮扶老人遭索赔」",
+          en: "State Media Poses Five Questions on Elder Case",
+        },
+        description: {
+          zh: "祁东县店主救助突发疾病老人反遭家属索赔 10 万，无过错仍调解支付 1.9 万引发全网热议；央媒五问善行保护机制，「扶不扶」不能再成为社会阴影。",
+          en: "A shopkeeper who saved a stricken elder faced a 100K claim yet paid 19K despite no fault; state media's five questions demand stronger good-Samaritan protections.",
+        },
+      },
+      {
+        title: {
+          zh: "游客因台风被困涠洲岛6天",
+          en: "Typhoon Strands Tourists on Weizhou Island 6 Days",
+        },
+        description: {
+          zh: "台风「紫檀」致北海至涠洲岛航线多次停航，有游客一家被困 6 天并遇机票民宿退改纠纷；律师称不可抗力可凭停航证明免费退改，「不可取消」条款无效。",
+          en: "Typhoon Zitan halted ferries leaving one family stuck six days amid refund disputes; lawyers say force-majeure proof guarantees free changes and 'no-cancellation' clauses don't hold.",
+        },
+      },
+      {
+        title: {
+          zh: "美中情局局长被曝正在俄会谈",
+          en: "CIA Chief Reportedly Holds Talks in Moscow",
+        },
+        description: {
+          zh: "美媒援引消息人士称中情局局长拉特克利夫正在莫斯科会谈，此前美军运输机及外交车队现身莫斯科机场传出此行消息。",
+          en: "US outlets cite sources saying Director Ratcliffe is in Moscow for talks after an Air Force transport and diplomatic motorcade were spotted at the city's airport.",
+        },
+      },
+      {
+        title: {
+          zh: "外交部提醒暂勿前往斯威士兰",
+          en: "China Warns Citizens Off Eswatini",
+        },
+        description: {
+          zh: "斯威士兰安全形势复杂，电诈网赌犯罪猖獗；外交部提醒中国公民近期暂勿前往，已在当地人员尽快撤离或转移至南非等安全区域。",
+          en: "Amid rampant scam operations and gambling crime, the foreign ministry urges citizens to postpone travel and those already there to relocate to South Africa or safer areas.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-25",
     date: "2026-08-25",
     title: {
