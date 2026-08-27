@@ -122,3 +122,14 @@ site-builder --config /home/linuxbrew/.walrus/sites-config.yaml --walrus-config 
 
 ./site-builder --config /home/linuxbrew/.walrus/sites-config.yaml --walrus-config /home/linuxbrew/.walrus/client_config.yaml publish dist --epochs 10
 
+
+杀掉端口占用
+
+# 批量释放5173~5178端口
+5173..5178 | ForEach-Object {
+    $pidList = (Get-NetTCPConnection -LocalPort $_ -ErrorAction SilentlyContinue).OwningProcess | Select-Object -Unique
+    if($pidList){
+        foreach($p in $pidList){ Stop-Process -Id $p -Force; Write-Host "killed pid $p port $_" }
+    }
+}
+

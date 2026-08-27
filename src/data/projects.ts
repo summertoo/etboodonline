@@ -245,6 +245,18 @@ export const projects: Project[] = [
     tags: ["game"],
   },
   {
+    id: "web-3dmatch",
+    titleKey: "game.threeDMatchTitle",
+    descKey: "game.threeDMatchDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/3DMatch.png",
+    liveUrl: "/3dmatch/index.html",
+    publishedAt: "2026-08-27T00:00:00+08:00",
+    tags: ["latest", "game"],
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",

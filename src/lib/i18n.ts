@@ -194,6 +194,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.crazyBirdTitle": "🐦 Crazy Bird",
     "game.crazyBirdDesc":
       "Propel your bird with precise slingshot aim! Knock down stubborn pigs, bust through block fortresses, and conquer physics-based levels.",
+    "game.threeDMatchTitle": "🧊 3DMatch",
+    "game.threeDMatchDesc":
+      "Match triplets of 3D blocks to clear the board! Spin the view, spot identical shapes, and race through progressively trickier puzzles that test your powers of observation.",
     "game.bladeDartDesc":
       "Throw darts at a rotating target with precision! Unlock new blades, upgrade damage, and conquer 300 levels of dart-throwing action.",
     "game.summitDesc":
@@ -463,6 +466,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.crazyBirdTitle": "🐦 疯狂的小鸡",
     "game.crazyBirdDesc":
       "用弹弓精准发射小鸟！撞倒顽固的猪头，冲破砖块堡垒，征服基于物理引擎的趣味关卡。",
+    "game.threeDMatchTitle": "🧊 立体配对",
+    "game.threeDMatchDesc":
+      "匹配三块相同的 3D 方块即可消除！旋转视角，找出完全一致的立体形状，难度层层升级，考验你的观察力。",
 
     // DApp descriptions
     "dapp.ruokDesc": "基于 Sui 网络的去中心化签到触发定时转账 DApp",
