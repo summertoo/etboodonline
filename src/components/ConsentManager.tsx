@@ -1,20 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   createContext,
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
 
-export type ConsentChoice = "all" | "necessary" | null;
+export type ConsentChoice = "all" | "necessary";
 
 type ConsentContextValue = {
   choice: ConsentChoice | undefined;
-  saveChoice: (choice: Exclude<ConsentChoice, null>) => void;
+  saveChoice: (choice: ConsentChoice) => void;
 };
 
 const STORAGE_KEY = "zdtech-consent-v1";
@@ -46,13 +48,25 @@ function loadGoogleAnalytics() {
   document.head.appendChild(script);
 }
 
+function logPageView(pathname: string) {
+  window.gtag?.("event", "page_view", { page_path: pathname });
+}
+
 export function ConsentManager({ children }: { children: ReactNode }) {
   const [choice, setChoice] = useState<ConsentChoice | undefined>(undefined);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [noticeVisible, setNoticeVisible] = useState(false);
+  const pathname = usePathname();
+  const prevPathRef = useRef<string | null>(null);
 
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
-    setChoice(saved === "all" || saved === "necessary" ? saved : null);
+    if (saved === "necessary") {
+      setChoice("necessary");
+    } else {
+      setChoice("all");
+      if (saved !== "all") setNoticeVisible(true);
+    }
 
     const openSettings = () => setSettingsOpen(true);
     window.addEventListener(OPEN_EVENT, openSettings);
@@ -62,6 +76,18 @@ export function ConsentManager({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (choice === "all") loadGoogleAnalytics();
   }, [choice]);
+
+  useEffect(() => {
+    if (!pathname) return;
+    if (prevPathRef.current === null) {
+      prevPathRef.current = pathname;
+      return;
+    }
+    if (prevPathRef.current !== pathname) {
+      prevPathRef.current = pathname;
+      logPageView(pathname);
+    }
+  }, [pathname]);
 
   const value = useMemo<ConsentContextValue>(
     () => ({
@@ -78,17 +104,55 @@ export function ConsentManager({ children }: { children: ReactNode }) {
         }
         setChoice(nextChoice);
         setSettingsOpen(false);
+        setNoticeVisible(false);
       },
     }),
     [choice],
   );
 
-  const showDialog = choice === null || settingsOpen;
-
   return (
     <ConsentContext.Provider value={value}>
       {children}
-      {showDialog && (
+      {noticeVisible && !settingsOpen && (
+        <aside
+          role="note"
+          aria-label="隐私提示"
+          className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-w-3xl border border-[var(--cyber-border)] bg-[var(--cyber-bg)] p-5 shadow-2xl sm:bottom-5"
+        >
+          <h2 className="mb-2 text-lg font-bold">
+            Cookie 与隐私设置 / Cookie & privacy settings
+          </h2>
+          <p className="text-sm leading-6 text-[var(--cyber-muted)]">
+            本站默认加载 Google Analytics 和 Google AdSense 以改善体验，您可以随时选择仅保留必要存储。You
+            can continue with analytics enabled or switch to essential storage
+            only. See our{" "}
+            <Link
+              href="/privacy"
+              className="text-[var(--cyber-primary)] underline"
+            >
+              privacy policy
+            </Link>
+            .
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <button
+              type="button"
+              className="cyber-button-small w-full sm:w-auto"
+              onClick={() => value.saveChoice("all")}
+            >
+              继续使用 / Continue
+            </button>
+            <button
+              type="button"
+              className="w-full border border-[var(--cyber-border)] px-4 py-2 text-sm text-[var(--cyber-text)] sm:w-auto"
+              onClick={() => value.saveChoice("necessary")}
+            >
+              仅必要 / Necessary only
+            </button>
+          </div>
+        </aside>
+      )}
+      {settingsOpen && (
         <aside
           role="dialog"
           aria-modal="true"
@@ -99,10 +163,12 @@ export function ConsentManager({ children }: { children: ReactNode }) {
             Cookie 与隐私设置 / Cookie & privacy settings
           </h2>
           <p className="text-sm leading-6 text-[var(--cyber-muted)]">
-            我们仅在获得同意后加载 Google Analytics 和 Google AdSense。
-            You can allow analytics and advertising cookies or continue with
-            essential storage only. See our{" "}
-            <Link href="/privacy" className="text-[var(--cyber-primary)] underline">
+            选择您的偏好。We load Google Analytics and Google AdSense only with
+            your permission. See our{" "}
+            <Link
+              href="/privacy"
+              className="text-[var(--cyber-primary)] underline"
+            >
               privacy policy
             </Link>
             .

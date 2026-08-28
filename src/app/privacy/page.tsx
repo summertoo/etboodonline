@@ -43,13 +43,13 @@ export default function PrivacyPage() {
             Analytics 与广告 / Analytics and advertising
           </h2>
           <p>
-            只有选择“同意统计与广告”后，本站才会加载 Google Analytics 和 Google AdSense。它们可能使用 Cookie 或类似技术测量访问、广告表现和防止欺诈。选择“仅必要存储”时，这些脚本不会加载。
+            本站默认加载 Google Analytics 和 Google AdSense 以改善体验与衡量访问。它们可能使用 Cookie 或类似技术测量访问、广告表现和防止欺诈。你可以随时通过页面底部的 Cookie settings 选择“仅必要存储”，届时相关脚本将停止加载。
           </p>
           <p className="mt-3">
-            Google Analytics and Google AdSense load only after you choose
-            “Accept all.” These services may use cookies or similar technology
-            to measure visits, advertising performance, and fraud. They do not
-            load when you select “Necessary only.”
+            Google Analytics and Google AdSense are enabled by default to
+            measure visits, advertising performance, and fraud prevention. You
+            can switch to “Necessary only” at any time via the Cookie settings
+            link, after which these scripts will not load.
           </p>
         </section>
 
