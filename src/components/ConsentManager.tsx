@@ -23,33 +23,22 @@ const STORAGE_KEY = "zdtech-consent-v1";
 const OPEN_EVENT = "zdtech:open-consent";
 const ConsentContext = createContext<ConsentContextValue | null>(null);
 
-function loadGoogleAnalytics() {
-  if (document.getElementById("zdtech-google-analytics")) return;
-
-  const measurementId =
-    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-MPXWZKWM9W";
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = (...args: unknown[]) => {
-    window.dataLayer?.push(args);
-  };
-  window.gtag("consent", "update", {
+function grantAnalytics() {
+  window.gtag?.("consent", "update", {
     analytics_storage: "granted",
     ad_storage: "granted",
     ad_user_data: "granted",
     ad_personalization: "granted",
   });
-  window.gtag("js", new Date());
-  window.gtag("config", measurementId, { anonymize_ip: true });
-
-  const script = document.createElement("script");
-  script.id = "zdtech-google-analytics";
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-  document.head.appendChild(script);
 }
 
-function logPageView(pathname: string) {
-  window.gtag?.("event", "page_view", { page_path: pathname });
+function denyAnalytics() {
+  window.gtag?.("consent", "update", {
+    analytics_storage: "denied",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  });
 }
 
 function loadAutoAds() {
@@ -70,6 +59,10 @@ function loadAutoAds() {
     { once: true },
   );
   document.head.appendChild(script);
+}
+
+function logPageView(pathname: string) {
+  window.gtag?.("event", "page_view", { page_path: pathname });
 }
 
 export function ConsentManager({ children }: { children: ReactNode }) {
@@ -95,7 +88,7 @@ export function ConsentManager({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (choice === "all") {
-      loadGoogleAnalytics();
+      grantAnalytics();
       loadAutoAds();
     }
   }, [choice]);
@@ -118,12 +111,7 @@ export function ConsentManager({ children }: { children: ReactNode }) {
       saveChoice(nextChoice) {
         localStorage.setItem(STORAGE_KEY, nextChoice);
         if (nextChoice === "necessary") {
-          window.gtag?.("consent", "update", {
-            analytics_storage: "denied",
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied",
-          });
+          denyAnalytics();
         }
         setChoice(nextChoice);
         setSettingsOpen(false);

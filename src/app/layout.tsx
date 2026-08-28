@@ -63,7 +63,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
-      <head />
+      <head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${
+            process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-MPXWZKWM9W"
+          }`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('set', 'ads_data_redaction', true);
+gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500,
+});
+gtag('js', new Date());
+gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-MPXWZKWM9W"}');
+`,
+          }}
+        />
+      </head>
       <body>
         <script
           id="schema-org"
