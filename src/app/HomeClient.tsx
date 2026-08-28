@@ -13,6 +13,7 @@ import Link from "next/link";
 import FeedbackForm from "@/components/FeedbackForm";
 import AuthModal from "@/components/AuthModal";
 import ProjectActions from "@/components/ProjectActions";
+import AdSlot from "@/components/AdSlot";
 import { HelpDialog } from "@/components/HelpDialog";
 import SiteUpdateNotice from "@/components/SiteUpdateNotice";
 import TrackedProjectButton from "@/components/TrackedProjectButton";
@@ -575,6 +576,8 @@ export default function Homepage({
             </div>
           </div>
         </section>
+
+        <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_HOME_SLOT} />
 
         <section className="py-20">
           <RevealSection>
