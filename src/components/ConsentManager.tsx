@@ -52,6 +52,26 @@ function logPageView(pathname: string) {
   window.gtag?.("event", "page_view", { page_path: pathname });
 }
 
+function loadAutoAds() {
+  if (document.getElementById("zdtech-adsense")) return;
+
+  const clientId =
+    process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-9035468310087485";
+  const script = document.createElement("script");
+  script.id = "zdtech-adsense";
+  script.async = true;
+  script.crossOrigin = "anonymous";
+  script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${clientId}`;
+  script.addEventListener(
+    "load",
+    () => {
+      script.dataset.loaded = "true";
+    },
+    { once: true },
+  );
+  document.head.appendChild(script);
+}
+
 export function ConsentManager({ children }: { children: ReactNode }) {
   const [choice, setChoice] = useState<ConsentChoice | undefined>(undefined);
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -74,7 +94,10 @@ export function ConsentManager({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (choice === "all") loadGoogleAnalytics();
+    if (choice === "all") {
+      loadGoogleAnalytics();
+      loadAutoAds();
+    }
   }, [choice]);
 
   useEffect(() => {
