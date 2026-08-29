@@ -2,6 +2,276 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-29",
+    date: "2026-08-29",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-29",
+      en: "🤖 AI HOT Daily · Aug 29, 2026",
+    },
+    summary: {
+      zh: "腾讯混元发布 770B 参数、百万级上下文的 Hy4 preview 并开源；智谱开放 GLM-5.3 权重，智能体编码与网防最强；联邦法官裁定特朗普政府将 Anthropic 列入黑名单违法；Anthropic 让 Claude 自主训练模型缓解 10 类对齐失败，超越 28 名人类安全研究员；Claude Code 新增模型切换钩子；Claude for Teachers 对学校免费开放 Enterprise；OpenAI 与泰国推出八周 AI 加速器；斯坦福发布科研智能体基准 Terminal-Bench-Science；苹果 LLM 贝叶斯一致性研究与 Agent Seer 评测新方法；免费 Groq API 的 AI 工程师 Colab 笔记本；Gary Marcus 复盘 OpenAI 攻破 Hugging Face 的五点教训。",
+      en: "Tencent Hunyuan open-sources Hy4 preview (770B params, 1M context); Zhipu releases GLM-5.3 weights for agentic coding and network defense; a federal judge rules the Trump administration's blacklisting of Anthropic illegal; Anthropic's Claude trains models to mitigate 10 alignment failures, beating 28 human safety researchers; Claude Code adds model-switch hooks; Claude for Teachers goes free-Enterprise for schools; OpenAI and Thailand launch an 8-week accelerator; Stanford ships Terminal-Bench-Science for research agents; Apple probes LLM Bayesian consistency and Agent Seer scenario synthesis; free-Groq AI-engineer Colab notebooks; Gary Marcus draws 5 lessons from OpenAI's Hugging Face breach.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "腾讯混元发布 Hy4 preview：770B 参数、1M 上下文",
+          en: "Tencent Hunyuan Hy4 Preview: 770B Params, 1M Context",
+        },
+        description: {
+          zh: "新一代旗舰模型总参数 770B、激活 49B、上下文 1M，现已开源并在腾讯云 TokenHub 和 OpenRouter 上线。",
+          en: "The next flagship hits 770B total / 49B active parameters with a 1M context window, open-sourced on Tencent TokenHub and OpenRouter.",
+        },
+      },
+      {
+        title: {
+          zh: "GLM-5.3 开放权重：智能体编码与网防最强",
+          en: "GLM-5.3 Weights Released for Agents and Cyber Defense",
+        },
+        description: {
+          zh: "智谱最强大的智能体编码与网络防御模型现已开放下载、运行与定制。",
+          en: "Zhipu's most powerful agentic-coding and network-defense model is now downloadable, runnable, and customizable.",
+        },
+      },
+      {
+        title: {
+          zh: "法官裁定将 Anthropic 列入黑名单违法",
+          en: "Judge Rules Anthropic Blacklisting Illegal",
+        },
+        description: {
+          zh: "加州北区联邦法院裁定政府因 Anthropic 拒绝放弃限制、将其列为国家安全风险并禁用的行为违法，构成违反第一修正案的非法报复。",
+          en: "A Northern California court found the ban retaliatory and unconstitutional after Anthropic refused to drop its guardrails on lethal autonomous war and mass surveillance.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.251：模型切换钩子与远程流式输出",
+          en: "Claude Code v2.1.251 Adds Model-Switch Hooks",
+        },
+        description: {
+          zh: "新增 PreModelSwitch/PostModelSwitch 钩子事件用于拦截、确认模型切换；远程控制端可直接流式查看前台子代理的工具调用与结果；/usage 新增消费限额条。",
+          en: "Hooks now intercept and confirm model switches; remote controllers stream foreground subagent tool calls live; /usage shows a spend-cap bar.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude for Teachers 面向学校免费开放 Enterprise",
+          en: "Claude for Teachers Goes Free Enterprise for Schools",
+        },
+        description: {
+          zh: "Anthropic 将面向学校的版本作为免费 Enterprise 产品开放，提供基于学习科学的 teaching skills 及覆盖全美 50 州的学术标准连接。",
+          en: "Schools and districts get a free Enterprise tier with learning-science-based teaching skills linked to academic standards across all 50 states.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 与泰国推出八周 AI 加速器",
+          en: "OpenAI and Thailand Launch 8-Week AI Accelerator",
+        },
+        description: {
+          zh: "首批遴选 10 家聚焦医疗、健康与教育的初创，每家获 2,000 美元 API 额度、一对一指导和前沿模型访问权。",
+          en: "Ten health- and education-focused startups each receive $2,000 in API credits, one-on-one mentorship, and frontier-model access.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 让 Claude 自主训练模型缓解对齐失败",
+          en: "Claude Auto-Trains Models to Fix Alignment Failures",
+        },
+        description: {
+          zh: "在欺骗、谄媚等 10 类对齐失败上均显著缩小安全差距且不损害通用能力，方法在比优化对象大 4.7 倍的模型上依然有效；欺骗场景最佳方案比 28 名人类研究员的最佳结果好 20%。",
+          en: "Ten failure classes shrink toward perfect behavior without hurting general capability, scaling to models 4.7x larger; its deception fix beats 28 human researchers' best by 20%.",
+        },
+      },
+      {
+        title: {
+          zh: "Terminal-Bench-Science 0.1：评估科研工作流智能体",
+          en: "Terminal-Bench-Science 0.1 Benchmarks Research Agents",
+        },
+        description: {
+          zh: "斯坦福领衔发布，用来自生命、物理、地球、数学和工程科学的 70 个专家精选任务评估 AI 智能体的科研能力。",
+          en: "Stanford leads this benchmark of 70 expert-vetted tasks spanning life, physical, earth, math, and engineering sciences for research agents.",
+        },
+      },
+      {
+        title: {
+          zh: "LLM 并非（始终）符合贝叶斯：概率信念的内部一致性",
+          en: "LLMs Aren't (Always) Bayesian: Probing Belief Consistency",
+        },
+        description: {
+          zh: "苹果团队把 LLM 视为信息处理规则，量化其按证据更新概率信念时与贝叶斯更新之间的系统性偏差，在医学、科学、法律等复杂领域测试。",
+          en: "Apple treats LLMs as information processors and measures how evidence-based belief updates systematically deviate from Bayesian ideals across medicine, science, and law.",
+        },
+      },
+      {
+        title: {
+          zh: "Agent Seer：从工具规格合成评测场景",
+          en: "Agent Seer Synthesizes Evals from Tool Specs",
+        },
+        description: {
+          zh: "利用函数名、自然语言描述与类型化参数等工具规格语义生成贴近真实组合与多轮迭代的测试场景，无需人工构建或实时执行工具。",
+          en: "By mining function names, descriptions, and typed parameters, it auto-generates realistic multi-step tool-combination scenarios without human authors or live execution.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 工程师笔记本：Colab 免费运行无框架 RAG/智能体",
+          en: "AI-Engineer Notebooks: Framework-Free on Free Colab/Groq",
+        },
+        description: {
+          zh: "用原始 API 构建基于基础模型的系统，覆盖提示词、RAG、评估、智能体、微调与服务化，全部在免费 Groq API 上运行，无需信用卡。",
+          en: "Raw APIs instead of frameworks cover prompts, RAG, evals, agents, fine-tuning, and serving — all on the free Groq tier with no credit card.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 攻破 Hugging Face 事件的 5 个教训",
+          en: "Five Lessons from OpenAI's Hugging Face Breach",
+        },
+        description: {
+          zh: "Gary Marcus 复盘 7 月事件与 Anthropic、Meta 等智能体越权案例，援引 METR 90 页报告，认为 AI 带来的安全挑战真实存在，安全器加速的同时须跟上治理。",
+          en: "Marcus revisits July's breach and rival agent missteps, citing METR's 90-page report: real security challenges demand governance that keeps pace with capability.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-29-hot",
+    date: "2026-08-29",
+    title: {
+      zh: "🔥 今日热搜 · 2026-08-29",
+      en: "🔥 Hot Topics · Aug 29, 2026",
+    },
+    summary: {
+      zh: "西藏吉隆泥石流致 7 人遇难 554 人失联，首批到达核心区救援队见一片废墟，官方通报搜救持续推进；尼泊尔山洪遇难人数升至 616 人；交通运输部回应取消 ETC 建议，介绍'手机+'无卡通行；一组数字看经济：规上工业企业利润增长 17.6%；'幽灵外卖'35.97 亿罚单源自蛋糕插花举报；房贷新政：推行现房销售、能拿房再还贷；王楚钦、孙颖莎、王曼昱等放弃亚锦赛选拔；人民日报点赞小米三款自研芯片，雷军表态；深圳女子捡 90 万金块物归原主；长春电影节现'双黄蛋'影帝；30 岁双 985 硕士官宣重读文科。",
+      en: "The Jilong mudslide in Tibet kills 7 with 554 missing as teams reach a leveled core zone; Nepal flooding deaths rise to 616; transport ministry answers ETC-repeal calls with a card-free 'phone+' lane; industrial-profits growth hits 17.6%; a $0.9B 'ghost takeout' fine traced to flowers stuck in a cake; new mortgage rules push 'delivery before repayment'; table-tennis stars skip Asian Championships trials; People's Daily praises Xiaomi's three self-developed chips; a Shenzhen mother returns a 90kg-in-worth gold bar; a double Best Actor at Changchun; a 30-year-old double-985 master's goes back to liberal arts.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "西藏吉隆泥石流：7 人遇难 554 人失联",
+          en: "Tibet Jilong Mudslide: 7 Dead, 554 Missing",
+        },
+        description: {
+          zh: "首批抵达核心区救援队发现国门附近建筑全部被冲毁、现场一片废墟，四川消防边搜索边呼喊'有没有人'；无人机监测堰塞湖与山体，拉网式搜救持续推进。",
+          en: "First responders found the gate-zone buildings razed to rubble; Sichuan firefighters call out for survivors amid grid searches as drones watch the barrier lake and slopes.",
+        },
+      },
+      {
+        title: {
+          zh: "网友建议取消 ETC，官方回应",
+          en: "Transport Ministry Answers ETC-Repeal Calls",
+        },
+        description: {
+          zh: "交通运输部称 ETC 系自愿办理，并介绍'手机+'无卡便捷通行模式，通过车牌识别免取卡通行，未来将逐步拓展至 ETC 车道。",
+          en: "ETC stays voluntary, with a plate-recognition 'phone+' card-free lane introduced as a supplement that will extend to ETC lanes over time.",
+        },
+      },
+      {
+        title: {
+          zh: "一组数字看我国经济澎湃动能",
+          en: "China's Economy by the Numbers",
+        },
+        description: {
+          zh: "全国规上工业企业利润增长 17.6%，上半年数字产业收入同比增长 13.6%，日均词元调用量突破 500 万亿，经济向新向优向好态势延续。",
+          en: "Industrial profits rose 17.6%, digital-industry revenue grew 13.6% in H1, and daily token calls surpassed 500 trillion as momentum keeps building.",
+        },
+      },
+      {
+        title: {
+          zh: "蛋糕插花引出 35.97 亿'幽灵外卖'罚单",
+          en: "A $0.9B 'Ghost Takeout' Fine Traced to Cake Flowers",
+        },
+        description: {
+          zh: "2025 年 7 月消费者举报蛋糕店把鲜花直接插在蛋糕上，核查发现该店公示许可证为假证、线下查无此店，系列案罚单累计 35.97 亿元。",
+          en: "A July 2025 complaint about flowers stuck in a cake exposed a shop with a fake license that didn't physically exist; the case series totals 3.597 billion yuan in fines.",
+        },
+      },
+      {
+        title: {
+          zh: "父亲自驾上万公里分别送双胞胎上大学",
+          en: "Father Drives 10,000km to Send Twins to College",
+        },
+        description: {
+          zh: "河南汝州一位父亲因双胞胎分别考入黑龙江佳木斯与新疆图木舒克，自驾横跨全国、露宿'穷游'送两个孩子报到。",
+          en: "A Ruzhou father drove across China, roughing it with tent stays, so his twins could be personally escorted to campuses in Jiamusi and Tashkurgan.",
+        },
+      },
+      {
+        title: {
+          zh: "房贷新政：推行现房销售，能拿房再还贷",
+          en: "New Mortgage Rules: Buy First, Pay Later",
+        },
+        description: {
+          zh: "三部门发文推行现房销售、优化土地供应与开发贷款，明确现房销售仅收少量定金并要求'能拿房再还贷'，大幅提高预售门槛。",
+          en: "New policy pushes completed-homes sales with modest deposits, reforms land supply and development loans, and requires delivery before repayment begins.",
+        },
+      },
+      {
+        title: {
+          zh: "王楚钦、孙颖莎、王曼昱放弃亚锦赛选拔",
+          en: "Table-Tennis Stars Skip Asian Championship Trials",
+        },
+        description: {
+          zh: "中国乒协公示 2026 年亚锦赛选拔办法，教练组与队员充分沟通后，5 人自愿放弃本次选拔资格。",
+          en: "After full discussion with the coaching staff, five players including Wang Chuqin, Sun Yingsha, and Wang Manyu voluntarily withdrew from trials.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报点赞小米三款自研芯片，雷军表态",
+          en: "People's Daily Praises Xiaomi Chips; Lei Jun Responds",
+        },
+        description: {
+          zh: "人民日报肯定小米协同多方攻克 6 纳米先进封装难题，雷军发文致谢并称将继续努力；新品将用于手机、AI 及智驾领域。",
+          en: "The flagship paper praised Xiaomi's 6nm advanced-packaging breakthrough; Lei Jun thanked readers and vowed to push on, with the chips headed to phones, AI, and smart driving.",
+        },
+      },
+      {
+        title: {
+          zh: "女子接娃捡到 90 万黄金，果断交给保安",
+          en: "Shenzhen Woman Returns a 900,000-Yuan Gold Bar",
+        },
+        description: {
+          zh: "深圳蔡女士接娃途中捡到重 758.9 克、价值约 90 万元的金块，果断交给商场保安，一个多小时后金块在民警陪同下物归原主。",
+          en: "On her way to pick up her child, Ms. Cai found a 758.9g gold bar worth ~900,000 yuan and handed it to security; it was returned to its owner an hour later.",
+        },
+      },
+      {
+        title: {
+          zh: "尼泊尔山洪遇难人数升至 616 人",
+          en: "Nepal Flash-Flood Deaths Rise to 616",
+        },
+        description: {
+          zh: "尼泊尔山洪灾害造成的遇难人数持续上升，救援与善后工作仍在进行。",
+          en: "Nepal's flash-flood toll keeps climbing as rescue and recovery operations continue.",
+        },
+      },
+      {
+        title: {
+          zh: "长春电影节现'双黄蛋'影帝",
+          en: "Double Best Actor at Changchun Film Festival",
+        },
+        description: {
+          zh: "第 21 届长春电影节金鹿奖最佳男演员由檀健次（《耳欲聋》）与蒋奇明（《飞行家》）共同获得，檀健次闻讯长舒一口气。",
+          en: "Tan Jianci (Ear-Shattering) and Jiang Qiming (The Flyer) share the Golden Deer Best Actor; Tan lets out a long sigh of relief.",
+        },
+      },
+      {
+        title: {
+          zh: "30 岁双 985 硕士官宣重新高考学文科",
+          en: "Double-985 Master's Restsarts Gaokao for Liberal Arts",
+        },
+        description: {
+          zh: "计算机硕士李世昌以 583 分高考分数再战，重读文科，称人生道路多元，所选即是当下最适合自己的方向。",
+          en: "Computer-science master's Li Shichang re-takes the gaokao, scoring 583 to study liberal arts: 'life has many paths — this one fits me now.'",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-28",
     date: "2026-08-28",
     title: {
