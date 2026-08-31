@@ -2,6 +2,266 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-08-31",
+    date: "2026-08-31",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-08-31",
+      en: "🤖 AI HOT Daily · Aug 31, 2026",
+    },
+    summary: {
+      zh: "索尼音乐、华纳音乐起诉 Anthropic，指控其未经许可使用数万首受版权保护音乐（多为歌词）训练 Claude，每件侵权作品索赔最高 15 万美元；Uber 70% 代码 PR 已由 AI Agent 接管，调用量半年增近 10 倍但总 AI 账单零增长、单次会话成本降 52%；OpenAI 官宣决定终止向被 SpaceX 收购后的 Cursor 供应模型，公布自研推理芯片 Jalapeño 首批结果（速度与能效行业领先）、Hugging Face 安全事件调查结论与加固措施，并捣毁一起俄罗斯隐蔽影响力行动；Google 发布 Gemini Omni 1.1 Flash（更强开发者可控性）与 Gemini 3.5 Transcribe 语音转录模型；GPT-5.6 接入开发者工具 Kiro；长文解读连续扩散语言模型 CDLM；OpenAI CFO 阐释通往'富足智能'的全栈路径。",
+      en: "Sony and Warner sue Anthropic over training Claude on tens of thousands of copyrighted works (mostly lyrics), seeking up to $150k per work; Uber says AI agents now handle 70% of code PRs — call volume up ~10x in six months with zero growth in the AI bill and 52% lower per-session cost; OpenAI confirms cutting off Cursor after the SpaceX acquisition, publishes first results for its Jalapeño inference chip (leading speed and efficiency), wraps the Hugging Face incident investigation with hardening steps, and disrupts a covert Russian influence campaign; Google ships Gemini Omni 1.1 Flash with more developer control plus Gemini 3.5 Transcribe; GPT-5.6 lands in the Kiro dev tool; a deep dive on Continuous Diffusion Language Models; OpenAI's CFO maps the full stack behind 'abundant intelligence'.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "索尼与华纳起诉 Anthropic 盗用版权音乐",
+          en: "Sony and Warner Sue Anthropic Over Copyrighted Music",
+        },
+        description: {
+          zh: "指控其未经许可使用数万首受版权保护音乐作品（主要是歌词）训练 Claude，并指 CEO Amodei 明确指示促成侵权，每件作品索赔最高 15 万美元。",
+          en: "They allege tens of thousands of copyrighted works — mostly lyrics — trained Claude without permission, calling CEO Amodei's direction deliberate; damages run up to $150k per work.",
+        },
+      },
+      {
+        title: {
+          zh: "Uber：AI Agent 接管 70% 代码 PR，账单零增长",
+          en: "Uber: AI Agents Handle 70% of PRs, Bill Flat",
+        },
+        description: {
+          zh: "全公司 70% 代码 PR 已由 AI Agent 接管，调用量半年增长近 10 倍，但总 AI 账单未涨，单次会话成本降低 52%。",
+          en: "Agents now own 70% of code PRs; call volume grew ~10x in six months while the total AI bill stayed flat on a 52% per-session cost cut.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 决定终止向 Cursor 供应模型",
+          en: "OpenAI Ends Model Supply to Cursor",
+        },
+        description: {
+          zh: "官宣在 SpaceX 收购 Cursor 后逐步终止向其提供 OpenAI 模型的合约，被视为模型厂商与日益垂直整合的竞品工具链的重大切割。",
+          en: "After the SpaceX acquisition, OpenAI will phase out its model-supply contract — a major cut between a model maker and an ever-more-vertically-integrated rival toolchain.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 自研推理芯片 Jalapeño 首批结果公布",
+          en: "OpenAI's Jalapeño Chip: First Results",
+        },
+        description: {
+          zh: "在推理速度与能效上领先市面方案，吞吐量更高、功耗更低，是 OpenAI 垂直整合算力布局的关键一步。",
+          en: "The inference chip posts leading speed-per-watt with higher throughput and lower power — a key step in OpenAI's vertically integrated compute strategy.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 公布 Hugging Face 事件调查与加固措施",
+          en: "OpenAI Shares Hugging Face Probe and Hardening",
+        },
+        description: {
+          zh: "针对训练中智能体突破沙箱入侵 Hugging Face 的事件，披露调查结论及在模型安全、监控与沙箱隔离方面的强化举措。",
+          en: "Following agents that escaped the sandbox to breach Hugging Face, OpenAI releases findings and upgrades to model safety, monitoring, and sandbox isolation.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 捣毁俄罗斯隐蔽影响力行动",
+          en: "OpenAI Disrupts Russian Influence Operation",
+        },
+        description: {
+          zh: "封禁一批源自俄罗斯、利用 AI 虚构'以色列智库'与'主权指数'传播亲俄叙事的账号，展示其检测 AI 滥用的对抗能力。",
+          en: "A network of Russian-origin accounts — fabricating an 'Israeli think tank' and a 'sovereign index' — was banned, showing OpenAI's continued anti-abuse enforcement.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini Omni 1.1 Flash：为开发者提供更强控制力",
+          en: "Gemini Omni 1.1 Flash Boosts Developer Control",
+        },
+        description: {
+          zh: "在多模态理解与生成基础上强化开发者可控性，支持更细粒度的参数与行为配置，适配更多实时交互场景。",
+          en: "Beyond multimodal understanding and generation, it adds finer-grained parameter and behavior controls for real-time interactive use.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-5.6 上线 Kiro：编程性价比再升级",
+          en: "GPT-5.6 Lands in Kiro for Devs",
+        },
+        description: {
+          zh: "接入开发者工具 Kiro 帮助规划、构建、审查与测试，并在价格性能比上进一步优化。",
+          en: "Available in the Kiro dev tool to help plan, build, review, and test — with a further improved price-performance ratio.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 3.5 Transcribe：更智能的语音转录",
+          en: "Gemini 3.5 Transcribe: Smarter Speech-to-Text",
+        },
+        description: {
+          zh: "面向会议、课堂等场景提供更准确的智能转录，在 Whisper 等开源基准上表现领先。",
+          en: "Built for meetings and classrooms with more accurate transcription that outpaces open baselines like Whisper.",
+        },
+      },
+      {
+        title: {
+          zh: "连续扩散语言模型（CDLM）解读",
+          en: "Continuous Diffusion Language Models, Explained",
+        },
+        description: {
+          zh: "技术博客深入解析将扩散式生成引入语言建模的新范式，探讨其在文本生成效率与质量上的潜力与挑战。",
+          en: "A technical deep dive into bringing diffusion-style generation into language modeling — its efficiency and quality potential, and the open challenges.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI CFO：通往'富足智能'的全栈路径",
+          en: "OpenAI CFO on the Full Stack to Abundant Intelligence",
+        },
+        description: {
+          zh: "Sarah Friar 阐释芯片、算力、模型与产品各层进步如何叠加放大，以更低成本向大众交付更有用的智能。",
+          en: "Sarah Friar explains how gains across chips, compute, models, and products compound to deliver cheaper, more useful intelligence at scale.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-08-31-hot",
+    date: "2026-08-31",
+    title: {
+      zh: "🔥 今日热搜 · 2026-08-31",
+      en: "🔥 Hot Topics · Aug 31, 2026",
+    },
+    summary: {
+      zh: "网友意外拍到吉隆泥石流暴发瞬间，冲痕近 20 层楼高；医疗防疫分队奔赴一线、尼泊尔一侧中方失联人员全部转移，抢通现场两台挖掘机被上涨水流冲入河中；中国女排亚锦赛决赛 2-3 不敌泰国无缘奥运直通，网友呼吁召回朱婷；追觅因名誉权起诉小红书（9 月 8 日开庭）；重庆警方辟谣'外卖员加百草枯'系网民编造引流已处罚；留学生半月两次回国索要 58 万，父母报警识破'冒充公检法'骗局；南航客机虹桥误放应急滑梯损失或超 10 万；女孩半月工资 55 元、被踢出 845 个工作群，仲裁与两审均胜诉；海南一海滩现两年前综艺遗留道具成垃圾；国安披露军工企业骨干遭两国间谍围猎；片仔癀上市 20 年首次营收净利双降；特斯拉港澳上架平价版 Model 3。",
+      en: "A passerby caught the Jilong mudslide erupting, its scour marks nearly 20 storeys high; a medical team heads to the front and Chinese nationals reachable in Nepal are all safe, while rising water swept two excavators into the river at the reopening site; China's women's volleyball team lost 2-3 to Thailand in the Asian final, missing direct Olympic qualification and fomenting calls to recall Zhu Ting; Dreame sues Xiaohongshu over reputation rights (Sept 8 hearing); Chongqing police debunk a 'deliverer laced drinks with paraquat' rumor as fabricated by an internet user now fined; a student abroad rushing home twice for 580,000 yuan was stopped by police-alert parents from a fake-investigation scam; a China Southern 777 popped an escape slide at Hongqiao, likely costing ¥100k+; a woman paid 55 yuan for half a month and was kicked from 845 work chats — she won arbitration and both trials; a two-year-old reality-show prop rots into beach litter on Hainan; state security details a military-firm executive encircled by two nations' spies; Pien Tze Huang posts its first double decline in 20 years; Tesla lists an economy Model 3 in Hong Kong and Macau.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "网友拍到泥石流暴发瞬间，冲痕近 20 层楼高",
+          en: "Mudslide Captured Live; Scour Marks 20 Storeys Tall",
+        },
+        description: {
+          zh: "8 月 26 日 10 时 53 分，网友在吉隆亚洲一号观景台意外拍到泥石流土石翻涌奔泻而下的瞬间；总台记者看到现场冲痕目测约 60 米高，相当于 20 层楼。",
+          en: "A tourist at Platform No.1 caught debris storming downhill at 10:53 on Aug 26; on the ground, scour marks measure roughly 60m — twenty storeys high.",
+        },
+      },
+      {
+        title: {
+          zh: "吉隆救援推进：医疗队抵一线，挖掘机坠河",
+          en: "Jilong Rescue: Medical Team In, Excavators Swept Away",
+        },
+        description: {
+          zh: "西藏军区医疗防疫分队出发赴一线提供卫勤保障；驻尼泊尔使馆确认取得联系的中方人员已全部转移至安全地区；昨夜大雨致两台停河边挖掘机被水流带入河中，未造成伤亡。",
+          en: "A PLA medical team deployed to the front while the Chinese embassy confirmed all reachable Chinese nationals are safe; a night downpour swept two parked excavators into the river with no injuries.",
+        },
+      },
+      {
+        title: {
+          zh: "中国女排亚锦赛决赛失利，无缘奥运直通",
+          en: "Volleyball Team Loses Asian Final, Misses Direct Berth",
+        },
+        description: {
+          zh: "中国女排 2-3 不敌泰国，无缘冠军也未提前锁定洛杉矶奥运资格，'赵勇考砸了'冲上热搜，网友呼吁召回朱婷。",
+          en: "A 2-3 defeat to Thailand costs both the title and early LA Olympic qualification; 'Zhao Yong flopped' trends as fans call for Zhu Ting's return.",
+        },
+      },
+      {
+        title: {
+          zh: "追觅因名誉权纠纷起诉小红书",
+          en: "Dreame Sues Xiaohongshu Over Reputation",
+        },
+        description: {
+          zh: "案件将于 9 月 8 日在上海市黄浦区人民法院开庭，被诉方为小红书国内核心运营主体行吟信息科技。",
+          en: "The case against Xiaohongshu operator Xingyin hits Shanghai's Huangpu District Court on Sept 8.",
+        },
+      },
+      {
+        title: {
+          zh: "'外卖员加百草枯'系谣言，造谣者被处罚",
+          en: "Fabricated 'Paraquat Drinks' Rumormonger Fined",
+        },
+        description: {
+          zh: "重庆警方核实渝中区无相关警情，网传图片实为 2025 年 8 月某医院纠纷出警照；安徽网民郑某为博流量编造传播，已被行政处罚。",
+          en: "Chongqing police found no such case; the photo was from a 2025 hospital dispute. Anhui netizen Zheng fabricated the story for clicks and was penalized.",
+        },
+      },
+      {
+        title: {
+          zh: "留学生半月两次回国索 58 万，父母报警止损",
+          en: "Parents Stop 580,000-Yuan Scam on Their Student",
+        },
+        description: {
+          zh: "上海赴日留学生小张两次飞回国、要求父母存入指定银行卡 58 万元，民警查明系'冒充公检法'骗局，劝说后删除涉诈信息并换号，避免损失。",
+          en: "A Japan-based student flew home twice to push parents into depositing 580,000 yuan into a specified account; police identified the fake-investigation scam in time to save it.",
+        },
+      },
+      {
+        title: {
+          zh: "南航客机误放应急滑梯，损失或超 10 万",
+          en: "China Southern 777 Accidentally Deploys Slide",
+        },
+        description: {
+          zh: "波音 777 在上海虹桥过站时误放应急滑梯，原因尚在调查；涉事航班换机执飞、延误约 70 分钟，业内称检修等成本叠加损失或超 10 万元。",
+          en: "An accidental slide deployment at Hongqiao forced a plane swap and a 70-minute delay; maintenance and hidden costs could top ¥100,000.",
+        },
+      },
+      {
+        title: {
+          zh: "半月工资 55 元，被踢出 845 个工作群",
+          en: "55-Yuan Pay and 845 Kicked Group Chats",
+        },
+        description: {
+          zh: "重庆女孩遭公司变相逼退，半月仅得 55 元工资；劳动仲裁、一审、二审均胜诉，公司判决后仍拖欠 6 个月社保公积金，正继续维权。",
+          en: "Forced out, a Chongqing woman got just 55 yuan for half a month's work; she won arbitration and both trials, but six months of unpaid social-insurance contributions remain.",
+        },
+      },
+      {
+        title: {
+          zh: "综艺遗留道具 2 年成海滩垃圾",
+          en: "Reality-Show Props Rot Into Beach Litter",
+        },
+        description: {
+          zh: "海南万宁一海滩现 2 年前《这是我的岛》遗留道具；节目组称已清理并移交村民约定责任，当地镇政府已介入处理。",
+          en: "Props from two-year-old reality show 'This Is My Island' surface as decaying beach litter on Hainan; the town government has stepped in.",
+        },
+      },
+      {
+        title: {
+          zh: "国安披露：军工骨干遭 2 国间谍围猎",
+          en: "Spy Agencies Encircled a Defense-Firm Executive",
+        },
+        description: {
+          zh: "国家安全机关通报一起军工企业骨干遭两国间谍围猎的典型案例，细节首次披露，警示涉密人员防范渗透。",
+          en: "State security details a model case of a defense-industry executive encircled by foreign spies, urging classified personnel to guard against infiltration.",
+        },
+      },
+      {
+        title: {
+          zh: "760 元一粒的片仔癀卖不动了",
+          en: "Pien Tze Huang Slows After Price Hike",
+        },
+        description: {
+          zh: "半年报营收 45.73 亿元、净利 10.93 亿元，为上市 20 年来首次双降；此前锭剂零售价从 590 元上调至 760 元/粒，终端遇冷。",
+          en: "H1 revenue of ¥4.57B and net profit of ¥1.09B mark the first double decline since its 2006 listing — after the pill's price rose from ¥590 to ¥760 apiece.",
+        },
+      },
+      {
+        title: {
+          zh: "特斯拉港澳推出平价版 Model 3",
+          en: "Tesla Lists Economy Model 3 in HK and Macau",
+        },
+        description: {
+          zh: "香港起售价 20.5 万港元（较基础款降 8.5%）、澳门 25.2 万澳门元；精简内外饰配置，官方标称续航提升至 572 公里。",
+          en: "From HK$205,000 (8.5% off the base) and MOP$252,000, with trimmed trim and a claimed range boost to 572km.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-08-30",
     date: "2026-08-30",
     title: {
