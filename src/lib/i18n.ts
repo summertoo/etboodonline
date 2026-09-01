@@ -201,6 +201,9 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Throw darts at a rotating target with precision! Unlock new blades, upgrade damage, and conquer 300 levels of dart-throwing action.",
     "game.summitDesc":
       "Scale the icy peak step by step! Tap or click to climb, survive falling rocks and predators, and conquer the summit in this minimalist arcade challenge.",
+    "game.mapDemoTitle": "🗺️ MapDemo",
+    "game.mapDemoDesc":
+      "Explore a 3D city map freely! Walk or ride through an immersive urban environment powered by Three.js.",
 
     // DApp descriptions
     "dapp.ruokDesc":
@@ -464,6 +467,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.bladeDartTitle": "🗡️ 剑出飞镖",
     "game.summitTitle": "⛰️ 登峰造极",
     "game.crazyBirdTitle": "🐦 疯狂的小鸡",
+    "game.mapDemoTitle": "🗺️ 地理游览",
+    "game.mapDemoDesc":
+      "自由探索3D城市地图！在Three.js驱动的沉浸式城市环境中步行或骑行漫游。",
     "game.crazyBirdDesc":
       "用弹弓精准发射小鸟！撞倒顽固的猪头，冲破砖块堡垒，征服基于物理引擎的趣味关卡。",
     "game.threeDMatchTitle": "🧊 立体配对",
