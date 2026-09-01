@@ -6,10 +6,12 @@ import type { NewsItem } from "./types";
 import { newsList as newsList2026_05 } from "./2026-05";
 import { newsList as newsList2026_06 } from "./2026-06";
 import { newsList as newsList2026_07 } from "./2026-07";
+import { newsList as newsList2026_09 } from "./2026-09";
 import { newsList as newsList2026_08 } from "./2026-08";
 
 // 按日期倒序：最新月份在前
 export const newsList: NewsItem[] = [
+  ...newsList2026_09,
   ...newsList2026_08,
   ...newsList2026_07,
   ...newsList2026_06,
