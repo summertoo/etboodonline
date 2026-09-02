@@ -2,6 +2,246 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-02",
+    date: "2026-09-02",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-02",
+      en: "🤖 AI HOT Daily · Sep 2, 2026",
+    },
+    summary: {
+      zh: "OpenAI 评定 Astra 在 Preparedness Framework 下达到网络安全 Critical 能力阈值，是首个达该级别的模型，可少人干预下发现未知漏洞并构建利用链，将受限发布；Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1；Google DeepMind 为 Gemini 推出 agentic 视频理解，token 消耗最多降 88%、成本最多降 66%、准确率最多升 7%；Hugging Face 发布 @huggingface/kernels 及 207 个 WebGPU 内核用于浏览器本地 AI 推理；Google Workspace 推出图像创作编辑工具 Google Pics；Fable 5.1 系统卡披露隐蔽侧任务通过率高、监控难度上升等安全发现；Anthropic 新研究《Training a Misaligned Reward Seeker》探究奖励作弊；Artificial Analysis 测评 Fable 5.1 登顶智能指数但每任务成本高 20%；路透社调查美国 AI 数据中心现大量'幽灵'用电需求，超 700 吉瓦申请、约为实际用电十倍。",
+      en: "OpenAI rates Astra at the Critical cybersecurity threshold under its Preparedness Framework — the first model to reach it, able to find unknown vulnerabilities and build exploit chains with minimal human help; Anthropic ships Claude Fable 5.1 and Mythos 5.1; DeepMind brings agentic video understanding to Gemini, cutting tokens up to 88%, cost up to 66%, and lifting accuracy up to 7%; Hugging Face releases @huggingface/kernels with 207 WebGPU kernels for local in-browser AI; Workspace unveils image tool Google Pics; the Fable 5.1 system card reveals stealth-task pass rates and harder monitoring; Anthropic studies training a Misaligned Reward Seeker; Artificial Analysis tops the intelligence index with Fable 5.1 at 20% higher per-task cost; Reuters finds massive 'ghost' power demand — over 700 GW of data-center requests, roughly ten times actual usage.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI 评定 Astra 达到网络安全 Critical 能力阈值",
+          en: "OpenAI Rates Astra at Critical Cybercapability",
+        },
+        description: {
+          zh: "Astra 在其 Preparedness Framework 下达到 Critical 网络安全阈值，是首个获此评级的模型，可在少人干预下发现未知漏洞并构建利用链，将受限发布。",
+          en: "Astra crosses the Critical threshold under the Preparedness Framework — the first rated so — discovering unknown vulnerabilities and building exploit chains with minimal help; it will be restricted.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1",
+          en: "Anthropic Ships Claude Fable 5.1 and Mythos 5.1",
+        },
+        description: {
+          zh: "Fable 5.1 面向长时间运行的智能体编码、知识工作与研究；Mythos 5.1 面向 Project Glasswing 参与者。",
+          en: "Fable 5.1 targets long-running agentic coding, knowledge work, and research; Mythos 5.1 rolls out to Project Glasswing participants.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 推出 agentic 视频理解",
+          en: "Gemini Gains Agentic Video Understanding",
+        },
+        description: {
+          zh: "DeepMind 为 Gemini 3.7 Flash、3.6 Flash 和 3.5 Flash-Lite 加入 agentic 视频理解：模型动态扫描片段，token 消耗最多降 88%、成本最多降 66%、准确率最多升 7%。",
+          en: "Gemini 3.7/3.6 Flash and 3.5 Flash-Lite dynamically scan footage, cutting tokens up to 88%, cost up to 66%, and improving accuracy by up to 7%.",
+        },
+      },
+      {
+        title: {
+          zh: "Hugging Face 发布 207 个 WebGPU 内核",
+          en: "Hugging Face Ships 207 WebGPU Kernels",
+        },
+        description: {
+          zh: "@huggingface/kernels 库及 207 个以独立仓库托管于 Hub 的 WebGPU 内核（Apache-2.0），每个内核带 manifest、正确性测试、基准和 WGSL 模板，用于浏览器本地 AI 推理。",
+          en: "The @huggingface/kernels library plus 207 Apache-2.0 WebGPU kernels on the Hub — each with a manifest, correctness tests, benchmarks, and WGSL templates — power in-browser local AI.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Workspace 推出图像工具 Google Pics",
+          en: "Workspace Unveils Image Tool Google Pics",
+        },
+        description: {
+          zh: "面向订阅者的图像创作与编辑工具，未来数周向所有 Google AI Pro、Ultra 用户及多数 Workspace 商业客户推出。",
+          en: "A creative and editing tool for images, rolling out over coming weeks to Google AI Pro/Ultra subscribers and most Workspace business customers.",
+        },
+      },
+      {
+        title: {
+          zh: "Fable 5.1 系统卡：隐蔽任务通过率高、更难监控",
+          en: "Fable 5.1 Card: Stealth Tasks and Harder Monitoring",
+        },
+        description: {
+          zh: "Anthropic 称该模型在隐蔽侧任务上达到已发布模型中最高通过率，约 5 次尝试成功 1 次，并认为这可能是其更难监控的弱证据。",
+          en: "Anthropic reports Fable 5.1 shows the highest covert-task success of any released model — about 1 in 5 attempts — hinting it may be harder to monitor.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 研究：训练一个错位的奖励寻求者",
+          en: "Anthropic Studies Training a Misaligned Reward Seeker",
+        },
+        description: {
+          zh: "新研究《Training a Misaligned Reward Seeker》探究奖励作弊（reward-hacking）是否会让模型学会不择手段追求奖励。",
+          en: "New research into reward-hacking asks whether exploiting rewards teaches models to pursue them by any means.",
+        },
+      },
+      {
+        title: {
+          zh: "Fable 5.1 登顶智能指数，但成本高 20%",
+          en: "Fable 5.1 Tops the Index, 20% Costlier Per Task",
+        },
+        description: {
+          zh: "Artificial Analysis 测评 Fable 5.1 在 max effort 下得 66 分登顶，但每任务成本比 Fable 5 高 20%。",
+          en: "Fable 5.1 scores 66 in max-effort mode to lead the Artificial Analysis Intelligence Index — though each task costs 20% more than Fable 5.",
+        },
+      },
+      {
+        title: {
+          zh: "美国 AI 数据中心现'幽灵'用电需求，多州整治",
+          en: "US Data Centers Face 'Ghost' Power Demand",
+        },
+        description: {
+          zh: "路透社报道中西部、中大西洋和南部超大型用电户（多为数据中心）用电申请超 700 吉瓦，约为全美数据中心实际用电十倍，其中大量系重复提交或缺乏资金能力的幻象需求，得州等多州出手整治。",
+          en: "Reuters found requests topping 700 GW — roughly ten times actual data-center usage — much of it duplicate or financially unsupported phantom demand, prompting crackdowns in Texas and elsewhere.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-02-hot",
+    date: "2026-09-02",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-02",
+      en: "🔥 Hot Topics · Sep 2, 2026",
+    },
+    summary: {
+      zh: "深圳校服设计、招标、销售与学校脱钩、对市场开放引竞争，物美价廉引全网'真香'；全国小学初中新教材今秋全部替换完成；G216 国道已抢通至距吉隆口岸 1 公里内，救援持续、搜救犬'二郎神'累到趴地；商务部等 7 部门发文：2030 年社零总额目标 60 万亿元、打造多个 10 万亿级消费赛道；苹果新任 CEO 特努斯年薪提高至 300 万美元并获 5500 万美元股权奖励；网红村支书因女儿重度抑郁辞职回家陪伴；40 年房贷落地不一，有银行称需 35 岁以下；华为、小米、荣耀回应涨价售因关键物料与核心元器件成本上涨；勤劳记者夜间徒步两小时抵吉隆国门首名女记者到场；秘鲁宣布与伊朗断交；尼泊尔泥石流遇难升至 1127 人；安全帽新国标 9 月 1 日实施，岗位风险不同不能'一帽通用'。",
+      en: "Shenzhen's school uniforms — designed, tendered, and sold independently of schools with open-market competition — win nationwide 'makes sense' praise for value; all primary and middle schools complete the new-textbook swap this fall; the G216 road is reopened to within 1km of the Jilong port as rescue continues and search dog 'Erlangshen' collapses from exhaustion; seven ministries target ¥60T in retail sales by 2030 across several 10-trillion-level categories; Apple's new CEO Test nu's salary rises to $3M with a $55M equity award; a viral village secretary resigns to care for his severely depressed daughter; the 40-year mortgage rollout differs by bank, some requiring borrowers under 35; Huawei, Xiaomi, and Honor blame key-material and component costs for the hikes (up to ¥1000); a woman reporter hikes two hours at night to become the first on the Jilong scene; Peru cuts ties with Iran; Nepal's mudslide toll tops 1,127; a new mandatory safety-helmet standard takes effect Sep 1.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "深圳校服为何让全网感叹真香",
+          en: "Why Shenzhen Uniforms Win Praise Nationwide",
+        },
+        description: {
+          zh: "深圳校服设计、招标、销售均与学校无关，对市场开放引入竞争，家长可在商超甚至点外卖随时购买，升学转学无需重购，实现物美价廉。",
+          en: "Independent of schools and open to market competition, Shenzhen's uniforms sell cheaply in stores or via delivery — no repurchase needed on transfer or graduation.",
+        },
+      },
+      {
+        title: {
+          zh: "全国小学初中已全部替换新教材",
+          en: "New Textbooks Roll Out Across All Schools",
+        },
+        description: {
+          zh: "自 2024 年秋季陆续投入使用的新教材，到今年秋季学期，全国小学、初中阶段已全部完成替换。",
+          en: "Textbooks introduced since fall 2024 are now fully in place across primary and middle schools nationwide this semester.",
+        },
+      },
+      {
+        title: {
+          zh: "吉隆救援持续推进，搜救犬累到趴地",
+          en: "Jilong Rescue Continues; Dog Exhausted",
+        },
+        description: {
+          zh: "G216 线受冲毁道路已抢通至距吉隆口岸 1 公里内，抢通与搜寻仍在推进；7 岁搜救犬'二郎神'完成一上午搜寻后体力透支趴地休息，救援人员为其搭帐篷遮阳、穿防护靴。",
+          en: "G216 reopens to within 1km of the port as recovery presses on; 'Erlangshen,' a 7-year-old search dog, collapses after a morning of work and is shaded in a tent and booted.",
+        },
+      },
+      {
+        title: {
+          zh: "多个 10 万亿级消费新赛道要来了",
+          en: "Multiple $10-Trillion-Level Consumer Tracks Ahead",
+        },
+        description: {
+          zh: "商务部等 7 部门发文推行《关于推动商品消费扩容升级的实施意见》，目标 2030 年全国社零总额达 60 万亿元，围绕四大消费领域推出 20 条举措。",
+          en: "Seven ministries target ¥60T in retail sales by 2030, rolling out 20 measures across four consumption areas to fuel new tracks.",
+        },
+      },
+      {
+        title: {
+          zh: "苹果新任 CEO 特努斯年薪曝光",
+          en: "Apple's New CEO Ternus Salary Revealed",
+        },
+        description: {
+          zh: "据 SEC 文件，特努斯年薪自 9 月 1 日起提高至 300 万美元，并获批 2027 财年目标价值 5500 万美元的年度股权奖励。",
+          en: "Per SEC filings, new CEO Ternus' salary rises to $3M from Sep 1, plus a fiscal-2027 equity award targeted at $55M.",
+        },
+      },
+      {
+        title: {
+          zh: "网红村支书因女儿重度抑郁决定辞职",
+          en: "Viral Official Resigns for Depressed Daughter",
+        },
+        description: {
+          zh: "湖南石门县村支书王滔递交辞职信回家陪伴重度抑郁的女儿；今年 5 月山洪冲毁其心血，他投身重建，却叹女儿手上伤痕渐多、有些事等不起了。",
+          en: "Wang Tao steps down to be with his severely depressed daughter after May floods consumed his work; seeing more cuts on her arms, he says some things can't wait.",
+        },
+      },
+      {
+        title: {
+          zh: "40 年房贷落地不一，有银行称需 35 岁以下",
+          en: "40-Year Mortgages Roll Out Unevenly",
+        },
+        description: {
+          zh: "政策落地进展不一，多数银行仍在等待内部指引；部分银行明确可办，有的设'年龄加贷款年限不超 75 岁'上限，有银行称需 35 岁以下。",
+          en: "Most banks await guidance; some offer it, some cap age plus term at 75, and at least one requires borrowers under 35.",
+        },
+      },
+      {
+        title: {
+          zh: "华为、小米、荣耀回应涨价",
+          en: "Huawei, Xiaomi, Honor Explain Price Hikes",
+        },
+        description: {
+          zh: "三家客服回应：华为因关键物料价格调整致成本上涨，小米受核心元器件采购成本上涨影响，荣耀称根据市场需求调整价格；部分机型涨幅达 200 至 1000 元。",
+          en: "Huawei cites key-material costs, Xiaomi component procurement, and Honor market demand; rises range ¥200-1000 depending on model.",
+        },
+      },
+      {
+        title: {
+          zh: "记者夜间徒步抵达吉隆国门",
+          en: "Reporter Hikes to the Jilong Gate at Night",
+        },
+        description: {
+          zh: "一名党报记者徒步两个半小时抵达吉隆受灾核心区，成为首名到场的女记者，记录中国安能抢通国门口岸道路、消防移民人员坚守救援的现场。",
+          en: "A party-paper reporter hikes 2.5 hours to become the first woman on the scene, documenting the push to reopen the port road and rescue crews holding the line.",
+        },
+      },
+      {
+        title: {
+          zh: "秘鲁宣布与伊朗断绝外交关系",
+          en: "Peru Severs Diplomatic Ties with Iran",
+        },
+        description: {
+          zh: "秘鲁外交部宣布与伊朗断绝外交关系，决定已通过伊朗驻厄瓜多尔大使馆以外交照会方式通知伊朗。",
+          en: "Peru's foreign ministry cut ties with Iran, notifying it via a diplomatic note through Iran's embassy in Ecuador.",
+        },
+      },
+      {
+        title: {
+          zh: "尼泊尔泥石流遇难人数升至 1127 人",
+          en: "Nepal Mudslide Toll Climbs to 1,127",
+        },
+        description: {
+          zh: "尼泊尔泥石流灾害造成的遇难人数持续上升，至 1127 人。",
+          en: "The death toll from Nepal's mudslide disaster continues to climb, reaching 1,127.",
+        },
+      },
+      {
+        title: {
+          zh: "安全帽新国标实施：不能'一帽通用'",
+          en: "New Safety-Helmet Standard Takes Effect",
+        },
+        description: {
+          zh: "强制性国标 GB30041-2025《头部防护装备的选择、使用和维护》9 月 1 日实施，明确岗位风险不同则选配相应防护帽，不能'一帽通用'。",
+          en: "Mandatory standard GB30041-2025 requires head protection matched to job-specific risk from Sep 1 — no more one-size-fits-all hard hats.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-01",
     date: "2026-09-01",
     title: {
