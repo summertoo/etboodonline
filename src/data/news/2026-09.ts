@@ -2,6 +2,276 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-03",
+    date: "2026-09-03",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-03",
+      en: "🤖 AI HOT Daily · Sep 3, 2026",
+    },
+    summary: {
+      zh: "Google DeepMind 发布 Gemini 3.8 Flash 与 3.8 Flash Cyber；Meta 五个月第四个版本的 Muse Spark 1.3 提升智能体与科学推理，xhigh 版智能指数得 61 分；通义千问 Qwen3.8-Max-0902 在 Code Arena WebDev 以 1691 分登顶、并以 $5/MToken 领跑 Pareto 前沿；Claude 的 Cowork 与 Claude Code 新增后台操作电脑能力；Cursor 推出 Self-Hosted Machines 让云智能体在企业自有机器上执行；美团 LongCat-2.0 上线 Cline 免费试用；UU 远程新版本强化 TUI 渲染与多终端会话；Nvidia 接近以约 129 亿美元收购 Hugging Face；OpenAI 因加拿大 Tumbler Ridge 校园枪击案面临 30 起新诉讼、被指协助教唆；美国司法部提交意见书主张训练 LLM 属合理使用；Google 讲解 harness 工程与 LLM-as-a-Judge 评分标准；Anthropic 发布电商 Agent 架构指南并开源 commerce-agents；GitHub 分享 Copilot 降本四项改动；Google 复盘 AI Agents Challenge 的四个工程模式。",
+      en: "DeepMind releases Gemini 3.8 Flash and 3.8 Flash Cyber; Meta's fourth Muse Spark in five months, 1.3, lifts agentic and scientific reasoning (xhigh scores 61 on the index); Qwen3.8-Max-0902 debuts at No.1 in Code Arena WebDev with 1,691 points and leads the Pareto frontier at $5/MToken; Claude's Cowork and Claude Code can now operate a computer in the background; Cursor's Self-Hosted Machines run cloud agents on enterprise-owned hardware; Meituan's LongCat-2.0 hits Cline for free trials; UU Remote adds full TUI rendering and multi-session management; Nvidia nears a ~$12.9B deal for Hugging Face; OpenAI and Sam Altman face 30 new lawsuits over the Tumbler Ridge shooting, accused of aiding and abetting; the DOJ argues LLM training is generally fair use; Google explains harness engineering and reliable LLM-as-a-Judge rubrics; Anthropic publishes a commerce-agent architecture guide and open-sources commerce-agents; GitHub shares four cost-efficiency changes for Copilot; Google distills four engineering patterns from AI Agents Challenge top entries.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "DeepMind 发布 Gemini 3.8 Flash 与 Flash Cyber",
+          en: "DeepMind Debuts Gemini 3.8 Flash and Flash Cyber",
+        },
+        description: {
+          zh: "两款新模型正式发布，其中 Flash Cyber 面向网络安全场景。",
+          en: "Two new models land, with Flash Cyber aimed at cybersecurity use cases.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 发布 Muse Spark 1.3",
+          en: "Meta Ships Muse Spark 1.3",
+        },
+        description: {
+          zh: "五个月内第四个 Muse Spark 版本，聚焦智能体与科学推理；xhigh 版在 Artificial Analysis Intelligence Index 得 61 分。",
+          en: "The fourth Muse Spark in five months sharpens agentic and scientific reasoning; the xhigh tier scores 61 on the Artificial Analysis index.",
+        },
+      },
+      {
+        title: {
+          zh: "Qwen3.8-Max-0902 登顶 Code Arena",
+          en: "Qwen3.8-Max-0902 Tops Code Arena",
+        },
+        description: {
+          zh: "在 Code Arena: WebDev 以 1691 分首次亮相即排名总榜第一，并以混合价 $5/MToken 成为 Pareto 前沿上得分最高的模型，已可在 QwenCloud 试用。",
+          en: "Debuting with 1,691 in WebDev to take the global top spot, and the highest-scoring model on the Pareto frontier at a blended $5/MToken — try it on QwenCloud.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 在 Cowork 与 Claude Code 支持后台操作电脑",
+          en: "Claude Can Now Operate Your Computer in the Background",
+        },
+        description: {
+          zh: "把任务交给 Claude 后，它会像人一样点击、输入和打开应用，用户可同时去做其他事。",
+          en: "Hand a task to Claude and it clicks, types, and opens apps like a person while you do something else.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 推出 Self-Hosted Machines",
+          en: "Cursor Launches Self-Hosted Machines",
+        },
+        description: {
+          zh: "云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理与规划仍留在 Cursor 云端，通过 worker 出站 HTTPS 连接对接，Cursor 不主动连入企业网络。",
+          en: "Tool execution moves to machines inside the enterprise network while the agent loop, reasoning, and planning stay in Cursor's cloud via outbound HTTPS workers — Cursor never dials in.",
+        },
+      },
+      {
+        title: {
+          zh: "美团 LongCat-2.0 上线 Cline 免费试用",
+          en: "Meituan LongCat-2.0 Free Trials on Cline",
+        },
+        description: {
+          zh: "美团 LongCat-2.0 正式上线 Cline 免费试用。",
+          en: "Meituan's LongCat-2.0 is now available for free trials on Cline.",
+        },
+      },
+      {
+        title: {
+          zh: "UU 远程新版本强化终端体验",
+          en: "UU Remote Shores Up Terminal Experience",
+        },
+        description: {
+          zh: "补齐 TUI 渲染交互与终端会话管理；新增 Mac 免密码登录、移动端输入优化、多终端会话创建与手机电脑跨端同步接管。",
+          en: "Adds full TUI rendering and multi-session management, plus Mac passwordless login, mobile input polish, and cross-device session takeover.",
+        },
+      },
+      {
+        title: {
+          zh: "Nvidia 接近以 129 亿美元收购 Hugging Face",
+          en: "Nvidia Nears $12.9B Deal for Hugging Face",
+        },
+        description: {
+          zh: "Bloomberg 报道交易总额可能达约 140 亿美元，约为 2023 年融资轮估值（45 亿美元）的 2.9 倍；双方尚未达成最终协议。",
+          en: "The total could reach ~$14B — about 2.9x the 2023 funding valuation — with no final agreement yet.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 因校园枪击案面临 30 起新诉讼",
+          en: "OpenAI Faces 30 New Suits Over Campus Shooting",
+        },
+        description: {
+          zh: "OpenAI 及 CEO Sam Altman 被控为加拿大 Tumbler Ridge 校园枪击案嫌疑人提供实质性协助与鼓励，由事发时在校的学生、教师和校长在加州联邦法院提起。",
+          en: "OpenAI and CEO Sam Altman are accused of providing substantial assistance to the shooter; students, teachers, and the principal filed in California federal court.",
+        },
+      },
+      {
+        title: {
+          zh: "美司法部：LLM 训练一般属合理使用",
+          en: "DOJ: LLM Training Is Generally Fair Use",
+        },
+        description: {
+          zh: "在 OpenAI 与纽约时报版权案中，司法部主张模型训练具有非凡转换性，并以国家安全为由警告全面许可要求会削弱美国 AI 竞争力；该意见书为建议性、不约束法院。",
+          en: "In the OpenAI/Times case, the DOJ calls training transformative and warns blanket licensing would hurt US competitiveness on national-security grounds; it's advisory only.",
+        },
+      },
+      {
+        title: {
+          zh: "什么是 harness 工程？Google 用 ADK 2.0 演示",
+          en: "What Is Harness Engineering? Google Demos with ADK 2.0",
+        },
+        description: {
+          zh: "用确定性组件包裹 LLM，包括编排层、执行沙箱、状态持久化与验证工具，让 Agent 不需逐行人工审查即可安全生成代码。",
+          en: "Wrapping an LLM in deterministic components — orchestration, execution sandbox, state persistence, and verifiers — lets agents generate code safely without line-by-line review.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 发布电商 Agent 架构并开源参考实现",
+          en: "Anthropic Publishes Commerce-Agent Guide, Open-Sources It",
+        },
+        description: {
+          zh: "核心架构为单个 Claude 在标准 Agent 循环中配合技能与工具，而非按领域拆分子智能体；开源 anthropics/commerce-agents 含购物与商家 Agent。",
+          en: "The core is one Claude in a standard agent loop with skills and tools rather than domain sub-agents; anthropics/commerce-agents ships shopping and merchant agents.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-03-hot",
+    date: "2026-09-03",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-03",
+      en: "🔥 Hot Topics · Sep 3, 2026",
+    },
+    summary: {
+      zh: "国内首部全 AI 长剧《后西游记》无真人演员却在湖南卫视首播拿下同时段收视第一；男子充值 1000 元误到账 26419933 亿元、消费 25 万后法院判其返还不当得利；今天是中国人民抗日战争胜利 81 周年纪念日；微信推出两个新功能专治'没看见'（长按图标看全部未读、未领红包转账弹提醒），并回应'单删提示'暂不支持批量查看；家长在班级群晒纪委身份请老师关照，纪委纪检组已介入调查；'葫芦娃爷爷'失独老人把游客当亲人、坚决不卖葫芦；福建福鼎'中国白茶第一街'遭暴雨被淹、茶商损失严重；乌克兰国安局与情报总局在基辅发生交火致 3 人受伤；伊朗称用导弹与无人机打击科威特美军基地；全球股市上演深'V'反转、美债收益率跳水；HBO 发布剧版《哈利波特》新预告；老戏骨刘兆铭（《倩女幽魂》姥姥）去世享年 93 岁。",
+      en: "China's first fully AI-made long drama, Journey to the West: The Sequel, has no human actors yet tops its timeslot on Hunan TV; a man who recharged ¥1,000 was mistakenly credited with a 26,419,933-亿元 balance, and after spending ¥250k must return the unjust enrichment; today marks the 81st anniversary of China's victory in the War of Resistance; WeChat ships two 'for the unseeing' features and says bulk single-delete checking remains unsupported; a parent flashing a discipline-inspection commission ID in the class chat to ask for favors draws a probe; the 'Calabash Grandpa' who lost his child treats visitors like family and won't sell his gourds; Fujian's Fuding 'China's No.1 White-Tea Street' floods with heavy losses; Ukraine's SBU and defense-intelligence staff clash in Kyiv, wounding three; Iran says it struck a US base in Kuwait with missiles and drones; global stocks stage a deep-V reversal as Treasury yields tumble; HBO drops a new Sorcerer's Stone trailer; veteran actor Lau Siu-ming (Tree Demon in A Chinese Ghost Story) dies at 93.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "全 AI 长剧《后西游记》拿下收视第一",
+          en: "All-AI Drama 'Journey to the West: The Sequel' Tops Ratings",
+        },
+        description: {
+          zh: "8 月 31 日国内首部全 AI 长剧在湖南卫视开播，无真人演员，首播即拿下省级卫视同时段实时收视第一。",
+          en: "China's first fully AI long-form drama aired Aug 31 with no human cast and took the top spot in its provincial-TV timeslot on debut.",
+        },
+      },
+      {
+        title: {
+          zh: "充值 1000 误到账 26419933 亿元",
+          en: "Typo Credits a Man with 26,419,933-Yuan-in-Yi Balance",
+        },
+        description: {
+          zh: "工作人员将账号 ID 当金额，为充值 1000 元的男子充入 26419933 亿元额度，其消费 25 万后法院认定构成不当得利、判其返还 25 万余元。",
+          en: "An operator typed an account ID as an amount, crediting a ¥1,000 recharge with an absurd balance; after spending ¥250k, a court ordered the sums returned as unjust enrichment.",
+        },
+      },
+      {
+        title: {
+          zh: "中国人民抗日战争胜利 81 周年纪念日",
+          en: "81st Anniversary of China's War-Resistance Victory",
+        },
+        description: {
+          zh: "14 年浴血奋战、3500 多万同胞伤亡，胜利来之不易，历史必须铭记。",
+          en: "After 14 years of brutal struggle and over 35 million casualties, this victory was hard-won and must never be forgotten.",
+        },
+      },
+      {
+        title: {
+          zh: "微信新功能专治'没看见'",
+          en: "WeChat Features for the 'Unseen'",
+        },
+        description: {
+          zh: "一是长按左下角微信图标查看全部未读会话；二是未领红包或转账会弹出提醒标识。",
+          en: "Long-press the bottom-left icon to see all unread chats, and receive pop-ups for unclaimed red packets or transfers.",
+        },
+      },
+      {
+        title: {
+          zh: "家长晒纪委身份请关照，纪检介入",
+          en: "Parent Flaunts Official ID for Favor — Probe Launched",
+        },
+        description: {
+          zh: "保定一家长在班级群自报市人民医院纪委书记身份请老师关照孩子；保定市纪委驻市卫健委纪检组已介入调查。",
+          en: "A parent in Baoding touted their hospital discipline-commission role in the class chat to ask for favors; the city's discipline inspection unit is now investigating.",
+        },
+      },
+      {
+        title: {
+          zh: "微信回应'单删提示'",
+          en: "WeChat Responds on 'Single-Delete' Alerts",
+        },
+        description: {
+          zh: "腾讯客服称暂不支持批量查看已被对方删除的联系人，仅好友数满时弹窗提醒可手动删除。",
+          en: "Tencent says bulk checking of who deleted you is unsupported; only when your contact list is full does a prompt let you prune manually.",
+        },
+      },
+      {
+        title: {
+          zh: "福建'中国白茶第一街'被淹",
+          en: "Fujian's 'No.1 White-Tea Street' Flooded",
+        },
+        description: {
+          zh: "福鼎点头镇遭遇暴雨，'中国白茶第一街'多店受损，有茶商仓库损失至少 50 万元；水势渐退，当地正开展善后。",
+          en: "A torrent hit Fuding's Dantou Town, flooding the famous white-tea street; one dealer lost at least ¥500k. Water is receding as recovery begins.",
+        },
+      },
+      {
+        title: {
+          zh: "乌克兰两部门在基辅发生交火",
+          en: "Scuffle in Kyiv Between Two Ukrainian Agencies",
+        },
+        description: {
+          zh: "乌克兰国安局与国防部情报总局人员在基辅交火，致 3 名情报总局人员受伤；国家调查局将彻底调查。",
+          en: "Staff from the SBU and the defense-intelligence directorate clash in Kyiv, wounding three; a full state investigation follows.",
+        },
+      },
+      {
+        title: {
+          zh: "伊朗打击科威特美军基地",
+          en: "Iran Claims Strike on US Base in Kuwait",
+        },
+        description: {
+          zh: "伊朗方面称使用导弹和无人机打击科威特美军基地，消息人士称现场冒出滚滚浓烟。",
+          en: "Iran says missiles and drones hit a US base in Kuwait, with sources reporting plumes of smoke at the scene.",
+        },
+      },
+      {
+        title: {
+          zh: "全球股市大反转",
+          en: "Global Markets Stage a Deep-V Reversal",
+        },
+        description: {
+          zh: "9 月 2 日晚间全球股市深'V'逆转、美债收益率跳水；此前高油价推高通胀担忧，10 年期美债收益率一度触及 2023 年 11 月以来最高。",
+          en: "Markets V-reversed and Treasury yields slid after oil-driven inflation worries had pushed the 10-year to its highest since Nov 2023.",
+        },
+      },
+      {
+        title: {
+          zh: "HBO 发布剧版《哈利·波特》新预告",
+          en: "HBO Drops New 'Harry Potter' Series Trailer",
+        },
+        description: {
+          zh: "预告展示霍格沃茨开学宴与一年级分院仪式，哈利、赫敏、罗恩等经典角色亮相，剧集即将推出。",
+          en: "The trailer reveals the Sorting-feast and first-year ceremony with Harry, Hermione, and Ron; the series is coming soon.",
+        },
+      },
+      {
+        title: {
+          zh: "老戏骨刘兆铭去世，享年 93 岁",
+          en: "Veteran Actor Lau Siu-ming Dies at 93",
+        },
+        description: {
+          zh: "代表作含《倩女幽魂》姥姥、《蝶变》方红叶、《笑傲江湖》岳不群，曾获 TVB'万千光辉演艺人大奖'，晚年饱受七种病痛折磨。",
+          en: "Known for the Tree Demon in A Chinese Ghost Story, Ye Gang in Butterfly, and Yue Buqun in Swordsman, the TVB hall-of-famer died at 93 after years of illness.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-02",
     date: "2026-09-02",
     title: {
