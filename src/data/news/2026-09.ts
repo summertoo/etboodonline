@@ -2,6 +2,276 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-04",
+    date: "2026-09-04",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-04",
+      en: "🤖 AI HOT Daily · Sep 4, 2026",
+    },
+    summary: {
+      zh: "OpenAI 发布 GPT-6 Astra——首个达到准备框架关键级网络安全门槛的模型：1.05M 上下文、OSWorld V2-Offline 得分 72.6%、ARC-AGI-3 接近 99.9% 饱和、多项基准全面超越 Claude Fable 5.1，其中 ARC-AGI-3 发布仅半年即被饱和、速度快于预期一倍；IFM 发布 K2 Horizon 六款开源模型（0.9B 至 375B-A23B，Apache 2.0）；Hugging Face 开源编码智能体记忆层 funes；xAI 发布 Grok Bot 及企业版（两周免费）；OpenAI 推出 Daybreak for Frontline Defenders 投 10 亿美元支持一线网络防御；NVIDIA 官宣以 129.303 亿美元收购 Hugging Face；Artificial Analysis 评测 Astra 编码智能体追平 Fable 5 但价格涨至 2.5 倍；Rohan Paul 梳理 Astra 117 页系统卡，其链式思维控制力从 16.1% 跃升至 60.9%、可监控性下降；Gary Marcus 与 François Chollet 点评 Astra；Tom Tunguz 解析 Muse Spark 双轨定价；Google 教你用 Cloud Run 每月 $5.70 搭建常驻 Agent；Muse Spark 1.3 编码智能体指数 68 分仅次于 Claude。",
+      en: "OpenAI drops GPT-6 Astra — the first model to hit the Critical cybersecurity threshold under its preparedness framework: a 1.05M context window, 72.6% on OSWorld V2-Offline, near-saturated ARC-AGI-3 (~99.9%), and broad wins over Claude Fable 5.1 at a lower price; ARC-AGI-3 saturated in just six months, twice as fast as Chollet expected; IFM open-sources six K2 Horizon models (0.9B–375B, Apache 2.0); Hugging Face ships funes, a local memory layer for coding agents; xAI launches Grok Bot and an enterprise tier (free two weeks); OpenAI's $1B Daybreak program backs frontline defenders; NVIDIA confirms its $12.93B acquisition of Hugging Face; Artificial Analysis rates Astra's coding agent on par with Fable 5 at 2.5x the price; Rohan Paul flags Astra's chain-of-thought control jumping from 16.1% to 60.9% with declining monitorability; Marcus and Chollet weigh in; Tunguz decodes Muse Spark's two-tier pricing; Google shows how to host a 24/7 agent on Cloud Run for $5.70/mo; Muse Spark 1.3 scores 68 in coding-agent index, just behind Claude.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI 发布 GPT-6 Astra：首个关键级网安能力模型",
+          en: "GPT-6 Astra: First Model at Critical Cyberthreshold",
+        },
+        description: {
+          zh: "1.05M token 上下文、128K 最大输出、OSWorld V2-Offline 得分 72.6%（GPT-5.6 Sol 为 65.7%），可零越界执行各类任务，因触及关键级网络安全阈值而限制访问。",
+          en: "A 1.05M-token window, 128K max output, and 72.6% on OSWorld V2-Offline (vs 65.7% for GPT-5.6 Sol) — but gated behind the Critical cyber threshold.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-6 Astra：多项基准达到 SOTA 并超越 Fable 5.1",
+          en: "GPT-6 Astra: SOTA Across Benchmarks, Beats Fable 5.1",
+        },
+        description: {
+          zh: "ARC-AGI-3 接近 99.9% 饱和、ExploitBench 100%、FrontierMath Tier 4、TerminalBench-4.0 均达 SOTA，全面超此前保持 SOTA 两天的 Claude Fable 5.1 且价格更低。",
+          en: "With ~99.9% on ARC-AGI-3, 100% on ExploitBench, SOTA on FrontierMath Tier 4 and TerminalBench-4.0, it tops the two-day-old Fable 5.1 across the board — cheaper too.",
+        },
+      },
+      {
+        title: {
+          zh: "ARC-AGI-3 仅半年即被饱和，快于预期一倍",
+          en: "ARC-AGI-3 Saturated in 6 Months, 2x Faster Than Predicted",
+        },
+        description: {
+          zh: "Sherwin Wu 与 Chollet 指出该基准发布时预计约一年才能饱和，实际只用了 6 个月，新一代模型能力将挑战人们基于旧模型形成的 AI 观点。",
+          en: "Chollet expected near-saturation in about a year; it took six months — new models will upend views rooted in far older ones.",
+        },
+      },
+      {
+        title: {
+          zh: "IFM 发布 K2 Horizon 六款开源模型",
+          en: "IFM Releases Six Open K2 Horizon Models",
+        },
+        description: {
+          zh: "覆盖 0.9B 至 375B-A23B，均以 Apache 2.0 开源；0.9B、3.7B、7B 宣称在其规模达 SOTA，36B-A4B 采用新的稀疏注意力架构 MoVA。",
+          en: "Six sizes from 0.9B to 375B-A23B, all Apache 2.0; the 0.9B/3.7B/7B claim scale-class SOTA and 36B-A4B debuts the new MoVA sparse-attention architecture.",
+        },
+      },
+      {
+        title: {
+          zh: "Hugging Face 开源 funes：编码智能体记忆层",
+          en: "HF Open-Sources funes, a Memory Layer for Coders",
+        },
+        description: {
+          zh: "为 Claude Code、Codex、pi、Hermes 等提供本地记忆层，把会话记录索引成 Lance 数据集，一条 funes add 即可让 Agent 自主召回原始出处。",
+          en: "A local memory layer for Claude Code, Codex, pi, and Hermes that indexes past sessions into Lance datasets, so one 'funes add' lets an agent recall its provenance.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI 发布 Grok Bot 及企业版",
+          en: "xAI Launches Grok Bot and an Enterprise Tier",
+        },
+        description: {
+          zh: "Grok Bot 以 Bot 而非会话为主要对象，拥有身份、记忆、自有计算机与工具；企业版面向组织开放，Grok 与 Cursor Enterprise 客户两周免费。",
+          en: "Built around persistent Bots with identity, memory, machines, and tools; the enterprise tier is free for Grok and Cursor Enterprise customers for two weeks.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 推 Daybreak：10 亿美元支持一线网防",
+          en: "OpenAI's Daybreak Puts $1B Behind Frontline Defenders",
+        },
+        description: {
+          zh: "面向全球一线网络防御者的计划，提供补贴访问、培训、技术支持与合作，优先水处理、电网、州地政府、社区银行、非营利组织和开源维护者等资源有限者。",
+          en: "A global program offering subsidized access, training, support, and partnerships — prioritized to water, grids, local governments, community banks, nonprofits, and OSS maintainers.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA 官宣 129.303 亿美元收购 Hugging Face",
+          en: "NVIDIA Confirms $12.9303B Acquisition of Hugging Face",
+        },
+        description: {
+          zh: "黄仁勋官宣；Hugging Face 有超 1800 万开发者、托管超 300 万模型、50 万数据集和 100 万应用，服务超 20 万企业。",
+          en: "Jensen Huang confirms the deal; HF counts 18M+ developers, 3M+ models, 500k datasets, 1M apps, and 200k+ businesses.",
+        },
+      },
+      {
+        title: {
+          zh: "Artificial Analysis 评测 Astra：编码追平 Fable 5 但更贵",
+          en: "Astra's Coding Agent Matches Fable 5 at Higher Price",
+        },
+        description: {
+          zh: "Coding Agent Index 得分 67、约等于 Claude Opus 5 和 Fable 5，成本不到 Fable 5 一半，但总价格涨至 2.5 倍；token 效率比 GPT-5.6 Sol (max) 高约 70%。",
+          en: "A 67 Coding Agent Index ties Opus 5 and Fable 5 at under half Fable 5's per-task cost, though list price hits 2.5x; token efficiency is ~70% above GPT-5.6 Sol (max).",
+        },
+      },
+      {
+        title: {
+          zh: "Astra 系统卡：链式思维可监控性下降",
+          en: "Astra Card: Better Chain-of-Thought Control, Less Monitorable",
+        },
+        description: {
+          zh: "Rohan Paul 整理 Astra 117 页系统卡：其控制自身链式思维的能力从 GPT-5.6 Sol 的 16.1% 跃升至 60.9%，可监控性相应下降。",
+          en: "From the 117-page card: Astra's command over its own chain of thought jumps from 16.1% to 60.9%, with monitorability declining as a trade-off.",
+        },
+      },
+      {
+        title: {
+          zh: "GPt 6 Astra 开放：先从网安客户扩至全 Plus",
+          en: "Astra Rolls Out: Cybersecurity First, Then All Plus",
+        },
+        description: {
+          zh: "先面向 Daybreak 网安计划客户，随后一周内覆盖 Pro、Plus、Enterprise、Business 及 API；官方称正以尽可能谨慎和快速的方式推进，全部 Plus 用户可用。",
+          en: "Astra gates: Daybreak cyber customers first, then Pro, Plus, Enterprise, Business, and API within a week — with OpenAI moving 'as carefully and quickly as possible' toward all Plus users.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 与 Meta 侧：Cloud Run 常驻 Agent 与 Muse Spark 定价",
+          en: "Google and Meta: Cloud-Run Agents and Muse Spark Pricing",
+        },
+        description: {
+          zh: "Google 演示用 Cloud Run instances 以每月 $5.70 在云端 24/7 运行常驻 Agent；Tom Tunguz 解析 Muse Spark 双轨 API 定价背后的数据换算力逻辑。",
+          en: "Google shows a 24/7 persistent agent on Cloud Run for $5.70/mo; Tunguz decodes the data-for-compute logic behind Muse Spark's two-tier API pricing.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-04-hot",
+    date: "2026-09-04",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-04",
+      en: "🔥 Hot Topics · Sep 4, 2026",
+    },
+    summary: {
+      zh: "多头焦点：OpenAI 发布 GPT-6 Astra，宣告'AGI 时代'到来——可直接操控电脑、编程数学网安多项刷新纪录、基准接近满分，'地球最强大模型'王座两天内易主；多国从美国运回黄金，折射美元体系信任裂痕与去美元化信号；人民日报评 12345 不是饭圈'掐架'平台（徐州演唱会粉丝十天近五万件诉求互撕）；新学期疾控专家建议家长每天抓好三件小事；浙江'上头电子烟'案例警示上瘾伤身；葫芦娃爷爷紧闭 20 多年的心门被游客敲开；郑钦文美网 2-1 首胜普丁塞娃晋级 32 强、对手摔拍；大众汽车计划再裁员 5 万人（累计 10 万）；深夜美国头部 AI 服务集体大宕机约 3 小时 40 分；亚运会中国体育代表团成立（爱知名古屋 9 月 19 日-10 月 4 日）；《富爸爸穷爸爸》作者清崎自曝负债约 85 亿元；大众、折叠屏手机'三国杀'（小米华为撞档、苹果首款折叠屏）。",
+      en: "Headlines center on OpenAI's GPT-6 Astra — declared the start of the 'AGI era': it operates computers directly, breaks records in coding, math, and cybersecurity, and nears-perfect benchmark scores, wresting the 'most powerful model' crown within two days; multiple countries repatriate gold reserves from the US, signaling cracks in dollar trust and de-dollarization; People's Daily warns 12345 is no 'fan-war brawl platform' (Xu attendees filed ~50,000 requests in ten days); CDC experts flag three daily habits for the new term; a Zhejiang 'spice-vape' story warns of addiction and disability; the 'Calabash Grandpa's' 20-year-closed heart is opened by visitors; Zheng Qinwen beats Putintseva 2-1 to reach the US Open third round as her opponent smashes rackets; Volkswagen plans another 50,000 cuts (100k total); a ~3h40m overnight outage hits every major US AI service; China's Asian Games delegation forms (Aichi-Nagoya, Sep 19-Oct 4); 'Rich Dad' author Kiyosaki reveals ~¥8.5B in debt; a foldable-phone three-way war looms (Xiaomi/Huawei collide, Apple's first foldable).",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "OpenAI 发布 GPT-6 Astra，宣告 AGI 时代到来",
+          en: "OpenAI Drops GPT-6 Astra, Declares the AGI Era",
+        },
+        description: {
+          zh: "可直接操控电脑完成工作，编程、数学、网安等多项能力刷新行业纪录，能零越界执行各类任务，完成时间较前代减少 47%、超授权目标比例降至 0%，现分阶段向用户开放。",
+          en: "It operates computers directly and sets records in coding, math, and security; task time drops 47% versus the prior generation with 0% over-authorization, rolling out in phases.",
+        },
+      },
+      {
+        title: {
+          zh: "'地球最强大模型'GPT-6 王座两天内易主",
+          en: "'Most Powerful Model' Crown Changes Hands in Days",
+        },
+        description: {
+          zh: "GPT-6 Astra 被 OpenAI 称为'目前全球最智能、且对齐程度最高的模型'，多项基准测试接近满分，Agent 能力大幅提升，API 成本上涨。",
+          en: "OpenAI bills Astra as its most intelligent and best-aligned model; benchmarks near perfect and agent capabilities jump, but API prices rise.",
+        },
+      },
+      {
+        title: {
+          zh: "多国从美国运回黄金",
+          en: "Nations Repatriate Gold from the US",
+        },
+        description: {
+          zh: "美国频繁动用金融制裁且债务膨胀致美元信用受质疑，多国运回黄金以对冲美债贬值风险；分析称此举折射美元体系信任裂痕，长期将加速全球储备多元化。",
+          en: "Skeptical of sanctions and swelling US debt, countries pull gold back to hedge Treasury risk — a sign of deepening dollar distrust and accelerating reserve diversification.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报：12345 不是饭圈'掐架'平台",
+          en: "People's Daily: 12345 Isn't for Fan Brawls",
+        },
+        description: {
+          zh: "徐州演唱会期间粉丝就舞台设置分歧，十天内向 12345 提交近五万件诉求互撕，挤占政务公共资源，人民日报呼吁切勿滥用。",
+          en: "Fans filed ~50,000 requests in ten days over a concert's stage setup, crowding out government services; the paper urges against abusing the hotline.",
+        },
+      },
+      {
+        title: {
+          zh: "深夜美国头部 AI 服务集体大宕机",
+          en: "Overnight Outage Hits Every US AI Giant",
+        },
+        description: {
+          zh: "ChatGPT、Claude、Grok 及谷歌 Gemini、微软 Copilot 集体报错，大规模宕机持续约 3 小时 40 分。",
+          en: "ChatGPT, Claude, Grok, Gemini, and Copilot all faltered in a roughly 3h40m megafailure.",
+        },
+      },
+      {
+        title: {
+          zh: "郑钦文美网 2-1 首胜普丁塞娃，对手摔拍",
+          en: "Zheng Qinwen Wins First Over Putintseva at US Open",
+        },
+        description: {
+          zh: "6-4、2-6、6-1 战胜普丁塞娃，三次交锋首胜并挺进 32 强，对手数度摔拍，郑钦文倒地怒吼庆祝。",
+          en: "A 6-4, 2-6, 6-1 win gives Zheng her first victory over Putintseva and a spot in round 32; her fuming opponent smashed rackets.",
+        },
+      },
+      {
+        title: {
+          zh: "大众汽车计划再裁员 5 万人",
+          en: "Volkswagen Plans 50,000 More Job Cuts",
+        },
+        description: {
+          zh: "监事会一致批准全面重组计划以提高效率与竞争力，要求再裁 5 万个岗位，使计划裁员总数达 10 万。",
+          en: "Its supervisory board approved a restructuring that adds 50,000 cuts, bringing the planned total to 100,000.",
+        },
+      },
+      {
+        title: {
+          zh: "葫芦娃爷爷 20 多年心门被敲开",
+          en: "'Calabash Grandpa's' Closed Heart Opens After 20+ Years",
+        },
+        description: {
+          zh: "失独自陈金敖平时很少出门，天南海北游客喊'爷爷'、他开心招手回应，奶奶哽咽：20 多年的心门被敲开。",
+          en: "Loss-plagued Chen Jin'ao stays mostly indoors; strangers' calls of 'Grandpa' have him waving happily as his wife tears up over a heart closed 20+ years.",
+        },
+      },
+      {
+        title: {
+          zh: "亚运会中国体育代表团成立",
+          en: "China Names Its Asian Games Delegation",
+        },
+        description: {
+          zh: "9 月 4 日参加第 20 届亚运会的中国体育代表团在北京成立，2026 爱知名古屋亚运会将于 9 月 19 日至 10 月 4 日举行。",
+          en: "Beijing announced the delegation for the 20th Asian Games on Sep 4; Aichi-Nagoya 2026 runs Sep 19-Oct 4.",
+        },
+      },
+      {
+        title: {
+          zh: "世界已进入极端天气危险区",
+          en: "The World Enters an Extreme-Weather Danger Zone",
+        },
+        description: {
+          zh: "厄尔尼诺事件已确认出现、预计数月内增强为超强厄尔尼诺并年底达顶峰，将对全球降雨和温度模式产生重大影响。",
+          en: "An El Niño event is confirmed and may strengthen into a super-El Niño peaking by year-end, with major impacts on global rain and temperature patterns.",
+        },
+      },
+      {
+        title: {
+          zh: "折叠屏手机'三国杀'",
+          en: "A Foldable-Phone Three-Way Battle",
+        },
+        description: {
+          zh: "小米与华为发布会 9 月 7 日撞档仅隔 4.5 小时，苹果 9 月 10 日登场；华为推三折叠、小米推阔折叠、苹果推首款折叠屏。",
+          en: "Xiaomi and Huawei hold events 4.5 hours apart on Sep 7, with Apple on the 10th — Huawei triple-fold, Xiaomi wide-fold, Apple's first foldable.",
+        },
+      },
+      {
+        title: {
+          zh: "《富爸爸穷爸爸》作者自曝欠债 85 亿",
+          en: "'Rich Dad' Author Kiyosaki Reveals ~¥8.5B Debt",
+        },
+        description: {
+          zh: "罗伯特·清崎自曝背负约 12 亿美元（约 85 亿人民币）债务；前妻解释系其与合伙人共同持有的约 1500 套公寓项目总负债。",
+          en: "Kiyosaki says he carries ~$1.2B (≈¥8.5B) in debt; his ex-wife clarifies it's the total liabilities of ~1,500 jointly held apartment units.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-03",
     date: "2026-09-03",
     title: {
