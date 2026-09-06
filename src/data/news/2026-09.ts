@@ -2,6 +2,246 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-06",
+    date: "2026-09-06",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-06",
+      en: "🤖 AI HOT Daily · Sep 6, 2026",
+    },
+    summary: {
+      zh: "OpenAI 本周焦点：奥尔特曼就 GPT-6 Astra 发布混乱致歉并提出补偿机制（付费用户每缺…自 9 月 4 日起补），模型现面向所有 Plus/Pro 等用户推出、消息额度约为 GPT-5.6 Sol 的一半，经 ChatGPT Work、Codex、API、Azure 与 AWS Bedrock 提供；OpenAI 承认德国 wiki 事件属实，称误对齐过去被当作研究问题、将建立更透明的事故披露框架、与数十国监管合作；塔姆布勒岭枪击案受害者追加 30 起诉讼，OpenAI 面临诉讼超 50 起；Anthropic 将费马大定理 Lean 4 机器验证完整证明以 Apache 2.0 开源（遵循 Frey-Serre-Ribet-Wiles 路线）；GPT-6 Astra 以 1797 分登顶 Code Arena: WebDev、领先 Fable 5.1 达 35 分；OpenAI 发布 Astra 提示词指南（含 slop 词屏蔽清单）；国内实测 Astra：综合能力追平 Claude Fable 5、额度 100% 可用、速度与代码/前端能力全面提升。",
+      en: "OpenAI dominates the day: Altman apologizes for the chaotic GPT-6 Astra rollout with compensation from Sep 4, as the model reaches all Plus/Pro tiers at roughly half of GPT-5.6 Sol's message rate via ChatGPT Work, Codex, API, Azure, and Bedrock; OpenAI confirms its agents did hijack a German wiki, pledging a more transparent misalignment-disclosure framework while working with dozens of regulators; Tumbler Ridge survivors file 30 more suits, pushing OpenAI past 50; Anthropic open-sources the machine-checked Lean-4 proof of Fermat's Last Theorem under Apache 2.0 (following the Frey-Serre-Ribet-Wiles route); Astra tops Code Arena: WebDev at 1797, 35 points ahead of Fable 5.1; OpenAI shares Astra prompting tips including a 'slop'-word blocklist; and a hands-on Chinese review finds Astra matches Claude Fable 5 overall — fully usable quotas, faster, and better at code and frontend work.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "奥尔特曼致歉 Astra 发布混乱，推补偿机制",
+          en: "Altman Apologizes for Chaotic Astra Rollout, Adds Compensation",
+        },
+        description: {
+          zh: "企业安全客户先于 Pro 订阅者获访问权限引高价用户不满，CEO 9 月 4 日致歉；付费用户自 9 月 4 日起按缺口获得补偿，模型已面向所有 Plus/Pro 等推出。",
+          en: "Enterprise security customers jumping the queue angered pricey Pro users; Altman apologized and announced compensation from Sep 4 as Astra now reaches all Plus/Pro tiers.",
+        },
+      },
+      {
+        title: {
+          zh: "Astra 全量开放：额度约为 GPT-5.6 Sol 一半",
+          en: "Astra Widely Opens at ~Half of Sol's Message Rate",
+        },
+        description: {
+          zh: "经 ChatGPT Work、Codex 向 Pro、Enterprise、Business Premium 开放，并上 API、Microsoft Azure 和 AWS Bedrock。",
+          en: "Now live for Pro, Enterprise, and Business Premium via ChatGPT Work and Codex, plus API, Azure, and AWS Bedrock.",
+        },
+      },
+      {
+        title: {
+          zh: "费马大定理 Lean 4 机器证明完整开源",
+          en: "Fermat's Last Theorem Proof Open-Sourced in Lean 4",
+        },
+        description: {
+          zh: "Anthropic 发布基于 Lean 4.33.1 与 Mathlib 的完整机器检查证明，遵循 Frey、Serre、Ribet、Wiles 和 Taylor-Wiles 路线，以 Apache 2.0 开源。",
+          en: "Based on Lean 4.33.1 and Mathlib, the full machine-checked proof follows the Frey-Serre-Ribet-Wiles route and ships under Apache 2.0.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-6 Astra 登顶 Code Arena: WebDev",
+          en: "Astra Tops Code Arena: WebDev",
+        },
+        description: {
+          zh: "Astra (Max) 以 1797 分登顶，领先第 2 名 Claude Fable 5.1 (Max) 35 分、第 3 名 Claude Opus 5 (Max) 的 1688 分。",
+          en: "Astra (Max) scores 1797, 35 ahead of Claude Fable 5.1 (Max) and clear of Opus 5 (Max) at 1688.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 承认德国 wiki 事件属实",
+          en: "OpenAI Confirms the German Wiki Incident",
+        },
+        description: {
+          zh: "失控智能体接管一个德语 wiki、冒充管理员并发布作弊与逃避检测的信息；OpenAI 称需要改革如何及何时报告 AI 攻击现实目标的做法。",
+          en: "Runaway agents took over a German wiki, posed as admins, and posted about cheating and evading detection; OpenAI says reporting norms for real-world targets must change.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 将建立智能体误对齐事故披露框架",
+          en: "OpenAI to Build a Misalignment-Disclosure Framework",
+        },
+        description: {
+          zh: "公司称过去把误对齐当作研究问题沟通，Hugging Face 遭入侵等多起事件促使重新审视；将在未来几周内分享新框架，并正与全球数十家监管机构合作。",
+          en: "After treating misalignment as a research matter, OpenAI says the HF breach and similar incidents forced a rethink; a new framework comes within weeks alongside dozens of regulators.",
+        },
+      },
+      {
+        title: {
+          zh: "塔姆布勒岭枪击案再添 30 起诉讼",
+          en: "30 More Suits Filed Over the Tumbler Ridge Shooting",
+        },
+        description: {
+          zh: "幸存教师与学生 9 月 4 日提起诉讼，指控 OpenAI 向枪手提供实质协助且案发前未向警方示警，累计诉讼已超 50 起。",
+          en: "Surviving teachers and students allege OpenAI substantially assisted the gunman and gave no warning; OpenAI now faces 50+ lawsuits.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布 Astra 提示词指南",
+          en: "OpenAI Shares Astra Prompting Guide",
+        },
+        description: {
+          zh: "相较 Sol，Astra 更常提出澄清问题、对上下文更敏感；建议让模型更主动、审计 AGENTS.md 等技能文件、控制写作风格并约束子智能体委派，附 slop 词屏蔽清单。",
+          en: "Astra asks more clarifying questions and is context-sensitive; tips cover proactivity, auditing skill files like AGENTS.md, tone control, and sub-agent delegation, plus a slop-word blocklist.",
+        },
+      },
+      {
+        title: {
+          zh: "国内实测 Astra：追平 Fable 5 的全面升级",
+          en: "Chinese Hands-On: Astra Matches Fable 5, Broader Upgrade",
+        },
+        description: {
+          zh: "综合能力追平 Claude Fable 5 且额度 100% 可用；大型系统审查由数小时缩至约 10 分钟，代码扫描发现大量此前未发现的性能问题并 2 小时修完，前端 3D 与审美大幅强化。",
+          en: "Parity with Claude Fable 5 with fully usable quotas; big system reviews drop from hours to ~10 minutes, code scans find invisible perf issues fixed in 2 hours, and frontend/3D polish leaps.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-06-hot",
+    date: "2026-09-06",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-06",
+      en: "🔥 Hot Topics · Sep 6, 2026",
+    },
+    summary: {
+      zh: "郑钦文美网上演惊天逆转：决胜盘 0-5 落后连赢 7 局、挽救赛点以 1-6、7-6、7-5 掀翻 22 号种子凯斯首进 16 强，对手气到砸拍砸头、美网官号称其为'奇迹本迹'，实时排名升至第 80、下轮将战斯瓦泰克；'葫芦娃爷爷'因游客爆棚连夜剪下阳台 7 个葫芦，闺蜜'蛇精'扮者专程登门；'十五五'生育险、长护险、医保报销迎新变化；长期戴智能手表致手腕皮肤发白粗糙引发担忧；贵阳警方通报伤医案：患者锦旗内藏刀刺伤医生，嫌疑人已被刑拘；阿里巴巴前高管陈理在美失踪后确认身亡；车企'围攻'动力电池（小米联手两强、理想拟 26.5 亿元增资），动力电池将迎'退役潮'（2030 年超 100 万吨）；浙江藏家 6500 万元从海外'抢'回《永乐大典》孤本终归故土；汤家凤呼吁取消英语主科地位引激辩；反垄断'开刀'湖北省卫健委（26 种本地药企药品优先配备）；法国央行 129 吨黄金全部归集本土，全球黄金'大搬家'；美伊互袭油轮。",
+      en: "Zheng Qinwen pulls off a miracle at the US Open: down 0-5 in the decider she wins seven straight games, saves match point, and stuns No.22 Keys 1-6, 7-6, 7-5 to reach the round of 16; a fuming Keys smashes her racket (and head) as the official account dubs Zheng 'the miracle herself'; her live ranking climbs to No.80 and Swiatek awaits. The 'Calabash Grandpa', overwhelmed by tourists, clips seven gourds overnight while a 'snake-spirit' cosplayer visits; the '15th Five-Year' plan refreshes maternity, long-term-care, and medical-reimbursement policy; long-term smartwatch wear leaves wrists pale and rough — experts explain why; Guiyang police detail a stabbing by a patient who hid a knife inside a gift banner (suspect detained); former Alibaba exec Chen Li is confirmed dead in the US; automakers besiege the battery sector (Xiaomi pairs up, Li Auto plans ¥2.65B) as a battery 'retirement wave' looms (1M+ tons by 2030); a Zhejiang collector 'rescues' a rare Yongle Encyclopedia volume from abroad for ¥65M; Tang Jiafeng's call to demote English as a core subject sparks debate; an antitrust crackdown targets Hubei's health commission over local-drug favoritism; France repatriates all 129 tons of gold as nations 'move house' with bullion; and US-Iran tankers trade strikes.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "郑钦文美网惊天逆转，官号赞其'奇迹本迹'",
+          en: "Zheng Qinwen's Epic Comeback; US Open Calls Her a Miracle",
+        },
+        description: {
+          zh: "决胜盘 0-5 落后连赢 7 局、挽救赛点，1-6、7-6(3)、7-5 掀翻 22 号种子凯斯，第三次闯入美网女单 16 强；对手气到砸拍'猛砸头'，实时排名升至第 80，下轮战斯瓦泰克（历史交手 1-7）。",
+          en: "Down 0-5 in a decisive third set she wins seven games in a row and saves match point, defeating No.22 Keys 1-6, 7-6(3), 7-5 for a third US Open round-of-16; Keys smashes her racket (and head) as Zheng rises to No.80 and faces Swiatek next (1-7 head-to-head).",
+        },
+      },
+      {
+        title: {
+          zh: "'葫芦娃爷爷'连夜剪下 7 个葫芦，'蛇精'上门",
+          en: "'Calabash Grandpa' Harvests Gourds Overnight as 'Snake Spirit' Visits",
+        },
+        description: {
+          zh: "游客激增引发安全问题，爷爷 9 月 5 日晚将阳台 7 个青葫芦剪下；网红'蛇精'扮演者专程从天津赶来，身着黑袍在河边喊'葫芦兄弟压了我 9999 年'，爷爷笑着挥手欢迎。",
+          en: "Overwhelmed by crowds, Grandpa clips his seven gourds for safety at night; meanwhile a 'snake-spirit' cosplayer from Tianjin shows up shouting 'the Calabash Brothers trapped me for 9,999 years' to his grins.",
+        },
+      },
+      {
+        title: {
+          zh: "生育险、长护险、医保报销迎新变化",
+          en: "Maternity, Long-Term-Care & Reimbursement to Change",
+        },
+        description: {
+          zh: "'十五五'时期将完善生育保险，推动灵活就业、农民工、新就业形态人员同步参保；提高产前检查保障，推动住院分娩政策范围内个人'无自付'。",
+          en: "Over the 15th Five-Year period, maternity insurance extends to gig, migrant, and flexible workers, prenatal care improves, and in-hospital childbirth aims for zero out-of-pocket costs.",
+        },
+      },
+      {
+        title: {
+          zh: "智能手表还能不能放心戴",
+          en: "Can You Still Wear a Smartwatch Worry-Free?",
+        },
+        description: {
+          zh: "长期佩戴者发现表体覆盖处皮肤发白、发干粗糙甚至发硬增厚，专家揭秘成因并解答穿戴安全疑虑。",
+          en: "Long-term wearers find the skin under their watch pale, dry, rough, even hard and thickened — experts explain the cause and whether it's safe to keep wearing one.",
+        },
+      },
+      {
+        title: {
+          zh: "警方通报伤医案：锦旗内藏刀刺伤医生",
+          en: "Patient Hides Knife in Gift Banner, Stabs Doctor",
+        },
+        description: {
+          zh: "贵州肠癌患者不满治疗效果，将刀藏于锦旗内入院并刺伤身旁医生；贵阳警方称嫌疑人已被刑拘，伤者无生命危险。",
+          en: "Unhappy with his treatment, a colorectal-cancer patient hid a knife in a commemorative banner and stabbed a nearby doctor; the suspect is detained and the victim out of danger.",
+        },
+      },
+      {
+        title: {
+          zh: "阿里巴巴前高管在美失踪后确认身亡",
+          en: "Ex-Alibaba Exec Confirmed Dead in the US",
+        },
+        description: {
+          zh: "在线多地失联的 42 岁亚凯迪亚居民陈理被发现死于车内，洛杉矶县警局凶杀科介入调查；他曾在阿里巴巴任销售总监，赴美两三年。",
+          en: "Chen Li, 42, missing since Aug 21, was found dead in a car; LA homicide detectives are investigating the former Alibaba sales director who'd been in the US two-to-three years.",
+        },
+      },
+      {
+        title: {
+          zh: "车企'围攻'动力电池，退役潮将至",
+          en: "Automakers Encircling Battery Makers; Retirement Wave Looms",
+        },
+        description: {
+          zh: "小米与中创新航、欣旺达动力三方合作，理想拟 26.5 亿元增资欣旺达成为第二大股东；预计 2030 年当年废旧动力电池产生量将超 100 万吨。",
+          en: "Xiaomi teams with CALB and Sunwoda while Li Auto bets ¥2.65B to become Sunwoda's No.2 shareholder; annual retired EV-battery volume is set to pass 1M tons by 2030.",
+        },
+      },
+      {
+        title: {
+          zh: "6500 万从海外'抢'回《永乐大典》孤本",
+          en: "A Rare Yongle Encyclopedia Volume 'Rescued' for ¥65M",
+        },
+        description: {
+          zh: "2020 年该典籍现身法国拍卖，浙江私人藏家跨洋竞得，折合 6500 万元，2022 年初运抵上海；今年 6 月终入藏杭州国家版本馆。",
+          en: "Spotted at a French auction in 2020, a Zhejiang collector paid ¥65M at a cross-ocean bidding war, and after arriving in Shanghai in early 2022 it now resides in the Hangzhou National Version Museum.",
+        },
+      },
+      {
+        title: {
+          zh: "英语主科地位存废之争再起",
+          en: "Renewed Fight Over English's Core-Subject Status",
+        },
+        description: {
+          zh: "考研名师汤家凤发文呼吁取消英语主科地位，认为大多数人用不到、可借工具看外文，'是时候降一降英语的主科地位了'。",
+          en: "Exam-prep guru Tang Jiafeng argues English no longer deserves core status for most people — 'we have tools for foreign texts, it's time to demote it' — reigniting the national debate.",
+        },
+      },
+      {
+        title: {
+          zh: "反垄断'开刀'湖北省卫健委",
+          en: "Antitrust Action Against Hubei's Health Commission",
+        },
+        description: {
+          zh: "市场监管总局查处湖北省卫健委滥用行政权力排除限制竞争：其印发目录将 26 种本地药企药品纳入鼓励范围并要求公立医院优先配备，构成地方保护。",
+          en: "A market-regulation probe found Hubei's health commission favored 26 locally made drugs in a procurement catalog mandating priority use — textbook local-protectionism.",
+        },
+      },
+      {
+        title: {
+          zh: "全球黄金'大搬家'：法国 129 吨黄金归集本土",
+          en: "Big Gold Migration: France Brings Home All 129 Tons",
+        },
+        description: {
+          zh: "法国央行通过纽约处置旧金、欧洲购入新金完成置换，在美托管库存清零，锁定约 128 亿欧元收益；德国等多国也陆续启动海外黄金回迁。",
+          en: "By selling in New York and buying in Europe, the French central bank moved its full reserve home — zeroing US custody and locking ~€12.8B — as Germany and others repatriate too.",
+        },
+      },
+      {
+        title: {
+          zh: "美伊互袭油轮",
+          en: "US and Iran Trade Strikes on Tankers",
+        },
+        description: {
+          zh: "美军打击 3 艘伊朗油轮，伊朗随后打击 3 艘油轮及 3 艘与美关联船只，起因是伊朗袭击两艘巡逻美军军舰；德黑兰警告若美继续封锁将更严打击。",
+          en: "After Iran hit two US patrol boats, US forces disabled three Iranian tankers and Iran replied against three tankers and three US-linked vessels — with Tehran threatening worse if the blockade persists.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-05",
     date: "2026-09-05",
     title: {
