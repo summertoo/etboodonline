@@ -281,6 +281,18 @@ export const projects: Project[] = [
     tags: ["latest", "game"],
   },
   {
+    id: "web-sp",
+    titleKey: "game.spTitle",
+    descKey: "game.spDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/splogo.png",
+    liveUrl: "/sp/index.html",
+    publishedAt: "2026-09-07T00:00:00+08:00",
+    tags: ["latest", "game"],
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",
