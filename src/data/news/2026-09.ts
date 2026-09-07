@@ -2,6 +2,256 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-07",
+    date: "2026-09-07",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-07",
+      en: "🤖 AI HOT Daily · Sep 7, 2026",
+    },
+    summary: {
+      zh: "OpenAI 集中发声：发布内部研究加速报告，宣称已达成'自动化研究实习生'目标并推进 2028 年 3 月的自动化 AI 研究员；Fortune 报道其多次修改 GPT-6 Astra 基准数据（幻觉率曾 4.2%→2% 又改回）引发争议；长文《An Alien Mind》指出链式思维监控能力随模型增强而减弱、Astra 对齐显著优于 Sol；Astra 正式发布并被认定为首个网络安全达到'关键'等级的广泛部署模型；Daybreak 计划投 10 亿美元护电网友医疗金融等关键设施；ChatGPT Ads 年化收入突破 10 亿美元；ChatGPT 可接入电子病历等医疗数据；客户案例：Legora 用 Astra 数分钟审阅 41 份文档、财务审核性能提升近 40%，澳洲律所 Gilbert+Tobin 展示法律行业 AI 治理范式。",
+      en: "OpenAI owns the day's AI news: an internal research-acceleration report claims the 'automated research intern' goal is met, with an automated AI researcher targeted for March 2028; Fortune alleges OpenAI quietly edited GPT-6 Astra's benchmark numbers multiple times (a hallucination rate that swung 4.2% → 2% and back); a long essay, 'An Alien Mind,' warns that chain-of-thought monitoring keeps weakening as models improve while Astra aligns far better than Sol; Astra's safety overview crowns it the first broadly deployed model at 'Critical' cybersecurity capability; the $1B Daybreak program shields grids, healthcare, and finance; ChatGPT Ads passes $1B annualized; ChatGPT now connects to authorized health records; and customer stories show Legora reviewing 41 documents in minutes (~40% better financial review) and Aussie firm Gilbert + Tobin modeling law-firm AI governance.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI 发布研究加速报告：自动化研究实习生目标达成",
+          en: "OpenAI Meets 'Automated Research Intern' Goal",
+        },
+        description: {
+          zh: "宣布已达成去年秋天设定的目标——在人类指导下完成耗时数天明确任务的自动化研究实习生，并计划 2028 年 3 月前造出自动化 AI 研究员。",
+          en: "It hit last fall's goal of a research intern that handles explicit multi-day tasks under human direction, and targets a fully automated AI researcher by March 2028.",
+        },
+      },
+      {
+        title: {
+          zh: "Fortune：OpenAI 多次修改 Astra 基准数据",
+          en: "Fortune: OpenAI Edited Astra Benchmarks Repeatedly",
+        },
+        description: {
+          zh: "自 9 月 3 日起多次修改评测数据，Astra 幻觉率曾从 4.2% 降至 2% 后又改回，发布数据流程引发质疑。",
+          en: "Since launch day, published figures shifted repeatedly — a hallucination rate that fell from 4.2% to 2% and then back — fueling scrutiny of the numbers.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 长文《An Alien Mind》：CoT 可监控性正减弱",
+          en: "OpenAI's 'An Alien Mind': Chain-of-Thought Oversight Wanes",
+        },
+        description: {
+          zh: "回溯 2023 年 RLSlow 项目起点，系统阐述目标对齐与价值对齐的区别；称链式思维监控效果随模型变强而减弱，Astra 对齐显著优于 GPT-5.6 Sol。",
+          en: "Recounting the 2023 RLSlow start, the essay distinguishes intent from value alignment and warns CoT monitoring weakens as models strengthen — with Astra far better aligned than Sol.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-6 Astra 正式发布，基准数据引争议",
+          en: "GPT-6 Astra Officially Launches Amid Benchmark Debate",
+        },
+        description: {
+          zh: "号称迄今最智能且对齐程度最高的模型，电脑操作、编程、对话等能力达 SOTA；发布后的基准测试数据修改争议成行业讨论焦点。",
+          en: "Billed as its smartest, best-aligned model with SOTA in computer use, coding, and dialogue — though post-launch benchmark edits dominate industry chatter.",
+        },
+      },
+      {
+        title: {
+          zh: "Astra 安全概览：首个'关键'级网安模型",
+          en: "Astra: First Broadly Deployed Model at 'Critical' Cyber",
+        },
+        description: {
+          zh: "OpenAI 公布安全评估：Astra 是首个在 Preparedness Framework 下网络安全达'关键（Critical）'等级的能力模型，配套更强对齐与防护机制。",
+          en: "Per OpenAI's safety assessment, Astra is the first model rated 'Critical' for cyber capability under its Preparedness Framework, with stronger alignment and safeguards.",
+        },
+      },
+      {
+        title: {
+          zh: "Daybreak 计划：10 亿美元护关键基础设施",
+          en: "Daybreak: $1B to Defend Critical Infrastructure",
+        },
+        description: {
+          zh: "为电网、医疗、金融等关键服务提供前沿网络 AI、专项训练与支持，以应对日益严峻的 AI 网络攻击威胁。",
+          en: "Frontier cyber AI, training, and support for grids, healthcare, and finance against the rising threat of AI-driven attacks.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT Ads 年化收入突破 10 亿美元",
+          en: "ChatGPT Ads Passes $1B ARR",
+        },
+        description: {
+          zh: "ChatGPT Ads 年化收入运行率（ARR）突破 10 亿美元里程碑，通过免费 AI 服务反哺更广用户覆盖。",
+          en: "Ads hit a $1B annualized-run-rate milestone, with free AI access helping expand reach.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT 可接入电子病历等医疗数据",
+          en: "ChatGPT Connects to Health Records & Medical Data",
+        },
+        description: {
+          zh: "支持连接经授权的医疗数据源，让临床医生在合规前提下便捷获取患者上下文、医学研究与行业数据，提升诊疗效率。",
+          en: "With authorization, clinicians can draw on patient context, research, and industry data in ChatGPT — compliantly boosting care efficiency.",
+        },
+      },
+      {
+        title: {
+          zh: "Legora 用 Astra 数分钟审阅 41 份文档",
+          en: "Legora Reviews 41 Docs in Minutes with Astra",
+        },
+        description: {
+          zh: "审计科技公司借助 Astra 数分钟完成 41 份文档审阅、找齐全 4 处预设错误，财务审核性能提升近 40%。",
+          en: "The audit-tech firm worked through 41 documents in minutes, caught all four planted errors, and lifted financial-review performance nearly 40%.",
+        },
+      },
+      {
+        title: {
+          zh: "澳洲律所 Gilbert+Tobin 的 AI 规模化治理",
+          en: "Gilbert + Tobin Models Law-Firm AI Governance",
+        },
+        description: {
+          zh: "结合 CEO 主导的决心、严谨治理与问责机制，将 ChatGPT Enterprise 与 Codex 规模化落地，展示了法律行业的 AI 治理范式。",
+          en: "Driven by CEO leadership, disciplined governance, and accountability, the firm scaled ChatGPT Enterprise and Codex — a template for legal-sector AI.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-07-hot",
+    date: "2026-09-07",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-07",
+      en: "🔥 Hot Topics · Sep 7, 2026",
+    },
+    summary: {
+      zh: "社会关注：超九成基础教育教师有职业健康困扰、有人患上'手机恐惧症'，专家呼吁为教师减负；央视曝光山西水质检测造假——7 个村庄采水点一滴真实水样也未采集，工作人员摆拍用村民饮用水充当；女子月捐数年无人问、停捐后遭催捐还被笑，网友晒同款经历；ChinaGT 碰撞仲裁认定王一博正常行驶无责；摩尔线程因解禁早盘触及 20cm 跌停、市值跌破 2000 亿；专家辟谣'一吨旧手机炼 200 克黄金'；三峡大学两名'刘欣怡'同名同姓同年同月同日生同校同专业；金正恩携女儿出席'姜健'号驱逐舰入列仪式；漳州明代古城墙大水门死守 26 小时挡洪水倒灌；老外涌进上海配眼镜做头发成旅行新选择；年轻人聊天越来越'忘记'打字、语音取代键盘；美国亚马逊一架波音 767 货机在迈阿密冲出跑道撞车爆燃，至少 5 死 5 伤。",
+      en: "Society watch: over 90% of K-12 teachers suffer job-related health issues, some with 'phone phobia' — experts urge lighter loads; CCTV exposes a Shanxi water-testing scam where not one real sample was collected across 7 villages (workers staged photos with tap water); a long-time monthly donor is mocked for stopping when she ran out of money, and netizens share the same ordeal; China GT arbitration clears Wang Yibo after a crash; Moores Threads dives 20% at the open on a lock-up expiry, its market cap sliding below ¥200B; experts debunk the 'one ton of phones yields 200g of gold' myth; two 'Liu Xinyis' at Three Gorges University share a name, birthday, school, and major; Kim Jong-un attends the commissioning of the destroyer 'Kang Gon' with his daughter; a Ming-era city-gate sluice in Zhangzhou holds back floodwater for 26 hours; foreign tourists now get glasses and haircuts in Shanghai as the trip trend; young people are 'forgetting' how to type as voice replaces keyboards; and an Amazon Boeing 767 freighter overruns a Miami runway and erupts in flames — at least 5 dead, 5 injured.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "超九成教师有职业健康困扰，有人患上'手机恐惧症'",
+          en: "9 in 10 Teachers Battle Job-Linked Health Woes",
+        },
+        description: {
+          zh: "繁重教学与非教学事务引发心理压力及咽喉腰椎疾病，部分教师甚至患上手机恐惧症；专家呼吁厘清职业边界为教师减负。",
+          en: "Heavy teaching and admin duties bring stress and throat/spine ailments, some teachers even phone-phobic; experts urge clearer job boundaries to ease the load.",
+        },
+      },
+      {
+        title: {
+          zh: "央视曝光水质检测造假：采水点一滴真实水样也没采",
+          en: "CCTV Exposes Water-Test Fraud: Zero Real Samples",
+        },
+        description: {
+          zh: "山西一检测公司在阳高县开展地下水采样检测时摆拍造假，用村民饮用水充当水样；项目监测 7 个村庄，7 个采水点无一采集真实水样。",
+          en: "A Shanxi firm staged photos and passed villagers' tap water off as groundwater samples in Yanggao County — across 7 villages, not one genuine sample was taken.",
+        },
+      },
+      {
+        title: {
+          zh: "女子月捐数年无人问，停捐后遭催捐还被笑",
+          en: "Donor Mocked After Stopping Years of Monthly Giving",
+        },
+        description: {
+          zh: "四川单亲妈妈因生意不景气停捐后接到机构电话，回答'没钱了'竟换来笑声；事件发酵后多名网友晒出同款被催捐经历。",
+          en: "After her business slowed, the Sichuan single mom stopped giving; a charity call met her 'no money' with laughter — and netizens flooded in with their own stories.",
+        },
+      },
+      {
+        title: {
+          zh: "ChinaGT 碰撞调查：王一博无责",
+          en: "China GT Crash Probe: Wang Yibo Cleared",
+        },
+        description: {
+          zh: "上海站第二回合中 116 号赛车强行切内线撞击 85 号（王一博）致其退赛；仲裁认定 116 号错过刹车点负全责，王一博正常行驶无责任。",
+          en: "Car 116 forced inside and hit Wang Yibo's No.85 in Round 2 in Shanghai, forcing a retirement; officials ruled 116 missed its braking point — Wang was blameless.",
+        },
+      },
+      {
+        title: {
+          zh: "摩尔线程早盘触及 20cm 跌停",
+          en: "Moores Threads Hits 20% Down-Limit",
+        },
+        description: {
+          zh: "算力芯片龙头摩尔线程早盘触及 20cm 跌停、总市值跌破 2000 亿，创上市以来新低；当日 2577.45 万股首发及公开增发网下配售股份迎来解禁。",
+          en: "The compute-chip leader dove 20% at the open to a record low, market cap below ¥200B, as 25.77M locked-up IPO and placement shares were released.",
+        },
+      },
+      {
+        title: {
+          zh: "'一吨旧手机提炼 200 克黄金'不实",
+          en: "Debunked: 'A Ton of Old Phones Yields 200g of Gold'",
+        },
+        description: {
+          zh: "专家辟谣：网传说法偷换概念，2010 年以后的现代手机单台黄金含量仅 0.02 至 0.03 克。",
+          en: "Experts call the viral claim a mix-up of concepts: modern phones (post-2010) contain just 0.02–0.03g of gold each.",
+        },
+      },
+      {
+        title: {
+          zh: "同名同姓同生日同校同专业：两位'刘欣怡'",
+          en: "Two 'Liu Xinyis': Same Name, Birthday, School, Major",
+        },
+        description: {
+          zh: "三峡大学数据科学与大数据技术专业迎来两名'刘欣怡'，同年同月同日生，高考成绩仅差 3 分，相约大学四年携手努力。",
+          en: "Three Gorges University's data-science program enrolls two Liu Xinyis born the same day, just 3 points apart on exams — now partners for four years.",
+        },
+      },
+      {
+        title: {
+          zh: "金正恩携女儿出席'姜健'号驱逐舰入列仪式",
+          en: "Kim Jong-un Commissions Destroyer 'Kang Gon' With Daughter",
+        },
+        description: {
+          zh: "朝中社报道当地时间 6 日金正恩携女儿在元山港出席'姜健'号驱逐舰入列仪式，该舰经多阶段评估验证后正式入列海军。",
+          en: "KCNA says Kim and his daughter attended the commissioning of the destroyer Kang Gon at Wonsan on Sep 6, following multi-stage validation.",
+        },
+      },
+      {
+        title: {
+          zh: "漳州明代大水门死守 26 小时挡洪水",
+          en: "Ming-Era Gate Holds Back Floodwater for 26 Hours",
+        },
+        description: {
+          zh: "台风'沙德尔'致诏安东溪涨至 40 米警戒水位，明代古城墙大水门紧急关闸 26 小时挡住河水倒灌；9 月 4 日撤闸后清淤消杀、生产生活恢复正常。",
+          en: "As Typhoon Sadel pushed the Dongxi to a 40m alert, Zhangzhou's Ming water-gate slammed shut, holding back the river for 26 hours before reopening Sep 4 for cleanup.",
+        },
+      },
+      {
+        title: {
+          zh: "老外涌进上海配眼镜做头发",
+          en: "Foreign Tourists Flock to Shanghai for Glasses & Hair",
+        },
+        description: {
+          zh: "配眼镜、做头发成旅行新选择：眼镜店价格多在 300-800 元、服务快且专业，一小时接待三四波外国客，眼镜最快几十分钟配好。",
+          en: "Eyeglasses and hairstyling are the new itinerary: a shop charging ¥300-800 turns over three-to-four foreign clients an hour, lenses ready in tens of minutes.",
+        },
+      },
+      {
+        title: {
+          zh: "年轻人正在'忘记'打字",
+          en: "Young People Are 'Forgetting' How to Type",
+        },
+        description: {
+          zh: "越来越多年轻人按住麦克风说话而非敲字；分析称打字不会消失但角色会改变——'在越来越多的场景里，键盘已悄悄退成语音之后的编辑器'。",
+          en: "Walkie-talkie voice messages increasingly replace typing; keyboards won't vanish, analysts say, but recede to 'the editor behind the voice' in more and more contexts.",
+        },
+      },
+      {
+        title: {
+          zh: "美亚马逊货机冲出跑道撞车爆燃",
+          en: "Amazon Boeing 767 Freighter Overruns Miami Runway, Burns",
+        },
+        description: {
+          zh: "当地时间 9 月 6 日下午，一架波音 767-300 货机在迈阿密国际机场着陆时冲出跑道、撞上多辆车后起火，至少 5 人死亡、5 人受伤。",
+          en: "A Boeing 767-300 touched down fast at Miami International on Sep 6, careened off the runway into vehicles, and caught fire — at least 5 dead, 5 injured.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-06",
     date: "2026-09-06",
     title: {
