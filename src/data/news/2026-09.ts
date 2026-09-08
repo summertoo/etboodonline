@@ -2,6 +2,276 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-08",
+    date: "2026-09-08",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-08",
+      en: "🤖 AI HOT Daily · Sep 8, 2026",
+    },
+    summary: {
+      zh: "The Information 报道 Anthropic 十一个月内签署高达 5170 亿美元算力合同，自 2025 年 10 月以来锁定至少 14.8 GW 算力并计划自建数据中心；GPT-6 Astra 走红后，卡兹克撰文谈'执行能力贬值与判断力断层'——用户让其自主操控 Blender、Houdini、Unity、Aseprite 等专业软件做出游戏 Demo、3D 复刻旧金山艺术宫，该案例中 Astra 自行检索数百张参考图、翻出国会图书馆老扫描文件核对柱尺寸，多数工作于夜间自主完成；Google 发布 Gemini 3.8 Flash 与面向网络安全的 3.8 Flash Cyber 轻量模型、迄今最准的全球天气 AI 模型 WeatherNext 3，上线智能体视频理解、Workspace 图像工具 Google Pics，并将 Lyria 3.5 音乐生成带入 Gemini；Google 与学界公布雄性果蝇大脑完整连接组图谱，在亚太启动凝结尾迹规避试验并支持 16 个绿色 AI 项目；OpenAI 联合发起资助乌克兰独立新闻业的 AI 项目，并公开支持加州青少年 AI 安全法案 SB 1119。",
+      en: "The Information reports Anthropic signed up to $517B in compute contracts within eleven months, locking in at least 14.8 GW since Oct 2025 and planning its own data centers; as GPT-6 Astra goes viral, columnist Kazike writes about 'execution-abundance vs. judgment-gap' — users let it drive Blender, Houdini, Unity, and Aseprite to build game demos and a 3D recreation of San Francisco's Palace of Fine Arts, in which Astra hunted hundreds of reference images and even pulled old Library of Congress scans for column dimensions, working mostly overnight; Google ships Gemini 3.8 Flash plus a cybersecurity-focused 3.8 Flash Cyber, the WeatherNext 3 global weather model billed as most accurate yet, agentic video understanding, the Workspace image tool Google Pics, and Lyria 3.5 music generation inside Gemini; with partners it releases the complete male fruit-fly brain connectome, pilots contrail avoidance across Asia-Pacific, and backs 16 green-AI projects; OpenAI co-funds an AI effort for independent Ukrainian journalism and publicly supports California's SB 1119 youth AI-safety bill.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Anthropic 据报道签署高达 5170 亿美元算力协议",
+          en: "Anthropic Reported to Sign $517B in Compute Deals",
+        },
+        description: {
+          zh: "据 The Information，Anthropic 十一个月内签下价值高达 5170 亿美元的算力合同，自 2025 年 10 月以来锁定至少 14.8 GW 算力，并计划自建数据中心。",
+          en: "Per The Information, Anthropic has signed up to $517B in compute contracts over eleven months — locking in at least 14.8 GW since Oct 2025 — and plans its own data centers.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-6 Astra 爆火：卡兹克谈执行能力贬值与判断力断层",
+          en: "Astra Craze: Kazike on Execution Glut, Judgment Gap",
+        },
+        description: {
+          zh: "用户让 Astra 自主操控 Blender、Houdini、Unity、Aseprite 等专业软件做出游戏 Demo、3D 复刻旧金山艺术宫；艺术宫案例中它自行搜索数百张参考图、翻出美国国会图书馆老档案核对柱尺寸，多数工作在夜间自主完成。",
+          en: "Users had Astra autonomously drive Blender, Houdini, Unity, and Aseprite to craft game demos and recreate the Palace of Fine Arts in 3D — searching hundreds of references and even old Library of Congress scans for column dimensions, mostly working overnight.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 3.8 Flash 与 3.8 Flash Cyber 发布",
+          en: "Gemini 3.8 Flash and 3.8 Flash Cyber Launch",
+        },
+        description: {
+          zh: "Google 发布轻量模型 Gemini 3.8 Flash 及面向网络安全的 Cyber 版本，兼顾推理能力与效率，并针对安全攻防场景专项优化。",
+          en: "Google ships the lightweight Gemini 3.8 Flash plus a cybersecurity-focused Cyber variant, balancing reasoning with efficiency and tuning for offensive/defensive security work.",
+        },
+      },
+      {
+        title: {
+          zh: "WeatherNext 3：迄今最先进的全球天气 AI 模型",
+          en: "WeatherNext 3: Google's Most Accurate Weather AI",
+        },
+        description: {
+          zh: "Google DeepMind 发布 WeatherNext 3，宣称是准确度最高的全球天气预报模型，进一步提升极端天气预测能力，为防灾减灾提供更强支撑。",
+          en: "Google DeepMind unveils WeatherNext 3, billed as its most accurate global forecasting model yet — sharpening extreme-weather prediction for disaster preparedness.",
+        },
+      },
+      {
+        title: {
+          zh: "雄性果蝇大脑图谱：神经科学的新里程碑",
+          en: "Male Fruit-Fly Brain Map: A Neuroscience Milestone",
+        },
+        description: {
+          zh: "Google 与学界公布雄性果蝇大脑完整连接组图谱可视化，加速神经科学研究，帮助理解复杂神经回路如何驱动行为。",
+          en: "Google and academic partners release a full connectome visualization of the male fruit-fly brain, speeding research into how complex circuits drive behavior.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 与伙伴资助乌克兰独立新闻业",
+          en: "OpenAI Backs Independent Ukrainian Journalism",
+        },
+        description: {
+          zh: "OpenAI 联合 AIRPPU、WAN-IFRA 发起 AI 项目，帮助乌克兰新闻机构强化创新、抗打击能力与编辑独立性。",
+          en: "Teaming with AIRPPU and WAN-IFRA, OpenAI launches an AI program to bolster Ukrainian newsrooms' innovation, resilience, and editorial independence.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 支持加州 SB 1119 青少年 AI 安全法案",
+          en: "OpenAI Supports California Youth AI-Safety Bill SB 1119",
+        },
+        description: {
+          zh: "OpenAI 公开支持该法案，推动针对青少年的适当且更强的 AI 安全防护，同时保留其学习与发展机会。",
+          en: "OpenAI publicly backs the bill, pushing for age-appropriate, stronger AI safeguards for teens while preserving learning and growth opportunities.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 推出智能体视频理解能力",
+          en: "Gemini Gains Agentic Video Understanding",
+        },
+        description: {
+          zh: "Google 发布基于 Gemini 的 agentic video understanding，让智能体能够主动理解视频内容并执行任务，拓展多模态智能体应用边界。",
+          en: "Google launches agentic video understanding on Gemini so agents can actively parse video content and act on it, widening multimodal agent use cases.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Pics：Workspace 一键图像创作与编辑",
+          en: "Google Pics: One-Click Image Tools in Workspace",
+        },
+        description: {
+          zh: "Google 在 Workspace 中推出 Google Pics，让用户轻松创建与编辑图像，降低日常办公与设计中的图像处理门槛。",
+          en: "Google rolls out Google Pics inside Workspace, making image creation and editing effortless and lowering the bar for everyday design work.",
+        },
+      },
+      {
+        title: {
+          zh: "Lyria 3.5 音乐生成能力上线 Gemini",
+          en: "Lyria 3.5 Music Generation Lands in Gemini",
+        },
+        description: {
+          zh: "Google 将 Lyria 3.5 音乐生成模型引入 Gemini，用户可直接在对话中创作更完整、更富表现力的音乐作品。",
+          en: "Google brings the Lyria 3.5 music model into Gemini, letting users compose fuller, more expressive tracks right in conversation.",
+        },
+      },
+      {
+        title: {
+          zh: "亚太凝结尾迹规避试验与 16 个绿色 AI 项目",
+          en: "Asia-Pacific Contrail-Avoidance Trial + 16 Green-AI Projects",
+        },
+        description: {
+          zh: "Google 在亚太启动凝结尾迹规避试验以降低航空碳排放，并支持 16 个绿色 AI 项目应对地区性环境挑战。",
+          en: "Google pilots contrail-avoidance flights across Asia-Pacific to cut aviation emissions, and supports 16 green-AI projects tackling regional environmental challenges.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-08-hot",
+    date: "2026-09-08",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-08",
+      en: "🔥 Hot Topics · Sep 8, 2026",
+    },
+    summary: {
+      zh: "郑钦文在美网连续上演'0-5 让 5 追 7'逆转：首盘 0-5 落后仍连赢 7 局 7-5 翻盘斯瓦泰克，2-0 晋级八强，两场逆转理论概率约 1678 万分之一，美网官方发文将其比肩乔丹、伍兹；广西洪涝期间万粉网红'安澜'宣称捐款百万实捐 1 元被禁言；潘建伟院士寄语海外学子'学成了，希望你们能回来'；人民日报评'葫芦娃爷爷'走红：善意应守住边界；赵一鸣（鸣鸣很忙）就称重问题致歉，承诺按差价十倍赔付并上线全国秤具监控；冯小刚《抓特务》上线流媒体口碑逆袭，豆瓣 7.4 分；华为新三折叠首拆：薄至 3.5mm、搭载麒麟 9050Pro；华为/小米/苹果对决'万元机'——华为新机 19999 元起、小米 18 Fold 10999 元起、苹果折叠 iPhone 传延期；雷军展示'折叠机的坟场'称摔坏 1500 多台工程机；国安部披露偷拍未公开战机案，唐某被移送审查起诉；工信部发布'十五五'规划：适时启动 6G 商用、研制 6G 智能手机；阿拉善测试卡车失控溜车与数据收集车相撞致 5 死；小米澎程 N70 20.99 万起成最便宜小米车型；女篮世界杯中国队大胜意大利；DeepSeek 面向资深工程师扩招约 150 人。",
+      en: "Zheng Qinwen pulls off back-to-back '0-5, win 7 straight' US Open shocks: down 0-5 in the first set she rattled off 7 straight games to beat Swiatek 7-5 and reach the QF 2-0 — the theoretical odds of two such comebacks ~1 in 16.78M, with US Open's own post comparing her to Jordan and Woods; during Guangxi flooding, influencer 'Anlan' claimed a ¥1M donation that was actually ¥1 and got banned; academician Pan Jianwei tells students abroad 'learn well, and I hope you come back'; People's Daily on the viral 'Gourd Grandpa': kindness should respect boundaries; snack chain Zhao Yiming apologizes for weighing disputes, promising 10x compensation, and installs nationwide scale monitoring; Feng Xiaogang's 'Catch the Spy' enjoys a streaming redemption, hitting 7.4 on Douban; HuaWei's new tri-fold gets its first teardown — 3.5mm thin with the Kirin 9050Pro; Huawei, Xiaomi, and Apple duel for the 'ten-thousand-yuan' phone (¥19,999 flagship, ¥10,999 Mi 18 Fold, Apple foldable reportedly delayed); Lei Jun reveals the 'graveyard of foldables' with 1,500 wrecked test units; the national security ministry exposes a case of photographing classified fighter jets — a suspect transferred for prosecution; MIIT's 15th Five-Year Plan eyes timely 6G commercialization and 6G smartphones; an Alxa test truck's runaway brake collides with a data-collection van, killing 5; Xiaomi's cheapest car, the Pengcheng N70 SUV, starts at ¥209,900; China's women's basketball crushes Italy at the World Cup; and DeepSeek hires ~150 senior engineers.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "郑钦文 0-5 落后逆转斯瓦泰克，晋级美网八强",
+          en: "Zheng Qinwen Comes Back From 0-5 to Beat Swiatek",
+        },
+        description: {
+          zh: "1/8 决赛首盘 0-5 落后前世界第一斯瓦泰克仍连赢 7 局以 7-5 逆转，2-0 晋级八强；连续两场让 5 追 7，理论概率约 1678 万分之一，美网官方发文将其与乔丹、伍兹比肩。",
+          en: "Down 0-5 in the first set vs. former world No.1 Swiatek, she won 7 straight games to take it 7-5 and advance 2-0; after two consecutive 0-5 comebacks (~1-in-16.78M odds), the US Open's post compared her to Jordan and Woods.",
+        },
+      },
+      {
+        title: {
+          zh: "网红宣称捐款百万实捐 1 元，账号被禁言",
+          en: "Influencer 'Donated' ¥1M Claim, Actually ¥1 — Banned",
+        },
+        description: {
+          zh: "广西洪涝期间万粉网红'安澜'晒截图宣称捐款百万博取流量，红会核查并无该笔捐款、仅查到 1 元，账号已被平台禁言。",
+          en: "During Guangxi flooding, 'Anlan' posted a screenshot claiming a ¥1M donation for clout; the Red Cross found only ¥1 — the account was suspended.",
+        },
+      },
+      {
+        title: {
+          zh: "潘建伟院士：'学成了，希望你们能回来'",
+          en: "Academician Pan: 'Learn Well, and Come Back'",
+        },
+        description: {
+          zh: "在'把青春华章写在祖国大地上'大思政课现场，潘建伟表示多年来送出一批批年轻人出国深造，对他们唯一的愿望就是学成归来。",
+          en: "At a national education event, Pan Jianwei told students abroad what he has always wished: they learn well, then bring their knowledge home.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报评'葫芦娃爷爷'：善意应守住边界",
+          en: "People's Daily on 'Gourd Grandpa': Kindness Has Limits",
+        },
+        description: {
+          zh: "老人院内葫芦走红后大批游客打卡扰其生活，评论称善意应守住边界，切莫让热情演变为对普通人的过度打扰与消费。",
+          en: "After his yard's gourds went viral, crowds disrupted the elderly man's life; the paper says goodwill must respect boundaries, not become invasive hype.",
+        },
+      },
+      {
+        title: {
+          zh: "赵一鸣致歉：称错商品差价按十倍赔付",
+          en: "Zhao Yiming Apologizes, Offers 10x Make-Good",
+        },
+        description: {
+          zh: "鸣鸣很忙集团就门店称重问题道歉，成立专项基金先行赔付并上线全国秤具监控系统，自 9 月 7 日起称重出错按差价十倍赔付。",
+          en: "The snack chain apologizes over weighing disputes, funds immediate compensation, and rolls out national scale monitoring — wrong weights now pay 10x the difference.",
+        },
+      },
+      {
+        title: {
+          zh: "冯小刚《抓特务》口碑逆袭",
+          en: "Feng Xiaogang's 'Catch the Spy' Scores a Comeback",
+        },
+        description: {
+          zh: "影片上线流媒体后热度登顶，豆瓣升至 7.4 分，与此前院线仅 1.19 亿票房形成反差；舒缓叙事与年代烟火气引发年长观众共鸣。",
+          en: "The film tops streaming charts with a 7.4 Douban score — a stark turnaround from its ¥119M theatrical run — as its leisurely storytelling resonates with older viewers.",
+        },
+      },
+      {
+        title: {
+          zh: "华为新三折叠首拆：薄至 3.5mm、麒麟 9050Pro",
+          en: "Huawei Tri-Fold Teardown: 3.5mm, Kirin 9050Pro",
+        },
+        description: {
+          zh: "首次拆机显示新机薄至 3.5mm，搭载麒麟 9050Pro 自研芯片，算力可从容应对大屏多任务并行，展现国产折叠屏技术底蕴。",
+          en: "The first teardown reveals a 3.5mm-thin body and in-house Kirin 9050Pro silicon, with power to spare for split-screen multitasking — a sign of domestic foldable tech maturity.",
+        },
+      },
+      {
+        title: {
+          zh: "华为/小米/苹果对决'万元机'",
+          en: "Huawei, Xiaomi, Apple Duel for '10K' Flagships",
+        },
+        description: {
+          zh: "三大品牌先后发布折叠旗舰：华为新机 19999 元起、小米 18 Fold 10999 元起，传苹果折叠 iPhone 或推迟至 2026 年 9 月亮相。",
+          en: "The three giants trade foldable flagships back-to-back — Huawei from ¥19,999, Xiaomi's 18 Fold from ¥10,999 — while Apple's folding iPhone is reportedly pushed to Sept 2026.",
+        },
+      },
+      {
+        title: {
+          zh: "雷军展示'折叠机的坟场'",
+          en: "Lei Jun Shows the Foldable 'Graveyard'",
+        },
+        description: {
+          zh: "小米 18 Fold 发布会现场，雷军展示摔坏报废的 1500 多台工程机，称这是折叠机诞生的代价；该机 10999 元起、首搭玄戒 O3，9 月 10 日开售。",
+          en: "At the Mi 18 Fold launch, Lei Jun showed 1,500+ wrecked engineering units as 'the price of a foldable's birth'; the ¥10,999 phone debuts the Xuanjie O3 chip, on sale Sept 10.",
+        },
+      },
+      {
+        title: {
+          zh: "国安部披露偷拍未公开战机案",
+          en: "State Security Exposes Classified-Jet Sneak Photo Case",
+        },
+        description: {
+          zh: "个别人员因猎奇炫耀偷拍军事禁区涉密装备博取流量；唐某在小区高楼偷拍未公开战机并上传网络，资料属机密，已被移送检察机关审查起诉。",
+          en: "A man photographed a classified, pre-debut fighter from his high-rise for clout; the footage was state secrets, and he has been referred for prosecution.",
+        },
+      },
+      {
+        title: {
+          zh: "6G 手机要来了：工信部部署'十五五'规划",
+          en: "6G Is Coming: MIIT Outlines the 15th Five-Year Plan",
+        },
+        description: {
+          zh: "工信部印发信息通信'十五五'规划，提出适时启动 6G 商用、加快 6G 核心技术研发与试验，研制 6G 基站、核心网及 6G 智能手机。",
+          en: "MIIT's plan calls for timely 6G commercialization, core R&D and trials, plus 6G base stations, core networks, and smartphones to keep the supply chain resilient.",
+        },
+      },
+      {
+        title: {
+          zh: "阿拉善测试卡车失控与数据车相撞致 5 死",
+          en: "Runaway Test Truck in Alxa Kills 5 in Collision",
+        },
+        description: {
+          zh: "9 月 7 日晚一上坡测试卡车制动失控溜车，与跟车收集数据的商务车相撞，致车内 5 人死亡，原因仍在调查。",
+          en: "An uphill test truck braked loose and rolled back into a data-collection van on the evening of Sep 7, killing all 5 inside; the cause is under investigation.",
+        },
+      },
+      {
+        title: {
+          zh: "小米最便宜车型出炉：澎程 N70 20.99 万起",
+          en: "Xiaomi's Cheapest Car Yet: Pengcheng N70 From ¥209.9K",
+        },
+        description: {
+          zh: "小米秋季发布会上发布大五座 SUV 小米澎程 N70，售价 20.99 万元起，成为小米汽车当前最便宜车型。",
+          en: "At its fall flagship event Xiaomi unveiled the large five-seat Pengcheng N70 SUV from ¥209,900 — now its most affordable car.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-07",
     date: "2026-09-07",
     title: {
