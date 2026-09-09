@@ -2,6 +2,306 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-09",
+    date: "2026-09-09",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-09",
+      en: "🤖 AI HOT Daily · Sep 9, 2026",
+    },
+    summary: {
+      zh: "OpenAI 发布 ChatGPT Images 2.5 图像模型，生成延迟比上代最高降 50%；并将 Astra 全面推送给 Codex 与 ChatGPT Work 中的 Plus/Pro/Business/Enterprise 用户；同日宣布内部 AI 系统给出 Navier-Stokes 千禧年难题解答——证明光滑流体可在有限时间形成奇点，附证明文稿与 Lean 形式化验证；NYU 数学家指控 OpenAI 在该竞赛中不正当竞争（泄密+算力追赶），Bubeck 否认，Altman 回应称对方仅有 Euler 结果且以抄袭指控相威胁；Noam Brown 透露这项证明花费数百万美元但成本会快速下降；Mistral 完成 30 亿欧元 D 轮融资、估值超 210 亿欧元，为欧洲科技史上最大股权融资；Runway 发布 Adobe 插件可直连 Premiere Pro/After Effects 在时间线内生成与编辑；卡兹克发布 Astra 操控 Blender 保姆级教程（Computer Use 4 小时搭出祈年殿但烧掉近半 Pro 额度）；Dwarkesh Patel 实验称预训练进步主要来自数据改进（数据 12.0x vs 模型 3.7x）；Anthropic 分享用 Claude 降本增效三招；Tom Tunguz 拆解 OpenAI 3x 研究生产力来自并行 agent。",
+      en: "OpenAI launches ChatGPT Images 2.5 with up to 50% lower generation latency, rolls Astra out to all Plus/Pro/Business/Enterprise users in Codex and ChatGPT Work, and says an internal AI system has solved the Navier-Stokes Millennium Problem — smooth flows can form singularities in finite time, backed by a proof manuscript and Lean formal verification; an NYU mathematician accuses OpenAI of dirty play on the problem (a leak plus brute-force pursuit), Bubeck denies it, and Altman counters that the other side only had an Euler result while threatening plagiarism claims; Noam Brown says the proof cost millions but costs will fall fast; Mistral closes a €3B Series D above €21B valuation — Europe's largest-ever equity raise; Runway ships an Adobe plugin that generates and edits right inside Premiere Pro and After Effects; Kazike publishes an Astra-in-Blender tutorial (Computer Use rebuilt the Temple of Heaven in ~4h at half a $200 Pro quota); Dwarkesh Patel's experiments show pretraining progress is mostly data (12.0x vs 3.7x for modeling); Anthropic shares three ways to cut Claude costs without losing performance; and Tom Tunguz dissects OpenAI's 3x research productivity as parallel agents.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI 发布 ChatGPT Images 2.5 图像模型",
+          en: "OpenAI Unveils ChatGPT Images 2.5",
+        },
+        description: {
+          zh: "图像生成延迟比 Images 2.0 最高降低 50%，细节、编辑精度、参考照片保真度和多轮编辑一致性均有提升，为当前最先进图像模型。",
+          en: "Generation latency drops up to 50% vs Images 2.0, with gains in detail, edit precision, reference-photo fidelity, and multi-round consistency — its most advanced image model yet.",
+        },
+      },
+      {
+        title: {
+          zh: "Runway 发布 Adobe 插件：Premiere/After Effects 内直接生成",
+          en: "Runway Plugins Bring Generation Into Premiere & AE",
+        },
+        description: {
+          zh: "新面板可直接嵌入 Premiere Pro 与 After Effects，在时间线内生成图像和视频、重绘片段并放置结果；Edit Studio 可用 Aleph 2 按原始时长重新渲染，插件免费提供（macOS/Windows）。",
+          en: "New panels embed directly in Premiere Pro and After Effects — generate images/video in the timeline, repaint clips, and drop results in; Edit Studio re-renders with Aleph 2 at the original duration, free on macOS/Windows.",
+        },
+      },
+      {
+        title: {
+          zh: "Astra 全面推送 Plus/Pro/Business/Enterprise",
+          en: "Astra Now Wide Open to All Paid Tiers",
+        },
+        description: {
+          zh: "OpenAI 宣布 Astra 已全面推送给 Codex 和 ChatGPT Work 的 Plus、Pro、Business、Enterprise 用户，可通过 openai.com/gpt-tv/ 观看实机演示。",
+          en: "OpenAI rolls Astra out to Plus, Pro, Business, and Enterprise across Codex and ChatGPT Work, with live demos watchable at gpt-tv.",
+        },
+      },
+      {
+        title: {
+          zh: "NYU 数学家指控 OpenAI 在千禧年难题中不正当竞争",
+          en: "NYU Mathematician: OpenAI 'Fought Dirty' on Millennium Problem",
+        },
+        description: {
+          zh: "Buckmaster 与 Anthropic 数学家 Alpöge 公布 Navier-Stokes 问题三项证明初步结果，称研究信息泄露给 OpenAI，对方随后用大量算力沿独特路线追赶；OpenAI 的 Bubeck 否认指控。",
+          en: "Buckmaster and Anthropic's Alpöge claim their research leaked to OpenAI, which then chased the same unique route with heavy compute; OpenAI's Bubeck denies it.",
+        },
+      },
+      {
+        title: {
+          zh: "Mistral 完成 30 亿欧元 D 轮融资，估值超 210 亿欧元",
+          en: "Mistral Raises €3B Series D, Valuation Exceeds €21B",
+        },
+        description: {
+          zh: "投后估值超 210 亿欧元，公司称这是欧洲科技公司史上最大股权融资，距其创立仅三年。",
+          en: "With a post-money valuation above €21B, Mistral calls it the largest equity raise ever by a European tech firm — just three years after founding.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI：内部 AI 系统给出 Navier-Stokes 千禧年难题解答",
+          en: "OpenAI: Internal AI System Cracks Navier-Stokes",
+        },
+        description: {
+          zh: "宣称内部 AI 系统证明初始光滑的流体可在有限时间内形成奇点，并附证明文稿与 Lean 形式化验证。",
+          en: "OpenAI says an internal AI system proved smooth fluid flows can develop singularities in finite time, publishing the proof with Lean formal verification.",
+        },
+      },
+      {
+        title: {
+          zh: "Dwarkesh Patel：预训练进步主要来自数据改进",
+          en: "Pretraining Progress Is Mostly Data: Dwarkesh Patel",
+        },
+        description: {
+          zh: "在最高 1e19 FLOPs 预算下对比 2019-2025 各年度配方与语料，发现数据改进带来 12.0x 算力效率提升、模型改进 3.7x，数据贡献约为模型的 3.24 倍。",
+          en: "Across 2019-2025 recipes at up to 1e19 FLOPs, data improvements delivered 12.0x compute-efficiency vs 3.7x from modeling — data matters ~3.24x more.",
+        },
+      },
+      {
+        title: {
+          zh: "数学家公开与 OpenAI 沟通经过及三项 blowup 结果",
+          en: "Mathematicians Publicize Blowup Results and OpenAI Thread",
+        },
+        description: {
+          zh: "Buckeraster 与 Alpöge 公开三项有限时间 blowup 结果，涵盖带光滑强迫的不可压缩多孔介质方程等，并披露与 OpenAI 的沟通经过。",
+          en: "Buckeraster and Alpöge release three finite-time blowup results — including incompressible porous-media flows with smooth forcing — and the full OpenAI correspondence.",
+        },
+      },
+      {
+        title: {
+          zh: "Noam Brown：Navier-Stokes 证明成本会快速下降",
+          en: "Noam Brown: Proof Money Burn Will Drop Fast",
+        },
+        description: {
+          zh: "他承认这次证明花费数百万美元，但认为随智能体规模化和算力降价，此类成本将快速下降。",
+          en: "He admits the proof cost millions of dollars but argues such costs will plunge quickly as agentic pipelines scale and compute cheapens.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-6 Astra 操控 Blender 保姆级教程",
+          en: "A Hand-Held Astra-Steers-Blender Tutorial",
+        },
+        description: {
+          zh: "卡兹克实测三种玩法：Computer Use 约 4 小时搭出天坛祈年殿但烧掉 200 美元 Pro 会员近半额度；MCP 更快可完成摩托车建模与组装动画，但复杂任务单次运行会超时。",
+          en: "Kazike tests three modes: Computer Use rebuilt the Temple of Heaven in ~4h but burned ~half a $200 Pro quota; MCP is faster for vehicle modeling/animation yet complex tasks hit timeouts.",
+        },
+      },
+      {
+        title: {
+          zh: "Sam Altman 回应 Navier-Stokes 证明发布争议",
+          en: "Altman Responds to the Proof-Launch Spat",
+        },
+        description: {
+          zh: "他称对方只有 Euler 结果、双方协调失败，并称对方以抄袭指控相威胁。",
+          en: "Altman says the other side only had an Euler result, coordination failed, and the rival team threatened plagiarism accusations.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic：用 Claude 降本增效的三个方法",
+          en: "Three Ways to Cut Claude Costs, Keep Performance",
+        },
+        description: {
+          zh: "优化 prompt cache 命中率、清除升级前沿 Claude 模型后的提示词反模式、校准 effort 设置，可在不牺牲性能下降低成本。",
+          en: "Raise prompt-cache hit rates, purge anti-patterns left over from older models, and calibrate effort — cheaper without giving up quality.",
+        },
+      },
+      {
+        title: {
+          zh: "Tom Tunguz 拆解 OpenAI 3x 研究生产力",
+          en: "Tom Tunguz Decodes OpenAI's 3x Research Productivity",
+        },
+        description: {
+          zh: "引用 OpenAI 内部数据：每名研究员 8 小时班次对应 3.14 个 agent 工作日，通常并行运行 4 个 agent——'3x' 是否只是机器不睡觉？",
+          en: "Internal data shows each researcher's 8-hour shift maps to 3.14 agent workdays, usually with 4 agents in parallel — is the '3x' just machines that never sleep?",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-09-hot",
+    date: "2026-09-09",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-09",
+      en: "🔥 Hot Topics · Sep 9, 2026",
+    },
+    summary: {
+      zh: "香港首任特首董建华安详辞世享年 89 岁，梁振英沉痛哀悼，称其落实'一国两制'并高瞻远瞩谋划香港长远发展；9 月 9 日毛泽东逝世 50 周年，纪念堂外民众排起长队，韶山广场凌晨齐唱国歌缅怀；央视曝光后安徽、山东、河南连夜部署核查整改；市场监管总局印发通知启动'放心消费'培育，让守信经营者得实惠；多名网友晒高考数学 100 多分却在西电开学考只考十几分（多为竞赛题）；小米回应澎程试驾事故：客户油门当刹车误踩、无人受伤；美网官方连续第 5 轮'看衰'郑钦文，预测其对莱巴金娜胜率仅 13%；哈兰德欧冠梅开二度助曼城 2-0 波尔图，补时与对手扭打；亚运会倒计时 10 天，中国代表团 815 名运动员出战；伊朗革命卫队称导弹打击两艘美军驱逐舰及约旦基地；郑州军训教官强制猥亵高一女生被刑拘、女生患 PTSD；铜价创历史新高，全球上演'抢铜潮'；苹果首款折叠 iPhone 悬念（书本式 7.8 英寸内屏、售价或超 2000 美元）；12 国联合声明限制与以色列定居点商品贸易。",
+      en: "Hong Kong's first chief executive Tung Chee-hwa dies peacefully at 89, with Leung Chun-ying mourning his role in establishing the SAR government and implementing 'one country, two systems'; on the 50th anniversary of Mao Zedong's death, crowds queue at his memorial hall and sing the national anthem at dawn in Shaoshan; Anhui, Shandong, and Henan launch overnight checks after a CCTV expose; the market regulator starts a 'confident consumption' push so honest operators actually benefit; viral posts show straight-A gaokao math scores (100+) crashing to a dozen points on Xidian's placement test (mostly contest problems); Xiaomi says a Pengcheng test-drive 'accident' was a client mistaking throttle for brake with no injuries; the US Open's win-probability model underrates Zheng Qinwen for a fifth straight round, at just 13% vs Rybakina; Haaland's brace leads Man City 2-0 past Porto, then scuffles at the buzzer; 10 days until the Asian Games — 815 Chinese athletes, avg age 24; Iran's IRGC claims missile strikes on two US destroyers and a base in Jordan; a military-training instructor is detained over assaulting a 15-year-old girl diagnosed with PTSD; copper hits a record high amid a global scramble; Apple's first folding iPhone is the big suspense (book-style ~7.8-inch screen, maybe over $2,000); and 12 nations pledge to curb trade with Israeli settlements.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "香港首任特首董建华逝世，享年 89 岁",
+          en: "Tung Chee-hwa, Hong Kong's First Chief Executive, Dies at 89",
+        },
+        description: {
+          zh: "前全国政协副主席、香港特区首任行政长官董建华 9 月 8 日安详辞世；梁振英沉痛哀悼，称其领导成立特区政府、落实'一国两制'并高瞻远瞩谋划香港长远发展。",
+          en: "The former CPPCC vice-chairman and first CE of Hong Kong SAR passed away peacefully on Sep 8; Leung Chun-ying hailed his leading role in founding the SAR government, implementing 'one country, two systems', and planning long-term development.",
+        },
+      },
+      {
+        title: {
+          zh: "毛泽东逝世 50 周年：纪念堂外排长队，韶山齐唱国歌",
+          en: "Mao's 50th Anniversary: Long Queues, Dawn Anthem at Shaoshan",
+        },
+        description: {
+          zh: "9 月 9 日毛泽东同志逝世 50 周年纪念日，毛主席纪念堂外参观民众排起长队；凌晨韶山毛泽东广场民众自发齐聚合唱国歌缅怀伟人。",
+          en: "On the 50th anniversary of Mao Zedong's death, long lines form at his memorial hall in Beijing while crowds gather at the Shaoshan square at dawn to sing the national anthem together.",
+        },
+      },
+      {
+        title: {
+          zh: "央视曝光后，安徽山东河南连夜核查",
+          en: "Anhui, Shandong, Henan Launch Overnight Probes After CCTV Expose",
+        },
+        description: {
+          zh: "央视节目曝光相关问题后，安徽、山东、河南三地第一时间连夜部署排查整改，回应公众关切。",
+          en: "Following a CCTV expose, the three provinces moved overnight to organize verification and rectification in response to public concern.",
+        },
+      },
+      {
+        title: {
+          zh: "让守信经营者得实惠：市场监管总局启动'放心消费'培育",
+          en: "Regulator Rewards Operators Who Play It Straight",
+        },
+        description: {
+          zh: "市场监管总局印发通知全面开展放心消费单元和集聚区培育，构建涵盖信用、金融、市场等维度的正向激励体系，让经营者从'要我变好'变成'我要变好'。",
+          en: "A new notice launches 'confident consumption' zones backed by positive incentives across credit, finance, and markets — turning compliance from obligation into a business edge.",
+        },
+      },
+      {
+        title: {
+          zh: "高考数学 132 分，开学考只考了 12 分",
+          en: "Gaokao 132 in Math, Then a 12 on the Placement Exam",
+        },
+        description: {
+          zh: "多名西安电子科技大学新生晒出成绩单：高考数学 100 多分，开学考数学却只得十几分；学生称考题并非高考内容、基本为竞赛题。",
+          en: "Freshmen at Xidian University post their scorecards — 100+ on gaokao math, then a dozen-something on the placement test, which they say was largely contest-level material.",
+        },
+      },
+      {
+        title: {
+          zh: "小米回应澎程试驾事故：油门当刹车，无人受伤",
+          en: "Xiaomi: Test-Drive Mishap Was Brake/Throttle Mix-Up",
+        },
+        description: {
+          zh: "就 9 月 8 日晚'小米澎程试驾意外'，小米辟谣称客户在路口转弯让行时因紧张将油门当刹车误踩驶出车道，全程无人受伤。",
+          en: "Addressing the Sep 8 'Pencheung test-drive incident', Xiaomi clarified a nervous client hit the throttle instead of the brake while yielding at a turn and left the road — nobody was hurt.",
+        },
+      },
+      {
+        title: {
+          zh: "郑钦文第 5 次被'看衰'：对莱巴金娜胜率仅 13%",
+          en: "Zheng Underdog Again: 13% vs Rybakina",
+        },
+        description: {
+          zh: "美网女单 1/4 决赛前，美网官方预测郑钦文胜率仅 13%，赔率亦显示被看衰；此前她对莱巴金娜战绩 1 胜 4 负，官方已连续 5 轮'看衰'。",
+          en: "Before her QF, the US Open model pegs Zheng's chances at just 13% and oddsmakers agree; she trails Rybakina 1-4 historically, and official projections have favored the field in all five rounds.",
+        },
+      },
+      {
+        title: {
+          zh: "哈兰德欧冠梅开二度，补时与对手扭打",
+          en: "Haaland's Brace, Then a Buzzer-Beater Scuffle",
+        },
+        description: {
+          zh: "曼城欧冠客场 2-0 击败波尔图，哈兰德梅开二度；补时阶段他被对手拽倒后与对手激烈扭打，场面火爆。",
+          en: "Haaland nets twice as Man City beat Porto 2-0 away in the Champions League, then brawls with an opponent in stoppage time after being dragged down.",
+        },
+      },
+      {
+        title: {
+          zh: "亚运会倒计时 10 天：815 名运动员参赛",
+          en: "10 Days to the Asian Games: 815 Athletes for China",
+        },
+        description: {
+          zh: "2026 爱知·名古屋亚运会将于 9 月 19 日至 10 月 4 日举行，中国体育代表团派出 815 名运动员，平均年龄 24 岁，'05 后'占 27%。",
+          en: "The 2026 Aichi-Nagoya Asian Games run Sep 19-Oct 4; China sends 815 athletes with an average age of 24 — 27% born after 2005.",
+        },
+      },
+      {
+        title: {
+          zh: "伊朗称导弹打击美军驱逐舰及约旦基地",
+          en: "Iran Claims Missile Strikes on US Destroyers, Jordan Base",
+        },
+        description: {
+          zh: "伊朗革命卫队声明称成功对美国海军两艘驱逐舰实施导弹打击，并发射弹道导弹打击约旦阿兹拉克美军基地，作为对美国打击伊朗油轮的回应。",
+          en: "The IRGC says missiles struck two US Navy destroyers plus the Azraq base in Jordan, framed as retaliation for a US attack on an Iranian tanker.",
+        },
+      },
+      {
+        title: {
+          zh: "军训教官强制猥亵高一女生被刑拘",
+          en: "Training Instructor Detained for Assaulting Student",
+        },
+        description: {
+          zh: "郑州四中军训期间，受聘教官梁某以查寝为由将 15 岁女生带至楼梯间实施强制猥亵后被刑拘；女生患创伤后应激障碍，法院正委托机构鉴定伤情。",
+          en: "During Zhengzhou No.4 Middle School's military training, hired instructor Liang allegedly assaulted a 15-year-old under an inspection pretext; she has since been diagnosed with PTSD and a trauma assessment is underway.",
+        },
+      },
+      {
+        title: {
+          zh: "铜价创历史新高，全球上演'抢铜潮'",
+          en: "Copper at Record High as a Global Scramble Breaks Out",
+        },
+        description: {
+          zh: "伦铜一度涨近 2%、触及每吨 14779 美元历史新高，沪铜收报 11.06 万元/吨；关税预期叠加供应收紧，铜回收市场同样火爆。",
+          en: "LME copper spiked ~2% to an all-time high near $14,779/t while the Shanghai price hit ¥110,620/t; tariff fears plus tight supply also ignite the scrap-copper market.",
+        },
+      },
+      {
+        title: {
+          zh: "苹果首款折叠 iPhone 悬念：或超 2000 美元",
+          en: "Apple's First Foldable iPhone: The Big Questions",
+        },
+        description: {
+          zh: "爆料称新机采用书本式设计、约 7.8 英寸内屏、钛铝合金铰链，重点解决折痕问题；受内存短缺影响成本超标，起售价或提至 2199 美元。",
+          en: "Leaks point to a book-style ~7.8-inch inner screen and titanium-aluminum hinge aimed at killing the crease; memory-driven cost blowups could push the starting price past $2,000.",
+        },
+      },
+      {
+        title: {
+          zh: "12 国联合声明限制与以色列定居点贸易",
+          en: "12 Nations Pledge Curbs on Settlement Trade",
+        },
+        description: {
+          zh: "法国、英国、加拿大等 12 国发表联合声明，就限制与以色列定居点的商品贸易作出相关承诺。",
+          en: "France, the UK, Canada, and nine others jointly pledge commitments to restrict commerce with Israeli settlements.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-08",
     date: "2026-09-08",
     title: {
