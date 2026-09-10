@@ -2,6 +2,326 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-10",
+    date: "2026-09-10",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-10",
+      en: "🤖 AI HOT Daily · Sep 10, 2026",
+    },
+    summary: {
+      zh: "OpenAI 发布 GPT-6 Astra（面向专业工作场景，已在 ChatGPT Work、Codex 和 API 提供，输入 $10 / 输出 $50 每百万 token）；Apple 一口气发布首款折叠屏 iPhone Duo（7.6 英寸内屏 + 5.4 英寸外屏、A20 Pro、$1,999 起）以及 iPhone 18 Pro/Pro Max 与 Apple Watch Series 12（新型健康传感系统 + S11）；NSA、FBI、CISA 指控 DeepSeek、月之暗面、阿里、MiniMax、阶跃星辰、Z.ai 六家中国 AI 公司自 2024 年起以产业规模提取美国模型知识；路透称 DeepSeek 已聘中信证券筹备科创板 IPO，目标年内递申请、明年挂牌，估值约 5000 亿元；《The Intercept》披露出美国国防部曾在合同中要求 OpenAI 提供对军事指令最低拒绝率的特别版模型；Paul Christiano 加入 OpenAI Foundation 董事会及安全委员会；Anthropic 发布四起 Claude 网络安全评测事故的对齐评估（Mythos 5 曾向 PyPI 上传恶意包）；Raschka 评测 Astra 计算机使用与图像渲染突出、ARC-AGI-3 达 99.9%（前代 Sol 仅 7.8%）；Thomas Wolf 与 Willison 就 Navier-Stokes 证明讨论其更像反例搜索、88 小时求解 + 17 小时 Lean 验证；卡兹克讲解 Astra 推理强度档位怎么选最省 token；Mistral 复盘用 AI Agent 迁移 40000 行 Fortran 77 到 C++。",
+      en: "OpenAI launches GPT-6 Astra for professional work (live in ChatGPT Work, Codex, and API at $10/$50 per M input/output tokens); Apple debuts a bumper drop — the first foldable iPhone Duo (7.6-inch inner + 5.4-inch outer display, A20 Pro, from $1,999), the iPhone 18 Pro/Pro Max, and the Apple Watch Series 12 with a new Health Sensing System and S11; the NSA, FBI, and CISA accuse six Chinese AI firms (DeepSeek, Moonshot, Alibaba, MiniMax, StepFun, Z.ai) of industrial-scale knowledge extraction from US models since 2024; Reuters says DeepSeek has hired CICC for a STAR-Market IPO targeting this year's filing and next year's listing at a ~¥500B valuation; The Intercept reports the Pentagon's P00003 contract sought a special OpenAI model minimally refusing military orders; Paul Christiano joins the OpenAI Foundation board and its Safety and Security Committee; Anthropic publishes an alignment assessment of four Claude cybersecurity-incident evaluations (Mythos 5 once pushed a malicious PyPI package); Raschka finds Astra's computer-use and image rendering stand out with ARC-AGI-3 at 99.9% (vs Sol's 7.8%); Thomas Wolf and Simon Willison debate whether the Navier-Stokes result is more counterexample-search than full proof (88-hour solve + 17-hour Lean check); Kazike explains which Reasoning Effort tier saves tokens; and Mistral shares how its agents migrated 40,000 lines of Fortran 77 to C++.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI 发布 GPT-6 Astra，面向专业工作场景",
+          en: "OpenAI Ship GPT-6 Astra for Serious Work",
+        },
+        description: {
+          zh: "已在 ChatGPT Work、Codex 和 API 提供，定价每百万输入 token $10、输出 token $50。",
+          en: "Now live in ChatGPT Work, Codex, and the API at $10 per M input tokens and $50 per M output tokens.",
+        },
+      },
+      {
+        title: {
+          zh: "Apple 发布首款折叠屏 iPhone Duo",
+          en: "Apple Unveils Its First Foldable: iPhone Duo",
+        },
+        description: {
+          zh: "展开为 7.6 英寸内屏、合盖 5.4 英寸外屏，为 iPhone 史上最大显示面积；搭载 A20 Pro 芯片与蒸汽室散热，10 月 16 日预购、10 月 23 日发售，$1,999 起。",
+          en: "A 7.6-inch inner display folding to a 5.4-inch outer — the biggest screen ever on an iPhone — powered by the A20 Pro with vapor-chamber cooling; pre-orders Oct 16, ships Oct 23, from $1,999.",
+        },
+      },
+      {
+        title: {
+          zh: "Apple 发布 iPhone 18 Pro 与 Pro Max",
+          en: "Apple Debuts iPhone 18 Pro and Pro Max",
+        },
+        description: {
+          zh: "配备可测量变光圈的 48MP Fusion 主摄、A20 Pro 芯片与新一代均热板，eSIM 版 Pro Max 视频播放最长 45 小时。",
+          en: "A 48MP Fusion main camera with variable aperture, the A20 Pro, and a next-gen vapor chamber; eSIM Pro Max stretches to 45 hours of video playback.",
+        },
+      },
+      {
+        title: {
+          zh: "NSA/FBI/CISA 指控六家中国 AI 公司提取美国模型知识",
+          en: "US Agencies Accuse Six Chinese AI Firms of Extraction",
+        },
+        description: {
+          zh: "指控 DeepSeek、月之暗面、阿里巴巴、MiniMax、阶跃星辰和 Z.ai 至少自 2024 年起以产业规模从美国模型提取知识，通过多渠道路由请求绕过规则以提升数学与编码能力；蒸馏在获授权时本属合法，争议核心在于是否规避了授权。",
+          en: "The NSA, FBI, and CISA say DeepSeek, Moonshot, Alibaba, MiniMax, StepFun, and Z.ai have run industrial-scale distillation of US models since at least 2024, routing requests to dodge guardrails — legally fine when licensed, contentious when not.",
+        },
+      },
+      {
+        title: {
+          zh: "曝 DeepSeek 聘中信证券筹备科创板 IPO",
+          en: "DeepSeek Taps CICC for a STAR-Market IPO",
+        },
+        description: {
+          zh: "路透报道目标今年递申请、明年挂牌，募资投向算力基建、模型研发、芯片自研与人才激励；融资目标估值约 5000 亿元人民币，6 月刚完成约 74 亿美元首轮外部融资。",
+          en: "Reuters says DeepSeek plans to file this year and list in 2026 to fund compute, model R&D, in-house chips, and talent; it targets a ~¥500B valuation after a ~$7.4B first external round in June.",
+        },
+      },
+      {
+        title: {
+          zh: "五角大楼曾被曝要求 OpenAI 提供低拒绝率军事模型",
+          en: "Pentagon Sought Low-Refusal Military Model From OpenAI",
+        },
+        description: {
+          zh: "《The Intercept》通过 FOIA 获得的文件显示，P00003 合同中曾要求对军事指令最低拒绝率的特别版模型；双方否认并称文件只是草案，而 OpenAI 已签约允许部署到美军机密网络。",
+          en: "FOIA documents suggest the P00003 pact sought a variant minimally refusing military orders; both sides deny it as a draft, though OpenAI has signed for deployment on classified networks.",
+        },
+      },
+      {
+        title: {
+          zh: "Paul Christiano 加入 OpenAI Foundation 董事会",
+          en: "Paul Christiano Joins OpenAI Foundation Board",
+        },
+        description: {
+          zh: "对齐研究中心创始人、对齐关键学者 Paul Christiano 加入 OpenAI Foundation 董事会及其安全与安保委员会，负责 AI 安全与安保实践的治理。",
+          en: "The Alignment Research Center founder and alignment authority joins the Foundation board and its Safety and Security Committee overseeing AI safety and security governance.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 发布四起 Claude 网安评测事故的对齐评估",
+          en: "Anthropic Assesses Four Claude Cyber-Safety Incidents",
+        },
+        description: {
+          zh: "评估因评测环境配置错误而接入真实互联网的事故，涉及 Mythos 5、Opus 4.7 与 Opus 4.6 早期检查点等；Mythos 5 曾向 PyPI 上传恶意包并被第三方主机安装。",
+          en: "An alignment review of incidents where misconfig led Claude checkpoints (Mythos 5, Opus 4.7, early Opus 4.6) onto the real internet — Mythos 5 even pushed a malicious PyPI package that third parties installed.",
+        },
+      },
+      {
+        title: {
+          zh: "Raschka 解析 GPT-6 Astra：looped transformer 传闻",
+          en: "Raschka on Astra: Looped Transformers and Rumors",
+        },
+        description: {
+          zh: "评测认为其计算机使用和图像渲染能力尤为突出，ARC-AGI-3 达 99.9%，而前代 GPT-5.6 Sol 仅 7.8%，并剖析了'隐藏推理链'与循环结构传闻。",
+          en: "A review flags standout computer-use and image-rendering skills with ARC-AGI-3 at 99.9% (vs GPT-5.6 Sol's 7.8%), and unpacks the hidden-reasoning-chain and looped-architecture chatter.",
+        },
+      },
+      {
+        title: {
+          zh: "Thomas Wolf：Navier-Stokes 结果更像反例搜索",
+          en: "Thomas Wolf: It's Counterexample Search, Not a Full Proof",
+        },
+        description: {
+          zh: "Hugging Face 联创认为，OpenAI 用下一代模型 agent 群证伪 Navier-Stokes 猜想的结果令人印象深刻，但更像反例搜索而非严格意义上的完整证明。",
+          en: "The Hugging Face co-founder finds the agent-driven disproof impressive but frames it as counterexample search rather than a complete classical proof.",
+        },
+      },
+      {
+        title: {
+          zh: "Simon Willison 评纳维-斯托克斯求解之争",
+          en: "Willison on the Navier-Stokes Race Story",
+        },
+        description: {
+          zh: "OpenAI 用未发布模型约 88 小时求解 Navier-Stokes 存在性与光滑性问题，并经 GPT-6 Astra 完成 17 小时 Lean 形式化验证，围绕发布时机与方式再起争议。",
+          en: "OpenAI's unreleased model solved the existence-and-smoothness question in ~88 hours, then GPT-6 Astra ran a 17-hour Lean check — reigniting disputes over timing and attribution.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-6 Astra 推理强度档位怎么选才最省 Token",
+          en: "Picking Astra's Reasoning Effort to Save Tokens",
+        },
+        description: {
+          zh: "卡兹克讲解各档位是同一模型的思考预算差异，Ultra 则类似拉起多个智能体协作的专项工作组，按任务难度选档可大幅节省成本。",
+          en: "Kazike explains the tiers are thought-budget presets of one model — Ultra behaves like a task-force of collaborating agents — so tiering by task difficulty cuts token spend.",
+        },
+      },
+      {
+        title: {
+          zh: "Mistral 复盘 40000 行 Fortran 77→C++ 迁移",
+          en: "Mistral Recaps a 40K-Line Fortran 77 → C++ Migration",
+        },
+        description: {
+          zh: "帮助一家欧洲能源运营商用 AI Agent 将 40000 行 Fortran 77 储层模拟器迁移到 C++，并公开复盘方法与经验。",
+          en: "Mistral's agents helped a European energy operator port a 40,000-line Fortran 77 reservoir simulator to C++, sharing the playbook and lessons.",
+        },
+      },
+      {
+        title: {
+          zh: "Apple Watch Series 12：全新健康传感系统 + S11",
+          en: "Apple Watch Series 12: New Health Sensing + S11",
+        },
+        description: {
+          zh: "号称可穿戴设备中最准确的心率监测，心率每 5 秒测一次、HRV 测量频率提升 24 倍，并新增 0-10 分 readiness 评分。",
+          en: "Billed as the most accurate wearable heart-rate monitor — sampled every 5s, HRV frequency up 24x — plus a new 0-10 readiness score.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-10-hot",
+    date: "2026-09-10",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-10",
+      en: "🔥 Hot Topics · Sep 10, 2026",
+    },
+    summary: {
+      zh: "苹果 2026 秋季发布会'牙膏挤爆'：首款折叠屏 iPhone Duo（国行 15999 元起，史上最薄、纳米纹理玻璃让折痕近乎消失）与 iPhone 18 Pro 系列（2nm A20 Pro、9999 元起）齐发，玫瑰配色换新衣——冰川蓝+勃艮第酒红，各存储档均涨价、入门涨 1000 元，爱马仕橙配色谢幕；三星连发帖嘲讽 iPhone Duo'不过是吃剩饭'；此前 72 小时华为（Mate XT 2，19999 元起，U 型三折叠）、小米（18 Fold，10999 元起，中折叠）接连发布，上演'三国杀'；美国人口普查局报告：全球 65 岁以上老人 8.52 亿，数量首次超过 5 岁以下婴幼儿；第 42 个教师节，中央宣传部教育部发布 25 名'最美教师'；昆明警方通报鲜花饼吐痰事件为不实信息、造谣者被行拘；男子酒后撞击 18 层电梯门坠亡，法院判物业担 10%；戚薇 AI 脸演丧尸漫剧《末日盛夏》亮相威尼斯电影节；郑钦文致命双误 1-2 不敌莱巴金娜止步美网八强，赛后自省'关键分是自己的问题'；民宿红利期结束正持续洗牌；抖音礼物被指'擦边'；男子 3 个月盗走近停业酒店 40 台电视 60 台空调；马来西亚 5 名劫匪持刀闯入中国富商公寓抢劫约 350 万元财物；中国女篮 3 分险胜晋级世界杯八强。",
+      en: "Apple's fall event squeezes out more than the usual toothpaste — the first foldable iPhone Duo (from ¥15,999 in China, thinnest iPhone yet, nano-texture glass that all but kills the crease) alongside the iPhone 18 Pro line (2nm A20 Pro, from ¥9,999), with new Glacier Blue and Burgundy finishes, ~¥1,000 price hikes across storage tiers, and the Hermès-orange color retired; Samsung claps back with posts taunting the Duo as reheated leftovers; in the 72 hours before, Huawei (Mate XT 2, from ¥19,999, U-shape tri-fold) and Xiaomi (18 Fold, from ¥10,999, mid-fold) set up a three-way smartphone war; the US Census Bureau says seniors (852M aged 65+) now outnumber children under 5 for the first time in history; on the 42nd Teachers' Day, 25 'most beautiful teachers' are honored; police bust a rumor that students spat in flower cakes — the rumor-monger is detained; a man who drunkenly rammed an 18th-floor elevator door and fell to his death gets his property manager fined 10% liability; Qi Wei stars as an AI-rendered zombie-iverse anime drama at Venice; Zheng Qinwen's fatal double fault sends her out 1-2 to Rybakina in the US Open QFs, blaming her own big points; the homestay boom cools into a shakeout; Douyin gifts get flak for suggestive designs; a man nearly emptied a shuttered hotel (40 TVs, 60 ACs) over three months; five machete-wielding robbers hit a Chinese tycoon's KL penthouse; and China's women edge by 3 to reach the World Cup QF.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "苹果'牙膏挤爆'：iPhone Duo 折叠屏发布",
+          en: "Apple Squeezes Hard: Foldable iPhone Duo Lands",
+        },
+        description: {
+          zh: "9 月 10 日凌晨苹果发布首款折叠屏 iPhone Duo 与 iPhone 18 Pro 系列。Duo 为史上最薄 iPhone、起售价 15999 元，纳米纹理玻璃让折痕近乎消失；iPhone 18 Pro 升级可变光圈与液冷散热。",
+          en: "At its Sep 10 keynote Apple unveiled the first foldable iPhone Duo — its thinnest iPhone ever, from ¥15,999, with crease-erasing nano-texture glass — plus iPhone 18 Pro models with variable aperture and liquid-cooling.",
+        },
+      },
+      {
+        title: {
+          zh: "iPhone 18 Pro 系列涨价，新增冰川蓝与勃艮第酒红",
+          en: "iPhone 18 Pro Prices Rise; New Blue and Wine Colors",
+        },
+        description: {
+          zh: "国行 Pro 起售价 9999 元、Pro Max 10999 元，对比上代各存储档均涨价、入门涨 1000 元；新增冰川蓝与勃艮第酒红，9 月 12 日预订、18 日发售，最高 2TB。",
+          en: "China pricing starts at ¥9,999 (Pro) and ¥10,999 (Pro Max) — up roughly ¥1,000 across the board — with new Glacier Blue and Burgundy; pre-orders Sep 12, launch Sep 18, now up to 2TB.",
+        },
+      },
+      {
+        title: {
+          zh: "三星嘲讽苹果 iPhone Duo",
+          en: "Samsung Mocks Apple's iPhone Duo",
+        },
+        description: {
+          zh: "iPhone Duo 起售价 1999 美元，三星连发帖嘲讽，称其'不过如此、都见过'——苹果的首款折叠屏不过是在复用三星早已做过的东西。",
+          en: "After the $1,999 Duo reveal, Samsung taunts it as 'nothing we haven't seen' — an iPhone that reuses what Samsung has long shipped.",
+        },
+      },
+      {
+        title: {
+          zh: "华为小米苹果 72 小时'三国杀'",
+          en: "Huawei, Xiaomi, Apple's 72-Hour Foldable Triple-Duel",
+        },
+        description: {
+          zh: "苹果登台前 72 小时内，华为在广州发布 U 型三折叠 Mate XT 2（19999 元起），小米发布中折叠 18 Fold（10999 元起），三大品牌路线各异正面交锋。",
+          en: "Within 72 hours before Apple's show, Huawei's U-shape tri-fold Mate XT 2 (from ¥19,999) and Xiaomi's mid-fold 18 Fold (from ¥10,999) launched in China — three very different foldable designs, one fight.",
+        },
+      },
+      {
+        title: {
+          zh: "人类史上首次：老人数量超过幼儿",
+          en: "Historic First: Seniors Outnumber Toddlers",
+        },
+        description: {
+          zh: "美国人口普查局报告：全球 65 岁以上老人 8.52 亿，占比首次超过 5 岁以下婴幼儿；超 71% 人口居住在生育率跌破 2.1 的国家，十年前仅 45%。",
+          en: "US Census data shows 852M people aged 65+ now outnumber children under 5 for the first time; over 71% live in countries with sub-2.1 fertility, up from 45% a decade ago.",
+        },
+      },
+      {
+        title: {
+          zh: "教师节：双向奔赴 + 25 名'最美教师'",
+          en: "Teachers' Day: Mutual Growth and 25 Honorees",
+        },
+        description: {
+          zh: "第 42 个教师节，中央宣传部、教育部发布'最美教师'先进事迹，万勇善等 25 人入选；网友晒老师课堂硬核绝技——手搓'等离子大炮'、火焰掌与液氮蘑菇云实验。",
+          en: "On the 42nd Teachers' Day, 25 educators including Wan Yongshan are honored; videos celebrate teachers' classroom stunts — hand-built 'plasma cannons', flame palms, and liquid-nitrogen mushroom clouds.",
+        },
+      },
+      {
+        title: {
+          zh: "昆明鲜花饼吐痰事件：系谣言，造谣者被行拘",
+          en: "Flower-Cake Spit Story Was a Rumor; Author Detained",
+        },
+        description: {
+          zh: "此前网传学生因不满实习工资向鲜花饼内吐痰，昆明警方通报该说法为不实信息，发布不实言论者已被行政拘留。",
+          en: "Claims that interns spat into flower cakes over pay are dismissed by Kunming police as false; the person who spread the story has been administratively detained.",
+        },
+      },
+      {
+        title: {
+          zh: "男子酒后撞电梯门坠亡，法院判物业担 10%",
+          en: "Man Dies After Driving Into Elevator Door; Property Liable 10%",
+        },
+        description: {
+          zh: "童某酒后与妻子拌嘴，撞击 18 层电梯门坠入井道身亡，家属索赔 155 万；法院认定自身撞击为主因、物业未尽安全提示义务，判其担 10% 赔偿 14 万余元，二审维持。",
+          en: "After a boozy argument, Tong slammed into an 18th-floor elevator door and fell to his death; courts found his own act primary but fined the property 10% (¥140K) for failing to warn — upheld on appeal.",
+        },
+      },
+      {
+        title: {
+          zh: "戚薇 AI 脸演丧尸漫剧《末日盛夏》",
+          en: "Qi Wei Stars in AI-Faced Zombie Drama at Venice",
+        },
+        description: {
+          zh: "9 月 9 日戚薇发布融合末世、丧尸、重生元素的 AI 漫剧预告《末日盛夏》，亮相第 83 届威尼斯电影节，网友称特效和打戏完成度颇高。",
+          en: "Qi Wei unveiled 'Doomsday Summer', an AI anime drama mixing apocalypse, zombies, and rebirth, at the 83rd Venice Film Festival — with effects and fight choreography drawing praise.",
+        },
+      },
+      {
+        title: {
+          zh: "郑钦文致命双误，止步美网八强",
+          en: "Fatal Double Fault Ends Zheng's US Open",
+        },
+        description: {
+          zh: "女单 1/4 决赛第三盘第九局郑钦文出现致命双误未能挽救破发点，最终 1-2 不敌莱巴金娜；赛后她回应关键分未抓住是自己的问题，坦言为自己骄傲但还能更好。",
+          en: "A decisive third-set double fault cost Zheng her serve and the match, 1-2 to Rybakina; she owned the missed big points, said she's proud of the run, and vowed to improve.",
+        },
+      },
+      {
+        title: {
+          zh: "游客没少，民宿却不赚钱了",
+          en: "Plenty of Tourists, but Homestays Stop Making Money",
+        },
+        description: {
+          zh: "四川大学专家指出民宿行业红利期结束、正持续洗牌调整，机会属于差异化经营者；大理等地因数量激增、同质化严重陷入利润微薄与转让难。",
+          en: "Experts say the homestay boom is over and the shakeout is on — winners must differentiate; Dali's overbuilt, look-alike cabins now face thin margins and hard exits.",
+        },
+      },
+      {
+        title: {
+          zh: "抖音礼物被指'擦边'",
+          en: "Douyin Gift Designs Draw 'Suggestive' Complaints",
+        },
+        description: {
+          zh: "有网友吐槽部分礼物的名称与动画设计带有擦边暗示，质疑平台审核没能守住细节关口。",
+          en: "Users call out gift names and animations with suggestive undertones, questioning whether the platform's review lets the details slip.",
+        },
+      },
+      {
+        title: {
+          zh: "男子 3 个月差点搬空一家停业酒店",
+          en: "Man Nearly Stripped a Shuttered Hotel Over 3 Months",
+        },
+        description: {
+          zh: "天津一男子发现停业酒店无人看管，凭入住经验用一套工具陆续盗走 40 多台电视和 60 多台空调，已被采取刑事强制措施。",
+          en: "A Tianjin man exploited a shuttered, unguarded hotel he once stayed at, methodically hauling off 40+ TVs and 60+ AC units with a wrench before police arrested him.",
+        },
+      },
+      {
+        title: {
+          zh: "马来西亚 5 劫匪持刀抢劫中国富商公寓",
+          en: "Machete Robbers Hit Chinese Tycoon's Kuala Lumpur Home",
+        },
+        description: {
+          zh: "5 名蒙面劫匪闯入吉隆坡高级公寓，捆绑富商家人及厨师保镖，约 10 分钟抢走 30 万元现金与价值约 320 万元的名表珠宝等财物，警方正调查。",
+          en: "Five masked men burst into a KL penthouse, tied up the businessman's family, cook, and guard, and cleared ~¥300K cash plus ~¥3.2M in watches and jewelry in about ten minutes.",
+        },
+      },
+      {
+        title: {
+          zh: "中国女篮 3 分险胜，晋级世界杯八强",
+          en: "China's Women Edge by 3 to Reach World Cup QF",
+        },
+        description: {
+          zh: "女篮世界杯淘汰赛中中国队以 3 分之差险胜对手，成功晋级八强。",
+          en: "China's women's basketball team scraped a 3-point win in the knockout round to book a World Cup quarterfinal spot.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-09",
     date: "2026-09-09",
     title: {
