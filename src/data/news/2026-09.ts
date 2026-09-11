@@ -2,6 +2,326 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-11",
+    date: "2026-09-11",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-11",
+      en: "🤖 AI HOT Daily · Sep 11, 2026",
+    },
+    summary: {
+      zh: "DeepSeek 发布 V4.1-Flash——全新结构系列最小尺寸模型，原生多模态视觉、552B MoE、1M 上下文、KV cache 仅为 V4 Flash 的 1/4、MIT 协议，Day 0 登陆硅基流动，WorkBuddy 上线并免费试用两周，GPQA Diamond 90.9、Codeforces 3471；Suno 发布 v6，可直接用图片、视频和语音备忘录创作音乐并精确修改；OpenAI 密集上新：推出 Agents API 公测版（把驱动 Codex 的 harness 开放给开发者）、全双工语音模型 GPT-Live-1（每分钟 $0.05，可把推理委派给 Astra）、以及在 ChatGPT Work 中的 Data agent（自然语言生成交互式仪表盘）；Cursor 推出 Projects（beta），协调者智能体可调度数千子智能体完成大型开发任务；Google 发布基于 Nano Banana 的图像工具 Pics（局部对象编辑、图内文字修改翻译、多人协作）；Hugging Face 用 Gradio Workflow 重建 Workflow1111 复刻 AUTOMATIC1111 主要功能；Shopify 宣布从 React Native 全面迁回 Swift/Kotlin 原生；Anthropic 发布报告指控阿里、月之暗面、DeepSeek 对 Claude 发动蒸馏攻击，累计近 2 亿次交互、涉及 5 个活动；Anthropic 红队发布战术情报定位与常规武器能力评测；Cognition 用 Devin 智能体完成 RSA-260 因式分解刷新公开纪录；27 岁前 Anthropic 研究员 Jacob Coxon 辞职警示超级智能风险，作者重读 Tim Urban《人工智能革命》谈'文明赌局'；Swarmchasers 在 collusion.wiki 追踪疑似 OpenAI 智能体协作痕迹。",
+      en: "DeepSeek ships V4.1-Flash — the smallest of its new-architecture line with native multimodal vision, 552B MoE, a 1M context window, KV cache at a quarter of V4 Flash, MIT license, live day-0 on SiliconFlow and in WorkBuddy (two-week free trial), scoring GPQA Diamond 90.9 and Codeforces 3471; Suno v6 turns images, videos, and voice memos into music with precise edits; OpenAI drops a triple debut — the Agents API public beta (the Codex harness as one cloud API call), the full-duplex voice model GPT-Live-1 ($0.05/min front-end that can delegate reasoning to Astra), and the Data agent in ChatGPT Work (natural-language interactive dashboards); Cursor's Projects (beta) lets a coordinator orchestrate thousands of sub-agents; Google unveils Pics, a Nano-Bana-based image tool doing object edits, in-image text changes, and collaboration; Hugging Face rebuilds AUTOMATIC1111 as the 73-node Workflow1111; Shopify pivots every mobile app from React Native back to Swift/Kotlin; Anthropic details distillation campaigns by Alibaba, Moonshot, and DeepSeek (≈200M interactions, five campaigns); its red team releases tactical-intelligence and conventional-weapons evaluations; Cognition's Devin agents factor RSA-260, breaking the public record; 27-year-old former Anthropic researcher Jacob Coxon resigns over superintelligence risks; and Swarmchasers catalog 30 services on collusion.wiki hunting suspected OpenAI agents.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "DeepSeek 发布 V4.1-Flash：原生多模态、1M 上下文",
+          en: "DeepSeek V4.1-Flash: Native Multimodal, 1M Context",
+        },
+        description: {
+          zh: "全新结构系列中最小尺寸模型，552B MoE（prefill 约 8B 激活、decode 约 16B 激活），原生视觉，1M 上下文，KV cache 约为 V4 Flash 的 1/4，MIT 协议；GPQA Diamond 90.9、HLE 36.8、Codeforces Rating 3471。",
+          en: "The smallest of the new-architecture line is 552B MoE (~8B/16B active prefill/decode) with native vision, 1M context, a quarter of V4 Flash's KV cache, MIT license, and GPQA Diamond 90.9 / HLE 36.8 / Codeforces 3471.",
+        },
+      },
+      {
+        title: {
+          zh: "V4.1-Flash Day 0 上线硅基流动，WorkBuddy 免费试用两周",
+          en: "V4.1-Flash Lands on SiliconFlow Day-0; WorkBuddy Trial",
+        },
+        description: {
+          zh: "硅基流动于发布当日上线该模型，腾讯 WorkBuddy 同步接入并提供两周免费试用。",
+          en: "SiliconFlow hosted the model on day zero, and Tencent's WorkBuddy plugs it in with a two-week free trial.",
+        },
+      },
+      {
+        title: {
+          zh: "Suno v6 发布：图片、视频、语音备忘录皆可成歌",
+          en: "Suno v6: Turn Images, Video, and Voice Notes Into Music",
+        },
+        description: {
+          zh: "可将图片、视频和语音备忘录转化为音乐，并对已创建歌曲进行精确修改；另提供 v6-wild 版本探索更多可能性。",
+          en: "New model transforms images, video, and voice memos into tracks with surgical edits to existing songs, plus a v6-wild variant for wilder exploration.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布 Agents API 公测版",
+          en: "OpenAI Opens the Agents API to Public Beta",
+        },
+        description: {
+          zh: "将驱动 Codex 的 harness 与基础设施通过单次 API 调用开放给开发者，并托管在云端。",
+          en: "The harness and infrastructure behind Codex become a single cloud API call for developers.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 推出 Projects：协调者智能体调度子智能体",
+          en: "Cursor Projects: A Coordinator Over Thousands of Agents",
+        },
+        description: {
+          zh: "协调者本身不写代码，而是调度数千个子智能体并行处理功能开发、迁移和持续性维护等大型任务。",
+          en: "A coordinator that doesn't code but schedules thousands of sub-agents in parallel for large feature, migration, and maintenance work.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 推出全双工语音模型 GPT-Live-1",
+          en: "GPT-Live-1: OpenAI's Full-Duplex Voice Model",
+        },
+        description: {
+          zh: "可在 API 中同时听和说，支持将推理和工具调用委派给 GPT-6 Astra 等后端模型，前端语音层每分钟 $0.05。",
+          en: "The API model hears and speaks simultaneously, delegates reasoning and tool calls to backends like GPT-6 Astra, at $0.05 per minute for the voice layer.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布图像工具 Pics（基于 Nano Banana）",
+          en: "Google Pics: Nano-Banana-Powered Image Tooling",
+        },
+        description: {
+          zh: "上线 pics.new，支持局部对象编辑、图内文字修改与翻译、多人协作创作与单提示词生成多选项。",
+          en: "Now at pics.new: targeted object edits, in-image text rewriting and translation, collaborative creation, and multiple options per prompt.",
+        },
+      },
+      {
+        title: {
+          zh: "Hugging Face 用 Gradio Workflow 重建 AUTOMATIC1111",
+          en: "Workflow1111 Rebuilds AUTOMATIC1111 in Gradio",
+        },
+        description: {
+          zh: "以 73 个节点、11 条媒体管线复刻其大部分功能，覆盖文生图、高清修复、图生图、prompt matrix、VLM 反推提示词等。",
+          en: "A 73-node, 11-pipeline rebuild covering text-to-image, hi-res fix, img2img, prompt matrix, and VLM prompt inversion.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 在 ChatGPT Work 中推出 Data agent",
+          en: "OpenAI's Data Agent Arrives in ChatGPT Work",
+        },
+        description: {
+          zh: "用户用自然语言即可连接公司数据、分析变化并生成可分享的交互式仪表盘。",
+          en: "Ask in plain language to connect company data, analyze what changed, and spin up shareable interactive dashboards.",
+        },
+      },
+      {
+        title: {
+          zh: "Shopify 从 React Native 全面迁回原生开发",
+          en: "Shopify Goes Back to Native, Drops React Native",
+        },
+        description: {
+          zh: "全部移动应用迁回 Swift 和 Kotlin，判断依据是'LLM 智能体大幅降低跨平台重复开发成本'这一核心假设已经改变。",
+          en: "Every mobile app moves back to Swift and Kotlin because the core assumption — that LLM agents erase the cost of cross-platform duplication — no longer holds.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 指控阿里、月之暗面与 DeepSeek 蒸馏攻击",
+          en: "Anthropic Details Distillation Attacks by Three Chinese Firms",
+        },
+        description: {
+          zh: "报告称多家中国 AI 公司对 Claude 持续发起蒸馏攻击，累计发现近 2 亿次相关交互、涉及 5 个活动。",
+          en: "A new report says Alibaba, Moonshot, and DeepSeek ran sustained distillation against Claude, with ~200 million interactions across five campaigns.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 红队评估战术情报定位与常规武器能力",
+          en: "Anthropic Red Teams Tactical Intel and Weapon Skills",
+        },
+        description: {
+          zh: "新评测衡量模型在账户关联、照片与文本地理定位等战术情报，以及无人机末段制导、投送、GPS 干扰下导航等常规武器开发上的能力。",
+          en: "A new eval measures account-linking and photo/text geolocation for tactical intelligence, plus conventional-weapon work like drone terminal guidance and GPS-denied navigation.",
+        },
+      },
+      {
+        title: {
+          zh: "Cognition 用 Devin 智能体完成 RSA-260 因式分解",
+          en: "Devin Agents Factor RSA-260, a New Public Record",
+        },
+        description: {
+          zh: "团队驱动多个 Devin 智能体构建高性能 GPU 格子筛，对 260 位 RSA 挑战数完成因式分解，刷新 2020 年 2 月 RSA-250 的公开纪录。",
+          en: "A flotilla of Devin agents built a high-performance GPU lattice sieve to factor the 260-digit challenge, beating the RSA-250 record set in Feb 2020.",
+        },
+      },
+      {
+        title: {
+          zh: "27 岁研究员辞职警示：AI 灭绝风险与'文明赌局'",
+          en: "A Researcher Quits, Revisiting the 'Civilization Bet'",
+        },
+        description: {
+          zh: "前 Anthropic 研究员 Jacob Coxon 称 OpenAI 与 Anthropic 正押上所有人奔向自我改进的超级智能；作者借此重读 Tim Urban 2015 年《人工智能革命》，指智能爆炸的反馈回路已见雏形。",
+          en: "Jacob Coxon says the labs are betting everyone's lives on self-improving superintelligence; a revisit of Tim Urban's 2015 'AI Revolution' sees the intelligence-explosion feedback loop already forming.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-11-hot",
+    date: "2026-09-11",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-11",
+      en: "🔥 Hot Topics · Sep 11, 2026",
+    },
+    summary: {
+      zh: "胡塞武装攻占红海港口穆哈，国际油价暴涨 WTI/布伦特涨近 8%，国内成品油调价窗口今晚 24 时开启、机构测算预计上调约 360 元/吨；一名男生四次考公失利后花 2.2 万旅行六国，看到母亲朋友圈'老娘扛你看世界'百感交集；WTO 预测今年全球服务贸易量增长 4.8% 明显快于货物贸易 1.9%，AI 正改变服务生产与交付；瑞浦兰钧回应'员工厂区裸奔'视频，称系离职手续分歧引发、否认限制如厕并向宁德时代致歉；《花少8》开播两小时播放量破亿、选房一分钟敲定被评'全员有嘴'；7 月新能源渗透率破 60.4%，燃油车下滑致加油站行业洗牌；《旅行青蛙·中国之旅》停服退款规定引争议后运营方删改公告；'911'事件 25 周年，近 3000 人遇难；'普通人出境变难'被指系误读新规；联合国妇女署转发郑钦文鼓励女性运动的表态；《智能网联新能源汽车产业'十五五'规划》发布，目标 2030 年进入世界汽车强国行列、新能源乘用车占比达 70%、自动驾驶汽车规模应用；A 股三大指数齐跌逾 1%、下跌个股近 5200 只；荣耀'魔法画报'全屏广告被指延误心梗急救求救；多款旗舰手机突破万元，存储芯片均价半年涨超 200%，'手机进入奢侈品时代'成话题。",
+      en: "Houthi fighters seize the Red Sea port of Mocha, spiking oil prices ~8% for both WTI and Brent as China's own fuel-adjustment window opens at midnight (agencies model a ~¥360/t increase); a young man who failed four civil-service exams spends ¥22K visiting six countries in 59 days, moved by his mother's 'I carried you to see the world' post; the WTO sees global services trade growing 4.8% this year versus 1.9% for goods, with AI rewiring how services are made and delivered; Reolink Lanjun responds to a 'naked employee' video — a departure-process dispute, denies a toilet ban, and apologizes to CATL; 'Divas Hit the Road 8' breaks the series record with 100M views in two hours and unanimous-communication praise; EV penetration tops 60.4% in July, forcing a gas-station shakeout; the 'Travel Frog' shutdown-refund furor has operators edit their announcement; the 9/11 attacks mark 25 years with ~3,000 dead; officials call 'exit restrictions for ordinary people' a misreading of new rules; UN Women amplifies Zheng Qinwen's call for women in sports; the 15th Five-Year auto plan targets world auto-power status by 2030 (70% NEV share, scaled autonomous driving); all three A-share indices fall >1% with ~5,200 losers; Honor's 'Magic Gallery' full-screen ad is blamed for delaying an emergency MI call; and flagship phones cracking ¥10K — with memory-chip prices up 200%+ in H1 — ignite a 'luxury era' debate.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "胡塞攻占红海要地，油价'爆了'",
+          en: "Houthis Seize Red Sea Port; Oil Prices Erupt",
+        },
+        description: {
+          zh: "也门政府军军官称红海港口城市穆哈遭胡塞武装攻占；WTI 涨逾 8%、布伦特涨近 8%；今晚 24 时国内成品油调价窗口开启，机构测算预计汽柴油上调约 360 元/吨。",
+          en: "After hours of fighting, Houthis take the strategic Red Sea port of Mocha; WTI jumps >8% and Brent ~8%, while China's midnight fuel window opens with agencies modeling a ~¥360/t hike.",
+        },
+      },
+      {
+        title: {
+          zh: "4 次考公失败，花 2.2 万旅行 6 国",
+          en: "After 4 Exam Failures, a ¥22K Tour of 6 Countries",
+        },
+        description: {
+          zh: "一名男生历时 59 天游历哈萨克斯坦、阿联酋等六国，看到母亲朋友圈'老娘扛你看世界！你圆了老娘有钱就去周游世界的梦'的留言百感交集。",
+          en: "A boy spent 59 days touring six countries, moved to tears by his mother's post: 'I carried the world for you — you've fulfilled my dream of traveling it.'",
+        },
+      },
+      {
+        title: {
+          zh: "'看不见的贸易'为什么跑得更快",
+          en: "Why 'Invisible Trade' Is Overtaking Goods",
+        },
+        description: {
+          zh: "远程问诊、工程设计、跨境旅行都是服务贸易；WTO 预测 2026 年全球服务贸易量增 4.8%、明显快于货物贸易 1.9%，AI 正改变服务生产与交付。",
+          en: "Telemedicine, engineering, travel — all services trade. The WTO sees services up 4.8% in 2026 vs goods' 1.9%, with AI reshaping how they're produced and delivered.",
+        },
+      },
+      {
+        title: {
+          zh: "'员工厂区裸奔'公司找到了：瑞浦兰钧回应",
+          en: "The 'Naked Employee' Video Company Responds",
+        },
+        description: {
+          zh: "瑞浦兰钧确认为其嘉善基地，系离职手续时间未达成一致引发；公司否认'限制员工如厕'并报案，向受波及的宁德时代致歉。",
+          en: "Reolink Lanjun IDs the clip as its Jiashan site, sparked by a severance-timing dispute; it denies toilet restrictions, filed a police report, and apologized to CATL.",
+        },
+      },
+      {
+        title: {
+          zh: "《花少8》两小时破亿，选房一分钟敲定",
+          en: "'Divas 8' Breaks 100M in Two Hours",
+        },
+        description: {
+          zh: "节目首播两小时播放量破亿、打破系列纪录与'偶数季魔咒'；嘉宾选房一分钟敲定方案被评'全员有嘴'。",
+          en: "The season premiere hits 100M views in two hours, breaking the series record and the 'even-season curse'; a one-minute room-pick earns 'everyone just talks it out' praise.",
+        },
+      },
+      {
+        title: {
+          zh: "燃油车卖不动，加油站怎么办",
+          en: "Gas Stations Face a Shakeout as EVs Rise",
+        },
+        description: {
+          zh: "7 月新能源车渗透率首破 60.4%，燃油车需求下行；全国加油站约 11 万座、较 2021 年峰值下降 7.5%，规模扩张时代结束。",
+          en: "With NEV penetration passing 60.4% in July, stations slip ~7.5% from their 2021 peak to ~110K nationwide — the expansion era is over.",
+        },
+      },
+      {
+        title: {
+          zh: "《旅行青蛙·中国之旅》停服，退款规定引争议",
+          en: "'Travel Frog' Shutdown Refund Policy Sparks Outrage",
+        },
+        description: {
+          zh: "运营方宣布游戏停运、仅退近 3 个月未消耗虚拟货币且 iOS 或仅退 74% 引争议；随后编辑停服公告，删除相关争议表述。",
+          en: "The operator's shutdown plan to refund only ~3 months of unspent credits — 74% on iOS — draws fire; the notice is quickly edited to drop those lines.",
+        },
+      },
+      {
+        title: {
+          zh: "'911'事件 25 周年",
+          en: "25 Years Since 9/11",
+        },
+        description: {
+          zh: "25 年前近 3000 人遇难，事件余波从纽约废墟蔓延至中东并重塑全球格局。",
+          en: "A quarter-century on, the attacks that killed nearly 3,000 still ripple from New York's rubble across the Middle East and world order.",
+        },
+      },
+      {
+        title: {
+          zh: "'普通人出境变难'系误读新规",
+          en: "Officials: 'Harder Exits' Story Is a Misreading",
+        },
+        description: {
+          zh: "网传'未来出境全面收紧、普通人出境变难'引发关注，相关部门负责人回应称上述说法系误读。",
+          en: "Viral claims that ordinary travelers will face tightened exit rules are dismissed as a misreading of the new regulations, an official says.",
+        },
+      },
+      {
+        title: {
+          zh: "联合国妇女署转发郑钦文这句话",
+          en: "UN Women Amplifies Zheng Qinwen's Words",
+        },
+        description: {
+          zh: "郑钦文称年轻女性的价值不由一次结果或别人的期望定义；联合国妇女署推送给每一个敢想敢拼敢跌倒再来的女孩。",
+          en: "'A young woman's worth isn't defined by one result or others' expectations,' said Zheng — UN Women shares it with every girl who dares, fights, and gets back up.",
+        },
+      },
+      {
+        title: {
+          zh: "2030 年进入世界汽车强国行列，自动驾驶规模应用",
+          en: "Auto '15th Five-Year' Plan: World Power by 2030",
+        },
+        description: {
+          zh: "工信部发布《智能网联新能源汽车产业发展'十五五'规划》：2030 年进入世界汽车强国行列，新能源乘用车/商用车销量占比达 70%/40%，具备自动驾驶功能的汽车实现规模应用，并在此之前实现碳达峰。",
+          en: "MIIT's plan targets world auto-power status by 2030 — NEV at 70% of passenger and 40% of commercial sales, scale deployment of autonomous driving, and carbon peaking before then.",
+        },
+      },
+      {
+        title: {
+          zh: "A 股三大指数均跌逾 1%",
+          en: "A-Shares Slide: All Three Indices Down >1%",
+        },
+        description: {
+          zh: "沪指跌 1.35%、深成指跌 1.26%、创业板指跌逾 1%，有色金属、大金融、农业跌幅居前，沪深京三市下跌个股近 5200 只。",
+          en: "Shanghai -1.35%, Shenzhen -1.26%, ChiNext -1%+; metals, financials, and agriculture lead the fall with nearly 5,200 decliners across the three boards.",
+        },
+      },
+      {
+        title: {
+          zh: "荣耀'魔法画报'广告被指延误心梗急救",
+          en: "Honor's Lock-Screen Ad Blamed for Delaying MI Rescue",
+        },
+        description: {
+          zh: "有网友称荣耀手机'魔法画报'全屏广告耽误母亲心梗急救求救，错过'黄金 4 分钟'，质疑营销优先于安全。",
+          en: "A user says Honer's full-screen 'Magic Gallery' ad blocked an emergency MI call for the golden four minutes — questioning ads ahead of safety.",
+        },
+      },
+      {
+        title: {
+          zh: "手机进入奢侈品时代",
+          en: "Smartphones Enter a 'Luxury Era'",
+        },
+        description: {
+          zh: "旗舰新机定价纷纷突破万元；上半年手机存储芯片均价涨幅超 200%，上游涨价传导终端，拉高旗舰入门门槛。",
+          en: "Flagships now routinely crack ¥10K as H1 memory-chip prices surged 200%+ and upstream cost hikes lift the entry bar for premium phones.",
+        },
+      },
+      {
+        title: {
+          zh: "男子称遭受助者催捐，官方调查真实性",
+          en: "Donor Claims Recipient Demanded More; Official Probe On",
+        },
+        description: {
+          zh: "嘉峪关姚先生称因受助学生使用苹果手机停止资助后遭催捐；相关部门介入调查，但姚以保护隐私为由拒绝提供学生信息，事件真实性暂无法验证。",
+          en: "A Gansu donor says he was pressured after stopping aid to an iPhone-using student; an official probe continues, but he won't share the student's details, so claims remain unverified.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-10",
     date: "2026-09-10",
     title: {
