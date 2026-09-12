@@ -2,6 +2,256 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-12",
+    date: "2026-09-12",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-12",
+      en: "🤖 AI HOT Daily · Sep 12, 2026",
+    },
+    summary: {
+      zh: "Anthropic 发布威胁情报报告，记录 2025 年 12 月至 2026 年 8 月 Claude 被滥用的七类行为：俄语间谍组织用 AI 代理自动改写恶意软件绕过杀软，也门一组织用 Claude Code 开发射程超 2000 公里的导弹软件，另有团队构建无人在环的自主 FPV 无人机蜂群，中国实验室则大规模蒸馏提取训练数据；实测 DeepSeek V4.1 Flash：缓存命中输入降价 7 倍多、输出砍掉三分之二，9 月 14 日中午起所有发往 v4-pro 的请求将强制路由到 4.1 Flash 并按其低价计费；Dwarkesh Patel 邀 Beren Millidge、John Schulman、Charlie O'Neill 对谈递归自我改进（RSI）离我们还有多远；马斯克转发 Grok Bot 对 SpaceX CFO Bret Johnsen 在 Goldman Sachs Communacopia 演讲的摘要；GitHub 日韩营销负责人分享用 Copilot 把活动运营从策划到跟进全流程自动化；OpenAI 详解在线存储平台 Habitat 的演进（上篇）：每秒处理超 7000 万请求、每周服务超 10 亿用户、管理超 500PB 数据、覆盖近 40 个地区。",
+      en: "Anthropic's threat report logs seven categories of Claude misuse from Dec 2025 to Aug 2026 — Russian-language spy actors using AI agents to auto-rewrite malware past antivirus, a Yemeni group building missile software (>2,000 km range) on Claude Code, teams spinning up autonomous human-out-of-the-loop FPV drone swarms, and Chinese labs mining it at scale for training data; a hands-on test of DeepSeek V4.1 Flash finds cache-hit input pricing cut 7x+ and outputs down two-thirds, with all v4-pro requests forced onto the cheaper Flash from Sep 14 noon; Dwarkesh Patel convenes Beren Millidge, John Schulman, and Charlie O'Neill on how far recursive self-improvement really is; Musk reposts Grok Bot's summary of SpaceX CFO Bret Johnsen's Goldman Sachs Communacopia talk; GitHub's Japan/Korea marketing lead automates event ops end-to-end with Copilot; and OpenAI details its Habitat storage platform (part one) — 70M+ requests/sec, 1B+ weekly users, 500PB+ managed across ~40 regions.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Anthropic 威胁报告：Claude 被用于间谍软件、导弹与无人机蜂群",
+          en: "Anthropic: Claude Weaponized for Spies, Missiles, Drone Swarms",
+        },
+        description: {
+          zh: "记录 2025 年 12 月至 2026 年 8 月七类滥用：俄语间谍组织用 AI 代理自动改写恶意软件绕过杀软，也门组织用 Claude Code 开发射程超 2000 公里的导弹软件，另有团队构建无人在环的自主 FPV 蜂群；中国实验室大规模蒸馏提取训练数据。",
+          en: "Seven misuse categories over nine months: Russian spy actors auto-rewriting malware with AI agents, a Yemeni group coding missile software on Claude Code (>2,000 km), autonomous human-out-of-the-loop FPV swarms, and Chinese labs distilling it en masse for training data.",
+        },
+      },
+      {
+        title: {
+          zh: "实测 DeepSeek V4.1 Flash：价格大降、原生带视觉",
+          en: "DeepSeek V4.1 Flash: Big Price Cuts, Native Vision",
+        },
+        description: {
+          zh: "缓存命中输入降价 7 倍多、输出砍三分之二；9 月 14 日中午 12 点起所有发往 v4-pro 的请求被强制路由到 4.1 Flash 并按其低价计费。",
+          en: "Cache-hit inputs 7x cheaper and outputs down two-thirds; from Sep 14 noon, all v4-pro requests reroute to the Flash model at its cut rates.",
+        },
+      },
+      {
+        title: {
+          zh: "对谈：递归自我改进离我们还有多远",
+          en: "Recursive Self-Improvement: How Far Off Is It?",
+        },
+        description: {
+          zh: "Dwarkesh Patel 与 Zyphra CTO Beren Millidge、Thinking Machines 首席科学家 John Schulman、Baseten 训练负责人 Charlie O'Neill 三位研究者探讨 RSI 前景。",
+          en: "Dwarkesh hosts Zyphra's Beren Millidge, Thinking Machines' John Schulman, and Baseten's Charlie O'Neill on the prospects for recursive self-improvement.",
+        },
+      },
+      {
+        title: {
+          zh: "Grok 摘要 SpaceX CFO 在 Goldman 演讲要点",
+          en: "Grok Summarizes SpaceX CFO's Goldman Talk",
+        },
+        description: {
+          zh: "马斯克转发 Grok Bot 对 SpaceX CFO Bret Johnsen 在 Goldman Sachs Communacopia 演讲的摘要。",
+          en: "Musk shares Grok Bot's bullet-point summary of Bret Johnsen's Communacopia remarks.",
+        },
+      },
+      {
+        title: {
+          zh: "GitHub 日韩负责人用 Copilot 自动化活动运营",
+          en: "Copilot Runs Marketing Ops, End to End",
+        },
+        description: {
+          zh: "GitHub 日韩营销负责人 Tomoko Tanaka 分享如何不写代码，把活动运营从策划到跟进交给 GitHub Copilot 自动化。",
+          en: "Japan/Korea marketing lead Tomoko Tanaka shows how to hand event operations — planning through follow-up — to GitHub Copilot with zero code.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 详解存储平台 Habitat：支撑超 10 亿用户（上篇）",
+          en: "Inside Habitat: Storage for 1B+ Users (Part 1)",
+        },
+        description: {
+          zh: "在线存储平台现每秒处理超 7000 万请求、每周服务超 10 亿用户、管理超 500PB 数据，覆盖近 40 个地区，系列上篇讲述其演进历程。",
+          en: "The online storage platform now handles 70M+ requests/sec, serves 1B+ users weekly, manages 500PB+ across ~40 regions — part one of its evolution story.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-12-hot",
+    date: "2026-09-12",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-12",
+      en: "🔥 Hot Topics · Sep 12, 2026",
+    },
+    summary: {
+      zh: "国家主席习近平乘专机赴新德里出席金砖国家领导人第十八次会晤；清华大学等牵头西太平洋科考锁定一处大型高温活动热液区，初步证实具备大规模多金属硫化物资源潜力，中国找矿重大突破；DeepSeek 灰度测试语音对话，提供贝壳、白浪、海星、暗潮四种音色；宁波大学开学典礼突降暴雨，校长蔡荣根院士只讲三句话提前结束；9 月国内折叠屏渗透率突破 8%、同比增 65%，但实体店'10 台手机卖不出 1 台折叠屏'，苹果入局被视作拐点、预计首款折叠屏今年出货最高 600 万台；小米澎程明日全国交付覆盖 75 城，网友刷屏'雷总去哪儿开门'；房东上门收租得知租客三娃学费无着落，反手转给对方 2 万；中国天眼 FAST 发布第二期数据集，建成世界最大中性氢星系样本库；'往鲜花饼里吐痰'确系造谣、发布者被行拘；山东诸城偷排危废致 4 死案主犯王辉被执行死刑；胡塞武装宣布控制曼德海峡战略要地，沙特东西输油管道遭袭预防性关闭；科学家称地球自转为 50 年来最快，一天已不足 24 小时；打假网红'铁头'敲诈勒索案一审获刑 8 年、退庭时辱骂法庭；曾引爆舆论的'男子遭受助女孩威胁'闹剧被证伪——系男子自导自演引流，已被刑拘；iPhone Duo 内外屏首支持 Apple Pencil，被指'违背祖训'；韦世豪遭禁赛 3 场罚款 3 万。",
+      en: "President Xi Jinping flies to New Delhi for the 18th BRICS summit on Modi's invitation; a Tsinghua-led deep-sea cruise in the western Pacific pins down a large high-temperature hydrothermal field with mass polymetallic-sulfide potential — a major mineral discovery; DeepSeek gray-tests voice chat with four voices (shell, white wave, starfish, dark tide); a sudden downpour at Ningbo University's opening ceremony cuts the president academician's speech to three sentences; foldables pass 8% of the China market (+65% YoY) yet stores say 'you can't sell one foldable in ten phones,' with Apple's entry seen as a turning point and its first foldable forecast up to 6M units this year; Xiaomi's Pengcheng starts nationwide delivery across 75 cities tomorrow as fans flood in asking 'which door will Lei Jun open?'; a landlord out collecting rent learns a tenant can't afford his three kids' school fees — and transfers ¥20,000 instead; FAST releases its second dataset, the world's largest neutral-hydrogen galaxy sample; the 'spitting in flower cakes' story is confirmed fabricated and its author detained; the mastermind of a Zhucheng toxic-waste leak that killed four is executed; the Houthis claim control of the strategic Bab el-Mandeb area while Saudi Arabia pre-emptively shuts its east-west oil pipeline; scientists say Earth is spinning faster than in 50 years — days now run short of 24 hours; anti-fake-goods influencer 'Iron Head' gets 8 years for extortion and curses the court on his way out; the viral 'student threatened her donor' saga is exposed as a self-staged hoax (author detained); the iPhone Duo's first-ever Apple Pencil support is called a break from Jobs' 'no stylus' creed; and Wei Shihao gets a three-match ban plus a ¥30K fine.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "习近平离京出席金砖国家领导人会晤",
+          en: "Xi Heads to New Delhi for the BRICS Summit",
+        },
+        description: {
+          zh: "9 月 12 日上午，习近平乘专机赴新德里，应印度总理莫迪邀请出席金砖国家领导人第十八次会晤。",
+          en: "On Sep 12, Xi flies to New Delhi at PM Modi's invitation for the 18th BRICS leaders' meeting.",
+        },
+      },
+      {
+        title: {
+          zh: "中国找矿重大突破：西太平洋锁定了大型热液区",
+          en: "Major Find: Big Hydrothermal Field in West Pacific",
+        },
+        description: {
+          zh: "清华大学等单位牵头的海底热液活动与资源联合科考依托自主设备，新锁定一处大型高温活动热液区，初步证实具备大规模多金属硫化物资源潜力。",
+          en: "A Tsinghua-led research cruise using self-developed gear pins down a major high-temperature hydrothermal field with apparent mass polymetallic-sulfide potential.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 开口说话：语音对话灰度测试",
+          en: "DeepSeek Starts Talking: Voice Chat in Testing",
+        },
+        description: {
+          zh: "App 右上角出现小喇叭按钮，设置页可选手动'朗读音色'：贝壳、白浪、海星、暗潮四种音色。",
+          en: "A speaker icon appears in the app's corner, with four configurable voices — Shell, White Wave, Starfish, and Dark Tide — in the reading-voice settings.",
+        },
+      },
+      {
+        title: {
+          zh: "宁波大学开学典礼暴雨，校长只讲三句话",
+          en: "Downpour Ends a Speech After Three Sentences",
+        },
+        description: {
+          zh: "典礼中途突降暴雨，校长蔡荣根院士上台只讲三句话便提前结束，让同学们安全有序离场，获师生点赞。",
+          en: "As rain hammered the ceremony, academician-president Cai Ronggen spoke three sentences, wrapped it up, and sent everyone home safely — earning online praise.",
+        },
+      },
+      {
+        title: {
+          zh: "'10 台手机卖不出 1 台折叠屏'，苹果入局或成拐点",
+          en: "'Can't Sell One Foldable in Ten Phones' — Apple Shifts the Curve",
+        },
+        description: {
+          zh: "9 月国内折叠屏渗透率突破 8%、同比增 65%，但实体门店销售冷热不均；苹果首款折叠屏被视作行业拐点，预计今年出货量最高 600 万台。",
+          en: "Foldables clear 8% penetration in China this month (+65% YoY) though store sales lag; Apple's debut is the expected inflection, with up to 6M units forecast this year.",
+        },
+      },
+      {
+        title: {
+          zh: "小米澎程全国交付开启，网友问'雷总去哪儿开门'",
+          en: "Pengcheng Deliveries Start; Fans Ask 'Where's Lei Jun?'",
+        },
+        description: {
+          zh: "雷军宣布小米澎程明日全国交付、覆盖 75 座城市；评论区刷屏的问题却是——'雷总去哪儿开门？'",
+          en: "Lei Jun announces nationwide Pengcheng deliveries across 75 cities starting tomorrow; the comment section's obsessing over one thing — which storefront he'll open first.",
+        },
+      },
+      {
+        title: {
+          zh: "房东上门收租，反手给租客转了 2 万",
+          en: "Landlord Goes to Collect Rent, Ends Up Giving ¥20K",
+        },
+        description: {
+          zh: "得知租客生意难做、三个孩子的学费没有着落，房东同意暂缓收租，还向租客转账 2 万元救急。",
+          en: "Hearing that the tenant's business is struggling and three kids' school fees are short, the landlord deferred rent — and transferred ¥20,000 to help.",
+        },
+      },
+      {
+        title: {
+          zh: "中国天眼发布最大中性氢星系样本库",
+          en: "FAST Releases the World's Largest Neutral-Hydrogen Catalog",
+        },
+        description: {
+          zh: "国家天文台牵头的'中国天眼 FAST 中性氢巡天项目'发布第二期数据集，构建起当今世界规模最大的中性氢星系样本库。",
+          en: "The FAST neutral-hydrogen survey team releases dataset No.2, assembling the largest sample of neutral-hydrogen galaxies in the world.",
+        },
+      },
+      {
+        title: {
+          zh: "'往鲜花饼里吐痰'确系造谣，发布者被行拘",
+          en: "Flower-Cake Spit Story Confirmed Fake; Author Detained",
+        },
+        description: {
+          zh: "警方查明网传言论系杜某虚构，已对其处以行政拘留，与昆明此前通报指向同一闹剧。",
+          en: "Police confirm the 'spitting into flower cakes' story was fabricated by a netizen surnamed Du, now administratively detained — closing the same saga.",
+        },
+      },
+      {
+        title: {
+          zh: "偷排危废致 4 死案主犯王辉被执行死刑",
+          en: "Toxic-Dump Mastermind Wang Hui Executed",
+        },
+        description: {
+          zh: "2021 年王辉、陈涛等人偷排工业废液产生有毒气体，致 4 死、3 重伤、32 中毒；重审后王辉终审获死刑并已伏法，陈涛因立功改判死缓。",
+          en: "In 2021 their industrial-waste dump released toxic gas killing 4, badly injuring 3, and poisoning 32; after retrial Wang Hui was executed while accomplice Chen Tao got death with reprieve for cooperating.",
+        },
+      },
+      {
+        title: {
+          zh: "胡塞武装锁喉曼德海峡，沙特管道遭袭关闭",
+          en: "Houthis Strangle Bab el-Mandeb as Saudi Line Shuts",
+        },
+        description: {
+          zh: "胡塞武装声明控制曼德海峡战略要地并打击沙特武装力量；沙特能源部称东西输油管道遭袭已预防性关闭，此前沙特王储吁美打击胡塞遭拒。",
+          en: "The Houthis claim control of the strait's key points and strike Saudi forces; Riyadh pre-emptively shuts its east-west oil pipeline, a day after the crown prince's US strike plea was rebuffed.",
+        },
+      },
+      {
+        title: {
+          zh: "一天已经不足 24 小时：地球自转 50 年来最快",
+          en: "Days Run Short: Earth Spinning Fastest in 50 Years",
+        },
+        description: {
+          zh: "2020 年年中以来地球自转加快，中科院国家授时中心等机构称目前自转速度为 50 年来最快，时光流逝比过去半个世纪任何时候都快。",
+          en: "Since mid-2020 the planet has been speeding up; National Time Service Center scientists say rotation is the fastest in half a century — every day slips under 24 hours.",
+        },
+      },
+      {
+        title: {
+          zh: "打假网红'铁头'敲诈勒索一审获刑 8 年",
+          en: "Anti-Fraud Influencer 'Iron Head' Gets 8 Years",
+        },
+        description: {
+          zh: "以曝黑料相威胁索要数百克黄金，杭州滨江区法院一审以敲诈勒索罪判处'铁头'有期徒刑 8 年、另一主犯 13 年；其退庭时辱骂法庭。",
+          en: "After extorting hundreds of grams of gold under threat of exposure, 'Iron Head' is sentenced to 8 years (a co-ringer 13) — and curses the court on his way out.",
+        },
+      },
+      {
+        title: {
+          zh: "'自导自演'助学闹剧证伪：男子被刑拘",
+          en: "The 'Student Threatened Her Donor' Saga Was Staged",
+        },
+        description: {
+          zh: "此前引爆舆论的助学资助反转事件经警方通报彻底证伪：系涉事男子自导自演编造引流，现已被采取刑事强制措施。",
+          en: "Police say the viral 'scholarship victim pressured and threatened' story was fully self-staged by the man for traffic — he's now under criminal coercion.",
+        },
+      },
+      {
+        title: {
+          zh: "iPhone Duo 首支持 Apple Pencil，被指'违背祖训'",
+          en: "iPhone Duo's Apple Pencil Support Breaks a Jobs Creed",
+        },
+        description: {
+          zh: "内外屏首次支持 Apple Pencil，打破乔布斯'无需手写笔'的经典言论；业内指苹果 2020 年才下定决心入局折叠赛道，入场已落后三星、华为多年。",
+          en: "The first foldable iPhone supports Pencil on both displays, breaking Jobs' 'who wants a stylus' dictum — and note Apple only entered folding in 2020, years behind Samsung and Huawei.",
+        },
+      },
+      {
+        title: {
+          zh: "韦世豪遭重罚：禁赛 3 场、罚款 3 万",
+          en: "Wei Shihao Banned 3 Games, Fined ¥30K",
+        },
+        description: {
+          zh: "客战河南队赛后与球迷口角并做出争议手势，被中足联认定挑衅公众，处以禁赛 3 场、罚款 3 万元。",
+          en: "A post-match spat and a gesture toward fans in the Henan game earn the Chengdu star a three-match ban and ¥30,000 fine for provoking the public.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-11",
     date: "2026-09-11",
     title: {
