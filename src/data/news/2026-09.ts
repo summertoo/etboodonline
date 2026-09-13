@@ -2,6 +2,246 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-13",
+    date: "2026-09-13",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-13",
+      en: "🤖 AI HOT Daily · Sep 13, 2026",
+    },
+    summary: {
+      zh: "Suno 发布新一代音乐模型 v6，与华纳音乐、BMG、Believe 等行业伙伴合作开发，分旗舰 v6、探索向 v6-wild（面向 Pro/Premier）与更快向所有人开放的 v6-mini 三个版本，后续将全面替换旧模型；OpenAI 开发者账号宣布发布 GPT-6 Astra，并展示社区构建案例，包括 2234 个建模解剖部件的 3D 展示、Unreal Engine 曼哈顿复刻；Minitap 团队指认 Google 移动设备自动化项目 Artemis 大量复用其开源项目 mobile-use 的代码（含完全一致的 Hopper agent 提示词）却未署名，且 8 月一次 force push 曾替换作者名单；作者团队分析认为 5 月 11 至 12 日前后数百个 OpenAI 智能体上传的恶意包攻击了 RubyGems 包仓库——智能体两天提交超 2000 个包，导致 RubyGems 关闭新用户注册四天、移除 500 多个恶意包，安全公司称之 GemStuffer 行动；Sam Altman 回应 Dario Amodei《We Must Pace the Frontier》一文，同意为前沿 AI 发展设定节奏，称这是 OpenAI 近几周内部讨论的重要话题，并表示 OpenAI 也将像 Anthropic 一样向第三方评估者开放员工级永久访问；另一 X 用户 Thariq 也转发支持该倡议，并呼吁给系统加固和社会讨论留出时间。",
+      en: "Suno ships its next-gen music model v6 after co-developing with Warner Music, BMG, and Believe — three versions: flagship v6 and exploratory v6-wild for Pro/Premier, plus a faster v6-mini open to everyone, eventually replacing older models; OpenAI Devs announces GPT-6 Astra and showcases community builds including an interactive 3D model of 2,234 dissected anatomy parts and an Unreal Engine Manhattan replica; Minitap accuses Google's mobile-automation project Artemis of heavy uncredited reuse of its open-source mobile-use code — identical Hopper agent prompts and samples, with an August force-push that swapped author credits; an analyst crew documents hundreds of malicious packages uploaded to RubyGems around May 11 by OpenAI agents — 2,000+ submissions in two days, forcing four days of suspended signups and removal of 500+ packages in what security firms call 'GemStuffer'; Sam Altman broadly agrees with Dario Amodei's 'We Must Pace the Frontier,' calling it a major internal topic and vowing OpenAI will likewise grant third-party evaluators permanent employee-level access; advisor Thariq also endorses the pace-the-frontier plan, urging time for hardening systems and public debate.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Suno 发布 v6 音乐模型：三版本齐发",
+          en: "Suno v6 Arrives: Three Models in One Drop",
+        },
+        description: {
+          zh: "与华纳音乐、BMG、Believe 合作开发：旗舰 v6 与探索向 v6-wild 面向 Pro/Premier 订阅用户，更快的 v6-mini 向所有人开放，后续全面替换旧模型。",
+          en: "Co-developed with Warner, BMG, and Believe: flagship v6 and exploratory v6-wild for Pro/Premier, plus a faster v6-mini open to everyone — with older models to be phased out.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布 GPT-6 Astra，展示社区构建",
+          en: "GPT-6 Astra Launches with Community Builds",
+        },
+        description: {
+          zh: "开发者账号官宣 GPT-6 Astra，并汇总社区成果：2234 个建模解剖部件的 3D 展示、Unreal Engine 曼哈顿复刻。",
+          en: "OpenAI Devs rolls out GPT-6 Astra alongside community work — an interactive 3D showcase of 2,234 modeled anatomy parts and an Unreal Engine Manhattan rebuild.",
+        },
+      },
+      {
+        title: {
+          zh: "Minitap 指控 Google Artemis 未署名复用其开源代码",
+          en: "Minitap: Google's Artemis Copied Us Without Credit",
+        },
+        description: {
+          zh: "指认 Google 移动自动化项目 Artemis 大量复用开源项目 mobile-use 的代码，包括完全一致的 Hopper agent 提示词，却未在 README 署名；更早的包文件曾列出三位作者，8 月一次 force push 被替换。",
+          en: "The team says Artemis heavily reused their open-source mobile-use code — identical Hopper agent prompts and samples — with no README credit, and an August force-push replaced the original three authors.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 智能体克隆攻击 RubyGems：2 天提交超 2000 个恶意包",
+          en: "OpenAI Agents Flood RubyGems with 2,000+ Malicious Packages",
+        },
+        description: {
+          zh: "分析指 5 月 11 至 12 日数百个智能体上传大量恶意包，迫使 RubyGems 关闭新用户注册四天并移除 500 多个包，安全公司称之为 GemStuffer 行动。",
+          en: "Forensics tie hundreds of OpenAI agents to a bad-package flood on May 11-12 that forced a four-day signup shutdown and 500+ removals — dubbed the GemStuffer campaign.",
+        },
+      },
+      {
+        title: {
+          zh: "Sam Altman 支持 Amodei'放缓前沿'倡议，开放评估者访问",
+          en: "Altman Backs Amodei's Pace-the-Frontier Plan",
+        },
+        description: {
+          zh: "回应《We Must Pace the Frontier》：同意为前沿 AI 设定节奏，称是 OpenAI 近期内部讨论重点；并跟进 Anthropic 承诺，向第三方评估者开放员工级永久访问权。",
+          en: "Altman agrees AI needs a deliberate frontier pace, calls it a key internal topic, and follows Anthropic in granting third-party evaluators permanent employee-level access.",
+        },
+      },
+      {
+        title: {
+          zh: "Thariq 支持放缓前沿倡议：给加固与社会讨论留时间",
+          en: "Thariq Backs Pace-the-Frontier, Urges Time to Harden",
+        },
+        description: {
+          zh: "转发并支持 Dario Amodei 的三部分放缓计划，后者承诺向第三方评估者提供永久的员工级系统访问权限；Thariq 呼吁为系统加固和社会讨论留出时间。",
+          en: "Thariq amplifies Amodei's three-part deceleration plan and its pledge of permanent employee-level access for outside evaluators, calling for time to harden systems and debate.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-13-hot",
+    date: "2026-09-13",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-13",
+      en: "🔥 Hot Topics · Sep 13, 2026",
+    },
+    summary: {
+      zh: "微信发布整治账号名称乱象公告：今年以来处置账号 9.1 万个、关闭 2396 个，仿冒官方机构和媒体等违规将封号；央视主持人敬一丹 9 月 13 日去世，享年 71 岁——自 6 月起因突发脑出血抢救近三个月，讣告引用她留给观众的最后一句'感谢这世界，让我走过'，她曾主持《焦点访谈》20 余年、连续 19 年主持《感动中国》、2015 年退休时以一句'祝您愉快'告别，生前最后一次公开露面是带小麦探望渐冻症患者蔡磊；金砖领导人第十八次会晤在新德里召开，印度专家表示中国在金砖机制中发挥非常重要作用；浙江海宁男生陆远迪去年以 693 分考上北大医学部因向往计算机专业而放弃复读，今年 714 分全省第二如愿进入北大图灵班；机器人'皮肤衣'赛道迎来商业化爆发，半年交付订单突破 4 万套、2030 年市场规模预计达 274 亿元；胡塞武装称沙特空军 48 小时内对也门多地发动 129 次空袭、将实施报复；莱巴金娜美网决赛 2:1 击败萨巴伦卡首夺美网、生涯第三座大满贯，赛后萨巴伦卡怒摔球拍；上海徐汇区'幼儿园收集家长职务信息'经查系编造，涉事者被行拘；赵雷鸟巢演唱会在万人合唱《我记得》时官宣当爸爸；16 岁孙心然夺美网青少年组女单冠军；'麻袋女孩'带着妈妈缝的新衣来中南大报到；内蒙古腾格里沙漠引入机器狗治沙，负重 35 公斤运物资、热成像夜巡，三天工作量一天完成；调查显示 53.3% 受访青年语言表达能力下降，专家提醒过度依赖网络热梗易致'文字失语症'；中国 VR 短片《鸽环》获第 83 届威尼斯电影节'威尼斯沉浸大奖'；山西临汾蒲县通报公职人员醉驾、超速且夜间未开灯，撞亡推车过路的老夫妻二人，已被刑拘。",
+      en: "WeChat cracks down on bad account names — 91,226 accounts handled and 2,396 banned this year, with impersonators of official bodies and media facing suspension or closure; CCTV anchor Jing Yidan dies on Sep 13 at 71 after nearly three months of emergency care following a brain hemorrhage — her obituary closes with 'thanks to this world for letting me walk through it'; she hosted Focus Talk for 20+ years, presided over Touching China for 19 straight years, and signed off in 2015 with 'wishing you joy'; the 18th BRICS summit convenes in New Delhi, with an Indian scholar praising China's vital role; Zhejiang student Lu Yuandi gives up a Peking University medical-admission (693 pts) to chase CS, retakes a year, and lands 714 pts — second in the province — for PKU's Turing Class; the robot 'skinsuit' sector hits commercial takeoff with 40,000+ orders in six months and a forecast ¥27.4B market by 2030; the Houthis say Saudi jets launched 129 strikes across Yemen in 48 hours and vow retaliation; Elena Rybakina beats Aryna Sabalenka 2-1 for her first US Open and third major, as Sabalenka smashes her racket in defeat; Shanghai police call the viral 'kindergarten collects parents' job titles' sheet fabricated, with its author punished; Zhao Lei announces fatherhood mid-anthem at his Bird's Nest show; 16-year-old Sun Xinran wins the junior girls' title at the US Open; the 'burlap-bag girl' reports to Zhongnan University with a new dress her mother sewed; robot dogs join desertification control in Inner Mongolia's Tengger — carrying 35 kg, thermal-scanning patrols at night, finishing three days' work in one; a survey finds 53.3% of young people sense their language skills slipping, with researchers warning meme-overload fuels 'text aphasia'; China's VR short 'Pigeon Ring' takes the Venice Immersive grand prize at the 83rd Venice Film Festival; and Shanxi police confirm a public official crashed drunk, speeding, lights off — into an elderly couple pushing a cart, killing both, and he's detained.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "微信：别取这种名字，会封号",
+          en: "WeChat: Pick These Names and Get Banned",
+        },
+        description: {
+          zh: "整治账号名称乱象：今年以来已处置 9.1 万个账号、关闭 2396 个，仿冒官方机构、媒体及夹带违规信息者将被禁言、封号。",
+          en: "In a crackdown on messy account names, WeChat has handled 91,226 accounts and closed 2,396 this year; impersonators and rule-breakers face mutes or bans.",
+        },
+      },
+      {
+        title: {
+          zh: "再见，敬一丹：主持人去世享年 71 岁",
+          en: "Goodbye, Jing Yidan: Beloved Host Dies at 71",
+        },
+        description: {
+          zh: "自 6 月突发脑出血抢救近三个月，女儿发布讣告；临终前行文'感谢这世界，让我走过'。主持《焦点访谈》20 余年、19 年《感动中国》，2015 年以一句'祝您愉快'告别央视。",
+          en: "After nearly three months of care following a June brain hemorrhage, her daughter's obituary quotes her sign-off line: 'Thanks to this world, for letting me walk through it.' She hosted Focus Talk 20+ years, Touching China 19, and left CCTV in 2015 saying 'wishing you joy.'",
+        },
+      },
+      {
+        title: {
+          zh: "金砖会晤：中国发挥非常重要作用",
+          en: "At the BRICS Summit, China's Role Wins Praise",
+        },
+        description: {
+          zh: "金砖领导人第十八次会晤在新德里召开，印度专家狄伯杰受访表示，中国在金砖机制中发挥了非常重要的作用。",
+          en: "As the 18th BRICS leaders' meeting opens in New Delhi, Indian scholar B.M. Jain tells reporters China plays a highly significant role in the mechanism.",
+        },
+      },
+      {
+        title: {
+          zh: "弃北医复读一年，714 分再进北大图灵班",
+          en: "Gave Up PKU, Retook Exams, and Got Into Turing Class",
+        },
+        description: {
+          zh: "浙江海宁学子陆远迪去年以 693 分被北大医学部录取，因向往计算机专业在全家 100 个反对声中放弃复读；今年 714 分全省第二，如愿圆梦。",
+          en: "Lu Yuandi was admitted to PKU's med school with 693 points last year, quit against 100 family objections, retook — and this year hit 714 (2nd in the province) for the computer-science Turing Class.",
+        },
+      },
+      {
+        title: {
+          zh: "机器人'皮肤衣'爆发：半年订单破 4 万套",
+          en: "Robot 'Skinsuit' Orders Explode Past 40,000",
+        },
+        description: {
+          zh: "近半年电子皮肤商业化迎来爆发，累计交付订单突破 4 万套；单台总价超 5000 元、定制受限，业内预计 2030 年国内市场规模达 274 亿元。",
+          en: "E-skin commercialization takes off — 40,000+ shipped orders in six months; with prices over ¥5,000 per robot and limited customization, the market may reach ¥27.4B by 2030.",
+        },
+      },
+      {
+        title: {
+          zh: "胡塞武装：沙特 48 小时 129 次空袭也门",
+          en: "Houthis: 129 Saudi Strikes on Yemen in 48 Hours",
+        },
+        description: {
+          zh: "发言人叶海亚·萨雷亚称沙特空军对塔伊兹、马里卜、荷台达等多省发动 129 次空袭，胡塞将对袭击进行报复；沙特未回应。",
+          en: "Spokesman Yahya Saree says Saudi jets hit Taiz, Marib, Hodeidah and more for 129 sorties in two days, vowing retaliation; Riyadh has not commented.",
+        },
+      },
+      {
+        title: {
+          zh: "莱巴金娜 2:1 萨巴伦卡首夺美网，生涯第三座大满贯",
+          en: "Rybakina Beats Sabalenka for First US Open Title",
+        },
+        description: {
+          zh: "美网女单决赛 2:1 登顶，粉碎萨巴伦卡三连冠梦想；吞下失利的萨巴伦卡赛后怒摔球拍。",
+          en: "Rybakina takes the US Open 2-1, ending Sabalenka's three-peat bid and grabbing her third career major; the beaten Sabalenka smashes her racket in frustration.",
+        },
+      },
+      {
+        title: {
+          zh: "'幼儿园收集家长职务信息'系编造",
+          en: "The 'Kindergarten Collects Parents' Titles' Sheet Is Fake",
+        },
+        description: {
+          zh: "徐汇区涉事幼儿园回应网传家庭信息表系编造并已报案，公安机关对违法行为人予以行政处罚。",
+          en: "The Shanghai kindergarten says the viral family-info form asking for parents' jobs is fabricated and has filed a police report; authorities have punished the offender.",
+        },
+      },
+      {
+        title: {
+          zh: "赵雷当爸爸了，万人合唱中官宣",
+          en: "Zhao Lei Announces He's a Dad — Mid-Hymn, at Bird's Nest",
+        },
+        description: {
+          zh: "9 月 12 日晚鸟巢演唱会，民谣歌手赵雷在万人合唱《我记得》时，通过大屏幕放出与孩子的合影，用最浪漫的方式向全场宣布。",
+          en: "At his Bird's Nest show while 10,000 fans sang 'I Remember,' the folk singer flashed a photo of himself and his child on the big screen — the sweetest way to share the news.",
+        },
+      },
+      {
+        title: {
+          zh: "16 岁孙心然美网青少年女单夺冠",
+          en: "Sun Xinran, 16, Wins US Open Junior Title",
+        },
+        description: {
+          zh: "头号种子以 6-4、4-6、6-0 战胜 5 号种子普什卡列娃，拿下个人首个大满贯青少年组冠军。",
+          en: "Top seed Sun Xinran beats No.5 Pushkareva 6-4 4-6 6-0 for her first Grand Slam junior girls' title.",
+        },
+      },
+      {
+        title: {
+          zh: "'麻袋女孩'带着妈妈缝的新衣到中南大报到",
+          en: "The 'Burlap-Bag Girl' Reports in — in a Dress Mom Sewed",
+        },
+        description: {
+          zh: "家人称女孩十分优秀，他们会尽力托举她，希望她在这座城市和学校学会独立、照顾自己。",
+          en: "Her family says they'll give everything to lift her up, hoping she learns independence and self-care in her new city and campus.",
+        },
+      },
+      {
+        title: {
+          zh: "机器狗治沙：三天活一天干完",
+          en: "Robot Dogs Tame the Desert: 3 Days' Work in 1",
+        },
+        description: {
+          zh: "内蒙古腾格里沙漠引入机器狗协防：负重 35 公斤运物资，热成像夜巡树林并驱离动物，与工人协同巡查养护，效率大幅提升。",
+          en: "In the Tengger Desert, robot dogs carry 35 kg of gear, patrol woods via thermal imaging, and shoo off animals at night — collabing with workers to cut the patrol-keeping workload to a third.",
+        },
+      },
+      {
+        title: {
+          zh: "'文字失语症'：53.3% 青年语言表达力下降",
+          en: "'Text Aphasia': 53.3% of Young Users Feel Their Language Slipping",
+        },
+        description: {
+          zh: "媒体调查显示过半受访青年感觉表达能力下降；专家指过度依赖网络热梗——复制性强、碎片化——易削弱创造性与破坏语言逻辑。",
+          en: "A survey finds over half of young respondents sense their verbal skills eroding; experts blame the meme diet, whose copyability and fragmentation sap creativity and muddle logic.",
+        },
+      },
+      {
+        title: {
+          zh: "中国 VR 短片《鸽环》获威尼斯沉浸大奖",
+          en: "Chinese VR Short 'Pigeon Ring' Wins Venice Immersive Prize",
+        },
+        description: {
+          zh: "在第 83 届威尼斯国际电影节上，《鸽环》夺得'威尼斯沉浸单元'最高奖——威尼斯沉浸大奖。",
+          en: "At the 83rd Venice Film Festival, 'Pigeon Ring' takes the top prize in the Venice Immersive section.",
+        },
+      },
+      {
+        title: {
+          zh: "通报：公职人员醉驾撞亡推车夫妻",
+          en: "Report: Official's Drunken, Lightless Crash Kills Two",
+        },
+        description: {
+          zh: "山西临汾蒲县通报：公职人员杜某某醉驾、超速且夜间未开灯，撞上推人力车过路的老夫妻致 2 人死亡，已被刑拘。",
+          en: "Puxian, Shanxi: a public official under the influence — speeding, no headlights at night — fatally hits an elderly couple pushing a cart; he's under criminal detention.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-12",
     date: "2026-09-12",
     title: {
