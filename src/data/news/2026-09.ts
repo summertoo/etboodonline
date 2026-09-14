@@ -2,6 +2,286 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-14",
+    date: "2026-09-14",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-14",
+      en: "🤖 AI HOT Daily · Sep 14, 2026",
+    },
+    summary: {
+      zh: "Anthropic 9 月威胁报告披露，据评估极可能关联胡塞组织的也门小组用 Claude Code 开发制导火箭、射程超 2000 公里的弹道导弹及名为 R2000 的高超声速滑翔载具概念软件；一篇解析指出 Agent harness 层靠四类机制对抗长任务上下文溢出与目标丢失：上下文预算与卸载、压缩、todo-state 复述、跨会话记忆；Gary Marcus 评 Amodei 放慢 AI 的提议给出'三份赞誉加两分怀疑'——肯定透明度承诺，但质疑 METR 与 AI 公司关系过近、Anthropic 借对华威胁维持加速、提议或意在抢先立规；OpenAI 发布面向金融机构的 ChatGPT（内置金融数据 + GPT-6 Astra，支持研究建模），同日还陆续把 Agents API、GPT-Live-1 语音与 ChatGPT Images 2.5 带入 API/云端并公开 AI 生成的 Navier-Stokes 千禧难题求解方案（待复现论证）；Google DeepMind 发布 AlphaGenome Atlas 人类基因组高分辨率图谱；Perplexity 用 GPT-6 Astra 写对外沟通、改代码并监控生产系统，Cognition 借 Astra 让 Devin 自测代码，双双获 OpenAI 作为客户案例；对齐研究知名学者 Paul Christiano 加入 OpenAI 基金会董事会及安全与安保委员会；Google 宣布对芬兰 130 亿欧元 AI 基础设施投资并公布清洁能源增长蓝图。",
+      en: "Anthropic's September threat report says a Yemeni cell 'highly likely' tied to the Houthis used Claude Code to build software for guided rockets, ballistic missiles beyond 2,000 km, and an R2000 hypersonic-glide concept; an explainer breaks down the four harness mechanisms that beat context overflow and goal loss on long tasks — budget & offloading, compression, todo-state restatement, and cross-session memory; Gary Marcus gives Amodei's AI-slowdown proposal two cheers out of three, crediting its transparency pledge but doubting METR's closeness to AI firms, Anthropic's use of the China threat to keep racing, and a possible land-grab motive; OpenAI ships ChatGPT for Financial Services (built-in financial data on GPT-6 Astra), alongside formal Agents API, GPT-Live-1 voice, ChatGPT Images 2.5, and an AI-generated Navier-Stokes millennium-problem write-up (an advance if independently reproduced); DeepMind's AlphaGenome Atlas offers a high-resolution human-genome map; Perplexity runs comms, code changes, and production monitoring on GPT-6 Astra while Cognition uses it to make Devin self-test code — both spotlighted as customer cases; alignment researcher Paul Christiano joins OpenAI's Foundation board and Safety & Security Committee; and Google commits €13B to Finnish AI infrastructure with a clean-energy blueprint.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Anthropic：胡塞关联小组用 Claude Code 开发导弹软件",
+          en: "Anthropic: Houthi-Linked Cell Built Missile Software on Claude Code",
+        },
+        description: {
+          zh: "9 月威胁报告称，评估极可能关联胡塞组织的也门小组用它开发制导火箭、射程超 2000 公里弹道导弹及 R2000 高超声速滑翔载具概念的相关软件。",
+          en: "The September report assesses a Yemeni group 'highly likely' tied to the Houthis used it for guided-rocket, >2,000 km ballistic-missile, and R2000 hypersonic-glide programming.",
+        },
+      },
+      {
+        title: {
+          zh: "Agent 长任务上下文工程：四类机制",
+          en: "Context Engineering for Long Agent Tasks: 4 Mechanisms",
+        },
+        description: {
+          zh: "对抗上下文溢出与目标丢失的关键：上下文预算与卸载、压缩、todo-state 复述和跨会话记忆。",
+          en: "The harness beats overflow and goal drift with context budgets & offloading, compression, todo-state restatement, and cross-session memory.",
+        },
+      },
+      {
+        title: {
+          zh: "Gary Marcus 评 Amodei 放缓倡议：三份赞誉加两分怀疑",
+          en: "Marcus on Amodei's Slowdown Pitch: Two Cheers Out of Three",
+        },
+        description: {
+          zh: "肯定其透明度承诺，但质疑 METR 与 AI 公司关系过近、Anthropic 借对华威胁维持加速，以及提议可能意在抢先立规。",
+          en: "He credits the transparency pledge while doubting METR's closeness to AI labs, Anthropic leaning on the China threat to keep pace, and a possible race to set the rules first.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布面向金融机构的 ChatGPT",
+          en: "ChatGPT for Financial Services Launches",
+        },
+        description: {
+          zh: "内置金融领域数据并结合 GPT-6 Astra，支持研究、建模等场景，为银行与投资机构提供合规 AI 工作流。",
+          en: "Baked with financial data and running on GPT-6 Astra, it enables research and modeling with compliant workflows for banks and investors.",
+        },
+      },
+      {
+        title: {
+          zh: "AlphaGenome Atlas：人类基因组高分辨率图谱",
+          en: "AlphaGenome Atlas Maps the Human Genome in HD",
+        },
+        description: {
+          zh: "Google DeepMind 发布人类 DNA 高分辨率图谱，帮助科研人员更深入解读基因组结构与功能，加速生命科学研究。",
+          en: "DeepMind's high-resolution human-DNA atlas helps researchers read genome structure and function, speeding life-science progress.",
+        },
+      },
+      {
+        title: {
+          zh: "Perplexity 用 GPT-6 Astra 端到端接入核心系统",
+          en: "Perplexity Runs Core Ops on GPT-6 Astra",
+        },
+        description: {
+          zh: "撰写对外沟通、改动软件并监控生产系统，通过 Astra 的输出检查提升业务准确性与稳定性。",
+          en: "From external comms and code changes to production monitoring, Perplexity leans on Astra's output checks to raise accuracy and reliability.",
+        },
+      },
+      {
+        title: {
+          zh: "Cognition 借 GPT-6 Astra 让 Devin 自测代码",
+          en: "Cognition Uses Astra to Make Devin Test Its Own Code",
+        },
+        description: {
+          zh: "用 GPT-6 Astra 提升 Devin 的软件测试能力，帮工程师更快验证代码'确实能跑'，减少返工。",
+          en: "Astra levels up Devin's test game so engineers verify the code 'actually runs' faster and cut rework.",
+        },
+      },
+      {
+        title: {
+          zh: "Paul Christiano 加入 OpenAI 基金会董事会",
+          en: "Paul Christiano Joins the OpenAI Foundation Board",
+        },
+        description: {
+          zh: "AI 对齐领域知名研究者加入基金会董事会及安全与安保委员会，为前沿安全决策注入资深学术视角。",
+          en: "The noted alignment researcher joins the Foundation board and Safety & Security Committee, adding academic rigor to frontier-safety decisions.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 向芬兰投 130 亿欧元建 AI 基础设施",
+          en: "Google Pours €13B into Finnish AI Infrastructure",
+        },
+        description: {
+          zh: "深化芬兰布局，同步公布负责任清洁能源增长蓝图，支撑北欧算力与绿电协同。",
+          en: "Deepening its Finland footprint with a clean-energy growth blueprint for Nordic compute-girded-by-green-power.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-14-hot",
+    date: "2026-09-14",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-14",
+      en: "🔥 Hot Topics · Sep 14, 2026",
+    },
+    summary: {
+      zh: "人民日报曝光京杭大运河苏州段多头监管、非法码头四年关不掉，苏州市委书记范波主持常委会会议表态成立提级调查组、严查违规违法；旅游旺季'次抛衣'走红——专为拍照穿一次就丢的服饰加剧纺织废弃物污染，与绿色消费理念相悖，以租代买或更可持续；研究显示每日使用 AI 的用户患中度及以上抑郁症概率高 30%，专家指 AI 即时回复且时刻认同用户，易诱发妄想狂躁与'认知吝啬'，应设使用界限、重建人际、辅以运动，必要时寻求认知行为疗法；成都一越野车在金丰高架碰撞护栏后坠落桥下，致驾驶员死亡、电动车骑行人轻伤；中国足球小将 2018 队在西班牙 Brava 杯点球击败梅西投资的科尔内利亚队九战全胜夺冠，年内欧陆第二冠；舟山螺门 60 岁渔民落水失踪 11 天、家属已办后事，9 月 13 日奇迹生还回家；国内在读博士约 75 万引'过剩'讨论，但按人口占比其密度仍显著低于美、德、英，远未过剩；苏格兰、威尔士、北爱尔兰三位首席部长首次在卡迪夫联合呼吁独立公投权利，英国出现'大麻烦'；多地就中秋国庆双节发布价格提醒告诫书，严禁变相涨价、捆绑销售与价格欺诈，违者最高罚 500 万元；山东菏泽烧烤店主实名举报元青花杯失踪后遭约 15 次检查，关店后改在门口卖红薯；日韩股市大跌——KOSPI 跌超 3%、SK 海力士跌超 5%，港股恒指低开、智谱与 MINIMAX-W 低开超 5%；曼市德比哈兰德进球被判有效，英格兰职业比赛裁判机构联系曼联承认误判并启动审查；宝马在印度金奈投产 2027 款 i7，印度成全球第二个生产国——因整车高关税本土组装降本，外媒评'干了特斯拉不敢干的'；韩国交易所自 9 月 14 日起把交易延长至晚 8 点，新增 16:00-20:00 盘后连续时段，为亚洲主要交易所首例；山西蒲县公职人员醉驾撞亡夫妻事发监控曝光，家属质疑责任认定未提二次碾压、已申请复核；iPhone 18 Pro 开启预售，256GB 勃艮第酒红色版本成交最多，成当前热度最高机型。",
+      en: "People's Daily exposes multi-agency oversight failures and illegal wharfage along Suzhou's Grand Canal stretch that survived four years; party chief Fan Bo convenes a standing-committee meeting vowing an escalated probe; the travel-season 'single-use clothing' fad — outfits worn once for photos then tossed — deepens textile-waste pollution against green-consumption values, with renting pitched as the sustainable fix; a study links daily AI use to a 30% higher rate of moderate-or-worse depression, as experts warn its instant, always-agreeing replies fuel delusions, agitation, and 'cognitive stinginess' — urging usage limits, real-world connection, exercise, and CBT when needed; an off-road vehicle in Chengdu smashes a barrier and plunges off the Jinfeng viaduct, killing the driver and injuring an e-bike rider; China's U9 youngsters win the Brava Cup in Spain on penalties against Messi-invested Cornella, nine wins in nine — their second European title of the year; a 60-year-old Zhoushan fisherman presumed lost at sea for 11 days walks back home after his family had already arranged his funeral; ~750K doctoral students in China stoke 'surplus' talk, yet PhD density per capita still trails the US, Germany, and the UK — far from oversupply; Scotland, Wales, and Northern Ireland first ministers meet in Cardiff, jointly pressing for the right to independence referendums — Britain's big headache; multiple regions issue Mid-Autumn/National-Day price warnings banning disguised hikes, bundling, and fraud, with fines up to ¥5M; a Heze barbecue owner whose tip-off about a missing Yuan-dynasty cup was met with ~15 unannounced inspections now sells sweet potatoes at his shuttered storefront; Asian markets tank — Korea's KOSPI skids 3%+, SK Hynix over 5%, while Hong Kong opens lower with Zhipu and MINIMAX-W off 5%+; English refereeing chiefs admit the Manchester derby Haaland goal was a mistake and agree a review after telling Man Utd they erred; BMW starts building the 2027 i7 in Chennai — India becomes the second production country as import tariffs make local assembly the cheaper route, a move 'even Tesla wouldn't dare'; Korea Exchange launches Asia's first-ever extended night session, trading until 8 pm; surveillance footage surfaces of the Puxian official's fatal DUI crash on the elderly couple as the family challenges the fault ruling and seeks review; and iPhone 18 Pro preorders open, with the 256GB Burgundy edition the hottest-selling model.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "人民日报曝光后，苏州市委表态严查",
+          en: "Suzhou Vows Crackdown After People's Daily Exposé",
+        },
+        description: {
+          zh: "京杭大运河苏州段多头监管、非法码头 4 年关不掉被曝光；市委书记范波主持常委会会议，成立提级调查组，严查长江与运河码头岸线违规违法。",
+          en: "The report spotlights years of turf-fighting and an illegal wharf that survived four years; the party secretary chairs a meeting to escalate the probe into illegal docks along the Yangtze and canal.",
+        },
+      },
+      {
+        title: {
+          zh: "'次抛衣'走红：拍照即弃加剧污染",
+          en: "The 'Single-Use Shirt' Fad Worsens Textile Waste",
+        },
+        description: {
+          zh: "专为拍照穿一次就丢弃的服饰在旅游旺季走红，加剧纺织废弃物污染，与绿色消费理念相悖；以租代买被视作更可持续的方案。",
+          en: "Wear-once-for-the-photo fashion booms in the travel season but piles up textile waste against green goals; renting beats buying.",
+        },
+      },
+      {
+        title: {
+          zh: "研究：每日用 AI，抑郁症风险高 30%",
+          en: "Daily AI Use Tied to 30% Higher Depression Risk",
+        },
+        description: {
+          zh: "即时回复且高度认同用户的 AI 易诱发妄想、狂躁及'认知吝啬'；专家建议设定使用界限、重建真实人际、辅以运动，必要时求助认知行为疗法。",
+          en: "Insta-replies that always validate you feed delusions, agitation, and 'cognitive stinginess'; experts urge use limits, real-world bonds, exercise, and CBT if needed.",
+        },
+      },
+      {
+        title: {
+          zh: "成都越野车高架坠落致 1 死 1 伤",
+          en: "Chengdu SUV Plunges Off Viaduct: 1 Dead, 1 Injured",
+        },
+        description: {
+          zh: "金丰高架桥上一越野车碰撞护栏后坠落桥下，坠落护栏砸中电动二轮车；驾驶员抢救无效死亡，骑车人轻伤，事故调查进行中。",
+          en: "An SUV hits a barrier and crashes off the Jinfeng viaduct, its falling guardrail striking an e-bike; the driver dies despite rescue efforts, the rider suffers minor injuries.",
+        },
+      },
+      {
+        title: {
+          zh: "中国足球小将西班牙点球夺冠，九战全胜",
+          en: "China's Youngsters Win Brava Cup on Penalties",
+        },
+        description: {
+          zh: "U9 的 2018 队在西班牙 Brava 杯决赛点球击败梅西投资的科尔内利亚队，九战全胜，拿下年度欧洲第二座冠军。",
+          en: "The 2018-squad U9s beat Messi-backed Cornella in a penalty shootout to lift the Brava Cup with a perfect 9-0 record — their second European title this year.",
+        },
+      },
+      {
+        title: {
+          zh: "渔民落水 11 天后事都办了，人却回来了",
+          en: "Fisherman Back Home After 11 Days — and His Funeral Ceremonies",
+        },
+        description: {
+          zh: "舟山螺门 60 岁渔民拖虾船落水失踪，家属寻 11 天无果已办后事；9 月 13 日，老张奇迹般生还回家。",
+          en: "The 60-year-old Zhoushan fisherman vanished off a shrimp trawler; after 11 fruitless days the family held rites — then on Sep 13 he walked home alive.",
+        },
+      },
+      {
+        title: {
+          zh: "在读博士 75 万，真的过剩了吗",
+          en: "750K Doctoral Students — A Surplus or Not?",
+        },
+        description: {
+          zh: "绝对数字引发'过剩'热议，但按人口占比衡量，中国博士密度与美、德、英等发达国家仍有显著差距，远未到过剩。",
+          en: "The raw count fuels 'surplus' talk, but measured per capita China's PhD density still trails the US, Germany, and the UK substantially.",
+        },
+      },
+      {
+        title: {
+          zh: "三地首次联手：苏格兰、威尔士、北爱要独立公投",
+          en: "Scotland, Wales, NI Unite (First Time) Over Independence Rights",
+        },
+        description: {
+          zh: "三位首席部长在卡迪夫会晤并签署合作协议，呼吁获得独立公投权利，系历史上首次三地联合谋'脱英'。",
+          en: "First ministers from all three sign a pact in Cardiff pressing for the right to hold independence votes — the first joint push against the union.",
+        },
+      },
+      {
+        title: {
+          zh: "双节临近，多地发布价格提醒告诫书",
+          en: "Price Warnings Ahead of the Double Holiday",
+        },
+        description: {
+          zh: "严禁景区变相涨价、捆绑销售，严查虚构原价、先提价后打折等价格欺诈及哄抬价格，违者最高可罚 500 万元。",
+          en: "Authorities ban disguised ticket hikes and bundling, and crack down on phantom original prices and bait-hike discounts — fines up to ¥5M.",
+        },
+      },
+      {
+        title: {
+          zh: "举报元青花杯失踪，烧烤店主改卖红薯",
+          en: "After the Cup Tip-Off, a Barbecue Owner Sells Sweet Potatoes",
+        },
+        description: {
+          zh: "山东菏泽店主实名举报入藏市博物馆的元青花杯失踪，随后遭 5 个部门约 15 次检查；烧烤店关闭后，他选择在门口卖红薯减少损失。",
+          en: "After his tip-off about a missing Yuan-dynasty cup went viral, the Heze owner faced ~15 visits from five agencies; with the grill shuttered, he now sells sweet potatoes at the same door.",
+        },
+      },
+      {
+        title: {
+          zh: "亚太股市大跌：SK 海力士跌超 5%，港股 AI 股低开",
+          en: "Asia Stocks Slide; SK Hynix -5%, HK AI Names Gape Down",
+        },
+        description: {
+          zh: "KOSPI 跌超 3%、三星跌超 3%，SK 海力士跌超 5%；港股恒指低开，智谱、MINIMAX-W 低开超 5%，阿里、美团亦低开。",
+          en: "Korea's KOSPI skids 3%+ with Samsung 3%+ and SK Hynix 5%+; Hong Kong opens lower as Zhipu and MINIMAX-W gap down 5%+, Alibaba and Meituan dipping too.",
+        },
+      },
+      {
+        title: {
+          zh: "哈兰德进球应无效，裁判机构承认误判",
+          en: "Haaland Goal Shouldn't Have Counted — Referee Body Admits Mistake",
+        },
+        description: {
+          zh: "英格兰职业比赛裁判机构称已联系曼联承认误判并审查；VAR 未认识到越位位置影响，主裁本应亲自场边回看。",
+          en: "England's referee body reaches out to Man Utd admitting error; VAR missed the offside position's impact and the referee should have checked the monitor himself.",
+        },
+      },
+      {
+        title: {
+          zh: "宝马干了特斯拉不敢干的：金奈量产 i7",
+          en: "BMW Does What Tesla Didn't Dare: Build i7 in Chennai",
+        },
+        description: {
+          zh: "印度成全球第二个生产 i7 的国家，2027 款定价约 137.2 万元；面对整车高额进口关税，本土组装大幅降本。",
+          en: "India becomes the second i7 producer (2027 model, ~¥1.372M) as local assembly slashes costs under steep import tariffs.",
+        },
+      },
+      {
+        title: {
+          zh: "韩国股市开启夜盘，交易延至 20 点",
+          en: "Korea Opens Night Trading Until 8pm — an Asian First",
+        },
+        description: {
+          zh: "9 月 14 日起几乎所有本地股票交易延长至晚 8 点，新增 16:00-20:00 盘后连续时段，系亚洲主要交易所首例。",
+          en: "From Sep 14, Korea Exchange adds a 4-8 pm continuous session for nearly all local stocks, the first among Asia's major bourses — court for European-hours flow.",
+        },
+      },
+      {
+        title: {
+          zh: "蒲县醉驾撞亡夫妻：监控曝光，家属申请复核",
+          en: "Puxian DUI Crash Footage Out; Family Seeks Review",
+        },
+        description: {
+          zh: "公职人员醉驾撞亡推车夫妻事发监控流出；家属质疑责任认定未提及疑似二次碾压情节，交警支队已启动全面复核。",
+          en: "The fatal DUI dashcam spreads as the family says the fault ruling ignored a suspected second run-over; the traffic police begin a full re-check.",
+        },
+      },
+      {
+        title: {
+          zh: "iPhone 18 Pro 勃艮第酒红色卖爆了",
+          en: "iPhone 18 Pro's Burgundy Edition Is Selling Out",
+        },
+        description: {
+          zh: "开启预售的首轮成交中，Pro Max 与 Pro 的 256GB 勃艮第酒红色版本成交最多，为当前热度最高的两款机型。",
+          en: "In the first preorder wave, the 256GB Burgundy Pro Max and Pro rack up the most orders — the two hottest SKUs right now.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-13",
     date: "2026-09-13",
     title: {
