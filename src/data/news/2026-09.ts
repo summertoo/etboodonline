@@ -2,6 +2,286 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-15",
+    date: "2026-09-15",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-15",
+      en: "🤖 AI HOT Daily · Sep 15, 2026",
+    },
+    summary: {
+      zh: "小红书 AllSpark 团队发布并开源 Search Agent 模型 Iris，35B 与 397B 两个版本在同量级成绩领先，权重与评测代码已公开；硅基流动上线开源模型 Hy4 preview：总参数 770B、每 token 激活 49B、支持 1M 上下文、Apache 2.0 协议，面向编码分析研究等复杂工作，可接入 Claude Code、Codex、Cursor 等工具；Apple 发布新一代 Apple Intelligence，全面重构的 Siri AI 以英文测试版随 2027 系统更新上线，支持个人语境理解、屏幕感知、系统级应用操作与跨设备对话，下月扩至法语、日语、韩语、葡萄牙语和西班牙语；Anthropic 计划登陆纳斯达克，以连续第二季度盈利冲击约 2 万亿美元估值——该数字基于剔除股权激励的调整后指标，毛利率超 80% 且未计入与 Amazon 的分成及训练成本；DeepSeek-V4.1-Flash (Max) 进入 Agent Arena 开源模型第 3 名，每任务中位成本 $0.07、比第 2 名 Hy4 preview 便宜 68% 而成绩仅差 0.09 个百分点，重塑 Pareto 前沿；Altman、Amodei、Hassabis 与 Musk 周末粗略同意放慢 AI 开发——引入第三方审计、监管国内实验室并达成全球放缓协议，批评者称这不过是压制竞争者的'卡特尔'；一份对比评测显示 GPT-5.6 Luna 用 $0.20 在 50 个公开 PR 中找到 69 个已验证 bug（精度 74%），而 GPT-6 Astra 花 $5.66 找到 92 个（精度 96%）；VC 分析师 Tomer Tunguz 梳理 Amodei 放缓倡议背后的可解释性、劳工、经济、地缘政治与监管俘获五派立场，指出没有任何一派给出具体速度；面对智能体编码洪流，Anthropic 重构了测试影响分析服务——工程师季度代码交付量已达 2021-2025 年均值的 8 倍、其中 80% 由 Claude 编写，六个月内 CI 任务暴增 25 倍。",
+      en: "RedNote's AllSpark team open-sources Search Agent model Iris — 35B and 397B versions leading their weight class, weights and eval code public; SiliconFlow hosts open-source Hy4 preview (770B parameters, 49B active, 1M context, Apache 2.0) aimed at coding, analysis, and research, pluggable into Claude Code, Codex, and Cursor; Apple launches next-gen Apple Intelligence as a rebuilt Siri AI debuts in English beta with the 2027 system update — personal context, on-screen awareness, system-level app control, cross-device conversation — expanding to French, Japanese, Korean, Portuguese, and Spanish next month; Anthropic eyes a Nasdaq listing, pitching a second straight profitable quarter toward a ~$2T valuation, though figures use adjusted metrics excluding stock comp, over-80% gross margin, and omit Amazon rev-share and training costs; DeepSeek-V4.1-Flash (Max) rises to No.3 on Agent Arena's open models (+4.87%, median $0.07/task, 68% cheaper than No.2 Hy4 preview while trailing it by just 0.09 points) — reshaping the Pareto frontier; Altman, Amodei, Hassabis, and Musk loosely agree over the weekend to slow AI — third-party audits, domestic-lab regulation, a global slowdown pact — while critics call it a cartel to suppress rivals and open source; a benchmark pits GPT-5.6 Luna against GPT-6 Astra on code review — Luna finds 69 verified bugs for $0.20 at 74% precision, Astra 92 for $5.66 at 96%; VC blogger Tomer Tunguz unpacks five factions (interpretability, labor, economics, geopolitics, regulatory capture) behind Amodei's slowdown call and notes none offers a concrete speed; and Anthropic rebuilt its test-impact-analysis service as agentic coding strains CI — engineers now ship 8x the 2021-25 code baseline, 80% written by Claude, driving a 25x CI-job surge in six months.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "小红书开源自研 Search Agent 模型 Iris",
+          en: "RedNote Open-Sources Its Iris Search Agent",
+        },
+        description: {
+          zh: "AllSpark 团队发布 Iris，35B 与 397B 同量级成绩领先；权重与评测代码已公开，数据与训练配方将陆续公布。",
+          en: "AllSpark ships Iris — both the 35B and 397B sizes lead their class; weights and eval code are out, with data and recipes to follow.",
+        },
+      },
+      {
+        title: {
+          zh: "Hy4 preview 登陆硅基流动：770B 参数、1M 上下文",
+          en: "Hy4 Preview Hits SiliconFlow: 770B Params, 1M Context",
+        },
+        description: {
+          zh: "总参数 770B、每 token 激活 49B、Apache 2.0，面向编码、分析、研究等复杂工作，可接入 Claude Code、Codex、Cursor。",
+          en: "770B total / 49B active per token under Apache 2.0, built for coding, analysis, and research — wire it into Claude Code, Codex, or Cursor.",
+        },
+      },
+      {
+        title: {
+          zh: "新一代 Apple Intelligence：重构版 Siri AI 上线",
+          en: "Next-Gen Apple Intelligence: Rebuilt Siri AI Arrives",
+        },
+        description: {
+          zh: "支持个人语境理解、屏幕感知、系统级应用操作与跨设备对话；英文测试版随 2027 系统更新推出，下月扩至五种语言。",
+          en: "Personal context, on-screen awareness, system-level app actions, cross-device conversation — the English beta rides the 2027 update, expanding to five more languages next month.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 冲刺纳斯达克，瞄准 2 万亿美元估值",
+          en: "Anthropic Aims for Nasdaq, Targets ~$2T Valuation",
+        },
+        description: {
+          zh: "向投资者主打连续第二季度盈利，但为剔除股权激励的调整后口径；毛利率超 80%，尚未计入 Amazon 分成与模型训练成本。",
+          en: "Pitched on a second straight profitable quarter — though on adjusted metrics excluding stock comp; gross margin tops 80% excluding Amazon rev-share and training costs.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek-V4.1-Flash 晋升 Agent Arena 开源第 3",
+          en: "DeepSeek-V4.1-Flash Is No.3 Open Model on Agent Arena",
+        },
+        description: {
+          zh: "+4.87% 净提升、每任务中位成本 $0.07，比第 2 名 Hy4 preview 便宜 68%、成绩仅差 0.09 个百分点；总榜第 12。",
+          en: "Up +4.87% at a median $0.07/task — 68% cheaper than Hy4 preview yet just 0.09 points behind; No.12 overall and reshaping the Pareto front.",
+        },
+      },
+      {
+        title: {
+          zh: "科技巨头口头放缓 AI：安全共识还是卡特尔？",
+          en: "Big Tech's AI Slowdown: Safety Pact or Cartel?",
+        },
+        description: {
+          zh: "Altman、Amodei、Hassabis 与 Musk 粗略同意放缓：第三方审计、监管国内实验室、全球放缓协议；批评者称其压制竞争与开源。",
+          en: "Four CEOs loosely agree to press pause with third-party audits, domestic-lab oversight, and a global pact — critics dismiss it as a cartel squeezing rivals and open source.",
+        },
+      },
+      {
+        title: {
+          zh: "$0.20 与 $5.66 的代码评审：Luna 对 Astra",
+          en: "Code Review on a Budget: Luna ($0.20) vs Astra ($5.66)",
+        },
+        description: {
+          zh: "50 个公开 PR 同提示词对比：GPT-5.6 Luna 找到 69 个已验证 bug（精度 74%），GPT-6 Astra 92 个（精度 96%）。",
+          en: "Across 50 public PRs with identical prompts, Luna nails 69 verified bugs at 74% precision for $0.20; Astra finds 92 at 96% for $5.66.",
+        },
+      },
+      {
+        title: {
+          zh: "Tomer Tunguz：放缓倡议背后的五派立场",
+          en: "Tunguz Maps Five Factions Behind the Slowdown Call",
+        },
+        description: {
+          zh: "梳理出可解释性、劳工、经济、地缘政治与监管俘获五派立场，并指出——没有任何一派给出具体速度。",
+          en: "He lines up interpretability, labor, economic, geopolitical, and regulatory-capture camps — and notes none of them names a concrete pace.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 重构测试影响分析，扛住 25 倍 CI 洪流",
+          en: "Anthropic Scales TIA as CI Workloads Explode 25x",
+        },
+        description: {
+          zh: "工程师季度代码量已是 2021-2025 均值 8 倍、80% 由 Claude 编写，六个月 CI 任务增长 25 倍，遂重构测试影响分析服务。",
+          en: "Quarterly code output is 8x the 2021-25 baseline with 80% written by Claude; CI jobs balloon 25x in six months, forcing a TIA service rebuild.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-15-hot",
+    date: "2026-09-15",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-15",
+      en: "🔥 Hot Topics · Sep 15, 2026",
+    },
+    summary: {
+      zh: "宁波轨道交通 12 号线免费试乘首日挤爆——国内首条跨海市域铁路，主城到象山约 30 分钟，小洋江站一度限流；赵雷鸟巢演唱会求婚风波升级，当事人称已报警并启动司法程序要求下架视频，'别把没素质当仪式感'引热议；国新办发布'十五五'民生健康规划，未来五年医疗要从'有'向'优'转变、加快完善优质高效整合型医疗卫生体系；中秋国庆临近牛肉量价齐升，北京新发地牛前腱 75 元/公斤、环比涨 4%、同比涨 17%；曝姆巴佩与登贝莱彻底决裂——'天选之子'对'教室最后一排埋头苦练'，齐达内拟紧急面谈调解；父亲撞死人后让儿子顶包、全家串供被识破；无锡保安卢强发现独居老人四盒牛奶两天未取遂报警，老人突发脑梗获救；菏泽举报文物失踪的烧烤店主再遭陌生男子投掷剩菜垃圾；饮用水健康报告显示 72% 成年人未达适宜摄入量，专家呼吁把喝水放与吃饭同等重要；95 后清华核科技女博士王帅驻村当村支书 8 个月，引来避暑游客、接通自来水、安装 66 盏路灯；A 股低开，网络安全、AI 模型、VPN 与钨概念走强；全球规模最大每周车展创始人詹姆斯·韦尔在加州车祸身亡，汽车撞树断成两截起火；塞尔维亚总统武契奇宣布 9 月 27 日辞任，以普通公民身份参加竞选活动；美空军部长首次承认美国拥有'在轨'太空控制武器；广汽与一汽达成重组意向——广汽拟发股收购一汽旗下合资公司股权、一汽或成二股东，标的大概率为一汽丰田；特朗普致电英伟达 CEO 黄仁勋，现场斥'AI 危险论'为骗局；韩国游戏公司 Smilegate 创始人权赫彬离婚案一审分割约 127 亿元，创韩国公开离婚案纪录。",
+      en: "Ningbo Rail Transit Line 12 — China's first cross-sea suburban railway, ~30 min from downtown to Xiangshan — is crammed on day one of free trial rides, with Xiaoyangjiang station briefly capped; the Zhao Lei Bird's Nest proposal drama escalates as the couple say they've alerted police and launched legal steps to pull the viral video, while netizens slam 'rudeness dressed as romance'; a State Council presser unveils the 15th Five-Year health blueprint — shifting medical care from 'having it' to 'doing it well' via a quality, efficient, integrated system; beef prices surge into the holiday season — ¥75/kg for front shin at New Xinfadi, +4% MoM and +17% YoY; Mbappé and Dembélé are reportedly feuding for good — 'the chosen one' vs 'the last-row grinder' — with Zidane mulling an intervention; a father who fatally hit someone tried to frame his son, the whole family's cover story collapsing; Wuxi security guard Lu Qiang spots a senior's four untouched milk boxes for two days, calls police, and finds the man collapsed from a stroke; the Heze barbecue owner who flagged a missing museum relic gets his shop pelted with leftover food by a stranger; a drinking-water report finds 72% of adults fall short of adequate intake, with experts urging water be taken as seriously as food; post-95s Tsinghua nuclear-science PhD Wang Shuai, eight months as a village party secretary, has lured summer visitors, run tap water, and installed 66 streetlights; A-shares open lower with cybersecurity, AI-model, VPN, and tungsten names firm; James Weller, founder of the world's largest weekly car show, dies in a California crash when his car splits on a tree and burns; Serbia's Vučić says he'll resign the presidency on Sep 27 and campaign as a private citizen; the US Air Force secretary for the first time admits an 'on-orbit' space-control weapon; GAC and FAW are set to restructure — GAC to buy into a FAW joint venture (likely FAW Toyota) with FAW becoming its second-largest shareholder; Trump phones Nvidia's Jensen Huang mid-panel to brand 'AI danger talk' a hoax; and Smilegate founder Kwon Hyuk-bin's divorce decree splits ~¥12.7B — a record for a Korean public case.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "'能看海的地铁'试乘首日挤爆了",
+          en: "'Sea-Viewing Metro' Crashes on Trial-Open Day",
+        },
+        description: {
+          zh: "国内首条跨海市域铁路宁波 12 号线免费试乘，主城至象山约 30 分钟；首日客流火爆，小洋江站一度限流管控，活动持续至 19 日。",
+          en: "Ningbo's Line 12, China's first cross-sea suburban rail (~30 min to Xiangshan), sees packed free trials — Xiaoyangjiang station gets crowd-capped as the run continues to the 19th.",
+        },
+      },
+      {
+        title: {
+          zh: "演唱会求婚风波升级：当事人称已报警",
+          en: "Proposal Drama Escalates: Couple Says They've Called Police",
+        },
+        description: {
+          zh: "赵雷鸟巢演唱会上后排齐呼'坐下'的名场面持续发酵，当事人私信拍摄者称已报警并启动司法程序、要求下架视频；网友热议'别把没素质当仪式感'。",
+          en: "The Bird's Nest 'sit down!' moment rolls on — the couple message the videographer claiming police and legal action to remove the clip, as netizens debate rude-as-ritual.",
+        },
+      },
+      {
+        title: {
+          zh: "未来五年民生健康重磅规划：从'有'向'优'",
+          en: "Five-Year Health Blueprint: From 'Having' to 'Doing Well'",
+        },
+        description: {
+          zh: "国新办发布会介绍'十五五'健康中国：加快完善优质高效整合型医疗卫生服务体系，让更多群众在家门口看得上病、看得好病。",
+          en: "The State Council lays out the 15th Five-Year health plan: a quality, efficient, integrated system so more people get good care close to home.",
+        },
+      },
+      {
+        title: {
+          zh: "牛肉价格持续上涨：量价齐升",
+          en: "Beef Prices Keep Climbing, In Volume and Price",
+        },
+        description: {
+          zh: "双节临近消费旺 + 肉牛存栏下降供应减少；新发地牛前腱 75 元/公斤，环比 +4%、同比 +17%。",
+          en: "Holiday demand plus falling cattle inventory shrink supply: XiFaDi front shin hits ¥75/kg, up 4% MoM and 17% YoY.",
+        },
+      },
+      {
+        title: {
+          zh: "曝姆巴佩与登贝莱彻底决裂",
+          en: "Mbappé–Dembélé Feud Reported at Breaking Point",
+        },
+        description: {
+          zh: "'天选之子'对'教室最后一排埋头苦练'的互呛引发猜测；世界杯出局后零交流，齐达内拟紧急面谈调解。",
+          en: "Digs about being 'the chosen one' versus 'grinding in the back row' fuel rumors; after no contact since World Cup exit, Zidane weighs a peace meeting.",
+        },
+      },
+      {
+        title: {
+          zh: "父亲撞死人让儿子顶包，全家串供被识破",
+          en: "Father Ran Over Two, Framed His Son — Family Cover-Up Fails",
+        },
+        description: {
+          zh: "一起肇事逃逸顶包案中，父亲指使儿子担责、全家统一口径，最终在警方调查中败露。",
+          en: "A hit-and-run suspect pushes blame onto his son and the whole family scripts a story — until investigators unravel the scheme.",
+        },
+      },
+      {
+        title: {
+          zh: "四盒没人取的牛奶，救了独居老人一命",
+          en: "Four Untouched Milk Boxes Help Save a Life",
+        },
+        description: {
+          zh: "无锡保安卢强注意到独居老人家中牛奶两天未取、人久未露面，报警后发现老人突发脑梗倒地，获救后转危为安。",
+          en: "Noting four milk boxes untouched for two days, Wuxi guard Lu Qiang calls police — the senior had collapsed from a stroke and gets to safety just in time.",
+        },
+      },
+      {
+        title: {
+          zh: "菏泽举报店主再遭投掷剩菜垃圾",
+          en: "Whistle-Blowing BBQ Owner Pelted with Leftovers",
+        },
+        description: {
+          zh: "实名举报文物失踪并遭频繁检查后，店主店铺再次被陌生男子投掷垃圾；警方已受案处理。",
+          en: "A day after he flagged missing relics and suffered repeated inspections, a stranger hurls leftover food at his shop; police are on the case.",
+        },
+      },
+      {
+        title: {
+          zh: "饮用水报告：72% 成年人没喝够水",
+          en: "Report: 72% of Adults Don't Drink Enough Water",
+        },
+        description: {
+          zh: "农业农村部与中粮旗下机构发布的报告指出，居民饮水量普遍不足，应把喝水放到与吃饭同等重要的位置。",
+          en: "New research from Institute of Food and Nutrition Development and COFCO finds most adults under hydrate — water deserves the same priority as food.",
+        },
+      },
+      {
+        title: {
+          zh: "95 后清华核科技女博士驻村当村支书",
+          en: "Tsinghua Nuclear-Science PhD Runs a Village",
+        },
+        description: {
+          zh: "王帅驻村利川诸天村 8 个月：用镜头吸引近百名避暑游客、对接农产品采购，并接通自来水、安装 66 盏路灯。",
+          en: "Wang Shuai, eight months in the village: her footage draws ~100 summer visitors and produce deals, plus running water and 66 new streetlights.",
+        },
+      },
+      {
+        title: {
+          zh: "A 股低开，网络安全与 AI 概念走强",
+          en: "A-Shares Open Lower; Security and AI Names Firm",
+        },
+        description: {
+          zh: "沪指 -0.14%，VPN、网络安全、有色·钨与 AI 模型、多模态概念领涨；检测检验、高速连接器等走弱。",
+          en: "Shanghai -0.14% at the open as VPN, cybersecurity, tungsten, and AI/multimodal plays lead; testing and high-speed-connector names lag.",
+        },
+      },
+      {
+        title: {
+          zh: "全球最大每周车展创始人车祸身亡",
+          en: "Founder of World's Biggest Weekly Car Show Dies in Crash",
+        },
+        description: {
+          zh: "詹姆斯·韦尔在加州驾车撞树，车身断成两截并起火，双双遇难（另一名司机身份未公布）。",
+          en: "James Weller's car splits on a tree and bursts into flames in California — he and an unidentified second driver both perish.",
+        },
+      },
+      {
+        title: {
+          zh: "武契奇宣布 9 月底辞任塞尔维亚总统",
+          en: "Vučić to Step Down as Serbia's President on Sep 27",
+        },
+        description: {
+          zh: "9 月 14 日晚宣布于 9 月 27 日辞职，此后将以普通公民身份参加竞选活动并与民众交流。",
+          en: "Announcing his Sep 27 resignation, he says he'll campaign afterward as a private citizen, engaging voters directly.",
+        },
+      },
+      {
+        title: {
+          zh: "美方首次承认拥有'在轨'太空控制武器",
+          en: "US Admits, for the First Time, an 'On-Orbit' Space Weapon",
+        },
+        description: {
+          zh: "美空军部长迈因克在年度'航空、航天与网络会议'上称美国已拥有在轨太空控制武器——首次公开承认太空'进攻能力'。",
+          en: "Air Force Secretary Meinke tells the annual Air, Space & Cyber conference the US holds on-orbit space-control weapons — a first public admission of offense in space.",
+        },
+      },
+      {
+        title: {
+          zh: "广汽一汽重组意向：一汽将成广汽二股东",
+          en: "GAC–FAW Restructure: FAW to Become GAC's No.2 Shareholder",
+        },
+        description: {
+          zh: "广汽拟发股收购一汽旗下合资公司股权，标的大概率为一汽丰田；此举顺应政策、破除同质化，民营车企崛起也倒逼国资加速整合。",
+          en: "GAC plans a share-issue deal for a FAW joint venture — likely FAW Toyota — as policy push plus EV rivals force state majors to consolidate.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普致电黄仁勋：'AI 危险论是骗局'",
+          en: "Trump Phones Jensen Huang: 'AI-Danger Talk Is a Hoax'",
+        },
+        description: {
+          zh: "彭博社报道，黄仁勋在小组讨论现场接听特朗普来电，让后者有机会当面斥 AI 危险论为骗局。",
+          en: "Per Bloomberg, Jensen picks up the POTUS call mid-panel, letting Trump brand the AI-risk alarm as a hoax live.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-14",
     date: "2026-09-14",
     title: {
