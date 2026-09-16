@@ -2,6 +2,326 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-16",
+    date: "2026-09-16",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-16",
+      en: "🤖 AI HOT Daily · Sep 16, 2026",
+    },
+    summary: {
+      zh: "Google DeepMind 发布 Gemini 3.8 Live 与 3.8 Live Extended Thinking 两个近实时语音对话模型，主打语音智能体与复杂任务执行；生数科技发布 Vidu S2，含面向数字角色实时交互的 Avatar 与面向视频流实时编辑的 Editing 双模型，并探索针对 VR 头显的实时空间视频生成编辑；阶跃星辰发布 StepAudio 3 系列——Realtime、ASR、TTS、Gen、Music 五款语音大模型，多款在 Artificial Analysis 榜单登顶全球第一；Google 语言技术已覆盖 300 多种语言、触及全球 86% 人口，同时发布基于 Gemini 训练、支持 55 种语言、可离线运行的轻量开源翻译模型 TranslateGemma；Anthropic 为 Claude for Small Business 新增 43 个工作流与 27 个集成（覆盖 Shopify、Salesforce、Stripe、Gusto 等），自 5 月上线以来安装超 90 万次，默认审批模式、发送/发布/付款均需用户确认，并推出免费培训；Perplexity 自研键值数据库 CobbleDB 替代 AWS DynamoDB 支持快速网页抓取，两名工程师加数百个持续运行的 Computer 智能体两个月建成核心，每年最多省 1 亿美元；Pragmatic Engineer 探访 OpenAI：约一个月前起 Codex 与 ChatGPT Work 已成公司几乎所有工作的基础，现场实为'智能体软件工厂'；Anthropic 与 OpenAI 提议行业与政府协调放缓前沿开发并寻求反垄断豁免、Altman 与马斯克表示同意，Cohere CEO 等质疑其真实动机；404 Media 曝光 OpenAI'莉莉计划'——时薪超 50 美元的审核员查看匿名化真实用户聊天记录，评判回答是否切题、有无 AI 式话术与谄媚；Arena Image-to-WebDev 榜单更新，GPT-6 Astra 以 1733 分居首、领先 GPT-5.6 Sol 129 分，Claude Fable 5.1 以 1710 分列第二；Artificial Analysis 发布 Speech to Speech Index，GPT-Live-1（Astra 后端、medium 推理）以 81.5 分登顶，略胜 Grok Voice Think Fast 2.0 High 的 81.3；Trail of Bits 批评 1Password 的 AI 补丁基准具误导性，指其 26% 干净修复率受四项实验设计选择影响而失真；Vercel 将 inbound 销售团队从 10 人压缩至 1.25 人——90% 销售开发自动化，AI SDR 智能体一年成本仅数千美元。",
+      en: "Google DeepMind ships Gemini 3.8 Live and 3.8 Live Extended Thinking — near-real-time voice models for voice agents and complex work; Shengshu unveils Vidu S2 with dual Avatar (real-time digital-character interaction) and Editing (real-time video-stream editing) models, plus VR-headset spatial video explorations; StepFun's StepAudio 3 family — Realtime, ASR, TTS, Gen, and Music — seizes multiple No.1 slots on Artificial Analysis; Google's language tech now spans 300+ languages reaching 86% of humanity, alongside TranslateGemma, a Gemini-trained lightweight open translation model (55 languages, offline-capable); Claude for Small Business adds 43 workflows and 27 integrations (Shopify, Salesforce, Stripe, Gusto…), passing 900K installs since May — approval-mode by default and free training included; Perplexity builds CobbleDB to replace AWS DynamoDB for rapid web fetching — two engineers plus hundreds of always-on Computer agents in two months, saving up to $100M a year; Pragmatic Engineer visits OpenAI and finds Codex + ChatGPT Work underpinning nearly all work since ~a month ago — a true agentic software factory; Anthropic and OpenAI pitch coordinated frontier slowdowns with an antitrust exemption (Altman and Musk agree) as Cohere's CEO and others question the real motive; 404 Media exposes 'Project Lily' — reviewers earning $50+/hr scrutinize anonymized real chats for relevance, AI-speak, and sycophancy; Arena's Image-to-WebDev leaderboard puts GPT-6 Astra first at 1733 (129 clear of GPT-5.6 Sol), Claude Fable 5.1 second at 1710; Artificial Analysis's Speech-to-Speech Index crowns GPT-Live-1 (Astra backend, medium reasoning) at 81.5, a hair over Grok Voice Think Fast 2.0 High's 81.3; Trail of Bits calls 1Password's AI-patching benchmark misleading, blaming four experimental choices for the inflated 26% clean-fix number; and Vercel shrinks inbound sales from 10 people to 1.25 FTE — 90% automated, with AI SDR agents costing a mere few thousand dollars a year.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Gemini 3.8 Live：近实时语音 + Extended Thinking",
+          en: "Gemini 3.8 Live and 3.8 Live Extended Thinking",
+        },
+        description: {
+          zh: "DeepMind 推出两个近实时语音对话模型，主打语音智能体与复杂任务执行，将实时语音下限推向更高水位。",
+          en: "Two near-real-time voice models from DeepMind aimed at voice agents and harder tasks — conversation, at thinking speed.",
+        },
+      },
+      {
+        title: {
+          zh: "生数科技发布 Vidu S2：Avatar + Editing 双模型",
+          en: "Vidu S2: Avatar + Editing, Space Videos in View",
+        },
+        description: {
+          zh: "面向数字角色实时交互的 Vidu S2-Avatar、面向视频流实时编辑的 Vidu S2-Editing，并探索 VR 头显上的实时空间视频生成与编辑。",
+          en: "Avatar powers real-time digital-character interaction, Editing wields live video-stream edits — with spatial video gen/editing for VR headsets in exploration.",
+        },
+      },
+      {
+        title: {
+          zh: "阶跃星辰 StepAudio 3：多款语音榜全球第一",
+          en: "StepFun's StepAudio 3 Tops Voice Charts Worldwide",
+        },
+        description: {
+          zh: "Realtime、ASR、TTS、Gen、Music 五款语音大模型齐发并上线开放平台，多款在 Artificial Analysis 榜单登顶。",
+          en: "Five speech models — Realtime, ASR, TTS, Gen, Music — dock on the open platform, several ranking No.1 on Artificial Analysis.",
+        },
+      },
+      {
+        title: {
+          zh: "Google：300 多种语言 + 开源翻译模型 TranslateGemma",
+          en: "Google: 300+ Languages and an Open TranslateGemma",
+        },
+        description: {
+          zh: "语言技术覆盖全球 86% 人口；基于 Gemini 训练、支持 55 种语言、可离线运行的轻量开源翻译模型也同步发布。",
+          en: "Language tech now reaches 86% of humanity; TranslateGemma — a Gemini-trained, 55-language, offline-capable open lightweight — joins it.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude for Small Business：43 个工作流 + 27 个集成",
+          en: "Claude for Small Business: 43 Workflows, 27 Integrations",
+        },
+        description: {
+          zh: "覆盖 Shopify、Salesforce、Stripe、Gusto 等；5 月上线以来安装超 90 万次，默认审批模式（发送/发布/付款需确认），并推免费培训。",
+          en: "Now reaching Shopify, Salesforce, Stripe, Gusto and more; 900K+ installs since May with approval-mode by default and free training — safety first, speed second.",
+        },
+      },
+      {
+        title: {
+          zh: "Perplexity 自研 CobbleDB 换掉 DynamoDB，年省上亿美元",
+          en: "Perplexity Swaps DynamoDB for CobbleDB, Saves Up to $100M/yr",
+        },
+        description: {
+          zh: "两名工程师与数百个常驻 Computer 智能体两个月建成键值库，专攻快速网页内容抓取，替代 AWS DynamoDB。",
+          en: "Two engineers plus hundreds of always-running Computer agents built the key-value store for fast web fetching in just two months.",
+        },
+      },
+      {
+        title: {
+          zh: "探访 OpenAI：Codex 驱动的'智能体软件工厂'",
+          en: "Inside OpenAI: A Codex-Powered Software Factory",
+        },
+        description: {
+          zh: "Pragmatic Engineer 采访七位工程师与负责人：约一个月前起，Codex 与 ChatGPT Work 已成为公司几乎所有工作的基础。",
+          en: "Pragmatic Engineer talks to seven engineers and leads: since about a month ago, Codex and ChatGPT Work underpin nearly all of the company.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 与 OpenAI 倡议协调放缓，被质疑动机",
+          en: "Anthropic & OpenAI Push a Coordinated Slowdown — Motives Questioned",
+        },
+        description: {
+          zh: "Amodei 呼吁行业与政府协调放缓并寻求反垄断豁免，Altman 与马斯克附议；Cohere CEO 等批评者质疑其真实意图。",
+          en: "Amodei wants a coordinated, government-blessed pace with an antitrust exemption — Altman and Musk nod along, skeptics smell something else.",
+        },
+      },
+      {
+        title: {
+          zh: "404 Media 曝光 OpenAI'莉莉计划'：人工审核聊天记录",
+          en: "'Project Lily': OpenAI Staff Read Your Chats to Improve the Model",
+        },
+        description: {
+          zh: "时薪超 50 美元的提示词审核员查看匿名化真实用户聊天记录，评判回答是否切题、是否存在 AI 式话术与谄媚口吻。",
+          en: "Reviewers paid $50+/hr examine anonymized real conversations, scoring relevance, AI-speak, and sycophancy.",
+        },
+      },
+      {
+        title: {
+          zh: "Image-to-WebDev 新榜：GPT-6 Astra 1733 分登顶",
+          en: "Astra Tops Image-to-WebDev at 1733 Points",
+        },
+        description: {
+          zh: "领先 GPT-5.6 Sol 129 分；Claude Fable 5.1 以 1710 分居第二。",
+          en: "Astra leads GPT-5.6 Sol by 129 points, with Claude Fable 5.1 second at 1710.",
+        },
+      },
+      {
+        title: {
+          zh: "Speech to Speech 榜单：GPT-Live-1 以 81.5 分居首",
+          en: "GPT-Live-1 Leads the Speech-to-Speech Index at 81.5",
+        },
+        description: {
+          zh: "Astra 后端 + medium 推理强度登顶，险胜 Grok Voice Think Fast 2.0 High 的 81.3。",
+          en: "Astra backend at medium reasoning edges past Grok Voice Think Fast 2.0 High's 81.3 by a hair.",
+        },
+      },
+      {
+        title: {
+          zh: "Trail of Bits：1Password 的 AI 补丁基准有误导",
+          en: "Trail of Bits: 1Password's AI-Patch Benchmark Misleads",
+        },
+        description: {
+          zh: "指其 26% 干净修复率受四项实验设计选择影响而失真：含刻意错误修复提示、36% 试验禁编译测试、推理档位不一等。",
+          en: "The 26% clean-fix claim is distorted by four design choices — prompted bad fixes, 36% of trials blocking compiles, uneven reasoning settings, and more.",
+        },
+      },
+      {
+        title: {
+          zh: "Vercel 销售团队 10 人 → 1.25 人：AI SDR 成本仅数千美元",
+          en: "Vercel Cuts Inbound Sales 10x: AI SDRs Cost Thousands a Year",
+        },
+        description: {
+          zh: "inbound 销售开发实现 90% 自动化，团队从 10 人压到 1.25 人；COO 在 The Information 访谈中披露细节。",
+          en: "With 90% of inbound SDR work automated, staffing drops from 10 to 1.25; the COO details it in The Information.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-16-hot",
+    date: "2026-09-16",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-16",
+      en: "🔥 Hot Topics · Sep 16, 2026",
+    },
+    summary: {
+      zh: "中国越野跑选手赵家驹以 65 小时 55 分 22 秒夺得意大利'巨人之旅'330 公里越野赛冠军，成为首位登顶并跑进 66 小时的中国选手、打破赛道纪录——他此前做过外卖员，去年同赛事曾因体力透支未完赛；平陆运河正式通航：全长 134.2 公里、总投资约 727 亿元、水位落差 65 米，仅 4 年建成，打通大西南出海大动脉，创多项中国乃至世界之最；南京独居老人家中跳闸，'啄木鸟'平台师傅换了个市价几十块的开关竟收费 2800 元且拒不提供明细，平台仅同意退款 1000 元；网传南方医科大学白云校区一名临床医学八年制本博连读学生坠亡，警方介入、校方未发正式通报；75 岁周星驰御用配角张美娥成功应聘横店景区 NPC，此前其在横店现场直播求职引热议；昔日'彩电大王'康佳股东会通过主动终止上市议案，2023-2025 年累计亏损约 185.66 亿元、净资产为负；全国多地影院推出午休、赛事直播、火锅观影等跨界服务——2026 上半年票房同比跌 40.6%、场均收益创 2014 年以来新低，被迫寻找第二增长曲线；山东聊城回应'海归女硕士考编第一名被取消资格'：按报名条件只要有专升本经历即不符合，用人单位审查时误解条款方致误通过；多位皮肤科专家表示，满足无传染性疾病、洗衣机定期清洁、彻底干燥等条件时内裤袜子可一起机洗；中南大学湘雅医学院教师节表彰材料出现'23 年未见父母''每日睡眠 0-2 小时'表述引发争议，学院已下架并调查；DeepSeek 工程师刘胜和发文《我不得不把才华埋葬在昨天》，感慨 AI 快速进化将让手写算子被取代、自己将转向用 AI 生产算子；华润三九回应三九胃泰中秋广告文案'求你们中秋别团圆了'引发吐槽，正在安排撤下；问界与鸿蒙智行同日调整合作模式，据披露赛力斯每售一辆车需向华为支付约 2% 技术授权费和 8% 渠道营销服务费；因东南亚、印度等地供应链不配套与熟练工短缺导致隐性成本升高，部分跨国企业外迁订单与产能近期回流中国；第二十届亚运会开幕在即，多国奥委会批评名古屋未兑现承诺房间数量，部分代表团面临临时找酒店；工信部等 9 部门'十五五'规划推动车网互动规模化，北京西城 V2G 示范站车主靠谷充峰放实现'充电不花钱'。",
+      en: "Chinese ultrarunner Zhao Jiaju takes Italy's Tor des Géants 330K in 65:55:22 — the first Chinese to win and crack 66 hours, shattering the course record; the ex-delivery rider had DNF'd the same race last year beaten down by fatigue. The 134.2 km Pinglu Canal opens to traffic — ~¥72.7B invested, 65 m of drop, built in just four years, creating a grand-southwest sea passage and multiple China/world firsts. A Nanjing senior living alone watches a 'Woodpecker'-platform repairman charge ¥2,800 for a switch worth tens of yuan, refusing an itemized bill; the platform will only refund ¥1,000. A clinical-medicine 8-year MD student apparently falls to his death at SMU's Baiyun campus; police are involved, no official notice yet. Zhang Mei'e — Stephen Chow's 75-year-old go-to supporting actress — lands a Hengdian theme-park NPC gig after her viral live-streamed job hunt. 'TV king' Konka's shareholders approve voluntary delisting after racking up ~¥18.57B in losses from 2023-25 and negative net assets. Cinemas nationwide add naptime, sports-live, and hotpot-viewing packages — box office down 40.6% YoY in H1 2026 with per-session revenue at a 2014 low, forcing a second growth curve. Liaocheng explains the overseas-returned master's graduate disqualified despite ranking first in the civil-service exam: any 专升本 (associate-to-bachelor) pathway fails the eligibility bar; the hiring unit misread the clause. Dermatologists say boxers and socks can wash together when no infectious disease exists, the washer is cleaned regularly, and laundry dries thoroughly. Xiangya medical school pulls and investigates a Teacher's Day citation flaunting '23 years without seeing parents' and '0-2 hours of daily sleep.' DeepSeek engineer Liu Shenghe posts 'I Have to Bury My Talent in Yesterday,' bidding goodbye to hand-written kernels as AI produces them. CR Sanjiu pulls its Mid-Autumn ad line 'please don't reunite this Mid-Autumn' after backlash. AITEK and Harmony Intelligent Mobility reshape cooperation the same day — with reports that Seres pays Huawei ~2% technical-license plus 8% channel-marketing fees per car sold. Some multinational orders and capacity drift back to China as Southeast Asian/Indian supply chains and skilled-worker gaps inflate hidden costs. With the 20th Asian Games loom, multiple NOCs slam Nagoya's unkept hotel promises — delegations scrambling for rooms. And under the nine-ministry 15th Five-Year vehicle-grid plan, a Beijing Xicheng V2G pilot lets owners bank on valley-charge/peak-discharge to charge for free.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "赵家驹：从外卖小哥到'巨人之旅'世界冠军",
+          en: "Zhao Jiaju: From Delivery Rider to Tor des Géants Champion",
+        },
+        description: {
+          zh: "65 小时 55 分 22 秒完成 330 公里，首位登顶并跑进 66 小时的中国选手、打破赛道纪录；去年他因体力透支未完赛，靠战术调整完成逆袭。",
+          en: "He finishes the 330K in 65:55:22 — first Chinese winner, first sub-66-hour run, a course record; a year after bonking out, strategy wins the rematch.",
+        },
+      },
+      {
+        title: {
+          zh: "世纪工程 4 年完工：平陆运河正式通航",
+          en: "Four Years, One Century-Project: The Pinglu Canal Opens",
+        },
+        description: {
+          zh: "全长 134.2 公里、总投资约 727 亿元、水位落差 65 米，打通大西南出海大动脉，创下多项中国之最、世界之最。",
+          en: "At 134.2 km, ~¥72.7B, and a 65-m drop, the canal at last links the southwest to the sea with a string of national and global firsts.",
+        },
+      },
+      {
+        title: {
+          zh: "换 1 个开关收费 2800 元，'啄木鸟'被指宰客",
+          en: "¥2,800 for One Switch: Repair Platform Accused of Gouging",
+        },
+        description: {
+          zh: "南京独居老人家中跳闸，平台师傅换了个市价几十块的开关却开价 2800 元且拒不提供明细；目前平台仅同意退款 1000 元。",
+          en: "For a ~¥50 switch swapped after a power trip, the technician bills a senior ¥2,800 with no itemization; the platform offers just ¥1,000 back.",
+        },
+      },
+      {
+        title: {
+          zh: "警方介入南方医科大学坠亡事件",
+          en: "Police Called In After South Medical Uni Death",
+        },
+        description: {
+          zh: "网传临床医学八年制本博连读学生从宿舍楼坠亡，校方内部确认属实；京溪派出所称仍在跟进，尚未发布正式通报。",
+          en: "An 8-year MD student reportedly falls from his dorm; the school privately confirms it while police say the matter is under follow-up — no official statement yet.",
+        },
+      },
+      {
+        title: {
+          zh: "75 岁周星驰御用配角成功应聘景区 NPC",
+          en: "Chow's 75-Year-Old Supporting Actress Nabs an NPC Job",
+        },
+        description: {
+          zh: "张美娥已赴横店影视城当 NPC，感觉良好、费用不少；此前她的在线求职引发热议。",
+          en: "Zhang Mei'e lands a Hengdian NPC role with decent pay and spirits — after her viral online job application warm-clocked the web.",
+        },
+      },
+      {
+        title: {
+          zh: "昔日'彩电大王'康佳要退市了",
+          en: "Konka, the Old 'TV King,' Heads for Delisting",
+        },
+        description: {
+          zh: "股东会通过主动终止上市议案；2023-2025 年累计亏损约 185.66 亿元，2025 年末净资产为负被实施退市风险警示。",
+          en: "Shareholders approve voluntary delisting after aggregate losses of ~¥18.57B from 2023-25 and negative net assets at end-2025.",
+        },
+      },
+      {
+        title: {
+          zh: "影院不再只放电影：票房跌 40.6% 逼出跨界",
+          en: "Cinemas Branch Out as Box Office Slides 40.6%",
+        },
+        description: {
+          zh: "午休、赛事直播、火锅观影等跨界服务走进影院——上半年票房同比跌 40.6%、场均收益创 2014 年以来新低，头部院线纷纷转亏。",
+          en: "Naptime, live sports, and hotpot screenings arrive as H1 box office falls 40.6% and per-session revenue hits a 2014 low, sending majors into the red.",
+        },
+      },
+      {
+        title: {
+          zh: "海归女硕士考编第一因专升本被取消资格",
+          en: "Overseas Master's DQ'd Despite No.1 Exam Despite 专升本 Background",
+        },
+        description: {
+          zh: "聊城回应：按报名条件只要有专升本经历即视为不合格，用人单位审查时误解了条款才误放行，发现错误后终止录用。",
+          en: "Liaocheng says any associate-to-bachelor pathway flunks the eligibility bar; the hiring agency misread the clause, so the offer was voided once caught.",
+        },
+      },
+      {
+        title: {
+          zh: "内裤袜子一起洗？专家：可以",
+          en: "Boxers + Socks in One Load? Dermatologists Say Fine",
+        },
+        description: {
+          zh: "满足家庭成员无传染病、洗衣机定期清洁、洗涤后彻底干燥等条件时，内裤袜子可以同机洗。",
+          en: "When no household infectious disease exists, the washer is serviced regularly, and laundry dries thoroughly — one load is fine, derms say.",
+        },
+      },
+      {
+        title: {
+          zh: "'23 年未见父母'也算先进事迹？表彰材料引争议",
+          en: "'No Parents in 23 Years' as a Commendation? Backlash",
+        },
+        description: {
+          zh: "湘雅医学院教师节表彰材料出现'23 年未曾见过父母''每日睡眠仅 0-2 小时'等表述，学院已下架相关内容并展开调查。",
+          en: "Xiangya's Teacher's Day citation touting 23 years apart from one's parents and 0-2 hours of sleep draws fire; the material is pulled and probed.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 工程师发文告别手写算子",
+          en: "DeepSeek Engineer Writes a Farewell to Handwritten Kernels",
+        },
+        description: {
+          zh: "刘胜和《我不得不把才华埋葬在昨天》：AI 快速进化让手写算子渐被取代，自己将转向用 AI 生产算子，并澄清这是向过去告别。",
+          en: "Liu Shenghe's post mourns the era of hand-coded operators as AI takes over, vowing to pivot to AI-produced kernels — a goodbye note, he clarifies.",
+        },
+      },
+      {
+        title: {
+          zh: "三九胃泰广告'求你们中秋别团圆了'被撤",
+          en: "SanJiu Stomach Medicine Pulls its 'Don't Reunite' Ad",
+        },
+        description: {
+          zh: "华润三九回应广告文案引发吐槽，已接到反馈并安排撤下；此前'劝你们和平分手'广告语也曾引发不适。",
+          en: "CR Sanjiu concedes the 'please don't reunite this Mid-Autumn' line backfired and is pulling it — after its earlier 'just break up' tagline also tanked.",
+        },
+      },
+      {
+        title: {
+          zh: "曝赛力斯每卖一辆车，车价约 10% 归华为",
+          en: "Report: ~10% of Every Seres Car Sale Goes to Huawei",
+        },
+        description: {
+          zh: "问界与鸿蒙智行同日调整合作模式；除采购零部件外，赛力斯每售一车需付约 2% 技术授权费与 8% 渠道营销服务费。",
+          en: "As their collaboration mode shifts, reports say Seres pays ~2% tech-license and 8% channel-marketing fees to Huawei on top of parts purchases.",
+        },
+      },
+      {
+        title: {
+          zh: "'订单绕了一圈还是回到中国'",
+          en: "'The Order Traveled the World and Came Back to China'",
+        },
+        description: {
+          zh: "东南亚与印度供应链不配套、熟练工短缺推高隐性成本，部分跨国企业的外迁订单与产能近期回流；专家称产业集群与供应链优势难以复制。",
+          en: "Mismatched supply chains and skilled-worker gaps in SE Asia and India inflate hidden costs, pulling some orders home; clusters of scale, experts say, can't be replicated.",
+        },
+      },
+      {
+        title: {
+          zh: "多国奥委会批评名古屋亚运筹备",
+          en: "NOCs Slam Nagoya's Asian Games Readiness",
+        },
+        description: {
+          zh: "住宿条件、场馆筹备与预算缩减引发争议：组委会未兑现承诺房间数量，部分代表团面临临时找酒店的窘境。",
+          en: "Shortfalls in promised rooms, venue prep, and budgets leave some delegations hunting hotels at the last minute — several NOCs cry foul.",
+        },
+      },
+      {
+        title: {
+          zh: "'充电不花钱'：车网互动 V2G 多地试点",
+          en: "Free EV Charging via V2G Pilots in Multiple Cities",
+        },
+        description: {
+          zh: "九部门'十五五'规划推动车网互动规模化；北京西城示范站车主通过谷充峰放赚取差价，实现充电不花钱。",
+          en: "The nine-ministry plan pushes vehicle-grid scaling; at Beijing Xicheng's demo station, owners arbitrage valley-charge vs peak-discharge to charge effectively free.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-15",
     date: "2026-09-15",
     title: {
