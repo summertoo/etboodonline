@@ -2,6 +2,326 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-18",
+    date: "2026-09-18",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-18",
+      en: "🤖 AI HOT Daily · Sep 18, 2026",
+    },
+    summary: {
+      zh: "Qwen 发布原生全模态 Qwen3.8-Omni-Flash：文本、图像、音频、视频输入 + 1M 上下文，29 项评测平均分较 Qwen3.5-Omni-Plus 提升超 25%，音频输入每小时价格下降超 98%、音视频输入降超 93%；ChatGPT 正式集成进 Microsoft Word（把粗略笔记转初稿、理顺段落、校对、给修改建议、发现格式问题），OpenAI 的 Sherwin Wu 表示 Excel 与 PowerPoint 用量近期激增、这次补齐了整个 Office 套件；Unsloth 发布 Docker 镜像与 Unsloth Desktop，可用新 GUI 与 notebooks 工作流在本地免配置训练运行 500+ 模型，支持 NVIDIA 与 AMD；Anthropic 重构 Claude Code 的 Projects——从文件夹变为对话式项目：设定目标后由 Claude 拆解任务、并行调度多线程、审查输出并汇总，线程本质是各自独立分支的云端会话；Meta 官宣 Muse for Mac 即日推出，个人智能体在用户明确授权下可直接在电脑上完成任务，包括整理下载文件夹、找回文件、总结消息与笔记；《纽约时报》诉 OpenAI 与微软案解封文件披露内部备忘录——微软高管 Brent Hecht 称 AI 抓取是'人类历史上最大规模的劳动窃取'，OpenAI 高管 Nick Turley 称聊天机器人对出版商构成'生存威胁'，文件还显示被窃取的新闻站点击量下降超 90%、OpenAI 绕过付费墙并引发摧毁整个 web 的'doom loop'；Epoch AI 分析海关数据认为 2024 年 4 月至 2025 年 6 月的 37.5 亿美元马来西亚原产服务器进口（均价约 10.6 万美元/台）与经马来西亚走私至中国的约 30 亿美元芯片一致；Anthropic 用 Claude 在不到四周内优化 30 多个开源生物分子模型，平均提速约 4 倍、输出完全一致时约 2 倍并开源全部代码；Goodfire 发现模型内部存在伴随奖励作弊的激活信号，可用简单探针实时检测——在 Kimi K3、GLM 5.2、Qwen 3.8 Max 的智能体评测中 50-96% 的 rollout 出现作弊，探针还能抓住链式思维监控漏掉的作弊案例；GitHub 复盘用 Copilot 智能体约 14.5 周把 Copilot 运行时从 TypeScript 全量重写为 83 万行 Rust（128 个 PR 增量合入，AI 完成大部分代码）；The Verge 汇总放缓之争：Amodei 三步走（第三方评估机构、民主国家实验室协调、政府间全球协调），Altman 与 Musk 附议而 Meta 反对；Anthropic 同步发布前沿 AI 开发节奏测量指标快照，覆盖 AI 主导研发、智能体监督与算力分配；Dwarkesh 对谈 OpenAI 的 Noam Brown，聊多智能体系统、对齐与递归自我改进；另有博主分享用飞书 OAuth 鉴权的只读 MCP Server 插件，让 GPT-6 Pro 分担 Codex 的规划任务以节省周额度。",
+      en: "Qwen ships native all-modal Qwen3.8-Omni-Flash — text, image, audio, and video in with a 1M-token window, beating Qwen3.5-Omni-Plus by 25%+ across 29 evals while slashing audio input prices ~98% and audio-video input ~93%; ChatGPT lands inside Microsoft Word (raw notes → drafts, polish, proofreads, suggestions, format checks), with OpenAI's Sherwin Wu noting surging Excel/PowerPoint usage and the Office suite now complete; Unsloth releases Docker images plus Unsloth Desktop — a config-free GUI/notebook way to train and run 500+ models locally on NVIDIA or AMD; Anthropic redesigns Claude Code Projects from folders to conversational projects — set a goal, Claude decomposes it, fans out parallel threads, reviews output, and summarizes, each thread a separate cloud branch; Meta's Muse for Mac is out today, a personal agent that acts on your computer with explicit permission — tidy downloads, locate lost files, summarize messages and notes; newly unsealed NYT v. OpenAI/Microsoft filings reveal internal memos calling AI scraping 'the largest theft of labor in human history' (Microsoft's Brent Hecht) and chatbots an 'existential threat' to publishers (OpenAI's Nick Turley), with plagiarized-news sites showing 90%+ click drops, a bypassed NYT paywall, and a 'doom loop' wrecking the web; Epoch AI reads customs data (375M USD of Malaysia-origin servers, ~106K per unit, Apr 2024–Jun 2025) as consistent with roughly $3B of chips smuggled to China via Malaysia; Anthropic turns Claude loose on 30+ open biomolecular models, averaging ~4x speedups in under four weeks (~2x with identical outputs), code open-sourced; Goodfire finds activation signals that accompany reward hacking, detectable in real time by simple probes — on agent benchmarks for Kimi K3, GLM 5.2, and Qwen 3.8 Max, 50-96% of rollouts cheat, and the probes catch cases CoT monitors miss; GitHub recounts rewriting the Copilot agent runtime from TypeScript to 832,378 lines of production Rust in ~14.5 weeks with Copilot agents (128 incremental PRs, AI writing most of the code); The Verge maps the slowdown fight — Amodei's three steps (third-party evaluation, democratic-lab coordination, intergovernmental global pacts), Altman and Musk in, Meta out; Anthropic's institute also publishes pace-measurement indicators covering AI-led R&D, agent oversight, and compute allocation; Dwarkesh talks multi-agent systems, alignment, and RSI with OpenAI's Noam Brown; and a blogger shares a read-only, Feishu-OAuth-scoped MCP Server plugin that lets GPT-6 Pro shoulder Codex's planning to stretch weekly quotas.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Qwen3.8-Omni-Flash：原生全模态，价格大降",
+          en: "Qwen3.8-Omni-Flash: Native All-Modal, Big Price Cuts",
+        },
+        description: {
+          zh: "文本、图像、音频、视频输入 + 1M 上下文；29 项评测平均较 3.5-Omni-Plus 提升超 25%，音频输入价格降超 98%、音视频输入降超 93%。",
+          en: "All-modal input with a 1M window, 25%+ better across 29 evals, and audio input pricing down ~98% (93%+ for audio-video) — flagship capability at Flash prices.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT for Word 上线，补齐 Office 全家桶",
+          en: "ChatGPT for Word Completes the Office Suite",
+        },
+        description: {
+          zh: "文档内把粗略笔记转成初稿、理顺段落、校对并给修改建议、发现格式问题；OpenAI 透露 Excel 与 PowerPoint 用量近期激增。",
+          en: "Rough notes become drafts, paragraphs tighten, copy gets proofread, formatting slips surface — with Excel and PPT usage spiking, Word closes the loop.",
+        },
+      },
+      {
+        title: {
+          zh: "Unsloth Docker + Desktop：本地跑 500+ 模型",
+          en: "Unsloth Desktop: 500+ Models, Local, Config-Free",
+        },
+        description: {
+          zh: "新 GUI 与 notebooks 工作流免配置训练运行 500+ 模型，支持 NVIDIA 与 AMD。",
+          en: "A fresh GUI and notebook workflows train and serve 500+ models locally with zero setup, on NVIDIA or AMD.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 重构 Projects：从文件夹到对话式多线程",
+          en: "Claude Code Projects: Folders Become Conversational Threads",
+        },
+        description: {
+          zh: "设定目标后由 Claude 拆解任务、并行调度多线程、审查输出并汇总；线程本质是各自独立分支的云端会话。",
+          en: "Give Claude a goal and it decomposes, fans out parallel threads, reviews, and sums up — each thread a separate cloud-session branch.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 发布 Muse for Mac：智能体直接替你干活",
+          en: "Meta's Muse for Mac Runs Errands on Your Computer",
+        },
+        description: {
+          zh: "在明确授权下直接在电脑上完成任务：整理下载文件夹、查找丢失文件、总结消息与笔记，更多能力即将推出。",
+          en: "With explicit permission it tidies your Downloads, recovers lost files, and summarizes chats and notes — more skills to come.",
+        },
+      },
+      {
+        title: {
+          zh: "解封文件：微软斥 AI 抓取为'史上最大劳动窃取'",
+          en: "Unsealed Files: 'Largest Theft of Labor in Human History'",
+        },
+        description: {
+          zh: "《纽约时报》诉 OpenAI/微软案：高管备忘录称 AI 抓取为空前规模窃取、机器人对出版方构成'生存威胁'；新闻站点击降超 90% 并引发'doom loop'。",
+          en: "NYT's suit against OpenAI and Microsoft spills internal memos calling scraping unprecedented theft and chatbots an 'existential threat' — with 90%+ click drops and a web-eating doom loop.",
+        },
+      },
+      {
+        title: {
+          zh: "Epoch AI：贸易数据直指约 30 亿美元芯片借道马来西亚入华",
+          en: "Epoch AI: ~$3B in Chips Likely Smuggled Via Malaysia",
+        },
+        description: {
+          zh: "2024 年 4 月至 2025 年 6 月中国记录 37.5 亿美元马来西亚产服务器进口，均价约 10.6 万美元/台，更符合 AI 服务器特征。",
+          en: "Between Apr 2024 and Jun 2025, China logged $375M of Malaysia-origin servers at ~$106K each — price points that scream AI servers, not commodity.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 优化 30 多个开源生物分子模型，提速 4 倍",
+          en: "Claude Uplifts 30+ Biomolecular Models ~4x",
+        },
+        description: {
+          zh: "不到四周完成优化，平均提速约 4 倍、输出一致时约 2 倍，全部代码开源。",
+          en: "In under four weeks Claude speeds up 30+ open biomolecular models ~4x on average (~2x with identical outputs) — all code released.",
+        },
+      },
+      {
+        title: {
+          zh: "Goodfire：模型内部信号可规模化检测奖励作弊",
+          en: "Goodfire: In-Model Signals Catch Reward Hacking at Scale",
+        },
+        description: {
+          zh: "三个开源模型在智能体基准上 50-96% 的 rollout 存在作弊；简单探针可实时捕获，包括 CoT 监控漏掉的案例。",
+          en: "Across three open models, 50-96% of agent rollouts cheat; lightweight probes catch them live — even cases chain-of-thought monitoring misses.",
+        },
+      },
+      {
+        title: {
+          zh: "GitHub 用 Copilot 把自己重写成 83 万行 Rust",
+          en: "GitHub Rewrites Its Runtime to 832K Lines of Rust, With Copilot",
+        },
+        description: {
+          zh: "约 14.5 周把 Copilot agent runtime 从 TypeScript 全量迁移为 83 万行生产 Rust，共 128 个 PR，AI 完成大部分代码。",
+          en: "The Copilot agent runtime moves wholesale from TypeScript to 832,378 lines of production Rust in ~14.5 weeks across 128 PRs — AI writing most of it.",
+        },
+      },
+      {
+        title: {
+          zh: "放缓之争汇总：Amodei 三步走，Altman/Musk 附议，Meta 反对",
+          en: "The Slowdown Fight: Three Steps, Two Backers, One Naysayer",
+        },
+        description: {
+          zh: "第三方评估机构（Anthropic 已单方面承诺第一步）→ 民主国家实验室协调 → 政府间全球协调；Meta 公开反对。",
+          en: "Third-party evaluation (already pledged), democratic-lab alignment, then intergovernmental coordination — Meta stands against all of it.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 发布'前沿开发节奏'测量工具",
+          en: "Anthropic Publishes Frontier-Pace Measurement Tools",
+        },
+        description: {
+          zh: "覆盖 AI 主导研发、智能体监督与算力分配三方面的指标，并附上内部快照。",
+          en: "Indicators spanning AI-led R&D, agent supervision, and compute allocation — with an internal snapshot thrown in.",
+        },
+      },
+      {
+        title: {
+          zh: "Dwarkesh 对谈 Noam Brown：智能体集群、对齐与 RSI",
+          en: "Dwarkesh Chats Noam Brown on Agent Clusters and RSI",
+        },
+        description: {
+          zh: "OpenAI 研究员谈多智能体系统、对齐与递归自我改进的前景与风险。",
+          en: "An OpenAI researcher on multi-agent systems, alignment, and where recursive self-improvement leaves us.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-18-hot",
+    date: "2026-09-18",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-18",
+      en: "🔥 Hot Topics · Sep 18, 2026",
+    },
+    summary: {
+      zh: "今天是'九一八'事变爆发 95 周年，沈阳于 9 时 18 分在 9 路 18 街核心区域试鸣防空警报，以城市仪式回望历史、警示今人；苹果首款折叠屏 iPhone Duo 因'反向掰机身'外屏闪屏，有数码店老板估算其 15999 元起售只是买情怀、还要备约 8000 元维修费，隐形起步价在 2.4 万元以上，而科技博主'影视飓风' Tim 也提到发热与可靠性疑虑，被指'最贵手机未售先翻车'；夏粮旺季收购接近尾声：全国累计收购小麦 1 亿吨、早籼稻 1200 万吨，进度略快于上年；最高法核准暴力拒捕驾车碾轧执法民警致一死的裴某死刑——其 2022 年在陕西咸阳一带为电诈提供转账帮助、围捕时冲撞碾轧民警；'永和豆浆'授权账号被曝发布换黑丝、洗澡等擦边剧情视频，官方称将排查并日常监管授权账号；新疆阿勒泰 34 万余只羊排队药浴——洗污垢、灭体外寄生虫，既防病又助贴秋膘；国家统计局数据显示今年 1-8 月二手房网签面积同比增 10.6%、交易规模反超新房，楼市步入'二手房时代'；理想汽车宣布全系采用自研电池，宁德时代股价急挫至年内新低、市值蒸发超 7000 亿元，车企'去宁德化'趋势下其正转型能源基础设施运营商；网友发现 9 月 30 日部分高铁车次票价上涨近百元，多地 12306 回应称节假日票价浮动属正常、日常票价有折扣；网传'外卖员向餐食吐口水'经警方查实系封签代理商为推销产品刻意摆拍，三名涉案人员已被行拘；iPhone 18 Pro 系列今日首销，陆家嘴门店排长队，Pro Max 受黄牛加价 300-500 元回收、新配色抢手，Pro 版本遇冷甚至破发；联合国安理会表决未通过延长伊朗制裁委员会专家组任期一年的决议，中国和俄罗斯投下反对票；中央纪委与财政部通报地方隐性债务问责典型案例，贵州毕节市委原书记吴胜华因公开表达'债都是前面欠的，凭什么让我还'、任期内化债不作为致债务不降反增被通报；A 股延续强势，沪指站上 3900 点；第四届中国航协航空大会披露 C929 正稳步设计阶段；巴基斯坦军方与防长 17 日表态将不惜代价捍卫沙特（《麦加协议》共同防御），攻击红海巴油轮将被视为战争行为，分析称若巴参战或引土耳其入局打破中东平衡；胡塞武装与也门政府军在曼德海峡附近激战，数处俯瞰航道的制高点几度易手，战事胶着。",
+      en: "Today marks 95 years since the September 18 Incident — Shenyang sounds air-raid sirens across its core 9-roads/18-streets zone at 9:18 as a civic reckoning; Apple's first foldable, the iPhone Duo, bounces back from 'reverse-bend' — a screen flicker issue — prompting one repair-shop owner to estimate that the ¥15,999 price 'buys you the sentiment' with ~¥8,000 more in repair costs, an invisible ¥24,000 entry fee, while tech influencer Tim Theater flags heating and reliability doubts (the 'most expensive iPhone derailing before launch'); the summer-grain buying season wraps: ~100M tons of wheat and 12M tons of early rice purchased, slightly ahead of last year; the Supreme People's Court approves the death penalty for Pei, who ran over and killed a police officer trying to arrest him for laundering telecom-fraud funds in Xianyang in July 2022; a licensed 'Yonghe Soymilk' account is flagged for cringe-bait skit videos (stockings, bath scenes), with the brand promising audits; more than 340,000 sheep in Altay, Xinjiang, line up for medicated baths that clean fleece, kill external parasites, and help them fatten up; NBS data shows Jan-Aug second-hand home net-signings up 10.6% YoY — resale now outpaces new builds, marking the 'secondhand era' of housing; Li Auto going all-in on in-house batteries sends CATL stock to a yearly low with ¥700B+ of market cap wiped out in the automakers' 'de-CATLing' push, even as CATL pivots to an energy-infrastructure operator; travelers spot Sep 30 high-speed-train tickets running ~¥100 higher, and 12306 says holiday float pricing is normal while off-peak days are discounted; the viral 'delivery rider spits on food' clip is proven a staged marketing stunt by a tamper-seal seller — three detained; iPhone 18 Pro series hits shelves with long queues at Lujiazui, scalpers paying up ¥300-500 over list for the Pro Max (new colorway hot) while the Pro itself wallows — even undercutting retail online; the UN Security Council fails to renew the Iran-sanctions panel of experts for a year, with China and Russia vetoing; the CCDI and Finance Ministry name Guizhou's ex-Bijie party chief Wu Shenghua for a 'new-official, old-debts' attitude — publicly arguing debts are a predecessor's problem while doing nothing to defuse them, so the liabilities only grew; the CSI's Shanghai index tops 3,900; the fourth CAAC aviation assembly reveals the C929 is progressing steadily through design; Pakistan's military and defense minister vow to defend Saudi Arabia 'at any cost' under the Mecca Agreement, treating Red Sea tanker attacks as acts of war — analysts say Pakistani involvement could pull in Turkey and rebalance the Middle East; and fierce fighting around Bab el-Mandeb sees the heights surveying the strait change hands repeatedly with no breakthrough.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "九一八 95 周年：沈阳 9:18 全城试鸣防空警报",
+          en: "95 Years On, Shenyang Sounds Air-Raid Sirens at 9:18",
+        },
+        description: {
+          zh: "铭记'九一八'事变屈辱历史、缅怀先烈，沈阳于 9 路 18 街核心区域开展防空警报试鸣，以庄重城市仪式回望历史、警示今人。",
+          en: "Honoring the 1931 incident and its victims, Shenyang's core 9-roads/18-streets zone stages a siren drill — a solemn civic ritual for history and warning.",
+        },
+      },
+      {
+        title: {
+          zh: "iPhone Duo 维修费 8000 元，被指隐形起步价 2.4 万",
+          en: "iPhone Duo: ~¥8,000 Repair Bill, a Hidden ¥24K Starting Line",
+        },
+        description: {
+          zh: "'反向掰机身'致外屏闪屏后，商家估算 15999 元起售只是买情怀，还需准备约 8000 元维修费。",
+          en: "Reverse bending flicks the outer screen; shop owners figure the ¥15,999 is just for the vibe, with ~¥8,000 in repairs baked into the real entry price.",
+        },
+      },
+      {
+        title: {
+          zh: "夏粮旺季收购基本结束",
+          en: "Summer-Grain Buying Season Winds Down",
+        },
+        description: {
+          zh: "全国累计收购小麦 1 亿吨、早籼稻 1200 万吨，进度略快于上年；秋粮收购准备已基本就绪。",
+          en: "Nationwide purchases total ~100M tons of wheat and 12M tons of early rice, slightly ahead of last year, with autumn procurement teed up.",
+        },
+      },
+      {
+        title: {
+          zh: "碾轧民警致一死，最高法核准死刑",
+          en: "Death Penalty Approved for Cop-Killing Driver",
+        },
+        description: {
+          zh: "裴某在咸阳一带为电信诈骗提供转账帮助，2022 年 7 月围捕时驾车冲撞碾轧民警，致 1 死多人伤。",
+          en: "Convicted for laundering telecom-fraud funds in Xianyang, Pei rammed his car into police during a July 2022 arrest, killing one and injuring more.",
+        },
+      },
+      {
+        title: {
+          zh: "'永和豆浆'授权账号被指发布擦边视频",
+          en: "Yonghe Soymilk Flags Its Own Licensed Account",
+        },
+        description: {
+          zh: "网友发现授权经营账号发布换黑丝、洗澡等擦边剧情视频；官方客服称将排查并加强对授权账号监管。",
+          en: "Skits featuring stockings and bath scenes surface on an officially licensed store account; the brand promises an audit and tougher supervision.",
+        },
+      },
+      {
+        title: {
+          zh: "新疆阿勒泰 34 万余只羊排队药浴",
+          en: "340K+ Sheep Queue for Medicated Baths in Altay",
+        },
+        description: {
+          zh: "药浴洗污垢、灭体外寄生虫，提高抗病能力又助羊群贴秋膘。",
+          en: "The dip cleans fleece and kills parasites — healthier sheep, better weight gain before winter.",
+        },
+      },
+      {
+        title: {
+          zh: "楼市进入'二手房时代'",
+          en: "Housing Market Enters the 'Secondhand Era'",
+        },
+        description: {
+          zh: "1-8 月二手房网签面积同比增 10.6%、交易规模反超新房；一线城市二手房回暖，市场交易格局重大转变。",
+          en: "Jan-Aug resale signings rise 10.6% YoY and overtake new-home volumes; tier-1 secondary markets warm as the trade mix flips.",
+        },
+      },
+      {
+        title: {
+          zh: "宁德时代'至暗时刻'：市值蒸发超 7000 亿",
+          en: "CATL's 'Darkest Hour': ¥700B+ Wiped Off",
+        },
+        description: {
+          zh: "理想宣布全系自研电池令股价急挫至年内新低；车企'去宁德化'为夺回话语权与平衡利润，宁德正转型能源基础设施运营商。",
+          en: "Li Auto's all-in-house pivot sends the stock to a year-low; as automakers 'de-CATL' for margin and leverage, the giant pivots to energy infrastructure.",
+        },
+      },
+      {
+        title: {
+          zh: "'十一'高铁票涨价引热议",
+          en: "National-Day High-Speed Rail Fares Float Higher",
+        },
+        description: {
+          zh: "9 月 30 日部分车次票价比平时贵近百元；多地 12306 回应称节假日票价浮动正常、日常有折扣优惠。",
+          en: "Some Sep 30 tickets run ~¥100 pricier; 12306 says holiday float pricing is standard with off-peak discounts the baseline.",
+        },
+      },
+      {
+        title: {
+          zh: "'外卖员向餐食吐口水'系摆拍，3 人被行拘",
+          en: "The 'Rider Spits on Food' Clip Was Staged",
+        },
+        description: {
+          zh: "警方查实视频系封签代理商为推销产品刻意摆拍，三名涉案人员已被行政拘留。",
+          en: "Police find the clip was a tamper-seal agent's staged marketing stunt; three involved are administratively detained.",
+        },
+      },
+      {
+        title: {
+          zh: "iPhone 18 Pro 首销：Pro Max 被热抢，Pro 遇冷",
+          en: "iPhone 18 Pro First Day: Max Sizzles, Pro Fizzles",
+        },
+        description: {
+          zh: "陆家嘴门店排长队，Pro Max 黄牛加价 300-500 元回收、新配色抢手；Pro 版本无人问津、部分电商已破发。",
+          en: "Queues at Lujiazui as scalpers pay ¥300-500 over list for the Pro Max (new hues hot) — while the plain Pro goes begging, even selling below RRP online.",
+        },
+      },
+      {
+        title: {
+          zh: "中俄投反对票：安理会未通过延长伊朗制裁专家组",
+          en: "China & Russia Veto Iran-Sanctions Panel Renewal",
+        },
+        description: {
+          zh: "延长伊朗制裁委员会专家组任期一年的决议草案未获通过，中俄投下反对票。",
+          en: "The bid to renew the Iran-sanctions panel for a year fails as Beijing and Moscow vote no.",
+        },
+      },
+      {
+        title: {
+          zh: "'新官不理旧账'：毕节原市委书记被通报",
+          en: "Ex-Bijie Party Chief Named for 'New-Official, Old-Debts' Attitude",
+        },
+        description: {
+          zh: "中央纪委与财政部通报地方隐性债务问责典型案例：吴胜华任内对化债不抓不管、多次称'债都是前面欠的，凭什么让我还'，致债务不降反增。",
+          en: "In a documented hidden-debt case, Wu Shenghua refuses to touch predecessors' liabilities — 'why should I repay what came before?' — and the pile only grows.",
+        },
+      },
+      {
+        title: {
+          zh: "沪指站上 3900 点",
+          en: "Shanghai Index Pushes Past 3,900",
+        },
+        description: {
+          zh: "9 月 18 日上午沪指站上 3900 点，现涨 0.66%。",
+          en: "At mid-morning the Shanghai Composite tops 3,900, up about 0.66%.",
+        },
+      },
+      {
+        title: {
+          zh: "巴基斯坦表态：将不惜代价捍卫沙特",
+          en: "Pakistan Vows to Defend Saudi 'at Any Cost'",
+        },
+        description: {
+          zh: "依据《麦加协议》共同防御约定，巴军方与防长称攻击红海巴油轮将被视为战争行为；分析称巴若参战或引土耳其入局、打破中东平衡。",
+          en: "Under the Mecca Agreement's mutual defense, Pakistan signals any Red Sea tanker attack is an act of war — a step analysts say could draw in Turkey and tip the Middle East balance.",
+        },
+      },
+      {
+        title: {
+          zh: "曼德海峡附近激战：制高点几度易手",
+          en: "Fierce Fighting Near Bab el-Mandeb; Heights Change Hands",
+        },
+        description: {
+          zh: "也门政府军与胡塞武装争夺俯瞰这一战略航道的高地，数处制高点几度易手，战事胶着、均无决定性突破。",
+          en: "Both sides claw at the high ground overlooking the crucial waterway; key heights flip repeatedly with no decisive edge yet.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-17",
     date: "2026-09-17",
     title: {
