@@ -2,6 +2,196 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-21",
+    date: "2026-09-21",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-21",
+      en: "🤖 AI HOT Daily · Sep 21, 2026",
+    },
+    summary: {
+      zh: "Qwen开源Qwen-Image-2.1：7B统一生成与编辑并原生支持透明图像，已支持ComfyUI；阶跃星辰发布旗舰模型Step 5 Preview，稀疏MoE总参数600B激活27B支持100万Token上下文，10月15日开源权重，成本为Claude Opus 5的1/8；独立调查发现ChatGPT的__obi跨站Cookie可将站外浏览行为关联到ChatGPT账号。",
+      en: "Qwen open-sources Qwen-Image-2.1: 7B unified generation and editing with native transparent image support, now ComfyUI-ready; StepFun launches Step 5 Preview flagship, sparse MoE 600B total/27B active with 1M token context, open weights Oct 15, costs 1/8 of Claude Opus 5; independent investigation finds ChatGPT's __obi cross-site Cookie can link off-site browsing to ChatGPT accounts.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Qwen 开源 Qwen-Image-2.1：7B 统一生成与编辑并支持透明图像",
+          en: "Qwen Open-Sources Qwen-Image-2.1: 7B Unified Generation & Editing with Transparent Images",
+        },
+        description: {
+          zh: "将文生图与图像编辑统一到一个模型中，视觉生成组件仅7B参数，原生支持生成和编辑透明图像。支持最多10张参考图、圆形/涂鸦/独立蒙版局部编辑，改进文字渲染、人像光照与产品保真度。",
+          en: "Unifies text-to-image and image editing into one model with only 7B visual params. Native transparent image support. Up to 10 reference images, circle/doodle/mask local editing, improved text rendering, portrait lighting, and product fidelity.",
+        },
+      },
+      {
+        title: {
+          zh: "阶跃星辰发布 Step 5 Preview 旗舰模型，10月15日开源",
+          en: "StepFun Launches Step 5 Preview Flagship, Open Weights Oct 15",
+        },
+        description: {
+          zh: "稀疏MoE架构，总参数600B激活27B，支持100万Token上下文和文本与视觉输入。在AA Intelligence Index得44分居全球开源模型前三，单任务成本为Claude Opus 5的1/8。",
+          en: "Sparse MoE with 600B total/27B active params, 1M token context, text and vision input. Scores 44 on AA Intelligence Index, top 3 open models globally. Single-task cost is 1/8 of Claude Opus 5.",
+        },
+      },
+      {
+        title: {
+          zh: "Qwen-Image-2.1 已支持 ComfyUI，权重开放下载",
+          en: "Qwen-Image-2.1 Now Supports ComfyUI, Weights Open for Download",
+        },
+        description: {
+          zh: "单个7B checkpoint同时支持图像生成与编辑，可原生2K生成，单次最多基于10张参考图进行指令编辑，支持含alpha通道的RGBA输出。",
+          en: "Single 7B checkpoint handles both generation and editing. Native 2K output, up to 10 reference images for instruction editing, supports RGBA output with alpha channel.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT __obi 跨站 Cookie 可关联站外浏览行为到账号",
+          en: "ChatGPT __obi Cross-Site Cookie Links Off-Site Browsing to Accounts",
+        },
+        description: {
+          zh: "独立调查通过流量捕获复现：bzr.openai.com在.openai.com域设置__obi Cookie绑定ChatGPT账号，广告投放站加载OpenAI像素时把__obi连同浏览和购买数据回传给OpenAI。",
+          en: "Independent investigation reproduces the mechanism: bzr.openai.com sets __obi Cookie on .openai.com domain tied to ChatGPT account; ad-serving sites loading OpenAI pixels send __obi with browsing and purchase data back to OpenAI.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-21-hot",
+    date: "2026-09-21",
+    title: {
+      zh: "🔥 今日热点 · 2026-09-21",
+      en: "🔥 Hot Topics · Sep 21, 2026",
+    },
+    summary: {
+      zh: "北大复旦校长紧张原因引热议，闲鱼暗藏涉黄产业链涉未成年少女，中美经贸磋商在纽约举行，中国男篮被曝全员写总结，秦始皇陵水银来源被找到，央视曝光挂靠参保偷取社保资金，董明珠卸任格力电商换帅，母亲赶到家时两兄妹已被胡蜂蜇亡，景区拿3000万招100名NPC，五角大楼披萨指数飙升，为省燃气买聚能环妻儿中毒死亡，开幕式歌舞伎引争议，13个孩子父亲妻子身体还好。",
+      en: "Peking University and Fudan presidents' anxiety sparks debate, Xianyu hides porn industry involving underage girls, US-China trade talks held in New York, Chinese men's basketball team reports summaries, mercury source of Qin Shi Huang tomb found, CCTV exposes insurance fraud schemes, Ding Zhuhua steps down from Gree e-commerce, mother arrives to find two siblings stung to death by wasps, scenic spot hires 100 NPCs for 30M, Pentagon pizza index spikes, wife and children poisoned by gas-saving ring, kabuki at opening ceremony sparks controversy, father of 13 children: wife is fine.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "是什么让北大复旦校长都如此紧张",
+          en: "What Made Peking University and Fudan Presidents So Nervous",
+        },
+        description: {
+          zh: "北大和复旦校长接连发出警告的原因引发社会热议，涉及高校AI管理、学术规范或教育公平等议题。",
+          en: "The reasons behind Peking University and Fudan presidents' successive warnings spark public debate, involving campus AI governance, academic standards, or educational equity.",
+        },
+      },
+      {
+        title: {
+          zh: "闲鱼暗藏涉黄产业链 涉未成年少女",
+          en: "Xianyu Hides Porn Industry Involving Underage Girls",
+        },
+        description: {
+          zh: "闲鱼平台上发现暗藏涉黄产业链，涉及未成年少女，引发对网络平台和未成年人保护的广泛讨论。",
+          en: "Porn industry chain discovered on Xianyu involving underage girls, sparking widespread discussion on platform responsibility and minor protection.",
+        },
+      },
+      {
+        title: {
+          zh: "中美经贸磋商在美国纽约举行",
+          en: "US-China Trade Talks Held in New York",
+        },
+        description: {
+          zh: "中美经贸磋商在美国纽约举行，双方就经贸关系进行对话，关注关税、贸易平衡等核心议题。",
+          en: "US-China economic and trade talks held in New York, addressing tariffs, trade balance, and other core issues in bilateral relations.",
+        },
+      },
+      {
+        title: {
+          zh: "中国男篮被曝全员写总结",
+          en: "Chinese Men's Basketball Team Reports Summaries",
+        },
+        description: {
+          zh: "中国男篮被曝全员写总结反思，引发对球队管理方式和运动员心理状态的讨论。",
+          en: "Chinese men's basketball team reportedly writes summaries, sparking discussion on team management approach and athletes' mental state.",
+        },
+      },
+      {
+        title: {
+          zh: "秦始皇陵水银来源被找到",
+          en: "Mercury Source of Qin Shi Huang's Tomb Found",
+        },
+        description: {
+          zh: "考古团队找到秦始皇陵中水银的来源，为解开千年谜团提供新线索。",
+          en: "Archaeological team finds the source of mercury in Qin Shi Huang's tomb, providing new clues to solve the millennium-old mystery.",
+        },
+      },
+      {
+        title: {
+          zh: "央视曝光挂靠参保偷取社保资金",
+          en: "CCTV Exposes Insurance Fraud Through Ghost Enrollment",
+        },
+        description: {
+          zh: "央视曝光通过挂靠参保偷取社保资金的违法行为，涉及社保基金安全和社会公平。",
+          en: "CCTV exposes illegal schemes stealing social security funds through ghost enrollment, raising concerns about fund safety and social equity.",
+        },
+      },
+      {
+        title: {
+          zh: "董明珠卸任 格力电商换帅",
+          en: "Ding Zhuhua Steps Down, Gree E-commerce Gets New Leader",
+        },
+        description: {
+          zh: "董明珠卸任格力电商相关职务，格力电商迎来换帅，引发对格力未来战略的关注。",
+          en: "Ding Zhuhua steps down from Gree e-commerce role, bringing a new leader and attention on Gree's future strategy.",
+        },
+      },
+      {
+        title: {
+          zh: "母亲赶到家时两兄妹已被胡蜂蜇亡",
+          en: "Mother Arrives to Find Two Siblings Stung to Death by Wasps",
+        },
+        description: {
+          zh: "一名母亲赶到家时发现两个孩子已被胡蜂蜇死，悲剧引发对儿童安全和蜂蜇急救的讨论。",
+          en: "A mother arrives home to find her two children stung to death by wasps, sparking discussion on child safety and wasp sting first aid.",
+        },
+      },
+      {
+        title: {
+          zh: "景区拿3000万招100名NPC",
+          en: "Scenic Spot Hires 100 NPCs for 30 Million",
+        },
+        description: {
+          zh: "某景区花费3000万元招聘100名NPC，沉浸式旅游新业态引发关注。",
+          en: "A scenic spot spends 30 million to hire 100 NPCs, highlighting the emerging immersive tourism trend.",
+        },
+      },
+      {
+        title: {
+          zh: "五角大楼\"披萨指数\"飙升",
+          en: "Pentagon 'Pizza Index' Spikes",
+        },
+        description: {
+          zh: "五角大楼周边披萨店订单飙升，被视为军事行动的前兆信号引发关注。",
+          en: "Pizza orders spike around the Pentagon, interpreted as a potential precursor signal of military action.",
+        },
+      },
+      {
+        title: {
+          zh: "为省燃气买\"聚能环\"妻儿中毒死亡",
+          en: "Wife and Children Poisoned by 'Gas-Saving Ring'",
+        },
+        description: {
+          zh: "一男子为节省燃气费购买'聚能环'装置，导致妻儿中毒死亡，劣质燃气产品危害不容忽视。",
+          en: "A man buys a 'gas-saving ring' device to cut heating costs, causing his wife and children to die from poisoning — highlighting dangers of substandard gas products.",
+        },
+      },
+      {
+        title: {
+          zh: "开幕式出现歌舞伎 网友直呼瘆人",
+          en: "Kabuki Appears at Opening Ceremony, Netizens Call It 'Eerie'",
+        },
+        description: {
+          zh: "开幕式出现日本歌舞伎表演，部分网友表示瘆人，引发文化争议。",
+          en: "Japanese kabuki performance at opening ceremony prompts some netizens to call it 'eerie', sparking cultural controversy.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-20",
     date: "2026-09-20",
     title: {
