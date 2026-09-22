@@ -2,6 +2,306 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-22",
+    date: "2026-09-22",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-22",
+      en: "🤖 AI HOT Daily · Sep 22, 2026",
+    },
+    summary: {
+      zh: "小米发布并开源 MiMo-V2.6 系列（Pro 与 Flash 两个原生全模态模型），通过规模化强化学习训练、探索 RSI（递归自我改进）路径；Pro 在多数 Agent 基准上与 Claude Opus 5 和 GPT-5.6 Sol 相当，Artificial Analysis 智能指数得 46 分（超越前代 26 分，为开放权重模型最高），Code Arena: WebDev 以 1628 分（AutoEval）位列约第 10、开源权重中约第 3，较 MiMo-V2.5-Pro 上涨 153 分；xAI 发布 Grok 4.7，定位最强编码与知识工作模型，定价 $2/百万输入、$6/百万输出 token（与 4.6 同价同速，另有速度价格翻倍的快速变体），智能体知识工作跻身前沿——Musk 称其使 xAI 在智能体编码上位列第三，Artificial Analysis 评测其 AA-Briefcase 得 1657 Elo（+111）、智能指数 46 分仅次 Claude Opus 5 与 Claude Fable 5.1；通义千问发布 Qwen-Image-2.1：7B 参数单检查点同时支持图像生成与编辑，最多支持 10 张参考图、自带提示词增强 LLM，已集成 diffusers 与 ComfyUI 并提供免安装在线 demo；Kimi（月之暗面）发布 Kimi Code Desktop 1.0 官方桌面客户端，macOS（Apple 与 Intel 芯片）与 Windows 版同步上线；加拿大不列颠哥伦比亚省在加州起诉 OpenAI，指其未在 2026 年 2 月 10 日 Tumbler Ridge 枪击案（致 8 人遇难、27 人受伤）前将 flagged 的 ChatGPT 活动转介警方；亚马逊封禁 Meta 个人 AI 智能体 Muse 代用户在其网站购物的访问权限，称从未许可该访问、Muse 不表明身份且会采集保存账号凭证，带来隐私与安全隐患，双方争端升级；Nathan Lambert 向美国国会汇报开源模型现状，指出中国开源权重模型已在下载量、基准成绩与学术采用上领先——自 2025 年 7 月起在 Hugging Face 下载量领先约 1.6B（总 3.2B，约为美国两倍）；Tomer Tunguz 撰文称最新一波 AI 正在接管软件中的 if-then 判断原语，Jev 与 SemIf 这类专用决策器数百毫秒返回结果、成本比传统生成式调用低约 76x 到 209x，他在自己的 Agent 中替换了约四分之一的调用；Linear 重构 CI 流程应对 AI 编码带来的验证瓶颈，PR 等待时间从 6 分钟以上降至 5 分钟出头、单测 runner 时间约减半；数字生命卡兹克访谈字幕组与漫画汉化组发现他们并不抵触 AI——字幕组把听写、打轴交给 AI 后打轴时间从 3-5 小时缩短到 20 分钟至 1 小时，程序员为喜欢的主播自研工具、单人完成两小时直播中文字幕，漫画汉化组则因嵌字质量坚持人工制作，成员看重的是同好社群与爱好本身。",
+      en: "Xiaomi ships open-source MiMo-V2.6 (native full-modal Pro + Flash), trained through scaled reinforcement learning on the road to RSI (recursive self-improvement) — the Pro matches Claude Opus 5 and GPT-5.6 Sol on most agent benchmarks, scores 46 on Artificial Analysis' Intelligence Index (up from 26, best among open-weight models), and lands ~10th on Code Arena: WebDev at 1628 AutoEval (~3rd among open MIT weights, +153 over V2.5-Pro); xAI launches Grok 4.7 as its strongest coding-and-knowledge-work model at $2/M input and $6/M output tokens (same price and speed as 4.6, plus a 2x-faster double-priced variant) — tech work now frontier-grade, with Musk claiming #3 agent-coding behind Anthropic and OpenAI, an AA-Briefcase of 1657 Elo (+111), and a 46 Intelligence score trailing only Claude Opus 5 and Claude Fable 5.1; Alibaba's Qwen puts out Qwen-Image-2.1 — a 7B single checkpoint doing both image generation and editing, up to 10 reference images, a built-in prompt-enhancer LLM, diffusers/ComfyUI integration, and a no-install browser demo; Moonshot AI's Kimi Code lands official desktop clients (Kimi Code Desktop 1.0) on macOS (Apple and Intel) and Windows in sync; British Columbia sues OpenAI in California for failing to refer flagged ChatGPT activity to police before the Feb 10, 2026 Tumbler Ridge shooting that killed 8 (including five children and an educator) and wounded 27; Amazon blocks Meta's personal agent Muse from shopping on its site — claiming the access was never licensed and that Muse hides its identity while grabbing and storing user credentials, a privacy-and-security standoff; reporting to the US Congress, Nathan Lambert says China's open-weight models now lead in downloads, benchmarks, and academic adoption — leading Hugging Face downloads by ~1.6B since July 2025 (3.2B total, roughly double the US); Tomer Tunguz argues the latest wave of AI is commandeering software's if-then primitives — dedicated deciders like Jev and SemIf return in hundreds of milliseconds at 76x-209x lower cost than generative calls, and he swapped ~a quarter of his own agent's calls; Linear reworks its CI pipeline to clear the AI-coding verification bottleneck, cutting PR waits from 6+ minutes to just over 5 and roughly halving unit-test runner time; and an interview with fansub and manga scanlation groups finds them unbothered by AI — transcription/timing fell from 3-5 hours to 20-60 minutes after handing it to models, one developer built his own tool to single-handedly subtitle a two-hour live stream, while manga typesetters stick to manual work over text-embedding quality, valuing community and passion.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "小米发布开源 MiMo-V2.6：Pro/Flash 全模态",
+          en: "Xiaomi's Open MiMo-V2.6: Full-Modal Pro and Flash",
+        },
+        description: {
+          zh: "规模化强化学习训练、探索 RSI（递归自我改进）路径；Pro 在多数 Agent 基准上与 Claude Opus 5、GPT-5.6 Sol 相当，智能指数 46 分登顶开放权重。",
+          en: "Scaled-RL packed with an eye on RSI; the Pro rivals Claude Opus 5 and GPT-5.6 Sol on most agent benchmarks and tops open-weight at 46 on the Intelligence Index.",
+        },
+      },
+      {
+        title: {
+          zh: "MiMo-V2.6-Pro 登 Code Arena WebDev 第 10，开源第 3",
+          en: "MiMo-V2.6-Pro Ranks ~10th on Code Arena: WebDev",
+        },
+        description: {
+          zh: "1628 分（AutoEval）位列约第 10，开源权重（MIT 许可）中约第 3，较 MiMo-V2.5-Pro 的 1475 分上涨 153 分。",
+          en: "At 1628 AutoEval it sits ~10th overall — ~3rd among MIT-licensed open weights — climbing 153 points over V2.5-Pro's 1475.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI 发布 Grok 4.7：最强编码与知识工作模型",
+          en: "Grok 4.7: xAI's Strongest for Coding and Knowledge Work",
+        },
+        description: {
+          zh: "定价 $2/$6 每百万输入/输出 token；Musk 称其使 xAI 在智能体编码位列第三，AA-Briefcase 1657 Elo（+111）仅次 Claude Opus 5 与 Fable 5.1。",
+          en: "$2/M in, $6/M out; Musk claims #3 in agentic coding, and its 1657 Elo (+111) on AA-Briefcase trails only Opus 5 and Fable 5.1.",
+        },
+      },
+      {
+        title: {
+          zh: "通义千问 Qwen-Image-2.1：7B 单检查点兼顾生成与编辑",
+          en: "Qwen-Image-2.1: 7B, One Checkpoint, Generate and Edit",
+        },
+        description: {
+          zh: "最多支持 10 张参考图，自带提示词增强 LLM；已集成 diffusers 与 ComfyUI，并提供免安装浏览器在线 demo。",
+          en: "Up to 10 reference images plus a built-in prompt-enhancer LLM; ships in diffusers and ComfyUI with a no-install browser demo.",
+        },
+      },
+      {
+        title: {
+          zh: "Kimi Code Desktop 1.0：官方桌面客户端上线",
+          en: "Kimi Code Desktop 1.0 Arrives on macOS and Windows",
+        },
+        description: {
+          zh: "macOS（Apple 与 Intel 芯片）和 Windows 版同步上线，可在 kimi.com/code 下载。",
+          en: "Both macOS (Apple and Intel silicon) and Windows builds ship together, downloadable at kimi.com/code.",
+        },
+      },
+      {
+        title: {
+          zh: "不列颠哥伦比亚省起诉 OpenAI：称未在枪击案前报警",
+          en: "British Columbia Sues OpenAI Over Flagged Chat Gaps",
+        },
+        description: {
+          zh: "指 flagged 的 ChatGPT 活动本应在 2026 年 2 月 10 日 Tumbler Ridge 枪击案（8 死、27 伤）前通报警方。",
+          en: "The province claims flagged ChatGPT activity should have been referred to police before the Feb 10 shooting in Tumbler Ridge that killed eight — five of them children — and wounded 27.",
+        },
+      },
+      {
+        title: {
+          zh: "亚马逊封禁 Meta Muse：称其代购物未经许可",
+          en: "Amazon Blocks Meta Muse's Shopping Access",
+        },
+        description: {
+          zh: "指 Muse 不表明身份、会采集保存用户账号凭证，隐私与安全风险高；双方争端升级。",
+          en: "Amazon says Muse hides its identity and harvests account credentials — a privacy/security risk; the feud escalates.",
+        },
+      },
+      {
+        title: {
+          zh: "Nathan Lambert：报告显示中国开源权重已领先",
+          en: "Lambert: China Now Leads the Open-Weight Race",
+        },
+        description: {
+          zh: "向美国国会汇报：中国开源模型在下载量、基准与学术采用上领先，自 2025 年 7 月起 HF 下载量领先约 1.6B（总 3.2B，约为美国两倍）。",
+          en: "His congressional briefing finds China ahead in downloads, benchmarks, and academic adoption — leading HF downloads by ~1.6B since July 2025 (3.2B total, roughly double the US).",
+        },
+      },
+      {
+        title: {
+          zh: "Toggs：AI 正在接管 if-then 判断",
+          en: "Toggs: AI Is Coming for the If-Statement",
+        },
+        description: {
+          zh: "Jev、SemIf 等专用决策器数百毫秒返回结果，成本比生成式调用低约 76x 到 209x；作者在自家 Agent 中替换了约四分之一调用。",
+          en: "Dedicated deciders like Jev and SemIf answer in hundreds of milliseconds at 76x-209x less cost; Tunguz swapped ~a quarter of his own agent's calls.",
+        },
+      },
+      {
+        title: {
+          zh: "Linear 重构 CI：AI 编码下的验证瓶颈解法",
+          en: "Linear Reworks CI to Beat the AI-Coding Bottleneck",
+        },
+        description: {
+          zh: "PR 等待时间从 6 分钟以上降至 5 分钟出头，单测 runner 时间约减半。",
+          en: "PR wait times fall from 6+ minutes to a hair over 5, with unit-test runner time roughly halved.",
+        },
+      },
+      {
+        title: {
+          zh: "访谈字幕组与汉化组：他们对 AI 并不抵触",
+          en: "Fansub and Scanlation Groups: Not Anti-AI",
+        },
+        description: {
+          zh: "听写/打轴交由 AI 后从 3-5 小时缩至 20 分钟-1 小时；程序员自研工具单人完成两小时直播字幕；漫画组因嵌字质量仍坚持手工。",
+          en: "Timing collapsed from 3-5 hours to 20-60 minutes; one dev single-handedly subtitled a two-hour stream with a self-built tool; manga typesetters stay manual over run-in quality.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-22-hot",
+    date: "2026-09-22",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-22",
+      en: "🔥 Hot Topics · Sep 22, 2026",
+    },
+    summary: {
+      zh: "部分 APP 将'摇一摇'广告触发灵敏度调到临界值，出现'10 次打开软件、8 次跳转某平台'乱象——已有合规标准但违法成本低、追责难，监管部门正推动细化执法标准、加大整治；豪华燃油车集体'腰斩式'降价：沃尔沃 S90 降幅逼近 50%、路虎卫士直降超 17 万、奥迪 A6L 裸车低至 26 万、宝马 5 系跌破 29 万，二线豪车跌至 15 万级，溢价神话破灭；全国工商联在天津发布'2026 中国民营企业 500 强'——京东、阿里、恒力位居前三，营收总额 44.93 万亿元（+4.35%）、净利润 1.83 万亿元、纳税 1.30 万亿元；深圳市委常委会通报覃伟中涉嫌严重违纪违法、接受中央纪委国家监委审查调查，与会同志一致表示坚决拥护党中央决定；云南牟定县'两兄妹遭蜂群蜇伤身亡案'一审结束择期宣判，被告人李某当庭翻供称无罪并反指家属故意带孩子到案发地，家属则要求定危害公共安全罪并顶格处罚；宇树科技发布新一代灵巧手 Dex5-S——真手 1:1 尺寸、单手 22 个自由度、单手握 22 电机、最大负载 2 公斤、可拧瓶盖，起售价 3.99 万元；雷军直播澄清'打新宇树赚了 100 多亿'传闻：该投资属于顺为投资而非个人，也并非打新而是天使投资支持早期创业者；9 月各手机厂商集中发布新机、定价持续走高，二手市场'错峰消费'升温，闲鱼历代旗舰机型搜索量较前日增长超 200%，迎来手机'双11'；江苏徐州、鲁西南等地厂家被限制生产低速电动四轮车，座椅配件厂订单减少三分之一、保险杠厂降 20%-30%，'老头乐'从禁行走向禁产；特斯拉宣布 10 月 1 日在得州韦科发布新一代 Roadster，发布会前附近 SpaceX 基地上空突然实施约 3000 米临时禁飞限制，引发'新车能不能飞'的猜测；苹果硬件工程副总裁表示看到用户给 iPhone 贴膜会'浑身不自在'——团队花大量精力研发耐刮耐磨屏幕，希望用户直接用原厂屏；9 月 22 日 A 股走强，创业板指涨逾 2%、沪指涨 0.31%、深成指涨 1.26%，半导体芯片、算力硬件领涨，三市上涨个股近 2600 只；Meta 个人 Agent 产品 Muse 上线约 10 天登顶美国 App Store 免费应用榜、超越 ChatGPT，靠消费级入口优势在个人 Agent 赛道'弯道超车'；名古屋亚运会 13 岁中国小将于子迪连夺两金并在女子 200 米混合泳打破亚洲纪录——作为本届最小中国运动员，她坦言'采访比比赛难多了'、不认为自己算天才；我国多地陆续推出婚育激励举措，部分市县、村居针对符合条件初婚夫妻发放现金红包或结婚消费券（山西吕梁、福建明溪、广东部分村镇等），部分企业也给结婚员工发奖金；商务部等 7 部门发布《关于推动商品消费扩容升级的实施意见》，提出到 2030 年社会消费品零售总额达 60 万亿元左右，通过供给侧创新、结构分层与制度供给三重机制促消费。",
+      en: "'Shake-to-open' ad triggers pushed to the legal edge have apps forwarding users 8 out of 10 times — rules exist but enforcement lags, so regulators are tightening standards; luxury gas cars slash prices wholesale: Volvo S90 near -50%, Land Rover Defender down ¥170k+, bare Audi A6L at ¥260k, and BMW 5-Series under ¥290k, with second-tier premium models tumbling to ¥150k territory and the premium halo gone; the All-China Federation of Industry and Commerce releases the 2026 Top 500 Private Enterprises in Tianjin — JD.com, Alibaba, and Hengli lead, with combined revenue of ¥44.93T (+4.35%), net profit ¥1.83T, and taxes ¥1.30T; Shenzhen's party standing committee pledges unwavering support for the central party committee after Qin Weizhong is placed under discipline review for suspected serious violations; the Yunnan Muding case of two siblings stung to death by a beekeeper's hornets sees its first-instance trial wrap with a deferred verdict — defendant Li retracts his plea to 'not guilty' and accuses the family of bringing the children to the site, while the family wants a conviction for endangering public safety; Unitree launches its next-gen dexterous hand Dex5-S at ¥39,900 — real-hand 1:1 proportions, 22 DOF, 22 motors, 2kg max load, capable of twisting bottle caps; Lei Jun clarifies in a livestream that the 'making ¥10B+ from Unitree flipping' buzz is wrong — it was Shunwei's angel round backing early founders, not his personal IPO gambling; with September's new-phone wave pushing prices up, buyers are shopping second-hand instead — Xianyu's search volume for previous flagships jumps 200%+ overnight for a phone-industry 'Double 11'; low-speed four-wheelers ('lao tou le') get production bans across Xuzhou and western Shandong as parts suppliers see orders fall a third to 30%, moving the elderly-mobile crackdown from the road to the factory floor; Tesla dates its next-gen Roadster reveal for Oct 1 in Waco, Texas, with a sudden ~3,000-meter temporary no-fly zone over the nearby SpaceX site feeding 'can the car fly?' speculation; Apple's VP of hardware engineering says he's 'uncomfortable' seeing phones wrapped in screen-film, insisting the team spent fortunes engineering scratch-resistant glass and wants people to use it bare; mainland indices rally Sep 22 — ChiNext +2%+, Shanghai +0.31%, Shenzhen +1.26% — led by semiconductors and compute hardware with ~2,600 risers across the three boards; Meta's personal agent Muse tops the US App Store free chart ~10 days after launch, passing ChatGPT via consumer-entry advantage; 13-year-old Yu Zidi bags two golds at the Nagoya Asian Games and breaks the Asian record in the women's 200 IM — the youngest Chinese athlete here says interviews are 'way harder than racing' and doesn't call herself a prodigy; more Chinese localities roll out marriage incentives — cash red packets and wedding vouchers for qualifying first-time couples (Lüliang, Shanxi; Mingxi, Fujian; village towns in Guangdong, and more), with some employers pitching in; and the commerce ministry and six other agencies publish guidelines targeting ~¥60T in annual retail sales by 2030 through a triple mechanism of supply-side innovation, tiered structure, and lower transaction costs.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "'摇一摇'广告乱象：10 次打开 8 次跳转",
+          en: "Shake Ads Gone Wild: 8 Jumps per 10 Opens",
+        },
+        description: {
+          zh: "部分 APP 将触发灵敏度调到临界值；已有合规标准但违法成本低、追责难，监管部门正推动细化执法、加大整治。",
+          en: "Creators push shake-trigger sensitivity to the edge; standards exist yet costs are low and accountability thin, so regulators are sharpening enforcement.",
+        },
+      },
+      {
+        title: {
+          zh: "豪华燃油车集体'腰斩式'降价",
+          en: "Luxury Gas Cars Slash Prices Across the Board",
+        },
+        description: {
+          zh: "S90 逼近 -50%、路虎卫士直降超 17 万、奥迪 A6L 裸车 26 万、宝马 5 系跌破 29 万；二线豪车跌至 15 万级，溢价神话破灭。",
+          en: "S90 near -50%, Defender -¥170k+, bare A6L at ¥260k, 5-Series under ¥290k — second-tier premium falls to ¥150k and the markup myth dies.",
+        },
+      },
+      {
+        title: {
+          zh: "2026 中国民营企业 500 强发布",
+          en: "2026 Top 500 Private Enterprises Unveiled",
+        },
+        description: {
+          zh: "京东、阿里、恒力居前三；营收总额 44.93 万亿元（+4.35%）、净利润 1.83 万亿元、纳税 1.30 万亿元。",
+          en: "JD, Alibaba, and Hengli lead; combined revenue reaches ¥44.93T (+4.35%) with net profit ¥1.83T and taxes ¥1.30T.",
+        },
+      },
+      {
+        title: {
+          zh: "深圳市委：坚决拥护党中央决定",
+          en: "Shenzhen Vows Support for Central Decision on Qin",
+        },
+        description: {
+          zh: "常委会通报覃伟中涉嫌严重违纪违法、接受审查调查；与会同志一致表示坚决拥护党中央决定。",
+          en: "The standing committee affirms full backing for the central party committee as Qin Weizhong faces discipline review.",
+        },
+      },
+      {
+        title: {
+          zh: "兄妹遭蜂群蜇亡案：被告当庭翻供",
+          en: "Bee-Sting Tragedy: Defendant Flips Plea Mid-Trial",
+        },
+        description: {
+          zh: "牟定县一审开庭结束、择期宣判；李某翻供称无罪并反指家属故意带孩子到案发地，家属认为应定危害公共安全罪并顶格处罚。",
+          en: "Muding's first-instance hearing closes with a deferred verdict; the accused pleads innocence and points fingers, while the family pushes for a public-safety charge at maximum penalty.",
+        },
+      },
+      {
+        title: {
+          zh: "宇树发布灵巧手 Dex5-S：3.99 万元起",
+          en: "Unitree's Dex5-S Dexterous Hand: From ¥39,900",
+        },
+        description: {
+          zh: "真手 1:1 尺寸、单手 22 自由度、22 电机、最大负载 2 公斤，可拧瓶盖，适配人形机器人本体。",
+          en: "1:1 human-scale, 22 DOF with 22 motors and 2kg max load — bottle-cap twisting included, built for humanoid bodies.",
+        },
+      },
+      {
+        title: {
+          zh: "雷军回应'打新宇树赚 100 多亿'",
+          en: "Lei Jun Sets the Record Straight on Unitree Gains",
+        },
+        description: {
+          zh: "直播澄清：该投资属顺为投资而非个人，也并非打新，而是支持早期创业者的天使投资。",
+          en: "In a livestream he explains it was Shunwei's angel bet backing early founders — not his own flips.",
+        },
+      },
+      {
+        title: {
+          zh: "手机厂商大乱斗：闲鱼迎来'双11'",
+          en: "New Phones, Old Fancies: Xianyu's Own Double 11",
+        },
+        description: {
+          zh: "新机定价走高、消费者转向二手'错峰消费'，历代旗舰机搜索量较前日增长超 200%。",
+          en: "Escalating launch prices push buyers to stagger their shopping in the used market, sending flagship searches up 200%+ overnight.",
+        },
+      },
+      {
+        title: {
+          zh: "多地禁产'老头乐'",
+          en: "Elderly Mobiles: Bans Move From Roads to Factories",
+        },
+        description: {
+          zh: "徐州、鲁西南厂家被限产低速四轮车；座椅配件厂订单减三分之一、保险杠厂降 20%-30%。",
+          en: "Low-speed four-wheelers face production caps in Xuzhou and western Shandong; seat-part orders fall a third and bumper plants 20-30%.",
+        },
+      },
+      {
+        title: {
+          zh: "特斯拉发布会设临时禁飞区",
+          en: "Tesla's Launch Sets Up a Temporary No-Fly Zone",
+        },
+        description: {
+          zh: "10 月 1 日新一代 Roadster 将于得州韦科发布，附近 SpaceX 基地上空突然实施约 3000 米临时禁飞限制。",
+          en: "The new Roadster debuts Oct 1 in Waco, Texas, with a sudden ~3,000m flight restriction over the nearby SpaceX site.",
+        },
+      },
+      {
+        title: {
+          zh: "苹果高管：希望用户别给 iPhone 贴膜",
+          en: "Apple VP: Please Stop Applying Screen Film",
+        },
+        description: {
+          zh: "看到贴膜会'浑身不自在'：团队花大力气研发耐刮耐磨屏幕，希望用户直接用原厂屏。",
+          en: "\"It makes me uneasy\": the team spent enormous effort on scratch-resistant glass and wants people to use it bare.",
+        },
+      },
+      {
+        title: {
+          zh: "创业板指涨逾 2%，芯片股领涨",
+          en: "ChiNext +2%+ as Chip Stocks Lead the Rally",
+        },
+        description: {
+          zh: "沪指涨 0.31%、深成指涨 1.26%；半导体芯片与算力硬件领涨，三市上涨个股近 2600 只。",
+          en: "Shanghai +0.31%, Shenzhen +1.26%; semis and compute hardware front-run a ~2,600-rapper advance across the three boards.",
+        },
+      },
+      {
+        title: {
+          zh: "Muse 登顶美区 App Store 免费榜",
+          en: "Meta's Muse Tops the US App Store Free Chart",
+        },
+        description: {
+          zh: "上线约 10 天便超越 ChatGPT；Meta 靠消费级入口优势在个人 Agent 赛道'弯道超车'。",
+          en: "Roughly 10 days in, it passes ChatGPT; Meta leverages its consumer entry point to leapfrog the personal-agent race.",
+        },
+      },
+      {
+        title: {
+          zh: "13 岁于子迪：亚运两金，破亚洲纪录",
+          en: "Yu Zidi, 13: Two Golds and an Asian Record",
+        },
+        description: {
+          zh: "女子 200 米混合泳破亚洲纪录；作为最小参赛者她笑称'采访比比赛难多了'，并不以天才自居。",
+          en: "The youngest Chinese athlete here smashes the Asian record in the 200 IM, joking interviews are 'way harder than racing' and dismissing the prodigy label.",
+        },
+      },
+      {
+        title: {
+          zh: "多地宣布结婚发钱",
+          en: "Cash for Marriage: Incentives Spread",
+        },
+        description: {
+          zh: "部分市县、村居对符合条件的初婚夫妻发红包或消费券（吕梁、明溪、广东村镇等），部分企业也发奖金。",
+          en: "Counties and villages across Lüliang, Mingxi, and Guangdong hand newlyweds cash or vouchers — some employers chip in too.",
+        },
+      },
+      {
+        title: {
+          zh: "商务部：到 2030 年社零总额达 60 万亿",
+          en: "Retail Target: ~¥60T Annual Sales by 2030",
+        },
+        description: {
+          zh: "7 部门发布《实施意见》，通过供给侧创新、结构分层与制度供给三重机制推动商品消费扩容升级。",
+          en: "Seven ministries publish guidelines leaning on supply-side innovation, tiered structure, and lower transaction costs.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-21",
     date: "2026-09-21",
     title: {
