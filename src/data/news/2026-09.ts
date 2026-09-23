@@ -2,6 +2,376 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-23",
+    date: "2026-09-23",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-23",
+      en: "🤖 AI HOT Daily · Sep 23, 2026",
+    },
+    summary: {
+      zh: "Anthropic 发布 Claude Opus 5.5——Claude 5.5 系列首个模型，在多数任务上达到 Fable 5.1 水平、典型负载成本较 Opus 5 低 40%，定价 $4/$20 每百万输入/输出 token、缓存读取降 60% 至 $0.20、输出提速超 30%（Fast mode 最高 2.5x 速度但 token 价格翻倍），支持 1M 上下文，并已成为 Claude Code v2.1.280 的默认 Opus 模型；Artificial Analysis 评测其以 58 分登顶智能指数（历史最高）、在 Terminal-Bench 4.0 上（59.6%）与 GPT-6 Astra 持平，并进入 Arena Agent Arena；Boris Cherny 实测让 Opus 5.5 与 Fable 5.1 各自把 HAProxy 从 C 移植到 Rust，两者均几乎全过测试，但 Opus 5.5 仅用 9.5 小时且更便宜；OpenAI 发布 GPT-6 Sol 与 GPT-6 Luna，把 GPT-6 Astra 的训练方法用于更快更便宜的模型，API 价格较 GPT-5.6 促销价降 50%（Sol 输入 $4→$2、输出 $20→$10；Luna 输入 $0.20→$0.10、输出 $1.20→$0.50），即日起面向 Plus/Pro/Business/Enterprise/Edu 推送至 ChatGPT Work 和 Codex；OpenAI 还为 GPT-6 推出改进的提示词缓存系统——对 30 分钟窗口内复用的合格共享前缀提供最高 90% 的缓存输入 token 折扣；通义千问开源 Qwen-Image-2.1，以 1367 分登顶 Arena Image Edit Arena 开源第一、总榜第 16（距 GPT-Image-1.5-high-fidelity 仅 3 分），同时登顶 Text-to-Image Arena 开源第一；Hugging Face 宣布 transformers 支持直接加载 GGUF 量化模型（from_pretrained 传入 gguf_file 即可，复用 ggml 的 Metal 内核）；OpenRouter 推出 Batch API，异步批量请求 24 小时窗口内完成、通常按正常价格 50% 或更低收费，已支持 70 多个模型；Kimi 发布浏览器扩展（前身 Kimi WebBridge）——可在侧边栏对话、导航网页、填写表单，重复性任务可录制一次操作保存为 skill 让 Kimi 接手执行；LlamaIndex 发布 LiteParse 2.14.6，通过自维护 PDFium fork 内存分配优化（内置 mimalloc）把文本提取耗时降低 20-25%、平均 2.76ms/页；Apple 新款 Mac mini（M6/M5 Pro）与 Mac Studio（M5 Max/M5 Ultra）9 月 22 日开售，Mac mini AI 性能最高提升 4 倍；据 Bloomberg 援引未公开的五角大楼内部审查，美军今年 2 月开战首日误击伊朗 Minab 的 Shajarah Tayyebeh 小学致超 150 人死亡（至少 123 名儿童），过度依赖 Palantir 的 Maven Smart System 是原因之一；Meta AI 助手 Muse 曝出严重 0-day 漏洞——任何本地应用或终端命令都可获取用户 Muse 账户认证 token 获得智能体完全控制，Patrick Wardle 已开发写恶意文件、拍照等 PoC，Meta 在披露约 12 小时后发布热修复，此前 Amazon 已开始封禁 Muse；Epoch AI 报告称过去三年达到同等 AI 性能的成本平均每季度下降约 47%（每年约 13 倍），刚达 SOTA 的性能成本每季度下降 66%；卡兹克实测 Grok 4.7 与小米 MiMo V2.6，认为 Grok 4.7 低于预期，MiMo V2.6 成为性能、价格、速度三角的当前版本答案；Artificial Analysis 评测阶跃星辰 Step 5 Preview 智能指数得 44 分（与 Kimi K3 max 持平，略低于 GLM-5.3 和 Qwen3.8 Max 的 45 分），成本约为同级模型 1/2.8；OpenRouter 用 Banking77 的 3,080 条客服语料对比 Jev 1.13 与 Claude Opus 5：Jev 准确率 81.0%（低 3.3 个百分点），但中位延迟 175ms 约为 Opus（2,266ms）的 1/13，成本约 1/25；OpenRouter 解读 NVIDIA Nemotron 3.5 Lightning——30B 总参/约 3B 激活的 MoE 开源权重模型，定位高频、边界清晰的 Agent 执行步骤（工具调用、编码），与负责复杂推理的 Nemotron 3 Ultra（550B）搭档。",
+      en: "Anthropic ships Claude Opus 5.5 — the first model in the Claude 5.5 family, matching Fable 5.1 on most tasks at ~40% lower typical-load cost than Opus 5 ($4/$20 per 1M in/out tokens, cache reads down 60% to $0.20, output ~30% faster, Fast mode up to 2.5x speed at double token pricing), with a 1M context — and Claude Code v2.1.280 now defaults to it; Artificial Analysis crowns it #1 on its Intelligence Index at 58 (an all-time high), ties GPT-6 Astra on Terminal-Bench 4.0 (59.6%), and it enters Arena's Agent Arena; Boris Cherny has Opus 5.5 and Fable 5.1 each port HAProxy from C to Rust — both pass nearly all tests, but Opus 5.5 finishes in 9.5 hours for less; OpenAI launches GPT-6 Sol and GPT-6 Luna, applying Astra's training method to faster, cheaper models with API prices down 50% from GPT-5.6 promo rates (Sol $4→$2 in, $20→$10 out; Luna $0.20→$0.10 in, $1.20→$0.50 out), rolling out to Plus/Pro/Business/Enterprise/Edu across ChatGPT Work and Codex — plus an improved GPT-6 prompt-cache system granting up to 90% discounts on qualifying shared prefixes reused within a 30-minute window; Alibaba open-sources Qwen-Image-2.1 and tops Arena's Image Edit chart among open models at 1367 (#16 overall, 3 points from GPT-Image-1.5-high-fidelity) while also leading open entries on Text-to-Image; Hugging Face makes transformers load GGUF quantized checkpoints directly via from_pretrained(gguf_file=...), reusing ggml's Metal kernels; OpenRouter launches a Batch API that completes async work within 24 hours at typically 50% or less of normal per-token pricing across 70+ models; Kimi ships a browser extension (ex-Kimi WebBridge) enabling sidebar chats that navigate pages and fill forms, plus 'record a skill once, let Kimi replay it'; LlamaIndex's LiteParse 2.14.6 trims text-extraction time 20-25% via a self-maintained PDFium fork with built-in mimalloc (averaging 2.76ms/page); the new Mac mini (M6/M5 Pro) and Mac Studio (M5 Max/Ultra) go on sale Sep 22 with up to 4x AI performance; Bloomberg, citing an unpublished Pentagon review, reports overreliance on Palantir's Maven Smart System contributed to a Feb day-one strike on an Iranian elementary school that killed 150+ (at least 123 children); Meta's ultra-privileged Muse assistant shows a serious 0-day letting any local app or terminal command steal a user's auth token for full agent control — Patrick Wardle built write-file and camera PoCs, Meta shipped a hotfix ~12 hours after disclosure, and Amazon had already begun banning it; Epoch AI estimates the cost of achieving a given AI performance falls ~47% per quarter (~13x a year) — 66% per quarter right after SOTA status; a hands-on by Kazke concludes Grok 4.7 underwhelms while Xiaomi's MiMo V2.6 becomes the current answer to the impossible triangle of performance-price-speed; Step 5 Preview scores 44 on the AA Intelligence Index (level with Kimi K3 max, just shy of GLM-5.3 and Qwen3.8 Max's 45) at ~1/2.8 peer cost; on Banking77's 3,080 support messages, OpenRouter finds Jev 1.13 at 81.0% accuracy (3.3 points behind Claude Opus 5) but with a 175ms median latency versus 2,266ms — roughly 1/13 the time and 1/25 the cost; and NVIDIA's Nemotron 3.5 Lightning (30B total/~3B active, open-weight MoE) targets high-volume, crisp-boundary agent execution steps like tool calling and coding, paired with the 550B Nemotron 3 Ultra for hard reasoning.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Anthropic 发布 Claude Opus 5.5：多数任务达 Fable 5.1 水平，成本低 40%",
+          en: "Claude Opus 5.5: Fable-level Performance, 40% Cheaper",
+        },
+        description: {
+          zh: "Claude 5.5 系列首发；典型负载成本较 Opus 5 低 40%，$4/$20 每百万 token、缓存读取 $0.20（-60%）、输出提速 30%+，支持 1M 上下文。",
+          en: "First of the Claude 5.5 line; ~40% lower typical-load cost than Opus 5, $4/$20 per 1M tokens, $0.20 cache reads (-60%), 30%+ faster output, 1M context.",
+        },
+      },
+      {
+        title: {
+          zh: "Opus 5.5 登顶 AA 智能指数 58 分，Terminal-Bench 持平 Astra",
+          en: "Opus 5.5 Tops AA Index at 58, Ties Astra on Terminal-Bench",
+        },
+        description: {
+          zh: "Artificial Analysis 历测最高分（58），Terminal-Bench 4.0 达 59.6% 与 GPT-6 Astra 持平；并已进入 Arena Agent Arena。",
+          en: "Highest score ever measured (58); 59.6% on Terminal-Bench 4.0 ties GPT-6 Astra — and it's live in Arena's Agent Arena.",
+        },
+      },
+      {
+        title: {
+          zh: "Cherny 实测：Opus 5.5 移植 HAProxy 比 Fable 5.1 快且省",
+          en: "Cherny's Field Test: Opus 5.5 Beats Fable 5.1 on Porting",
+        },
+        description: {
+          zh: "两者把 HAProxy 从 C 移植到 Rust 均几乎全过测试，Opus 5.5 用时 9.5 小时，更快也更便宜。",
+          en: "Both C-to-Rust ports pass nearly every test; Opus 5.5 does it in 9.5 hours and costs less.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布 GPT-6 Sol 与 Luna，API 价格降 50%",
+          en: "GPT-6 Sol and Luna: 50% Cheaper, Rolling Out Now",
+        },
+        description: {
+          zh: "沿用 Astra 训练方法打造更快更便宜的模型；Sol $2/$10、Luna $0.10/$0.50 每百万 token，即日起推向 ChatGPT Work 与 Codex。",
+          en: "Astra's training recipe applied to faster, cheaper models — Sol $2/$10, Luna $0.10/$0.50 per 1M — landing in ChatGPT Work and Codex now.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-6 改进提示词缓存：最高 90% 折扣",
+          en: "GPT-6 Prompt Caching: Up to 90% Off",
+        },
+        description: {
+          zh: "30 分钟窗口内复用的合格共享前缀，默认提高命中率，最高提供 90% 的缓存输入 token 折扣。",
+          en: "Qualifying shared prefixes reused within a 30-minute window default to higher hit rates — up to 90% off cached input tokens.",
+        },
+      },
+      {
+        title: {
+          zh: "Qwen-Image-2.1 开源：登顶 Arena 图像编辑开源第一",
+          en: "Qwen-Image-2.1 Open-Source, Tops Arena Edit Charts",
+        },
+        description: {
+          zh: "Image Edit Arena 1367 分居开源第一、总榜第 16（距 GPT-Image-1.5-high-fidelity 仅 3 分）；同步登顶 Text-to-Image 开源第一。",
+          en: "Ranks #1 open model on Image Edit Arena at 1367 (#16 overall, 3 points off GPT-Image-1.5-high-fidelity) and leads open entries on Text-to-Image too.",
+        },
+      },
+      {
+        title: {
+          zh: "transformers 原生支持加载 GGUF 量化模型",
+          en: "transformers Can Now Load GGUF Quants Directly",
+        },
+        description: {
+          zh: "from_pretrained 传入 gguf_file 即可加载 Hub 上的 GGUF checkpoint，复用 ggml 的 Metal 内核，本地推理性能接近 llama.cpp。",
+          en: "Pass gguf_file to from_pretrained and load Hub GGUF checkpoints straight away, reusing ggml's Metal kernels for near-llama.cpp local inference.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 推出 Batch API：批量推理半价",
+          en: "OpenRouter's Batch API: Half-Price Bulk Inference",
+        },
+        description: {
+          zh: "异步批量请求由供应商在 24 小时窗口内完成，通常按正常 per-token 价格 50% 或更低收费，已支持 70 多个模型。",
+          en: "Async batches complete within 24 hours at typically 50% or less of normal per-token pricing, spanning 70+ models.",
+        },
+      },
+      {
+        title: {
+          zh: "Kimi 发布浏览器扩展：可录制操作存为 skill",
+          en: "Kimi's Browser Extension: Record Tasks as Skills",
+        },
+        description: {
+          zh: "前身 Kimi WebBridge；侧边栏对话、导航网页、填写表单，重复性任务录制一次后由 Kimi 接手执行。",
+          en: "Ex-Kimi WebBridge; chat in the sidebar, navigate pages, fill forms, and record a repeating task once for Kimi to replay.",
+        },
+      },
+      {
+        title: {
+          zh: "LiteParse 2.14.6：PDF 文本提取提速 20-25%",
+          en: "LiteParse 2.14.6 Speeds Up PDF Extraction 20-25%",
+        },
+        description: {
+          zh: "通过自维护 PDFium fork 的内存分配优化（内置 mimalloc），平均 2.76ms/页，markdown 渲染 3.94ms/页。",
+          en: "A self-maintained PDFium fork with built-in mimalloc averages 2.76ms/page, with markdown rendering at 3.94ms/page.",
+        },
+      },
+      {
+        title: {
+          zh: "新款 Mac mini 与 Mac Studio 今日开售",
+          en: "New Mac mini and Mac Studio Hit Shelves Today",
+        },
+        description: {
+          zh: "Mac mini 搭载 M6 与 M5 Pro，AI 性能最高提升 4 倍；Mac Studio 提供 M5 Max 与 M5 Ultra。",
+          en: "Mac mini moves to M6 and M5 Pro with up to 4x AI performance; Mac Studio offers M5 Max and M5 Ultra.",
+        },
+      },
+      {
+        title: {
+          zh: "五角大楼审查：过度依赖 Palantir AI 致误击伊朗学校",
+          en: "Pentagon Review: Palantir AI Overreliance Led to School Strike",
+        },
+        description: {
+          zh: "据未公开审查，美军 2 月开战首日误击 Minab 的 Shajarah Tayyebeh 小学，超 150 人死（至少 123 名儿童），Maven Smart System 过度依赖是原因之一。",
+          en: "An unpublished review ties the Feb day-one strike on Shajarah Tayyebeh Elementary to overreliance on Palantir's Maven Smart System — 150+ dead, at least 123 of them children.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta Muse 曝严重 0-day：本地应用可劫持令牌",
+          en: "Meta Muse's Serious 0-Day: Any Local App Can Steal the Keys",
+        },
+        description: {
+          zh: "任意本地应用或终端命令可获取 Muse 认证 token 实现完全控制；Patrick Wardle 给出写文件、拍照等 PoC，Meta 约 12 小时后打热补丁。",
+          en: "Any local app or terminal command can lift a Muse auth token for full agent control; Wardle demoed file-write and camera PoCs, and Meta hotfixed within ~12 hours.",
+        },
+      },
+      {
+        title: {
+          zh: "Epoch AI：同等 AI 性能的成本每季度降约 47%",
+          en: "Epoch AI: The Plunging Price of Thought",
+        },
+        description: {
+          zh: "三年内达到同等性能的成本平均每季度降约 47%（约每年 13 倍）；刚达 SOTA 的性能成本每季度降 66%。",
+          en: "Cost per fixed performance falls ~47% a quarter (~13x a year); right at SOTA it touched 66% per quarter before slowing.",
+        },
+      },
+      {
+        title: {
+          zh: "卡兹克实测：Grok 4.7 低于预期，MiMo V2.6 成版本答案",
+          en: "Hands-On: Grok 4.7 Disappoints, MiMo V2.6 Answers the Triangle",
+        },
+        description: {
+          zh: "同日出炉的两款模型对比下，Grok 4.7 未达预期，小米 MiMo V2.6 成为性能、价格、速度三角的当前版本答案。",
+          en: "Against expectations, Grok 4.7 underwhelms while Xiaomi's MiMo V2.6 becomes the current resolution to the performance-price-speed triangle.",
+        },
+      },
+      {
+        title: {
+          zh: "AA 评测 Step 5 Preview：44 分，成本约同级 1/2.8",
+          en: "Step 5 Preview Scores 44 on AA at ~1/2.8 the Cost",
+        },
+        description: {
+          zh: "智能指数 44（与 Kimi K3 max 持平，略低于 GLM-5.3 与 Qwen3.8 Max 的 45），成本约为同级模型 1/2.8。",
+          en: "Intelligence Index 44 (level with Kimi K3 max, just under GLM-5.3 and Qwen3.8 Max at 45) at roughly 1/2.8 of peer cost.",
+        },
+      },
+      {
+        title: {
+          zh: "Jev vs Opus 5 分类实测：快 13 倍、省 25 倍",
+          en: "Jev vs Opus 5 on Banking77: 13x Faster, 25x Cheaper",
+        },
+        description: {
+          zh: "准确率 81.0%（低 3.3 个百分点），但中位延迟 175ms（Opus 为 2,266ms）、成本约 1/25。",
+          en: "81.0% accuracy (3.3 points behind) yet a 175ms median versus 2,266ms — about 1/25 of the cost.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA Nemotron 3.5 Lightning：Agent 高频执行专用",
+          en: "Nemotron 3.5 Lightning: Purpose-Built for Agent Exec",
+        },
+        description: {
+          zh: "30B 总参/约 3B 激活的开源 MoE，定位工具调用、编码等高频边界清晰步骤，与 550B 的 Nemotron 3 Ultra 搭档负责复杂推理。",
+          en: "30B-total/~3B-active open MoE for crisp, high-frequency steps like tool calling and coding, teaming with 550B Nemotron 3 Ultra on hard reasoning.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-23-hot",
+    date: "2026-09-23",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-23",
+      en: "🔥 Hot Topics · Sep 23, 2026",
+    },
+    summary: {
+      zh: "马斯克在央视财经专访中建议'有时间一定要去中国看看'，称赞曾乘高铁从北京到西安体验很棒、兵马俑是世界奇迹之一；海外社交平台'China Haul'（中国购物开箱）走红——外国游客拖着空行李箱来中国满载国货而归，背后是中国制造品质提升以及入境、支付、退税体验的顺畅，外国游客'用钱包投票'感受真实中国；新华社消息，中央决定李乐成任安徽省委书记、周祖翼任河南省委书记、赵龙任福建省委书记，三省委书记同步调整；乌鲁木齐新市区法院一审判决学生孙某篡改同学志愿案——孙某此前已因利用班主任误发在班级群的身份证腕带照入手篡改 7 名同学志愿被判处一年半有期徒刑，本次判决其再赔偿约 2.3 万元、涉事学校因管理过失赔偿约 1.7 万元；义乌 11 岁男孩吉米一口流利英语在夜市帮邻居与外国顾客交流谈下大单——他 6 岁起学英语已坚持输出 4500 多次；继'超长蛋挞'后，陕西渭南商家推出长四五十厘米、售 20 元的'超长肉夹馍'（约等于 5 个普通大小），随后'超长煎饼果子''超长驴肉火烧'等相继出现，行业称夸张外形自带打卡属性为门店引流；四川绵竹 38 岁男子刘修洪赴泰收货款遭绑架、被掳至缅甸电诈园区被困 79 天，因人已超龄不好卖被当'赠品'搭售，凭中医技能少受打骂，最终姐姐花三十多万元将其营救回国；自台积电进军日本后，熊本县菊阳町地价一路飙升、公寓旅馆如雨后春笋，但当地中介称晚上很少有灯亮着，'台积电之城'疑成'鬼城'；合肥交警在对故障车喊话中急呼'你要不要命了'，隔着护栏制止乘员欲返回拿外套的危险行为、指导前行，救下一家三口；韩国短道速滑名将金建宇 9 月 23 日突然去世，年仅 28 岁，讣告未提死因——他曾获世界杯 1500 米总积分第一，历练停赛与复出，米兰冬奥选拔中列第八无缘入选；有网友晒新包装六神花露水，瓶身带安全线、暗纹、烫金浮雕、紫外荧光，戏称'拿在手里像在验钞'；广州郑女士在'消费帮扶展'花 3200 元买到 B+C 人工处理假翡翠手镯，查出卖家经营资质竟是销售蔬菜；国新办发布会介绍今年 1-8 月油气新增储量可观，安徽茶亭铜金矿、贵州猪拱塘铅锌矿被探明为超大型矿床，'十五五'将推进新一轮找矿突破行动；安徽花鼓灯非遗传承人冯太新回应'闪身步'爆火——这是起源于沿淮地区的花鼓灯经典基本功，看到年轻人喜爱翻拍感到欣慰；以色列总理内塔尼亚胡赴纽约出席联大前发视频，隔空指责批评他的纽约市长马姆达尼'支持哈马斯、煽动反犹'连称'可耻'，此前马姆达尼指控其为战犯并呼吁执行国际刑事法院逮捕令；9 月 23 日 A 股年内发行价最低新股凯达重工（4.26 元）在北交所上市，开盘大涨 580.75%。",
+      en: "In a CCTV interview Elon Musk urges people to find time to visit China, recalling a Beijing-to-Xi'an high-speed ride and calling the terracotta warriors one of the wonders of the world; 'China Haul' content goes viral as foreign tourists arrive with empty luggage and leave loaded with Chinese goods — a vote-by-wallet for the country's upgraded manufacturing and smoother entry, payment, and tax-refund experience; Xinhua says Li Lecheng becomes Anhui party secretary, Zhou Zuyi Henan's, and Zhao Long Fujian's in a synchronized reshuffle; a Urumqi court orders the student who altered seven classmates' college applications (using a screening-card photo with passwords that a homeroom teacher had posted in the class group) to pay ~¥23K more on top of his previous 18-month sentence, with the school ordered to pay ~¥17K for managerial negligence; 11-year-old Yiwu boy Jimmy closes a big market deal for a neighbor stall by chatting up foreign customers in fluent English — he has been at it since age six, clocking 4,500+ practice sessions; following the 'super-long egg tart,' a Weinan vendor rolls out a 40-50cm ¥20 'super-long roujiamo' (roughly five normal ones), spawning copycat 'super-long jianbing' and 'super-long donkey-meat shaobing' as businesses bet big shapes pull in the selfie crowd; a 38-year-old Sichuan man taken while collecting payment in Thailand is trafficked into a Myanmar scam compound for 79 days — too old to sell, he was bundled in as a 'freebie,' avoided worse abuse via his TCM skills, and was ransomed home by his sister for ¥300K+; since TSMC set up in Japan, Kumamoto's Kikuyo-machi land prices have soared and apartment blocks sprouted everywhere — yet local agents report lights rarely on at night, leaving the 'TSMC town' looking like a ghost city; a Hefei traffic officer yells 'Do you want to die?!' over a loudspeaker to stop a stranded driver's family from climbing back to grab a jacket, guiding them to safety on the highway; South Korean short-track skater Kim Geon-woo dies suddenly at 28 with no cause given — a World Cup 1500m total points champion who retired in June after suspension and comeback but failed Milan Olympic selection at 8th; netizens joke the new Liu Shen florida-water bottle reads like a banknote — security threads, hidden patterns, gold stamping, and UV-fluorescent marks; a Guangzhou woman spends ¥3,200 at a 'consumer aid expo' on a jade bracelet that turns out to be a B+C blackmail-treated fake, and the seller's license shows... vegetable sales; the State Council Information Office reports solid Jan-Aug oil-and-gas additions this year with Anhui's Chatting copper-gold and Guizhou's Zhugutang lead-zinc mines confirmed as super-large deposits, and a new round of mineral 'breakthrough' is coming under the 15th Five-Year Plan; Anhui flower-drum-lantern inheritor Feng Taixin welcomes the viral 'sidestep dance' — a classic basic of the discipline born along the Huai River — as young people flood in with covers; Israeli PM Netanyahu, before flying to the UN General Assembly in New York, fires back at Mayor Mamdani for 'backing Hamas' and 'inciting antisemitism,' calling him 'shameful,' after the mayor branded him a war criminal and urged enforcement of an ICC arrest warrant; and A-shares' lowest-priced IPO of the year, Kaida Heavy Industry at ¥4.26, opens up a stunning 580.75% on the Beijing exchange.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "马斯克建议：有时间一定要去中国",
+          en: "Musk to the World: Make Time for China",
+        },
+        description: {
+          zh: "央视专访中称赞曾乘高铁从北京到西安体验很棒、兵马俑是世界奇迹之一，'中国太棒了'。",
+          en: "In a CCTV interview he raves about a Beijing-Xi'an high-speed ride and calls the terracotta warriors a world wonder — 'China is amazing.'",
+        },
+      },
+      {
+        title: {
+          zh: "'China Haul'火了：空箱来，满载归",
+          en: "'China Haul' Goes Viral: Empty In, Loaded Out",
+        },
+        description: {
+          zh: "外国游客拖着空行李箱来华满载国货而归；背后是制造品质提升与入境、支付、退税体验顺畅，游客'用钱包投票'。",
+          en: "Tourists fly in with empty luggage and fly out stuffed; upgraded quality plus smooth entry, payments, and tax refunds mean they're voting with their wallets.",
+        },
+      },
+      {
+        title: {
+          zh: "安徽、河南、福建省委书记调整",
+          en: "Party Secretaries Reshuffled Across Three Provinces",
+        },
+        description: {
+          zh: "中央决定：李乐成任安徽省委书记，周祖翼任河南省委书记，赵龙任福建省委书记。",
+          en: "Li Lecheng takes Anhui, Zhou Zuyi takes Henan, and Zhao Long takes Fujian, per the Central Committee.",
+        },
+      },
+      {
+        title: {
+          zh: "班主任发准考证照，7 名同学志愿被改",
+          en: "Posted Exit-Slip Photo Let a Student Rewrite 7 Applications",
+        },
+        description: {
+          zh: "孙某趁班主任误发班级群的含密码准考证照篡改 7 人志愿、致其错失录取，已被判刑一年半；本次判决其再赔约 2.3 万、学校赔 1.7 万。",
+          en: "Leveraging a photo of a password-bearing exit slip posted to the class group, Sun rewrote seven classmates' college choices; now serving 18 months, he's assessed another ¥23K and the school ¥17K.",
+        },
+      },
+      {
+        title: {
+          zh: "11 岁男孩一口流利英语帮邻居谈下大单",
+          en: "An 11-Year-Old Clinches a Big Deal in Fluent English",
+        },
+        description: {
+          zh: "义乌吉米 6 岁起学英语、已坚持输出 4500 多次，在夜市与外国顾客交流助邻居拿下大单。",
+          en: "Yiwu's Jimmy, learning since six with 4,500+ practice sessions, works a night-market foreign customer into a winner for a neighbor stall.",
+        },
+      },
+      {
+        title: {
+          zh: "超长肉夹馍来了：煎饼果子、驴肉火烧也跟上",
+          en: "Super-Long Roujiamo Spawns a Whole Family of Giants",
+        },
+        description: {
+          zh: "渭南商家推出长四五十厘米、售 20 元的'超长肉夹馍'（约等于 5 个）；夸张外形自带打卡属性为门店引流。",
+          en: "Weinan's 40-50cm ¥20 'super-long roujiamo' (≈5 normal ones) seeds copycat giants; outrageous shapes double as selfie bait.",
+        },
+      },
+      {
+        title: {
+          zh: "男子被当'赠品'卖进电诈园区，79 天获救",
+          en: "Trafficked as a 'Freebie' Into a Scam Compound, Rescued in 79 Days",
+        },
+        description: {
+          zh: "刘修洪赴泰收货款遭绑、被掳缅甸电诈园区；因超龄不好卖被搭售，凭中医技能少受打骂，姐姐花三十多万营救。",
+          en: "Kidnapped collecting a Thai payment, Mianzhu's Liu was trafficked into a Myanmar compound; too old to sell, he went as a freebie, used TCM skills to soften abuse, and his sister bought his freedom for ¥300K+.",
+        },
+      },
+      {
+        title: {
+          zh: "日本'台积电之城'变'鬼城'",
+          en: "Japan's 'TSMC Town' Looks a Lot Like a Ghost City",
+        },
+        description: {
+          zh: "熊本菊阳町地价飙升、公寓旅馆林立，但晚间鲜有亮灯，中介称'宛如鬼城无人居住'。",
+          en: "Kumamoto's Kikuyo-machi saw land values and apartment blocks balloon, yet night lights are rare — agents call it a silent town.",
+        },
+      },
+      {
+        title: {
+          zh: "合肥交警隔空怒吼救下一家三口",
+          en: "A Helfei Officer's Roar Saves a Family of Three",
+        },
+        description: {
+          zh: "故障车乘员翻出护栏后欲返回拿外套，交警急呼'你要不要命了'制止并引导前行，避免被撞风险。",
+          en: "As the stranded family's passenger tried to slip back inside for a coat, the officer's bellow 'Do you want to die?!' pushed them forward to safety.",
+        },
+      },
+      {
+        title: {
+          zh: "28 岁韩国短道速滑名将金建宇去世",
+          en: "Skater Kim Geon-woo Dies Suddenly at 28",
+        },
+        description: {
+          zh: "讣告未提死因；他曾获世界杯 1500 米总积分第一、历经停赛与复出，于米兰冬奥选拔列第八无缘入选。",
+          en: "No cause given; a former World Cup 1500m total-points leader who retired in June after a suspension-and-comeback arc, he fell at 8th in Milan Olympic trials.",
+        },
+      },
+      {
+        title: {
+          zh: "六神花露水拿在手里像验钞",
+          en: "Florida Water Bottle Reads Like Banknote Paper",
+        },
+        description: {
+          zh: "新版包装带安全线、暗纹、烫金浮雕，紫外光下显荧光，网友戏称'拿在手里像在验钞'。",
+          en: "Security threads, hidden patterns, gold stamping, and UV glow have netizens joking the bottle is counterfeit-proof.",
+        },
+      },
+      {
+        title: {
+          zh: "消费帮扶展 3200 元买到假翡翠",
+          en: "A ¥3,200 'Aid Expo' Jade Turned Out to be Fake",
+        },
+        description: {
+          zh: "郑女士在'消费帮扶展'购得 B+C 人工处理假玉镯；卖家经营资质竟是销售蔬菜。",
+          en: "The bracelet was B+C lab-treated; worse, the seller's business license lists... vegetables.",
+        },
+      },
+      {
+        title: {
+          zh: "中国发现超大型铜金矿",
+          en: "China Confirms Super-Large Copper-Gold Ore",
+        },
+        description: {
+          zh: "1-8 月油气新增储量可观；安徽茶亭铜金矿、贵州猪拱塘铅锌矿探明为超大型矿床，'十五五'推进新一轮找矿突破。",
+          en: "Anhui's Chatting copper-gold and Guizhou's Zhugutang lead-zinc deposits are confirmed super-large; a fresh mineral-breakthrough push lands in the 15th plan.",
+        },
+      },
+      {
+        title: {
+          zh: "非遗'闪身步'爆火，传承人回应",
+          en: "The 'Sidestep Dance' Goes Viral; Inheritor Responds",
+        },
+        description: {
+          zh: "'闪身步'是起源于沿淮地区的安徽花鼓灯经典基本功；传承人冯太新看到年轻人喜爱翻拍感到欣慰。",
+          en: "A signature Anhui flower-drum move born along the Huai River; inheritor Feng Taixin is heartened by the young fans' covers.",
+        },
+      },
+      {
+        title: {
+          zh: "内塔尼亚胡隔空威胁纽约市长",
+          en: "Netanyahu Slams New York's Mayor From a Distance",
+        },
+        description: {
+          zh: "赴纽约出席联大前发视频，斥马姆达尼'支持哈马斯、煽动反犹'并连称'可耻'；此前市长呼吁执行国际刑事法院逮捕令。",
+          en: "Ahead of the UNGA he calls Mamdani 'shameful' for 'backing Hamas and inciting antisemitism,' days after the mayor urged enforcing the ICC warrant.",
+        },
+      },
+      {
+        title: {
+          zh: "A 股年内最低价新股开盘大涨 580.75%",
+          en: "Year's Cheapest New Listing Opens +580.75%",
+        },
+        description: {
+          zh: "凯达重工以 4.26 元发行价（年内最低）在北交所上市，开盘大涨 580.75%。",
+          en: "Kaida Heavy Industry, priced at ¥4.26 — the year's lowest — debuts on BSE with a blazing 580.75% open.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-22",
     date: "2026-09-22",
     title: {
