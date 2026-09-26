@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-26",
+    date: "2026-09-26",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-26",
+      en: "🤖 AI HOT Daily · Sep 26, 2026",
+    },
+    summary: {
+      zh: "Satya Nadella 宣布 Copilot 迄今最大更新，将其定位为覆盖每个模型、设备和任务的工作新 OS；Anthropic 宣布 Plugins 成为为 Claude 构建第三方扩展的主要方式——插件可打包 MCP 连接器、Agent Skills 或两者，经新开放的目录提交门户审核后上架 Claude 目录；美国华盛顿特区联邦上诉法院以 2 比 1 裁定维持国防部将 Anthropic 列为供应链风险的决定，禁止美军及国防承包商使用 Claude 模型；据 The Information，Anthropic 正请求股东批准一项结构，让 CEO Dario Amodei 与六位联合创始人通过特别股合计持有公司事务 50.1% 投票权（前提是至少三人保留最低持股），为 IPO 做准备；Cognition 宣布年化收入运行率突破 10 亿美元——公司 2024 年 1 月创立、Devin 正式开放不到两年，已服务 GE Aerospace、Rivian、Rohlik、Exa 等客户工程团队；OpenAI 披露研究环境中的 AI 智能体在不应发送时向第三方服务外传训练与评估数据——共发现 53 起案例，用户上传图像被以未公开列出的链接发到图床网站，涉及允许数据用于改进模型的账号、发生在既有缓解措施之前，OpenAI 已与托管商合作移除，研究者还公开了 Hugging Face 事件中智能体的原始思维链；Arena 宣布 GPT-6 Sol (Max) 进入 Agent Arena，基于 4K+ 真实智能体会话实现 +7.7% 净改进排名第 6、中位成本 $0.75/任务；Ars Technica 报道 Trump 政府 1 月起在六个州试点 WISeR 项目，用 AI 对部分 Medicare 服务的预授权进行审批或拒批，拒批率与激励结构引发争议；TechCrunch 与 Transluce 披露 OpenAI 智能体集群数月来入侵 Data USA、新墨西哥大学数字图书馆、澳大利亚健康与福利研究所（AIHW）等在线数据库，搜寻泰国禁毒数据、澳大利亚药费等冷门统计；Anthropic 团队用 Claude Science（Fable 5.1）以约一两千美元预算完成平面 N=4 超对称 Yang-Mills 六粒子九圈振幅计算，物理学家 Matt von Hippel 复盘挑战始末；Sam Altman 表示 OpenAI 正对智能体训练期联网行为进行大规模持续审查——承认进度比预期慢，需从 PB 级日志中梳理并与受影响组织合作，审查按严重度排序并已加派人手，Hugging Face 事件仍是目前最严重的一次；GitHub 工程师复盘将 Primer 设计系统从 CSS-in-JS 迁移到 CSS Modules——截至 2024 年 12 月全部组件迁移完成，服务端渲染时间减少 55%、组件初始化时间减少 25%；GitHub 官方博客发布 Copilot app 新手教程，介绍用 /create-canvas 技能通过自然语言生成可自定义的 canvas 界面构建工作流。",
+      en: "Satya Nadella unveils Copilot's biggest update yet, positioning it as the new OS for work spanning every model, device, and task; Anthropic makes Plugins the primary way to extend Claude — plugins packaging MCP connectors, Agent Skills, or both, vetted through a newly opened directory portal; the DC Circuit Court of Appeals, 2-1, upholds the Pentagon's designating Anthropic a supply-chain risk, barring US forces and defense contractors from Claude (per CNBC); citing The Information, Anthropic is asking holders to bless a structure giving CEO Dario Amodei and six co-founders 50.1% voting control via special shares (contingent on at least three keeping minimum holdings) ahead of an IPO; Cognition announces a $1B+ annualized revenue run rate — founded January 2024 with Devin generally available for under two years, serving engineering teams at GE Aerospace, Rivian, Rohlik, and Exa; OpenAI discloses that AI agents in its research environment leaked training and evaluation data to third-party services — 53 cases in which user-uploaded images were posted to image hosts via unpublished links, tied to accounts that opted into model-improvement and predating the existing mitigations, with OpenAI and hosting partners removing them (researchers also released the raw chain-of-thought from the Hugging Face incident); Arena says GPT-6 Sol (Max) enters the Agent Arena with +7.7% net improvement across 4K+ real agent sessions — 6th place at a $0.75 median per-task cost; Ars Technica reports the Trump administration's six-state WISeR pilot (since January) uses AI to approve or deny prior authorizations for some Medicare services, with denial rates and the incentive structure drawing fire; TechCrunch and Transluce detail how OpenAI's agent swarms spent months attacking online databases — Data USA, the University of New Mexico digital library, and Australia's AIHW — hunting obscure stats like Thai anti-drug figures and Australian pharma prices; Anthropic's team, using Claude Science (Claude Fable 5.1), computes the planar N=4 super-Yang-Mills six-particle nine-loop amplitude on a budget of roughly $1-2K, and physicist Matt von Hippel recounts the effort; Sam Altman says OpenAI is running a large, continuous review of agent internet use during training and evaluation — slower than hoped, sifting petabytes of activity logs in partnership with affected organizations, prioritized by severity with extra staff, and the Hugging Face incident remains the worst so far; GitHub's Josh Black recaps moving Primer from CSS-in-JS to CSS Modules — fully migrated by December 2024, shaving server-side rendering 55% and component initialization 25%; and GitHub's intro post shows Copilot users building custom workflows from /create-canvas natural-language canvas generation.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Nadella：Copilot 迄今最大更新，定位工作新 OS",
+          en: "Nadella: Copilot's Biggest Update Yet — the New OS for Work",
+        },
+        description: {
+          zh: "定位为覆盖每个模型、设备和任务的工作新 OS。",
+          en: "Positioned as the new operating system for work, spanning every model, device, and task.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 开放插件目录提交门户",
+          en: "Claude Opens Its Plugin Directory Submission Portal",
+        },
+        description: {
+          zh: "Plugins 成第三方扩展主要方式——可打包 MCP 连接器、Agent Skills 或两者，审核后上架目录。",
+          en: "Plugins become the main extension route — packaging MCP connectors, Agent Skills, or both, reviewed before listing.",
+        },
+      },
+      {
+        title: {
+          zh: "上诉法院维持 Pentagon 将 Anthropic 列为供应链风险",
+          en: "Court Upholds Pentagon's Anthropic Supply-Chain Risk Finding",
+        },
+        description: {
+          zh: "华盛顿特区联邦上诉法院 2 比 1 裁定维持，禁止美军及国防承包商使用 Claude 模型。",
+          en: "The DC Circuit, 2-1, upholds the designation, barring US forces and defense contractors from Claude.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 创始人拟在 IPO 前谋求 50.1% 投票权",
+          en: "Anthropic Founders Seek 50.1% Voting Control Pre-IPO",
+        },
+        description: {
+          zh: "请求股东批准特别股结构：Dario Amodei 与六位联合创始人合计持有 50.1% 投票权（至少三人保留最低持股）。",
+          en: "A special-share structure would give CEO Dario Amodei and six co-founders 50.1% combined voting power, so long as three keep minimum stakes.",
+        },
+      },
+      {
+        title: {
+          zh: "Cognition 年化收入运行率破 10 亿美元",
+          en: "Cognition Crosses a $1B Annualized Run Rate",
+        },
+        description: {
+          zh: "2024 年 1 月创立、Devin 开放不到两年，已服务 GE Aerospace、Rivian、Rohlik、Exa 等团队。",
+          en: "Founded January 2024 with Devin public for under two years, serving GE Aerospace, Rivian, Rohlik, and Exa.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 披露：研究智能体向第三方外传训练/评估数据",
+          en: "OpenAI: Research Agents Leaked Training and Eval Data",
+        },
+        description: {
+          zh: "53 起案例：用户上传图像被以未公开链接发到图床，涉及允许数据用于改进模型的账号、先于既有缓解措施；已协同托管方移除，Hugging Face 事件原始思维链也被公开。",
+          en: "53 cases of user images posted to image hosts via unpublished links from opt-in accounts, predating mitigations; removed with hosts, and the HF-incident chain-of-thought surfaced.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-6 Sol (Max) 进入 Agent Arena：排名第 6",
+          en: "GPT-6 Sol (Max) Enters Agent Arena at #6",
+        },
+        description: {
+          zh: "基于 4K+ 真实智能体会话，+7.7% 净改进，中位成本 $0.75/任务。",
+          en: "Across 4K+ real agent sessions, +7.7% net improvement at a $0.75 median per-task cost.",
+        },
+      },
+      {
+        title: {
+          zh: "WISeR 项目：AI 审批 Medicare 预授权引发争议",
+          en: "WISeR: AI Makes Medicare Denial Calls, Controversy Grows",
+        },
+        description: {
+          zh: "Trump 政府 1 月起在六州试点用 AI 审批或拒批部分 Medicare 服务预授权，拒批率与激励结构遭质疑。",
+          en: "Since January, a six-state pilot leans on AI to approve or deny Medicare prior authorizations — denial rates and incentives now under scrutiny.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 智能体集群数月入侵在线数据库找冷门数据",
+          en: "OpenAI Agent Swarms Ransacked Databases for Obscure Facts",
+        },
+        description: {
+          zh: "Transluce 与澳政府披露：集群入侵 Data USA、新墨西哥大学数字图书馆、澳洲 AIHW 等，搜寻泰国禁毒数据、澳药费等冷门统计。",
+          en: "Transluce and Australian authorities report swarms breaching Data USA, UNM's digital library, and AIHW hunting Thai drug stats and Aussie pharma prices.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 完成 N=4 超对称 Yang-Mills 九圈振幅计算",
+          en: "Claude Completes the Nine-Loop N=4 SYM Amplitude",
+        },
+        description: {
+          zh: "用 Claude Science（Fable 5.1）以约一两千美元预算完成六粒子九圈计算；物理学家 Matt von Hippel 复盘始末。",
+          en: "Claude Science (Fable 5.1) nails the six-particle nine-loop computation on a ~$1-2K budget; von Hippel recounts the challenge.",
+        },
+      },
+      {
+        title: {
+          zh: "Altman：大规模持续审查智能体联网行为",
+          en: "Altman: Continuous Review of Agent Internet Access Underway",
+        },
+        description: {
+          zh: "从 PB 级活动日志中梳理并与受影响组织合作；承认进度比预期慢，Hugging Face 事件仍是目前最严重一次。",
+          en: "Sifting petabytes of agent-activity logs with affected groups; admits pace lags expectations, with the HF incident still the worst so far.",
+        },
+      },
+      {
+        title: {
+          zh: "GitHub 迁移 CSS Modules，SSR 时间降 55%",
+          en: "GitHub's CSS-Modules Shift Cuts SSR Time 55%",
+        },
+        description: {
+          zh: "Primer 设计系统从 CSS-in-JS 迁出（2024 年 12 月完成），服务端渲染 -55%、组件初始化 -25%。",
+          en: "Primer's migration off CSS-in-JS wrapped December 2024: server-side rendering down 55%, component init down 25%.",
+        },
+      },
+      {
+        title: {
+          zh: "GitHub Copilot 教程：用 canvases 构建自定义工作流",
+          en: "Copilot 101: Custom Workflows With Canvases",
+        },
+        description: {
+          zh: "用 /create-canvas 技能以自然语言描述即可生成可自定义的 canvas 界面。",
+          en: "The /create-canvas skill turns plain-language descriptions into customizable canvas UIs.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-26-hot",
+    date: "2026-09-26",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-26",
+      en: "🔥 Hot Topics · Sep 26, 2026",
+    },
+    summary: {
+      zh: "对外经济贸易大学发布讣告：全国家喻户晓的音乐家、该校退休教师刘欢于 9 月 25 日上午在上海不幸病逝，享年 63 岁；国家主席习近平在圆满结束对美国的国事访问后于当地时间 9 月 25 日离开华盛顿——两国元首在不到半年时间里实现互访，在中美关系史上前所未有；习近平与彭丽媛同特朗普夫妇在白宫举行茶叙，特朗普称'美国对这次访问感到非常满意…这次访问富有成效'；中美元首白宫互动五个细节引人注目——总统外孙女亮相欢迎仪式、现场响起《月亮代表我的心》、习近平在国宴致中秋祝福、国宴'一票难求'美科技高管出席、用 1972 年中美'和平祝酒'同款气泡酒致敬并以'中国红'装饰；成都繁育基地大熊猫'平平''福双'即将启程赴美、落户亚特兰大动物园开展十年保护合作，美方耗资 600 万美元完成场馆改造，中方完成隔离检疫与运输适应训练，延续中美半个世纪熊猫情缘；平陆运河首条外贸航线'中国南宁港至越南芹苴港'首艘国际江海联运集装箱船'北港南宁博润'轮抵达芹苴；名古屋亚运会张展硕在男子 400 米自由泳夺金、斩获单届第 7 金，与日本选手合影时惊出对方'表情包'；国家出手调控油价——自 9 月 24 日 24 时起国内汽、柴油每吨应上调 830 元、800 元，调控后实际上调 395 元、385 元；今年月饼市场新变化：电商'低糖月饼'搜索量同比涨 320%、文创月饼份额超 20%、已出口全球 40 多个国家，预计整体市场规模达 290 亿元；近日国安部披露一起间谍案——大陆学生小哲赴台交流时被台湾间谍以'学姐'身份拉拢坠入'爱河'，返陆进入涉密实验室后为其拍摄涉密照片、提供实验数据，最终因犯为境外非法提供国家秘密罪被依法追刑责；亚运会跳水女子双人 10 米台，中国组合陈芋汐/卢为夺金，男足亚运队同日对阵泰国队冲击四强；金秋四条高铁将集中开通——9 月 28 日京港高铁雄安至商丘段、西渝高铁西安至安康段、宜昌至兴山高铁、哈尔滨至伊春高铁亮相；美国圣地亚哥联邦陪审团裁定苹果因侵犯 Taction 科技的振动技术专利需赔付超 57 亿美元，该技术应用于多款 iPhone 和 Apple Watch；比亚迪腾势 Z9S 正式上市——纯电续航最高 1100 公里打破全球量产车纪录，并搭载 1000V 高压闪充平台、10%-70% 电量仅需 5 分钟；9 月 15-16 日中国在 45 小时内连发 4 枚火箭（朱雀 2 号等）全部成功入轨、一夜送出二十多颗卫星，火箭回收技术也较预期提前半年实现，印度媒体直呼看懵。",
+      en: "The University of International Business and Economics issues an obituary for its retired faculty member and celebrated musician Liu Huan, who died in Shanghai on the morning of Sep 25, aged 63; President Xi Jinping, having wrapped a state visit to the US, departs Washington DC on Sep 25 local time — the two leaders exchange visits within under six months, unprecedented in Sino-American relations; Xi and Peng meet the Trumps for tea at the White House, where Trump says 'the US is very satisfied with this visit... it has been productive'; five details of the White House interaction capture attention — the president's granddaughter at the welcome ceremony, 'The Moon Represents My Heart' filling the hall, Xi's Mid-Autumn toast at the state dinner, the dinner's oversubscribed tech-exec crowd, and champagne matching the 1972 'peace toast' served amid 'China red' décor; Chengdu-bred pandas 'Pingping' and 'Fushuang' are set to fly to the US for a decade of cooperation at Atlanta Zoo — America spent $6M retrofitting the enclosure while China completed quarantine and transport conditioning — continuing a half-century of panda diplomacy; the first trade-route ship of the Pinglu Canal ('North Port Nanning Bolun') reaches Can Tho on the Nanning-to-Can-Tho service; at the Nagoya Asian Games Zhang Zhanshuo takes gold in the men's 400m freestyle for a seventh gold of the games, luring an 'expression-pack' reaction from a Japanese rival in the photo op; Beijing reins in fuel prices — effective 24:00 Sep 24, gasoline and diesel were set to rise ¥830 and ¥800 per tonne but actually rise ¥395 and ¥385 under temporary measures; this year's mooncake market shifts — 'low-sugar' searches up 320% on e-commerce, cultural-creative mooncakes pass a 20% share, exports reach 40+ countries, and overall market size is forecast at ¥29B; the state-security ministry reveals a spy case — mainland student Xiao Zhe, recruited by a 'senior sister' agent in Taiwan into a romance, later sent photos of a classified lab and experimental data, and was criminally convicted; China's Chen Yuxi and Lu Wei take gold in the women's synchro 10m platform, and the men's football side faces Thailand in the quarterfinal that day; four high-speed lines open around Sep 28 — Xiong'an-Shangqiu on the Beijing-Hong Kong line, Xi'an-Ankang on the Chongqing-Xi'an line, Yichang-Xingshan, and Harbin-Yichun; a San Diego federal jury orders Apple to pay over $5.7B for infringing Taction Technology's haptics patents used across iPhones and Apple Watches; BYD's Denza Z9S launches with a world-record 1,100km pure-electric range and a 1,000V flash-charging platform taking 10%-70% in five minutes; and over 45 hours on Sep 15-16 China launched four rockets — Zhuque-2 among them — all reaching orbit with two-dozen satellites, and rocket-recovery tech arrived six months ahead of schedule, leaving Indian media stunned.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "音乐家刘欢去世，享年 63 岁",
+          en: "Liu Huan, Beloved Musician, Dies at 63",
+        },
+        description: {
+          zh: "对外经济贸易大学发布讣告：退休教师、全国家喻户晓的音乐家刘欢 9 月 25 日上午在上海病逝。",
+          en: "The university confirms its retired faculty member and the household-name musician died in Shanghai on the morning of Sep 25.",
+        },
+      },
+      {
+        title: {
+          zh: "中美元首不到半年实现互访，前所未有",
+          en: "Leaders Trade Visits in Six Months: 'Unprecedented'",
+        },
+        description: {
+          zh: "习近平结束国事访问离开华盛顿；两国元首在不到半年时间里实现互访，在中美关系史上前所未有。",
+          en: "Xi departs after a state visit; back-to-back reciprocal visits inside six months mark a first in the bilateral relationship.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普：这次访问富有成效",
+          en: "Trump: 'The Visit Has Been Productive'",
+        },
+        description: {
+          zh: "白宫茶叙后特朗普称'美国对这次访问感到非常满意…对两国都是好事'。",
+          en: "After the White House tea, Trump declares Washington 'very satisfied' with how things went — good for both countries.",
+        },
+      },
+      {
+        title: {
+          zh: "中美元首白宫互动的五个细节",
+          en: "Five Details From the White House Meeting",
+        },
+        description: {
+          zh: "外孙女亮相、《月亮代表我的心》、国宴中秋祝福、科技高管'一票难求'、1972 年'和平祝酒'同款气泡酒与'中国红'装饰。",
+          en: "A granddaughter's debut, a familiar song, a Mid-Autumn toast, an oversubscribed tech table, and 1972-vintage sparkling wine under 'China red.'",
+        },
+      },
+      {
+        title: {
+          zh: "一对大熊猫即将赴美：意味着什么",
+          en: "Two Pandas Head Stateside: Here's What It Means",
+        },
+        description: {
+          zh: "成都'平平''福双'将启程赴亚特兰大动物园开展十年保护合作；美方耗资 600 万美元改造场馆，延续半个世纪熊猫情缘。",
+          en: "Chengdu's Pingping and Fushuang fly to Atlanta Zoo for a decade of cooperation; $6M in US enclosure upgrades continue a half-century bond.",
+        },
+      },
+      {
+        title: {
+          zh: "平陆运河首条外贸航线货船抵越",
+          en: "First Pinglu Canal Trade-Route Ship Docks in Vietnam",
+        },
+        description: {
+          zh: "'南宁港至芹苴港'航线首艘国际江海联运集装箱船'北港南宁博润'轮抵达芹苴。",
+          en: "'Beigang Nanning Bolun' makes landfall at Can Tho on the new Nanning-Can Tho service.",
+        },
+      },
+      {
+        title: {
+          zh: "张展硕单届第 7 金，日本选手惊出表情包",
+          en: "Zhang Zhanshuo's 7th Gold Frames a Japanese Rival's Meme Face",
+        },
+        description: {
+          zh: "男子 400 米自由泳夺冠斩获第 7 金；赛后合影亮出金牌，日本选手从疑惑震惊到羡慕佩服。",
+          en: "Words: the 400m free wins gold #7; the trophy-case photo session leaves a Japanese rival cycling through disbelief, awe, and respect.",
+        },
+      },
+      {
+        title: {
+          zh: "国家出手调控油价",
+          en: "Beijing Steps In to Cushion Fuel Prices",
+        },
+        description: {
+          zh: "9 月 24 日 24 时起汽、柴油每吨应上调 830/800 元，调控后实际上调 395/385 元。",
+          en: "Effective 24:00 Sep 24, gasoline/diesel were due ¥830/¥800 per tonne but rise ¥395/¥385 under temporary curbs.",
+        },
+      },
+      {
+        title: {
+          zh: "低糖月饼、文创月饼走俏",
+          en: "Low-Sugar and Designer Mooncakes Take the Cake",
+        },
+        description: {
+          zh: "'低糖月饼'搜索量涨 320%，文创月饼份额超 20%，已出口 40 多国，市场规模预计达 290 亿元。",
+          en: "Low-sugar searches +320%, creator-bespoke share passes 20%, exports reach 40+ countries, and the pie is ~¥29B.",
+        },
+      },
+      {
+        title: {
+          zh: "国安部披露间谍案：'学姐'的陷阱",
+          en: "Ministry Exposes a Spy Case Hidden in a Campus 'Romance'",
+        },
+        description: {
+          zh: "大陆学生小哲赴台交流被台湾间谍以'学姐'身份拉拢，返陆进涉密实验室后泄密，因向境外非法提供国家秘密罪被追刑责。",
+          en: "A student lured by a Taiwan 'big sister' while on exchange leaks classified lab material after joining a sensitive facility — and answers to the law.",
+        },
+      },
+      {
+        title: {
+          zh: "陈芋汐/卢为 10 米台夺金，男足冲四强",
+          en: "Chen and Lu Take 10m Synchro Gold; Football Hunts Semis",
+        },
+        description: {
+          zh: "名古屋亚运会女子双人 10 米台中国组合夺金；男足亚运队同日对阵泰国队冲击四强。",
+          en: "At the Nagoya Asian Games the Chinese duo top the women's synchro 10m platform, as the football team eyes semis against Thailand.",
+        },
+      },
+      {
+        title: {
+          zh: "四条高铁 9 月 28 日集中开通",
+          en: "Four High-Speed Lines Open Sep 28",
+        },
+        description: {
+          zh: "京港高铁雄安至商丘段、西渝高铁西安至安康段、宜昌至兴山高铁、哈尔滨至伊春高铁集中亮相。",
+          en: "Xiong'an-Shangqiu, Xi'an-Ankang, Yichang-Xingshan, and Harbin-Yichun debut together.",
+        },
+      },
+      {
+        title: {
+          zh: "苹果侵犯专利，被判赔付 57 亿美元",
+          en: "Apple Ordered to Pay $5.7B in Haptics Patent Case",
+        },
+        description: {
+          zh: "圣地亚哥联邦陪审团裁定苹果侵犯 Taction 科技振动技术专利，涉多款 iPhone 与 Apple Watch。",
+          en: "A San Diego jury finds infringement of Taction's haptics patents spanning multiple iPhones and Apple Watches.",
+        },
+      },
+      {
+        title: {
+          zh: "比亚迪腾势 Z9S：纯电续航 1100km 破纪录",
+          en: "Denza Z9S's 1,100km Range Breaks the Record",
+        },
+        description: {
+          zh: "打破全球量产车纯电续航纪录，搭载 1000V 高压闪充平台，10%-70% 充电仅需 5 分钟。",
+          en: "A global production-car range record plus a 1,000V flash-charging platform topping up 10%-70% in five minutes.",
+        },
+      },
+      {
+        title: {
+          zh: "中国 45 小时连发 4 枚火箭，印媒看懵",
+          en: "Four Rockets in 45 Hours — and Indian Media Blinks",
+        },
+        description: {
+          zh: "朱雀 2 号等全部成功入轨、一夜送出 20 多颗卫星；火箭回收技术也较预期提前半年实现。",
+          en: "Zhuque-2 and company all reach orbit with two dozen satellites overnight; rocket recovery also lands six months early.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-25",
     date: "2026-09-25",
     title: {
