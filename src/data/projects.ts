@@ -293,6 +293,18 @@ export const projects: Project[] = [
     tags: ["latest", "game"],
   },
   {
+    id: "web-tidewater",
+    titleKey: "game.tidewaterTitle",
+    descKey: "game.tidewaterDesc",
+    category: "webgame",
+    platform: "web",
+    status: "new",
+    logoUrl: "/avatars/tidewlogo.png",
+    liveUrl: "/tidewater/index.html",
+    publishedAt: "2026-09-26T00:00:00+08:00",
+    tags: ["latest", "game"],
+  },
+  {
     id: "dapp-ruok",
     title: "Are You Okay?",
     titleKey: "dapp.areYouOkay",

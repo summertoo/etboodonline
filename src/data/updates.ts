@@ -17,6 +17,30 @@ export interface SiteUpdateItem {
 
 export const siteUpdates: SiteUpdateItem[] = [
   {
+    id: "2026-09-26-tidewater-game",
+    date: "2026-09-26",
+    title: {
+      zh: "网页游戏《海滩休闲钓鱼 TideWater》已上线",
+      en: "TideWater (Beach Relax Fishing) Is Now Live",
+    },
+    summary: {
+      zh: "新增热带海滩钓鱼网页游戏：驾船出海钓大鱼、在日落前卖鱼给码头乔伊，并支持在船屋升级装备。",
+      en: "A new tropical beach fishing web game: take the boat out, land big fish, and sell your catch to Joe before dark — with upgrades at Marta's boathouse.",
+    },
+    details: {
+      zh: [
+        "新增《海滩休闲钓鱼 TideWater》网页游戏入口，归类到 Web Games。",
+        "3D 海岸场景，可步行、驾船并在浅滩/珊瑚礁/深水区钓鱼，支持中英文切换与装备升级。",
+        "首页网页游戏区与项目页筛选列表已同步显示该游戏。",
+      ],
+      en: [
+        "Added TideWater (Beach Relax Fishing) as a new web game entry.",
+        "A 3D coastal scene lets you walk the beach, pilot the boat, and fish the shallows, reef, and deep water with a bilingual UI and gear upgrades.",
+        "It now appears in both the homepage web games section and the project listing.",
+      ],
+    },
+  },
+  {
     id: "2026-06-04-hotdance-game",
     date: "2026-06-04",
     title: {

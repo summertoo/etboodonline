@@ -207,6 +207,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.spTitle": "⌨️ 双拼打字练习",
     "game.spDesc":
       "Practice Chinese Shuangpin double-pinyin typing! Master the Microsoft and Xiaohe schemes with a clear on-screen keyboard map, instant feedback on every keystroke, and a timed race mode.",
+    "game.tidewaterTitle": "🏝️ TideWater",
+    "game.tidewaterDesc":
+      "A relaxing beachside fishing game! Take the boat out, work the reef and the deep water, fight your catch, and sell it to Joe's fish stand before dark — with upgrades from Marta's boathouse and bilingual UI.",
 
     // DApp descriptions
     "dapp.ruokDesc":
@@ -476,6 +479,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "game.spTitle": "⌨️ 双拼打字练习",
     "game.spDesc":
       "练习中文双拼打字！支持微软双拼与小鹤双拼两种方案，屏幕键位图清晰展示，即时反馈每一击键，并附计时比赛模式。",
+    "game.tidewaterTitle": "🏝️ 海滩休闲钓鱼",
+    "game.tidewaterDesc":
+      "一款轻松休闲的海滩钓鱼游戏！驾船出海，在珊瑚礁与深水区下竿，搏斗大鱼，在日落前把渔获卖给码头乔伊的鱼摊 — 可在船屋玛尔塔处升级装备，支持中英双语界面。",
     "game.crazyBirdDesc":
       "用弹弓精准发射小鸟！撞倒顽固的猪头，冲破砖块堡垒，征服基于物理引擎的趣味关卡。",
     "game.threeDMatchTitle": "🧊 立体配对",
