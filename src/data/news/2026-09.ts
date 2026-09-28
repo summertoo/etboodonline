@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-09-28",
+    date: "2026-09-28",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-09-28",
+      en: "🤖 AI HOT Daily · Sep 28, 2026",
+    },
+    summary: {
+      zh: "Authors Guild v. OpenAI 诉讼中 9 月 21 日公布的原告简报称，OpenAI 和 Microsoft 高管及员工有意使用盗版书籍训练模型，并知道其产品可能取代人类作家；澳大利亚参议院 AI 专项调查已传唤 OpenAI 的 Sam Altman 和 Anthropic 的 Dario Amodei，要求出席堪培拉的公开质询；Google 在 Gemini 3.8 Live 基础上引入 Live Avatar 功能，为实时语音对话模型叠加可互动的虚拟人像，进一步扩展语音智能体的表现力；Google 将 Gemini Omni 能力引入 Google Vids，用户可用自然语言轻松生成高清视频，大幅降低视频创作门槛；Google Beam 宣布扩展覆盖范围，新增多个区域、合作伙伴与客户；Google 揭晓 Project Suncatcher，探索把 AI 部署到太空场景，以应对地球上难以实现的全新计算与传感需求；Google 的医疗基础模型 MedGemma 正帮助全球医疗机构提升服务质量，将生成式 AI 用于临床场景的落地应用；Google 携手盖茨基金会，向全球南方 2 亿小农户提供 AI 工具与农业知识，助力提高农田生产力与生计安全；恰逢 OpenAI Academy 两周年，OpenAI 回顾其推动 AI 教育与技能普及的进展并持续把 AI 技能带给更多社区与人才；车队管理公司 Proaction 结合 Codex、GPT-Live-1 与 GPT-6 Astra，更快地构建、运营与售出现代化车队管理方案，销售提升 60% 并节省大量工时；Ringg 基于 GPT-5.6 构建多语言智能体覆盖语音、聊天、WhatsApp 与网页，以更低成本处理六成以上客服来电；Elastic 工程师用真实表格数据对比 TabPFN/TabICL 与精调 XGBoost，无需训练的 Tab 模型在 14 项对比中全胜，引发对传统表格建模工作流的讨论。",
+      en: "New plaintiff filings dated Sep 21 in Authors Guild v. OpenAI claim OpenAI and Microsoft executives and staff knowingly used pirated books to train models, aware their products could displace human writers; Australia's Senate AI inquiry summons OpenAI's Sam Altman and Anthropic's Dario Amodei to a public grilling in Canberra; Google adds Live Avatar to Gemini 3.8 Live, overlaying an interactive virtual persona on real-time voice conversations to make voice agents more expressive; Gemini Omni comes to Google Vids so anyone can generate HD video from natural language, flattening the video-creation barrier; Google Beam widens its footprint with new regions, partners, and customers; Google unveils Project Suncatcher, exploring deploying AI into space to meet computation and sensing needs impossible on Earth; MedGemma, Google's medical foundation model, helps global providers put generative AI to work in clinical settings; partnering with the Gates Foundation, Google brings AI tools and farming knowledge to 200 million smallholder farmers across the Global South; OpenAI marks two years of OpenAI Academy, widening access to AI skills for more communities and talent; fleet-management firm Proaction pairs Codex, GPT-Live-1, and GPT-6 Astra to build, run, and sell modern solutions faster — lifting sales 60% while saving hours; Ringg builds multilingual agents on GPT-5.6 across voice, chat, WhatsApp, and web, handling 65%+ of support calls at lower cost; Elastic engineers pit untrained TabPFN/TabICL against fine-tuned XGBoost on real tabular data — the training-free models win all 14 matchups, upending conventional tabular workflows.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "诉讼文件：OpenAI/Microsoft 高层早知盗版训练违法",
+          en: "Filings: OpenAI and Microsoft Execs Knew Book Piracy Was Wrong",
+        },
+        description: {
+          zh: "Authors Guild 案原告简报称，高管及员工有意用盗版书籍训练模型，并知道产品可能取代人类作家。",
+          en: "Authors Guild briefs claim execs and staff knowingly trained on pirated books, aware AI could displace human writers.",
+        },
+      },
+      {
+        title: {
+          zh: "澳参议院传唤 Altman 与 Amodei",
+          en: "Australian Senate Summons Altman and Amodei",
+        },
+        description: {
+          zh: "澳大利亚参议院 AI 专项调查要求两位 CEO 出席堪培拉公开质询。",
+          en: "The Senate's AI probe demands both CEOs appear at a public hearing in Canberra.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 3.8 Live 新增 Live Avatar",
+          en: "Gemini 3.8 Live Gains Live Avatar",
+        },
+        description: {
+          zh: "为实时语音对话模型叠加可互动虚拟人像，扩展语音智能体表现力。",
+          en: "Interactive virtual personas overlay real-time voice models, making voice agents more expressive.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini Omni 进驻 Google Vids",
+          en: "Gemini Omni Comes to Google Vids",
+        },
+        description: {
+          zh: "用自然语言轻松生成高清视频，大幅降低视频创作门槛。",
+          en: "Describe it in plain language and get HD video — creation barriers drop fast.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Beam 扩展到更多地区与伙伴",
+          en: "Google Beam Expands Reach",
+        },
+        description: {
+          zh: "新增多个区域、合作伙伴与客户，推动 AI 驱动创新应用落地。",
+          en: "New regions, partners, and customers push Google's AI-driven applications further.",
+        },
+      },
+      {
+        title: {
+          zh: "Project Suncatcher：把 AI 送入太空",
+          en: "Project Suncatcher: AI, Orbit-Bound",
+        },
+        description: {
+          zh: "Google 探索将 AI 部署到太空，应对地球上难以实现的全新计算与传感需求。",
+          en: "Google explores space-based AI for computing and sensing needs impossible on Earth.",
+        },
+      },
+      {
+        title: {
+          zh: "MedGemma 助力全球医疗机构",
+          en: "MedGemma Helps Health Providers Worldwide",
+        },
+        description: {
+          zh: "医疗基础模型将生成式 AI 用于临床场景的落地应用。",
+          en: "Google's medical foundation model puts generative AI to work in clinical settings.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 联手盖茨基金会：AI 助力 2 亿农民",
+          en: "Google and Gates Foundation: AI for 200M Farmers",
+        },
+        description: {
+          zh: "向全球南方 2 亿小农户提供 AI 工具与农业知识，提升农田生产力与生计安全。",
+          en: "AI tools and farming know-how for 200 million Global South smallholders to raise yields and livelihoods.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI Academy 两周年",
+          en: "OpenAI Academy Turns Two",
+        },
+        description: {
+          zh: "回顾 AI 教育与技能普及进展，持续把 AI 技能带给更多社区与人才。",
+          en: "Two years in, the Academy keeps spreading AI skills to more communities and talent.",
+        },
+      },
+      {
+        title: {
+          zh: "Proaction 用 Codex 销售提升 60%",
+          en: "Proaction's Codex Stack Lifts Sales 60%",
+        },
+        description: {
+          zh: "结合 Codex、GPT-Live-1 与 GPT-6 Astra 更快构建运营现代车队管理方案，节省 75+ 小时。",
+          en: "Codex, GPT-Live-1, and GPT-6 Astra speed building and selling fleet-management solutions — 60% more sales, 75+ hours saved.",
+        },
+      },
+      {
+        title: {
+          zh: "Ringg 用智能体处理六成客服来电",
+          en: "Ringg: Agents Handle 65% of Support Calls",
+        },
+        description: {
+          zh: "基于 GPT-5.6 的多语言智能体覆盖语音、聊天、WhatsApp 与网页，以更低成本处理大多数来电。",
+          en: "GPT-5.6 multilingual agents span voice, chat, WhatsApp, and web, deflecting most calls cheaper.",
+        },
+      },
+      {
+        title: {
+          zh: "TabPFN 对战精调 XGBoost：免训练 14 场全胜",
+          en: "Untrained TabPFN Beats Fine-Tuned XGBoost 14-0",
+        },
+        description: {
+          zh: "Elastic 工程师用真实表格数据对比，无需训练的 Tab 模型全胜，引发对传统建模工作流的讨论。",
+          en: "Real-data matchup: training-free tabular models sweep fine-tuned XGBoost, stirring up the tabular workflow debate.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-09-28-hot",
+    date: "2026-09-28",
+    title: {
+      zh: "🔥 今日热搜 · 2026-09-28",
+      en: "🔥 Hot Topics · Sep 28, 2026",
+    },
+    summary: {
+      zh: "欧洲人发现中国车真香——8 月中国汽车品牌占欧洲新车市场份额近 12% 创历史新高、在德国达 6.4%，54% 受访者认为其纯电技术领先；成都基地大熊猫'平平''福双'27 日启程赴美国亚特兰大动物园，中美开启新一轮大熊猫保护国际合作，美国民众热烈期盼、希望尽快与两只熊猫见面；商务部公布'300亿对300亿'有关情况——9 月 20 至 23 日中美在纽约和华盛顿举行第八轮经贸磋商，就'300亿对300亿'对等降税框架及清单达成共识，超 90% 产品免除全部加征关税；名古屋亚运会羽毛球混双半决赛爆出大冷门，凤凰组合冯彦哲/黄东萍 0 比 2 不敌西亚纳维/马尔瓦无缘决赛获得铜牌；羽毛球女单 1/8 决赛因赛程推迟至凌晨 0 时 8 分开打、0 时 49 分结束，赛场几乎无观众且接驳巴士已停运，引发印媒记者与球迷批评赛程'太荒谬'；田径男子 110 米栏陈圆将夺得冠军，直言'虽然日本选手是现役的亚洲历史第一人，但那又怎样呢，今天我是冠军'；卫冕冠军林雨薇带膝伤出战女子 100 米栏决赛，双膝半月板二度撕裂、决赛连吃 4 颗止疼药仍以 13 秒 47 位列第七，称竭尽所能问心无愧；吴艳妮在湿滑跑道起跑反应 0.192 秒垫底，后程奋力追赶以 13 秒 12 从末位追至第三摘铜，赛后与对手一一拥抱；18 岁的严子怡女子标枪第一投 70 米 46 破亚运纪录夺冠，因右脚踝伤放弃后续试投，此前厦门钻石联赛 71 米 74 距世界纪录仅差 54 厘米；乒乓球男双决赛林诗栋/黄友政 4 比 2 击败日本组合张本智和/篠塚大登首夺金牌，一日内连斩两对日本强敌，含金量超过男团；电竞将退出亚运会——2026 名古屋亚运会是电竞在亚运的最后一站，后续单独举办亚洲电子竞技与智力运动会，为电竞开辟专属赛道；教育部原党组成员、副部长鲁昕涉嫌严重违纪违法，正接受中央纪委国家监委审查调查；北京三中院一审宣判北汽集团原党委书记、董事长徐和谊受贿、洗钱案，因受贿罪被判死刑缓期二年执行、剥夺政治权利终身并没收个人全部财产；塞尔维亚总统武契奇 27 日晚发表讲话宣布辞职、正式辞去总统职务提前结束第二个任期，此前已宣布将竞选下届政府总理；莎拉·布莱曼发文悼念刘欢，称听闻死讯非常悲痛并晒出合照——两人曾于 2008 北京奥运开幕式共同演唱《我和你》，排练不足一周；第 48 届世界技能大赛 27 日晚在上海闭幕，中国代表团获 41 枚金牌、第五次位居金牌榜与团体总分世界第一，创历史最好成绩，人社部致贺电。",
+      en: "Europeans are discovering Chinese cars are genuinely good — Chinese brands hit a record ~12% of new European car sales in August (6.4% in Germany), and 54% of respondents rate their EV tech ahead; Chengdu's pandas 'Pingping' and 'Fushuang' depart for Atlanta Zoo on Sep 27 as China-US protection cooperation opens a new round, with American crowds eager to meet them; the commerce ministry unveils the '¥30B for $30B' details — the eighth round of trade talks in New York and Washington (Sep 20-23) reached consensus on reciprocal 30-billion-for-30-billion tariff cuts with over 90% of products freed of all additional tariffs; the Phoenix pair Feng Yanzhe/Huang Dongping fall 0-2 to Sianawi/Marwah in the Asian Games badminton mixed-doubles semifinal, a big upset, settling for bronze; a women's badminton singles round-of-16 was pushed to 00:08 and ended at 00:49 with the stands empty and shuttle buses gone, drawing sharp 'absurd' criticism from reporters and fans; Chen Yuanjiang wins the men's 110m hurdles and shrugs, 'the Japanese guy is the active Asian record-holder, but so what — today I'm the champion'; defending champ Lin Yuwei, racing on torn bilateral menisci, swallows four painkillers and still finishes 7th in 13.47, saying she gave it everything; Wu Yanni, worst off the blocks (0.192s) on a wet track, chases through the field to take bronze in 13.12 and hugs her rivals after; 18-year-old Yan Ziyi breaks the Games javelin record with a 70.46m first throw, skipping later attempts on an ankle injury — her Xiamen 71.74m sits just 54cm off the world mark; Lin Shidong/Huang Youzheng take men's doubles gold with a 4-2 win over Japan's Harimoto/Shinozuka after downing two Japanese pairs in one day, a win worth more than the team gold; esports leaves the Asian Games — Nagoya 2026 is its farewell edition as a standalone Asian Esports and Mind Games event opens a dedicated track; Lu Xin, former vice minister of education, is under disciplinary and supervisory review for suspected serious violations; a Beijing court hands BAIC ex-chairman Xu Heyi a suspended death sentence for bribery and money laundering with lifelong deprivation of political rights and full confiscation; Serbian President Aleksandar Vučić announces his resignation on the evening of Sep 27, ending his second term early, ahead of a planned run for prime minister; Sarah Brightman mourns Liu Huan, sharing photos of the Beijing 2008 opening-ceremony duet 'You and Me' rehearsed in under a week; and the 48th WorldSkills closes in Shanghai with China taking 41 golds — first on both the gold and overall tables for the fifth time, a historic best, saluted by the human-resources ministry.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "欧洲人发现：中国车真香",
+          en: "Europe Finds Chinese Cars Are… Actually Great",
+        },
+        description: {
+          zh: "8 月中国品牌占欧洲新车份额近 12% 创新高、德国达 6.4%；54% 受访者认为其纯电技术领先。",
+          en: "Chinese brands hit a record ~12% of Europe's new-car market in August (6.4% in Germany); 54% say their EV tech leads.",
+        },
+      },
+      {
+        title: {
+          zh: "大熊猫'平平''福双'启程赴美",
+          en: "Pandas Pingping and Fushuang Head Stateside",
+        },
+        description: {
+          zh: "成都基地两只大熊猫 27 日启程前往亚特兰大动物园，美国民众热烈期盼相见，中美开启新一轮保护合作。",
+          en: "Chengdu's duo departs for Atlanta Zoo bearing a new round of cooperation — and Americans can't wait to meet them.",
+        },
+      },
+      {
+        title: {
+          zh: "商务部公布'300亿对300亿'降税情况",
+          en: "China Reveals the $30B-for-$30B Tariff Deal",
+        },
+        description: {
+          zh: "第八轮经贸磋商达成对等降税框架共识，超 90% 产品免除全部加征关税，将履行国内程序同步实施。",
+          en: "After round eight of talks, reciprocal cuts cover ~$30B each side with 90%+ of products freed of all extra tariffs.",
+        },
+      },
+      {
+        title: {
+          zh: "亚运爆冷：凤凰组合无缘决赛",
+          en: "Upset: Phoenix Pair Miss the Badminton Final",
+        },
+        description: {
+          zh: "冯彦哲/黄东萍 0 比 2 不敌西亚纳维/马尔瓦，混双半决赛出局获得铜牌。",
+          en: "Feng/Huang lose 0-2 to Sianawi/Marwah in the mixed-doubles semifinal, settling for bronze.",
+        },
+      },
+      {
+        title: {
+          zh: "羽毛球女单凌晨 0:08 开打，观众走光",
+          en: "A 00:08 Badminton Match Plays to Empty Seats",
+        },
+        description: {
+          zh: "赛程推迟至凌晨结束，观众稀疏且接驳巴士停运，媒体与球迷批赛程'太荒谬'。",
+          en: "The late-night scheduling leaves stands bare and buses gone — reporters and fans call it 'absurd.'",
+        },
+      },
+      {
+        title: {
+          zh: "陈圆将夺 110 米栏冠军：'今天我是冠军'",
+          en: "Chen Yuanjiang: 'Today I'm the Champion'",
+        },
+        description: {
+          zh: "坦言夺冠是为出一口气，'虽然日本选手是现役亚洲历史第一人，但那又怎样呢'。",
+          en: "The 110m hurdles gold means payback: 'The Japanese star is Asia's all-time best — so what? Today I win.'",
+        },
+      },
+      {
+        title: {
+          zh: "林雨薇决赛吃 4 颗止疼药",
+          en: "Lin Yuwei: Four Painkillers to Run the Final",
+        },
+        description: {
+          zh: "半月板二度撕裂带伤出战，13 秒 47 列第七，'竭尽所能、问心无愧'。",
+          en: "Torn menisci, four painkillers, 13.47 for 7th — she says she gave every bit she had.",
+        },
+      },
+      {
+        title: {
+          zh: "吴艳妮起跑垫底，后程追至铜牌",
+          en: "Wu Yanni Rallies From Last Off the Blocks to Bronze",
+        },
+        description: {
+          zh: "湿跑道起跑反应 0.192 秒垫底，后程追至 13 秒 12 摘铜，赛后与对手一一拥抱。",
+          en: "A 0.192s reaction on a wet track, then a charge through the field to 13.12 and bronze — and hugs for her rivals.",
+        },
+      },
+      {
+        title: {
+          zh: "严子怡 70 米 46 破亚运纪录",
+          en: "Yan Ziyi's 70.46m Shatters the Games Record",
+        },
+        description: {
+          zh: "18 岁第一投即破纪录夺冠，因脚踝伤放弃后续试投；距 72.28 米世界纪录仅差 54 厘米。",
+          en: "The 18-year-old wins on her first throw, skipping more attempts on an ankle — 54cm off the world record.",
+        },
+      },
+      {
+        title: {
+          zh: "男双夺金：含金量远超男团",
+          en: "Men's Doubles Gold: Worth More Than the Team Title",
+        },
+        description: {
+          zh: "林诗栋/黄友政 4 比 2 击败张本智和/篠塚大登首夺金牌，一天内连斩两对日本强敌。",
+          en: "Lin/Huang beat Harimoto/Shinozuka 4-2, felling two Japanese pairs in a day for their first doubles gold.",
+        },
+      },
+      {
+        title: {
+          zh: "电竞将退出亚运，另设专属赛道",
+          en: "Esports Leaves the Asian Games — Onto Its Own Stage",
+        },
+        description: {
+          zh: "名古屋亚运会是电竞在亚运最后一站，后续将单独举办亚洲电子竞技与智力运动会。",
+          en: "Nagoya 2026 is esports' farewell Games; a standalone Asian Esports and Mind Games event takes over.",
+        },
+      },
+      {
+        title: {
+          zh: "教育部原副部长鲁昕被查",
+          en: "Ex-Education Deputy Minister Lu Xin Investigated",
+        },
+        description: {
+          zh: "涉嫌严重违纪违法，正接受中央纪委国家监委纪律审查和监察调查。",
+          en: "Suspected of serious discipline and law violations, she is under central disciplinary review.",
+        },
+      },
+      {
+        title: {
+          zh: "北汽原董事长徐和谊一审被判死缓",
+          en: "Ex-BAIC Chairman Xu Heyi Gets Suspended Death",
+        },
+        description: {
+          zh: "受贿罪判死缓、剥夺政治权利终身、没收个人全部财产。",
+          en: "A Beijing court hands the jailed-for-bribery ex-chairman life-with-a-two-year-reprieve plus full confiscation.",
+        },
+      },
+      {
+        title: {
+          zh: "武契奇宣布辞职",
+          en: "Vučić Announces He's Standing Down",
+        },
+        description: {
+          zh: "27 日晚宣布辞去塞尔维亚总统职务、提前结束第二个任期，此前已宣布将竞选下届政府总理。",
+          en: "The president quits his second term early on Sep 27 — ahead of a planned run for prime minister.",
+        },
+      },
+      {
+        title: {
+          zh: "莎拉·布莱曼发文悼念刘欢",
+          en: "Sarah Brightman Mourns Liu Huan",
+        },
+        description: {
+          zh: "称听闻死讯非常悲痛并晒合照；两人 2008 北京奥运开幕式合唱《我和你》，排练不足一周。",
+          en: "She shares photos of the pair's 2008 opening-ceremony 'You and Me', rehearsed in under a week.",
+        },
+      },
+      {
+        title: {
+          zh: "世界技能大赛闭幕：中国 41 金第五次登顶",
+          en: "WorldSkills: China's 41 Golds Top the Table Again",
+        },
+        description: {
+          zh: "第 48 届世赛在上海闭幕，中国代表团 41 金、第五次位居金牌榜与团体总分世界第一，人社部致贺电。",
+          en: "The 48th WorldSkills wraps in Shanghai with Team China first on golds and points for a fifth time — a historic best.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-09-27",
     date: "2026-09-27",
     title: {
