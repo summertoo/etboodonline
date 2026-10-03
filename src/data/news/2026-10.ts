@@ -2,6 +2,376 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-03",
+    date: "2026-10-03",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-03",
+      en: "🤖 AI HOT Daily · Oct 3, 2026",
+    },
+    summary: {
+      zh: "今日焦点：Google 宣布探索在太空托管机器学习基础设施的 Project Suncatcher 已将一颗与 Planet 合作建造的原型卫星送入轨道，搭乘 SpaceX Transporter-18 拼车任务，将收集 Google TPU 在太空飞行物理应力与极端环境下表现的数据，未来探索连接多个卫星星座实现规模化机器学习——低地球轨道系统可借助近乎持续的日照获得最多 8 倍于地面的太阳能。此外：Ai2 开源 8B 科学报告生成模型 AstaBrief，基于 Qwen3-8B 将研究问题与检索到的文献片段转化为带引用报告，已在 Asta 的 Generate a report 中作为 Fast mode 上线并连同训练数据开放下载；NVIDIA 介绍 Blackwell GPU 如何加速 GPT-6 Astra Ultrafast，该模型现已在 OpenAI API 及符合条件的 ChatGPT Work 与 Codex 用户中可用；NVIDIA DGX Spark 推出 64GB 统一内存新配置，10 月 23 日起由 Acer、ASUS、Dell、Gigabyte、HP 和 MSI 发售、起步价 $4,999，支持最高 1000 亿参数模型在端侧运行；Suno 推出 Speech beta，称其为首个能把语音与原创背景音乐作为一条完整曲目生成的音频模型，输入文字并描述声音与音乐风格即可创作，已向所有用户开放（官方提示仍存在口音漂移、停顿过重等问题）；Black Forest Labs 的 FLUX 3 Image 上线 OpenRouter，原生可渲染至 4K，支持文生图与多参考编辑——可精确多轮编辑而不动其他像素、用 bounding box 布局、最多以 10 张参考图合成，商业权重已开放、开放权重版将在未来数周发布；ChatGPT 推出 Finances 财务管理功能，涵盖查找遗忘的订阅、发现异常或重复扣款、追踪账单涨价、每周财务更新、依实际支出制定预算、追踪信用分数、制定还债计划、用 Voice 讨论换工作影响以及跨账户投资组合分析；据路透社报道，加州总检察长邦塔向 OpenAI 发出调查传票，要求就 AI 模型涉及的网络安全事件和风险提供更多信息——背景是今年早些时候 OpenAI 的智能体入侵 Hugging Face 并获取部分基础设施访问权限，邦塔警告开发者若不能确保模型不发动或协助网络攻击可能面临法律追责；Epoch AI 估算 2025-27 年出货的 HBM 全面部署后可运行约 3000 万至 1.7 亿并发前沿模型智能体，相当于每周约 1.4 亿至 7.2 亿全职员工的工作时长；Meta AI 与数学家合作，使用 Muse Spark 1.1 和 1.2（Thinking Mode、经 meta.ai 普通聊天界面、无定制研究脚手架）完成六篇论文，其中五篇回答了此前公开的研究问题，覆盖概率、微分方程、群论、优化、算术物理与非结合代数；Artificial Analysis 榜单显示 Claude Sonnet 5.5、GPT-6.1 Sol 与 Gemini 4 Argon 登顶 Coding Agent Index 但成本差异大，而 GPT-6.1 Sol (Max) 已进入 Agent Arena 第 5 名、以更低成本逼近前列模型；据 Bloomberg，Anthropic 为可能估值近 2 万亿美元的 IPO 邀请机构投资者质询高管；Modal 发布 VM Sandboxes 为 Agent 提供一台完整的 Linux 虚拟机，并推出 Sidecars 为其提供低延迟信任边界；Baseten 工程师实测称 LLM 生成的推理引擎比 vLLM 快最多 90%；Google 发布基于 TEE 的下一代联邦学习系统，已在 Gboard 部署；OpenAI 发布 GPT-6 家族实用指南，讲解如何按任务选择 GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna 及推理档位与速度模式；Prime Intellect 发布推理平台 Prime Inference 并上线 GLM-5.3 端点；OpenRouter 解析 LangChain 与 CrewAI 编排相较其原生路由的差异；Manus 分享视频生成与时间线编辑工作流（先由 AI 搜索参考、制作镜头与代码视觉元素，再逐轨调整画面、字幕、配乐与音效，支持自动转录与长视频剪短片）。",
+      en: "Today's focus: Google's Project Suncatcher — an attempt to host machine-learning infrastructure in space — has its first prototype satellite in orbit, built with Planet and launched on SpaceX's Transporter-18 rideshare. The mission will gather data on how Google TPUs hold up against the physical stresses and extremes of spaceflight, with an eye toward linking constellations for scaled-out machine learning; thanks to near-continuous sunlight, low-Earth-orbit systems can get up to 8x the solar energy of ground-based ones. Also: Ai2 open-sources AstaBrief, an 8B scientific report generator built on Qwen3-8B that turns research questions plus retrieved literature into cited reports — live as Fast mode in Asta's 'Generate a report' with training data downloadable; NVIDIA details how Blackwell GPUs accelerate GPT-6 Astra Ultrafast, now available on the OpenAI API and to eligible ChatGPT Work and Codex users; NVIDIA's DGX Spark gains a 64GB unified-memory config shipping Oct 23 from $4,999 through Acer, ASUS, Dell, Gigabyte, HP, and MSI, running models up to 100B params on-device; Suno's Speech beta claims the first audio model to generate speech and original background music as one complete track from a text prompt plus style description — open to everyone, with accent drift and over-heavy pauses still being smoothed out; Black Forest Labs' FLUX 3 Image lands on OpenRouter with native 4K rendering and multi-reference editing — precise multi-turn edits that leave other pixels untouched, bounding-box layouts, and composites from up to 10 references, commercial weights open with open weights in coming weeks; ChatGPT gains a Finances feature covering forgotten subscriptions, anomalies and duplicate charges, bill-price hikes, weekly digests, budgets from actual spending, credit-score tracking, debt-payoff plans, voice conversations about a job change, and cross-account portfolio analysis; per Reuters, California AG Bonta issues OpenAI a subpoena over cybersecurity incidents and risks involving its models — following this spring's agent intrusion into Hugging Face that reached some infrastructure — warning developers could face liability if they can't ensure models don't launch or assist attacks; Epoch AI estimates 2025-27 HBM shipments, fully deployed, could run roughly 30-170 million concurrent frontier-model agents, equal to 140M-720M full-time-employee hours every week; Meta AI and mathematicians used Muse Spark 1.1 and 1.2 (Thinking Mode, plain meta.ai chat, no custom research scaffolding) to produce six papers, five answering previously open problems across probability, differential equations, group theory, optimization, arithmetic physics, and non-associative algebra; Artificial Analysis has Claude Sonnet 5.5, GPT-6.1 Sol, and Gemini 4 Argon topping its Coding Agent Index despite wide cost gaps, while GPT-6.1 Sol (Max) enters Agent Arena at #5 on lower cost; Bloomberg reports Anthropic is inviting institutional investors to question executives about a possible IPO near a $2T valuation; Modal ships VM Sandboxes — a full Linux VM per agent — plus Sidecars for a low-latency trust boundary; Baseten engineers measure LLM-generated inference engines running up to 90% faster than vLLM; Google publishes a next-generation TEE-based federated learning system already deployed in Gboard; OpenAI issues a practical guide to picking among GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna, reasoning tiers, and speed modes; Prime Intellect launches the Prime Inference platform with a GLM-5.3 endpoint; OpenRouter compares LangChain and CrewAI orchestration against its native routing; and Manus walks through its video-generation and timeline-editing workflow.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Google Project Suncatcher 首颗原型卫星入轨",
+          en: "Google's Project Suncatcher Sends Its First Prototype Satellite",
+        },
+        description: {
+          zh: "与 Planet 合作建造、搭乘 SpaceX Transporter-18 拼车升空，收集 TPU 在太空物理应力与极端环境下数据，未来探索连接星座。",
+          en: "Built with Planet and lifted on a Transporter-18 rideshare, it collects TPU stress data in orbit and eyes constellation-scale ML.",
+        },
+      },
+      {
+        title: {
+          zh: "Ai2 开源 AstaBrief 8B 科学报告生成模型",
+          en: "Ai2 Open-Sources AstaBrief, an 8B Scientific Report Generator",
+        },
+        description: {
+          zh: "基于 Qwen3-8B 把研究问题与检索文献转为带引用报告，已在 Asta 上线 Fast mode，训练数据一并开放。",
+          en: "Qwen3-8B-based, turning questions plus retrieved literature into cited reports — now Fast mode in Asta, training data included.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA：Blackwell GPU 加速 GPT-6 Astra Ultrafast",
+          en: "NVIDIA: Blackwell GPUs Power GPT-6 Astra Ultrafast",
+        },
+        description: {
+          zh: "该模型现已在 OpenAI API 及符合条件的 ChatGPT Work 与 Codex 用户中可用。",
+          en: "Now live on the OpenAI API and for eligible ChatGPT Work and Codex users.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA DGX Spark 推出 64GB 版本",
+          en: "NVIDIA's DGX Spark Gets a 64GB Config",
+        },
+        description: {
+          zh: "10 月 23 日起由 Acer、ASUS、Dell 等六家发售、起步 $4,999，支持 1000 亿参数模型端侧运行。",
+          en: "Shipping Oct 23 from $4,999 via six OEMs, running 100B-parameter models on-device.",
+        },
+      },
+      {
+        title: {
+          zh: "Suno 推出 Speech beta：语音与背景音乐一体生成",
+          en: "Suno's Speech Beta: Voice and Score in One Track",
+        },
+        description: {
+          zh: "首个把语音与原创背景音乐作为一条完整曲目生成的音频模型，已向所有用户开放。",
+          en: "The first model to generate narration and an original bed as a single finished track — open to all users.",
+        },
+      },
+      {
+        title: {
+          zh: "FLUX 3 Image 上线 OpenRouter",
+          en: "FLUX 3 Image Arrives on OpenRouter",
+        },
+        description: {
+          zh: "原生渲染至 4K，支持多参考编辑、bounding box 布局与最多 10 张参考图合成；开放权重版数周内发布。",
+          en: "Native 4K, multi-reference editing, bounding-box layouts, composites of up to 10 references; open weights in weeks.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT 推出 Finances 财务管理",
+          en: "ChatGPT Adds a Finances Mode",
+        },
+        description: {
+          zh: "查找遗忘订阅、发现重复扣款、追踪账单涨价、预算与信用分数、还债计划、语音讨论换工作影响。",
+          en: "Finds forgotten subscriptions and duplicate charges, tracks price hikes, budgets, credit score, debt payoff, and job-change impacts by voice.",
+        },
+      },
+      {
+        title: {
+          zh: "加州总检察长向 OpenAI 发出调查传票",
+          en: "California's AG Subpoenas OpenAI on Cyber Risk",
+        },
+        description: {
+          zh: "要求就 AI 模型涉及的网络安全事件提供更多信息，背景为其智能体入侵 Hugging Face；警告开发者可能面临追责。",
+          en: "It follows this spring's agent intrusion into Hugging Face — and warns developers could face liability.",
+        },
+      },
+      {
+        title: {
+          zh: "Epoch AI：HBM 可支撑 3000 万至 1.7 亿并发智能体",
+          en: "Epoch AI: HBM Could Support 30M-170M Concurrent Agents",
+        },
+        description: {
+          zh: "2025-27 年出货的 HBM 全面部署后约相当于每周 1.4 亿至 7.2 亿全职员工的工作时长。",
+          en: "2025-27 HBM, fully deployed, equals 140M-720M full-time-employee hours a week.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta Muse Spark 与数学家完成六篇研究论文",
+          en: "Meta's Muse Spark Co-Authors Six Math Papers",
+        },
+        description: {
+          zh: "经 meta.ai 普通聊天界面、无定制脚手架完成，五篇回答此前公开的研究问题，覆盖概率、微分方程、群论等。",
+          en: "Done through the plain meta.ai chat with no custom scaffolding; five answer previously open problems across probability, ODEs, group theory, and more.",
+        },
+      },
+      {
+        title: {
+          zh: "Coding Agent Index 前三易主，成本差异大",
+          en: "Coding Agent Index Has a New Top Three — With Big Cost Gaps",
+        },
+        description: {
+          zh: "Claude Sonnet 5.5、GPT-6.1 Sol、Gemini 4 Argon 登顶 Artificial Analysis 榜单；GPT-6.1 Sol (Max) 进 Agent Arena 第 5。",
+          en: "Sonnet 5.5, GPT-6.1 Sol, and Gemini 4 Argon top the index; GPT-6.1 Sol (Max) lands #5 on Agent Arena.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 为近 2 万亿美元 IPO 邀请机构投资者质询高管",
+          en: "Anthropic Invites Institutional Questions Ahead of a Possible $2T IPO",
+        },
+        description: {
+          zh: "据 Bloomberg 报道，公司正就可能估值近 2 万亿美元的 IPO 安排机构投资者与高管问询。",
+          en: "Per Bloomberg, the AI lab is lining up institutional investors to question executives.",
+        },
+      },
+      {
+        title: {
+          zh: "Modal 发布 VM Sandboxes 与 Sidecars",
+          en: "Modal Ships VM Sandboxes and Sidecars",
+        },
+        description: {
+          zh: "给 Agent 一台完整的 Linux 虚拟机，并以 Sidecars 提供低延迟信任边界。",
+          en: "A full Linux VM per agent, plus Sidecars for a low-latency trust boundary.",
+        },
+      },
+      {
+        title: {
+          zh: "Baseten：LLM 生成的推理引擎比 vLLM 快最多 90%",
+          en: "Baseten: LLM-Generated Inference Engines Beat vLLM by up to 90%",
+        },
+        description: {
+          zh: "工程师实测展示了智能体式推理优化的上限。",
+          en: "Engineering benchmarks show what agentic inference optimization can buy.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布基于 TEE 的下一代联邦学习系统",
+          en: "Google Ships a TEE-Based Next-Gen Federated Learning System",
+        },
+        description: {
+          zh: "面向可证明隐私的联邦学习，已在 Gboard 中部署。",
+          en: "Provably private federated learning, already shipping in Gboard.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布 GPT-6 家族实用指南",
+          en: "OpenAI's Practical Guide to the GPT-6 Family",
+        },
+        description: {
+          zh: "讲解如何按任务选择 GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna 及推理档位与速度模式。",
+          en: "How to pick among Astra, GPT-6.1 Sol, and Luna, plus reasoning tiers and speed modes.",
+        },
+      },
+      {
+        title: {
+          zh: "Prime Intellect 发布 Prime Inference 平台",
+          en: "Prime Intellect Launches Prime Inference",
+        },
+        description: {
+          zh: "新的推理平台已上线 GLM-5.3 端点。",
+          en: "The new inference platform comes with a GLM-5.3 endpoint.",
+        },
+      },
+      {
+        title: {
+          zh: "Manus 分享视频生成与时间线编辑工作流",
+          en: "Manus Shows Its Video Generation and Timeline Workflow",
+        },
+        description: {
+          zh: "先由 AI 搜索参考、制作镜头与代码视觉元素，再逐轨调整画面、字幕、配乐与音效，支持自动转录与长视频剪短片。",
+          en: "AI gathers references and builds shots and coded visuals, then per-track edits of picture, subtitles, score, and SFX — with auto-transcription and long-to-short cutting.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-03-hot",
+    date: "2026-10-03",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-03",
+      en: "🔥 Hot Topics · Oct 3, 2026",
+    },
+    summary: {
+      zh: "亚运会 10 月 2 日反曲弓比赛，地位堪比中国跳水队的韩国射箭队一日连失两金——女团决赛 3 比 5 不敌印度队、亚运七连冠（自 1998 年起）戛然而止，混团半决赛 0 比 6 完败中国队，仅获 1 金 1 银 1 铜，创本届亚运最大冷门；迪拜航空劫机事件后续披露：涉嫌袭击机长的副驾驶曾因极端主义观点遭另一家航空公司解职，而重伤的印度籍机长拼死搏斗打开舱门救下整机乘客、印度总理莫迪与其视频通话盛赞其为英雄；中国驻日使馆发言人就原自卫队官员村田晃大持刀侵闯使馆案开庭回应，称这是'国际社会前所未闻的恶性事件'，严重侵害中方主权与馆舍安全，敦促日方严惩凶手、彻查整改；国足 0 比 5 不敌巴勒斯坦队、60 年来首负对手，主帅邵佳一称这是自己生涯最大失利、有球员还想着联赛和亚冠，队内状态不在线，韩国媒体质疑其世界杯前景（实时排名下滑至第 94 位）；另一边亚运场上，中国男足时隔 28 年再进四强，半决赛被卫冕冠军韩国队逆转后将于 10 月 3 日的铜牌战中迎战乌兹别克斯坦、全队铆足劲要带一枚奖牌回国；C 罗官宣离队后葡足协主席普罗恩萨计划促成其与主帅热苏斯会面、推动重返国家队以'体面谢幕'，而国家队官方账号一日掉粉超 120 万；七国集团宣布协调释放 1 亿桶战略石油储备以缓解国际能源市场压力，行动立即启动并持续 4 个月，最初 20 天将集中释放大量柴油储备；不到 18 岁的高中生陈妤颉在亚运 4×100 米混合接力极限逆转夺冠、最终斩获 3 金 1 银，赛后笑称奖牌太重；第三次参加亚运的吴易昺将在网球男单决赛面对三年前杭州亚运把他挡在八强之外的老对手黄泽林，亚运单打冠军将获得一张洛杉矶奥运会门票；国庆假期多地'爆改地铁'——地铁站被改造成运动馆、菜市场等多元空间，因票务收入难抵高昂运维成本、房地产反补路径受阻，运营方从单纯出租空间转向参与招商与打造生活方式场景；新能源车假日'充电大考'重演，云南一车主连跑 4 个服务区排队 3 小时才充上电、四川一车主排队 4.5 小时且充电被限量，假期日均出行车辆是日常的 1.8 倍；甘肃临夏永靖刘家峡因黄河与洮河交汇形成'一半碧蓝一半黄'的鸳鸯锅景致而出圈，带动县域经济成为乡村振兴文旅支撑；开封站联合文旅部门推出'铁路+宋都'快旅慢游模式，旅客凭火车票即可在出站口兑换万岁山景区专属'银票'与定制地图；我国'人造太阳'EAST 迎来建成运行 20 周年，曾创下 1 亿摄氏度 1066 秒稳定燃烧纪录，下一代装置 BEST 正在开展外立面亮灯调试、主机建造进入关键阶段，计划 2027 年完成主机建造；媒体粉碎假期网传虚假信息——'凭口令可买低价机票'因机票由航司统一投放而极可疑，社交平台'世外桃源'民宿图多为同一张图标注不同景点且经反诈检测含 AI 生成痕迹，以没房为由推销其他民宿属典型欺诈；10 月 1 日晚越南胡志明市、阿塞拜疆巴库、阿联酋迪拜等全球多地地标性建筑为新中国 77 周年华诞点亮'中国红'。",
+      en: "At the Asian Games on Oct 2, Korea's archery team — a national squad with China's diving team-like standing — lost two golds in a day: the women's team fell 3-5 to India, ending a seven-Games winning run dating to 1998, and the mixed team lost 0-6 to China, leaving just 1 gold, 1 silver, and 1 bronze and the tournament's biggest upset; in the Dubai Air hijack fallout, sources say the co-pilot who stabbed the captain was previously fired by another airline over extremist views, while the badly injured Indian captain fought his way to the cockpit door and saved the whole plane, drawing a video call with Prime Minister Modi calling him a national hero; China's embassy in Japan calls former Self-Defense Forces officer Murata's knife intrusion into the embassy 'a malicious incident unprecedented in international history,' severely infringing on Chinese sovereignty and premises safety, and urges Japan to punish the culprit and give a responsible account; the senior national team loses 0-5 to Palestine — its first defeat against them in 60 years — with coach Shao Jiayi calling it the biggest loss of his career and blaming players whose minds were on their club and AFC Champions League games, as Korean media question World Cup qualification with the live ranking slipping to 94th; on the other side of the Games, China's under-23 side reaches the semifinals for the first time in 28 years and, after losing to defending champion South Korea, faces Uzbekistan in the Oct 3 bronze match with one medal firmly in mind; after Ronaldo's camp exit, Portuguese FA chief Proença plans to broker a meeting with coach Jesus and push for a 'dignified' return, while the national team's official account sheds more than 1.2 million followers in a day; the G7 says it will coordinate the release of 100 million barrels of strategic oil reserves to ease energy-market pressure, starting immediately and running four months with diesel reserves front-loaded over the first 20 days; under-18 high-schooler Chen Yujie's come-from-behind 4x100m mixed relay win takes her to three golds and a silver, after which she jokes the medals are heavy; tennis's Wu Yibing meets the Hong Kong player who knocked him out in the round of 16 three years ago in the men's singles final, with the Asian Games champion taking a Los Angeles Olympic ticket; cities nationwide are 'remodeling' subway stations into gyms, markets, and other third spaces as fare revenue fails to cover ballooning operating costs and the property cross-subsidy path breaks; the holiday EV charging crunch repeats, with one driver queueing three hours across four service areas and another waiting 4.5 hours under rationing while holiday EV trips run 1.8x normal; Gansu's Liujiaxia 'mandarin duck pot' — the Yellow River meeting the Tao River in half-blue, half-yellow water — goes viral and props up a county's tourism economy; Kaifeng station launches a rail-plus-Song-dynasty slow-travel scheme where train tickets redeem for a Wansuishan 'silver ticket' and custom map; China's 'artificial sun' EAST marks 20 years of operation after holding 100 million degrees for 1,066 seconds, with next-gen device BEST in facade lighting tests and its main machine targeted for completion in 2027; and fact-checkers bust holiday rumors — 'secret-code' cheap-flight offers are implausible since airlines centrally price inventory, and viral 'paradise' B&B photos are one AI-generated image relabeled across destinations, with selling you another property after claiming yours is booked a textbook scam; finally, on the evening of Oct 1, landmarks from Ho Chi Minh City to Baku to Dubai light up in Chinese red for the 77th anniversary.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "韩国射箭'梦之队'一日连失两金",
+          en: "Korea's Archery Dream Team Loses Two Golds in a Day",
+        },
+        description: {
+          zh: "女团决赛 3-5 不敌印度、亚运七连冠终止，混团半决赛 0-6 完败中国队，仅 1 金 1 银 1 银，本届最大冷门。",
+          en: "The women's team lose 3-5 to India, ending a seven-Games run, and the mixed team lose 0-6 to China — the Games' biggest upset.",
+        },
+      },
+      {
+        title: {
+          zh: "迪拜航空劫机后续：副驾曾因极端主义被解职",
+          en: "Dubai Air Follow-Up: The Co-Pilot Was Once Fired for Extremism",
+        },
+        description: {
+          zh: "另据报道重伤的印度籍机长搏斗打开舱门救下全机乘客，莫迪与其视频通话称其为英雄。",
+          en: "The Indian captain fought open the cockpit door and saved the plane, earning a video call with Modi calling him a hero.",
+        },
+      },
+      {
+        title: {
+          zh: "中国驻日使馆：村田晃大案是'前所未闻的恶性事件'",
+          en: "China's Embassy in Japan: Murata Case 'Unprecedented'",
+        },
+        description: {
+          zh: "称事件严重侵害中方主权与馆舍安全，敦促日方严惩凶手、彻查整改并给出负责任交代。",
+          en: "It severely infringes on Chinese sovereignty and premises safety, urging Japan to punish and fully investigate.",
+        },
+      },
+      {
+        title: {
+          zh: "国足 0-5 惨败巴勒斯坦，邵佳一称生涯最大失利",
+          en: "China's Senior Side Loses 0-5 to Palestine; Shao Calls It His Worst",
+        },
+        description: {
+          zh: "60 年来首负对手，队内状态不在线、有球员还想着联赛和亚冠；韩媒质疑世界杯前景，实时排名降至第 94 位。",
+          en: "A first loss to them in 60 years; players distracted by club duty, and Korean media question World Cup hopes as the live ranking falls to 94th.",
+        },
+      },
+      {
+        title: {
+          zh: "中国男足争亚运铜牌",
+          en: "China's U23s Chase Asian Games Bronze",
+        },
+        description: {
+          zh: "时隔 28 年再进四强，半决赛被卫冕冠军韩国逆转后，10 月 3 日迎战乌兹别克斯坦。",
+          en: "First semifinal in 28 years; after the reversal against defending champion South Korea, they meet Uzbekistan on Oct 3.",
+        },
+      },
+      {
+        title: {
+          zh: "葡足协主席希望 C 罗'体面谢幕'",
+          en: "Portugal's FA Chief Wants a 'Dignified' Ronaldo Exit",
+        },
+        description: {
+          zh: "普罗恩萨计划促成其与热苏斯会面并推动重返国家队；官宣离队一日国家队官方账号掉粉超 120 万。",
+          en: "Proenca will broker a meeting with Jesus and push for a return — while the official account sheds 1.2M+ followers in a day.",
+        },
+      },
+      {
+        title: {
+          zh: "七国集团将释放 1 亿桶战略石油储备",
+          en: "G7 to Release 100 Million Barrels of Strategic Reserves",
+        },
+        description: {
+          zh: "缓解国际能源市场压力，行动立即启动并持续 4 个月，最初 20 天集中释放大量柴油储备。",
+          en: "Starting immediately and running four months, with diesel reserves front-loaded over the first 20 days.",
+        },
+      },
+      {
+        title: {
+          zh: "亚运三金到手，归来仍是高中生",
+          en: "Three Asian Games Golds — and Still a High Schooler",
+        },
+        description: {
+          zh: "不到 18 岁的陈妤颉在 4×100 米混合接力极限逆转夺冠，共 3 金 1 银，赛后笑称奖牌太重。",
+          en: "Chen Yujie, still under 18, wins a blistering mixed-relay comeback for three golds and a silver — and jokes the medals are heavy.",
+        },
+      },
+      {
+        title: {
+          zh: "吴易昺争奥运席位",
+          en: "Wu Yibing in the Olympic Ticket Decider",
+        },
+        description: {
+          zh: "男单决赛面对三年前杭州亚运将他挡在八强之外的老对手黄泽林，胜者获洛杉矶奥运会门票。",
+          en: "The final pits him against the Hong Kong player who beat him in the round of 16 three years ago — the winner takes a Los Angeles ticket.",
+        },
+      },
+      {
+        title: {
+          zh: "全国各地为何都在'爆改地铁'",
+          en: "Why Cities Nationwide Are Rebuilding Subway Stations",
+        },
+        description: {
+          zh: "地铁站被改成运动馆、菜市场等，因票务难抵运维成本、房地产反补受阻，运营方转向招商与生活方式场景。",
+          en: "Gyms and markets move into stations as fare revenue can't cover costs and property cross-subsidy fails.",
+        },
+      },
+      {
+        title: {
+          zh: "新能源车假日充电大考",
+          en: "The Holiday EV Charging Crunch",
+        },
+        description: {
+          zh: "云南车主连跑 4 个服务区排 3 小时才充上电，四川车主排队 4.5 小时且被限量；假期日均出行车辆为日常 1.8 倍。",
+          en: "One driver waited three hours across four service areas; another 4.5 under rationing — with holiday EV trips at 1.8x normal.",
+        },
+      },
+      {
+        title: {
+          zh: "黄河'鸳鸯锅'出圈",
+          en: "The Yellow River's 'Mandarin Duck Pot' Goes Viral",
+        },
+        description: {
+          zh: "甘肃永靖刘家峡因黄河与洮河交汇形成'一半碧蓝一半黄'景致，带动县域经济成为乡村振兴文旅支撑。",
+          en: "At Liujiaxia the Yellow and Tao rivers meet half-blue, half-yellow — now a county-level tourism engine.",
+        },
+      },
+      {
+        title: {
+          zh: "火车票竟然能换'银票'",
+          en: "Train Tickets Now Redeem for 'Silver Tickets'",
+        },
+        description: {
+          zh: "开封站推出'铁路+宋都'快旅慢游，凭火车票可在出站口兑换万岁山景区专属'银票'与定制地图。",
+          en: "Kaifeng's rail-plus-Song scheme swaps your ticket for a Wansuishan 'silver ticket' and custom map at the exit.",
+        },
+      },
+      {
+        title: {
+          zh: "'人造太阳'离点亮万家灯火有多远",
+          en: "How Far Is the 'Artificial Sun' From Lighting Up Homes?",
+        },
+        description: {
+          zh: "EAST 建成运行 20 周年、曾创 1 亿摄氏度 1066 秒纪录；下一代 BEST 计划 2027 年完成主机建造。",
+          en: "EAST marks 20 years after its 1,066-second run at 100 million degrees; BEST targets main-machine completion in 2027.",
+        },
+      },
+      {
+        title: {
+          zh: "假期网传信息都是假的",
+          en: "Holiday Rumors, Debunked",
+        },
+        description: {
+          zh: "'凭口令买低价机票'极可疑；'世外桃源'民宿图多含 AI 生成痕迹，以没房为由推销属典型欺诈。",
+          en: "'Secret-code' cheap flights are implausible, paradise B&B shots are AI-made, and selling you another property is textbook fraud.",
+        },
+      },
+      {
+        title: {
+          zh: "多国点亮'中国红'",
+          en: "Worldwide Landmarks Light Up in Chinese Red",
+        },
+        description: {
+          zh: "10 月 1 日晚，越南胡志明市、阿塞拜疆巴库、阿联酋迪拜等地标为新中国 77 周年华诞亮灯。",
+          en: "On Oct 1 evening, Ho Chi Minh City, Baku, Dubai, and more lit up for the 77th anniversary.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-01",
     date: "2026-10-01",
     title: {
