@@ -2,6 +2,286 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-05",
+    date: "2026-10-05",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-05",
+      en: "🤖 AI HOT Daily · Oct 5, 2026",
+    },
+    summary: {
+      zh: "说明：aihot 官方日报本期暂未发布，以下内容精选自 OpenAI / Google 官方博客与 Hacker News，与近日已报道内容不重复。今日以企业落地与工作流实践为主：OpenAI 集中发布客户案例——Chatham Financial 用 Codex 与 GPT-5.6 重构资本市场技术体系，大幅缩短交易验证时间并同步扩展业务规模；美国连锁超市 Albertsons 借 ChatGPT Enterprise 与 OpenAI API 让团队协作更快、改善顾客购物体验；社会俱乐部 The Den 在新店筹备期用 ChatGPT Work 把资助申请准备从 3 天压缩到 2 小时，每周省下 10 至 15 小时；Basis 则用 GPT-6 Astra 处理含 50 张表页的税务工作簿，速度是 GPT-5.6 Sol 的两倍且对复杂用户场景理解力更强。此外：Google Ads 介绍新工作流，把已有社媒素材直接转化为高影响力 YouTube 广告，降低创作者与中小商家的制作门槛；Google 还汇总发布了 2026 年 9 月 AI 全景回顾，涵盖 Gemini、Search、Workspace 与科研模型等多个方向的更新；OpenAI 追加 500 万美元支持 Lenfest AI Collaborative 与 Fellowship Program，助推地方新闻业的 AI 创新，并面向使用 Codex 的开发者、创作者、研究员与爱好者发起'Codex Originals'征集，记录 Codex 如何改变工作效率与创造力；开源社区出现 Show HN 项目 SCM，可对 macOS 上的每一张照片、每一帧视频做语义级 AI 搜索，方便本地素材即时检索；技术讨论方面，号称'终结 TCP'的数据中心传输协议 Homa 再度引发热议——针对 AI 训练集群通信瓶颈，Homa 提出以延迟为中心的新思路；OpenAI 观点文章《永恒的互补》认为高级 AI 或许对突破性想法背后的常规执行工作影响最大，执行力或将塑造下一代创新曲线；另有一期视频分享讨论影视与内容生产中如何用 AI 规模化管理创作意图、质量与艺术性。此外值得注意的是，Meta 推出的个人智能体 Muse 在大众市场迅速走红，验证了市场对个人智能代理的需求，但商业模式尚未跑通——国内大厂虽纷纷布局同类产品，受生态封闭所限难出跨平台的中国版 Muse，多以防守心态跟进。",
+      en: "Note: the official aihot daily didn't publish today, so the below is curated from OpenAI and Google official blogs plus Hacker News, with no overlap with recent coverage. Today leans enterprise adoption and workflow practice. OpenAI published a batch of customer stories: Chatham Financial rebuilt its capital-markets tech stack with Codex and GPT-5.6, sharply cutting trade-validation time while growing the business; US grocery chain Albertsons uses ChatGPT Enterprise and the OpenAI API to speed collaboration and improve the shopper experience; social club The Den compressed grant-application prep from three days to two hours during a new venue's setup, saving 10-15 hours a week; and Basis processes 50-sheet tax workbooks with GPT-6 Astra at twice the speed of GPT-5.6 Sol with stronger grasp of complex user scenarios. Also: Google Ads walks through a workflow that turns existing social assets into high-impact YouTube ads, lowering the bar for creators and small merchants; Google published its September 2026 AI roundup spanning Gemini, Search, Workspace, and research models; OpenAI added $5M to the Lenfest AI Collaborative and Fellowship Program for AI innovation in local journalism, and opened 'Codex Originals,' soliciting real stories from developers, creators, researchers, and enthusiasts about how Codex changed their work; the open-source community's Show HN project SCM adds semantic AI search across every photo and every video frame on macOS; in technical discussion, Homa — the datacenter transport protocol that claims to 'end TCP' — is trending again with its latency-centric approach to AI training-cluster communication bottlenecks; and OpenAI's essay 'The Eternal Complement' argues advanced AI may matter most in the routine execution work behind breakthrough ideas, with execution shaping the next innovation curve, while a video session covers managing creative intent, quality, and artistry at AI scale. Worth noting: Meta's Muse personal agent has gone viral with the public, validating demand for personal agents, though its business model isn't worked out yet — Chinese platforms are all building similar products but closed ecosystems make a cross-platform Chinese Muse unlikely, leaving most of them playing defense.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI 客户案例：Codex 与 GPT-6 重构企业工作流",
+          en: "OpenAI Customer Stories: Codex and GPT-6 Rebuilding Workflows",
+        },
+        description: {
+          zh: "Chatham 大幅缩短交易验证时间；Albertsons 改善零售协作与购物体验；The Den 每周省 10-15 小时；Basis 用 Astra 处理 50 张表页税务工作簿提速一倍。",
+          en: "Chatham cuts trade-validation time, Albertsons improves retail collaboration, The Den saves 10-15 hours a week, and Basis doubles tax-workbook throughput on Astra.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Ads：把社媒素材变成高转化 YouTube 广告",
+          en: "Google Ads: Turn Social Assets Into High-Converting YouTube Ads",
+        },
+        description: {
+          zh: "新工作流直接把已有社媒素材转化为高影响力 YouTube 广告，降低创作者与中小商家门槛。",
+          en: "A new workflow reuses existing social creative for YouTube placements, lowering the bar for creators and small merchants.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布 2026 年 9 月 AI 全景回顾",
+          en: "Google's September 2026 AI Roundup",
+        },
+        description: {
+          zh: "汇总 Gemini、Search、Workspace、科研模型等多个方向的月度更新。",
+          en: "A month's worth of updates across Gemini, Search, Workspace, and research models.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 追加 500 万美元支持 Lenfest AI 协作项目",
+          en: "OpenAI Adds $5M to the Lenfest AI Collaborative",
+        },
+        description: {
+          zh: "扩大 Fellowship Program，助推地方新闻业的 AI 创新与人才培养。",
+          en: "Expanding the fellowship to push AI innovation in local journalism.",
+        },
+      },
+      {
+        title: {
+          zh: "Codex Originals：OpenAI 征集 Codex 真实故事",
+          en: "Codex Originals: OpenAI Wants Your Codex Stories",
+        },
+        description: {
+          zh: "面向开发者、创作者、研究员与爱好者征集故事，记录 Codex 如何改变工作效率与创造力。",
+          en: "Seeking real accounts of how Codex changed how people work and create.",
+        },
+      },
+      {
+        title: {
+          zh: "SCM：macOS 照片与视频逐帧 AI 搜索（Show HN）",
+          en: "SCM Adds Frame-Level AI Search to macOS Photos (Show HN)",
+        },
+        description: {
+          zh: "开源项目可对每一张照片、每一帧视频做语义级 AI 搜索，方便本地素材即时检索。",
+          en: "An open-source tool for semantic search across every photo and every video frame on your Mac.",
+        },
+      },
+      {
+        title: {
+          zh: "观点《永恒的互补》：常规执行工作更值得 AI 赋能",
+          en: "Essay 'The Eternal Complement': AI's Biggest Lever Is Routine Work",
+        },
+        description: {
+          zh: "OpenAI 认为高级 AI 或许对突破性想法背后的常规执行工作影响最大，执行力将塑造下一代创新曲线。",
+          en: "Advanced AI may matter most in the routine execution behind breakthrough ideas — execution shapes the next innovation curve.",
+        },
+      },
+      {
+        title: {
+          zh: "Homa：号称'终结 TCP'的传输协议再受关注",
+          en: "Homa, the Protocol That Claims to 'End TCP,' Trending Again",
+        },
+        description: {
+          zh: "针对 AI 训练集群通信瓶颈，Homa 提出以延迟为中心的新思路，相关演讲再次引发讨论。",
+          en: "Its latency-centric approach to AI cluster communication bottlenecks is drawing renewed discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "视频分享：如何用 AI 规模化管理意图、质量与艺术性",
+          en: "Managing Intent, Quality, and Artistry at AI Scale",
+        },
+        description: {
+          zh: "一期关于影视与内容生产的 AI 工作流分享，讨论规模化生产中如何守住创作意图与艺术质量。",
+          en: "A workflow session on keeping creative intent and artistic quality while producing at scale.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-05-hot",
+    date: "2026-10-05",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-05",
+      en: "🔥 Hot Topics · Oct 5, 2026",
+    },
+    summary: {
+      zh: "今日最大热点围绕蔡康永：10 月 4 日知名主持人蔡康永现身'台独'顽固分子沈伯洋在台北市举行的竞选总部成立大会，引发舆论广泛争议，其账号遭大量网友抵制，零跑汽车当日发声明称蔡康永只是过往合作艺人、并非品牌代言人，已下架其相关全部内容并保留追责权利、后续将强化合作方背景审核；同一天台海议题另一面，10 月 1 日台海巡署'云林'舰在东沙岛以东约 27 海里处，向未及时撤离的大陆'金沙号'渔船驾驶舱喷射高压水炮约 90 秒，致渔船动力受损、船员被困。安全与监管方面：央媒曝光外卖'明厨亮灶'造假——多地商户监控刻意避开后厨核心区、后厨脏乱差甚至有老鼠出没，市场监管总局当日迅速部署多地核查处置，武汉对曝光商户立案调查并督促下架，丽江对涉事门店停业整顿并开展集中整治；国安部则发布提醒，警惕个别境外组织以'医疗检测'为名非法采集我国人血样、窃取基因资源，此前广州海关已破获特大走私孕妇血样系列案，涉案团伙借无创胎儿性别鉴定等噱头累计将超 10 万份孕妇血液样本走私出境。市场与行业方面：预计 12 月 6 日纳斯达克等多家机构将实施美股夜间交易扩展计划，新增纽约时间晚 9 点至次日凌晨 4 点时段，以满足海外投资者需求并应对加密货币和预测市场带来的竞争；杭州天际线、iN11 等高端商 K 因专项整顿被大面积关停、部分营业执照被吊销。此前包厢内发生猥亵案致人员被刑拘、公职人员被免职，以高价酒及分等级'演员'服务为卖点的商 K 如今全面停摆；开封清明上河园递交港交所上市申请，有望成为河南文旅第一股，募资用于园区扩建与新剧打造以突破单一门票经济，国庆期间该市万岁山武侠城客流爆棚、网友直呼'只见人不见山'，景区已连续 4 日发布限流公告；75 岁的王石出任新注册的深圳深石城市更新有限公司董事长，新公司不含房地产开发经营、瞄准城市存量资产的改造盘活与运营赛道；报道还解读了正在编织的中国'六张超级大网'新基建体系。国际方面，德国总理默茨 10 月 4 日在基辅会见乌克兰总统泽连斯基、承诺支持并敦促俄罗斯停止不断升级的袭击，与此同时基辅响起了空袭警报和爆炸声；日本则罕见在一天内 3 次向美国提出强烈抗议，针对驻冲绳美军在酒店劫杀日本女子事件，防卫省、外务省等相继表态要求美军整顿军纪并配合调查。AI 与消费民生话题同样受关注：'国民辣酱'老干妈斩获贵州省省长质量奖，2025 年上线 AI 视觉质检系统实现原料全溯源、不良率大幅下降，当年营收 54 亿元创历史新高；而 Meta 推出的 AI 智能体 Muse 迅速爆火、验证了大众对个人智能代理的需求，但商业模式尚未跑通，国内大厂虽纷纷布局同类产品，受生态封闭所限很难诞生跨平台的中国版 Muse，只会形成各生态内的管家，此前'养龙虾'项目已落幕、大厂跟进更多出于防守；消费侧，外国游客来华'扫货'成热潮、购物从旅行附属项变为核心目的，2026 年 1 至 8 月外国人出入境超 6128 万人次、1 至 7 月在华消费达 2636 亿元。体育方面，中国男足在亚运铜牌赛中点球击败乌兹别克斯坦队、时隔 28 年再获铜牌，比赛中门将李昊贴有对手射门习惯的水瓶被对方扔上看台，赛后他表示'无所谓，反正他们踢不进'。此外武汉地铁全面扩容'行李友好'服务、在热门站点划定专属区域形成整齐'行李箱墙'，开分店前先被编造差评的汽车博主韩路质疑平台审核机制（高德已清理虚假评论），阿尔山'二百一晚大酒店'经官方核查为居民自有住宅无照经营已被责令停业。",
+      en: "Today's biggest story centers on蔡康永 (Tsai Kang-yung): on Oct 3 the host appeared at the Taipei campaign-headquarters launch for Shen Boyang, a diehard 'Taiwan independence' candidate, drawing wide controversy and mass user boycotts of his account. Zero Run (Leapmotor) that day issued a statement saying Tsai was only a former collaborating artist — not a brand ambassador — pulled all related content, reserved the right to pursue liability, and pledged to vet partners' backgrounds better. On the other side of the same cross-strait theme, on Oct 1 the Coast Guard Administration's 'Yunlin' vessel sprayed a high-pressure water cannon at the cockpit of the mainland fishing boat 'Jinsha' for roughly 90 seconds about 27 nautical miles east of Dongsha Island after it failed to leave in time, damaging propulsion and trapping crew. On safety and regulation: state media exposed 'open kitchen' theatrics in food delivery — cameras deliberately pointed away from back-kitchen core areas, with filthy kitchens and even rats on screen — and the market regulator deployed inspectors nationwide the same day, filing cases and ordering removals in Wuhan and shutdowns plus a cleanup campaign in Lijiang; the Ministry of State Security also warned about overseas groups illegally collecting blood samples from Chinese citizens under the guise of 'medical testing' to steal genetic resources, after Guangzhou customs cracked a major smuggling case in which a ring used non-invasive fetal sex testing as a pretext to smuggle over 100,000 pregnant women's blood samples abroad. Markets and industry: from Dec 6, Nasdaq and other venues plan to extend US overnight trading with a 9 PM to 4 AM New York time session, serving overseas investors and answering crypto and prediction-market competition; Hangzhou's luxury KTVs — Skyline, iN11 and peers — were largely shut down or had licenses revoked in a sweeping crackdown after a harassment case led to criminal charges and a public official's dismissal, ending an industry built on pricey liquor and tiered 'hostess' services; Kaifeng's Millennium City Park filed for a Hong Kong listing that could make it Henan culture-tourism's first listed play, with proceeds for expansion and new shows to escape single-ticket economics — while fellow Kaifeng spot Wansui Mountain packed to the point of 'people, no mountain,' prompting four straight days of crowd limits; 75-year-old Wang Shi became chairman of newly registered Shenzhen Deep Stone Urban Renewal, a firm with no real-estate development scope aimed at reviving existing city assets; and a feature explained the 'six super networks' of Chinese infrastructure now being woven. Abroad: on Oct 4 German Chancellor Merz met Zelensky in Kyiv, promising support and urging Russia to halt escalating strikes — while air-raid sirens and explosions sounded in the capital; Japan lodged three strong protests against the US in a single day over US forces in Okinawa robbing and killing a Japanese woman in a hotel, with the defense and foreign ministries demanding the troops tighten discipline and cooperate with investigations. AI and consumer topics drew interest too: 'national chili sauce' Lao Gan Ma won the Guizhou governor's quality award after launching an AI visual-inspection system in 2025 that achieved full traceability of raw materials and cut defect rates — that year's revenue hit a record ¥5.4B; Meta's Muse agent has gone viral, validating demand for personal agents though its business model still isn't settled, with Chinese platforms building similar products but closed ecosystems making a cross-platform Chinese Muse unlikely — each will only produce a walled-garden butler, and the earlier 'lobster' project has ended with most incumbents playing defense; on the consumption side, foreign visitors increasingly treat shopping as the main trip rather than a side trip, with over 61.28M foreign entries and exits Jan-Aug 2026 and ¥263.6B spent in China Jan-July. In sport, China's men beat Uzbekistan on penalties for Asian Games bronze — their first in 28 years — with goalkeeper Li Hao joking after his water bottle bearing opponents' shooting habits was hurled to the stands: 'Whatever, they won't score.' Elsewhere Wuhan Metro expanded 'luggage-friendly' zones into tidy 'luggage walls,' auto blogger Han Lu questioned platform review after fabricated reviews hit his not-yet-open barbecue restaurant (Amap has since removed them), and officials in Arxan confirmed the '¥200-a-night hotel' was an unlicensed home stay shut down by order.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "蔡康永现身'台独'分子竞选现场引争议",
+          en: "Tsai Kang-yung's Campaign Appearance Sparks Boycott",
+        },
+        description: {
+          zh: "零跑汽车称其只是过往合作艺人非代言人，已下线全部相关内容并保留追责权利，网友大量抵制。",
+          en: "Leapmotor says he was only a former collaborator, not an ambassador — it pulled all content, reserved legal action, and users are boycotting.",
+        },
+      },
+      {
+        title: {
+          zh: "台海巡署高压水炮喷射大陆渔船 90 秒",
+          en: "Coast Guard Water Cannon on Mainland Fishing Boat for 90 Seconds",
+        },
+        description: {
+          zh: "10 月 1 日'云林'舰在东沙岛以东约 27 海里向未撤离的'金沙号'驾驶舱喷射，致动力受损、船员被困。",
+          en: "Oct 1, the 'Yunlin' fired on the 'Jinsha' about 27 nautical miles east of Dongsha after it lingered — damaging propulsion and trapping crew.",
+        },
+      },
+      {
+        title: {
+          zh: "超 10 万份孕妇血样被偷运出境",
+          en: "Over 100,000 Pregnant Women's Blood Samples Smuggled Out",
+        },
+        description: {
+          zh: "国安部提醒警惕境外组织以'医疗检测'为名非法采集血样窃取基因资源，广州海关已破获特大系列案。",
+          en: "The MSS warns on 'medical testing' fronts stealing genetic resources; Guangzhou customs cracked a major case.",
+        },
+      },
+      {
+        title: {
+          zh: "央媒曝光外卖'明厨亮灶'造假",
+          en: "State Media Exposes Fake 'Open Kitchen' Delivery Streams",
+        },
+        description: {
+          zh: "多地商户监控刻意避开后厨核心区；市场监管总局部署多地核查，武汉立案、丽江停业整顿。",
+          en: "Cameras pointed away from filthy back kitchens; the regulator deployed inspectors, with cases filed and shops suspended.",
+        },
+      },
+      {
+        title: {
+          zh: "美股通宵交易要来了",
+          en: "Overnight US Trading Is Coming",
+        },
+        description: {
+          zh: "预计 12 月 6 日纳斯达克等新增纽约时间晚 9 点至次日凌晨 4 点时段，应对海外需求与加密、预测市场竞争。",
+          en: "From Dec 6, a 9 PM-4 AM ET session targets overseas demand and crypto/prediction-market pressure.",
+        },
+      },
+      {
+        title: {
+          zh: "杭州商 K 大面积关停",
+          en: "Hangzhou's Luxury KTVs Shut Down En masse",
+        },
+        description: {
+          zh: "猥亵案后专项整治，天际线、iN11 等高端商 K 关停、部分执照被吊销，行业全面停摆。",
+          en: "A crackdown after a harassment case closed Skyline and iN11 and revoked licenses across the industry.",
+        },
+      },
+      {
+        title: {
+          zh: "德总理会见泽连斯基，现场响起爆炸声",
+          en: "Merz Meets Zelensky as Air Raid Sirens Sound",
+        },
+        description: {
+          zh: "10 月 4 日默茨在基辅承诺支持乌克兰并敦促俄停止升级袭击，同一时间基辅响起空袭警报与爆炸声。",
+          en: "Oct 4, Merz promised support and urged Russia to halt escalating strikes while Kyiv heard sirens and blasts.",
+        },
+      },
+      {
+        title: {
+          zh: "日本罕见 1 天 3 次强烈抗议美国",
+          en: "Japan Files Three Strong Protests at the US in One Day",
+        },
+        description: {
+          zh: "针对驻冲绳美军在酒店劫杀日本女子事件，防卫省、外务省等要求美军整顿军纪并配合调查。",
+          en: "Over US forces in Okinawa robbing and killing a Japanese woman in a hotel; Tokyo demands discipline and cooperation.",
+        },
+      },
+      {
+        title: {
+          zh: "'国民辣酱'老干妈也用上 AI",
+          en: "Even Lao Gan Ma Is Using AI Now",
+        },
+        description: {
+          zh: "2025 年上线 AI 视觉质检、原料全溯源、不良率大幅下降，斩获贵州省省长质量奖，当年营收 54 亿元创历史新高。",
+          en: "AI visual inspection and full traceability in 2025 cut defect rates, won Guizhou's governor quality award, and pushed revenue to a record ¥5.4B.",
+        },
+      },
+      {
+        title: {
+          zh: "Muse 狂飙，龙虾退潮",
+          en: "Muse Surges as the Lobster Fades",
+        },
+        description: {
+          zh: "Meta 的个人智能体 Muse 爆火但商业模式未跑通；国内大厂多出于防守跟进，封闭生态难出跨平台中国版 Muse。",
+          en: "Meta's Muse is viral but has no working business model; Chinese players respond defensively inside walled ecosystems.",
+        },
+      },
+      {
+        title: {
+          zh: "中国男足点球夺铜，门将李昊：'反正他们踢不进'",
+          en: "China Wins Bronze on Penalties; Li Hao: 'They Won't Score'",
+        },
+        description: {
+          zh: "铜牌赛点球击败乌兹别克斯坦、时隔 28 年再获亚运奖牌；李昊贴射门习惯的水瓶被对方扔上看台。",
+          en: "Beat Uzbekistan on penalties for a first-in-28-years medal — after his scouting water bottle was thrown to the stands.",
+        },
+      },
+      {
+        title: {
+          zh: "75 岁王石要再造一个'万科'吗",
+          en: "Is 75-Year-Old Wang Shi Rebuilding 'Vanke'?",
+        },
+        description: {
+          zh: "出任新注册的深圳深石城市更新董事长，公司不含房地产开发经营，瞄准存量资产改造盘活与运营。",
+          en: "Chairs a new Shenzhen urban-renewal firm with no development scope, aimed at repurposing existing assets.",
+        },
+      },
+      {
+        title: {
+          zh: "六张'超级大网'如何编织",
+          en: "How China's Six 'Super Networks' Are Being Woven",
+        },
+        description: {
+          zh: "在高铁、大桥、超级港口之外，国家正编织一套超级新基建体系。",
+          en: "Beyond high-speed rail, bridges, and megaports, a whole new infrastructure system is taking shape.",
+        },
+      },
+      {
+        title: {
+          zh: "这届老外来中国扫货顺便旅个游",
+          en: "Foreign Visitors Now Come to Shop First",
+        },
+        description: {
+          zh: "购物从附属项变核心目的，2026 年 1-8 月外国人出入境超 6128 万人次，1-7 月在华消费 2636 亿元。",
+          en: "Shopping is now the main trip: 61.28M entries/exits Jan-Aug and ¥263.6B spent Jan-July.",
+        },
+      },
+      {
+        title: {
+          zh: "河南爆火景区要 IPO 了",
+          en: "Henan's Hit Park Files for an IPO",
+        },
+        description: {
+          zh: "开封清明上河园递交港交所上市申请、有望成河南文旅第一股，募资用于扩建与新剧打造以突破门票经济。",
+          en: "Kaifeng's Millennium City Park seeks a Hong Kong listing — Henan's first culture-tourism play — to escape ticket-only economics.",
+        },
+      },
+      {
+        title: {
+          zh: "河南万岁山只见人不见'山'",
+          en: "Wansui Mountain: All People, No Mountain",
+        },
+        description: {
+          zh: "国庆客流爆棚、网友直呼'只见人不见山'，景区已连续 4 日发布限流公告。",
+          en: "Holiday crowds overwhelm the Kaifeng park, forcing a fourth straight day of capacity notices.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-04",
     date: "2026-10-04",
     title: {
