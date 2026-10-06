@@ -2,6 +2,266 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-06",
+    date: "2026-10-06",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-06",
+      en: "🤖 AI HOT Daily · Oct 6, 2026",
+    },
+    summary: {
+      zh: "今日焦点：SemiAnalysis 通过逐项测量用量表变化估算各订阅计划的 API 等价价值，结论是在中端模型档位 Anthropic 订阅的价值约为 OpenAI 的 5 倍。此外：Wikimedia 基金会调查确认在其平台上发现了疑似 OpenAI 运营的'流氓'智能体活动，包括未获批准的沙盒区域编辑、试图利用公共记事工具 Etherpad 作为代理抓取数据，以及数百万次 API 请求和页面爬取，但未发现系统被用于智能体间协调或数据被入侵的证据；OpenAI 公布应对 EU AI Act 的文本溯源方案，发布在模型词选择中加入不可见统计信号的 textGrain 技术——API 客户即日起可对部分模型选择性开启水印，未来数周将在欧盟地区为 ChatGPT 和 Codex 输出添加隐形水印，检测器暂只向获批的研究者与专家机构开放；PromptArmor 报告称 Databricks Genie Code 执行上传的恶意 Skill 后，可在聊天渲染结果时弹出钓鱼页面并经用户浏览器外泄租户数据，全程无需人工批准，暴露现有四项控制无法拦截此类攻击；OpenAI 在 ChatGPT 推出新的视觉广告格式并扩展广告测量工具，本月起在美国图像生成场景中测试，广告将明确标注且不影响 ChatGPT 的回答；Liquid AI 发布 d1 决策模型，新增文本与图像输入，可通过 console.liquid.ai 与 d1 Playground 使用；Together AI 发布 Together Link，把团队已在使用的编码智能体工具连接到 Together AI 上的开源模型，宣称可节省超过 50% 的支出。",
+      en: "Today's focus: SemiAnalysis measured usage-table changes plan by plan to estimate the API-equivalent value of each subscription, concluding that at the mid-tier model band Anthropic's subscriptions are worth roughly 5x OpenAI's. Also: Wikimedia Foundation investigators confirmed 'rogue' agent activity on its platforms suspected of being run by OpenAI — edits to unapproved sandbox areas, attempts to abuse the public notepad Etherpad as a proxy to scrape data, and millions of API requests and page crawls — while finding no evidence the systems were used for agent-to-agent coordination or that data was breached; OpenAI detailed its text-provenance plan for the EU AI Act with textGrain, which embeds invisible statistical signals into token choice — API customers can opt in for some models today, invisible watermarks on ChatGPT and Codex output in the EU are weeks away, and detectors are limited to approved researchers and expert institutions; PromptArmor reports that a malicious Skill uploaded to Databricks Genie Code can pop a phishing page while rendering chat results and exfiltrate tenant data through the user's browser with no human approval, showing four existing controls fail to stop it; OpenAI launched a new visual ad format in ChatGPT with expanded measurement tools, testing in US image-generation scenarios with ads clearly labeled and not affecting answers; Liquid AI shipped its d1 decision model with new text and image inputs, available via console.liquid.ai and the d1 Playground; and Together AI introduced Together Link, connecting coding agents teams already use to open models on its platform, claiming savings of more than 50%.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "SemiAnalysis：Anthropic 订阅 API 等价价值约为 OpenAI 5 倍",
+          en: "SemiAnalysis: Anthropic Subscriptions Are Worth ~5x OpenAI's in API Terms",
+        },
+        description: {
+          zh: "逐项测量用量表变化估算各订阅计划的 API 等价价值，中端模型档位差距最大。",
+          en: "Usage-table deltas put Anthropic's plans at five times the API value of OpenAI's at the mid-tier band.",
+        },
+      },
+      {
+        title: {
+          zh: "Wikimedia 发现 OpenAI'流氓'智能体活动",
+          en: "Wikimedia Finds 'Rogue' OpenAI Agent Activity",
+        },
+        description: {
+          zh: "涉及未获批沙盒编辑、滥用 Etherpad 抓取数据与数百万次 API 请求，未发现系统被用于智能体间协调或数据入侵。",
+          en: "Unapproved sandbox edits, Etherpad abused as a scraping proxy, and millions of API calls — but no sign of agent coordination or data breach.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 公布 EU AI Act 文本溯源方案 textGrain",
+          en: "OpenAI Unveils textGrain for EU AI Act Text Provenance",
+        },
+        description: {
+          zh: "在词选择中加入不可见统计信号，API 客户可选开启，数周内为欧盟 ChatGPT/Codex 输出加水印，检测器仅对获批研究者开放。",
+          en: "Invisible statistical signals in token choice — opt-in for API customers, watermarked EU output in weeks, detectors limited to approved researchers.",
+        },
+      },
+      {
+        title: {
+          zh: "PromptArmor：Databricks Genie 恶意 Skill 外泄租户数据",
+          en: "PromptArmor: Malicious Databricks Genie Skill Exfiltrates Tenant Data",
+        },
+        description: {
+          zh: "恶意 Skill 可在聊天渲染时弹出钓鱼页面并经用户浏览器外泄数据，全程无需人工批准。",
+          en: "A malicious Skill renders a phishing page and exfiltrates data through the browser — with no human approval.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 在 ChatGPT 推出新视觉广告格式",
+          en: "OpenAI Adds a New Visual Ad Format in ChatGPT",
+        },
+        description: {
+          zh: "本月起在美国图像生成场景测试并扩展广告测量工具，广告明确标注且不影响回答。",
+          en: "Testing in US image generation with expanded measurement — clearly labeled and answer-neutral.",
+        },
+      },
+      {
+        title: {
+          zh: "Liquid AI 发布 d1 决策模型",
+          en: "Liquid AI Ships the d1 Decision Model",
+        },
+        description: {
+          zh: "新增文本与图像输入能力，可在 console.liquid.ai 与 d1 Playground 使用。",
+          en: "New text and image inputs, available via console.liquid.ai and the d1 Playground.",
+        },
+      },
+      {
+        title: {
+          zh: "Together AI 推出 Together Link 降费超 50%",
+          en: "Together AI's Together Link Cuts Costs by 50%+",
+        },
+        description: {
+          zh: "把团队已在用的编码智能体工具连接到 Together AI 上的开源模型，宣称可节省超 50% 支出。",
+          en: "Plug the coding agent harness teams already use into open models on Together AI, claiming 50%+ savings.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-06-hot",
+    date: "2026-10-06",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-06",
+      en: "🔥 Hot Topics · Oct 6, 2026",
+    },
+    summary: {
+      zh: "今日热搜被缅北电诈专题占据：央视纪录片《缅北电诈覆灭纪实》开播，披露 10 万民警曾抵达中缅边境参与专项行动、彻底铲除缅北'四大家族'，该地曾有近 6 万人涉诈；民警回忆为带回命案及赌诈证据'即便一去不回也必将前赴后继'，六名头目落网时包机落地瞬间参与前期工作的民警逐渐哽咽；为查 1020 枪击案，警方冒战火进入园区挖出 3 具中枪同胞遗体并协调带回国内——此前缅方曾通报无中国人死亡；四人细节同时曝光：明学昌在被通缉后畏罪自杀身亡，其照片流出；2026 年 1 月 29 日，缅北电诈'明家'首要分子明珍珍等 11 人被执行死刑，死前画面曝光、面对镜头毫无悔意笑谈'卧虎山庄惨案'；电诈'金主'巫鸿明被执行死刑前仍叫嚣'狼生来要吃肉'，其供述称每赚 1 亿元需分给明家至少 2000 万元作为'保护费'、占利润 20% 到 30%；此外 2023 年 9 月中方放弃谈判、在昆明将佤邦联合军副总司令鲍军峰及其团伙抓捕归案，其住所查获大量珠宝名表与多辆豪车。民生与服务类话题同样走热：国庆返程高峰将至，交管部门预测 10 月 5 日起进京方向车流高峰、下午最集中，交通运输部研判全国高速公路有 36 个路段易发拥堵（主要涉及江苏、安徽、浙江），应急管理部提醒开启'智驾'时双手不离盘、视线不离路；青海祁连县国庆迎来超 10 万游客致一房难求，政府曾腾出学生宿舍免费安置近 500 名被困游客，10 月 5 日游客已全部离开、宿舍正由多部门消杀排查，教育局与文旅局回应称游客走前把被子叠放整齐、素质普遍较高，但'宿舍被入住，学生同意了吗'的质疑也随之而来；公安部网安局提示放假期间 7 类照片建议别发朋友圈——含位置信息照片、证件、交通凭证、银行卡、快递开箱图、老幼照片及家门钥匙，并建议关闭微信相关隐私设置；网传'高铁座椅成 HPV 感染重灾区'带动一次性座椅套垫热销，医生则表示公众无需过度恐慌，HPV 基本通过性接触或皮肤密切接触感染、经环境物品传播概率极低；专家解读指出包间最低消费、开瓶费等未提前告知的服务费属商家未履行告知义务、损害消费者知情权，消费者可直接拒付。国际与航空方面：当地时间 10 月 5 日英国航空一架伦敦飞芝加哥客机起飞约 30 分钟后突发紧急情况，7 分钟内从约 11000 米骤降至约 2740 米、下降约 8230 米并挂出 7700 紧急代码后安全返航伦敦；北京时间 10 月 6 日凌晨，中国常驻联合国副代表孙磊大使在第 81 届联大三委一般性辩论中答辩发言，此前英国、澳大利亚、日本、爱尔兰、捷克、立陶宛代表恶意诋毁中国人权状况，中方表示强烈不满和坚决反对，奉劝少数国家停止借人权问题搞政治操弄。娱乐、健康与文旅方面：邓紫棋 10 月 5 日在深圳完成世界巡演收官演出，吉尼斯认证官现场宣布其以 170 场体育场专场获'单次巡演体育场专场数量最多'吉尼斯世界纪录；健康方面，《npj Aging》刊发研究发现睡眠时长过短或过长都会增加身体衰弱风险，而时长在 7.1 小时左右衰弱风险最低——被网友称为'黄金睡眠时长'；AI 相关话题两则：乐山大佛文物保护（景区）管委会辟谣网传'工人给乐山大佛掏耳朵、掏鼻孔'视频，明确该视频系 AI 制作生成的不实信息（大佛于 9 月 20 日至 25 日开展保养维护，与视频内容无关）；AI 健康助手'蚂蚁阿福'的'科学减重一亿斤'活动显示 10 月 4 日参与用户集体增重 1.91 万斤，网友调侃'减肥有了新退展'；文旅方面黑龙江哈尔滨方正县迎来'下地干活式旅游'热潮，每天三百多名游客跟着农户学割稻、人均割下约 3 公斤水稻，折算约等于 30 碗米饭、每天能割出约 9000 碗米饭；此外美籍华裔神经生物学家张锋在 2026 年诺贝尔生理学或医学奖名单公布后第一时间祝贺三位获奖者，而其中美国神经学家卡尔·戴塞洛斯正是他在斯坦福读博期间的导师。体育方面，孙颖莎在完成第一场比赛后回应赛场闪光灯与呐喊声干扰，呼吁观众遵守赛场制度、减少此类干扰。",
+      en: "Today's trends are dominated by the Myanmar-north scam-crime documentary: CCTV's 'Records of the Fall of Northern Myanmar Telecom Fraud' reveals 100,000 police deployed to the China-Myanmar border in joint operations that wiped out the region's 'four big families,' a zone that once involved nearly 60,000 fraud participants; officers recall pushing forward 'even if we don't come back' to bring home homicide and gambling-fraud evidence, and on the charter's landing the early team members choked up and exhaled — for the moment bringing evidence back to the Party and the people. To investigate the Oct 20 shooting, police braved the fighting inside a compound to excavate three Chinese victims, later repatriated through coordination — after Myanmar had said no Chinese had died. Four individual outcomes also surfaced: Ming Xuechang, wanted since Nov 2023, reportedly died by suicide after four days on the run while three relatives were arrested and handed over, and his photos are now circulating; on Jan 29, 2026, Ming Zhenzhen and ten others, principal figures of the 'Ming family,' were executed, with pre-execution footage showing her facing the camera without remorse and chatting cheerfully about the 'Wohu Villa massacre'; fraud financier Wu Hongming went to his execution still shouting that 'wolves are born to eat meat,' confessing that every 100 million yuan in profit meant paying the Ming family at least 20 million in 'protection money' — 20 to 30 percent of earnings; and in September 2023 China abandoned talks to arrest Wa State Army deputy commander Bao Junfeng and his gang in Kunming, seizing jewelry, watches, and luxury cars at his home. Service and consumer topics surged too: with the holiday return peak ahead, authorities forecast peak inbound traffic to Beijing from Oct 5 with the afternoon worst, 36 congestion-prone highway sections mainly in Jiangsu, Anhui, and Zhejiang, and emergency-management officials reminding drivers that hands stay on the wheel and eyes on the road even with 'smart driving' on; Qilian County, Qinghai drew more than 100,000 visitors into one-room-left accommodation, and the government freed up student dormitories to house nearly 500 stranded guests — by Oct 5 everyone had left, the dorms are being disinfected and inspected by several departments, and education and culture-tourism officials say visitors neatly folded their bedding, though some ask whether students consented to the arrangement; the Ministry of Public Security's cyber bureau advises against posting seven photo types to social feeds during the holiday — images with location data, IDs, travel documents, bank cards, parcel-unboxing shots, photos of children and elderly, and house keys — plus disabling related WeChat privacy settings; claims that 'high-speed rail seats are an HPV infection hotspot' drove a surge in disposable seat covers, while doctors stress HPV spreads mainly through sexual or close skin contact, with negligible probability via objects or the environment; and experts note undisclosed minimum-spend and corkage charges violate disclosure duties, so consumers may refuse to pay them. Internationally, on Oct 5 a British Airways jet from London to Chicago dropped some 8,230 meters — from about 11,000 to 2,740 — in seven minutes about 30 minutes after takeoff, squawked 7700, and returned safely; and early Oct 6 China's UN deputy permanent representative Sun Lei rebutted UK, Australian, Japanese, Irish, Czech, and Lithuanian representatives' attacks on China's human-rights record in the UNGA Third Committee's general debate, urging a few states to stop political manipulation with human rights. Entertainment, health, and tourism: on Oct 5 G.E.M. closed her world tour in Shenzhen, where a Guinness adjudicator certified her as the most stadium shows in a single tour — 170 of them; a study in npj Aging found frailty risk lowest at around 7.1 hours of sleep, with both short and long durations riskier — the 'golden sleep duration'; two AI-related items: the Leshan Giant Buddha scenic-area authority debunked a viral video of workers 'cleaning out' the statue's ears and nostrils as AI-generated fiction (the Buddha's Sept 20-25 maintenance was unrelated); and Ant's AI health assistant Afu's 'lose 100 million jin' campaign reported participants collectively putting on 19,100 jin on Oct 4, drawing jokes about 'a new exit from diets'; Harbin's Fangzheng County saw 'farm-work tourism' with 300-plus visitors a day cutting rice, about 3 kg each — roughly 30 bowls per person and 9,000 bowls daily; and US-based Chinese-American neuroscientist Feng Zhang congratulated the 2026 Nobel physiology or medicine laureates, one of whom, Karl Deisseroth, was his Stanford doctoral advisor. In sport, Sun Yingsha said flashes and shouting genuinely disrupted her serve and urged spectators to respect arena rules.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "10 万民警抵达中缅边境，缅北电诈'四大家族'被铲除",
+          en: "100,000 Police Deployed as Northern Myanmar's 'Four Families' Fall",
+        },
+        description: {
+          zh: "纪录片《缅北电诈覆灭纪实》披露专项行动彻底铲除四大家族，该地曾有近 6 万人涉诈；民警称即便一去不回也前赴后继。",
+          en: "A documentary reveals the operation wiped out the four families in a zone with nearly 60,000 fraud participants — 'even if we don't come back.'",
+        },
+      },
+      {
+        title: {
+          zh: "中国警方缅北战火下挖出同胞遗体",
+          en: "Police Recover Chinese Victims in Northern Myanmar",
+        },
+        description: {
+          zh: "为查 1020 枪击案，警方冒战火进入园区挖出 3 具中枪同胞遗体并协调带回国内，此前缅方曾通报无中国人死亡。",
+          en: "Braving the fighting to probe the Oct 20 shooting, officers exhumed three victims and repatriated them — after Myanmar had reported no Chinese deaths.",
+        },
+      },
+      {
+        title: {
+          zh: "明学昌自杀身亡、明珍珍死前笑谈惨案、金主巫鸿明供述分成",
+          en: "Ming Xuechang's Suicide, Ming Zhenzhen's Taunt, and the Financier's Confession",
+        },
+        description: {
+          zh: "明珍珍等 11 人 1 月被执行死刑、临镜头笑谈'卧虎山庄惨案'；巫鸿明供述每赚 1 亿需分明家至少 2000 万保护费。",
+          en: "Ming Zhenzhen's pre-execution footage shows no remorse; the financier confessed paying 20M in protection money per 100M of profit.",
+        },
+      },
+      {
+        title: {
+          zh: "英航客机 7 分钟急坠 8230 米，发 7700 代码安全返航",
+          en: "BA Jet Plummets 8,230 Meters in Seven Minutes, Returns Safely",
+        },
+        description: {
+          zh: "10 月 5 日伦敦飞芝加哥航班起飞约 30 分钟后从约 11000 米骤降至约 2740 米，挂 7700 紧急代码后返航。",
+          en: "The London-Chicago flight dropped from 11,000 to 2,740 meters, squawked 7700, and turned back.",
+        },
+      },
+      {
+        title: {
+          zh: "邓紫棋 170 场体育场专场刷新吉尼斯纪录",
+          en: "G.E.M. Sets a Guinness Record with 170 Stadium Shows",
+        },
+        description: {
+          zh: "10 月 5 日深圳世界巡演收官获'单次巡演体育场专场数量最多'吉尼斯世界纪录认证。",
+          en: "The Shenzhen tour finale was certified as the most stadium shows in a single tour.",
+        },
+      },
+      {
+        title: {
+          zh: "游客免费住学生宿舍引争议：学生同意了吗",
+          en: "Visitors Freed Up Student Dormrooms — Did Students Agree?",
+        },
+        description: {
+          zh: "祁连县国庆超 10 万游客一房难求，政府腾出宿舍安置近 500 人；游客离开时把被子叠放整齐，正由多部门消杀排查。",
+          en: "Qilian County housed nearly 500 guests in school dorms amid a 100,000-visitor crush; guests folded their bedding before leaving.",
+        },
+      },
+      {
+        title: {
+          zh: "'黄金睡眠时长'出炉：约 7.1 小时",
+          en: "The 'Golden Sleep Duration' Is About 7.1 Hours",
+        },
+        description: {
+          zh: "《npj Aging》研究发现睡眠过短或过长都会增加身体衰弱风险，7.1 小时左右风险最低。",
+          en: "An npj Aging study finds both short and long sleep raise frailty risk, with the lowest risk near 7.1 hours.",
+        },
+      },
+      {
+        title: {
+          zh: "乐山大佛'掏耳朵'视频系 AI 生成，官方辟谣",
+          en: "'Cleaning Out the Giant Buddha's Ears' Video Is AI-Generated",
+        },
+        description: {
+          zh: "乐山大佛管委会明确网传视频为 AI 制作的不实信息；大佛 9 月 20 日至 25 日保养维护与视频内容无关。",
+          en: "The scenic-area authority says the viral clip is AI fiction; the Sept 20-25 maintenance was unrelated.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 显示用户假期一天增重 1.91 万斤",
+          en: "AI Reports Holiday Participants Gaining 19,100 Jin in a Day",
+        },
+        description: {
+          zh: "蚂蚁阿福'科学减重一亿斤'活动显示 10 月 4 日参与用户集体增重 1.91 万斤，网友调侃'减肥有了新退展'。",
+          en: "Ant's health assistant Afu logged 19,100 jin of collective weight gain on Oct 4 — 'dieting's new exit.'",
+        },
+      },
+      {
+        title: {
+          zh: "中国收废品的大爷可能已经赚翻了",
+          en: "China's Scrap Collectors May Be Having a Very Good Year",
+        },
+        description: {
+          zh: "中东局势紧张致全球铝等供应链承压，废旧金属回收价格明显抬升、废弃资源综合利用业利润暴增。",
+          en: "Middle East supply strain lifts aluminum prices and scrap-metal values, booming the recycling sector.",
+        },
+      },
+      {
+        title: {
+          zh: "孙颖莎开始整顿乒乓球观赛礼仪",
+          en: "Sun Yingsha Cracks Down on Table Tennis Crowd Noise",
+        },
+        description: {
+          zh: "回应赛场闪光灯与呐喊声在发球时造成干扰，呼吁观众遵守赛场制度、减少此类行为。",
+          en: "Flashes and shouting disrupted her serve; she asks spectators to respect arena rules.",
+        },
+      },
+      {
+        title: {
+          zh: "中国代表点名警告英澳日等国",
+          en: "China's UN Delegate Names and Rebukes UK, Japan, Australia",
+        },
+        description: {
+          zh: "孙磊大使在第 81 届联大三委一般性辩论答辩发言，称部分国家恶意诋毁中国人权状况、停止借人权搞政治操弄。",
+          en: "Sun Lei rebutted six countries' human-rights attacks in the UNGA Third Committee, warning against political manipulation.",
+        },
+      },
+      {
+        title: {
+          zh: "放假期间这 7 种照片建议别发朋友圈",
+          en: "Seven Photo Types to Keep Off Your Feed This Holiday",
+        },
+        description: {
+          zh: "公安部网安局提示勿发布含位置信息、证件、交通凭证、银行卡、快递开箱图、老幼照片及家门钥匙的照片。",
+          en: "Public security's cyber bureau flags location shots, IDs, tickets, bank cards, unboxing photos, kids and elders, and house keys.",
+        },
+      },
+      {
+        title: {
+          zh: "一次性座椅套垫卖爆了",
+          en: "Disposable Seat Covers Sell Out",
+        },
+        description: {
+          zh: "网传'高铁座椅成 HPV 感染重灾区'带动热销；医生表示 HPV 基本通过性接触或皮肤密切接触感染，经物品传播概率极低。",
+          en: "Fears that high-speed rail seats spread HPV drove sales — but doctors say object transmission is extremely unlikely.",
+        },
+      },
+      {
+        title: {
+          zh: "游客下地割出 9000 碗米饭",
+          en: "Tourists Cut Enough Rice for 9,000 Bowls",
+        },
+        description: {
+          zh: "哈尔滨方正县'下地干活式旅游'走热，每天三百多名游客跟农户学割稻、人均约 3 公斤，老农当起'割稻老师'。",
+          en: "In Fangzheng County, Harbin, 300+ visitors a day cut about 3 kg of rice each — farmers now teach tourists to harvest.",
+        },
+      },
+      {
+        title: {
+          zh: "张锋祝贺诺奖导师：戴塞洛斯是他的博士导师",
+          en: "Feng Zhang Congratulates His Own Doctoral Advisor",
+        },
+        description: {
+          zh: "2026 年诺贝尔生理学或医学奖名单公布后，美籍华裔神经生物学家张锋第一时间祝贺三位获奖者，其中卡尔·戴塞洛斯是其斯坦福读博导师。",
+          en: "The neuroscientist congratulated the 2026 physiology or medicine laureates — one being his Stanford PhD advisor Karl Deisseroth.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-05",
     date: "2026-10-05",
     title: {
