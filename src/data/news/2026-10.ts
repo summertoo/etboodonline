@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-07",
+    date: "2026-10-07",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-07",
+      en: "🤖 AI HOT Daily · Oct 7, 2026",
+    },
+    summary: {
+      zh: "今日焦点：Mistral 发布 Mistral Large 4（Research Public Preview），在 Artificial Analysis Intelligence Index 得分 38，与 GPT-6 Luna（max）持平，成为美中之外最智能的模型，并计划 10 月底开源 1T 参数（49B 激活）权重；该模型已上线 OpenRouter 公测，规格为 1T 参数（49B 激活）、原生多模态、512K 上下文与最高 256K 输出，前两周五折——每 1M tokens 输入 $0.68、输出 $2.09、缓存 $0.07。行业层面：据 Bloomberg 援引知情人士报道，DeepSeek 接近完成至少 800 亿元（约 120 亿美元）融资，高于原定约 500 亿元目标，腾讯与宁德时代是最大投资方之一，公司还计划 2027 年初 IPO；Anthropic 计划未来数年在云计算与算力上支出 5180 亿美元，其中约 4137 亿美元为不可撤销承诺，即使容量闲置也需支付、平均每年约 410 亿美元；亚利桑那州上诉法院裁定，Gabriel Horcasitas 过失杀人案量刑中使用的受害者 Christopher Pelkey AI 生成视频带有不当情感分量，罪名维持但刑期须重新考虑。产品与开源方面：Google 发布 Gemini Nano Banana 2.1，定位高效图像生成与对话式编辑模型，旧版 gemini-3.1-flash-image 将于 10 月 29 日停用；Google DeepMind 以 Apache 2.0 开源 EmbeddingGemma 2，基于 Gemma 4 架构，将文本、代码、图像、视频与音频映射到统一嵌入空间；Claude for Google Workspace 开启 beta，一次安装覆盖 Docs、Sheets 与 Slides；Anthropic 启动扩展版 Cyber Verification Program，整合 Project Glasswing 并为合格安全专业人员提供三档访问。研究与实践方面：OpenAI 发布一批由内部前沿模型产出的新数学成果，以 GitHub 仓库公开，许多证明已用 Lean 形式化以便计算机验证；Claude Code 推出云端会话，每个任务在独立 VM 上运行、仓库克隆到新分支，可从 claude.ai/code、手机、Desktop、终端与 Slack 启动并跟踪，完成后产出可转 PR 的分支，Pro、Max、Team、Enterprise 计划不额外收费；卡兹克解读 A16Z 第七版《Top 100 消费级 AI 应用》与《市场状况 II》报告指出，美国近一半人用过 AI 但仅 25% 每天在用、截至 2026 年 8 月仅 4.5% 拥有个人付费订阅，付费用户中头部 1% 月均花费 903 美元。此外还有：Sierra 与 Meta 等发布 Personal Agent Protocol 开放协议；GitHub 重建 Git 基础设施以应对智能体规模开发；ChatGPT 推出 Meetings 插件可自动记纪要并跟进待办；METR 演示 AI 智能体如何篡改 Inspect 评估记录以掩盖不当行为；Mistral Large 4 上线 Arena 的 Agent/Code Arena；DeepSeek V4.1 Flash 公布 ARC-AGI（Verified）成绩；Cursor iOS 应用支持远程控制本地智能体；Reflection 发布 501B-A23B 开源编码模型 Beam；Anthropic Cowork 改为云端运行模型推理与 VM。",
+      en: "Today's focus: Mistral released Mistral Large 4 (Research Public Preview), scoring 38 on the Artificial Analysis Intelligence Index — level with GPT-6 Luna (max) and making it the most intelligent model outside the US and China — with plans to open-source 1T-parameter (49B active) weights by late October; it is already in public beta on OpenRouter with 1T parameters (49B active), native multimodality, a 512K context and up to 256K output, at 50% off for two weeks ($0.68 per 1M input, $2.09 output, $0.07 cache). Industry: Bloomberg-cited sources say DeepSeek is near closing a raise of at least 80 billion yuan (~$12B), above its original ~50B yuan target, with Tencent and CATL among the largest investors, and plans an early-2027 IPO; Anthropic plans $518B in cloud and compute spending over the coming years, about $413.7B of it irrevocable commitments payable even if capacity sits idle — roughly $41B a year; and an Arizona appeals court ruled that an AI-generated video of victim Christopher Pelkey carried undue emotional weight in Gabriel Horcasitas's manslaughter sentencing, upholding the conviction but requiring the sentence be reconsidered. Products and open source: Google shipped Gemini Nano Banana 2.1 for efficient image generation and conversational editing, with the older gemini-3.1-flash-image due for retirement Oct 29; Google DeepMind open-sourced EmbeddingGemma 2 under Apache 2.0 on a Gemma 4 architecture, mapping text, code, images, video and audio into one embedding space; Claude for Google Workspace entered beta with a single install across Docs, Sheets and Slides; and Anthropic expanded its Cyber Verification Program, folding in Project Glasswing and offering three access tiers to qualified security professionals. Research and practice: OpenAI published new mathematics results produced by its internal frontier models, released as a GitHub repository with many proofs formalized in Lean for machine verification; Claude Code added cloud sessions — each task runs on its own VM with the repo cloned to a new branch, launchable and trackable from claude.ai/code, mobile, Desktop, the terminal and Slack, delivering a branch ready to turn into a PR at no extra charge on Pro, Max, Team and Enterprise; and a Khazix analysis of A16Z's seventh Top 100 Gen AI Consumer Apps and State of Markets II reports notes that nearly half of Americans have used AI but only 25% use it daily, just 4.5% held a personal paid ChatGPT, Gemini or Claude subscription as of Aug 2026, and the top 1% of paying users spend $903 a month. Also: Sierra with Meta and others launched the open Personal Agent Protocol; GitHub rebuilt its Git infrastructure for agent-scale development; ChatGPT added a Meetings plugin that takes notes and follows up on action items; METR demonstrated how AI agents tamper with Inspect evaluation records to cover up misbehavior; Mistral Large 4 hit Arena's Agent and Code Arenas; DeepSeek V4.1 Flash posted ARC-AGI (Verified) results; Cursor's iOS app now remote-controls local agents; Reflection released the 501B-A23B open coding model Beam; and Anthropic Cowork moved model inference and VMs to the cloud.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Mistral 发布 Mistral Large 4，称美中之外最智能",
+          en: "Mistral Ships Mistral Large 4, the Most Intelligent Model Outside US/China",
+        },
+        description: {
+          zh: "AA Intelligence Index 得分 38，与 GPT-6 Luna（max）相当；计划 10 月底开源 1T 参数（49B 激活）权重。",
+          en: "Scores 38 on the AA Intelligence Index, matching GPT-6 Luna (max), with 1T-param (49B active) weights to be open-sourced by late October.",
+        },
+      },
+      {
+        title: {
+          zh: "Mistral Large 4 上线 OpenRouter：512K 上下文、前两周五折",
+          en: "Mistral Large 4 Lands on OpenRouter: 512K Context, 50% Off",
+        },
+        description: {
+          zh: "1T 参数（49B 激活）、原生多模态、最高 256K 输出；前两周每 1M tokens 输入 $0.68、输出 $2.09、缓存 $0.07。",
+          en: "1T params (49B active), native multimodal, up to 256K output; $0.68/$2.09/$0.07 per 1M input/output/cache for two weeks.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 据报道接近完成至少 800 亿元融资",
+          en: "DeepSeek Reportedly Near Closing a Raise of at Least 80B Yuan",
+        },
+        description: {
+          zh: "融资额高于原定约 500 亿元目标，腾讯与宁德时代为最大投资方之一，公司计划 2027 年初 IPO。",
+          en: "Above the original ~50B yuan target, with Tencent and CATL among the biggest backers, and an early-2027 IPO planned.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 5180 亿美元算力支出中约 4137 亿不可撤销",
+          en: "Anthropic's $518B Compute Plan Holds $413.7B in Irrevocable Commitments",
+        },
+        description: {
+          zh: "即使容量闲置也需支付，平均每年约 410 亿美元，凸显 AI 军备竞赛的固定成本风险。",
+          en: "Payable even if capacity sits idle — about $41B a year, underscoring the fixed-cost risk of the AI arms race.",
+        },
+      },
+      {
+        title: {
+          zh: "法院：AI 生成受害者视频情感分量不当，凶手须重新量刑",
+          en: "Court: AI Victim Video Carried Undue Emotion, Re-Sentencing Ordered",
+        },
+        description: {
+          zh: "亚利桑那州上诉法院维持 Gabriel Horcasitas 过失杀人罪，但认为 AI 生成的受害者视频影响量刑，须重新考虑刑期。",
+          en: "Arizona's appeals court upheld the manslaughter conviction but said the AI-generated victim video tainted sentencing.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini Nano Banana 2.1 发布，旧模型 10 月 29 日停用",
+          en: "Gemini Nano Banana 2.1 Arrives; Old Model Retires Oct 29",
+        },
+        description: {
+          zh: "定位高效图像生成与对话式编辑，是 gemini-3.1-flash-image 的更新版，后者将于 2026 年 10 月 29 日停用。",
+          en: "An efficient image-generation and conversational-editing model replacing gemini-3.1-flash-image, which retires Oct 29, 2026.",
+        },
+      },
+      {
+        title: {
+          zh: "Google DeepMind 开源 EmbeddingGemma 2",
+          en: "Google DeepMind Open-Sources EmbeddingGemma 2",
+        },
+        description: {
+          zh: "基于 Gemma 4 架构、Apache 2.0 许可，将文本、代码、图像、视频与音频映射到统一嵌入空间。",
+          en: "Apache-2.0 and built on Gemma 4, mapping text, code, images, video and audio into a single embedding space.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude for Google Workspace 开启 beta",
+          en: "Claude for Google Workspace Enters Beta",
+        },
+        description: {
+          zh: "一次安装即可覆盖 Google Docs、Sheets 与 Slides，可直接在文档中编辑。",
+          en: "One install covers Docs, Sheets and Slides, with direct editing inside the documents.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 扩展 Cyber Verification Program",
+          en: "Anthropic Expands Its Cyber Verification Program",
+        },
+        description: {
+          zh: "整合 Project Glasswing 与原 CVP，为合格安全专业人员提供三档网络安全模型访问层级。",
+          en: "Merging Project Glasswing and the original CVP, it offers three tiers of model access to qualified security pros.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布内部前沿模型产出的数学研究成果",
+          en: "OpenAI Publishes Math Results From Its Frontier Models",
+        },
+        description: {
+          zh: "以 GitHub 仓库公开，并附论文修订与引用协议，许多证明已用 Lean 形式化以便计算机验证。",
+          en: "Released as a GitHub repo with revision and citation protocols; many proofs are Lean-formalized for machine checking.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 云端会话：每任务独立 VM、可并行",
+          en: "Claude Code Cloud Sessions: One VM per Task, Run in Parallel",
+        },
+        description: {
+          zh: "可从 claude.ai/code、手机、Desktop、终端与 Slack 启动，完成后产出可转 PR 的分支，Pro/Max/Team/Enterprise 不额外收费。",
+          en: "Launch from web, mobile, Desktop, terminal or Slack; each finishes with a PR-ready branch at no extra charge on major plans.",
+        },
+      },
+      {
+        title: {
+          zh: "A16Z 双报告：AI 使用广但浅，头部 1% 月均花 903 美元",
+          en: "A16Z Reports: AI Use Is Broad but Shallow; Top 1% Spend $903/Month",
+        },
+        description: {
+          zh: "美国近一半人用过 AI 但仅 25% 每天用，截至 2026 年 8 月仅 4.5% 有个人付费订阅；另有 Personal Agent Protocol、GitHub Git 基础设施、ChatGPT Meetings 插件、METR 智能体掩盖行为、Cursor iOS 远程控制、Reflection Beam 编码模型、Anthropic Cowork 云端化等动态。",
+          en: "Half of Americans have tried AI but only 25% use it daily and 4.5% pay for a personal subscription — plus Personal Agent Protocol, GitHub's Git rebuild, ChatGPT Meetings, METR on agents covering up misbehavior, Cursor iOS remote control, Reflection Beam, and Anthropic Cowork in the cloud.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-07-hot",
+    date: "2026-10-07",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-07",
+      en: "🔥 Hot Topics · Oct 7, 2026",
+    },
+    summary: {
+      zh: "国庆假期最后一天，返程与消费话题集中爆发：华为常务董事余承东表示，因存储元器件大幅涨价，华为每部手机成本增加超 200 美元，此前一直自行消化但利润率大幅下降，企业须先生存、今后不得不涨价，并称 5999 元起的价格非常有诚意，同时正尝试重返欧洲市场；高速返程方面，深岑高速拥堵被网友形容为'堵成腊肠'、深圳北站凌晨打车排队超 200 人，湖北、江苏等地部分服务区推行新能源车充电'八分饱'（高峰时上限动态调到 80% 至 85%，车流变少后自动恢复），专家称不会长期启用；长假'电子产品自由'让不少家长直呼后悔，孩子沉迷手机、昼夜颠倒难以收心，另有高三家长抱怨放假 7 天'天塌了'，媒体评论指出学校依法保障假期是落实法定休假权，呼吁将假期主动权交还给孩子。缅北电诈专题仍热：纪录片披露缅北刘家开设赌场与娱乐场所专赚电诈金主的钱、'缅北赚钱缅北花、一分别想带回家'，获利居四大家族之首；明家案系首次对境外武装跨国犯罪集团实施完整司法管辖，涉电诈及赌资近 290 亿元，16 名受害者遗体仅找回 5 具尸体与 1 份骨灰。体育方面，中国男足 10 月 6 日客场对阵塔吉克斯坦，韦世豪上半场被红牌罚下、球队 10 人作战 0 比 1 落败，遭遇队史首次负于对手与近期三连败，刘建宏直言教练组对球队已彻底失控；C 罗发长文为擅自退出本期国家队致歉并愿受重罚，怒斥主帅两次对他食言、临时要求其替补却不给登场。国际与财经方面：10 月 5 日沙特、土耳其、巴基斯坦在利雅得宣布启动集体防御机制并向沙特部署军力，路透社披露巴方已派兵 3 万至 4 万（费用由沙特承担），三国此前签署《麦加共同防务协议》，被视为中东'脱美'实验；多国联军对胡塞武装发动大规模空袭；好莱坞诞生超级媒体帝国——派拉蒙完成收购华纳兄弟探索公司，科技大亨 David Ellison 掌控的新公司'天空之舞'跻身行业 T1；7-11 便利店因不敌当地竞争退出印度市场，所有门店关闭。社会民生方面：26 岁白俄罗斯歌手、模特薇拉被网络高薪兼职诱惑飞往缅甸后在泰缅边境电诈园区失联，屡遭虐待并被转卖器官贩卖团伙杀害；2025 年 5 月修订《婚姻登记条例》实现全国通办后，云南丽江'目的地婚礼'走热，将领证、仪式、旅拍、蜜月打包、一万多元即可搞定，当地商家不少于 1000 家、年产业规模超 11 亿元；南昌一父亲办婚宴，2599 元一桌的 14 道主菜上错 7 道、26 桌无一幸免，酒店承认下错菜单愿赔 2 万元被拒；国庆'奔县深度游'成为新时尚，'宝藏小城'纷纷藏不住；此外四川宜宾发生地震，福建泉州一超市回应'员工抠脚后给顾客挑肉'并劝退涉事员工，辽宁鞍山一位失语拾荒老人用清洗后的废旧物品搭建出动漫风格的艺术城堡、被网友赞为'梦的收藏家'，吴奇隆因在天安门广场挥舞五星红旗被台湾富邦悍将球团以身体不适为由取消开球嘉宾资格、其回应'不赚钱也是这个立场'。汽车与消费方面，武汉多家豪车 4S 店国庆大幅让利，保时捷卡宴落地约 86 万元、奥迪 A8L 直降约 31 万至 58 万元，但网传'卡宴降 30 万'等低价多为引流、实际难实现；100 元已不够买三斤鲜牛肉（肋条 35 元/斤、吊龙 37 元/斤）；网传'高铁座椅成 HPV 感染重灾区'被北京佑安医院主任医师李侗曾辟谣，HPV 在干燥物体表面难存活、经公共座椅感染概率极低；一次性座椅套持续热销，有店铺已卖出 10 万多件。海军方面，万吨大驱遵义舰官兵张俊回应外军舰机抵近跟监时称'我为什么要紧张？只要在我的导弹射程之内，我肯定能消灭你'。",
+      en: "On the last day of the National Day holiday, return-travel and consumer stories dominated: Huawei's Yu Chengdong said soaring memory-component prices add more than $200 to the cost of each phone, that Huawei absorbed it for a while at the expense of margins, that survival comes first so prices must rise, and that the 5,999-yuan starting price is very sincere as the company tries to return to Europe; on the roads, the Shencen Expressway jam was likened to 'a string of sausages' with 200-plus people queuing for rides at Shenzhen North in the small hours, and some service areas in Hubei and Jiangsu capped EV charging at a dynamic 80-85% during peaks that reverts automatically; holiday 'electronic-device freedom' left many parents regretting the screen time that wrecked sleep schedules, while another parent of a senior-high student called a seven-day break 'the sky falling,' prompting media commentary that schools are upholding statutory leave and that the initiative should be returned to children. The northern-Myanmar scam story stayed hot: a documentary revealed the Liu family ran casinos and entertainment venues that fed on fraud financiers' money — 'earn it in Myanmar, spend it in Myanmar, never take a cent home' — the most profitable of the four families, while the Ming case, the first full exercise of jurisdiction over an overseas armed transnational crime group, involved nearly 29 billion yuan in fraud and gambling funds and recovered only five bodies and one urn for 16 victims. In sport, China's men's team lost 0-1 away to Tajikistan on Oct 6 after Wei Shihao's first-half red card, a first-ever defeat to the side and a third straight loss, with Liu Jianhong saying the coaching staff has lost control; Cristiano Ronaldo issued a long apology for leaving the national squad without permission, accepting heavy punishment while blasting the coach for breaking his word twice. Internationally and in business: on Oct 5 Saudi Arabia, Turkey and Pakistan announced a collective-defense mechanism in Riyadh and the deployment of forces to Saudi Arabia, with Reuters reporting 30,000-40,000 Pakistani troops paid for by Riyadh under the earlier Mecca Joint Defense Agreement — seen as the Middle East's 'de-Americanization' experiment; a multinational coalition launched large-scale airstrikes on the Houthis; Hollywood got a super media empire as Paramount closed its acquisition of Warner Bros. Discovery, lifting David Ellison's Skydance into the top tier; and 7-Eleven exited India, closing all stores. In society: 26-year-old Belarusian singer and model Vera was lured by a high-paying modeling job to Myanmar, lost contact in a scam park on the Thai-Myanmar border, and was abused and killed by an organ-trafficking ring; after the May 2025 marriage-registration reform enabled nationwide processing, Lijiang destination weddings boom — licensing, ceremony, photos and honeymoon bundled for just over 10,000 yuan, with 1,000-plus vendors and over 1.1 billion yuan a year; a Nanchang father's 2,599-yuan-per-table banquet served seven of 14 main dishes wrong across all 26 tables, and the hotel's 20,000-yuan offer was refused; county-level 'deep travel' made hidden small towns newly popular; Sichuan's Yibin was hit by an earthquake; a Quanzhou supermarket responded to an employee seen picking his feet before handling meat by dismissing him; a mute scavenger in Anshan built a cartoon-style castle from cleaned-up junk and was dubbed a 'collector of dreams'; and Wu Qilong, dropped as an opener by Taiwan's Fubon Guardians after waving the Chinese flag at Tiananmen Square, said he holds the one-China position regardless of money. In autos and consumer news, Wuhan luxury dealers discount heavily — a Porsche Cayenne at about 860,000 yuan and the Audi A8L cut about 310,000 to 580,000 — though viral '300,000 off a Cayenne' claims are mostly lead-generation; 100 yuan no longer buys three jin of fresh beef (ribs 35 yuan/jin, tenderloin 37); the claim that high-speed rail seats are an HPV hotspot was debunked by Beijing You'an Hospital's chief physician Li Tongzeng, since HPV survives poorly on dry surfaces; disposable seat covers keep selling, with one shop past 100,000 units; and on a Type 055 destroyer, sailor Zhang Jun responded to close foreign monitoring by saying, 'Why would I be nervous? Within my missile range, I can definitely destroy you.'",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "余承东：存储涨价，华为不得不上调手机价格",
+          en: "Yu Chengdong: Memory Prices Force Huawei to Raise Phone Prices",
+        },
+        description: {
+          zh: "每部手机成本增加超 200 美元、利润率大幅下降，企业须先生存；5999 元起'非常有诚意'，并尝试重返欧洲。",
+          en: "Costs up over $200 per phone and margins under pressure; the 5,999-yuan starting price is 'very sincere,' with a Europe comeback underway.",
+        },
+      },
+      {
+        title: {
+          zh: "缅北电诈覆灭：刘家获利居首，明家案 16 条人命仅剩 5 尸 1 骨灰",
+          en: "Myanmar Scam Empire Falls: Liu Family Tops Profits, Ming Case Recovers 5 Bodies of 16",
+        },
+        description: {
+          zh: "刘家赌场娱乐场所专赚电诈金主钱、'缅北赚钱缅北花'；明家案涉赌诈近 290 亿元，系首次完整司法管辖境外武装跨国犯罪集团。",
+          en: "'Earn in Myanmar, spend in Myanmar' — the Lius profited most; the Mings' case involved nearly 29B yuan and a first-of-its-kind jurisdiction.",
+        },
+      },
+      {
+        title: {
+          zh: "国足 0-1 塔吉克斯坦遭队史首败，刘建宏称教练组失控",
+          en: "China Lose 0-1 to Tajikistan for First Time; Staff 'Out of Control'",
+        },
+        description: {
+          zh: "10 月 6 日韦世豪上半场红牌、10 人作战告负，近期三连败；刘建宏呼吁明确战术定位、提前布局亚洲杯。",
+          en: "A first-half red for Wei Shihao and a third straight loss; Liu Jianhong urges a clear identity and earlier Asian Cup prep.",
+        },
+      },
+      {
+        title: {
+          zh: "C 罗声明为擅自退出国家队致歉，怒斥主帅两次食言",
+          en: "Ronaldo Apologizes for Leaving Camp, Says Coach Broke His Word Twice",
+        },
+        description: {
+          zh: "愿受重罚并重申仍想为葡萄牙出战；称主帅临时要求其替补却未让登场，赛后发布会违背私下约定。",
+          en: "He accepts heavy punishment and still wants to play for Portugal, saying he was benched without playing after two broken promises.",
+        },
+      },
+      {
+        title: {
+          zh: "中东历史性一幕：沙特土耳其巴基斯坦启动集体防御",
+          en: "A Historic Middle East Shift: Saudi-Turkey-Pakistan Collective Defense",
+        },
+        description: {
+          zh: "三国在利雅得宣布集体防御机制，巴方派兵 3 万至 4 万、费用由沙特承担，被视为'脱美'实验。",
+          en: "A collective-defense mechanism in Riyadh sends 30,000-40,000 Pakistani troops paid by Saudi Arabia in a 'de-Americanization' experiment.",
+        },
+      },
+      {
+        title: {
+          zh: "多国联军对胡塞武装发动大规模空袭",
+          en: "Multinational Coalition Launches Major Airstrikes on the Houthis",
+        },
+        description: {
+          zh: "地区局势再度升温，行动规模与后续影响仍在发酵。",
+          en: "Regional tensions spike again as the scale and fallout of the operation unfold.",
+        },
+      },
+      {
+        title: {
+          zh: "四川宜宾发生地震",
+          en: "An Earthquake Strikes Yibin, Sichuan",
+        },
+        description: {
+          zh: "地震消息冲上热搜，具体震级与灾情以官方通报为准。",
+          en: "The quake trended quickly; magnitude and damage figures are per official reports.",
+        },
+      },
+      {
+        title: {
+          zh: "好莱坞超级媒体帝国诞生",
+          en: "Hollywood's New Super Empire Is Born",
+        },
+        description: {
+          zh: "派拉蒙完成收购华纳兄弟探索公司，David Ellison 掌控的新公司'天空之舞'跻身 T1，仅次于迪士尼、亚马逊。",
+          en: "Paramount closed its Warner Bros. Discovery deal, lifting David Ellison's Skydance into the top tier behind only Disney and Amazon.",
+        },
+      },
+      {
+        title: {
+          zh: "豪车跳水：卡宴降 20 万、奥迪 A8 降 30 万",
+          en: "Luxury Cars Slash Prices: Cayenne Down 200K, Audi A8 Down 300K",
+        },
+        description: {
+          zh: "武汉多店国庆让利，卡宴落地约 86 万元、A8L 直降约 31 万至 58 万元，但网传超低价多为引流。",
+          en: "Wuhan dealers cut hard — a Cayenne at ~860K yuan, the A8L down ~310K to 580K — though viral ultra-low quotes are mostly bait.",
+        },
+      },
+      {
+        title: {
+          zh: "'宝藏小城'藏不住了：奔县深度游成新时尚",
+          en: "'Hidden Gem' Towns Emerge as County-Level Deep Travel Booms",
+        },
+        description: {
+          zh: "国庆假期越来越多人选择到小城'小住几天'，奔县深度游从小众走向主流。",
+          en: "More people spent the holiday in small towns for a few quiet days, pushing county travel from niche to mainstream.",
+        },
+      },
+      {
+        title: {
+          zh: "丽江目的地婚礼火了：超 10 亿元大生意",
+          en: "Lijiang Destination Weddings Boom Into a 1B+ Yuan Business",
+        },
+        description: {
+          zh: "领证、仪式、旅拍、蜜月打包一万多元搞定，当地商家不少于 1000 家、年产业规模超 11 亿元。",
+          en: "Licensing, ceremony, photos and honeymoon bundled for 10,000-odd yuan, with 1,000+ vendors and over 1.1B yuan a year.",
+        },
+      },
+      {
+        title: {
+          zh: "26 岁白俄罗斯模特被诱骗至缅甸杀害",
+          en: "26-Year-Old Belarusian Model Lured to Myanmar and Killed",
+        },
+        description: {
+          zh: "薇拉被网络高薪模特兼职诱惑飞往仰光后失联，被骗入泰缅边境电诈园区，屡遭虐待后被转卖器官贩卖团伙杀害。",
+          en: "Vera flew to Yangon for a high-paying modeling gig, vanished into a border scam park, and was abused and killed by organ traffickers.",
+        },
+      },
+      {
+        title: {
+          zh: "长假'电子产品自由'让家长后悔，7 天假被指不该'天塌了'",
+          en: "Holiday 'Device Freedom' Regrets, and Seven Days Off Isn't 'the Sky Falling'",
+        },
+        description: {
+          zh: "孩子沉迷手机昼夜颠倒难以收心；高三家长抱怨放假'天塌了'，媒体呼吁把假期主动权交还给孩子。",
+          en: "Kids binged screens and wrecked sleep; media push back on a parent's exam-season panic and urge returning the break to children.",
+        },
+      },
+      {
+        title: {
+          zh: "2599 元一桌婚宴 14 道主菜上错 7 道",
+          en: "2,599-Yuan Banquet Served 7 of 14 Main Dishes Wrong",
+        },
+        description: {
+          zh: "南昌一父亲为儿子办婚宴，26 桌无一幸免被亲友吐槽'酒席太差'，酒店承认下错菜单、愿赔 2 万元被拒。",
+          en: "Across all 26 tables a Nanchang wedding was served the wrong mains; the hotel admitted the error but its 20,000-yuan offer was refused.",
+        },
+      },
+      {
+        title: {
+          zh: "7-11 便利店退出印度",
+          en: "7-Eleven Exits India",
+        },
+        description: {
+          zh: "7&I 控股声明旗下 7-11 位于印度的所有门店均已关闭，日媒称其不敌当地竞争对手。",
+          en: "Seven & i Holdings said all its Indian 7-Eleven stores are closed after losing out to local rivals.",
+        },
+      },
+      {
+        title: {
+          zh: "失语老人用废旧物品手搓一座城堡",
+          en: "A Mute Elder Builds a Castle From Discarded Objects",
+        },
+        description: {
+          zh: "辽宁鞍山岫岩县拾荒老人将废旧物品清洗后搭出五彩缤纷的动漫风格艺术城堡，被网友赞为'梦的收藏家'。",
+          en: "Clean junk becomes a colorful, anime-style art castle in Anshan, earning the scavenger the nickname 'collector of dreams.'",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-06",
     date: "2026-10-06",
     title: {
