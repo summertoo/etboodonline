@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-08",
+    date: "2026-10-08",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-08",
+      en: "🤖 AI HOT Daily · Oct 8, 2026",
+    },
+    summary: {
+      zh: "今日焦点：OpenAI 发布面向更广泛用户的 GPT-6，并随 GPT-6 在 ChatGPT 中引入 Intelligent UI，可生成图形、按钮、表单、图表和可交互组件来回答问题——搭载智能界面的 GPT-6 已向全球 ChatGPT Plus、Pro、Business 与 Enterprise 用户推出，并将于次日起扩展至 Free 和 Go 用户。产品与模型方面：Anthropic 发布 Claude Haiku 5.5，定位迄今最便宜、最快的小模型，运行成本平均降低约 75%，适合摘要、压缩、数据库查询、分类等高吞吐任务，并可搭配 Opus 5.5 和 Sonnet 5.5 担任编码子智能体；Claude Code v2.1.293 同步新增 Haiku 5.5（支持 1M 上下文，$0.10/$0.50 每百万 token）；Anthropic 还为 Claude Max 和 Team 套餐推出月度 Platform API 额度（Max 5x 为 $100、Max 20x 为 $200、Team 最多 $500 可共享，适用于任何模型）。OpenAI Decisions API 公测上线，向所有开发者开放，可让应用在接近实时下选择合适的模型、工具或动作，官方称决策速度最高比通过 Responses API 的 GPT-6 Luna 快 10 倍。NVIDIA 与 Microsoft 发布 RTX Spark 及 DGX Station for Windows，推动 AI Agent 落地 Windows PC；Google 推出实验性游戏平台 Playground，用户通过文本提示词即可创建、游玩和分享自定义游戏、无需编程经验；Google 还开放 SynthID Detector 门户，上传图片、视频或音频即可检测是否带有 Google 或其合作伙伴的 SynthID 水印。研究与行业方面：Google Research 在 NBER 发表三个月随机田野实验，向 11 家知识产权律所的 133 名律师随机开放当时未发布的 AI 专利写作助手，发现 AI 辅助未必能培养初级律师的专业判断；Microsoft Research Asia 开源 Agent Lightning v1.0，一个约 3,500 行代码的 Harnessed Agentic RL 框架，让部署时的同一 agent harness 直接参与强化学习；a16z 分析德州电网暂停审批数据中心的原因——并网队列从 2024 年底的 63 GW 激增到 2026 年 6 月的 474 GW，约 90% 是数据中心、且多为投机性申请。此外还有：Nemotron 系列微调后达到 IOI 2026 与 IMO 2026 金牌水平；LlamaIndex 发布 OpenDocRouter 统一调用多种文档解析模型；Perplexity 开源 pplx-embed-v2-late 多模态 late-interaction 嵌入模型；Unsloth 开源本地训练 Qwen3.5 0.8B 决策模型教程、准确率从 20.7% 提升至 74.3%；vLLM 详解 DeepSeek-V4.1-Flash 优化使 Agent 场景吞吐提升 5 倍；LangChain 重构 Deep Agents 的 Skills 支持；Liquid AI 发布开源决策模型 d1-3B 与 d1-omni-600M；Stanford HAI 研究建议别把 AI 包装成效率工具；Google 发布 Developer Knowledge API 生态；PromptArmor 解析 WebMCP 的安全风险。",
+      en: "Today's focus: OpenAI released GPT-6 for a broader audience and introduced Intelligent UI in ChatGPT, which generates graphics, buttons, forms, charts and interactive components to answer questions — the Intelligent UI build is rolling out globally to ChatGPT Plus, Pro, Business and Enterprise users, expanding to Free and Go the next day. Products and models: Anthropic launched Claude Haiku 5.5, its cheapest and fastest small model yet at roughly 75% lower running cost, suited to summarization, compression, database queries and classification at high throughput, and usable as a coding subagent alongside Opus 5.5 and Sonnet 5.5; Claude Code v2.1.293 added Haiku 5.5 (1M context, $0.10/$0.50 per million tokens); and Anthropic introduced monthly Platform API credits for Claude Max and Team (Max 5x $100, Max 20x $200, Team up to $500 shared, valid on any model). OpenAI's Decisions API entered public beta for all developers, letting apps pick the right model, tool or action near real-time — up to 10x faster than GPT-6 Luna through the Responses API, per OpenAI. NVIDIA and Microsoft launched RTX Spark and DGX Station for Windows to bring AI agents to Windows PCs; Google introduced the experimental gaming platform Playground, where text prompts create, play and share custom games with no coding; and Google opened the SynthID Detector portal, where uploading an image, video or audio file scans it for Google or partner SynthID watermarks. Research and industry: a Google Research three-month randomized field experiment published via NBER gave 133 lawyers at 11 IP firms access to an unreleased AI patent-writing assistant and found AI help may not build juniors' professional judgment; Microsoft Research Asia open-sourced Agent Lightning v1.0, a ~3,500-line Harnessed Agentic RL framework that lets the same agent harness used in deployment participate directly in reinforcement learning; and a16z explained why Texas paused data-center approvals — its interconnection queue ballooned from 63 GW in late 2024 to 474 GW by June 2026, about 90% data centers and much of it speculative. Also: Nemotron fine-tunes reached IOI and IMO 2026 gold levels; LlamaIndex released OpenDocRouter to call multiple document parsers through one API; Perplexity open-sourced the pplx-embed-v2-late multimodal late-interaction embedding models; Unsloth published a local-training tutorial lifting Qwen3.5 0.8B's decision accuracy from 20.7% to 74.3%; vLLM detailed DeepSeek-V4.1-Flash optimizations giving 5x agent throughput; LangChain revamped Skills in Deep Agents; Liquid AI released the open d1-3B and d1-omni-600M decision models; Stanford HAI advised against selling AI as a productivity tool; Google launched its Developer Knowledge API ecosystem; and PromptArmor analyzed WebMCP's security risks.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI 全面上线 GPT-6 与 Intelligent UI",
+          en: "OpenAI Rolls Out GPT-6 and Intelligent UI to All ChatGPT Users",
+        },
+        description: {
+          zh: "Intelligent UI 可生成图形、按钮、表单、图表和可交互组件来回答问题；先向 Plus/Pro/Business/Enterprise 开放，次日起扩展至 Free 与 Go。",
+          en: "Intelligent UI generates graphics, buttons, forms, charts and interactive components; first to paid tiers, then Free and Go the next day.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 发布 Claude Haiku 5.5，成本降约 75%",
+          en: "Anthropic's Claude Haiku 5.5 Cuts Costs About 75%",
+        },
+        description: {
+          zh: "迄今最便宜、最快的小模型，适合摘要、压缩、数据库查询与分类等高吞吐任务，可搭配 Opus 5.5/Sonnet 5.5 当编码子智能体。",
+          en: "The cheapest, fastest small model yet for high-throughput summarization, compression, DB queries and classification, and a coding subagent for Opus/Sonnet 5.5.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 为 Claude Max/Team 推出月度 API 额度",
+          en: "Anthropic Adds Monthly Platform API Credits for Max and Team",
+        },
+        description: {
+          zh: "Max 5x 为 $100、Max 20x 为 $200、Team 最多 $500 且可共享，适用于任何模型（含 Haiku 5.5）与自有代码或第三方 harness。",
+          en: "Max 5x gets $100, Max 20x $200, Team up to $500 shared — usable on any model, including Haiku 5.5, in your own code or third-party harnesses.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI Decisions API 公测：实时选模型、工具与动作",
+          en: "OpenAI's Decisions API Beta Picks Models, Tools and Actions in Real Time",
+        },
+        description: {
+          zh: "向所有开发者开放，官方称决策速度最高比经 Responses API 的 GPT-6 Luna 快 10 倍。",
+          en: "Open to all developers; OpenAI claims up to 10x the decision speed of GPT-6 Luna via the Responses API.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code v2.1.293 新增 Haiku 5.5",
+          en: "Claude Code v2.1.293 Adds Haiku 5.5",
+        },
+        description: {
+          zh: "成为 Anthropic API 默认 Haiku 模型，支持 1M 上下文，价格 $0.10/$0.50 每百万 token（超 100K 提示为 $0.50/$2.50）。",
+          en: "Now the default Haiku model with 1M context at $0.10/$0.50 per M tokens ($0.50/$2.50 above 100K prompts).",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA 与 Microsoft 发布 RTX Spark 与 DGX Station for Windows",
+          en: "NVIDIA and Microsoft Launch RTX Spark and DGX Station for Windows",
+        },
+        description: {
+          zh: "为 Windows PC 引入 AI Agent 所需的软硬件，推动本地 Agent 落地。",
+          en: "Hardware and software bringing AI agents to Windows PCs, pushing local agent deployment.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 推出实验性游戏平台 Playground",
+          en: "Google Launches the Experimental Playground Gaming Platform",
+        },
+        description: {
+          zh: "用户通过文本提示词即可创建、游玩和分享自定义游戏，无需编程经验。",
+          en: "Text prompts create, play and share custom games with no programming experience.",
+        },
+      },
+      {
+        title: {
+          zh: "Google SynthID Detector 门户开放",
+          en: "Google Opens the SynthID Detector Portal",
+        },
+        description: {
+          zh: "在 synthid.com 上传图片、视频或音频，扫描是否包含来自 Google 或其合作伙伴的 SynthID 水印。",
+          en: "Upload an image, video or audio at synthid.com to scan for Google or partner SynthID watermarks.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Research：AI 辅助未必培养初级律师专业判断",
+          en: "Google Research: AI Help May Not Build Junior Lawyers' Judgment",
+        },
+        description: {
+          zh: "在 NBER 发表的三个月随机田野实验，向 11 家知识产权律所 133 名律师开放未发布的 AI 专利写作助手。",
+          en: "An NBER field experiment gave 133 lawyers at 11 IP firms access to an unreleased AI patent-writing assistant.",
+        },
+      },
+      {
+        title: {
+          zh: "Microsoft 开源 Agent Lightning v1.0",
+          en: "Microsoft Open-Sources Agent Lightning v1.0",
+        },
+        description: {
+          zh: "约 3,500 行代码的 Harnessed Agentic RL 框架，让部署时的同一 agent harness 直接参与强化学习、无需重写 agent。",
+          en: "A ~3,500-line Harnessed Agentic RL framework that puts the deployment harness directly into RL training without rewriting agents.",
+        },
+      },
+      {
+        title: {
+          zh: "a16z：德州为何让数据中心排队等电",
+          en: "a16z: Why Texas Makes Data Centers Queue for Power",
+        },
+        description: {
+          zh: "并网队列从 2024 年底 63 GW 激增到 2026 年 6 月的 474 GW，约 90% 为数据中心、多为投机性申请且社区沟通不足。",
+          en: "The interconnection queue jumped from 63 GW in late 2024 to 474 GW by June 2026, ~90% data centers, much of it speculative.",
+        },
+      },
+      {
+        title: {
+          zh: "更多 AI 动态：Nemotron 夺 IOI/IMO 金牌、vLLM 提速 5 倍等",
+          en: "More AI News: Nemotron Golds, vLLM 5x, and More",
+        },
+        description: {
+          zh: "Nemotron 微调达 IOI/IMO 2026 金牌水平；OpenDocRouter 统一文档解析；Perplexity 开源 pplx-embed-v2-late；Unsloth 使 Qwen3.5 0.8B 决策准确率 20.7%→74.3%；vLLM 让 DeepSeek-V4.1-Flash Agent 吞吐提升 5 倍；LangChain 重构 Deep Agents Skills；Liquid AI 开源 d1-3B/d1-omni-600M；Stanford HAI 建议别把 AI 当效率工具卖；Google 推出 Developer Knowledge API；PromptArmor 解析 WebMCP 风险。",
+          en: "Nemotron fine-tunes hit IOI/IMO 2026 gold; OpenDocRouter unifies doc parsing; Perplexity's pplx-embed-v2-late; Unsloth lifts Qwen3.5 0.8B from 20.7% to 74.3%; vLLM gives DeepSeek-V4.1-Flash 5x agent throughput; LangChain revamps Deep Agents Skills; Liquid AI's d1-3B/d1-omni-600M; Stanford HAI on not selling AI as productivity; Google's Developer Knowledge API; PromptArmor on WebMCP risks.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-08-hot",
+    date: "2026-10-08",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-08",
+      en: "🔥 Hot Topics · Oct 8, 2026",
+    },
+    summary: {
+      zh: "国庆假期收官，返程与节后节奏成为主线：国庆高速免费通行于 10 月 7 日 24 时结束，武汉一收费站前上演'速度与激情'，有车主卡点通过、栏杆随后落下，更多车主选择'先下后上'分段省费；10 月 8 日起打工人需按'上3休1再上5休2'出勤，且今年法定节假日已全部结束、下一个假期要等到 2027 年元旦；今日寒露，民间有'贴秋膘'之说，扬州炒饭因 1400 多年历史与'碎金饭'典故被推荐。汽车安全引发关注：懂车帝测试视频称 3 台尊界 V800 新车在封闭场地测制动时刹车踏板支架全部断裂致脚刹失效、停车距离延长至约 140 米，测试方疑因踏板设计偏弱致强度不足，尊界及江淮汽车尚未正式回应、分析未经车企确认；此外网传车主后备箱装十箱矿泉水被扣 3 分罚款 100 元，交警解释属'客货混装'，专家表示违法核心不是装了多少货、而是人和货共用了本该只载人的空间。跨境犯罪与安全方面：纪录片披露演员王某（王星）2025 年 1 月初被微信名为'颜十六'的人以赴泰拍戏为由骗至泰国、随后被挟持偷渡至缅甸妙瓦底，短短 4 天内被转卖 3 次；缅甸警方通报 26 岁白俄罗斯女歌手薇拉·克拉夫特索娃被高薪招聘诱骗至缅甸、在电诈园区被迫从事'爱情诈骗'，后遭活摘器官杀害，5 名参与诱拐者各被判 21 年；俄罗斯伊尔库茨克一名 28 岁鼠疫研究所女研究员病亡，网传其曾打碎鼠疫菌试管，官方称系'不明病因肺炎'、否认实验室事故，近 200 名接触者被隔离观察；四川成都一女子 2017 年买房后一直出租，今年 10 月才从邻居口中得知自家 7 楼客厅正上方楼顶竟埋着一座坟，坟中男童 2009 年病逝、警方已取走尸骨鉴定。国际与财经方面：记者获悉五角大楼数日前已指示美军中央司令部完成相关准备、以应对可能恢复对伊朗的大规模军事行动，但未给出具体打击日期、特朗普亦未作最终决定，另有最新视频显示美伊冲突期间伊朗 F-5 战机贴脸袭击了位于科威特的一处重要美军基地；10 月 7 日俄罗斯总统普京 74 岁生日，当天俄乌继续交火、乌方指责俄军袭击致 12 死 34 伤并斥此为普京的'生日礼物'，而特朗普预告与其通话；央行 10 月 8 日将开展 12000 亿元买断式逆回购操作、期限 3 个月（89 天），以保持银行体系流动性充裕。科技与经济方面：OpenAI 于当地时间 10 月 7 日宣布搭载智能界面的 GPT-6 开始全球推出，次日起扩展至 Free 和 Go 用户；媒体聚焦'为什么每个 APP 都想追着借钱给你'——截至 2025 年中国网络小额贷款市场规模突破 5 万亿元、服务数亿用户，而追着放贷是因为这门生意实在太赚钱；10 月 7 日晚我国科学家在国际上率先研制出核光钟并实现稳定运行，成果在线发表于《自然》，清华大学物理系副教授丁世谦团队使秒级稳定度优于同期欧洲团队近一个数量级、性能国际领先。社会民生方面：重庆李子坝地下 33 米的金库存放着一亿现钞，该金库下沉至嘉陵江边、通风良好且未遭战火，参观者可直观感受一亿现钞的视觉震撼并了解抗战历史文化；央视 10 月 7 日下午曝光三亚、陵水商业赶海侵入红树林保护区、地笼泛滥，当晚海南省委书记冯飞主持会议部署整改，三亚多部门截至下午 6 时已关闭赶海点 7 个、收缴地笼网 570 个；青海祁连县单日涌入超十万游客致一房难求，因夜间气温低至零下 4 度，当地紧急启用中学学生宿舍免费接待近 500 名滞留游客，此举获肯定的同时引发'旅游巨婴'心态与'学生宿舍私人属性'的讨论，评论指出政府应急救急不应成为盲目出行的兜底选项、官方也不应为宠客漠视学生隐私与自主权；今年国庆约 4 斤重、可提供约 10 公斤助力的外骨骼机器人（'登山外挂'）成为山岳景区新看点，从泰山到华山、慕田峪长城等数十家 4A、5A 级景区已上线租赁业务。此外，影视表演艺术家彭玉 10 月 7 日在珠海安详离世、享年 93 岁；九个舅舅为给侄女婚礼撑腰提前染彩发；媒体还讨论学校下发电子版试卷将打印任务转嫁家长带来的隐形负担；哈萨克斯坦副总统当面感谢成龙对该国的友好情谊。",
+      en: "As the National Day holiday closed, return travel and the post-holiday rhythm dominated: free highway passage ended at midnight on Oct 7, and at a Wuhan toll station one driver squeezed through just as the barrier dropped while others split trips to save fees; from Oct 8, workers face a '3 on, 1 off, 5 on, 2 off' schedule, and with all statutory holidays for the year used up the next one is New Year's Day 2027; today is Cold Dew, when tradition calls for 'putting on autumn fat,' and Yangzhou fried rice is recommended for its 1,400-year history. Auto safety drew attention: a Dongchedi test video reported that all three Zunjie V800 cars suffered cracked brake-pedal brackets and total foot-brake failure during closed-course braking tests, stretching stopping distance to about 140 meters — the tester suspects an undersized pedal design, and Zunjie and JAC have not formally responded. And a driver reportedly docked 3 points and fined 100 yuan for ten cases of water in the trunk was deemed 'mixed passenger-cargo loading'; experts note the violation is about sharing a passenger-only space, not the amount. On cross-border crime and safety: a documentary detailed how actor Wang Xing was lured to Thailand in early January 2025 by a WeChat contact 'Yan Shiliu' under the guise of filming, then smuggled into Myawaddy, Myanmar, and sold three times in four days; Myanmar police reported that 26-year-old Belarusian singer Vera Kraftsova was lured by a high-paying job, forced into 'romance fraud' at a scam park, and killed for her organs, with five traffickers sentenced to 21 years each; a 28-year-old female researcher at an Irkutsk plague institute died, with online claims she broke a plague vial while officials called it 'pneumonia of unknown cause' and denied a lab accident, as nearly 200 contacts were quarantined; and a Chengdu woman who bought an apartment in 2017 and always rented it out learned this October that a grave — of a boy who died in 2009 — sits atop the roof above her seventh-floor living room, with police having taken the remains for testing. Internationally: the Pentagon has reportedly told CENTCOM to prepare for the possible resumption of large-scale military action against Iran, with no date set and no final decision by Trump, and new video shows an Iranian F-5 attacking a key US base in Kuwait during the conflict; Russian President Putin turned 74 on Oct 7 while fighting continued, with Ukraine blaming a strike that killed 12 and wounded 34 on his 'birthday gift,' and Trump previewing a call; and the PBOC will conduct a 1.2 trillion yuan outright reverse repo on Oct 8 for three months (89 days) to keep liquidity ample. In tech and business: OpenAI announced the global rollout of GPT-6 with Intelligent UI on Oct 7, expanding to Free and Go the next day; media examined why every app pushes loans — China's online microloan market passed 5 trillion yuan by 2025 serving hundreds of millions, and the lending push is simply very lucrative; and on Oct 7 Chinese scientists built and stably operated the world's first nuclear optical clock, publishing in Nature, with Tsinghua associate professor Ding Shiqian's team achieving second-level stability nearly an order of magnitude better than European peers. In society: Chongqing's Liziba vault, 33 meters underground, holds 100 million yuan in cash, sunk by the Jialing River with good ventilation and untouched by war, giving visitors a visceral view plus wartime history; after CCTV exposed commercial clam-digging intruding into mangrove reserves in Sanya and Lingshui with rampant stow nets, Hainan's party secretary Feng Fei chaired a rectification meeting that night as Sanya authorities closed seven digging sites and seized 570 nets by 6 p.m.; over 100,000 visitors in a single day overwhelmed Qilian County, Qinghai, prompting officials to open middle-school dorms to shelter nearly 500 stranded guests amid -4°C nights — praised but sparking debate over 'traveling giant babies' and the private nature of student dorms, with commentary warning emergency relief must not become a safety net for careless travel and that officials shouldn't ignore students' privacy; and ~4-pound exoskeleton robots giving about 10 kg of assist ('hiking cheats') became a mountain-scenic highlight, with rentals live at dozens of 4A and 5A sites from Mount Tai to Huashan and Mutianyu. Also: film artist Peng Yu died peacefully in Zhuhai on Oct 7 at 93; nine uncles dyed their hair bright colors to back their niece at her wedding; media debated the hidden burden of schools offloading worksheet printing onto parents; and Kazakhstan's deputy president thanked Jackie Chan in person for his goodwill toward the country.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "国庆高速免费最后 1 分钟车主卡点通过",
+          en: "Drivers Race the Final Minute of Free Holiday Highway Travel",
+        },
+        description: {
+          zh: "10 月 7 日 24 时免费结束，武汉收费站有车主卡点通过、栏杆随后落下，更多车主选择'先下后上'分段省费；8 日起按'上3休1再上5休2'出勤。",
+          en: "Free passage ended at midnight Oct 7; one Wuhan driver slipped through as the barrier fell, others split trips, and a '3-1-5-2' work rhythm begins Oct 8.",
+        },
+      },
+      {
+        title: {
+          zh: "尊界 V800 测试中刹车踏板支架断裂",
+          en: "Zunjie V800 Brake-Pedal Brackets Crack in Testing",
+        },
+        description: {
+          zh: "懂车帝称 3 台新车制动测试中踏板支架全部断裂致脚刹失效、停车距离延至约 140 米，疑因踏板设计偏弱，车企尚未回应。",
+          en: "Dongchedi says all three cars lost foot braking with stopping distance near 140 m, suspecting an undersized design; the maker has not responded.",
+        },
+      },
+      {
+        title: {
+          zh: "演员王星 4 天被卖 3 次",
+          en: "Actor Wang Xing Sold Three Times in Four Days",
+        },
+        description: {
+          zh: "纪录片披露其 2025 年 1 月被'颜十六'以赴泰拍戏为由骗至泰国，随后被挟持偷渡至缅甸妙瓦底。",
+          en: "A documentary details how he was lured to Thailand in January 2025 under a filming pretext, then smuggled into Myawaddy.",
+        },
+      },
+      {
+        title: {
+          zh: "白俄罗斯女歌手在缅甸遭拐卖后被杀，5 人各判 21 年",
+          en: "Belarusian Singer Killed in Myanmar; Five Traffickers Get 21 Years",
+        },
+        description: {
+          zh: "26 岁薇拉·克拉夫特索娃被高薪招聘诱骗至电诈园区被迫从事'爱情诈骗'，后遭活摘器官杀害。",
+          en: "Vera Kraftsova, 26, was lured into a scam park for 'romance fraud' before being killed for her organs.",
+        },
+      },
+      {
+        title: {
+          zh: "俄罗斯鼠疫事件：研究员病亡、近 200 人隔离",
+          en: "Russia Plague Incident: Researcher Dies, ~200 Quarantined",
+        },
+        description: {
+          zh: "伊尔库茨克一名 28 岁鼠疫研究所女研究员病亡，网传其打碎鼠疫菌试管，官方称系'不明病因肺炎'、否认实验室事故。",
+          en: "A 28-year-old at an Irkutsk plague institute died; officials call it 'pneumonia of unknown cause' and deny a lab accident.",
+        },
+      },
+      {
+        title: {
+          zh: "五角大楼备战对伊朗，伊朗 F-5 贴脸袭美军基地",
+          en: "Pentagon Preps for Iran; Iranian F-5 Hits US Base at Close Range",
+        },
+        description: {
+          zh: "美军中央司令部被告知完成准备以应对可能恢复的大规模军事行动，未定打击日期；另有视频显示伊朗 F-5 袭击科威特一处重要美军基地。",
+          en: "CENTCOM was told to prepare for possible large-scale action with no date set, while video shows an F-5 striking a key base in Kuwait.",
+        },
+      },
+      {
+        title: {
+          zh: "央行将开展 12000 亿买断式逆回购",
+          en: "PBOC to Run a 1.2 Trillion Yuan Outright Reverse Repo",
+        },
+        description: {
+          zh: "10 月 8 日开展期限 3 个月（89 天）操作，旨在保持银行体系流动性充裕。",
+          en: "The three-month (89-day) operation on Oct 8 aims to keep banking-system liquidity ample.",
+        },
+      },
+      {
+        title: {
+          zh: "普京 74 岁生日，'礼物'不一般",
+          en: "Putin's 74th Birthday Comes With Unusual 'Gifts'",
+        },
+        description: {
+          zh: "生日当天俄乌继续交火、乌方指责俄军袭击致 12 死 34 伤并斥此为'生日礼物'，特朗普预告与其通话。",
+          en: "Fighting continued with Ukraine blaming a strike that killed 12 and wounded 34, as Trump previewed a call.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 全面上线 GPT-6",
+          en: "OpenAI Rolls Out GPT-6 to Everyone",
+        },
+        description: {
+          zh: "搭载智能界面的 GPT-6 向全球 Plus/Pro/Business/Enterprise 用户推出，并将于次日起扩展至 Free 和 Go 用户。",
+          en: "The Intelligent UI build rolls out to paid tiers globally, then to Free and Go the next day.",
+        },
+      },
+      {
+        title: {
+          zh: "重庆李子坝地下 33 米藏着一亿现钞",
+          en: "33 Meters Under Chongqing's Liziba Lies 100 Million Yuan in Cash",
+        },
+        description: {
+          zh: "抗战时期金库下沉至嘉陵江边、通风良好且未遭战火，参观者可感受一亿现钞的视觉震撼并了解抗战历史文化。",
+          en: "A wartime vault by the Jialing River, well-ventilated and untouched by war, gives visitors a visceral view and wartime history.",
+        },
+      },
+      {
+        title: {
+          zh: "为什么每个 APP 都想追着借钱给你",
+          en: "Why Every App Keeps Offering You a Loan",
+        },
+        description: {
+          zh: "截至 2025 年中国网络小额贷款市场规模突破 5 万亿元、服务数亿用户，而放贷本身实在太赚钱。",
+          en: "China's online microloan market passed 5 trillion yuan by 2025 serving hundreds of millions — lending is simply very lucrative.",
+        },
+      },
+      {
+        title: {
+          zh: "央视曝光当晚，海南省委书记部署整改",
+          en: "Hainan's Party Chief Orders Rectification the Night CCTV Airs",
+        },
+        description: {
+          zh: "央视曝光三亚、陵水商业赶海侵入红树林保护区、地笼泛滥；三亚截至下午 6 时关闭赶海点 7 个、收缴地笼网 570 个。",
+          en: "After CCTV exposed clam-digging in mangrove reserves, Sanya closed seven sites and seized 570 stow nets by 6 p.m.",
+        },
+      },
+      {
+        title: {
+          zh: "女子买房多年才得知客厅上方有座坟",
+          en: "Homeowner Finally Learns a Grave Sits Above Her Living Room",
+        },
+        description: {
+          zh: "成都一女子 2017 年买房后一直出租，今年 10 月才从邻居口中得知楼顶埋着一座坟，坟中男童 2009 年病逝、警方已取走尸骨鉴定。",
+          en: "A Chengdu owner renting out a 2017 purchase learned this October that a boy who died in 2009 is buried above her seventh-floor living room.",
+        },
+      },
+      {
+        title: {
+          zh: "国庆 4 斤重'登山外挂'火到峨眉山",
+          en: "Four-Pound 'Hiking Cheat' Exoskeleton Booms From Mount Tai to Emei",
+        },
+        description: {
+          zh: "约 4 斤重、可提供约 10 公斤助力的外骨骼机器人成为山岳景区新看点，数十家 4A、5A 级景区已上线租赁。",
+          en: "The ~4-pound exoskeleton giving ~10 kg of assist is a mountain-scenic hit, with rentals at dozens of 4A and 5A sites.",
+        },
+      },
+      {
+        title: {
+          zh: "警惕'旅游巨婴'心态蔓延：学生宿舍私人属性之争",
+          en: "Beware 'Traveling Giant Babies': The Student-Dorm Privacy Debate",
+        },
+        description: {
+          zh: "祁连县单日超十万游客致一房难求，紧急启用学生宿舍免费接待近 500 人；评论指政府应急不应成为盲目出行的兜底、不应漠视学生隐私与自主权。",
+          en: "Qilian County opened dorms for nearly 500 stranded guests; commentators say emergency relief shouldn't excuse careless travel or ignore students' privacy.",
+        },
+      },
+      {
+        title: {
+          zh: "中国科学家研制成功核光钟",
+          en: "Chinese Scientists Build a Nuclear Optical Clock",
+        },
+        description: {
+          zh: "10 月 7 日晚宣布在国际上率先研制并稳定运行，成果在线发表于《自然》，秒级稳定度优于同期欧洲团队近一个数量级。",
+          en: "Announced Oct 7 and published in Nature, its second-level stability beats European peers by nearly an order of magnitude.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-07",
     date: "2026-10-07",
     title: {
