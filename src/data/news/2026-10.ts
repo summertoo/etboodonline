@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-09",
+    date: "2026-10-09",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-09",
+      en: "🤖 AI HOT Daily · Oct 9, 2026",
+    },
+    summary: {
+      zh: "今日焦点：Crowdstrike 报告称，一名疑似中文使用者于 2026 年 9 月底至 10 月初利用 AI 驱动的开源渗透测试工具 ARTEX 攻击多家韩国金融机构、窃取大量数据，其中 Shinhan Bank 超过 25,000 条包含姓名、联系方式、收入和信用额度的记录泄露。行业与营收方面：据金融时报报道，OpenAI 向投资者披露截至 9 月底年化营收逼近 500 亿美元，大幅低于外界估算的 700 亿美元、缺口约 200 亿，差异源于统计口径——Anthropic 计入 AWS 和谷歌云等合作方销售收入而 OpenAI 剔除该部分，报道发布后美股科技股下跌；Codex 与 ChatGPT Work 合计活跃用户达到 4000 万新高，付费账户重置已全部到账；Waymo 完成 50 亿美元定期贷款，是其首次债务融资（PIMCO、Blackstone、Sixth Street 牵头，Goldman Sachs 独家主账簿管理人），资金用于加速全自动驾驶打车服务在美国及国际市场的扩张；OpenAI 封禁俄罗斯来源的 Dark Clark 与伊朗来源的 Bogus Bylines 两个隐蔽影响行动账号集群，前者通过假 persona Mia Clark 控制拉美智库 Social Research Center、评分达 Category 5（报告以来首个），后者使用 7 个假记者账号。模型与产品方面：Anthropic 发布 Claude Dashboards 实时仪表盘与 Claude Motion 动画讲解两项 beta 功能；推出开源漏洞扫描服务 OSS Scanner，用其最强模型（包括 Claude Mythos）定期免费扫描开源项目，输出为全模型生成、无人工复核的报告；发布 2026 年使用政策更新（11 月 12 日生效），新设禁止欺骗性活动章节、收窄选举条款、明确武器软件与无人机武装禁令、补充高风险用例与自主物理操作的 human in the loop 要求，并禁止对模型的持续无端虐待；ts-rust 将 microsoft/TypeScript（Go 实现）的编译器、类型检查器和语言服务器移植为 Rust，作者称全部代码由 LLM 编写、本人未读过代码。研究与观点方面：数学家组织 AHM 在 Terence Tao 主持下发表声明呼吁抵制 OpenAI，称其一次性发布 700 多个 AI 生成证明文件是展示力量而非学术行为（此前 OpenAI 宣称内部模型一个月内解决逾 100 个开放数学问题、对约 8000 个测试问题成功率约 5%）；Goodfire 为 Kimi K3 和 GLM 5.3 构建基于激活探针加 LLM judge 的监控级联并部署到生产推理栈；Hugging Face 工程师用 ML Intern 在几天内以约 103 美元做出 7 个模型，包括可在 CPU 运行、99.7% 有效输出的 0.8B 提示词重写器，以及将柑橘病害识别准确率从 14.9% 提升到 52.8% 的 Qwen3.5-2B。此外还有：Arena 公布 Claude Haiku 5.5（High）Code Arena 1587 分首秀第 30 名；Zenity 发现一条提示词即可劫持 AWS 账户内全部 AgentCore 智能体；Artificial Analysis 评测 Google Nano Banana 2.1 两榜居第 4 且价格为前代一半；Google 开源端侧 GPU 推理引擎 ML Drift 接替 TFLite GPU delegate；Arena 完成 2 亿美元 B 轮、估值 31 亿美元并发布 Alignment Index；GPT-6.1 Sol ultrafast 发布；Anthropic 发布 Claude Managed Agents 定时智能体自动化指南；Tessl 谈企业级 Agent 记忆的三个关键设计决策；Google 开源 AQuA 环境质量智能体；Claude 九月回顾显示 Chat 与 Cowork 合一、Claude 5.5 系列上线。",
+      en: "Today's focus: CrowdStrike reports that a likely single Chinese-speaking actor used the AI-driven open-source penetration tool ARTEX from late September into early October to breach multiple South Korean financial institutions and steal large amounts of data, including over 25,000 Shinhan Bank records with names, contact details, income and credit limits. Industry and revenue: the Financial Times reports OpenAI told investors annualized revenue neared $50B through September, well below outsider estimates of $70B — a roughly $20B gap driven by accounting scope, since Anthropic counts partner revenue from AWS and Google Cloud while OpenAI excludes it — sending US tech stocks down; Codex and ChatGPT Work combined hit a record 40 million active users with paid-account resets fully credited; Waymo closed a $5B term loan, its first debt financing (PIMCO, Blackstone and Sixth Street leading, Goldman Sachs sole lead bookrunner), to accelerate its robotaxi service in the US and abroad; and OpenAI banned two covert influence operations — Russia-linked Dark Clark, whose fake persona Mia Clark ran the Latin American think tank Social Research Center and earned a first-ever Category 5 rating, and Iran-linked Bogus Bylines, which used seven fake journalists. Models and products: Anthropic launched Claude Dashboards and Claude Motion in beta; released OSS Scanner, an opt-in service using its strongest models (including Claude Mythos) to periodically and freely scan open-source projects with fully model-generated, human-unreviewed reports; published its 2026 usage policy update effective Nov 12 with a new deceptive-activity section, a narrowed election clause, explicit bans on weapons software and arming drones, sharper monitoring limits, human-in-the-loop requirements for autonomous physical operations, and a ban on persistent gratuitous abuse of models; and ts-rust ports microsoft/TypeScript's (Go) compiler, type checker and language server to Rust, with the author saying an LLM wrote all the code and he hasn't read it. Research and opinion: the mathematician group AHM, under Terence Tao, issued a statement calling for a boycott of OpenAI after it released 700-plus AI-generated proof files at once, calling it a display of force rather than scholarship (OpenAI had claimed its internal model solved 100+ open problems in a month with ~5% success on ~8,000 test problems); Goodfire built and deployed a production cyber-security monitor cascade of activation probes plus an LLM judge on Kimi K3 and GLM 5.3; and a Hugging Face engineer used ML Intern to build seven small models in days for about $103, including a CPU-runnable 0.8B prompt rewriter with 99.7% valid output and a Qwen3.5-2B that lifted citrus-disease recognition from 14.9% to 52.8%. Also: Arena posted Claude Haiku 5.5 (High) debuting 30th in Code Arena at 1587; Zenity found a single prompt hijacks every AgentCore agent in an AWS account; Artificial Analysis ranked Google Nano Banana 2.1 fourth on two leaderboards at half its predecessor's price; Google open-sourced the ML Drift edge GPU inference engine replacing the TFLite GPU delegate; Arena raised a $200M Series B at a $3.1B valuation and launched an Alignment Index; GPT-6.1 Sol ultrafast shipped; Anthropic published a guide to scheduled agent automation with Claude Managed Agents; Tessl wrote on three key design decisions for enterprise agent memory; Google open-sourced the AQuA ambient quality agent; and Claude's September recap merged Chat and Cowork and launched the Claude 5.5 series.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Crowdstrike：AI 渗透工具攻击多家韩国银行",
+          en: "CrowdStrike: AI-Powered Tool Breached Multiple South Korean Banks",
+        },
+        description: {
+          zh: "疑似单人从 9 月底起利用开源工具 ARTEX 作案，Shinhan Bank 超 25,000 条含姓名、联系方式、收入与信用额度的记录泄露。",
+          en: "A likely solo actor used the open-source ARTEX tool from late September; 25,000+ Shinhan Bank records with names, income and credit limits leaked.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 推出 Dashboards 仪表盘与 Motion 动画讲解",
+          en: "Claude Adds Dashboards and Motion",
+        },
+        description: {
+          zh: "Anthropic 发布 Claude Dashboards 实时仪表盘与 Claude Motion 动画讲解两项 beta 功能。",
+          en: "Anthropic released real-time Dashboard and animated-explainer Motion features in beta.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 推出开源漏洞扫描服务 OSS Scanner",
+          en: "Anthropic Launches the OSS Scanner for Open Source",
+        },
+        description: {
+          zh: "用最强模型（含 Claude Mythos）定期免费扫描开源项目，输出为全模型生成、无人工复核的报告。",
+          en: "Its strongest models including Claude Mythos periodically scan open-source projects for free, producing fully model-generated, unreviewed reports.",
+        },
+      },
+      {
+        title: {
+          zh: "ts-rust 发布：LLM 将 TypeScript 编译器移植到 Rust",
+          en: "ts-rust: An LLM Ported the TypeScript Compiler to Rust",
+        },
+        description: {
+          zh: "把编译器、类型检查器和 LSP 移植为 Rust，作者称全部代码由 LLM 编写、本人未读过代码。",
+          en: "Compiler, type checker and LSP moved to Rust; the author says an LLM wrote it all and he hasn't read the code.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 年化营收近 500 亿美元，较预期缺口约 200 亿",
+          en: "OpenAI Annualized Revenue Nears $50B, ~$20B Below Expectations",
+        },
+        description: {
+          zh: "据金融时报，差异源于统计口径——Anthropic 计入 AWS/谷歌云等合作方收入而 OpenAI 剔除；报道后美股科技股下跌。",
+          en: "The FT ties the gap to accounting scope — Anthropic counts AWS/Google Cloud partner revenue, OpenAI excludes it — sending US tech stocks lower.",
+        },
+      },
+      {
+        title: {
+          zh: "数学家呼吁抵制 OpenAI，AI 证明涌入数学领域",
+          en: "Mathematicians Call for an OpenAI Boycott as AI Proofs Flood In",
+        },
+        description: {
+          zh: "AHM 组织在 Terence Tao 主持下称一次性发布 700 多个 AI 生成证明文件是展示力量而非学术行为。",
+          en: "AHM, chaired by Terence Tao, calls the one-shot release of 700-plus AI-generated proof files a display of force rather than scholarship.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 发布 2026 使用政策更新，11 月 12 日生效",
+          en: "Anthropic's 2026 Usage Policy Update Takes Effect Nov 12",
+        },
+        description: {
+          zh: "新设禁止欺骗性活动章节、收窄选举条款、明确武器软件与无人机武装禁令、补充自主物理操作 human in the loop 要求，并禁止持续无端虐待模型。",
+          en: "Adds a deceptive-activity section, narrows elections, bans weapons software and drone arming, requires human-in-the-loop for autonomous physical tasks, and bars persistent model abuse.",
+        },
+      },
+      {
+        title: {
+          zh: "Codex 与 ChatGPT Work 活跃用户达 4000 万新高",
+          en: "Codex and ChatGPT Work Hit a Record 40M Active Users",
+        },
+        description: {
+          zh: "付费账户重置已全部到账，GPT-6 已在 Chat 中上线。",
+          en: "Paid-account resets are fully credited, with GPT-6 live in Chat.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 封禁俄伊两个虚假影响行动账号集群",
+          en: "OpenAI Bans Two Russian and Iranian Influence-Operation Clusters",
+        },
+        description: {
+          zh: "俄罗斯 Dark Clark 用假 persona 控制拉美智库、评分达首个 Category 5；伊朗 Bogus Bylines 用 7 个假记者账号。",
+          en: "Russia's Dark Clark ran a LatAm think tank via a fake persona for a first-ever Category 5; Iran's Bogus Bylines used seven fake journalists.",
+        },
+      },
+      {
+        title: {
+          zh: "Waymo 完成 50 亿美元债务融资",
+          en: "Waymo Closes $5B Debt Financing",
+        },
+        description: {
+          zh: "首次债务融资，PIMCO、Blackstone、Sixth Street 牵头，Goldman Sachs 独家主账簿管理人，用于加速全自动驾驶打车服务扩张。",
+          en: "Its first debt raise, led by PIMCO, Blackstone and Sixth Street with Goldman as sole lead bookrunner, to accelerate robotaxi expansion.",
+        },
+      },
+      {
+        title: {
+          zh: "Goodfire 为 Kimi K3/GLM 5.3 部署生产级安全监控；HF 花 103 美元自造 7 个小模型",
+          en: "Goodfire Deploys Cyber Monitors on Kimi K3/GLM 5.3; HF Builds 7 Models for $103",
+        },
+        description: {
+          zh: "Goodfire 用激活探针加 LLM judge 监控级联；Hugging Face 用 ML Intern 做出 0.8B 提示词重写器（CPU 运行、99.7% 有效）与柑橘病害识别从 14.9% 升至 52.8% 的 Qwen3.5-2B。",
+          en: "Goodfire cascades activation probes with an LLM judge; HF's ML Intern produced a CPU-runnable 0.8B rewriter (99.7% valid) and a Qwen3.5-2B lifting citrus-disease accuracy from 14.9% to 52.8%.",
+        },
+      },
+      {
+        title: {
+          zh: "更多 AI 动态：Zenity 单提示接管 AWS Agent、Arena 估值 31 亿等",
+          en: "More AI News: Zenity's One-Prompt AWS Agent Hijack, Arena at $3.1B, and More",
+        },
+        description: {
+          zh: "Claude Haiku 5.5 Code Arena 1587 分首秀第 30；Zenity 一条提示词劫持 AWS 账户全部 AgentCore 智能体；Nano Banana 2.1 两榜第 4 且价格减半；Google 开源 ML Drift 与 AQuA；Arena 完成 2 亿美元 B 轮；GPT-6.1 Sol ultrafast 发布；Claude Managed Agents 自动化指南；Tessl 谈 Agent 记忆；Claude 九月回顾。",
+          en: "Haiku 5.5 debuts 30th in Code Arena at 1587; Zenity hijacks all AgentCore agents with one prompt; Nano Banana 2.1 ranks 4th at half price; Google open-sources ML Drift and AQuA; Arena raises $200M Series B; GPT-6.1 Sol ultrafast ships; Claude Managed Agents guide; Tessl on agent memory; Claude's September recap.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-09-hot",
+    date: "2026-10-09",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-09",
+      en: "🔥 Hot Topics · Oct 9, 2026",
+    },
+    summary: {
+      zh: "今日财经市场剧烈波动：美东时间周四国际油价深夜大涨，WTI 原油期货涨超 3.6%，而加密货币持续下跌、比特币跌破 8.1 万美元，最近 24 小时约 19 万人被爆仓、金额近 12 亿美元；10 月 9 日 A 股走弱，深成指跌逾 1.03%、沪指跌 0.42%、创业板指跌 1.21%，算力硬件、半导体芯片、医药生物跌幅居前、下跌个股近 3700 只。AI 治理话题集中：人民日报评论近期网友借助 AI 工具将孙悟空与林黛玉'撮合'的'圣黛CP'二创视频，指出此类改编体现情绪需求但需守住法律伦理边界；微信珊瑚安全公布针对滥用 AI 篡改经典内容的治理数据，今年累计下架 2.6 万余条 AI 魔改短视频，大量拿四大名著恶搞改编；此外字节 Seed 团队在 arXiv 提交论文解释 DeepSeek'抽风'原因——模型采用分块 KV 缓存压缩虽能降低内存成本，却引入'相位敏感性'，导致长上下文检索准确度各阶段间相差高达 40 个百分点；OpenAI 正式在 API、Codex 和 ChatGPT Work 中推出 GPT-6.1 Sol 的 Ultrafast 版本，运行速度最高达标准版 8 倍、定价为标准版 6 倍（每百万 tokens 输出 60 美元），该消息同时登上 AI 与热搜榜。国际与社会方面：大英博物馆 10 月 4 日一只清代康熙时期瓷碗从展柜掉落砸到底层架子、连累另一件青花瓷盒，馆方称将调查原因并交专业团队修复；此前引发关注的成都金堂小区'楼顶藏坟挖出尸骨'被警方辟谣——骨骼均为非人类骨骼及牙齿、谣言系住户刘某某虚构捏造并已被处罚；俄罗斯消费者权益保护和公益监督局 7 日宣布伊尔库茨克市解除防疫措施、称超 90% 接触者已结束医学观察、近 5000 份检测未发现危险致病微生物，而'华山感染'刊文解读指研究员死亡及约 200 名接触者隔离不能直接等同鼠疫确诊或实验室泄漏、WHO 仍在索取检测结果；10 月 8 日中国驻刚果（金）使馆提醒在刚中国公民和企业尽快撤离或转移至安全地区，当地伊图里等 7 省累计报告 8603 例埃博拉确诊及 4148 例死亡、多省武装冲突与抢劫持续；中方出于人道主义允许菲方海警以过驳方式从仁爱礁转运一名伤员并提供便利；国家安全部披露某中资企业驻外员工刘某察觉外籍'知心好友'C 某套取信息后拒绝签字、回国主动报告，经查 C 某确系境外间谍，刘某未被追究法律责任。体育与娱乐方面：葡萄牙足协考虑对擅自离开丹麦集训营的 C 罗从轻处罚（因其已道歉，禁赛范围 1 至 6 个月）；21 岁中国旅美篮球运动员庞清方因移民身份问题被美国 ICE 拘留、关押于路易斯安那州里奇伍德移民拘留中心并面临离境风险；郭晶晶等 5 人在香港岭南大学获颁荣誉院士，霍启刚晒合照称特别骄傲；2026 年 WTT 中国大满贯女单 1/8 决赛，世界排名第 134 位的国乒削球手朱思冰 3 比 2 战胜世界第四队友蒯曼；诺贝尔奖得主卡尔·戴塞洛斯获奖后首日回校上班、开门瞬间全场沸腾掌声雷动。民生与消费方面：'还我白砂糖'冲上热搜，起因是食品中果葡糖浆愈发常见，专家指其由淀粉制成、成本更低且游离状态更易被快速吸收、短期致血尿酸峰值更高；一位近 70 岁阿姨两年多为看短剧累计充值 22.58 万元、4887 笔，巅峰时一天充值 29 次、单日花费 1400 余元，被指平台利用小额付费、换马甲及大数据精准推送诱导消费；橡胶主力合约年内累计涨超 28% 处九年高位，9 月以来超 60 家轮胎企业发 70 多份涨价函；此外世界气象组织预计厄尔尼诺将在 12 月达到峰值，湖南永州市商务局局长前妻周女士被举报婚内出轨多人、相关离婚索赔纠纷已进入司法程序，最高检通报新疆原副主席陈伟俊涉嫌受贿案被提起公诉，42 岁向佐自曝长期过量饮用高浓度蛋白粉致肾脏状况如同 70 多岁老人。",
+      en: "Markets swung hard today: US time Thursday oil jumped late with WTI up over 3.6%, while crypto kept sliding and Bitcoin fell below $81,000, liquidating about 190,000 accounts and nearly $1.2B in 24 hours; on Oct 9 A-shares weakened with the Shenzhen Component down over 1.03%, the Shanghai Composite off 0.42% and ChiNext down 1.21%, led by computing hardware, semiconductors and biopharma as nearly 3,700 names fell. AI governance dominated discussion: People's Daily commented on the viral 'Sheng-Dai CP' videos in which netizens use AI to pair Sun Wukong with Lin Daiyu, saying such remixes meet emotional needs but must respect legal and ethical lines; WeChat's Shanhu safety unit reported taking down over 26,000 AI-altered short videos this year, many mocking the four classics; ByteDance's Seed team explained DeepSeek's 'mood swings' in an arXiv paper — blockwise KV-cache compression cuts memory costs but introduces 'phase sensitivity,' making long-context retrieval accuracy vary by up to 40 percentage points across stages; and OpenAI officially launched GPT-6.1 Sol's Ultrafast version across the API, Codex and ChatGPT Work, up to 8x the standard version's speed at 6x the price ($60 per million output tokens), trending on both the AI and hot lists. Internationally and socially: at the British Museum on Oct 4 a Kangxi-era porcelain bowl fell from its case onto a lower shelf and damaged another blue-and-white box, with the museum vowing an investigation and professional restoration; the earlier Chengdu Jintang 'roof grave' story was debunked — the bones were all non-human and a resident, Liu, fabricated the rumor and was punished; Russia's consumer-rights watchdog lifted quarantine measures in Irkutsk on Oct 7, saying over 90% of contacts finished observation and nearly 5,000 tests found no dangerous pathogens, while a Huashan Infection article cautioned that the researcher's death and ~200 quarantines don't equal a plague diagnosis or lab leak, with the WHO still seeking test results; on Oct 8 China's embassy in the DRC urged Chinese citizens and firms to evacuate or relocate to safety amid 8,603 confirmed Ebola cases and 4,148 deaths across seven provinces including Ituri, plus armed clashes and robbery; China allowed the Philippine coast guard to transfer one wounded person from Second Thomas Shoal by small boat on humanitarian grounds and provided facilitation; and the MSS disclosed that an overseas Chinese employee who refused to sign a foreign 'friend's' cooperation pitch and reported it on returning home was found to have been targeted by a spy, with no legal liability. In sport and entertainment: Portugal's federation will consider leniency for Ronaldo after he left the Denmark camp without permission, with a likely one-to-six-month ban; 21-year-old Chinese-American basketball player Pang Qingfang was detained by US ICE over immigration status at the Richwood center in Louisiana and faces removal; Guo Jingjing and four others received honorary fellowships at Lingnan University, with Huo Qigang posting that he is especially proud; unseeded world No. 134 chopper Zhu Sibing beat world No. 4 teammate Kuai Man 3-2 in the WTT China Smash round of 16; and Nobel laureate Karl Deisseroth returned to work to an ovation. In consumer and livelihood news: 'give us back white sugar' trended as high-fructose corn syrup spreads, which experts say is starch-derived, cheaper and faster-absorbing, spiking blood uric acid more; a nearly 70-year-old woman spent 225,800 yuan over two years on short dramas across 4,887 top-ups, once 29 times and 1,400+ yuan in a day, with platforms accused of micro-payments and targeted push; rubber futures are up over 28% this year at a nine-year high, with 60-plus tire makers issuing 70-plus price-hike notices; and the WMO expects El Niño to peak in December, while a Hunan commerce official's ex-wife faces infidelity allegations, prosecutors indicted former Xinjiang vice chairman Chen Weijun for bribery, and 42-year-old Xiang Zuo said heavy protein-powder use left his kidneys resembling a 70-year-old's.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "国际油价深夜大涨，比特币跌破 8.1 万、19 万人爆仓",
+          en: "Oil Spikes Late as Bitcoin Breaks $81K, Liquidating 190,000",
+        },
+        description: {
+          zh: "WTI 原油期货涨超 3.6%，加密货币持续下跌、最近 24 小时约 19 万人爆仓近 12 亿美元。",
+          en: "WTI rose over 3.6% while crypto slid, liquidating about 190,000 accounts and nearly $1.2B in 24 hours.",
+        },
+      },
+      {
+        title: {
+          zh: "大英博物馆两件康熙时期青花瓷遭损坏",
+          en: "Two Kangxi-Era Porcelains Damaged at the British Museum",
+        },
+        description: {
+          zh: "10 月 4 日一只瓷碗从展柜掉落砸到底层架子、连累另一件青花瓷盒，馆方称固定装置未见故障、将调查原因并交专业团队修复。",
+          en: "On Oct 4 a bowl fell onto a lower shelf and damaged a box; the museum says no fixture fault was evident and will investigate and restore them.",
+        },
+      },
+      {
+        title: {
+          zh: "楼顶藏坟挖出尸骨？警方：系住户捏造",
+          en: "Roof Grave Bones? Police Say a Resident Fabricated It",
+        },
+        description: {
+          zh: "成都金堂小区网传发现 7 岁男童尸骨，警方核查骨骼均为非人类，谣言系住户刘某某虚构捏造并被处罚。",
+          en: "Bones reported in a Chengdu complex were all non-human; a resident fabricated the rumor and was punished.",
+        },
+      },
+      {
+        title: {
+          zh: "俄解除不明原因肺炎防疫措施",
+          en: "Russia Lifts Quarantine Over the Mystery Pneumonia",
+        },
+        description: {
+          zh: "伊尔库茨克称超 90% 接触者已结束医学观察、近 5000 份检测未发现危险致病微生物；'华山感染'指死亡与隔离不等同鼠疫确诊或实验室泄漏，WHO 仍在核实。",
+          en: "Irkutsk says 90%+ of contacts cleared and nearly 5,000 tests found no dangerous pathogens; Huashan Infection notes death and quarantine don't equal plague or a leak as the WHO verifies.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek'抽风'原因曝光",
+          en: "Why DeepSeek 'Acts Up' Is Explained",
+        },
+        description: {
+          zh: "字节 Seed 论文揭示分块 KV 缓存压缩引入'相位敏感性'，长上下文检索准确度各阶段间相差高达 40 个百分点。",
+          en: "A ByteDance Seed paper finds blockwise KV-cache compression brings 'phase sensitivity,' with long-context retrieval varying by up to 40 points.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 推出 GPT-6.1 Sol Ultrafast 版",
+          en: "OpenAI Ships GPT-6.1 Sol Ultrafast",
+        },
+        description: {
+          zh: "在 API、Codex 和 ChatGPT Work 上线，速度最高达标准版 8 倍、定价为标准版 6 倍（每百万 tokens 输出 60 美元）。",
+          en: "Available in the API, Codex and ChatGPT Work at up to 8x the standard speed and 6x the price ($60 per million output tokens).",
+        },
+      },
+      {
+        title: {
+          zh: "AI 二创惹议：人民日报评'圣黛CP'，微信下架 2.6 万条魔改",
+          en: "AI Remixes Draw Fire: People's Daily on 'Sheng-Dai', WeChat Pulls 26,000",
+        },
+        description: {
+          zh: "人民日报称 AI'撮合'孙悟空与林黛玉的二创需守法律伦理边界；微信珊瑚安全今年累计下架 2.6 万余条 AI 魔改短视频，大量恶搞四大名著。",
+          en: "People's Daily says such remixes need legal and ethical limits, while WeChat's safety unit took down 26,000+ AI-altered clips, many mocking the classics.",
+        },
+      },
+      {
+        title: {
+          zh: "中国旅美球员庞清方遭美国 ICE 拘留",
+          en: "Chinese Basketball Player Pang Qingfang Detained by ICE",
+        },
+        description: {
+          zh: "21 岁的庞清方因移民身份问题被拘留，关押于路易斯安那州里奇伍德移民拘留中心，面临离境风险。",
+          en: "The 21-year-old is held over immigration status at the Richwood center in Louisiana and faces removal.",
+        },
+      },
+      {
+        title: {
+          zh: "湖南一女局长被举报婚内出轨多人",
+          en: "A Hunan Female Bureau Chief Accused of Multiple Affairs",
+        },
+        description: {
+          zh: "永州市商务局局长前妻周女士被举报婚内出轨多人，双方离婚索赔 330 万至 500 万元的纠纷进入司法程序，纪委监委已收到举报。",
+          en: "The ex-wife of Yongzhou's commerce chief faces infidelity claims; a 3.3-5M yuan divorce dispute is in court as the discipline watchdog reviews a complaint.",
+        },
+      },
+      {
+        title: {
+          zh: "中使馆提醒：中国公民尽快撤离或转移",
+          en: "Embassy Urges Chinese Citizens to Evacuate or Relocate",
+        },
+        description: {
+          zh: "中国驻刚果（金）使馆提醒在刚中国公民和企业尽快撤离或转移至安全地区，当地 7 省累计报告 8603 例埃博拉确诊及 4148 例死亡。",
+          en: "China's DRC embassy warns citizens and firms to evacuate or relocate as seven provinces report 8,603 Ebola cases and 4,148 deaths.",
+        },
+      },
+      {
+        title: {
+          zh: "郭晶晶有新身份，霍启刚：特别骄傲",
+          en: "Guo Jingjing Receives an Honorary Fellowship; Huo Qigang 'Especially Proud'",
+        },
+        description: {
+          zh: "郭晶晶等 5 人在香港岭南大学获颁荣誉院士，表彰其专业成就及对社会的贡献。",
+          en: "Guo and four others received honorary fellowships at Lingnan University for professional and social contributions.",
+        },
+      },
+      {
+        title: {
+          zh: "厄尔尼诺现象预计在 12 月达到峰值",
+          en: "El Niño Is Expected to Peak in December",
+        },
+        description: {
+          zh: "世界气象组织称 2026 年 10 月至 12 月热带太平洋中东部海面温度将升至创纪录水平，反映厄尔尼诺正在增强。",
+          en: "The WMO says tropical Pacific sea temperatures will reach record levels from October to December as El Niño strengthens.",
+        },
+      },
+      {
+        title: {
+          zh: "'还我白砂糖'冲上热搜",
+          en: "'Give Us Back White Sugar' Trends",
+        },
+        description: {
+          zh: "因食品中果葡糖浆愈发常见，专家指其由淀粉制成、成本更低且游离状态更易被快速吸收、短期致血尿酸峰值更高。",
+          en: "As high-fructose corn syrup spreads, experts say it is starch-derived, cheaper and faster-absorbing, spiking blood uric acid more.",
+        },
+      },
+      {
+        title: {
+          zh: "诺奖得主获奖后上班欢呼一片",
+          en: "Nobel Laureate Returns to Work to an Ovation",
+        },
+        description: {
+          zh: "卡尔·戴塞洛斯获奖后首日回校上班，拉开门后全场沸腾、掌声雷动；他因光控离子通道及光遗传学领域的开创性发现获奖。",
+          en: "Karl Deisseroth was met with a standing ovation on his first day back after winning for light-controlled ion channels and optogenetics.",
+        },
+      },
+      {
+        title: {
+          zh: "世界第 134'削'翻世界第 4",
+          en: "World No. 134 Upsets World No. 4",
+        },
+        description: {
+          zh: "WTT 中国大满贯女单 1/8 决赛，国乒削球手朱思冰 3 比 2 战胜世界第四队友蒯曼，晋级八强。",
+          en: "Chopper Zhu Sibing beat world No. 4 teammate Kuai Man 3-2 at the WTT China Smash to reach the quarterfinals.",
+        },
+      },
+      {
+        title: {
+          zh: "'为了看短剧 我妈两年花 22 万'",
+          en: "'My Mom Spent 220,000 Yuan on Short Dramas in Two Years'",
+        },
+        description: {
+          zh: "一位近 70 岁阿姨两年多累计充值 22.58 万元、4887 笔，巅峰时一天 29 次、单日花费 1400 余元，被指平台以小额付费、换马甲及大数据推送诱导消费。",
+          en: "A woman nearing 70 topped up 225,800 yuan across 4,887 payments, once 29 times and 1,400+ yuan a day, with platforms accused of micro-payment tactics.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-08",
     date: "2026-10-08",
     title: {
