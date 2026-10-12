@@ -2,6 +2,306 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-12",
+    date: "2026-10-12",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-12",
+      en: "🤖 AI HOT Daily · Oct 12, 2026",
+    },
+    summary: {
+      zh: "今日焦点：Tibo 宣布 GPT-6.1 Sol 在 Codex 与 Work 中的默认上下文长度从 272k 提升到 500k、约增加 80%，可减少压缩（compaction）发生、帮助需要长期保留大量上下文和细节的任务，用户仍可自行覆盖设置，模型最大上下文长度为 1M。企业落地案例集中释出：网络安全公司 Sophos 使用 OpenAI Daybreak 将威胁调查时间缩短 96%、自动化约 52% 的恶意软件相关工单；Asana 在 Codex 中用 GPT-6 Astra 重写浏览器智能体，测试中成本降低 76 倍、速度提升 5 倍，并把该能力开放给用户；Oracle 在招聘、工程与运营中用 ChatGPT 和 Codex 将专家知识转化为快速可复用的工作流、大幅缩短交付周期；法务科技公司 LegalOn 通过合理配置模型档位把 Codex 的预估日成本削减 65% 且维持原有开发速度；高频交易公司 Jump Trading 用 OpenAI 扩展量化研究、把多个更长时间的 AI 工作流组合起来完成复杂建模。产品与生态方面：OpenAI 与合同生命周期管理平台 Ironclad 合作，在复杂合同工作流上训练并评估 AI 智能体的 computer use 能力；ChatGPT for Teens 推出 College Planner，帮助高中生管理大学申请并新增面向青少年的学习与规划内容；Radisson 酒店集团携手 Accenture 基于 OpenAI 技术打造 ChatGPT 插件，让旅客直接在对话中查找、比较并预订酒店；开发者开源 BraiNOTES，可在浏览器标签页里直接给课程 PDF 记手写笔记，是网页版 LaTeX 编辑器 TeXbrain 的延伸项目。观点方面：Andrej Karpathy 发推指出，不同人群对大语言模型真实能力的'共同认知差距'正在扩大，提醒业界留意由此带来的预期与治理分歧。（注：本日 aihot 日报内容较少，已由 OpenAI 官方博客与 Hacker News 内容补充。）",
+      en: "Today's focus: Tibo announced GPT-6.1 Sol's default context length in Codex and Work rose from 272k to 500k, about +80%, reducing compaction and helping tasks that need to retain lots of context and detail over long runs, with user overrides still available and a 1M max context. Enterprise deployments landed in a cluster: security firm Sophos used OpenAI Daybreak to cut threat-investigation time 96% and automate ~52% of malware-related tickets; Asana rewrote its browser agent with GPT-6 Astra in Codex for a 76x cost reduction and 5x speedup, then offered the capability to users; Oracle used ChatGPT and Codex across recruiting, engineering and operations to turn expert knowledge into fast, reusable workflows and shorten delivery; legal-tech firm LegalOn cut Codex's estimated daily cost about 65% by tuning model tiers while keeping development speed; and high-frequency trading firm Jump Trading used OpenAI to scale quant research, chaining longer AI workflows to complete complex modeling. Products and ecosystem: OpenAI partnered with contract-lifecycle platform Ironclad to train and evaluate AI computer-use agents on complex contract workflows; ChatGPT for Teens launched a College Planner to help high-schoolers manage college applications with new teen-focused learning and planning content; Radisson, with Accenture, built a ChatGPT plugin so travelers can find, compare and book hotels in-conversation; and developer BraiNOTES was open-sourced for taking handwritten notes directly on course PDFs inside browser tabs, an extension of the web LaTeX editor TeXbrain. Opinion: Andrej Karpathy tweeted that the 'common cognitive gap' on LLMs' real capabilities across groups keeps widening, warning of resulting expectation and governance divides. (Note: the aihot digest was thin this day; supplemented from OpenAI's official blog and Hacker News.)",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "GPT-6.1 Sol 在 Codex 与 Work 中默认上下文升至 500k",
+          en: "GPT-6.1 Sol's Default Context in Codex and Work Rises to 500k",
+        },
+        description: {
+          zh: "从 272k 提升约 80%，可减少压缩发生、利于长期保留大量上下文与细节的任务，用户可自行覆盖，最大上下文为 1M。",
+          en: "Up ~80% from 272k to cut compaction on long-context tasks, with user overrides and a 1M maximum.",
+        },
+      },
+      {
+        title: {
+          zh: "Sophos 用 OpenAI Daybreak 将威胁调查时间缩短 96%",
+          en: "Sophos Cuts Threat-Investigation Time 96% With OpenAI Daybreak",
+        },
+        description: {
+          zh: "网络安全公司 Sophos 用 Daybreak 大幅提速威胁调查，并自动化约 52% 的恶意软件相关工单流程。",
+          en: "The security firm sped up investigations and automated about 52% of malware-related ticket workflows.",
+        },
+      },
+      {
+        title: {
+          zh: "Asana 用 GPT-6.1 Sol 让浏览器智能体降本 76 倍、提速 5 倍",
+          en: "Asana's Browser Agent: 76x Cheaper, 5x Faster on GPT-6.1 Sol",
+        },
+        description: {
+          zh: "Asana 在 Codex 中用 GPT-6 Astra 重写浏览器智能体，测试中成本降低 76 倍、速度提升 5 倍，进而向用户提供该能力。",
+          en: "Asana rewrote its browser agent in Codex with GPT-6 Astra for a 76x cost cut and 5x speedup, then shipped it to users.",
+        },
+      },
+      {
+        title: {
+          zh: "Oracle 用 ChatGPT 与 Codex 把数天工作压缩到几分钟",
+          en: "Oracle Compresses Days of Work Into Minutes With ChatGPT and Codex",
+        },
+        description: {
+          zh: "在招聘、工程与运营中把专家知识转化为快速可复用的工作流，大幅缩短交付周期。",
+          en: "Across recruiting, engineering and operations, expert knowledge becomes fast, reusable workflows that shorten delivery.",
+        },
+      },
+      {
+        title: {
+          zh: "LegalOn 把 Codex 日成本降低约 65%",
+          en: "LegalOn Cuts Codex Daily Cost About 65%",
+        },
+        description: {
+          zh: "法务科技公司通过合理配置模型档位削减预估日成本，同时维持原有开发速度。",
+          en: "By tuning model tiers, the legal-tech firm lowered estimated daily cost while keeping development speed.",
+        },
+      },
+      {
+        title: {
+          zh: "Jump Trading 用 ChatGPT 扩展量化研究",
+          en: "Jump Trading Scales Quant Research With ChatGPT",
+        },
+        description: {
+          zh: "高频交易公司把多个更长时间的 AI 工作流组合起来完成复杂建模任务。",
+          en: "The high-frequency trading firm chains longer AI workflows to complete complex modeling.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 与 Ironclad 合作推进 computer use 合同工作流",
+          en: "OpenAI and Ironclad Advance Computer Use for Contracts",
+        },
+        description: {
+          zh: "双方在复杂合同工作流上训练并评估 AI 智能体的 computer use 能力。",
+          en: "They train and evaluate AI computer-use agents on complex contract workflows.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT for Teens 推出 College Planner",
+          en: "ChatGPT for Teens Adds a College Planner",
+        },
+        description: {
+          zh: "帮助高中生管理大学申请，并新增面向青少年的 AI 学习与规划内容。",
+          en: "It helps high-schoolers manage applications alongside new teen-focused learning and planning content.",
+        },
+      },
+      {
+        title: {
+          zh: "Radisson 酒店集团把酒店发现功能接入 ChatGPT 插件",
+          en: "Radisson Puts Hotel Discovery in a ChatGPT Plugin",
+        },
+        description: {
+          zh: "Radisson 携手 Accenture 基于 OpenAI 技术打造插件，让旅客在对话中查找、比较并预订酒店。",
+          en: "With Accenture, Radisson lets travelers find, compare and book hotels in-conversation.",
+        },
+      },
+      {
+        title: {
+          zh: "Show HN：BraiNOTES 在浏览器标签页里给课程 PDF 记手写笔记",
+          en: "Show HN: BraiNOTES for Handwritten Notes on Course PDFs",
+        },
+        description: {
+          zh: "开发者开源 BraiNOTES，可在浏览器中给讲义 PDF 添加手写笔记，是网页版 LaTeX 编辑器 TeXbrain 的延伸项目。",
+          en: "It adds handwritten notes to lecture PDFs in the browser, extending the web LaTeX editor TeXbrain.",
+        },
+      },
+      {
+        title: {
+          zh: "Karpathy：对 LLM 能力的'共同认知差距'正在扩大",
+          en: "Karpathy: The 'Common Cognitive Gap' on LLM Capabilities Is Widening",
+        },
+        description: {
+          zh: "不同人群对大语言模型真实能力的认知差距越来越大，提醒业界留意由此带来的预期与治理分歧。",
+          en: "Perceptions of what LLMs can really do are diverging across groups, raising expectation and governance divides.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-12-hot",
+    date: "2026-10-12",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-12",
+      en: "🔥 Hot Topics · Oct 12, 2026",
+    },
+    summary: {
+      zh: "今日国际局势与体育、民生话题并行。国际方面：也门胡塞武装的'拖鞋军'一周内第三次袭击沙特首都利雅得的哈立德国王国际机场，10 月 10 日的袭击致 12 死 309 伤、机场暂停运营，沙特 12 日发布多段监控视频曝光遇袭瞬间，综合各方消息至少 13 人死亡、300 多人受伤；此前 10 月 5 日沙特支持也门政府军向胡塞武装发动地面攻势，胡塞武装为报复及反制封锁实施袭击；泽连斯基 11 日就特朗普有关乌克兰换总统的言论回应称，乌克兰选择哪位领导人应由其社会和人民决定；一油轮在霍尔木兹海峡触雷，伊朗公布画面；蒙古国境内 10 月 9 日发生草原火情并受地形风力影响向中国边境逼近，截至 11 日 20 时堵截任务仍在进行；前驻外大使傅莹在北极圈论坛大会上驳斥北极'中国威胁论'，称这类说法多出于想象、中国不会在北极动武。体育方面：10 月 11 日郑钦文在 2026 中国网球公开赛捧起冠军奖杯，成为中网二十届赛事首位女单冠军中国选手、斩获生涯首个 WTA1000 赛冠军，此前肘伤复出后排名跌出百名开外，人民日报发表评论；决赛对手、19 岁俄罗斯少女安德列娃赛后笑言自己获得的支持不如郑钦文、直言这是东道主选手的优势，NBA 球星威少（威斯布鲁克）也盛赞郑钦文；WTT 中国大满贯中王曼昱和松岛辉空分别夺得女单、男单冠军，网友翻出两人多年前青涩比耶合影，调侃'酷姐酷弟夺冠都不笑'；刘国梁 16 岁女儿刘宇婕在 2026 中国女子高尔夫球公开赛夺得冠军、成赛事创办二十年来首位业余冠军。国内建设与民生方面：10 月 12 日上午 6 时 30 分，重建后的深圳皇岗口岸正式开通运行，采用'一地两检'等模式使通关时间由约 30 分钟缩至约 5 分钟，有旅客称被超级口岸联检大楼'巨无霸'震撼到；人社部门明确辟谣'社保卡金卡能享受更高待遇'，称全国现行社保卡没有官方定义的金卡、银卡分类、个人无法付费升级；市场监管总局发布食品安全法修订草案征求意见稿，要求中小学、幼儿园建立陪餐制度、入网餐饮服务提供者以视频形式实时向社会公开餐食加工制作过程；自 11 月 1 日起全国成品油零售加油站将全面实施'交易即开票'新规；专家表示厄尔尼诺具周期性、目前基本确定今年会是暖冬、明年夏季高温可能更强。社会与消费方面：央视曝光内蒙古通辽投资 1.2 亿元的农业项目开工一年多仅建成 5 个烂尾大棚，承建商为开工前 9 天临时成立的空壳公司、外包骗施工队垫资后失联；一名大二专科生自称靠逐帧对比爆款视频并批量复制'切片'3 年赚 700 万、坦言成功 80% 靠平台红利，而解读指出未经授权剪辑主播片段涉嫌侵权（此前已有公司被判赔 6000 元）；记者暗访发现'搭子'社交已成导流灰色交易入口、暗访有平台提供含身体接触等疑涉及色情服务；河南餐饮品牌方中山胡辣汤在伦敦一区开出首家海外门店，招牌胡辣汤售价约 87 元人民币、坚持'无本土化妥协'；宁波一对 95 后新人举办无接亲婚车及司仪的'四无婚礼'，新娘父亲致辞 41 秒'吃好喝好'便开席，并向宾客送出六七万元红包。健康方面：研究显示中国热烫饮食者食管癌风险是非热烫饮食者的 2.43 倍，65 摄氏度以上热饮可能增加风险，建议刚出锅的食物别急着吃；此外医学科普提醒保护大脑'指挥中心'前额叶，其受损可能与多动症、抑郁、痴呆等相关。正能量方面，湖南郴州 70 岁老人曾凡林为救被歹徒勒住脖子的女子、搏斗时鼻子被咬掉吞入肚中，已做 4 次手术、鼻型基本恢复但失去嗅觉，近日获评'中国好人'。",
+      en: "International affairs ran alongside sport and livelihood news today. Abroad: Yemen's Houthis hit Riyadh's King Khalid International Airport for the third time in a week; the Oct 10 attack killed 12 and wounded 309 and halted operations, and Saudi Arabia released surveillance video on Oct 12 showing the moment of impact with at least 13 dead and 300-plus hurt. On Oct 5 Saudi-backed Yemeni government forces launched a ground offensive on the Houthis, who attacked in retaliation and to counter the blockade. Zelensky responded on Oct 11 to Trump's suggestion that Ukraine change presidents by saying Ukrainians alone should choose their leader; an oil tanker struck a mine in the Strait of Hormuz with Iran releasing footage; a Mongolian grassland fire that began Oct 9 was pushed toward the Chinese border by terrain and wind, with containment still underway as of 20:00 on Oct 11; and former ambassador Fu Ying rejected Arctic 'China threat' claims at the Arctic Circle Assembly, calling them mostly imagined and saying China won't use force there. In sport: Zheng Qinwen lifted the 2026 China Open trophy on Oct 11 as the tournament's first Chinese women's singles champion in 20 editions and her first WTA 1000 title, after an elbow injury left her ranked outside the top 100, drawing a People's Daily commentary; her opponent, 19-year-old Russian Andreeva, joked afterward that she had less crowd support and that it's the host player's advantage, while NBA star Westbrook praised Zheng; at the WTT China Smash Wang Manyu and Sora Matsushima took the women's and men's titles, prompting jokes about 'cool sister and brother not smiling' after an old photo resurfaced; and Liu Guoliang's 16-year-old daughter Liu Yujie won the 2026 China Women's Open, the event's first amateur champion in its 20-year history. At home: the rebuilt Shenzhen Huanggang Port opened at 6:30 a.m. on Oct 12 with 'co-location' checks cutting clearance from about 30 minutes to 5, with a traveler calling the mega inspection building stunning; the MOHRSS debunked claims that gold social-security cards get better benefits, saying there is no official gold/silver tiering and no paid upgrades; the market regulator issued draft food-safety revisions requiring schools and kindergartens to run meal-accompaniment systems and online caterers to livestream food preparation; from Nov 1, all fuel retailers nationwide must issue invoices automatically at purchase; and experts say El Niño makes a warm winter essentially certain, with next summer possibly hotter. In society and consumer news: CCTV exposed a 120-million-yuan Tongliao, Inner Mongolia agricultural project that built only five unfinished greenhouses after over a year, with a shell company formed nine days before work began outsourcing to contractors who fronted funds before vanishing; a college student claimed 7 million yuan in three years copying viral 'clip' videos, admitting 80% was platform dividend, as commentary warned unlicensed clipping infringes copyright (a company was previously ordered to pay 6,000 yuan); reporters found 'buddy' social apps funneling gray-market deals, with some platforms allegedly offering contact-based, possibly sexual services; Henan brand Fangzhongshan Hula Soup opened its first London store in Zone 1 at about 87 yuan a bowl with 'no localization compromises'; and a Ningbo Gen-Z couple held a 'four-no' wedding with no convoy or emcee, where the bride's father spoke 41 seconds — 'eat and drink well' — before the meal, gifting guests 60,000-70,000 yuan in red envelopes. On health: hot-food eaters in China face 2.43x the esophageal-cancer risk, drinks above 65°C may raise risk, and it's best not to eat food straight from the pan; another explainer urged caring for the prefrontal cortex, whose damage links to ADHD, depression and dementia. In a positive note, 70-year-old Zeng Fanlin of Chenzhou, Hunan — whose nose was bitten off and swallowed while saving a woman being strangled — has had four surgeries, regained his nose's shape but not smell, and was named a 'Good Samaritan of China.'",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "'拖鞋军'一周内第三次打瘫沙特首都机场",
+          en: "Houthis Hit Riyadh Airport for the Third Time in a Week",
+        },
+        description: {
+          zh: "10 月 10 日袭击致 12 死 309 伤、机场暂停运营，沙特 12 日公布监控视频，综合消息至少 13 死、300 多人受伤。",
+          en: "The Oct 10 attack killed 12 and hurt 309, halting operations; Oct 12 footage surfaced as the toll rose to at least 13 dead and 300-plus hurt.",
+        },
+      },
+      {
+        title: {
+          zh: "重建后的深圳皇岗口岸正式开通",
+          en: "The Rebuilt Shenzhen Huanggang Port Opens",
+        },
+        description: {
+          zh: "10 月 12 日 6 时 30 分开通，采用'一地两检'使通关时间由约 30 分钟缩至约 5 分钟，旅客称被联检大楼'巨无霸'震撼。",
+          en: "Opened at 6:30 a.m. Oct 12 with co-location checks cutting clearance from ~30 to ~5 minutes, wowing travelers with its mega building.",
+        },
+      },
+      {
+        title: {
+          zh: "郑钦文夺中网冠军，成首位中国女单冠军",
+          en: "Zheng Qinwen Wins the China Open as Its First Chinese Champion",
+        },
+        description: {
+          zh: "10 月 11 日捧杯，成为中网二十届首位女单冠军中国选手与生涯首个 WTA1000 冠军；肘伤复出后从百名开外重返巅峰，人民日报发表评论，对手安德列娃调侃观众支持少、威少盛赞。",
+          en: "Her first WTA 1000 title made her the event's first Chinese champion after an elbow-injury comeback; People's Daily commented as Andreeva joked about crowd support and Westbrook praised her.",
+        },
+      },
+      {
+        title: {
+          zh: "泽连斯基回应特朗普'换总统'言论",
+          en: "Zelensky Responds to Trump's 'Change Presidents' Remark",
+        },
+        description: {
+          zh: "泽连斯基 11 日称，乌克兰选择哪位领导人应由其社会和人民决定。",
+          en: "Zelensky said Ukrainians alone should decide who leads their country.",
+        },
+      },
+      {
+        title: {
+          zh: "刘国梁女儿刘宇婕登顶中国女子公开赛",
+          en: "Liu Guoliang's Daughter Liu Yujie Wins the China Women's Open",
+        },
+        description: {
+          zh: "16 岁的刘宇婕夺得冠军、斩获个人女子中巡第三冠，成赛事创办二十年来首位业余冠军。",
+          en: "The 16-year-old took her third CLPGA title and became the event's first amateur champion in 20 years.",
+        },
+      },
+      {
+        title: {
+          zh: "王曼昱松岛辉空夺冠都不笑",
+          en: "Wang Manyu and Matsushima Win Without Smiling",
+        },
+        description: {
+          zh: "WTT 中国大满贯女单、男单冠军分别由王曼昱、松岛辉空夺得，网友翻出旧合影调侃'酷姐酷弟夺冠都不笑'。",
+          en: "After the two took the WTT Smash singles titles, an old photo resurfaced with jokes about the 'cool pair' not smiling.",
+        },
+      },
+      {
+        title: {
+          zh: "央视曝投资 1.2 亿项目仅建 5 个棚",
+          en: "CCTV: A 120M-Yuan Project Built Only Five Greenhouses",
+        },
+        description: {
+          zh: "内蒙古通辽农业项目开工一年多仅建成 5 个烂尾大棚，承建商为开工前 9 天临时成立的空壳公司、外包骗垫资后失联。",
+          en: "A Tongliao project left five unfinished greenhouses after a shell company formed nine days before work began vanished with contractors' funds.",
+        },
+      },
+      {
+        title: {
+          zh: "食品安全法大修",
+          en: "A Major Overhaul of the Food Safety Law",
+        },
+        description: {
+          zh: "市场监管总局征求意见稿要求中小学、幼儿园建立陪餐制度，入网餐饮服务提供者以视频形式实时公开餐食加工制作过程。",
+          en: "The draft requires school meal-accompaniment systems and livestreamed food preparation for online caterers.",
+        },
+      },
+      {
+        title: {
+          zh: "加油新规 11 月 1 日起全面实施",
+          en: "New Fuel-Invoice Rule Takes Effect Nov 1",
+        },
+        description: {
+          zh: "全国成品油零售加油站将全面实施'交易即开票'，加油支付完成后系统自动开具电子发票。",
+          en: "All fuel retailers must auto-issue electronic invoices on payment under the 'invoice at transaction' rule.",
+        },
+      },
+      {
+        title: {
+          zh: "专家：今年暖冬基本确定",
+          en: "Experts: A Warm Winter Is Essentially Certain",
+        },
+        description: {
+          zh: "联合国机构警告厄尔尼诺预计 12 月达顶峰、或成 1950 年以来最强事件之一；中国气象专家称厄尔尼诺具周期性、明年夏季高温可能更强。",
+          en: "The UN warns El Niño may peak in December as one of the strongest since 1950; Chinese experts see a warm winter and possibly hotter next summer.",
+        },
+      },
+      {
+        title: {
+          zh: "大二专科生称靠切片三年赚七百万",
+          en: "A College Students Says Video 'Clipping' Earned 7M Yuan in Three Years",
+        },
+        description: {
+          zh: "当事人自称靠逐帧对比爆款并批量复制、80% 靠平台红利，解读指出未经授权剪辑主播片段涉嫌侵权（此前已有公司被判赔 6000 元）。",
+          en: "He attributes 80% to platform dividends, but commentary warns unlicensed clipping infringes rights (a firm was once ordered to pay 6,000 yuan).",
+        },
+      },
+      {
+        title: {
+          zh: "记者暗访'搭子'社交：疑现色情服务",
+          en: "Undercover Probe Finds 'Buddy' Social Apps Tied to Sexual Services",
+        },
+        description: {
+          zh: "搭子社交成导流灰色交易入口，部分收费组局、消费引流及地陪帖频繁出现暗语，暗访有平台提供含身体接触等疑涉及色情服务。",
+          en: "Paid meetups and local-guide posts use code words, with some platforms allegedly offering contact-based, possibly sexual services.",
+        },
+      },
+      {
+        title: {
+          zh: "为救人被咬掉鼻子，老人获评中国好人",
+          en: "A Man Who Lost His Nose Saving a Woman Named a 'Good Samaritan'",
+        },
+        description: {
+          zh: "湖南郴州 70 岁老人曾凡林搏斗时鼻子被咬掉吞入肚中，已做 4 次手术、鼻型基本恢复但无嗅觉，医药费由当地负责。",
+          en: "Zeng Fanlin, 70, has had four surgeries after his nose was bitten off, regaining its shape but not his smell, with costs covered locally.",
+        },
+      },
+      {
+        title: {
+          zh: "蒙古国草原火情逼近中国边境",
+          en: "A Mongolian Grassland Fire Approaches the Chinese Border",
+        },
+        description: {
+          zh: "10 月 9 日锡林郭勒盟边境一线蒙古国境内发生火情，受地形和风力影响向我方逼近，截至 11 日 20 时堵截任务仍在进行。",
+          en: "A fire near the Xilingol border began Oct 9 and was pushed toward China by terrain and wind, with containment still underway on Oct 11.",
+        },
+      },
+      {
+        title: {
+          zh: "傅莹：不懂为什么中国在北极会成威胁",
+          en: "Fu Ying: There's No Reason China Is an Arctic Threat",
+        },
+        description: {
+          zh: "傅莹在北极圈论坛大会上驳斥北极'中国威胁论'，称说法多出于想象、中国不会在北极动武，首要议题应是海冰消融与气候变暖。",
+          en: "At the Arctic Circle Assembly she called the threat framing imagined, saying China won't use force and the priority is melting ice and warming.",
+        },
+      },
+      {
+        title: {
+          zh: "别趁热吃，也别透支前额叶",
+          en: "Don't Eat Straight From the Pan, and Don't Burn Out Your Prefrontal Cortex",
+        },
+        description: {
+          zh: "热烫饮食者食管癌风险是非热烫者的 2.43 倍、65 摄氏度以上热饮有风险；科普提醒前额叶受损与多动症、抑郁、痴呆等相关。",
+          en: "Hot-food eaters face 2.43x esophageal-cancer risk and 65°C+ drinks carry risk; another explainer links prefrontal damage to ADHD, depression and dementia.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-11",
     date: "2026-10-11",
     title: {
