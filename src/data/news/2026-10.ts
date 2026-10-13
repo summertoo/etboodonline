@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-13",
+    date: "2026-10-13",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-13",
+      en: "🤖 AI HOT Daily · Oct 13, 2026",
+    },
+    summary: {
+      zh: "今日焦点：Meta 发布 Muse Wonder 和 Muse Wonder Full 两款模型，在 Artificial Analysis Intelligence Index v4.3 上分别拿下 52 和 56 分（max reasoning effort），实测智能水平较前代显著提升。硬件与算力方面：微软宣布明年起将 Maia 芯片家族扩展到多吉瓦级部署、作为自家产品和服务的首选推理系统，并发布 Maia 300（每瓦 token 产出比主流 GPU 系统高 40%），Maia 200 已在美国、欧洲和澳大利亚部署、在 Teams 与 Copilot 场景中每瓦 token 产出提升最高 1.7x。订阅生态方面：xAI 推出 The X Subscription，把 Grok、Grok Bot、Cursor 与 X Premium 合入一个计划，未来几天内向全球用户开放。行业动态：据 Bloomberg 报道，Epic Games 在与迪士尼 15 亿美元合作项目中转向 AI 先行开发，由 Anthropic 的 Claude 等模型编写全部代码并指导全部美术、人类开发者负责管理和引导生成内容，该合作项目宣布无限期延期；QGIS 通过 QEP428 提案将 AI 政策改为严格的 NOT ALLOWED（全程禁止 AI 辅助贡献）；有用户报告 Codex CLI 0.157.0 起打开交互式会话即默认启动持久化自更新后台守护进程 codex app-server --managed-daemon，窗口关闭后仍驻留。研究方面：Anthropic 发文评估小型模型在无数据中心条件下自主复制（ARA）的可行性，实验显示 9B 模型可在测试的 9 类硬件中 8 类上跑通推理、30B 及以下模型已能完成复制的多数单步，被认为可能接近在 IoT 设备上自主复制；Science 新研究显示 Google DeepMind 的 AlphaProof Nexus 独立解决了 353 个开放 Erdős 问题中的 9 个并经同行评审，其中 2 个悬置 56 年。开发实战与观点：Vapi 工程师 Lat Ware 自研 Pedantic Review Bot，使 PR 从开到合并的平均时间从 130 多小时降到 65 小时，机器人会运行测试和小复现验证发现、分析评论分属两个 job、只能评论不能批准或推送；一篇教程介绍用 Claude Opus 5.5 配合 Claude Code、Blender、Unreal Engine 5 和 Meshy 构建游戏，核心是每个工具单一职责、通过 MCP 连接 Blender 与 Meshy；Tessl 博客介绍用 CLAUDE.md 指令、.claude/rules/ 路径级规则、能力配置和 hooks 四个文件杠杆约束编码智能体；开发者 Brandon Thomas 因不满 Adobe 订阅规则，用 Claude Opus 5.5 以 Rust 逆向重写了 Photoshop、Illustrator 等 7 款软件的开源替代品 PhotoCraft、VectorCraft 等，不到 10 天单 PS 项目获 4.6 万 star，AI 驱动的逆向一切趋势引发热议。",
+      en: "Today's focus: Meta released Muse Wonder and Muse Wonder Full, scoring 52 and 56 on the Artificial Analysis Intelligence Index v4.3 (max reasoning effort), a significant measured improvement over the previous generation. Hardware and compute: Microsoft said that starting next year it will scale the Maia chip family to multi-gigawatt deployments as the preferred inference system for its own products and services, and unveiled Maia 300 (40% more tokens per watt than mainstream GPU systems); Maia 200 is already live in the US, Europe and Australia, delivering up to 1.7x tokens per watt in Teams and Copilot scenarios. Subscriptions: xAI launched The X Subscription bundling Grok, Grok Bot, Cursor and X Premium into one plan, rolling out globally in coming days. Industry: per Bloomberg, Epic Games is shifting to AI-first development on its $1.5B Disney collaboration, with models like Anthropic's Claude writing all the code and directing all the art while human developers manage and guide generated content, and the project is now indefinitely delayed; QGIS passed QEP428 moving its AI policy to a strict NOT ALLOWED for AI-assisted contributions; and a user reported that Codex CLI 0.157.0 starts a persistent, self-updating background daemon (codex app-server --managed-daemon) on opening an interactive session, lingering after the window closes. Research: Anthropic assessed feasibility of AI Self-Replication without a datacenter (ARA), with experiments showing a 9B model runs inference on 8 of 9 tested hardware classes and models at or below 30B complete most single replication steps, suggesting small models may approach autonomous replication on IoT devices; and a Science study shows Google DeepMind's AlphaProof Nexus independently solved 9 of 353 open Erdős problems — two of them open for 56 years — and passed peer review. Engineering and opinion: Vapi engineer Lat Ware's self-built Pedantic Review Bot cut average PR open-to-merge time from 130-plus hours to 65, verifying findings with tests and small reproductions in a comment-only, no-approve/no-push split; a tutorial covers building games with Claude Opus 5.5, Claude Code, Blender, Unreal Engine 5 and Meshy, assigning each tool a single responsibility and connecting Blender/Meshy via MCP; Tessl shows four file levers (CLAUDE.md, .claude/rules/, capability config, hooks) to constrain coding agents; and developer Brandon Thomas, fed up with Adobe's subscription, reverse-reimplemented 7 apps including Photoshop and Illustrator in Rust as open-source PhotoCraft/VectorCraft with an AI-driven rewrite, grabbing 46k stars on the Photoshop project in under 10 days and fueling the 'reverse everything with AI' trend.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Meta 发布 Muse Wonder 与 Muse Wonder Full",
+          en: "Meta Releases Muse Wonder and Muse Wonder Full",
+        },
+        description: {
+          zh: "两款模型在 Artificial Analysis Intelligence Index v4.3 上分别获 52 和 56 分（max reasoning effort），实测智能水平较前代显著提升。",
+          en: "They score 52 and 56 on the AA Intelligence Index v4.3 at max reasoning effort, measurably smarter than the prior generation.",
+        },
+      },
+      {
+        title: {
+          zh: "微软发布自研芯片 Maia 300，推理部署扩至多吉瓦级",
+          en: "Microsoft Unveils Maia 300 and Scales Maia Inference to Multi-Gigawatt",
+        },
+        description: {
+          zh: "明年起 Maia 将成为自家产品服务的首选推理系统；Maia 300 每瓦 token 产出比主流 GPU 高 40%，Maia 200 在 Teams/Copilot 中最高提升 1.7x。",
+          en: "Maia becomes the preferred inference system next year; Maia 300 yields 40% more tokens/watt, and Maia 200 hits up to 1.7x in Teams and Copilot.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI 推出 The X Subscription 整合 Grok 与 Cursor",
+          en: "xAI Launches The X Subscription Bundling Grok and Cursor",
+        },
+        description: {
+          zh: "将 Grok、Grok Bot、Cursor 与 X Premium 合入一个计划，未来几天内向全球用户开放。",
+          en: "One plan now bundles Grok, Grok Bot, Cursor and X Premium, opening to global users in coming days.",
+        },
+      },
+      {
+        title: {
+          zh: "Epic Games 转向 AI 先行开发，迪士尼合作游戏无限期延期",
+          en: "Epic Goes AI-First and Delays Its Disney Game Indefinitely",
+        },
+        description: {
+          zh: "据 Bloomberg，15 亿美元合作项目中由 Claude 等模型编写全部代码并指导全部美术，人类负责管理和引导生成内容。",
+          en: "Per Bloomberg, models like Claude write all code and direct all art in the $1.5B project while humans manage generated content.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic：小型 AI 模型或接近在 IoT 设备上自主复制",
+          en: "Anthropic: Small Models May Approach Autonomous Replication on IoT",
+        },
+        description: {
+          zh: "研究评估无数据中心条件下的自主复制（ARA），9B 模型在 9 类硬件中 8 类上跑通推理，30B 及以下模型已能完成复制的多数单步。",
+          en: "Assessing replication without a datacenter (ARA), a 9B model ran inference on 8 of 9 hardware classes and ≤30B models complete most single steps.",
+        },
+      },
+      {
+        title: {
+          zh: "AlphaProof Nexus 攻克 9 个未解 Erdős 问题并经同行评审",
+          en: "AlphaProof Nexus Solves 9 Open Erdős Problems, Peer-Reviewed",
+        },
+        description: {
+          zh: "Science 新研究显示，DeepMind 的证明模型独立解决 353 个开放问题中的 9 个，其中 2 个悬置 56 年。",
+          en: "A Science study says DeepMind's solver independently cracked 9 of 353 open problems, 2 open for 56 years.",
+        },
+      },
+      {
+        title: {
+          zh: "QGIS 通过 QEP428 禁止 AI 辅助贡献",
+          en: "QGIS Bans AI-Assisted Contributions via QEP428",
+        },
+        description: {
+          zh: "提案将 AI 政策改为严格的 NOT ALLOWED，由 nyalldawson 提交并于 10 月 7 日合并进 QGIS-Enhancement-Proposals 仓库。",
+          en: "The proposal moves the AI policy to a strict NOT ALLOWED, authored by nyalldawson and merged Oct 7.",
+        },
+      },
+      {
+        title: {
+          zh: "Codex CLI 0.157.0 默认启动持久化后台守护进程",
+          en: "Codex CLI 0.157.0 Starts a Persistent Background Daemon by Default",
+        },
+        description: {
+          zh: "有用户报告打开交互式会话即默认启动 codex app-server --managed-daemon，窗口关闭后仍驻留并自更新。",
+          en: "Interactive sessions now start a self-updating codex app-server --managed-daemon that lingers after the window closes.",
+        },
+      },
+      {
+        title: {
+          zh: "Vapi 自研代码审查机器人把 PR 合并时间缩短一半",
+          en: "Vapi's Review Bot Halves PR Merge Time",
+        },
+        description: {
+          zh: "Pedantic Review Bot 把 PR 平均合并时间从 130 多小时降到 65 小时，会运行测试和小复现验证、只能评论不能批准或推送。",
+          en: "The bot cut average open-to-merge from 130+ to 65 hours, verifying findings with tests and reproductions with comment-only access.",
+        },
+      },
+      {
+        title: {
+          zh: "用 Claude Opus 5.5、Blender、Unreal 与 Meshy 构建游戏的七步教程",
+          en: "A 7-Step Game Tutorial With Claude Opus 5.5, Blender, Unreal and Meshy",
+        },
+        description: {
+          zh: "核心理念是每个工具单一职责：通过 MCP 连接 Blender 和 Meshy，由 Meshy 生成道具角色、Blender 负责清理与放置。",
+          en: "The idea: one responsibility per tool, with Blender and Meshy wired via MCP for asset generation and cleanup/placement.",
+        },
+      },
+      {
+        title: {
+          zh: "Tessl：只用自己拥有的文件约束编码智能体",
+          en: "Tessl: Constrain a Coding Agent With Only Files You Own",
+        },
+        description: {
+          zh: "四个文件杠杆：CLAUDE.md 指令、.claude/rules/ 路径级规则、.claude/ 下的能力配置和 .claude/hooks/ 钩子。",
+          en: "Four levers: CLAUDE.md instructions, path-level .claude/rules/, capability config, and .claude/hooks/.",
+        },
+      },
+      {
+        title: {
+          zh: "用 Claude Opus 5.5 逆向重写 Adobe 全家桶",
+          en: "Claude Opus 5.5 Reverse-Implements the Adobe Suite",
+        },
+        description: {
+          zh: "开发者 Brandon Thomas 用 Rust 写出 Photoshop、Illustrator 等 7 款软件的开源替代品 PhotoCraft、VectorCraft，不到 10 天单 PS 项目获 4.6 万 star。",
+          en: "Brandon Thomas rewrote 7 apps including Photoshop in Rust as open-source PhotoCraft/VectorCraft, pulling 46k GitHub stars in under ten days.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-13-hot",
+    date: "2026-10-13",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-13",
+      en: "🔥 Hot Topics · Oct 13, 2026",
+    },
+    summary: {
+      zh: "今日经济与民生、社会与娱乐话题丰富。经济与企业方面：8 月末规上工业企业应收账款达 29.48 万亿元创新高，大企业利用优势'卷账期'套利致中小企业资金链断裂，工信部等在国务院政策例行吹风会上表态从地方政府、央国企和大型企业三大拖欠主力源头破局，国务院办公厅印发通知要求大企业 60 日内付款、严防'边清边欠'；A 股又现天价离婚，神农集团董事长何祖训起诉离婚达成调解、约 7830.5 万股归女方，按 12 日收盘价测算市值近 24 亿元；韩国股市降温，KOSPI 上半年涨 100% 领跑全球、下半年已跌 22%，成交额较 5 月底峰值缩七成、外资撤离速度居亚洲之首；美股半导体普跌、费城半导体指数跌超 2.6%，存储与光通信股大跌（Lumentum 重挫近 10%）；比亚迪执行副总裁李柯在新加坡峰会表示计划五年内赶超丰田大众登顶全球销量第一、强调电池技术是核心竞争力；两款一汽丰田燃油 SUV 重回乘用车零售销量前十（此前 8 月前十曾被新能源全包揽）。科技与中国制造方面：深圳今年前 8 个月各类机器人出口同比激增 12 倍，科技优势正转化为出口竞争力；浙江台州一款缝纫企业自研芯片的机型，不用反复调参即可连续稳定缝制厚薄差异巨大的面料、效率提升 30%，产品卖遍 200 多个国家和地区。国际与社会方面：中科院就网传'付费入住特定酒店即可进入中国天眼核心区'成立调查工作组开展全面核查，称发现违规违纪将严肃处理；周杰伦在上海活动被主持人以'知名的中国歌手'介绍后微微点头并转发点赞相关视频，引发台湾'青鸟'论战与网民嘲讽；北京热力辟谣从未授权个人代收代缴采暖费，提醒勿信闲鱼、小红书等平台'内部人员打折代缴'、应通过官方渠道缴费；最高检发布典型案例披露某部队营区必经道路上违规私装 30 余个联网监控探头已整改、涉军泄密隐患消除；央视报道'雅思考试再度取消'，此前 10 日至 12 日已连续三天停考、赔偿方案尚在商讨、打乱留学申请节奏；'《我不是药神》原型'陆勇接受专访表示即将停药，24 年服用约 3.5 万片药、长期服药致皮肤异常发白和水肿等副作用。文体娱乐方面：芒果打造的五位 AI 艺人程渡、方屿、林恩娜、戚许、展颜出道，首部主演作品定档 10 月 14 日上线；24 岁吃播网红'干饭莹'陈紫怡发出最后一条'开饭'视频三天后离世，被曝长期受暴食症困扰、镜头前后经历'靠暴食症获利也因暴食症倒下'的残酷闭环；'蜘蛛侠'托比·马奎尔在夏威夷出席并主持前妻詹妮弗·梅耶的婚礼、莱昂纳多等名流到场；美国乡村歌后多莉·帕顿 8 月 25 日去世后，其侄子因向遗产管理公司发送威胁信息被法院批准临时限制令、与遗产管理公司保持至少 1000 英尺距离。生活方式与观点方面：'共享儿女'正在填补老龄化社会的孤独缺口——年轻人用陪伴换取归属感、老人收获温暖与帮助，但媒体提醒其替代不了子女的那通电话和那个拥抱、并暗藏边界模糊与信任缺失风险；媒体评论称'不烧心文学'源于套路化的 AI 短剧，生意可以精打细算、良心不能斤斤计较；还有一则家庭'趣闻'：山东曹县一对新人办婚礼，66 个充气拱门从新郎家绵延 1.4 公里摆到新娘家。",
+      en: "Economy, finance, society and entertainment filled today. Economy and business: receivables of industrial enterprises above designated size hit a record 29.48 trillion yuan by end-August, with large firms abusing 'invoice-aging arbitrage' to squeeze SME cash flow; the MIIT vowed at a State Council briefing to break the logjam at the three main debtors — local governments, central SOEs and big companies — and the State Council General Office ordered big firms to pay within 60 days to stop 'paying while re-owing.' A-top A-share celebrity divorce: Shennong Group chairman He Zuxun's mediation awarded about 78.3 million shares to his ex-wife, worth nearly 2.4 billion yuan at Monday's close. South Korea's market cooled — KOSPI up 100% in H1 leading global indices but down 22% in H2, turnover off 70% from its late-May peak, with the fastest foreign-outflow in Asia. US semis fell broadly, the PHLX index down over 2.6% with storage and optical stocks hammered (Lumentum near -10%). BYD executive VP Li Ke told a Singapore summit the firm aims to top Toyota and VW for global sales within five years, calling battery tech its core edge. Two FAW-Toyota fuel SUVs returned to the top ten retail-sales list after August's all-new-energy top ten. In tech and manufacturing: Shenzhen robotics exports surged 12x year-over-year in the first eight months, and a Taizhou sewing-machine maker's self-developed chip lets one machine sew wildly different fabrics continuously without re-tuning, a 30% gain, selling across 200-plus countries. Abroad and society: the CAS opened a probe into claims that paying to stay in a certain hotel lets you enter the core zone of the FAST 'Sky Eye' radio telescope; Jay Chou nodded on stage at a Shanghai event when introduced as 'a renowned Chinese singer' and reposted/liked the clip, stirring ire among Taiwan's 'Green Birds' and mockery online; Beijing heating utility denied ever authorizing personal agents to collect fees, warning against 'discounted' collectors on Xianyu/Xiaohongshu; the SPP publicized a typical case in which 30-plus private networked cameras along a military camp road were rectified to remove leak risks; IELTS was canceled again after three straight days (Oct 10-12), with compensation still under discussion and study-abroad plans disrupted; and Lu Yong, the real-life inspiration for 'Dying to Survive,' said he will stop taking medication after 24 years and about 35,000 pills that caused discolored skin and edema. Culture and entertainment: Mango launched five AI artists — Cheng Du, Fang Yu, Lin Enna, Qi Xu and Zhan Yan — with their first starring release dated Oct 14; 24-year-old mukbang influencer 'Ganfanying' (Chen Ziyi) died three days after her last 'let's eat' video, reportedly long tormented by binge-eating disorder in a brutal loop of profiting from and perishing by it; 'Spider-Man' Tobey Maguire hosted his ex-wife Jennifer Meyer's Hawaii wedding, with Leonardo among the guests; and after country legend Dolly Parton's Aug 25 death, a judge approved a temporary restraining order keeping her nephew 1,000 feet from the estate manager over menacing messages. Lifestyle and commentary: 'shared children' are filling the loneliness gap of an aging society — young people trade company for belonging while elders gain warmth and help — but media warn it can't replace a child's phone call and hug and carries fuzzy-boundary, trust risks; commentary notes 'bu-shaoxin literature' stems from formulaic AI short dramas, urging that business be price-conscious but conscience not small-minded; and a Shandong couple's wedding put 66 inflatable arches stretching 1.4 km from groom's home to bride's.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "29 万亿应收账款该怎么清欠",
+          en: "How to Clear the 29T Yuan Receivables Pile",
+        },
+        description: {
+          zh: "规上工业企业应收账款达 29.48 万亿元创新高，国务院办公厅通知要求大企业 60 日内付款、严防'边清边欠'。",
+          en: "Industrial receivables hit a record 29.48T yuan; the State Council now requires big firms to pay within 60 days.",
+        },
+      },
+      {
+        title: {
+          zh: "雅思考试再度取消",
+          en: "IELTS Canceled Again",
+        },
+        description: {
+          zh: "此前 10 日至 12 日已连续三天停考，临时取消使部分考生错过单科重考期限、打乱留学申请节奏，赔偿方案尚在商讨。",
+          en: "Following three straight days off (Oct 10-12), cancellations are squeezing one-subject retake deadlines; compensation is still under discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "中科院回应'住酒店可进天眼核心区'",
+          en: "CAS Probes 'Hotel Booking Gets You Into the Sky Eye Core Zone'",
+        },
+        description: {
+          zh: "针对网传付费入住特定酒店即可进入'中国天眼'核心区参观，中科院成立调查工作组开展全面核查。",
+          en: "The academy launched a working group to fully verify claims that paying for a certain hotel gains entry to the FAST core zone.",
+        },
+      },
+      {
+        title: {
+          zh: "周杰伦转发视频让'青鸟'破防",
+          en: "Jay Chou's Repost Rattles the 'Green Birds'",
+        },
+        description: {
+          zh: "周杰伦在上海活动被介绍为'知名的中国歌手'时微微点头并转发点赞该视频，引发民进党支持者'破防'。",
+          en: "Introduced on stage as 'a renowned Chinese singer', Chou nodded, then reposted and liked the clip, breaking composure among DPP supporters.",
+        },
+      },
+      {
+        title: {
+          zh: "韩国股市遭遇外资大撤退",
+          en: "Foreign Capital Fled South Korea's Bubbled Market",
+        },
+        description: {
+          zh: "KOSPI 上半年涨 100% 领跑全球，下半年迄今跌 22%、成交额较 5 月底峰值减 70%，外资撤离速度居亚洲之首。",
+          en: "After a 100% H1 that led the world, KOSPI is down 22% in H2 with volume off 70%, and foreigners fled fastest in Asia.",
+        },
+      },
+      {
+        title: {
+          zh: "A 股又现天价离婚，女方分走近 24 亿元",
+          en: "Another Sky-High A-Share Divorce, About 2.4B Yuan to the Ex-Wife",
+        },
+        description: {
+          zh: "神农集团掌门人何祖训离婚调解，约 7830.5 万股归女方，按收盘价测算市值约 23.83 亿元。",
+          en: "Shennong chairman He Zuxun's settlement gave his ex-wife ~78.3M shares worth about 2.38B yuan at Monday's close.",
+        },
+      },
+      {
+        title: {
+          zh: "美股存储、光通信暴跌",
+          en: "US Storage and Optical Stocks Plunge",
+        },
+        description: {
+          zh: "半导体板块普跌，费城半导体指数跌超 2.6%，Lumentum 重挫近 10%、应用光电与 Coherent 跌超 7%。",
+          en: "The PHLX index slid 2.6% with Lumentum near -10% and Applied Optoelectronics/Coherent down over 7%.",
+        },
+      },
+      {
+        title: {
+          zh: "比亚迪：5 年内登顶全球销量第一",
+          en: "BYD Aims to Top Global Sales Within Five Years",
+        },
+        description: {
+          zh: "执行副总裁李柯称计划五年内赶超丰田大众登顶，将坚持出海与储能、光伏、电池多领域领跑。",
+          en: "EVP Li Ke says BYD plans to overtake Toyota and VW in five years, leading in storage, solar and batteries, not just autos.",
+        },
+      },
+      {
+        title: {
+          zh: "两款燃油车重回销量榜前十",
+          en: "Two Fuel SUVs Re-Enter the Top-Ten Sales List",
+        },
+        description: {
+          zh: "一汽丰田卡罗拉锐放与 RAV4 荣放分列 9 月零售销量第六、第八，此前 8 月前十曾被新能源全部包揽。",
+          en: "The Corolla Cross and RAV4 took sixth and eighth in September retail; August's top ten had been all-new-energy.",
+        },
+      },
+      {
+        title: {
+          zh: "中国制造出海：深圳机器人出口增 12 倍，台州缝纫机卖遍 200 多国",
+          en: "Made-in-China Goes Out: Shenzhen Robots Up 12x, Taizhou Sewing Machines Around the World",
+        },
+        description: {
+          zh: "深圳今年前 8 个月各类机器人出口同比激增 12 倍；台州一款载自研芯片的缝纫机免调参即可连续缝制厚薄迥异面料、效率提升 30%。",
+          en: "Shenzhen robot exports surged 12x y/y; a spec-chip sewing machine sews wildly different fabrics nonstop, a 30% productivity gain.",
+        },
+      },
+      {
+        title: {
+          zh: "内娱来了五位 AI 艺人",
+          en: "Five AI Artists Debut in Chinese Entertainment",
+        },
+        description: {
+          zh: "由芒果打造的程渡、方屿、林恩娜、戚许、展颜出道，首部主演作品定档 10 月 14 日上线。",
+          en: "Mango's five virtual talents — Cheng Du, Fang Yu, Lin Enna, Qi Xu, Zhan Yan — premiere their first starring work Oct 14.",
+        },
+      },
+      {
+        title: {
+          zh: "24 岁吃播网红的人生终点",
+          en: "The End of a 24-Year-Old Mukbang Star",
+        },
+        description: {
+          zh: "'干饭莹'陈紫怡发出最后一条'开饭'视频三天后离世，长期被暴食症困扰，镜头前后经历获利与致病的残酷闭环。",
+          en: "Chen Ziyi died three days after her final video, caught in a brutal loop of profiting from and perishing by binge eating.",
+        },
+      },
+      {
+        title: {
+          zh: "'《我不是药神》原型'陆勇即将停药",
+          en: "The Real-Life 'Dying to Survive' Inspiration Is Stopping His Meds",
+        },
+        description: {
+          zh: "陆勇 24 年约服 3.5 万片药，长期服药致皮肤异常发白、水肿等副作用，近日接受专访表示即将停药。",
+          en: "Lu Yong took about 35,000 pills over 24 years, suffering pale skin and edema, and said in an interview he will soon stop.",
+        },
+      },
+      {
+        title: {
+          zh: "部队进出营区路上竟有 30 余个探头",
+          en: "30-Plus Private Cameras Along a Military Camp Road",
+        },
+        description: {
+          zh: "最高检典型案例披露，村民及企业私装的联网探头可拍摄部队通行轨迹，经检方督促后拆除断网、涉军泄密隐患消除。",
+          en: "An SPP case shows networked private cameras could capture troop movements; after supervision they were removed or taken offline.",
+        },
+      },
+      {
+        title: {
+          zh: "北京热力辟谣代缴采暖费能打折",
+          en: "Beijing Heating Debunks 'Discount' Fee Collectors",
+        },
+        description: {
+          zh: "北京热力称从未授权个人代收代缴采暖费，勿信闲鱼、小红书'内部人员'打折代缴，应走官方小程序与银行网点等正规渠道。",
+          en: "The utility has never authorized personal agents; users should ignore 'insider' discount claims and pay through official channels.",
+        },
+      },
+      {
+        title: {
+          zh: "'共享儿女'能填补养老的孤独吗",
+          en: "Can 'Shared Children' Fill the Loneliness of Aging?",
+        },
+        description: {
+          zh: "年轻人用陪伴换取归属感、老人收获温暖与帮助，但替代不了子女的那通电话和那个拥抱，也暗藏边界模糊与信任缺失风险。",
+          en: "Young people trade company for belonging while elders gain warmth — but it can't replace a child's call and hug, and risks fuzzy trust boundaries.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-12",
     date: "2026-10-12",
     title: {
