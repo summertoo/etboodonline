@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-14",
+    date: "2026-10-14",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-14",
+      en: "🤖 AI HOT Daily · Oct 14, 2026",
+    },
+    summary: {
+      zh: "今日焦点：Google 发布 Gemini 4 Argon，面向开发者、企业、科学家和消费者全球开放，可经 Gemini API、AI Studio、Google Antigravity 调用，定位为面向复杂工程与科研任务的前沿模型；该模型已上线 OpenRouter，在 AutomationBench 拿到 51.3%、LVBench 拿到 91.7%，并以 68% 并列 CWE-bench v1 第一。端侧与硬件方面：面壁智能联合 OpenBMB 社区开源 MiniCPM-V 4.7（含 35B-A3B 和 1B 两个版本），称其为全球首个可在端侧无损流畅运行的开源 MoE 多模态大模型，35B-A3B 仅 3GB 内存即可运行；Liquid AI 发布开源权重模型 LFM2.5-24B-A2B（总参数 24B、每 token 激活 2B），定位端侧快速智能体；Apple 发布配备 7 英寸 Liquid Retina 屏的智能音箱 HomeView（集娱乐、FaceTime、家庭监控与语音自动化于一体，标准版与壁挂版均 299 美元，11 月 13 日起在美英加澳等市场发售）；NVIDIA 官宣 RTX Spark 软件生态就绪、笔记本 10 月 16 日上市，搭载最高 128GB 统一内存和 1 petaflop AI 算力；千问发布 AI 眼镜 N1、N1 Pro 及首款 AI 耳夹式耳机并现货开售（眼镜到手价 2218 元起、耳机 1099 元起）。行业动态：成立五年的 Character.AI 已申请 Chapter 11 破产，法院文件显示其资产和负债在 5000 万至 1 亿美元之间，并同意以 2000 万美元向 Disney 出售部分资产及技术非独占永久许可，出售预计 11 月底或 12 月初完成、期间平台继续运营，目前尚无竞购方、若无买家将关停；OpenAI 宣布在办公室内发现一个隐蔽录音装置、用自家模型分析确认系一名员工几天前安放，已移交 FBI 并致其迅速逮捕、该员工已被解雇，目前没有迹象显示其不当访问或外泄模型权重、源代码或客户数据；XBOW 团队借助 OpenAI 的 GPT-5.6 Sol，在 6 天内以 4 万美元算力构建出 Chrome 全链漏洞，获得 Google 25 万美元赏金，这是 Google 第二次就 Chrome 全链漏洞发赏、也是 2026 年新规则下的首次。研究方面：Anthropic 发布针对 Claude 蒸馏攻击的新防御方法，早期证据显示使蒸馏者获取的数据减少约 90% 到 99%（reasoning token 提取量下降 10 到 100 倍）。工程实践：Anthropic 因 Claude 使日均合并代码量从 2026 年 5 月约 2500 增至 9 月超 3 万，五个月内自研版本控制系统 Scion 并完全替代 git、同时推出代码评审工具 Antique。其余看点：Meta Muse Wonder (Max) 进入 Arena 榜单（WebDev 第 15、文本第 2）；ElevenLabs 用 AI 重建嗓音助力 Baroness Campbell 在英国上议院演讲；Google 用 Gemini 4 Argon 无人值守连夜优化 20 万行 Python 代码库 ADK；Prime Intellect 收购 Moondream；Manus 与 OPPO 合作将 Agent 能力整合进 AI Mind Pilot；Hassabis 祝贺 AMIE 前瞻性临床研究发表于 The Lancet。",
+      en: "Today's focus: Google released Gemini 4 Argon, globally open to developers, enterprises, scientists and consumers via the Gemini API, AI Studio and Google Antigravity, positioned as a frontier model for complex engineering and scientific work; it landed on OpenRouter scoring 51.3% on AutomationBench and 91.7% on LVBench, tying first on CWE-bench v1 at 68%. On-device and hardware: ModelBest and the OpenBMB community open-sourced MiniCPM-V 4.7 (35B-A3B and 1B variants), billed as the first open MoE multimodal LLM to run losslessly and smoothly on-device, with 35B-A3B fitting in just 3GB of memory; Liquid AI released open-weight LFM2.5-24B-A2B (24B total, 2B active per token) for fast edge agents; Apple launched the 7-inch Liquid Retina smart speaker HomeView (entertainment, FaceTime, home monitoring and voice automation; $299 in both standard and wall-mount versions, shipping Nov 13 in the US, UK, Canada and Australia); NVIDIA said its RTX Spark software ecosystem is ready with laptops launching Oct 16, packing up to 128GB unified memory and 1 petaflop of AI compute; and Qwen launched AI glasses N1/N1 Pro plus its first AI clip-on earbuds on sale now (glasses from 2,218 yuan, earbuds from 1,099 yuan). Industry: five-year-old Character.AI filed for Chapter 11 with assets and liabilities between $50M and $100M, agreeing to sell some assets and a non-exclusive perpetual technology license to Disney for $20M — the sale is expected to close late November or early December while the platform keeps running, though with no bidder yet and a shutdown if none emerges; OpenAI said it found a covert recording device in its office, used its own models to trace it to an employee who planted it days earlier, referred the matter to the FBI which quickly arrested them, fired the employee, and said there is no indication of improper access or exfiltration of model weights, source code or customer data; and the XBOW team, aided by OpenAI's GPT-5.6 Sol, built a full-chain Chrome exploit in six days on $40k of compute to win Google's $250k bounty — only Google's second ever for a Chrome full chain and the first under 2026 rules. Research: Anthropic detailed new defenses against Claude distillation attacks, with early evidence that distillers got about 90-99% less data (reasoning-token extraction down 10-100x). Engineering: with Claude pushing daily merged code from ~2,500 lines in May 2026 to over 30,000 by September, Anthropic spent five months building its own source-control system, Scion, to fully replace git, and shipped a code-review tool, Antique. Also noted: Meta Muse Wonder (Max) entered the Arena leaderboard (WebDev #15, text #2); ElevenLabs rebuilt Baroness Campbell's voice to speak in the UK House of Lords; Google used Gemini 4 Argon unattended overnight to optimize a 200k-line Python codebase (ADK); Prime Intellect acquired Moondream; Manus partnered with OPPO to bring its agent into AI Mind Pilot; and Hassabis congratulated AMIE on its prospective clinical study in The Lancet.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Google 发布 Gemini 4 Argon",
+          en: "Google Releases Gemini 4 Argon",
+        },
+        description: {
+          zh: "面向开发者、企业、科学家和消费者全球开放，可经 Gemini API、AI Studio、Google Antigravity 调用，主打复杂工程与科研任务。",
+          en: "Globally available via the Gemini API, AI Studio and Google Antigravity, aimed at complex engineering and scientific tasks.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 4 Argon 上线 OpenRouter，多项基准领先",
+          en: "Gemini 4 Argon Hits OpenRouter, Leading Multiple Benchmarks",
+        },
+        description: {
+          zh: "AutomationBench 51.3%、LVBench 91.7%，并以 68% 并列 CWE-bench v1 第一，可经 Google AI Studio 和 Google Cloud 调用。",
+          en: "It scores 51.3% on AutomationBench, 91.7% on LVBench and ties first at 68% on CWE-bench v1.",
+        },
+      },
+      {
+        title: {
+          zh: "面壁智能开源 MiniCPM-V 4.7，3GB 内存端侧流畅运行",
+          en: "ModelBest Open-Sources MiniCPM-V 4.7, Runs on 3GB On-Device",
+        },
+        description: {
+          zh: "含 35B-A3B 和 1B 两个版本，称其为全球首个可在端侧无损流畅运行的开源 MoE 多模态大模型。",
+          en: "The 35B-A3B and 1B variants are billed as the first open MoE multimodal model to run smoothly and losslessly on-device.",
+        },
+      },
+      {
+        title: {
+          zh: "Liquid AI 发布 LFM2.5-24B-A2B 端侧推理模型",
+          en: "Liquid AI Ships LFM2.5-24B-A2B for Edge Inference",
+        },
+        description: {
+          zh: "开源权重模型，总参数 24B、每 token 激活 2B，定位端侧快速智能体。",
+          en: "The open-weight model has 24B total params and 2B active per token, built for fast on-device agents.",
+        },
+      },
+      {
+        title: {
+          zh: "Apple 发布 7 英寸智能音箱 HomeView",
+          en: "Apple Unveils HomeView, a 7-Inch Smart Speaker",
+        },
+        description: {
+          zh: "配 7 英寸 Liquid Retina 屏、搭载 Siri AI，集娱乐、FaceTime、家庭监控与语音自动化于一体，299 美元起 11 月 13 日发售。",
+          en: "With a 7-inch Liquid Retina display and Siri AI, it blends entertainment, FaceTime, monitoring and automation at $299 from Nov 13.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA RTX Spark 笔记本 10 月 16 日上市",
+          en: "NVIDIA's RTX Spark Laptops Launch Oct 16",
+        },
+        description: {
+          zh: "软件生态就绪，搭载最高 128GB 统一内存和 1 petaflop AI 算力。",
+          en: "The ecosystem is ready, with up to 128GB unified memory and 1 petaflop of AI compute.",
+        },
+      },
+      {
+        title: {
+          zh: "千问发布 AI 眼镜 N1/N1 Pro 及首款 AI 耳夹式耳机",
+          en: "Qwen Launches AI Glasses N1/N1 Pro and Clip-On AI Earbuds",
+        },
+        description: {
+          zh: "三款硬件新品现货开售，眼镜到手价 2218 元起、耳机 1099 元起。",
+          en: "All three ship now, with glasses from 2,218 yuan and earbuds from 1,099 yuan.",
+        },
+      },
+      {
+        title: {
+          zh: "Character.AI 申请 Chapter 11，2000 万美元售资产给 Disney",
+          en: "Character.AI Files Chapter 11, Sells Assets to Disney for $20M",
+        },
+        description: {
+          zh: "成立五年后破产，资产与负债在 5000 万至 1 亿美元之间，向 Disney 出售部分资产及技术非独占永久许可，无买家则关停。",
+          en: "Five years in, it lists $50-100M in assets/liabilities and sells some assets plus a non-exclusive perpetual license, facing shutdown without a buyer.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 办公室发现窃密录音装置，涉事员工被捕",
+          en: "OpenAI Finds Covert Recording Device; Employee Arrested",
+        },
+        description: {
+          zh: "用自家模型分析确认系一名员工几天前安放，已移交 FBI 并致其被捕、员工被解雇，暂无权重/源码/客户数据外泄迹象。",
+          en: "Its own models traced the device to an employee; the FBI arrested and OpenAI fired them, with no sign of weight/source/customer data leaking.",
+        },
+      },
+      {
+        title: {
+          zh: "XBOW 借 GPT-5.6 Sol 获 Chrome 25 万美元漏洞赏金",
+          en: "XBOW Wins a $250k Chrome Bounty With GPT-5.6 Sol",
+        },
+        description: {
+          zh: "6 天内以 4 万美元算力构建出 Chrome 全链漏洞，这是 Google 第二次就 Chrome 全链发赏、也是 2026 年新规则下的首次。",
+          en: "It built a full-chain Chrome exploit in six days on $40k of compute — Google's second such bounty and the first under 2026 rules.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 强化蒸馏攻击防御，token 提取量降 10-100 倍",
+          en: "Anthropic Hardens Distillation Defenses; Token Extraction Down 10-100x",
+        },
+        description: {
+          zh: "新防御方法使蒸馏者获取的数据减少约 90% 到 99%。",
+          en: "The new methods cut the data distillers obtain by roughly 90-99%.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 自研版本控制系统 Scion，五个月迁移 monorepo",
+          en: "Anthropic Built Scion and Migrated Its Monorepo Off Git in Five Months",
+        },
+        description: {
+          zh: "因 Claude 使日均合并代码量从 5 月约 2500 增至 9 月超 3 万，自研系统完全替代 git，并推出代码评审工具 Antique。",
+          en: "With Claude driving daily merges from ~2,500 to 30,000+, it replaced git entirely and shipped a review tool, Antique.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-14-hot",
+    date: "2026-10-14",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-14",
+      en: "🔥 Hot Topics · Oct 14, 2026",
+    },
+    summary: {
+      zh: "今日政经、社会与民生话题交织。反腐方面：重庆市原市长黄奇帆被查，10 月 14 日重庆市委常委会举行会议通报其涉嫌严重违纪违法、接受中央纪委国家监委纪律审查和监察调查，与会同志一致表示坚决拥护党中央决定；中央纪委国家监委对中科院科技创新发展中心原党委副书记、主任伍浩立案审查调查，其存在对抗组织审查、违规收礼、权钱交易等问题，被给予双开处分、涉嫌犯罪问题移送检察机关；四川省成都市人大常委会原党组书记、主任包惠被开除党籍、取消待遇、收缴违纪违法所得并移送检察机关。经济与产业方面：比亚迪、吉利、奇瑞及中国汽车工业协会同日发布声明，欢迎并支持中欧贸易投资磋商机制第二次例会成果，认为双方就混动及电动汽车贸易问题达成共识将稳定产业预期、避免摩擦升级；农业农村部调度显示全国秋粮收获进入高峰期、进度过六成（黄淮海和西北过七成），秋粮有望再获丰收。国际与外交方面：外交部发言人毛宁回应日方所谓中方代表团访问俄日争议岛屿'绝不能接受'的说法，称中方一贯主张世界反法西斯战争的胜利成果应当得到尊重和维护；境外诈骗开始把来电伪装成本地号码，北京警方打掉一个为境外电诈团伙提供语音转接服务的黑灰产团伙，已有北京女子因点击陌生链接、开启屏幕共享被盗刷 4 万余元。社会与法治方面：贵州六盘水'楼上百日宴楼下婚宴'事件中百日宴孩子母亲发文道歉；10 月 14 日辽宁盘锦市双台子区发生 3.4 级地震、震源深度 10 公里；一名因大量差评涌入不堪压力跳河轻生的摊主留下遗书称'以为能陪孩子长大'、避雷视频成压垮她的最后一根稻草，涉事顾客称只是分享真实体验、警方已介入；'教师耻辱合影'事件调查处理完成，四川凉山雷波县教育和体育局局长李某某已被调离岗位；中国裁判文书网公布案例，广州越秀区一 10 岁女童上书法课时被代课男老师多次触碰头面部，父亲索赔 20.4 万元，法院两审认定未超出师生互动合理限度、不构成侵权、终审驳回全部诉讼请求；10 月 12 日云南香格里拉虎跳峡景区一楚雄州籍男子翻越防护围栏跳江，多部门仍在搜救。监管与消费方面：市场监管总局公布 7 起涉导向违法广告典型案例，其中'舒客'牙贴广告因含'跟 8 个男人接吻'等违背社会良好风尚内容被罚 50 万元；苏州市姑苏区市场监管局已受理'鲍师傅小贝底部现使用痕迹儿童创可贴'投诉；网传'禁止教师用AI备课'系误读，多地 AI 使用规范的核心是鼓励 AI 辅助教学、严禁 AI 直接替代教师授课备课；佛山复星禅诚医院回应'患者送 1.9 元汽水后投诉员工违规收礼'，称涉事人员已当场拒绝、因搬运无法推却但未饮用、不构成违反医德医风、当事人已报警；75 元一斤的卤牛肉被曝实为猪肉。天气方面：国家气候中心通报 2026 年 9 月已正式形成一次超强厄尔尼诺事件、预计 11 月前后达峰值、为有监测以来最强，专家称其增加我国冬季偏暖可能性但并非'暖冬保证书'、仍可能出现强寒潮。文体娱乐方面：第 39 届金鸡奖最佳女主角网传提名名单曝光，80 后首位威尼斯影后辛芷蕾是热门人选；徐良北京演唱会一名幸运歌迷获赠一对共 4.83 克的足金小象项链并附鉴定证书；肖战巡回演唱会南京站代拍市场提前升温，看台加价 2000 至 5000 元、内场加价 6000 至 8000 元，部分商家称五位数内部票也难保证。生活趣闻与科普方面：'红果短剧降智'冲上热搜，专家称密集反转持续刺激多巴胺致其储备透支、产生'变笨'感但并非真的智商下降；山东一毕业生母亲为农田施肥购买 50 斤羊粪误填其已毕业大学地址、包裹在大学驿站签收超 20 天；秋天建议多吃柚子（含水量近 90%、维生素 C 比橙子高）；山东济宁男子停车场偶遇车牌仅差一字母且同款的两台车；女子体检后牢记医嘱多查几遍、主动定点探查，最终锁定 6 毫米结节确诊早期乳腺癌、手术顺利；25 岁小伙腹部到双腿静脉几乎全线栓塞、随时可能致命肺栓塞，经手术取出大量血栓恢复良好。",
+      en: "Politics, economy, society and livelihood dominated today. Anti-corruption: former Chongqing mayor Huang Qifan is under investigation, with the city's Party Standing Committee meeting on Oct 14 to relay his suspected serious disciplinary and legal violations and backing the central decisions; the CCDI placed Wu Hao, former party secretary and director of the CAS science-innovation center, under review for obstructing review, illegal gifts and power-for-money deals, expelling him from the Party and public office and referring suspected crimes to prosecutors; and Bao Hui, former party secretary and director of the Chengdu People's Congress Standing Committee, was expelled from the Party with benefits canceled and illegal gains seized. Economy and industry: BYD, Geely, Chery and the China Association of Automobile Manufacturers issued same-day statements welcoming the second meeting of the China-EU trade and investment consultation mechanism, saying consensus on hybrid and EV trade will stabilize expectations and prevent escalation; and the agriculture ministry says the national autumn harvest is in its peak with over 60% done. Diplomacy: spokesperson Mao Ning responded to Japan's rejection of a Chinese delegation's visit to the disputed Russia-Japan islands, saying China holds that the fruits of the World Anti-Fascist War's victory must be respected. Fraud and society: overseas scammers now spoof local caller IDs, with Beijing police breaking up a voice-relay gray-market gang and a Beijing woman losing over 40,000 yuan after opening screen sharing; a Guizhou mother apologized over the 'baby banquet above a wedding banquet' incident; a magnitude-3.4 quake hit Panjin, Liaoning on Oct 14; a snack-stall owner who jumped into a river under a flood of bad reviews left a note saying she thought she'd watch her kids grow up, with the customer saying they only shared a real experience and police investigating; the 'teacher humiliation photo' case concluded with the Leibo education bureau chief reassigned; a Guangzhou court dismissed a father's 204,000-yuan suit over a substitute male teacher touching his 10-year-old daughter's head/face, finding it within reasonable teacher-student interaction; and a Yunnan man jumped a railing into the Tiger Leaping Gorge as rescuers continued searching. Regulation and consumption: the market regulator published seven typical cases of illegal advertising, fining Shuke 500,000 yuan for a whitening-strip ad containing 'kissing eight men'; Suzhou's Gusu district accepted a complaint about a used children's bandage under a Bao Shifu pastry; online claims that 'teachers are banned from using AI to prepare lessons' are a misreading, as local rules encourage AI-assisted teaching but bar AI from replacing teachers; Foshan's Chancheng Hospital said an employee who received a 1.9-yuan soda was cleared of ethics violations and has called police; and a '75-yuan-a-jin braised beef' was revealed to be pork. Weather: the climate center says a super-strong El Niño formed in September 2026, may peak around November as the strongest on record, and raises the odds of a mild winter in China but offers no 'warm-winter guarantee,' with strong cold snaps still possible. Culture and entertainment: a leaked Golden Rooster best-actress nominee list has Venice winner Xin Zhilei among favorites; a lucky fan at Xu Liang's Beijing concert received two gold elephant pendants totaling 4.83g with a certificate; and the resale market for Xiao Zhan's Nanjing concert is heating up with 2,000-5,000 yuan markups for stands and 6,000-8,000 for floor seats, with five-figure insider tickets said to be no guarantee. Lifestyle and science: 'Hongguo short-drama dumb-down' trended as experts blamed dopamine depletion from constant twists — a felt dumbing-down, not a real IQ drop; a Shandong graduate's mother sent 50 jin of sheep manure to her already-graduated university by mistake, where it sat over 20 days; eating more pomelo in autumn is recommended; a Jining man found two identical cars whose plates differ by one letter; a woman who rechecked a 6mm nodule on her doctor's advice was diagnosed with early breast cancer and recovered after surgery; and a 25-year-old with near-total venous blockage from abdomen to legs was saved by surgery that removed massive blood clots.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "黄奇帆被查，重庆：坚决拥护党中央决定",
+          en: "Huang Qifan Under Investigation; Chongqing Backs the Decision",
+        },
+        description: {
+          zh: "重庆市原市长黄奇帆涉嫌严重违纪违法、接受中央纪委国家监委纪律审查和监察调查，市委常委会通报并表示坚决拥护。",
+          en: "The former Chongqing mayor faces discipline and supervisory review, with the city's Standing Committee voicing firm support.",
+        },
+      },
+      {
+        title: {
+          zh: "红果短剧 降智",
+          en: "'Short-Drama Dumb-Down' Trends",
+        },
+        description: {
+          zh: "网友称刷高密度反转短剧后脑子迟钝、日均使用超 10 小时；专家称持续刺激多巴胺致储备透支、产生'变笨'感，并非真的智商下降。",
+          en: "Viewers feel foggy after 10+ hours daily; experts cite dopamine depletion causing a felt, not real, dip in focus and comprehension.",
+        },
+      },
+      {
+        title: {
+          zh: "香港发生珠宝大劫案",
+          en: "A Jewelry Heist in Hong Kong",
+        },
+        description: {
+          zh: "10 月 14 日下午，一名约 40 岁男子闯入大埔广福道周生生珠宝店抢走一批珠宝后逃跑，警方正追缉。",
+          en: "A man in his 40s robbed a Chow Sang Sang store in Tai Po on Oct 14 afternoon and fled; police are hunting him.",
+        },
+      },
+      {
+        title: {
+          zh: "辽宁盘锦发生 3.4 级地震",
+          en: "A Magnitude-3.4 Quake Hits Panjin, Liaoning",
+        },
+        description: {
+          zh: "10 月 14 日 14 时 6 分在双台子区发生 3.4 级地震，震源深度 10 公里。",
+          en: "The quake struck Shuangtaizi district at 14:06 on Oct 14 at a depth of 10 km.",
+        },
+      },
+      {
+        title: {
+          zh: "比亚迪吉利奇瑞集体发布声明",
+          en: "BYD, Geely and Chery Issue Joint Statements",
+        },
+        description: {
+          zh: "三家车企与中汽协同日欢迎并支持中欧贸易投资磋商机制成果，称就混动与电动汽车贸易达成共识将稳定产业预期、避免摩擦升级。",
+          en: "With CAAM, they welcomed the China-EU consultation outcome, saying EV/hybrid trade consensus stabilizes expectations and avoids escalation.",
+        },
+      },
+      {
+        title: {
+          zh: "今年冬天会更冷还是更暖",
+          en: "Will This Winter Be Colder or Warmer?",
+        },
+        description: {
+          zh: "国家气候中心称 2026 年 9 月已形成超强厄尔尼诺事件、11 月前后或达峰值、为有监测以来最强，专家称偏暖可能性增大但并非'暖冬保证书'。",
+          en: "A record-strong El Niño formed in September and may peak in November; experts see a milder winter likely, but no 'warm-winter guarantee.'",
+        },
+      },
+      {
+        title: {
+          zh: "境外诈骗开始伪装成本地来电了",
+          en: "Overseas Scams Now Spoof Local Caller IDs",
+        },
+        description: {
+          zh: "北京警方打掉一个为境外电诈提供语音转接服务的黑灰产团伙，已有女子因点击陌生链接、开启屏幕共享被盗刷 4 万余元。",
+          en: "Beijing police broke up a voice-relay gang; a woman lost over 40,000 yuan after opening screen sharing via a spoofed call.",
+        },
+      },
+      {
+        title: {
+          zh: "因差评轻生摊主遗书称以为能陪娃长大",
+          en: "Stall Owner's Suicide Note: 'I Thought I'd Watch My Kids Grow Up'",
+        },
+        description: {
+          zh: "摊主胡女士因大量差评涌入不堪压力跳河轻生、留下两个孩子，称避雷视频成压垮她的最后一根稻草，警方已介入。",
+          en: "Owner 'Ms. Hu' jumped into a river under a flood of bad reviews, leaving two children; police are investigating.",
+        },
+      },
+      {
+        title: {
+          zh: "教师耻辱合影事件调查处理已完成",
+          en: "The 'Teacher Humiliation Photo' Case Concluded",
+        },
+        description: {
+          zh: "四川凉山雷波县教育和体育局局长李某某已被调离岗位，凉山州教体局称事件调查处理已完成。",
+          en: "The Leibo education bureau chief was reassigned, and the Liangshan bureau says the review and handling are complete.",
+        },
+      },
+      {
+        title: {
+          zh: "伍浩被双开，包惠被开除党籍",
+          en: "Wu Hao Expelled From Party and Office; Bao Hui Expelled From Party",
+        },
+        description: {
+          zh: "中科院科技创新发展中心原主任伍浩因对抗审查、违规收礼、权钱交易被双开；成都人大常委会原主任包惠被开除党籍并移送检察机关。",
+          en: "The CAS center's ex-director was expelled for obstruction, gifts and power-for-money deals; Chengdu's ex-people's-congress chief was expelled and referred to prosecutors.",
+        },
+      },
+      {
+        title: {
+          zh: "网传'禁止教师用AI备课'系误读",
+          en: "'Teachers Banned From AI Lesson-Prep' Is a Misreading",
+        },
+        description: {
+          zh: "多地 AI 使用规范的核心是鼓励 AI 辅助教学、严禁 AI 直接替代教师授课备课。",
+          en: "Local rules aim to encourage AI-assisted teaching while barring AI from replacing teacher-led instruction.",
+        },
+      },
+      {
+        title: {
+          zh: "舒客广告被罚 50 万",
+          en: "Shuke Fined 500,000 Yuan Over an Ad",
+        },
+        description: {
+          zh: "市场监管总局公布违法广告典型案例，'舒客'牙贴广告含'跟 8 个男人接吻'等违背社会良好风尚内容被罚 50 万元。",
+          en: "The regulator's typical-case list cites a Shuke whitening-strip ad with 'kissing eight men' content, fined 500,000 yuan.",
+        },
+      },
+      {
+        title: {
+          zh: "鲍师傅被投诉小贝底下现创可贴",
+          en: "Bao Shifu Complained Over a Bandage Under a Pastry",
+        },
+        description: {
+          zh: "门店排查未发现相似物、未与消费者就解决方案达成一致，苏州姑苏区市监局已受理。",
+          en: "The store found no similar object and no resolution; Suzhou's Gusu regulator accepted the complaint.",
+        },
+      },
+      {
+        title: {
+          zh: "10 岁女童被男老师摸脸，家长索赔 20 万被驳回",
+          en: "A 10-Year-Old's Family Sought 200k Over a Teacher's Touch; Suit Dismissed",
+        },
+        description: {
+          zh: "广州越秀区书法课代课男老师多次触碰女童头面部，法院两审认定未超出师生互动合理限度、不构成侵权。",
+          en: "A Guangzhou court ruled the substitute calligraphy teacher's head/face touches were within reasonable bounds and dismissed the claim.",
+        },
+      },
+      {
+        title: {
+          zh: "肖战演唱会五位数难包进",
+          en: "Xiao Zhan Tickets: Five-Figure Sums May Not Guarantee Entry",
+        },
+        description: {
+          zh: "南京站代拍升温，看台加价 2000 至 5000 元、内场加价 6000 至 8000 元，部分商家称五位数内部票也难保证。",
+          en: "Scalpers mark stands up 2,000-5,000 yuan and floors 6,000-8,000, with even five-figure 'insider' tickets said to be unreliable.",
+        },
+      },
+      {
+        title: {
+          zh: "女子听劝多查几遍，确诊早期乳腺癌",
+          en: "A Woman's Recheck Leads to an Early Breast-Cancer Diagnosis",
+        },
+        description: {
+          zh: "两家三甲医院初检均未找到 6 毫米结节病灶，她牢记医嘱主动定点探查后确诊，手术顺利恢复良好。",
+          en: "After two top hospitals missed a 6mm nodule, her persistence on her doctor's advice found it; surgery went well.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-13",
     date: "2026-10-13",
     title: {
