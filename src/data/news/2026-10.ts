@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-15",
+    date: "2026-10-15",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-15",
+      en: "🤖 AI HOT Daily · Oct 15, 2026",
+    },
+    summary: {
+      zh: "今日焦点：Gemini 官方宣布 Gemini 4 Argon 已向全球 Google AI Pro 和 Ultra 订阅者开放，该模型此前已在 Gemini 应用中逐步推出、定位为处理复杂任务的前沿模型。模型与产品方面：xAI 发布 speech-to-speech 语音模型 Grok Voice 3.0，在 Artificial Analysis 的 Speech-to-Speech Index 以 86.9 分排名第一、时延低于一秒；Google 公开发布智能体审稿系统 Deep Review，可对复杂技术文档提供反馈与验证，最初面向计算机科学论文、现已扩展到法律、金融等领域；Lovable 推出增长工具，在原有建应用聊天窗口中提供增长计划、广告投放和 SEO 能力，用户设定目标后依据应用上下文生成可执行计划、可连接 Google Ads 和 Meta 账号投放。行业动态：Modal 宣布年化收入突破 10 亿美元并完成 7.5 亿美元 D 轮融资、投后估值 157.5 亿美元，由 Accel 领投；欧盟委员会人工智能办公室正式向 OpenAI 和 Anthropic 发出信息调取请求，调查两家公司前沿模型测试期间的模型越狱及入侵外部真实系统事件——这是《人工智能法案》实施以来对前沿实验室安全事故的首次重要执法考验，最高可罚全球营业额 3%；40 位美国州总检察长介入 Character.AI 破产案，要求保护用户对话数据；Anthropic 开设新加坡办公室并与新加坡政府签署 MOU。安全研究：Johann Rehberger 披露 Visual Studio Copilot 与 SQL Server Management Studio 中的远程代码执行漏洞 CVE-2026-103572，根因是利用文件名末尾多加一个点绕过路径校验，写入 .mcp. 或 settings.VisualStudio 等位置；MIT 团队在 Nature 发表论文，提出一个机器学习后处理层，通过学习现有预报模型的错误并修正其输出，将两周到六周范围的预报准确率翻倍，并在 ECMWF 季节间预报竞赛中获第一名、首次在此时段稳定超过气候学平均值、显著改善洪水与寒潮等极端事件预测，模型开源且低成本。开发实战方面（含 Claude Code 与 OpenAI/LangChain 经验）：Claude Code 的空闲压缩会让 Claude 从摘要而非完整上下文继续，可在 settings 中设置 idleCompaction: false 关闭、并通过 CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS 自定义阈值（默认 200k）；Claude Code 的云端会话在云上独立虚拟机中运行、不在本地电脑上，可离开后继续、用手机发起并多个并行（面向 Pro、Max、Team 及带高级席位的 Enterprise 用户）；OpenAI Core Experimentation 团队分享用 GPT-6 Astra 和 GPT-6.1 Sol 配合 Codex 做代码维护，包括清理无用代码和陈旧实验、修复 flaky 测试；LangChain 详解开源 Agent 框架 Deep Agents 如何用 middleware 做上下文工程、应对长任务中的 context rot。此外，vLLM 推出无需置信头的在线拟合接受估计器，让 EAGLE、MTP 等草稿模型可用 Adaptive Verification；Meta 的 Muse Wonder (Max) 以 +6.4% 净提升进入 Agent Arena 第 12 名。",
+      en: "Today's focus: Gemini announced that Gemini 4 Argon is now open to Google AI Pro and Ultra subscribers worldwide, after a rolling Gemini app rollout, as a frontier model for complex tasks. Models and products: xAI released the speech-to-speech model Grok Voice 3.0, topping Artificial Analysis's Speech-to-Speech Index at 86.9 with sub-second latency; Google publicly launched the agentic review system Deep Review, which gives feedback and verification on complex technical documents, starting with CS papers and now expanding to law and finance; and Lovable added growth tools inside its app-building chat for growth plans, ad buying and SEO, generating executable plans from app context and connecting Google Ads and Meta accounts. Industry: Modal crossed $1B in annualized revenue and closed a $750M Series D at a $15.75B post-money valuation led by Accel; the European Commission's AI Office sent information requests to OpenAI and Anthropic over frontier-model jailbreaks and intrusions into real external systems during testing — the first major enforcement test of the AI Act for frontier-lab safety incidents, with fines up to 3% of global turnover; 40 US state attorneys general intervened in the Character.AI bankruptcy to protect user chat data; and Anthropic opened a Singapore office and signed an MOU with the Singapore government. Security research: Johann Rehberger disclosed a remote-code-execution flaw (CVE-2026-103572) in Visual Studio Copilot and SQL Server Management Studio, caused by bypassing path validation by appending a trailing dot to filenames to write into locations like .mcp. or settings.VisualStudio; and an MIT team published in Nature a machine-learning post-processing layer that learns existing forecasts' errors and corrects their output to double accuracy in the two-to-six-week range, winning the ECMWF subseasonal competition, steadily beating climatology for the first time and improving flood and cold-snap prediction, with an open-source, low-cost model. Engineering (Claude Code, OpenAI and LangChain): Claude Code's idle compaction resumes from a summary rather than full context, so users can set idleCompaction: false and tune CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS (default 200k); Claude Code cloud sessions run on cloud VMs, not the local machine, can be resumed after leaving, and be started from a phone and run in parallel (Pro, Max, Team and Enterprise with premium seats); OpenAI's Core Experimentation team shared how GPT-6 Astra and GPT-6.1 Sol with Codex maintain large codebases, including clearing dead code and stale experiments and fixing flaky tests; and LangChain detailed how its open-source Deep Agents framework does context engineering via middleware to fight context rot on long tasks. Also: vLLM introduced a confidence-head-free online acceptance estimator enabling Adaptive Verification for draft models like EAGLE and MTP, and Meta's Muse Wonder (Max) entered Agent Arena at #12 with a +6.4% net gain.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Gemini 4 Argon 向全球 Google AI Pro 和 Ultra 订阅者开放",
+          en: "Gemini 4 Argon Opens to Google AI Pro and Ultra Subscribers",
+        },
+        description: {
+          zh: "该模型此前已在 Gemini 应用中逐步推出，定位为处理复杂任务的前沿模型。",
+          en: "After a rolling Gemini app rollout, it is now a frontier model for complex tasks available to Pro and Ultra subscribers.",
+        },
+      },
+      {
+        title: {
+          zh: "xAI 发布 Grok Voice 3.0 语音模型",
+          en: "xAI Releases Grok Voice 3.0",
+        },
+        description: {
+          zh: "speech-to-speech 模型在 Artificial Analysis 的 Speech-to-Speech Index 以 86.9 分排名第一，时延低于一秒。",
+          en: "The speech-to-speech model tops Artificial Analysis's index at 86.9 with sub-second latency.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布智能体审稿系统 Deep Review",
+          en: "Google Launches the Deep Review Agentic System",
+        },
+        description: {
+          zh: "可对复杂技术文档提供反馈与验证，最初面向计算机科学论文，现已扩展到法律、金融等领域。",
+          en: "It reviews and verifies complex technical docs, starting with CS papers and expanding to law and finance.",
+        },
+      },
+      {
+        title: {
+          zh: "Lovable 从同一聊天窗口帮你投广告和做 SEO",
+          en: "Lovable Adds Ad Buying and SEO in the Same Chat",
+        },
+        description: {
+          zh: "增长工具依应用上下文生成可执行计划，可连接 Google Ads 和 Meta 账号投放。",
+          en: "Growth tools generate executable plans from app context and connect Google Ads and Meta accounts.",
+        },
+      },
+      {
+        title: {
+          zh: "Modal 年化收入破 10 亿美元，完成 7.5 亿美元 D 轮",
+          en: "Modal Hits $1B ARR, Closes a $750M Series D",
+        },
+        description: {
+          zh: "投后估值 157.5 亿美元，由 Accel 领投，Kleiner Perkins 及现有投资方跟投。",
+          en: "The post-money valuation is $15.75B, led by Accel with Kleiner Perkins and existing investors.",
+        },
+      },
+      {
+        title: {
+          zh: "欧盟就模型越狱事件调查 OpenAI 和 Anthropic",
+          en: "EU Probes OpenAI and Anthropic Over Model Jailbreaks",
+        },
+        description: {
+          zh: "调查前沿模型测试期间的越狱及入侵外部真实系统事件，是《人工智能法案》实施以来的首次重要执法考验，最高可罚全球营业额 3%。",
+          en: "The first major AI Act enforcement test covers test-time jailbreaks and intrusions, with fines up to 3% of global turnover.",
+        },
+      },
+      {
+        title: {
+          zh: "40 位总检察长介入 Character.AI 破产案",
+          en: "40 State AGs Intervene in the Character.AI Bankruptcy",
+        },
+        description: {
+          zh: "要求保护用户对话数据，延续前一日 Character.AI 申请 Chapter 11 破产的进展。",
+          en: "They demand protection of user chat data, continuing the Chapter 11 case filed the prior day.",
+        },
+      },
+      {
+        title: {
+          zh: "VS Copilot 与 SSMS 远程代码执行漏洞",
+          en: "An RCE Flaw in VS Copilot and SSMS",
+        },
+        description: {
+          zh: "CVE-2026-103572 的根因是文件名末尾多加一个点绕过路径校验，写入 .mcp. 或 settings.VisualStudio 等位置。",
+          en: "CVE-2026-103572 stems from a trailing-dot path-validation bypass writing into .mcp. or settings.VisualStudio.",
+        },
+      },
+      {
+        title: {
+          zh: "MIT 团队用机器学习把 2-6 周天气预报准确率翻倍",
+          en: "MIT Doubles 2-6 Week Forecast Accuracy With ML",
+        },
+        description: {
+          zh: "Nature 论文提出学习并修正预报误差的后处理层，在 ECMWF 季节间预报竞赛获第一，模型开源且低成本。",
+          en: "A Nature paper's post-processing layer learns and corrects forecast errors, winning ECMWF's competition; the model is open-source.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Code 新特性：空闲压缩与云端会话",
+          en: "Claude Code Adds Idle Compaction Controls and Cloud Sessions",
+        },
+        description: {
+          zh: "空闲压缩可从 settings 关闭并自定义阈值（默认 200k）；云端会话在独立虚拟机运行、可手机发起并多任务并行（Pro/Max/Team/Enterprise）。",
+          en: "Idle compaction can be disabled and tuned (default 200k); cloud sessions run on VMs, start from a phone and run in parallel.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 分享用 GPT-6 系列维护大型代码库",
+          en: "OpenAI on Maintaining Large Codebases With GPT-6",
+        },
+        description: {
+          zh: "Core Experimentation 团队用 GPT-6 Astra 和 GPT-6.1 Sol 配合 Codex 做代码维护，包括清理无用代码和陈旧实验、修复 flaky 测试。",
+          en: "Its Core Experimentation team uses GPT-6 Astra/6.1 Sol with Codex to clear dead code and stale experiments and fix flaky tests.",
+        },
+      },
+      {
+        title: {
+          zh: "LangChain 详解 Deep Agents 的上下文工程",
+          en: "LangChain Details Deep Agents Context Engineering",
+        },
+        description: {
+          zh: "开源 Agent 框架 Deep Agents 用 middleware 做上下文工程，应对长任务中的 context rot。",
+          en: "The open-source Deep Agents framework uses middleware to fight context rot on long tasks.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-15-hot",
+    date: "2026-10-15",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-15",
+      en: "🔥 Hot Topics · Oct 15, 2026",
+    },
+    summary: {
+      zh: "今日经济、科技与民生话题密集。财经与全球市场方面：10 月 15 日亚洲股市重挫，韩国 KOSPI 开盘一度跌 5.59%、此后跌 6.49%，三星电子跌 7.44%、SK 海力士跌超 9%，韩国交易所启动 SIDECAR 机制暂停 KOSDAQ 程序化卖盘；日经 225 低开 1.28%；A 股三大指数大幅低开，沪指跌 1.50%、深成指跌 2.40%、创业板指跌 3.13%，算力硬件、半导体芯片板块跌幅居前；因美国 9 月 CPI 同比涨 3.7% 高于预期、市场加大美联储加息押注致美元走强，国际金银价大幅跳水，现货黄金盘中跌破 4100 美元/盎司、银价跌超 4%（截至发稿金价重回关口、银价翻红）。科技与航天方面：10 月 15 日早 8 点后 DeepSeek 网页和 APP 显示'服务器暂时不可用'、对话与 DeepSeek V4.1 Flash API 服务部分中断、官方排查中；23 年前的今天杨利伟首次飞天、飞行 21 小时 23 分钟、经历 26 秒低频共振生死考验后安全返回，使中国成为世界第三个独立送人上太空的国家，神舟二十三号乘组如今仍在中国空间站值守。政策与民生方面：人社部 10 月 10 日宣布全面推进'退休预服务'和'退休一件事'提速办，今后办退休只需一张身份证（以身份证为便捷入口、系统共享数据减少重复填表），'退休一件事'已实现全国全覆盖；2027 年全国硕士研究生招生考试 15 日开始正式报名至 10 月 24 日；国家药监局发布《牙膏分类目录》将牙膏功效分为八个类别、明确宣称用语范围；文旅部等部门要求大型演出实行强实名制背景下，'黄牛'衍生出代拍及利用 15% 非公开内部票源加价售卖'录入票'的灰色产业链，有黄牛称某明星南京演唱会内场票网传 25 万系炒作、实际约 5 万元；首项陪诊服务国家标准将于 2026 年 11 月 1 日正式实施；中央依法治国办启动领导干部依法办事情况法治督察，组建 8 个督察组分别赴河北、黑龙江、福建、山东、西藏、陕西、青海、新疆及新疆生产建设兵团开展为期 10 天的实地督察；商务部等七部门联合印发通知纠治电商平台'自动跟价'等无序竞争，各大电商双 11 大促普遍取消跨店满减与凑单福利、改为官方立减等简单规则。社会与法治方面：中国科学院等机构团队 10 月 14 日晚在《自然》发文，确认在福建政和发现侏罗纪新鸟类'杨源𬸚𬦦'，其前肢短小、足部有特化第二趾、适应陆地奔跑、不具备飞行能力，打破了早期鸟类演化以适应飞行为主导的传统认知；贵阳花溪区一名 1 岁男童误食被注射老鼠药的鸡蛋中毒、留下脑萎缩等严重后遗症，一名胡姓邻居投案自首、供述投毒本为毒杀黄鼠狼；10 月 6 日凌晨 G5899 次列车一疑似醉酒男旅客在座位上排便，涉事男子已被处以行政拘留；四川省委常委会 10 月 14 日召开会议通报中央纪委国家监委对包惠的处理决定并表示坚决拥护，包惠系成都市人大常委会原党组书记、主任。生活与观点方面：随着 AI 短剧兴起，部分人脸授权平台一张脸标价 500 元，但授权协议暗藏风险、用户可能被限制低价转授权甚至无法轻易注销；腾讯低调上线内嵌于微信生态的'绿泡泡短剧'小程序、直接对标日活接近 2 亿的红果短剧；因肖战演唱会定档南京（10 月 23 日至 25 日），周边酒店房价大涨、部分涨超 10 倍（如 179 元涨至 2193 元）；'我家那闺女2026'等综艺嘉宾被网友贴' NPD'（自恋型人格障碍）标签引发讨论，分析认为单纯用'NPD'概括是偷懒、抹杀了人的复杂性；不少人感慨回老家有种没被 AI'污染'过的美，而回到职场却要面对动辄要求 AI 赋能、降本增效的安排；此外还有'烧烤店张贴谢绝蜜雪冰城入内'、'官方通报女子高铁开免提电话 1 小时'等社会热议，以及'该不该征糖税'的政策讨论（全球已有近 120 个国家对含糖饮料征税，研究预测若不行动到 2050 年约 60% 成年人将超重或肥胖）。蒙古国草原火灾经 7 天 6 夜连续奋战成功堵截境外火 330 余公里、全线未烧入我国境内。",
+      en: "Economy, tech and livelihood dominated today. Markets: Asian equities tumbled on Oct 15 — KOSPI fell as much as 6.49% (Samsung -7.44%, SK Hynix -9%+) with the KRX triggering a SIDECAR halt on KOSDAQ program selling, and Nikkei 225 opened down 1.28%. A-shares opened sharply lower (Shanghai -1.50%, Shenzhen -2.40%, ChiNext -3.13%), led down by compute-hardware and chip stocks. After US September CPI came in hot at 3.7% year-over-year, boosting Fed hike bets and the dollar, gold and silver plunged — spot gold briefly broke below $4,100/oz and silver fell over 4% before recovering. Tech and space: DeepSeek's website and app showed 'server temporarily unavailable' after 8 a.m. Beijing time on Oct 15, with chat and the DeepSeek V4.1 Flash API partly down and the team investigating; and 23 years after Yang Liwei's first flight — 21 hours 23 minutes that included a 26-second low-frequency resonance scare — made China the third nation to independently send a human to space, the Shenzhou-23 crew remains aboard the Chinese space station. Policy and livelihood: the MOHRSS said on Oct 10 it is advancing 'pre-retirement service' and one-stop retirement processing so that only an ID card is needed as a convenient entry point (with shared data cutting repeat forms), already nationwide; 2027 master's exam registration opened Oct 15 through Oct 24; the NMPA issued a toothpaste classification catalog splitting efficacy into eight categories; amid strict real-name ticketing rules, scalpers have spawned proxy-buying and 'registration tickets' from a 15% non-public quota, with one scalper saying a viral 250,000-yuan Nanjing floor ticket was hype and really about 50,000; the first national standard for medical accompaniment services takes effect Nov 1, 2026; the Central Commission for Law-Based Governance launched eight inspection teams for 10-day field inspections across Hebei, Heilongjiang, Fujian, Shandong, Tibet, Shaanxi, Qinghai, Xinjiang and the XPCC; and seven ministries moved to curb 'auto price-matching' as platforms drop complex cross-store discounts for simple official markdowns this Double 11. Society and law: a CAS-led team published in Nature on Oct 14 confirming a new Jurassic bird, 'Yangyuan yuyu,' found in Zhenghe, Fujian — short forelimbs and a specialized second toe suited to running, not flying — upending the view that early bird evolution was flight-led; a 1-year-old boy in Guiyang was poisoned by rat-poison-injected eggs, suffering brain atrophy, with a neighbor surnamed Hu surrendering and saying the poison was meant for weasels; a man who defecated in his seat on train G5899 on Oct 6 was administratively detained; and the Sichuan Party Standing Committee backed the CCDI's handling of Bao Hui, former party secretary and director of the Chengdu People's Congress Standing Committee. Lifestyle and commentary: as AI short dramas rise, some face-licensing platforms price a face at 500 yuan but bury risky terms capping cheap sublicensing and making withdrawal hard; Tencent quietly launched an in-WeChat 'Lü Pao Pao' short-drama mini-program to take on ByteDance's ~200M-DAU Hongguo; Xiao Zhan's Nanjing concerts (Oct 23-25) drove nearby hotel rates up over 10x (179 to 2,193 yuan); and netizens diagnosing variety-show guests with 'NPD' drew pushback that the label is lazy and erases complexity, alongside nostalgia that home feels 'unpolluted by AI' versus AI-driven cost-cutting at work, a barbecue shop's 'no Mixue' sign, a train speakerphone dispute, and debate over a sugar tax (nearly 120 countries tax sugary drinks; without action ~60% of adults could be overweight by 2050). A Mongolian grassland fire was contained after seven days and nights, holding back 330+ km of flames at the border with none crossing into China.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "以后办退休只需一张身份证",
+          en: "Retirement Processing Now Needs Only an ID Card",
+        },
+        description: {
+          zh: "人社部推进'退休预服务'和'退休一件事'提速办，以身份证为便捷入口、系统共享数据减少重复填表，已全国全覆盖。",
+          en: "The MOHRSS pushes 'pre-retirement' and one-stop processing, using the ID as an entry point and shared data to cut repeat forms nationwide.",
+        },
+      },
+      {
+        title: {
+          zh: "中国发现侏罗纪新鸟",
+          en: "China Finds a New Jurassic Bird",
+        },
+        description: {
+          zh: "中科院等团队在福建政和确认新鸟类'杨源𬸚𬦦'，适应陆地奔跑、不具备飞行能力，打破早期鸟类演化以飞行为主导的认知。",
+          en: "'Yangyuan yuyu' from Zhenghe, Fujian, was a runner with no flight ability, upending the flight-led view of early bird evolution.",
+        },
+      },
+      {
+        title: {
+          zh: "日韩股市跌到刹不住车",
+          en: "Japanese and Korean Stocks Plummet",
+        },
+        description: {
+          zh: "韩国 KOSPI 一度跌 6.49%、三星电子跌 7.44%、SK 海力士跌超 9%，交易所启动 SIDECAR 机制；日经 225 低开 1.28%。",
+          en: "KOSPI slid up to 6.49% with Samsung -7.44% and SK Hynix -9%+, triggering a SIDECAR halt; Nikkei 225 opened down 1.28%.",
+        },
+      },
+      {
+        title: {
+          zh: "A 股大跌，创业板指跌超 3%",
+          en: "A-Shares Slide, ChiNext Down Over 3%",
+        },
+        description: {
+          zh: "沪指低开 1.50%、深成指低开 2.40%、创业板指低开 3.13%，算力硬件、半导体芯片等板块跌幅居前。",
+          en: "The Shanghai Composite opened -1.50%, Shenzhen -2.40% and ChiNext -3.13%, led down by compute hardware and chips.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 崩了",
+          en: "DeepSeek Goes Down",
+        },
+        description: {
+          zh: "10 月 15 日早 8 点后网页和 APP 显示'服务器暂时不可用'，对话与 DeepSeek V4.1 Flash API 服务部分中断、官方排查中。",
+          en: "After 8 a.m. its site and app showed 'server temporarily unavailable,' with chat and the V4.1 Flash API partly down as it investigated.",
+        },
+      },
+      {
+        title: {
+          zh: "黄金白银断崖式大跌",
+          en: "Gold and Silver Plunge",
+        },
+        description: {
+          zh: "美国 9 月 CPI 同比涨 3.7% 高于预期、美联储加息押注升温致美元走强，现货黄金盘中跌破 4100 美元/盎司、银价跌超 4%。",
+          en: "Hot 3.7% September CPI boosted Fed hike bets and the dollar, pushing spot gold below $4,100/oz and silver down over 4%.",
+        },
+      },
+      {
+        title: {
+          zh: "7 天 6 夜堵截蒙古国火灾 330 余公里",
+          en: "330+ km of Mongolian Wildfire Held Back Over 7 Days",
+        },
+        description: {
+          zh: "10 月 8 日蒙古国境内草原火灾威胁内蒙古边境一线，多方力量连续奋战成功堵截境外火 330 余公里、全线未烧入我国境内。",
+          en: "A blaze threatening Inner Mongolia's border since Oct 8 was contained after seven days and nights, with no flames crossing into China.",
+        },
+      },
+      {
+        title: {
+          zh: "包惠被开除党籍，四川省委表态",
+          en: "Bao Hui Expelled From the Party; Sichuan Backs the Decision",
+        },
+        description: {
+          zh: "四川省委常委会 10 月 14 日通报中央纪委国家监委对成都市人大常委会原党组书记、主任包惠的处理决定并一致表示坚决拥护。",
+          en: "The Sichuan Standing Committee relayed and backed the CCDI's handling of the former Chengdu People's Congress chief.",
+        },
+      },
+      {
+        title: {
+          zh: "1 张脸标价 500 块，小心人脸授权陷阱",
+          en: "A Face for 500 Yuan — Beware Face-Licensing Traps",
+        },
+        description: {
+          zh: "AI 短剧兴起后人脸授权平台暗藏风险，用户可能被限制低价转授权甚至无法轻易注销，签约前应看清范围、价格限制及撤回机制。",
+          en: "As AI shorts rise, licensing terms may cap cheap sublicensing and block easy withdrawal; users should check scope and exit terms first.",
+        },
+      },
+      {
+        title: {
+          zh: "1 岁男童误食毒鸡蛋中毒后邻居自首",
+          en: "Toddler Poisoned by Tainted Eggs; Neighbor Surrenders",
+        },
+        description: {
+          zh: "贵阳花溪区一名 1 岁男童误食被注射老鼠药的鸡蛋中毒、留下脑萎缩后遗症，一名胡姓邻居投案自首、称投毒本为毒杀黄鼠狼。",
+          en: "A Guiyang toddler suffered brain atrophy; neighbor Hu surrendered, saying the poison was meant for weasels.",
+        },
+      },
+      {
+        title: {
+          zh: "2027 考研 15 日开始报名",
+          en: "2027 Master's Exam Registration Opens Oct 15",
+        },
+        description: {
+          zh: "正式报名将持续至 10 月 24 日、每天 9:00—22:00 开放系统，预报名阶段已填报缴费者无需重复报名。",
+          en: "Registration runs through Oct 24, 9 a.m. to 10 p.m. daily; those who already paid in the pre-registration phase need not repeat.",
+        },
+      },
+      {
+        title: {
+          zh: "买牙膏避坑必看：牙膏分类目录发布",
+          en: "Toothpaste Buying Guide: A New Classification Catalog",
+        },
+        description: {
+          zh: "国家药监局将牙膏功效分为八个类别、明确宣称用语范围，为牙膏管理提供技术指引。",
+          en: "The NMPA split toothpaste efficacy into eight categories and defined claim language to guide regulation.",
+        },
+      },
+      {
+        title: {
+          zh: "今年双 11 告别算数题",
+          en: "This Double 11 Bids Farewell to Mental Math",
+        },
+        description: {
+          zh: "商务部等七部门纠治平台'自动跟价'等无序竞争，各大平台普遍取消跨店满减与凑单、改为官方立减等简单规则。",
+          en: "Seven ministries curbed 'auto price-matching' as platforms drop cross-store discounts for simple official markdowns.",
+        },
+      },
+      {
+        title: {
+          zh: "酒店因肖战演唱会从 179 涨到 2193 元",
+          en: "Hotel Rates Jump From 179 to 2,193 Yuan for a Concert",
+        },
+        description: {
+          zh: "肖战演唱会定档南京致周边酒店部分涨超 10 倍，市监局回应称价格由市场供需调节、明码标价属正常。",
+          en: "Xiao Zhan's Nanjing shows pushed some nearby rooms up over 10x; the market regulator called transparent market-based pricing normal.",
+        },
+      },
+      {
+        title: {
+          zh: "'看病请人陪'有国家标准了",
+          en: "Medical Accompaniment Gets a National Standard",
+        },
+        description: {
+          zh: "首项陪诊服务国家标准将于 2026 年 11 月 1 日正式实施，规范日益兴起的'临时家人'行业。",
+          en: "The first national standard for medical accompaniment takes effect Nov 1, 2026, regulating the growing 'temporary family' sector.",
+        },
+      },
+      {
+        title: {
+          zh: "这 21 小时 23 分，载入史册",
+          en: "Those 21 Hours and 23 Minutes Made History",
+        },
+        description: {
+          zh: "23 年前的今天杨利伟首次飞天、历经 26 秒低频共振生死考验后安全返回，使中国成为世界第三个独立送人上太空的国家，神舟二十三号乘组仍值守空间站。",
+          en: "Twenty-three years on, Yang Liwei's flight that survived a 26-second resonance scare made China the third spacefaring nation; the Shenzhou-23 crew is still aboard.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-14",
     date: "2026-10-14",
     title: {
