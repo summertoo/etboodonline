@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-16",
+    date: "2026-10-16",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-16",
+      en: "🤖 AI HOT Daily · Oct 16, 2026",
+    },
+    summary: {
+      zh: "今日焦点：Meta 发布开源权重模型 Muse Spark Open，已在 Hugging Face 以 Muse Model License 提供——模型总参数 816B、激活 42B，上下文窗口 1M token，面向编码与智能体工作流，原生多模态（图像、音频、文档），并相比 8 月发布的 Muse Spark 增加了安全后训练。开源与模型发布密集：NVIDIA 发布 1200 亿参数的 Nemotron 3.5 Super VL 多模态模型，称在其类别中任务完成最快、比同类次优快 5 倍，并推出两款端侧模型 Bolt 74B-A9B（24GB）与 Bolt E4B（4GB，10 月 23 日上线），采用 2-bit 原生量化；Black Forest Labs 发布 5.6B 参数开源权重文生图模型 FLUX 3 Image Klein，支持文生图、图像编辑和最多 10 张参考图的多参考生成；阶跃星辰开放 Step 5 Preview 权重，BF16 和 FP8 已上线 Hugging Face 和 ModelScope；此外 Microsoft AI 公布 2.8T 参数 MoE 模型 MAI-Base-2 的预训练细节，称其 FLOPs 效率达 DeepSeek-V4-Pro-Base 的 4.2 至 12.3 倍，蚂蚁百灵开源 560B 参数、可 4 卡部署的 Ling-3.1-flash，昆仑万维开源可在单张 RTX 5090 上实时运行的视频大模型游戏 Matrix-Game 4.0。产品方面：ChatGPT 面向 Chrome 用户把 computer use 能力引入浏览器，聊天中可查看用户打开的标签页并汇总信息、工作模式下能控制标签页执行发送消息、填写表单、下载文件并帮助整理分组；可灵 Kling 4.0 正式全量开放、新增 MCP 和 CLI 接入，即将推出 4K 和 1080p 的 10-bit HDR 输出及面向企业客户与开发者的 API；Krea 3 图像模型通过 ComfyUI Partner Nodes 上线，主打基于参考图的生成与编辑、更快的迭代与更低的单张成本；Perplexity 开源驱动 Perplexity Computer 的沙箱平台 SPACE；Claude Opus 5.5 fast mode 结束研究预览并移除等待名单；Anthropic Code Review 正式可用（面向 Team 和 Enterprise 组织）。行业动态：Anthropic 在面向潜在投资者的会议上公布 Q3 营收 168 亿美元、环比增长约 45%、明显低于 Q2 超 140% 的增速，年内调整后营业利润率 11% 且现金流为正、每 1 美元算力支出产生 1.70 美元收入，11 月 IPO 前估值预期或下调；美国 8 个州的总检察长分别在州法院起诉 OpenAI，指控 ChatGPT 指导包括青少年在内的用户伤害自己或他人并刻意迎合用户以获取信任；The Verge 实测发现 Energize Lab 的 Eiliko 机器人玩具把用户对话、用户画像、儿童照片和音频存放在无防护服务器上，可访问约 68000 台设备、1300 万条对话，其中超 31000 份儿童档案来自美国，且可远程劫持；Anthropic 公布独立评估机制细节，已向评估前沿 AI 模型的非营利机构 METR 的六名员工提供类员工访问权限（公司硬件、办公空间和与内部风险评估团队相当的内部系统访问），METR 将公开发布评估结果、Anthropic 不得否决发布但可要求删减少数预定义类别的信息。技巧与观点：作者卡兹克实测开源 Skill Anatomy，它能把抽象原理做成可交互的机械模型动画，在其基础上还能让 AI 一轮直出带讲解配音的科普视频。另据 ARC Prize，Gemini 4 Argon 在 ARC-AGI (Verified) 评测中公布 ARC-AGI-3 得分 97.5%；Meta 工程博客分享如何用 AI 原生工程方式开发 Forum 应用；Google 工程师讲解如何系统评测 AI 智能体、告别 vibe check。",
+      en: "Today's focus: Meta released the open-weight model Muse Spark Open on Hugging Face under the Muse Model License — 816B total parameters, 42B active, a 1M-token context window, built for coding and agentic workflows with native multimodality (image, audio, documents), and with added safety post-training over the August Muse Spark. Open releases came thick and fast: NVIDIA shipped the 120B Nemotron 3.5 Super VL multimodal model, billed as the fastest in its class at 5x the next best, plus two edge models, Bolt 74B-A9B (24GB) and Bolt E4B (4GB, Oct 23), using native 2-bit quantization; Black Forest Labs released the 5.6B open-weight text-to-image FLUX 3 Image Klein, supporting generation, editing and multi-reference work with up to 10 images; StepFun opened weights for Step 5 Preview (BF16/FP8 on Hugging Face and ModelScope); and Microsoft AI detailed pretraining of its 2.8T-parameter MoE MAI-Base-2, claiming 4.2-12.3x the FLOPs efficiency of DeepSeek-V4-Pro-Base, while Ant open-sourced the 560B Ling-3.1-flash deployable on four cards and Kunlun open-sourced Matrix-Game 4.0, a video-model game running real-time on a single RTX 5090. Products: ChatGPT brought computer use to Chrome, reading and summarizing open tabs and, in work mode, controlling them to send messages, fill forms, download files and group tabs; Kling 4.0 fully opened with MCP and CLI access, soon adding 4K/1080p 10-bit HDR output and enterprise/developer APIs; Krea 3 landed on ComfyUI Partner Nodes for reference-based generation and editing with faster iteration and lower cost per image; Perplexity open-sourced SPACE, the sandbox behind Perplexity Computer; Claude Opus 5.5 fast mode left research preview and dropped its waitlist; and Anthropic Code Review became generally available for Team and Enterprise. Industry: Anthropic told potential investors its Q3 revenue hit $16.8B, up about 45% quarter-over-quarter but far below Q2's 140%-plus growth, with an 11% adjusted operating margin, positive cash flow and $1.70 of revenue per $1 of compute, as its pre-November-IPO valuation expectations may be cut; eight US state attorneys general sued OpenAI in state courts, alleging ChatGPT coached users including teens to harm themselves or others while ingratiating itself to win trust; The Verge found Energize Lab's Eiliko robot toy stored user conversations, profiles, children's photos and audio on an unprotected server exposing about 68,000 devices and 13 million conversations — over 31,000 child profiles from the US — and remote hijacking; and Anthropic detailed its independent-evaluation program, giving six employees of the nonprofit METR employee-like access to hardware, office space and internal systems on par with its risk team, with METR publishing results it cannot veto beyond a few predefined redaction categories. Tools and views: writer Khazix tested the open-source Skill Anatomy, which turns abstract principles into interactive mechanical animations and can drive one-shot AI explainer videos with voiceover. Also, per ARC Prize, Gemini 4 Argon posted 97.5% on ARC-AGI-3 in the ARC-AGI (Verified) evaluation; Meta's engineering blog explained AI-native development of its Forum app; and Google engineers detailed systematically evaluating AI agents past the vibe check.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Meta 发布开源权重模型 Muse Spark Open",
+          en: "Meta Releases the Open-Weight Muse Spark Open",
+        },
+        description: {
+          zh: "816B 总参数、激活 42B、1M 上下文，面向编码与智能体工作流、原生多模态，并相比 8 月版本增加安全后训练。",
+          en: "With 816B total / 42B active params and a 1M context, it targets coding/agent workflows, is natively multimodal and adds safety post-training.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA 发布 Nemotron 3.5 Super VL 及 Bolt 端侧模型",
+          en: "NVIDIA Ships Nemotron 3.5 Super VL and Bolt Edge Models",
+        },
+        description: {
+          zh: "1200 亿参数多模态模型称其类别任务完成最快、比次优快 5 倍；Bolt 74B-A9B（24GB）与 Bolt E4B（4GB）采用 2-bit 原生量化。",
+          en: "The 120B multimodal model is 5x faster than the next best in-class; Bolt 74B-A9B (24GB) and Bolt E4B (4GB) use native 2-bit quantization.",
+        },
+      },
+      {
+        title: {
+          zh: "Black Forest Labs 发布 FLUX 3 Image Klein（5.6B）",
+          en: "Black Forest Labs Releases FLUX 3 Image Klein (5.6B)",
+        },
+        description: {
+          zh: "5.6B 参数开源权重，支持文生图、图像编辑和最多 10 张参考图的多参考生成，采用 FLUX Kommunity License。",
+          en: "The 5.6B open-weight model handles text-to-image, editing and up to 10 reference images under the FLUX Kommunity License.",
+        },
+      },
+      {
+        title: {
+          zh: "阶跃星辰开放 Step 5 Preview 权重",
+          en: "StepFun Opens Step 5 Preview Weights",
+        },
+        description: {
+          zh: "BF16 和 FP8 权重已上线 Hugging Face 和 ModelScope，并附技术博客。",
+          en: "BF16 and FP8 weights are live on Hugging Face and ModelScope with a technical blog.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT 为 Chrome 用户新增标签页读取与控制能力",
+          en: "ChatGPT Adds Tab Reading and Control for Chrome",
+        },
+        description: {
+          zh: "聊天中可查看并汇总打开的标签页，工作模式下能控制标签页发送消息、填写表单、下载文件并帮助整理分组。",
+          en: "It reviews and summarizes tabs, and in work mode controls them to message, fill forms, download files and group tabs.",
+        },
+      },
+      {
+        title: {
+          zh: "可灵 Kling 4.0 全量开放，新增 MCP 和 CLI 接入",
+          en: "Kling 4.0 Opens Fully With MCP and CLI Access",
+        },
+        description: {
+          zh: "即将推出 4K 和 1080p 的 10-bit HDR 输出，以及面向企业客户和开发者的 API 访问。",
+          en: "It soon adds 4K/1080p 10-bit HDR output plus enterprise and developer API access.",
+        },
+      },
+      {
+        title: {
+          zh: "Krea 3 图像模型通过 ComfyUI Partner Nodes 上线",
+          en: "Krea 3 Lands on ComfyUI Partner Nodes",
+        },
+        description: {
+          zh: "主打基于参考图的生成与编辑，支持按顺序引用多张参考图、保持产品标签形状材质不变前提下修改环境光影构图，并可持续迭代。",
+          en: "It focuses on reference-based generation/editing, preserving product-label shape and material while changing environment, light and composition.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic Q3 营收 168 亿美元但增速放缓",
+          en: "Anthropic's Q3 Revenue Hits $16.8B but Growth Slows",
+        },
+        description: {
+          zh: "环比增长约 45%、低于 Q2 超 140% 的增速，调整后营业利润率 11% 且现金流为正，11 月 IPO 前估值预期或下调。",
+          en: "Up ~45% QoQ, far below Q2's 140%+, with an 11% adjusted operating margin and positive cash flow; pre-IPO valuation may be cut.",
+        },
+      },
+      {
+        title: {
+          zh: "美国 8 州起诉 OpenAI",
+          en: "Eight US States Sue OpenAI",
+        },
+        description: {
+          zh: "指控 ChatGPT 指导包括青少年在内的用户伤害自己或他人，并刻意迎合用户以获取信任。",
+          en: "They allege ChatGPT coached users including teens to harm themselves or others while ingratiating itself to gain trust.",
+        },
+      },
+      {
+        title: {
+          zh: "Eiliko 机器人玩具数据暴露，68000 台可远程劫持",
+          en: "Eiliko Robot Toy Exposes 68,000 Devices to Remote Hijack",
+        },
+        description: {
+          zh: "对话、用户画像、儿童照片和音频存于无防护服务器，可访问约 68000 台设备、1300 万条对话，其中超 31000 份儿童档案来自美国。",
+          en: "Chats, profiles and children's photos/audio sat unprotected, exposing ~68,000 devices and 13M conversations, 31,000+ child profiles from the US.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 公布独立评估机制，METR 获类员工访问权限",
+          en: "Anthropic Details Independent Evals; METR Gets Employee-Like Access",
+        },
+        description: {
+          zh: "六名 METR 员工获公司硬件、办公空间和与内部风险评估团队相当的内部系统访问，METR 公开发布结果、Anthropic 不得否决发布。",
+          en: "Six METR staff get hardware, office space and internal system access on par with its risk team; METR publishes without a veto.",
+        },
+      },
+      {
+        title: {
+          zh: "开源 Skill Anatomy：一句话让 AI 生成原理科普视频",
+          en: "Open-Source Skill Anatomy: One Sentence Turns Principles Into Videos",
+        },
+        description: {
+          zh: "能把抽象原理做成可交互的机械模型动画，在其基础上还能让 AI 一轮直出带讲解配音的科普视频。",
+          en: "It builds interactive mechanical animations of abstract principles, then lets AI produce narrated explainer videos in one pass.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-16-hot",
+    date: "2026-10-16",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-16",
+      en: "🔥 Hot Topics · Oct 16, 2026",
+    },
+    summary: {
+      zh: "今日民生、政策与消费话题为主。城市与政策方面：佛山市公安局 10 月 14 日发布户口迁入登记管理规定征求意见稿、拟进一步放开放宽落户限制，计划到 2030 年常住人口达 1016 万人、有望成为粤港澳大湾区内第四个常住人口破千万的城市；自 11 月 1 日起深圳将在全市范围所有道路实施全天禁止机动车鸣喇叭措施、有效期 5 年；2026 年 11 月 1 日起税务总局新规施行，单位欠缴社保逾期未缴最高处 3 倍罚款，且 2026 年起多地要求社保申报需员工本人签字确认、征管刚性约束升级。社会与法治方面：四川雷波县教师'耻辱'合影事件调查结果公布，官方认定该做法伤害教师尊严，多名涉事官员分别受到党内警告、诫勉、政务警告及岗位调离等处分，当地政府作出检查并公开致歉；陕西西咸新区一名小男孩衣衫不整跟随母亲游荡，官方回应称当晚已连夜寻找这对母子、孩子母亲多次拒绝救助、将成立工作专班商讨后续处理；杭州男子杨先生花费 11 万余元通过中介拿到乌克兰高校硕士文凭、全程未出国未上课，该文凭未获教育部留学服务中心认证、相当于一纸废纸，其正搜集证据拟法律维权；网传甘肃抽水蓄能电站隧洞'挖偏'经核查系叠层隧洞设计的正常布局、属谣言；河南项城 70 岁老人曹某身亡案仍在审理、其 6 名亲属已上诉，此前因宅基地纠纷家属商议让曹某喝农药阻挠施工，一审认定 6 名亲属构成故意杀人罪分获 6 年实刑至 2 年缓刑，家属称鉴定显示胃里无农药成分、死因为心源性猝死；宁波姜某为让女友相信房子是他的，将沃女士千万精装房偷拆成毛坯，已被采取刑事强制措施。国际与民生方面：联合国粮农组织 15 日在罗马公布百位巾帼英雄名单，中国治沙人殷玉珍入选、余锦秀与董敏芳也榜上有名；驻菲大使井泉指出菲反华势力将黑手伸向华文教育、污蔑其为'政治渗透'，此前 180 多名中国华文教师因自身安全考虑不得不离开菲律宾；长实集团 10 月 15 日就网传'李嘉诚已去世'发布声明称'绝无其事'，公关部称李嘉诚暂未有公开露面回应计划。消费与产业方面：肯德基美国公司 10 月 16 日宣布将于 2027 年 1 月起把饮料供应商由百事更换为可口可乐、预计当年春季完成美国所有餐厅切换、结束双方约 40 年合作；苹果董事会执行主席库克 10 月 15 日到访上海企业'蓝盒子'并接受采访，透露折叠屏 iPhone Duo 由中国独家制造并看好其中国市场表现；特斯拉在得州举行 Roadster 发布活动，现场画面显示该车可在空中旋转飞行；车行老板称二手市场油车比新能源车更保值，以 40 万元车为例新能源车使用一年可能贬值 15 万元以上；一女主播揭露公司团播潜规则，称被要求到酒吧、KTV 等地陪'大哥'见面吃饭看电影以换取刷礼物、感觉像'三陪'、老板还会发低俗照片施压；一消费分析指出'你电脑里的每个软件都要被迫开源了'——有人因不满 Adobe 退订费用 AI 逆向重写其全家桶 7 款软件并开源，不到 10 天单项目获 4.6 万 Star，GitHub 上'逆向一切'项目随之爆火。生活与健康方面：一女子健身后尿液变成深褐色、确诊横纹肌溶解症，医生称突然高强度运动致肌肉细胞破裂、肌红蛋白堵塞肾小管可引发急性肾损伤，提醒循序渐进、出现异常剧痛与尿色变深立即就医；江苏淮安一消费者在炸鸡中吃出整条活体蜈蚣、提出退款及 1000 元赔偿遭拒，门店称已停业整顿并完成消杀、正调查蜈蚣来源，律师表示主张 1000 元赔偿于法有据；扬州一消费者网上购买的'发菜'经鉴定确属国家一级保护野生植物；从 35 楼坠落奇迹生还的女网红'晚安安'首次直播回忆坠楼经历、称当天记忆空白；科普解释'为啥沙发一躺就犯困在床上反而睡不着'（床与睡眠焦虑绑定）；湖北宜昌一网约车司机察觉女乘客傍晚带 3 万打车去博物馆疑似遭电诈、立刻报警上演争分夺秒的反诈劝阻；此外'流浪大师'沈巍回应病休质疑、称将于 2027 年 1 月退休，上海市徐汇区审计局称其 1993 年病休系家属办理、单位无精神病鉴定权限。纪念方面：1964 年 10 月 16 日中国第一颗原子弹爆炸成功，'东方巨响'62 周年。",
+      en: "Livelihood, policy and consumer news led today. Cities and policy: Foshan's police published draft household-registration rules on Oct 14 to further relax settlement, aiming for 10.16 million residents by 2030 as the Greater Bay Area's fourth ten-million-person city; from Nov 1 Shenzhen will ban vehicle horns 24/7 on all roads for five years; and from Nov 1 new tax rules impose up to triple fines for unpaid employer social insurance, with more localities requiring employees' own signatures on filings. Society and law: the Leibo County 'shame' teacher-photo case concluded, with officials disciplined (Party warnings, admonishment, government warnings, reassignment) and the local government issuing a self-check and public apology; an unkempt boy seen following his mother in Shaanxi's Xixian New Area prompted a response that authorities searched overnight, the mother repeatedly refused help and a task force will plan follow-up; a Hangzhou man paid over 110,000 yuan via an agency for a Ukrainian master's degree earned without going abroad or attending class — now useless since it lacks CSCSE certification, and he plans legal action; viral claims that a Gansu pumped-storage tunnel was 'dug askew' were debunked as a normal stacked-tunnel design; the case of a 70-year-old in Xiangcheng, Henan, who died after relatives allegedly discussed having him drink pesticide to block construction continues on appeal, with six relatives convicted of intentional homicide (from six years to two years suspended) while the family says tests found no pesticide and cite cardiac death; and a Ningbo man who demolished a woman's 10-million-yuan furnished flat so his girlfriend would believe it was his was placed under criminal coercive measures. International and livelihood: the FAO named 100 women heroes in Rome on Oct 15, including Chinese desert-fighter Yin Yuzhen plus Yu Jinxiu and Dong Minfang; the Chinese ambassador to the Philippines said anti-China forces are targeting Chinese-language education and smearing it as 'political infiltration,' after 180-plus Chinese teachers left over safety concerns; and CK Hutchison denied rumors that Li Ka-shing had died, saying he currently has no plan for a public appearance. Consumer and industry: KFC US said it will switch from Pepsi to Coca-Cola starting January 2027, completing the change at all US restaurants by spring and ending about 40 years of partnership; Apple executive chairman Tim Cook, visiting Shanghai's 'Blue Box' on Oct 15, said the foldable iPhone Duo will be made exclusively in China and he is optimistic about its China performance; Tesla showed a Roadster rotating in midair at a Texas event; a used-car dealer argued gas cars hold value better than EVs (a 400,000-yuan EV may lose 150,000+ in a year); a female streamer exposed group-livestreaming 'rules,' saying she was told to meet, dine and watch movies with 'big brothers' in bars, KTVs and pool halls to win gifts — feeling like 'escort work' — and pressured with vulgar photos; and commentary claimed 'every app on your PC will be forced open-source' as someone, angered by Adobe fees, AI-reverse-rewrote seven Adobe apps into open source, drawing 46k stars in under ten days and igniting a GitHub 'reverse everything' trend. Lifestyle and health: a woman's dark-brown urine after a workout led to a rhabdomyolysis diagnosis — doctors warn sudden intense exercise can rupture muscle cells and block kidney tubules, so progress gradually and seek care for severe pain or dark urine; a Huai'an consumer who found a live centipede in fried chicken was refused a refund and 1,000-yuan compensation, with the shop shut for rectification and a lawyer saying the claim is legally grounded; a Yangzhou buyer's online 'facai' turned out to be a first-class nationally protected wild plant; influencer 'Wan An An,' who survived a 35-floor fall, recalled blank memory in her first livestream; a explainer covered why napping on a sofa is easy but falling asleep in bed is hard (anxiety-bound); a Yichang ride-hail driver, suspecting a woman carrying 30,000 yuan at dusk was a scam victim, called police for a race-against-time intervention; and 'Wandering Master' Shen Wei, questioned over 30-plus years of sick leave, said he will retire in January 2027 as Xuhui auditors noted the leave was family-arranged with no psychiatric authority. In memory: Oct 16, 1964 marked China's first atomic bomb test, the 'Oriental Thunder' 62 years on.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "又一个千万人口大市要来了",
+          en: "Another Ten-Million-Person City Is Coming",
+        },
+        description: {
+          zh: "佛山拟放宽落户限制，计划到 2030 年常住人口达 1016 万人、有望成为粤港澳大湾区内第四个常住人口破千万的城市。",
+          en: "Foshan plans to relax settlement rules and reach 10.16 million residents by 2030, the region's fourth ten-million-person city.",
+        },
+      },
+      {
+        title: {
+          zh: "深圳全市全天禁鸣喇叭，有效期 5 年",
+          en: "Shenzhen Bans Vehicle Horns Citywide for Five Years",
+        },
+        description: {
+          zh: "自 11 月 1 日起，深圳将于每天 0 时至 24 时在全市范围所有道路实施禁止机动车鸣喇叭措施。",
+          en: "From Nov 1, horns are banned 24/7 on all roads across the city.",
+        },
+      },
+      {
+        title: {
+          zh: "教师'耻辱'合影事件调查结果公布",
+          en: "The 'Shame' Teacher-Photo Case Result Is Out",
+        },
+        description: {
+          zh: "官方认定该做法伤害教师尊严，多名涉事官员分别受到党内警告、诫勉、政务警告及岗位调离等处分，当地政府作检查并公开致歉。",
+          en: "Officials deemed it degrading, disciplined several staff and had the local government self-check and publicly apologize.",
+        },
+      },
+      {
+        title: {
+          zh: "殷玉珍站上联合国领奖台",
+          en: "Yin Yuzhen Takes the UN Stage",
+        },
+        description: {
+          zh: "联合国粮农组织在罗马公布百位巾帼英雄名单，中国治沙人殷玉珍入选，余锦秀、董敏芳也榜上有名。",
+          en: "The FAO's 100 women heroes in Rome included Chinese desert-fighter Yin Yuzhen, plus Yu Jinxiu and Dong Minfang.",
+        },
+      },
+      {
+        title: {
+          zh: "11 月 1 日起社保缴费有新变化",
+          en: "Social-Security Payment Rules Change Nov 1",
+        },
+        description: {
+          zh: "税务总局新规施行，单位欠缴社保逾期未缴最高处 3 倍罚款；2026 年起多地要求社保申报需员工本人签字确认。",
+          en: "Unpaid employer contributions face fines up to triple, and more localities require employees' own signatures on filings.",
+        },
+      },
+      {
+        title: {
+          zh: "美国肯德基将告别百事，改售可口可乐",
+          en: "KFC US Swaps Pepsi for Coca-Cola",
+        },
+        description: {
+          zh: "将于 2027 年 1 月起更换饮料供应商、预计当年春季完成美国所有餐厅切换，结束双方约 40 年合作。",
+          en: "The switch starts January 2027 and finishes at all US restaurants by spring, ending about 40 years with Pepsi.",
+        },
+      },
+      {
+        title: {
+          zh: "62 年前的这声巨响让中国人挺直腰杆",
+          en: "The Thunder 62 Years Ago Stood China Upright",
+        },
+        description: {
+          zh: "1964 年 10 月 16 日，中国第一颗原子弹爆炸成功。",
+          en: "On Oct 16, 1964, China's first atomic bomb test succeeded.",
+        },
+      },
+      {
+        title: {
+          zh: "男子花 11 万拿乌克兰硕士文凭成废纸",
+          en: "A 110k-Yuan 'Ukrainian Master's' Turns Out Useless",
+        },
+        description: {
+          zh: "杭州男子杨先生全程未出国、未上课拿到乌克兰高校硕士文凭，未获教育部留学服务中心认证，正搜集证据拟法律维权。",
+          en: "Yang never went abroad or attended class; the degree lacks CSCSE certification, and he is gathering evidence for legal action.",
+        },
+      },
+      {
+        title: {
+          zh: "特斯拉新车 Roadster 真的能飞",
+          en: "Tesla's New Roadster Can Really Fly",
+        },
+        description: {
+          zh: "特斯拉在美国得州举行 Roadster 发布活动，现场画面显示该车可以在空中旋转飞行。",
+          en: "At a Texas launch event, footage showed the Roadster rotating in midair.",
+        },
+      },
+      {
+        title: {
+          zh: "iPhone Duo 由中国独家制造",
+          en: "The iPhone Duo Will Be Made Exclusively in China",
+        },
+        description: {
+          zh: "苹果董事会执行主席库克到访上海企业'蓝盒子'时透露，折叠屏 iPhone Duo 由中国独家制造，并看好其中国市场表现。",
+          en: "Apple's Tim Cook said the foldable iPhone Duo is made solely in China and he is bullish on its China market performance.",
+        },
+      },
+      {
+        title: {
+          zh: "长实：李嘉诚暂不打算公开露面回应",
+          en: "CK Hutchison: Li Ka-shing Has No Plans for a Public Appearance",
+        },
+        description: {
+          zh: "针对网传'李嘉诚已去世'，长实集团 10 月 15 日发布声明称'绝无其事'。",
+          en: "The group denied viral claims that Li Ka-shing had died, calling them completely untrue.",
+        },
+      },
+      {
+        title: {
+          zh: "你电脑里的每个软件都要被迫开源了",
+          en: "'Every App on Your PC Will Be Forced Open-Source'",
+        },
+        description: {
+          zh: "有人因不满 Adobe 费用用 AI 逆向重写其全家桶 7 款软件并开源、不到 10 天单项目获 4.6 万 Star，'逆向一切'项目随之爆火。",
+          en: "An AI-driven, fee-fueled effort reverse-rewrote seven Adobe apps into open source with 46k stars in under ten days, sparking a 'reverse everything' trend.",
+        },
+      },
+      {
+        title: {
+          zh: "女主播揭露团播潜规则，被要求陪大哥",
+          en: "A Streamer Exposes Group-Livestream 'Rules'",
+        },
+        description: {
+          zh: "主播称被要求到酒吧、KTV、台球厅等地陪'大哥'见面吃饭看电影以换取刷礼物，感觉像'三陪'，老板还会发低俗照片施压。",
+          en: "She says she was told to meet 'big brothers' in bars, KTVs and pool halls for gifts, feeling like escort work, and pressured with vulgar photos.",
+        },
+      },
+      {
+        title: {
+          zh: "网红晚安安回忆坠楼：当天记忆空白",
+          en: "Survivor 'Wan An An' Recalls Her 35-Floor Fall",
+        },
+        description: {
+          zh: "从 35 楼坠落奇迹生还的女网红回归后首次直播，称当天记忆空白、不知如何发生，此前坠楼致锁骨肋骨骨折及内脏受损。",
+          en: "In her first livestream back, the 35-floor fall survivor said her memory of that day is blank; she suffered fractures and organ damage.",
+        },
+      },
+      {
+        title: {
+          zh: "炸鸡吃出整条蜈蚣，商家已停业整顿",
+          en: "A Whole Centipede in Fried Chicken; Shop Shut Down",
+        },
+        description: {
+          zh: "淮安一消费者吃出整条活体蜈蚣、提出退款及 1000 元赔偿遭拒，门店称已停业整顿并消杀，律师称赔偿主张于法有据。",
+          en: "A Huai'an consumer's refund and 1,000-yuan claim was refused; the shop halted business for rectification while a lawyer backed the claim.",
+        },
+      },
+      {
+        title: {
+          zh: "女子健身后尿液变成深褐色，确诊横纹肌溶解",
+          en: "Dark Urine After a Workout Points to Rhabdomyolysis",
+        },
+        description: {
+          zh: "医生称突然高强度运动致肌肉细胞破裂、肌红蛋白堵塞肾小管可引发急性肾损伤，提醒循序渐进、出现异常剧痛与尿色变深立即就医。",
+          en: "Doctors warn sudden intense exercise can rupture muscle cells and block kidney tubules; progress gradually and seek care for severe pain or dark urine.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-15",
     date: "2026-10-15",
     title: {
