@@ -2,6 +2,186 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-18",
+    date: "2026-10-18",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-18",
+      en: "🤖 AI HOT Daily · Oct 18, 2026",
+    },
+    summary: {
+      zh: "DeepSeek将V4.1 Flash升级至DeepSeek-V4.1-Flash-1017，多基准成绩提升且API价格不变；DeepSeek开放自研搜索API，索引全球千亿级网页并过滤SEO作弊与低质AIGC；卡兹克实测37999元RTX Spark轻薄本一周实现本地Token自由。",
+      en: "DeepSeek upgrades V4.1 Flash to DeepSeek-V4.1-Flash-1017 with improved multi-benchmark scores at unchanged API pricing; DeepSeek opens its proprietary search API indexing billions of global pages with SEO-scam and low-quality AIGC filtering; Kazik tests the 37,999 yuan RTX Spark ultrabook for local token freedom in a week.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "DeepSeek-V4.1-Flash-1017 发布，多基准成绩提升且 API 价格不变",
+          en: "DeepSeek-V4.1-Flash-1017 Released, Better Benchmarks at Same API Price",
+        },
+        description: {
+          zh: "DeepSeek将V4.1 Flash升级至DeepSeek-V4.1-Flash-1017，网页端与APP同步更新，API调用方式与价格不变，仍用deepseek-flash访问。",
+          en: "DeepSeek upgrades V4.1 Flash to DeepSeek-V4.1-Flash-1017 with web and app updates. API usage and pricing unchanged, still accessed via deepseek-flash.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 开放自研搜索 API",
+          en: "DeepSeek Opens Proprietary Search API",
+        },
+        description: {
+          zh: "底层由AI原生的DeepSeek搜索引擎提供，每天稳定处理数亿次搜索请求。索引全球千亿级网页、支持多语言，识别机制过滤SEO作弊、GEO操纵和低质AIGC。",
+          en: "Powered by AI-native DeepSeek search engine processing hundreds of millions of queries daily. Indexes billions of global web pages, multilingual, filters SEO scams, GEO manipulation, and low-quality AIGC.",
+        },
+      },
+      {
+        title: {
+          zh: "卡兹克实测37999元RTX Spark轻薄本：一周实现本地Token自由",
+          en: "Kazik Tests 37,999 Yuan RTX Spark Ultrabook: Local Token Freedom in a Week",
+        },
+        description: {
+          zh: "卡兹克实测37999元RTX Spark轻薄本，一周实现本地Token自由，本地运行大模型体验分享。",
+          en: "Kazik's hands-on with the 37,999 yuan RTX Spark ultrabook: local token freedom achieved in a week, sharing local LLM experience.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-18-hot",
+    date: "2026-10-18",
+    title: {
+      zh: "🔥 今日热点 · 2026-10-18",
+      en: "🔥 Hot Topics · Oct 18, 2026",
+    },
+    summary: {
+      zh: "公交转型大车退场，本周我国硬核成果密集上新，92岁崔道植是警界定海神针，司机将女子放进后备箱致其失温死亡，北马诞生2小时03分10秒赛会纪录，演员吴越遭AI假冒带货怒斥，员工仅1人的空壳公司中标3000万项目，人民日报评演唱会门票被炒至25万，机器人出口暴增1220%，AI小海卖惨坑人年轻人造恶小海对轰，重阳节能多对爸妈说心里话，演员招不到黄胖子了。",
+      en: "Bus transformation: large buses retire; China's hardcore achievements roll out this week; 92-year-old Cui Daozhi is police force's rock of stability; driver puts woman in trunk causing hypothermia death; Beijing Marathon sets new record 2:03:10; actress Wu Yue furious at AI fakes selling goods; shell company with 1 employee wins 30M project; People's Daily slams 250K concert tickets; robot exports surge 1220%; AI Xiaohai scams victims as youth create evil Xiaohai to fight back; Double Ninth Day - when did you last tell parents your feelings; actors can't find 'Yellow Fatty' typecast.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "公交转型：大车退场",
+          en: "Bus Transformation: Large Buses Retire",
+        },
+        description: {
+          zh: "公交系统加速转型，大型公交逐步退场，中小型和新能源公交成为主力。",
+          en: "Bus systems accelerate transformation as large buses phase out, with smaller and NEV buses becoming the mainstay.",
+        },
+      },
+      {
+        title: {
+          zh: "本周我国硬核成果密集上新",
+          en: "China's Hardcore Achievements Roll Out This Week",
+        },
+        description: {
+          zh: "本周中国多项硬核科技成果密集上新，涵盖芯片、航天、材料等多个领域，彰显自主创新实力。",
+          en: "China releases multiple hardcore tech achievements this week spanning chips, aerospace, and materials, showcasing independent innovation strength.",
+        },
+      },
+      {
+        title: {
+          zh: "92岁崔道植是警界\"定海神针\"",
+          en: "92-Year-Old Cui Daozhi Is Police Force's 'Stabilizing God'",
+        },
+        description: {
+          zh: "92岁的刑侦专家崔道植凭借精湛技能屡破奇案，被誉为警界定海神针，其传奇经历引发社会致敬。",
+          en: "92-year-old forensic expert Cui Daozhi solves difficult cases with exceptional skills, hailed as the police force's 'stabilizing god' — his legendary career draws public tribute.",
+        },
+      },
+      {
+        title: {
+          zh: "司机将女子放进后备箱致其失温死亡",
+          en: "Driver Puts Woman in Trunk, Causes Hypothermia Death",
+        },
+        description: {
+          zh: "一名司机将女子放入后备箱导致其失温死亡，恶性案件引发对人身安全的广泛关注。",
+          en: "A driver places a woman in a trunk, leading to death by hypothermia — the heinous case sparks widespread concern over personal safety.",
+        },
+      },
+      {
+        title: {
+          zh: "2小时03分10秒！北马诞生新的赛会纪录",
+          en: "2:03:10! Beijing Marathon Sets New Course Record",
+        },
+        description: {
+          zh: "2026北京马拉松诞生新的赛会纪录2小时03分10秒，中国选手创造历史。",
+          en: "2026 Beijing Marathon sets new course record of 2:03:10 as a Chinese athlete writes history.",
+        },
+      },
+      {
+        title: {
+          zh: "演员吴越遭AI假冒带货 凌晨发文怒斥",
+          en: "Actress Wu Yue Furious at AI Fakes Selling Goods",
+        },
+        description: {
+          zh: "演员吴越遭AI技术假冒其形象带货，凌晨发文怒斥，呼吁治理AI深度伪造。",
+          en: "Actress Wu Yue faces AI-generated fakes selling goods using her likeness, posts furious rebuttal at dawn, calls for deepfake regulation.",
+        },
+      },
+      {
+        title: {
+          zh: "员工仅1人的空壳公司中标3000万项目",
+          en: "Shell Company with 1 Employee Wins 30M Project",
+        },
+        description: {
+          zh: "一家员工仅1人的空壳公司中标3000万项目，招投标领域腐败问题再度曝光。",
+          en: "A shell company with only 1 employee wins a 30M project, exposing corruption in the bidding field again.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报评演唱会门票被炒至25万",
+          en: "People's Daily Slams 250K Concert Tickets",
+        },
+        description: {
+          zh: "人民日报批评演唱会门票被炒至25万元，涉及肖战演唱会抢票乱象，大麦和铁路部门已发文回应。",
+          en: "People's Daily criticizes concert tickets inflated to 250K yuan, involving Xiaozhan concert ticket-grabbing chaos. Damai and Railway Dept have responded.",
+        },
+      },
+      {
+        title: {
+          zh: "机器人出口暴增1220%！全球资本涌入",
+          en: "Robot Exports Surge 1220%! Global Capital Floods In",
+        },
+        description: {
+          zh: "中国机器人出口暴增1220%，全球资本加速涌入，机器人产业成为新的经济增长点。",
+          en: "China's robot exports surge 1220% as global capital rushes in — the robotics industry becomes a new economic growth driver.",
+        },
+      },
+      {
+        title: {
+          zh: "AI小海卖惨坑人 年轻人造恶小海对轰",
+          en: "AI Xiaohai Scams Victims as Youth Create Evil Xiaohai to Fight Back",
+        },
+        description: {
+          zh: "AI虚拟形象'小海'通过卖惨骗人，年轻人则造'恶小海'版本进行反击，AI恶作剧对轰引发热议。",
+          en: "AI virtual character 'Xiaohai' scams victims through sob stories, while youth create an 'evil Xiaohai' to counter — the AI prank war sparks debate.",
+        },
+      },
+      {
+        title: {
+          zh: "重阳节能多对爸妈说心里话了",
+          en: "How Long Since You've Told Parents Your Feelings?",
+        },
+        description: {
+          zh: "重阳节提醒人们关注父母，一句朴素的提问'你多久没对爸妈说心里话了'引发广泛共鸣。",
+          en: "Double Ninth Day prompts people to think of parents; the simple question 'when did you last tell parents your feelings?' resonates widely.",
+        },
+      },
+      {
+        title: {
+          zh: "演员招不到\"黄胖子\"了",
+          en: "Actors Can't Find 'Yellow Fatty' Typecast Anymore",
+        },
+        description: {
+          zh: "影视行业反映演员招不到'黄胖子'（肥胖角色）类型，反映健康生活方式和选角标准的变化。",
+          en: "Film industry notes difficulty casting 'Yellow Fatty' (heavyset) roles, reflecting changes in healthy lifestyles and casting standards.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-17",
     date: "2026-10-17",
     title: {
