@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-20",
+    date: "2026-10-20",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-20",
+      en: "🤖 AI HOT Daily · Oct 20, 2026",
+    },
+    summary: {
+      zh: "今日焦点：美国国土安全部依据 2018 年供应链法发布 2026-01 号命令，要求所有联邦文职机构立即停止采购 DeepSeek 及其关联公司产品，并从 IT 系统中移除相关产品——包括使用 DeepSeek 实现开发的第三方产品与服务；同日 DeepSeek V4.1 Flash 1017 发布、在 Artificial Analysis 智能指数得 45 分并列开源模型第二。模型发布密集：MiniMax 发布 M3.1 Flash，推理提速近三倍、用量成本降低 70%，匿名模型 Space Bunny 是其早期版本、曾处理超过 200 万亿 token；蚂蚁 inclusionAI 在 GitHub 开源 Ming-3.0-tts 语音合成模型（0.5B dense 与基于 Ling V3 的 tiny 7.9B 总参数/1.3B 激活两个版本，MIT 协议，权重可在 Hugging Face 和 ModelScope 下载）；OpenAI 发布 MultiLangBench 与 COBOL 迁移评测，称 GPT-6 系列在 COBOL、Fortran、Visual Basic 等低资源编程语言上的构建与迁移能力显著提升，并开源评测套件；fal 联合 Black Forest Labs 发布后训练视频模型 FLUX 3 Max，在第三方 image-to-video 质量评测中并列第一，生成 10 秒 720/768p 视频约需 12 秒，未来三周 75% 折扣、被称为同质量级别最便宜的前沿视频模型；Inception 扩散模型 Mercury 3 上线 OpenRouter，生成速度超 1000 tok/s、支持 1M 上下文、是 Mercury 2.5 的 4 倍，并称在 IFBench、GPQA Diamond 和 SWE-Bench Atlas 上超过 GPT- 系列产品；AWS 发布 TorchNeuron，一个面向 Trainium 的开源原生 PyTorch 后端，以 Apache 2.0 协议开放公开 Beta。产品方面：Claude 推出 Dashboards 和 Motion 并转正 Docs、Slides、Design——Dashboards 可连接数据平台或 CRM、生成随数据变化实时更新的仪表盘（面向所有付费计划），Motion 把报告或图表变成动画讲解短片、以代码方式生成且无视频模型参与、可修改文字数字和节奏后导出 MP4。安全与行业动态：AI 安全公司 Norforge 发现一名黑客用开源 AI 平台 Cairn 编排的智能体入侵了超过 100 个网站，据 Reuters 报道受害者包括 John Deere、SharkNinja 和 Cummins；FBI 称前 OpenAI 工程师涉嫌窃密、其手机中发现名为 Saudi Gov Docs 的文件夹；Disney 拟通过破产程序收购 Character.AI 团队与技术，从而绕开其现有诉讼。工程与观点：Meta 介绍其位于俄亥俄州 New Albany 的吉瓦级超集群 Prometheus，一期已建成并用于训练 Muse 系列基础模型、目标扩展到约 100 万张 GPU；Meta 工程团队介绍数据管道智能体采用的瘦编排器模式——一个约 1300 行的编排器只负责路由和可靠性检查、将 20 多个工作流分派给 14 个上下文隔离的专项子智能体、自身不做任何领域推理；n8n 博客发布教程，讲解如何在一台 NVIDIA DGX Spark（128GB 统一内存）上部署七个本地模型、通过 LiteLLM 单一 OpenAI 兼容端点驱动 n8n 工作流、全程不调用云 API；Microsoft 发文介绍如何用 Project Perception 守护企业内部的 agentic insider。其他：Google ADK 教程演示用流式工具与响应调度构建永不冷场的语音智能体；Numan 分享如何用 LangGraph 和 LangSmith 构建评测优先的 AI 健康教练 Nu；Meta Muse Wonder Full (Max) 登上 Code Arena（WebDev 第 6 名、1726 分）；Grok Bot 支持 iPhone 操作按钮。",
+      en: "Today's focus: the US Department of Homeland Security issued order 2026-01 under the 2018 supply-chain law, requiring all federal civilian agencies to immediately stop buying DeepSeek and affiliate products and remove them from IT systems — including third-party products built with DeepSeek. The same day, DeepSeek V4.1 Flash 1017 launched, scoring 45 on Artificial Analysis's Intelligence Index, tied for second among open models. Model releases came in a burst: MiniMax shipped M3.1 Flash with nearly 3x faster inference and 70% lower usage cost, its anonymous Space Bunny precursor having processed over 200 trillion tokens; Ant's inclusionAI open-sourced Ming-3.0-tts (0.5B dense plus a Ling V3-based tiny at 7.9B total / 1.3B active, MIT-licensed, on Hugging Face and ModelScope); OpenAI released MultiLangBench and a COBOL migration evaluation, saying the GPT-6 family markedly improved building and migrating low-resource languages like COBOL, Fortran and Visual Basic, with an open-sourced eval suite; fal and Black Forest Labs launched the post-trained video model FLUX 3 Max, tied first in third-party image-to-video quality with 10-second 720/768p clips in about 12 seconds, at 75% off for three weeks and billed as the cheapest frontier video model at that quality; Inception's diffusion model Mercury 3 hit OpenRouter at over 1,000 tok/s with 1M context, 4x Mercury 2.5, claiming wins over GPT- on IFBench, GPQA Diamond and SWE-Bench Atlas; and AWS released TorchNeuron, an open-source native PyTorch backend for Trainium, opening a public beta under Apache 2.0. Products: Claude launched Dashboards and Motion in beta and took Docs, Slides and Design to GA — Dashboards connects data platforms or CRMs to build live-updating dashboards on all paid plans, while Motion turns reports and charts into animated explainer shorts generated as code with no video model, editable in text, numbers and pacing and exportable to MP4. Security and industry: AI security firm Norforge found a hacker used agents orchestrated on the open-source Cairn platform to breach more than 100 websites, with Reuters naming John Deere, SharkNinja and Cummins among victims; the FBI said a former OpenAI engineer suspected of espionage had a folder named 'Saudi Gov Docs' on his phone; and Disney plans to buy Character.AI's team and technology through its bankruptcy, sidestepping its lawsuits. Engineering and opinion: Meta detailed Prometheus, its gigawatt-scale supercluster in New Albany, Ohio, whose first phase is complete and training Muse foundation models, targeting about 1 million GPUs; Meta's engineering team described the thin-orchestrator pattern for data-pipeline agents — a roughly 1,300-line orchestrator that only routes and checks reliability, dispatching 20-plus workflows to 14 context-isolated specialized subagents and doing no domain reasoning itself; n8n published a tutorial for running seven local models on one NVIDIA DGX Spark (128GB unified memory) behind a single LiteLLM OpenAI-compatible endpoint, with no cloud API calls; and Microsoft explained using Project Perception to defend against the agentic insider. Also: a Google ADK guide on building voice agents that never go silent with streaming tools and response scheduling; Numan on building its eval-first AI health coach with LangGraph and LangSmith; Meta's Muse Wonder Full (Max) entering Code Arena at #6 in WebDev with 1,726 points; and Grok Bot adding iPhone Action Button support.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "美国国土安全部下令移除 DeepSeek 及基于其开发的产品",
+          en: "DHS Orders Removal of DeepSeek and Products Built on It",
+        },
+        description: {
+          zh: "依据 2018 年供应链法发布 2026-01 号命令，要求所有联邦文职机构立即停止采购并移除相关产品，包括第三方开发的衍生服务。",
+          en: "Under the 2018 supply-chain law, order 2026-01 requires federal civilian agencies to halt purchases and purge related products, including third-party derivatives.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniMax 发布 M3.1 Flash，推理提速近三倍、成本降 70%",
+          en: "MiniMax M3.1 Flash: ~3x Faster, 70% Cheaper",
+        },
+        description: {
+          zh: "匿名模型 Space Bunny 是其早期版本，曾处理超过 200 万亿 token。",
+          en: "Its anonymous precursor, Space Bunny, processed over 200 trillion tokens.",
+        },
+      },
+      {
+        title: {
+          zh: "蚂蚁 inclusionAI 开源 Ming-3.0-tts 语音合成模型",
+          en: "Ant's inclusionAI Open-Sources Ming-3.0-tts",
+        },
+        description: {
+          zh: "含 0.5B dense 与基于 Ling V3 的 tiny（7.9B 总参数、1.3B 激活）两个版本，MIT 协议开源，权重可在 Hugging Face 和 ModelScope 下载。",
+          en: "Two versions — 0.5B dense and a Ling V3-based tiny (7.9B total / 1.3B active) — under MIT, on Hugging Face and ModelScope.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布 MultiLangBench 与 COBOL 迁移评测",
+          en: "OpenAI Releases MultiLangBench and a COBOL Migration Eval",
+        },
+        description: {
+          zh: "称 GPT-6 系列在 COBOL、Fortran、Visual Basic 等低资源编程语言上的构建与迁移能力显著提升，并开源评测套件。",
+          en: "The GPT-6 family markedly improved building and migrating COBOL, Fortran and Visual Basic code, with an open eval suite.",
+        },
+      },
+      {
+        title: {
+          zh: "fal 联合 BFL 发布后训练视频模型 FLUX 3 Max",
+          en: "fal and BFL Launch the Post-Trained FLUX 3 Max",
+        },
+        description: {
+          zh: "在第三方图生视频质量评测中并列第一，10 秒 720/768p 视频约需 12 秒，未来三周 75% 折扣。",
+          en: "Tied first in third-party I2V quality, it makes 10-second 720/768p clips in ~12 seconds and is 75% off for three weeks.",
+        },
+      },
+      {
+        title: {
+          zh: "Inception 扩散模型 Mercury 3 上线 OpenRouter",
+          en: "Inception's Diffusion Model Mercury 3 Hits OpenRouter",
+        },
+        description: {
+          zh: "生成速度超 1000 tok/s、支持 1M 上下文、是 Mercury 2.5 的 4 倍，并称在 IFBench、GPQA Diamond 与 SWE-Bench Atlas 上超过 GPT- 系列产品。",
+          en: "Over 1,000 tok/s with 1M context, 4x Mercury 2.5, claiming wins on IFBench, GPQA Diamond and SWE-Bench Atlas.",
+        },
+      },
+      {
+        title: {
+          zh: "AWS 发布 TorchNeuron：Trainium 的原生 PyTorch 后端",
+          en: "AWS Releases TorchNeuron, a Native PyTorch Backend for Trainium",
+        },
+        description: {
+          zh: "开源后端以 Apache 2.0 协议开放公开 Beta，代码位于 aws-neuron 仓库。",
+          en: "The open-source backend opens a public beta under Apache 2.0 in the aws-neuron repo.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 推出 Dashboards 和 Motion，Docs/Slides/Design 转正",
+          en: "Claude Adds Dashboards and Motion; Docs/Slides/Design Go GA",
+        },
+        description: {
+          zh: "Dashboards 连接数据平台或 CRM 生成实时更新仪表盘（所有付费计划），Motion 以代码生成动画讲解短片、可改文字数字节奏并导出 MP4。",
+          en: "Dashboards builds live dashboards from data platforms/CRMs on all paid plans; Motion code-generates explainer shorts editable and exportable to MP4.",
+        },
+      },
+      {
+        title: {
+          zh: "黑客用 AI 智能体入侵超 100 家网站",
+          en: "A Hacker Used AI Agents to Breach 100+ Sites",
+        },
+        description: {
+          zh: "黑客用开源 AI 平台 Cairn 编排的智能体入侵，受害者包括 John Deere、SharkNinja 和 Cummins。",
+          en: "Agents orchestrated on the open-source Cairn platform hit victims including John Deere, SharkNinja and Cummins.",
+        },
+      },
+      {
+        title: {
+          zh: "Disney 拟通过破产程序收购 Character.AI 团队与技术",
+          en: "Disney May Buy Character.AI's Team and Tech Via Bankruptcy",
+        },
+        description: {
+          zh: "以破产程序收购团队与技术，从而绕开其现有诉讼，延续 Character.AI 申请 Chapter 11 的进展。",
+          en: "Buying through bankruptcy lets Disney sidestep the existing lawsuits, extending the Chapter 11 saga.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 详解 Prometheus 吉瓦级超集群",
+          en: "Meta Details the Prometheus Gigawatt Supercluster",
+        },
+        description: {
+          zh: "位于俄亥俄州 New Albany，一期已建成并用于训练 Muse 系列基础模型，目标扩展到约 100 万张 GPU。",
+          en: "Phase one in New Albany, Ohio is training Muse foundation models, with a target of about 1 million GPUs.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 详解 Thin Orchestrator 模式",
+          en: "Meta Details the Thin Orchestrator Pattern",
+        },
+        description: {
+          zh: "约 1300 行编排器只负责路由与可靠性检查，把 20 多个工作流分派给 14 个上下文隔离的专项子智能体，自身不做领域推理。",
+          en: "A ~1,300-line orchestrator only routes and checks reliability, dispatching 20+ workflows to 14 isolated subagents with no domain reasoning.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-20-hot",
+    date: "2026-10-20",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-20",
+      en: "🔥 Hot Topics · Oct 20, 2026",
+    },
+    summary: {
+      zh: "今日经济数据、公共政策与社会话题为主。经济与市场方面：国家统计局公布前三季度经济数据，国内生产总值 1071071 亿元、按不变价格同比增长 4.6%，分季度看一季度增长 5.0%、二季度 4.3%、三季度 4.5%；国家数据集团有限公司经国务院批准组建、10 月 20 日正式挂牌，总部位于河北雄安新区、由国务院及河北雄安新区管委会与中国电信、中国联通等多方共同出资，位列央企名录第 28 位、央企总数达 100 家，简勤任董事长、陈荣辉任总经理；受国际金价影响黄金饰品价格下调、部分品牌单克售价下跌逾百元，上海部分金店又出现排队买金场景；因 AI 服务器需求吞没全球存储产能、存储芯片价格一年暴涨超 6 倍，一加、iQOO、红米等主打大学生的机型价格大幅上调、集体涨进 5000 至 6000 元价格带；多家头部饮料企业上调出厂及批发渠道价格但终端暂未变动，起因是国际原油价格波动带动 PET 等包材原料大涨；中信银行 60 日涨幅 20.53% 居银行板块首位、自 2022 年以来连涨 5 年，催化剂是高分红。政策与监管方面：工信部等部门就加强汽车产品创新设计和研发测试验证的通知公开征求意见，要求电吸门具备防夹功能、禁止行驶状态下使用'零重力'座椅、可靠性测试验证不低于 3 万公里；国家癌症中心最新分析显示 2024 年全国恶性肿瘤新发约 515.06 万例、死亡约 258.22 万例，发病前五已由消化道肿瘤主导变为肺癌、乳腺癌、甲状腺癌、结直肠癌和肝癌；中央纪委通报中国人保原党委委员、副总裁俞小平违规收受巨额财物、离职后仍敛财，决定开除党籍并移送检察机关，人保集团党委会表示坚决拥护；十四届全国政协原副主任杨小伟受贿案一审宣判，2004 至 2025 年收受财物共 3319 万余元，因如实供述并积极退赃被判处有期徒刑 12 年、罚金 300 万元。社会与安全方面：10 月 20 日天猫双 11 现货开售当晚大量用户反馈淘宝 APP 异常、出现网络异常与优惠金额变化无法购买，后部分用户恢复；电信网络诈骗已进入'线上恋爱+线下取金'新阶段，团伙用 AI 生成虚假人设、以精准包装建立信任、情感操控制造紧迫感、资金转移快速消失三层套路诱导受害人线下买金或取现交付；最强厄尔尼诺预计 2026 年底达峰值、或成观测史最强，NASA 卫星观测发现因信风减弱致浮游植物断粮、赤道太平洋海水由绿变蓝、叶绿素骤降近八成；沈阳公布'6·17'较大道路交通事故调查报告，2025 年 6 月 17 日大东区公交车闯红灯与多车及行人相撞致 6 死 16 伤，认定系驾驶员违规操作及营运单位落实不力所致，肇事司机已被批捕、7 人被移交纪委监委；10 月 20 日钟南山迎来 90 岁生日，出席'南山挑战杯'篮球邀请赛小跑开球，此前曾因心梗植入心脏支架、患高血压超 20 年，仍保持每周运动三次并呼吁老年人做抗阻运动；甘肃白银 27 岁爱心博主秦思雨常年救助流浪动物，感染罕见真菌东方伊蒙菌继发噬血细胞综合征，在 ICU 抢救 22 天后于 18 日离世；凭借 AI 模型仅用一张面部照片即可预测癌症患者死亡风险的研究登上《柳叶刀》，模型基于超 4000 万张面部照片及约 3 万张癌症患者照片训练，高风险人群实际死亡率更高、外貌显老者风险也更高，研究者称旨在辅助治疗决策、仍需大量临床测试。国际方面：菲律宾《马尼拉时报》刊发前总统发言人评论警告，若驱逐中国驻菲大使中方几乎必然对等回应、两国可能降级外交接触，并指出 2025 年中国向菲供应 384 亿美元商品、停止贸易将重创菲律宾经济；特朗普 10 月 19 日受访表示对中国心怀感激、认为中方在乌克兰问题上立场很公允；山西大同 10 月 20 日迎来降雪，红墙白雪氛围感拉满。此外还有'第一次看电视剧记笔记'（《伟大的长征》遵义会议一集掀追剧热）、'王腾展示睡眠戒指并笑称希望雷总放一条生路'、'米粉店老板靠一句泥嚎走红'、'中年男子骑车载白发老人看哭网友'、'王凯感慨很难再有现象级爆剧'、'护士转行上门做饭月入 1 万'、'祖峰头发花白引热议'、'航班延误 4 小时发过期泡面获 2000 元补偿'、'张雪求助后被网友堵门送米'等。",
+      en: "Economic data, public policy and social stories led today. Economy and markets: the statistics bureau reported 107.11 trillion yuan of GDP for the first three quarters, up 4.6% year-over-year, with Q1 at 5.0%, Q2 at 4.3% and Q3 at 4.5%; China Data Group was approved and formally inaugurated on Oct 20, headquartered in Xiong'an and funded by the State Council, the Xiong'an authority plus China Telecom and China Unicom, ranking 28th on the central SOE list — now 100 firms — with Jian Qin as chairman and Chen Ronghui as general manager; gold jewelry prices fell over 100 yuan a gram at some brands on international prices, bringing queues back to Shanghai stores; AI-server demand swallowing global memory output drove storage chip prices up over 6x in a year, pushing student-focused phones from OnePlus, iQOO and Redmi into the 5,000-6,000 yuan band; leading beverage makers raised ex-factory and wholesale prices (retail unchanged for now) as oil-driven PET costs jumped; and China CITIC Bank led the sector with a 20.53% 60-day gain and five straight up years since 2022 on high dividends. Policy and regulation: the MIIT opened consultation on rules for automotive innovation and validation, requiring anti-pinch power doors, banning 'zero-gravity' seats while driving and demanding at least 30,000 km of reliability testing; the national cancer center's analysis found about 5.15 million new malignancies and 2.58 million deaths in 2024, with the top five shifting from digestive tumors to lung, breast, thyroid, colorectal and liver cancers; the CCDI expelled PICC's former vice president Yu Xiaoping for taking huge bribes and profiting after leaving, referring him to prosecutors as PICC's Party committee backed the decision; and former CPPCC official Yang Xiaowei was sentenced to 12 years and a 3M-yuan fine for 33.19M yuan in bribes from 2004-2025, with credit for confessing and returning funds. Society and safety: on the evening of Oct 20, as Tmall's Double 11 in-stock sale opened, many users reported Taobao app errors, network failures and changing discount amounts, though some orders later went through; telecom fraud has entered an 'online romance plus offline gold pickup' phase, with gangs using AI personas in a three-step playbook — polished packaging for trust, emotional manipulation for urgency, then rapid fund transfer — to get victims to buy gold or withdraw cash; the strongest El Niño is expected to peak around end-2026, possibly the strongest on record, and NASA satellites saw the equatorial Pacific turn from green to blue as weakened trade winds starved phytoplankton, cutting chlorophyll nearly 80%; Shenyang published the report on the June 17, 2025 bus crash that killed six and injured 16 after running a red light, blaming driver violations and weak operator controls, with the driver arrested and seven referred to discipline inspectors; Zhong Nanshan marked his 90th birthday on Oct 20 by jogging out to open the 'Nanshan Challenge Cup' basketball game, still exercising three times a week despite a stent after a heart attack and 20-plus years of hypertension, urging resistance training for seniors; and 27-year-old Gansu animal-welfare blogger Qin Siyu, who fed strays daily, died on Oct 18 after 22 days in ICU from a rare Emergomyces orientalis fungal infection that triggered hemophagocytic syndrome. A Lancet study from Massachusetts General Hospital showed an AI model predicting cancer patients' mortality risk from a single facial photo, trained on 40M+ faces and about 30,000 patient photos, with higher-risk and older-looking patients dying more often — intended to aid treatment decisions pending clinical testing. Abroad: a Manila Times op-ed by a former presidential spokesman warned that expelling China's ambassador would almost certainly bring reciprocal steps and lower diplomatic contact, noting China supplied $38.4B of goods to the Philippines in 2025; Trump said on Oct 19 he is grateful to China and considers its stance on Ukraine fair; and Datong, Shanxi saw snow on Oct 20, turning the old city's red walls white. Also trending: note-taking while watching 'The Great Long March,' Wang Teng showing a sleep ring and joking for Lei Jun to 'leave us a way out,' a noodle-shop owner famous for one 'ni hao,' a son carrying his white-haired father on a bike moving netizens, Wang Kai lamenting that phenomenon-level dramas are hard to come by, a nurse earning 10,000 yuan a month cooking at homes, Zu Feng's graying hair, an airline compensating 2,000 yuan over expired instant noodles on a four-hour delay, and Zhang Xue asking well-wishers to send solutions instead of rice.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "前三季度中国经济'成绩单'来了",
+          en: "China's First-Three-Quarters GDP Report Is In",
+        },
+        description: {
+          zh: "前三季度国内生产总值 1071071 亿元、同比增长 4.6%，一季度 5.0%、二季度 4.3%、三季度 4.5%。",
+          en: "GDP reached 107.11 trillion yuan, up 4.6% y/y, with quarterly growth of 5.0%, 4.3% and 4.5%.",
+        },
+      },
+      {
+        title: {
+          zh: "国家癌症中心公布发病前五癌症",
+          en: "Top Five Cancers in China Revealed",
+        },
+        description: {
+          zh: "2024 年全国恶性肿瘤新发约 515.06 万例、死亡约 258.22 万例，前五变为肺癌、乳腺癌、甲状腺癌、结直肠癌和肝癌。",
+          en: "2024 saw about 5.15M new cases and 2.58M deaths; the top five are now lung, breast, thyroid, colorectal and liver cancers.",
+        },
+      },
+      {
+        title: {
+          zh: "淘宝崩了",
+          en: "Taobao Goes Down",
+        },
+        description: {
+          zh: "双 11 现货开售当晚大量用户反馈页面网络异常、付款时优惠金额变化无法购买，后部分用户恢复、仍有卡顿反馈。",
+          en: "As Double 11 stock sales opened, users hit network errors and shifting discounts; some recovered, while others still saw lag.",
+        },
+      },
+      {
+        title: {
+          zh: "菲媒：若驱逐中国大使中方必对等回应",
+          en: "Manila Times: Expelling China's Envoy Would Bring Reciprocity",
+        },
+        description: {
+          zh: "菲前总统发言人撰文警告两国可能降级外交接触，并指出 2025 年中国向菲供应 384 亿美元商品、停止贸易将重创菲律宾经济。",
+          en: "A former spokesman warned of lowered diplomatic contact, noting China supplied $38.4B of goods in 2025 and a halt would batter the economy.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普：中方在乌问题上立场很公允",
+          en: "Trump: China's Stance on Ukraine Is Fair",
+        },
+        description: {
+          zh: "特朗普 10 月 19 日受访表示对中国心怀感激、认为中方在乌克兰问题上立场很公允、未过多参与此事。",
+          en: "Trump said he is grateful to China and sees its Ukraine position as fair, with limited involvement.",
+        },
+      },
+      {
+        title: {
+          zh: "最强厄尔尼诺：赤道太平洋由绿变蓝",
+          en: "Strongest El Niño Turns the Equatorial Pacific Blue",
+        },
+        description: {
+          zh: "预计 2026 年底达峰值、或成观测史最强；NASA 卫星发现信风减弱致浮游植物断粮、叶绿素骤降近八成、渔场承压。",
+          en: "Peaking around end-2026 as possibly the strongest on record, it starved phytoplankton as trade winds weakened, cutting chlorophyll nearly 80%.",
+        },
+      },
+      {
+        title: {
+          zh: "'完美恋人'背后的陷阱",
+          en: "The Trap Behind a 'Perfect Lover'",
+        },
+        description: {
+          zh: "电诈进入'线上恋爱+线下取金'新阶段，团伙用 AI 生成虚假人设，以精准包装、情感操控、资金转移三层套路诱导线下买金或取现。",
+          en: "Fraud now pairs AI-generated personas online with offline gold or cash handoffs, using packaging, emotional manipulation and rapid transfer.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 凭人脸照片预测癌症患者死亡风险",
+          en: "AI Predicts Cancer Patients' Mortality From a Face Photo",
+        },
+        description: {
+          zh: "《柳叶刀》研究基于超 4000 万张面部照片及约 3 万张癌症患者照片训练，高风险人群实际死亡率更高，研究者称旨在辅助治疗决策、仍需大量临床测试。",
+          en: "A Lancet study trained on 40M+ faces and ~30,000 patient photos found higher actual mortality in high-risk groups; it aims to aid treatment decisions.",
+        },
+      },
+      {
+        title: {
+          zh: "工信部：禁止车辆行驶时用零重力座椅",
+          en: "MIIT Bans 'Zero-Gravity' Seats While Driving",
+        },
+        description: {
+          zh: "征求意见稿要求电吸门须具备防夹功能、禁止行驶状态下使用'零重力'座椅，且可靠性测试验证不低于 3 万公里。",
+          en: "The draft requires anti-pinch power doors, bans zero-gravity seating in motion and demands at least 30,000 km of reliability validation.",
+        },
+      },
+      {
+        title: {
+          zh: "学生机直逼 5000 元",
+          en: "Student Phones Near 5,000 Yuan",
+        },
+        description: {
+          zh: "AI 服务器需求吞没全球存储产能、存储芯片一年暴涨超 6 倍，一加、iQOO、红米等大学生机型集体涨进 5000 至 6000 元价格带。",
+          en: "AI-server demand pushed storage prices up over 6x in a year, lifting student phones from OnePlus, iQOO and Redmi into 5,000-6,000 yuan.",
+        },
+      },
+      {
+        title: {
+          zh: "100 家！最新央企名录公布，国家数据集团挂牌",
+          en: "Central SOEs Hit 100 as China Data Group Is Inaugurated",
+        },
+        description: {
+          zh: "国家数据集团位列央企名录第 28 位、总部位于雄安，简勤任董事长、陈荣辉任总经理，央企总数达 100 家。",
+          en: "Ranked 28th and based in Xiong'an, the new group is chaired by Jian Qin with Chen Ronghui as GM, bringing the SOE list to 100.",
+        },
+      },
+      {
+        title: {
+          zh: "俞小平被开除党籍，中国人保表态",
+          en: "Yu Xiaoping Expelled From the Party; PICC Backs It",
+        },
+        description: {
+          zh: "中央纪委通报其违规收受巨额财物、离职后仍敛财，决定开除党籍并移送检察机关，人保集团党委会表示坚决拥护。",
+          en: "He was expelled for huge bribes and post-departure profiteering and referred to prosecutors, with PICC's Party committee voicing support.",
+        },
+      },
+      {
+        title: {
+          zh: "杨小伟一审被判 12 年",
+          en: "Yang Xiaowei Sentenced to 12 Years",
+        },
+        description: {
+          zh: "2004 至 2025 年收受财物共 3319 万余元，因如实供述并积极退赃，以受贿罪判处有期徒刑 12 年、罚金 300 万元。",
+          en: "He took 33.19M yuan in bribes from 2004-2025 and got 12 years plus a 3M-yuan fine for confessing and returning funds.",
+        },
+      },
+      {
+        title: {
+          zh: "公交车闯红灯致 6 死 16 伤，调查报告发布",
+          en: "Bus Ran a Red Light, Killing Six; Report Released",
+        },
+        description: {
+          zh: "沈阳'6·17'事故认定系驾驶员违规操作及营运单位落实不力所致，肇事司机已被批捕、7 人被移交纪委监委处理。",
+          en: "The Shenyang report blamed driver violations and weak operator controls; the driver is detained and seven were referred to inspectors.",
+        },
+      },
+      {
+        title: {
+          zh: "钟南山 90 岁生日：心梗后仍每周运动 3 次",
+          en: "Zhong Nanshan at 90: Still Exercising Three Times a Week",
+        },
+        description: {
+          zh: "出席'南山挑战杯'篮球邀请赛小跑开球，此前因心梗植入心脏支架、患高血压超 20 年，仍呼吁老年人进行抗阻运动。",
+          en: "He jogged out to open a basketball event, still training thrice weekly after a stent and 20-plus years of hypertension, urging seniors to lift weights.",
+        },
+      },
+      {
+        title: {
+          zh: "宠物博主感染罕见真菌病逝，年仅 27 岁",
+          en: "Pet Blogger, 27, Dies of a Rare Fungal Infection",
+        },
+        description: {
+          zh: "甘肃白银爱心博主秦思雨常年救助流浪动物，感染罕见真菌东方伊蒙菌继发噬血细胞综合征，ICU 抢救 22 天后离世。",
+          en: "Qin Siyu, who rescued strays daily, died after 22 days in ICU from Emergomyces orientalis triggering hemophagocytic syndrome.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-18",
     date: "2026-10-18",
     title: {
