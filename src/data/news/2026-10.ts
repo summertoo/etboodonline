@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-21",
+    date: "2026-10-21",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-21",
+      en: "🤖 AI HOT Daily · Oct 21, 2026",
+    },
+    summary: {
+      zh: "今日焦点：DeepSeek 宣布将内部推理框架 DeepInfer 全面开源，并同步开源生产级 Token 编解码组件 deepseek-recipe——继昨日被美国国土安全部列入移除清单后，DeepSeek 转而以开源基础设施巩固生态。模型与基础设施方面：Inception Labs 正式发布扩散式大语言模型 Mercury 3，称在多项基准上超过 GPT-6 Luna 和 Claude Haiku 5.5、速度达 1068 tokens/秒、参数量较 Mercury 1 扩大 40 倍以上（昨日其已先行上线 OpenRouter）；Google 与 Meta 联合发布开源项目 TorchTPU，为 Google TPU 提供原生 PyTorch 后端，模型迁移只需把 .to('cuda') 改为 .to('tpu')；Google 同时推出基于 TorchTPU 的 vLLM 和 SGLang 原生 PyTorch 推理引擎，分别与 Inferact、RadixArk 合作开发，让开发者用熟悉的 PyTorch 工具在 TPU 上部署模型，另发布 TorchTitan 的 TPU 分叉并给出模型优化 Playbook。产品方面：ChatGPT 推出 Locked Chats，把敏感对话从常规历史记录和搜索中移入受保护空间，网页端和桌面端可用 PIN 解锁，支持的移动设备上可用 PIN、Face ID、Touch ID 或设备解锁，锁定会话中的新消息不会更新常规对话使用的记忆，即日起向 Free、Go、Plus 等用户推出。行业动态：路透报道 OpenAI 正赶在 Anthropic 上市前洽谈融资约 300 亿美元，估值超 1.4 万亿美元、比 3 月的 8520 亿美元至少高 64%；SpaceX 发布第三季度监管文件，营收 146 亿美元、净利润 44 亿美元，扭转去年同期 10 亿美元亏损，更名的 Super Intelligence 业务线（含 Cursor、Grok 和 neocloud 算力业务）表现好于投资者预期、AI 目前占公司收入 52%；据 The Intercept 获取的文件，美国陆军网络司令部正在开发代号 ECHOTRIBBLE 的平台，让 AI 智能体自主在网络间移动、识别并清除威胁目标后自毁，且须在极少人工监督下运行；Redact 发现 WhatsApp 帮助中心页面向 LLM 发送用户看不到的隐藏指令，指示其聊天机器人不推荐数据保护监管机构，并在用户提到律师或法律行动后不引用 GDPR、LGPD 或 CCPA；OpenAI 宣布收购药物研发平台 Orchestra Bio，其团队和技术将与 Rosalind 生命科学体系整合，其智能体可追踪研究进展、分析生产批次失败对临床试验时间线的影响并提出应对方案；据泄露给华尔街日报的 S-1 文件，Anthropic 难以从 AWS、Google 和 Microsoft 获得足够云算力，这些厂商日益将其视为竞争者而非客户。研究方面：Anthropic 让内部研究模型在 Claude Science 中主要自主运行 64 小时，设计针对五种蝎子神经毒素的蛋白质迷你结合剂，共生成 318,484 个设计、筛选出 180 个。其他：Perplexity Computer 现可在 Mac 上完全本地运行、无需云端推理；Apate.ai 用 35 万个 AI 拖住骗子，国内年轻人则用 AI 视频反制 AI 卖惨账号；Waymo 宣布进军西班牙、2027 年在马德里大区迎接首批乘客；METR 评测 Anthropic 2026 年 8 月风险报告的对齐章节，认可低风险结论但质疑评估方法；Meta 开源权重模型 Muse Spark Open 在 Fireworks 上线，主打长上下文编码与 Agent 工作；斯坦福 HAI 发布 MedHELM、PhysicianBench 与 HealthAdminBench，测出医疗 AI Agent 实际完成率不足一半；Ai2 发布 FairStress 基准测量 LLM 决策中隐藏的公平性不对称；面壁智能解析前瞻专家调度 LES 如何让 35B MoE 在手机端侧实时无损运行；Databricks 发布 MemCurrent 生产级 Agent 持久记忆架构。",
+      en: "Today's focus: DeepSeek open-sourced its internal inference framework DeepInfer along with the production-grade token codec deepseek-recipe — a day after DHS put it on a removal list, DeepSeek is doubling down on open infrastructure. Models and infrastructure: Inception Labs formally launched the diffusion LLM Mercury 3, claiming wins over GPT-6 Luna and Claude Haiku 5.5 on several benchmarks at 1,068 tokens/second with over 40x the parameters of Mercury 1 (it had already appeared on OpenRouter a day earlier); Google and Meta released TorchTPU, a native PyTorch backend for Google TPUs where migration means changing .to('cuda') to .to('tpu'); Google also shipped native PyTorch inference engines for vLLM and SGLang on TPU with Inferact and RadixArk, plus a TorchTitan TPU fork and a model-optimization playbook. Products: ChatGPT introduced Locked Chats, moving sensitive conversations out of regular history and search into a protected space unlocked by PIN on web and desktop, or PIN, Face ID, Touch ID or device unlock on supported phones, with new messages not updating the memory used by normal chats, rolling out now to Free, Go and Plus users. Industry: Reuters reported OpenAI is negotiating about $30 billion in funding ahead of Anthropic's IPO at a valuation above $1.4 trillion, at least 64% above March's $852 billion; SpaceX's Q3 filing showed $14.6 billion in revenue and $4.4 billion in net income, reversing last year's $1 billion loss, with its renamed Super Intelligence unit (Cursor, Grok, neocloud compute) beating expectations as AI reached 52% of revenue; documents obtained by The Intercept show Army Cyber Command is building ECHOTRIBBLE, letting AI agents move autonomously across networks, identify and remove threats, then self-destruct with minimal human oversight; Redact found WhatsApp help-center pages sending LLMs hidden instructions not to recommend data-protection regulators and to avoid citing GDPR, LGPD or CCPA once users mention lawyers or legal action; OpenAI agreed to acquire drug-development platform Orchestra Bio, folding its team and tech into Rosalind, with agents that track research, analyze how manufacturing failures shift trial timelines and propose fixes; and an S-1 leaked to the Wall Street Journal showed Anthropic struggling to secure cloud capacity from AWS, Google and Microsoft as they increasingly treat it as a competitor rather than a customer. Research: Anthropic let an internal research model run mostly autonomously for 64 hours in Claude Science to design protein mini-binders against five scorpion neurotoxins, generating 318,484 designs and selecting 180. Also: Perplexity Computer now runs entirely locally on a Mac with no cloud inference; Apate.ai fields 350,000 AIs to tie up scammers while young Chinese users deploy AI videos against AI-generated sob stories; Waymo is entering Spain with first riders in Madrid in 2027; METR reviewed the alignment chapter of Anthropic's August 2026 risk report, accepting the low-risk conclusion but questioning the methods; Meta's open-weight Muse Spark Open landed on Fireworks for long-context coding and agent work; Stanford HAI released MedHELM, PhysicianBench and HealthAdminBench, finding medical AI agents complete under half of real tasks; Ai2 released FairStress to measure hidden fairness asymmetries in LLM decisions; ModelBest explained how its lookahead expert scheduling (LES) runs a 35B MoE on-device in real time without loss; and Databricks published MemCurrent, a production architecture for persistent agent memory.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "DeepSeek 全面开源内部推理框架 DeepInfer",
+          en: "DeepSeek Open-Sources Its Inference Framework DeepInfer",
+        },
+        description: {
+          zh: "同时开源生产级 Token 编解码组件 deepseek-recipe，在美方移除令次日加码开源生态。",
+          en: "It also released the production token codec deepseek-recipe, doubling down on open infrastructure a day after the US removal order.",
+        },
+      },
+      {
+        title: {
+          zh: "Inception 发布扩散大模型 Mercury 3，速度达 1068 tokens/秒",
+          en: "Inception Launches Diffusion LLM Mercury 3 at 1,068 tok/s",
+        },
+        description: {
+          zh: "称在多项基准上超过 GPT-6 Luna 和 Claude Haiku 5.5，参数量较 Mercury 1 扩大 40 倍以上。",
+          en: "It claims wins over GPT-6 Luna and Claude Haiku 5.5 on several benchmarks, with 40x+ the parameters of Mercury 1.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 与 Meta 发布 TorchTPU：PyTorch 原生 TPU 后端",
+          en: "Google and Meta Ship TorchTPU, a Native PyTorch TPU Backend",
+        },
+        description: {
+          zh: "开源项目让模型迁移只需把 .to('cuda') 改为 .to('tpu')。",
+          en: "The open-source project makes migration a matter of switching .to('cuda') to .to('tpu').",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布 vLLM 与 SGLang 的 TorchTPU 原生推理引擎",
+          en: "Google Releases Native vLLM and SGLang Engines for TorchTPU",
+        },
+        description: {
+          zh: "分别与 Inferact、RadixArk 合作开发，让开发者用熟悉的 PyTorch 工具在 TPU 上部署模型。",
+          en: "Built with Inferact and RadixArk, they let developers deploy on TPUs with familiar PyTorch tooling.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT 推出 Locked Chats，可用 PIN 或生物识别锁定",
+          en: "ChatGPT Adds Locked Chats With PIN or Biometrics",
+        },
+        description: {
+          zh: "敏感对话移出常规历史与搜索，锁定会话的新消息不会更新常规记忆，即日起向 Free、Go、Plus 推出。",
+          en: "Sensitive chats leave history and search, and new locked messages skip normal memory; rolling out to Free, Go and Plus.",
+        },
+      },
+      {
+        title: {
+          zh: "路透：OpenAI 拟在 Anthropic 上市前融资 300 亿美元",
+          en: "Reuters: OpenAI Seeks $30B Ahead of Anthropic's IPO",
+        },
+        description: {
+          zh: "估值超 1.4 万亿美元，比 3 月的 8520 亿美元至少高 64%。",
+          en: "The valuation above $1.4 trillion is at least 64% above March's $852 billion.",
+        },
+      },
+      {
+        title: {
+          zh: "SpaceX 财报显示 AI 业务超预期，占收入 52%",
+          en: "SpaceX Earnings Show AI at 52% of Revenue",
+        },
+        description: {
+          zh: "三季度营收 146 亿美元、净利润 44 亿美元，扭转去年同期 10 亿美元亏损；Super Intelligence 业务线含 Cursor、Grok 与 neocloud 算力。",
+          en: "Revenue hit $14.6B with $4.4B net income, reversing a $1B loss; the Super Intelligence unit spans Cursor, Grok and neocloud compute.",
+        },
+      },
+      {
+        title: {
+          zh: "美陆军网络司令部拟造自主扩散的 AI 网络武器",
+          en: "Army Cyber Command Plans Self-Spreading AI Cyberweapons",
+        },
+        description: {
+          zh: "ECHOTRIBBLE 平台让 AI 智能体自主在网络间移动、识别并清除威胁目标后自毁，须在极少人工监督下运行。",
+          en: "ECHOTRIBBLE would let agents roam networks, remove threats and self-destruct with minimal human oversight.",
+        },
+      },
+      {
+        title: {
+          zh: "WhatsApp 帮助页被发现藏 LLM 隐藏指令",
+          en: "WhatsApp Help Pages Found Hiding LLM Instructions",
+        },
+        description: {
+          zh: "Redact 发现页面指示聊天机器人不推荐数据保护监管机构，并在用户提到律师或法律行动后不引用 GDPR、LGPD 或 CCPA。",
+          en: "Redact found instructions telling the bot to avoid naming data regulators and to skip GDPR, LGPD or CCPA once legal action is mentioned.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 收购药物研发平台 Orchestra Bio",
+          en: "OpenAI Acquires Drug-Development Platform Orchestra Bio",
+        },
+        description: {
+          zh: "团队与技术并入 Rosalind 生命科学体系，其智能体可追踪研究进展、分析生产批次失败对试验时间线的影响并提出方案。",
+          en: "Its team and tech join Rosalind, with agents tracking research and modeling how manufacturing failures shift trial timelines.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 云合作生变：AWS、Google、微软视其为竞争者",
+          en: "Anthropic's Cloud Deals Sour as AWS, Google, Microsoft See a Rival",
+        },
+        description: {
+          zh: "据泄露给华尔街日报的 S-1 文件，Anthropic 难以获得足够云算力，这些厂商日益将其视为竞争者而非客户。",
+          en: "An S-1 leaked to the WSJ shows Anthropic short on cloud capacity as its partners increasingly treat it as a competitor.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 用 Claude 设计蝎子神经毒素蛋白结合剂",
+          en: "Anthropic Used Claude to Design Scorpion Toxin Binders",
+        },
+        description: {
+          zh: "内部研究模型在 Claude Science 中主要自主运行 64 小时，生成 318,484 个设计、筛选出 180 个。",
+          en: "An internal model ran largely autonomously for 64 hours in Claude Science, generating 318,484 designs and selecting 180.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-21-hot",
+    date: "2026-10-21",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-21",
+      en: "🔥 Hot Topics · Oct 21, 2026",
+    },
+    summary: {
+      zh: "今日热搜以军事外交、司法与民生话题为主。军事与外交方面：美日计划 10 月 19 日至 29 日举行大规模联合军事演习、部署至距台湾仅 110 公里的与那国岛，解放军则提前反制，自 10 月 8 日起大连、秦皇岛、盐城等地陆续发布航行警告；10 月 20 日凌晨美军'查尔斯顿'号濒海战斗舰未经中国政府允许冲闯南沙群岛仙宾礁附近海域，南部战区与海警在黄岩岛组织联合演训及维权演练，国防部表示将以有力行动遏制任何祸乱南海的行径；中国驻泰国大使馆发布旅游安全预警后，泰国旅游与体育部长素拉沙 10 月 20 日回应称政府高度重视游客安全，澄清'普通游客不会在泰国被强行塞入车辆或押送至边境'，涉事者多是在出境前已被骗。司法与社会治理方面：山西阳泉中院审结一起承揽合同纠纷案，因双方未签书面合同，法院依据微信聊天记录等电子数据判决被告返还材料费与施工费，法官提示需确认聊天者身份、内容完整未经删改、最好提供原始载体当庭核对；江苏徐州教育局宣布地理、生物原始成绩不计入中考录取总分、以等级呈现，自 2025 年秋季入学七年级学生起执行，此前北京、吉林、陕西咸阳等地已作类似调整；重庆坠亡幼童案中，父亲崔先生 9 月 13 日短暂离家遛狗将 2 岁幼童独留家中致其从 18 楼坠亡，事后提出每月补贴 1 万元希望日子照旧，母亲刘女士已于 10 月 16 日正式控告丈夫过失致人死亡、警方已受理并将申请召开听证会；应急管理部对 7 月 17 日重庆彭水山体崩塌中转移群众牺牲的网格员龚宝冬追记一等功，并对彭迪等 11 名同志给予记功、嘉奖，当时 60 多名居民被安全转移。经济与市场方面：宁德时代披露三季报，前三季度营业收入 4421.37 亿元、同比增长 56.19%，归母净利润 645.3 亿元、同比增长 31.60%，但 A、H 股均跌超 9%。民生与温情方面：湖北襄阳一男子捡到装有身份证、银行卡及 3.8 万元现金的包，张贴失物招领时把自己手机号后 4 位改成失主身份证中的 4 个数字作为提示，被网友称赞既防伪又防骚扰；江苏一男子热情拥抱妻子致其 5 根肋骨骨折、1 根骨裂，医生提醒环抱上提会让胸廓受不均衡挤压；南宁五象养老服务中心试行'代际共居'，青年每月完成不少于 50 小时助老服务可换 1000 元房租减免；1991 年给三峡工程捐款 10 元的小学生王雨被找到，如今在国家电网湖北秭归县供电公司工作。文化方面：长征胜利九十周年题材集中刷屏——'红军过草地有多凶险'重现 1936 年红四方面军穿越松潘草地、上万名战士长眠；'局部打光了也得打'讲述 1936 年春红二、红六军团以一万兵力牵制十几万敌军、在乌蒙山辗转伏击突围，毛泽东称'一万人走过来还是一万人，是个奇迹'；'队旗缝进百褶裙夹层'讲述 1935 年刘伯承与小叶丹歃血为盟后其妻守护队旗十五年、现藏军事博物馆；电视剧《征途》在央视八套黄金档收官，开播前两集直播收视率 1.64%、市场份额 7.9%。体育方面：NBA 新赛季揭幕日费城 76 人客场 106-100 险胜纽约尼克斯、6 人上双，詹姆斯首秀 14 分 9 篮板 7 助攻，并在边线发球助攻杰伦·布朗 1.5 秒压哨三分命中；樊振东发文抵制偷拍，称'即使以爱为名、延迟发布扩散'也无法改变其侵犯隐私的本质。其他热议还有'华为带火阔直板、OPPO 与红米集体跟进且新机或下探 3000 元档'、'广东人最不爱接电话'背后的陌生人来电信任危机、'这届年轻人热衷于重养父母'、'00 后北漂患上扔垃圾羞耻'、'上海消保委测 30 款硬壳冲锋衣、接缝压胶是防水关键'、'易梦玲巴黎机场行李被偷、相机设备与旧护照全失'、'世界乱成一锅粥、中国安心过日子'，以及'特斯拉能飞、我们就被甩开了？'的产业自信讨论。",
+      en: "Military diplomacy, courts and daily-life stories led today. Military and diplomacy: the US and Japan planned large-scale drills from Oct 19-29 deployed to Yonaguni, just 110 km from Taiwan, while the PLA pre-empted with navigation warnings from Dalian, Qinhuangdao and Yancheng starting Oct 8; in the early hours of Oct 20 the US littoral combat ship Charleston entered waters near Xianbin Reef in the Nansha Islands without Chinese permission, prompting joint drills and rights-protection exercises by the Southern Theater Command and coast guard around Scarborough Shoal, with the defense ministry vowing firm action against any disruption of South China Sea stability; and after China's embassy in Thailand issued a travel safety warning, tourism minister Surasak said on Oct 20 that the government takes visitor safety seriously, clarifying that ordinary tourists are not thrown into vans or taken to borders and that those involved had mostly been scammed before leaving China. Courts and governance: a Yangquan intermediate court ruled in a contract dispute without a written agreement, relying on WeChat records as electronic evidence to order the defendant to return material and construction fees, with the judge noting the need to verify identities, unaltered content and original devices; Xuzhou's education bureau said raw geography and biology scores will no longer count toward high-school entrance totals, reported as grades from students entering seventh grade in autumn 2025, following Beijing, Jilin and Xianyang; in the Chongqing toddler death case, father Cui left his two-year-old alone while walking the dog on Sept 13, leading to an 18th-floor fall, and after offering 10,000 yuan a month to keep the marriage going, mother Liu formally accused him of negligent homicide on Oct 16, with police accepting the case and a hearing to follow; and the emergency management ministry posthumously awarded first-class merit to grid worker Gong Baodong, who died evacuating residents during the July 17 Pengshui landslide that saw 60-plus people moved to safety, honoring Peng Di and 11 others as well. Markets: CATL reported 442.14 billion yuan of revenue for the first three quarters, up 56.19%, and 64.53 billion yuan of net profit, up 31.60%, yet its A- and H-shares each fell more than 9%. Warmth and daily life: a Xiangyang man who found a bag with an ID, bank cards and 38,000 yuan cash posted a notice swapping the last four digits of his phone number for four digits from the owner's ID as a hint, winning praise for being both secure and discreet; a Jiangsu man's enthusiastic hug broke five of his wife's ribs and cracked another, with doctors warning that lifting while squeezing unevenly compresses the rib cage; a Nanning care home pilots intergenerational co-living where young people who volunteer at least 50 hours a month get 1,000 yuan off rent; and the schoolchild who donated 10 yuan to the Three Gorges project in 1991 was identified as Wang Yu, now working for State Grid in Zigui, Hubei. Culture: the 90th anniversary of the Long March dominated — a first-person retelling of the Red Fourth Front crossing the Songpan grasslands in 1936 where tens of thousands died, the story of the Second and Sixth Red Army Corps tying down 100,000-plus troops with 10,000 men and breaking out through the Wumeng Mountains as Mao called '10,000 in, 10,000 out' a miracle, a unit flag sewn into the lining of a pleated skirt and guarded for 15 years after Liu Bocheng's 1935 alliance with Yi chieftain Xiaoyedan, now in the military museum, and the CCTV drama 'Journey' closing its prime-time run with a 1.64% premiere rating and 7.9% share. Sports: on NBA opening night Philadelphia edged New York 106-100 with six double-digit scorers as James posted 14 points, 9 rebounds and 7 assists and fed Jaylen Brown for a buzzer-beating three with 1.5 seconds left; and Fan Zhendong spoke out against secret photography, saying no motive changes its nature even when framed as love. Also discussed: Huawei igniting a wide-slab phone trend with OPPO and Redmi following toward the 3,000-yuan tier, Guangdong's reluctance to answer unknown calls as a trust problem spreading nationwide, young people 're-raising' their parents, post-00s Beijing renters ashamed to take out trash, Shanghai's consumer council testing 30 hardshell jackets and finding seam taping key to waterproofing, Yi Mengling's luggage and old passport stolen at a Paris airport, 'the world in chaos while China lives in peace,' and whether Tesla's flying car leaves China behind.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "满足这些条件微信聊天记录才能当证据",
+          en: "When WeChat Records Can Serve as Evidence",
+        },
+        description: {
+          zh: "山西阳泉中院在无书面合同的承揽合同纠纷中依据微信记录判决，法官提示需确认身份、内容完整未删改并提供原始载体。",
+          en: "A Yangquan court ruled on WeChat records without a written contract, requiring verified identity, unaltered content and original devices.",
+        },
+      },
+      {
+        title: {
+          zh: "西太平洋战鼓隆隆，中美日排兵布阵",
+          en: "Drills Rattle the Western Pacific as China, US and Japan Deploy",
+        },
+        description: {
+          zh: "美日 10 月 19 日至 29 日军演部署至距台湾仅 110 公里的与那国岛，解放军自 10 月 8 日起在多地发布航行警告提前反制。",
+          en: "US-Japan drills run Oct 19-29 at Yonaguni, 110 km from Taiwan, while the PLA issued navigation warnings from Oct 8 in response.",
+        },
+      },
+      {
+        title: {
+          zh: "美舰冲闯仙宾礁是要为菲律宾撑腰吗",
+          en: "Did a US Warship's Xianbin Reef Foray Back Manila?",
+        },
+        description: {
+          zh: "10 月 20 日凌晨美军'查尔斯顿'号未经允许冲闯仙宾礁附近海域，南部战区与海警在黄岩岛组织联合演训，国防部称将有力遏制祸乱南海行径。",
+          en: "The USS Charleston entered waters near Xianbin Reef on Oct 20; China held joint drills near Scarborough Shoal and vowed firm countermeasures.",
+        },
+      },
+      {
+        title: {
+          zh: "宁德时代 A 股 H 股均跌超 9%",
+          en: "CATL's A- and H-Shares Both Drop Over 9%",
+        },
+        description: {
+          zh: "三季报显示前三季度营收 4421.37 亿元、同比增 56.19%，归母净利润 645.3 亿元、同比增 31.60%，股价仍大幅下挫。",
+          en: "Despite revenue up 56.19% to 442.14B yuan and net profit up 31.60% to 64.53B yuan, both listings fell sharply.",
+        },
+      },
+      {
+        title: {
+          zh: "坠亡幼童父亲提出每月给 1 万维持婚姻",
+          en: "Father in Toddler's Fall Offers 10,000 Yuan a Month to Stay Married",
+        },
+        description: {
+          zh: "重庆崔先生 9 月 13 日遛狗时将 2 岁幼童独留家中致其 18 楼坠亡，母亲 10 月 16 日正式控告其过失致人死亡，警方已受理。",
+          en: "After leaving his two-year-old alone on Sept 13, Cui faces a negligent-homicide complaint filed Oct 16 that police have accepted.",
+        },
+      },
+      {
+        title: {
+          zh: "男子捡到 38000 元留了道题给失主",
+          en: "Man Who Found 38,000 Yuan Left the Owner a Puzzle",
+        },
+        description: {
+          zh: "湖北襄阳男子把手机号后 4 位换成失主身份证中的 4 个数字作为提示，网友称既防伪又防骚扰。",
+          en: "The Xiangyang man swapped his phone's last four digits for four from the owner's ID, a hint praised as both secure and discreet.",
+        },
+      },
+      {
+        title: {
+          zh: "丈夫 1 个拥抱，妻子断了 5 根肋骨",
+          en: "One Hug, Five Broken Ribs",
+        },
+        description: {
+          zh: "江苏一男子热情拥抱致妻子 5 根肋骨骨折、1 根骨裂，医生提醒环抱上提会让胸廓受到不均衡挤压。",
+          en: "A Jiangsu man's hug broke five of his wife's ribs and cracked another; doctors warn lifting while squeezing compresses the rib cage unevenly.",
+        },
+      },
+      {
+        title: {
+          zh: "又一地宣布：生物地理不计入中考总分",
+          en: "Another City Drops Biology and Geography From Exam Totals",
+        },
+        description: {
+          zh: "徐州自 2025 年秋季入学七年级学生起，地理、生物原始成绩以等级呈现、不计入录取总分，北京、吉林、咸阳等地已先行调整。",
+          en: "Xuzhou will report grades instead of raw scores for students entering seventh grade in autumn 2025, following Beijing, Jilin and Xianyang.",
+        },
+      },
+      {
+        title: {
+          zh: "年轻人每月在养老院服务可减免房租",
+          en: "Volunteering at a Care Home Cuts Young People's Rent",
+        },
+        description: {
+          zh: "南宁五象养老服务中心试行'代际共居'，青年每月完成不少于 50 小时助老服务可换 1000 元房租减免。",
+          en: "Nanning's Wuxiang center gives 1,000 yuan off rent for at least 50 hours of elder-care service a month.",
+        },
+      },
+      {
+        title: {
+          zh: "龚宝冬被追记一等功",
+          en: "Gong Baodong Awarded First-Class Merit Posthumously",
+        },
+        description: {
+          zh: "7 月 17 日重庆彭水山体崩塌中，网格员龚宝冬转移群众时牺牲，60 多名居民安全转移；应急管理部同时奖励彭迪等 11 人。",
+          en: "He died evacuating residents in the July 17 Pengshui landslide that saved 60-plus people; Peng Di and 11 others were also honored.",
+        },
+      },
+      {
+        title: {
+          zh: "长征胜利九十周年：草地、乌蒙山与那面队旗",
+          en: "90 Years On: the Grasslands, Wumeng Mountains and a Hidden Flag",
+        },
+        description: {
+          zh: "红军过草地时上万名战士长眠；红二、红六军团以一万兵力在乌蒙山牵制十几万敌军突围，毛泽东称'一万人走过来还是一万人，是个奇迹'；小叶丹之妻将队旗缝进百褶裙夹层守护十五年。",
+          en: "Tens of thousands died crossing the grasslands; 10,000 troops broke out of the Wumeng Mountains against 100,000-plus; and a chieftain's wife hid a Red Army flag in a skirt for 15 years.",
+        },
+      },
+      {
+        title: {
+          zh: "詹姆斯首秀 14+9+7，76 人险胜尼克斯",
+          en: "James Debuts With 14-9-7 as the 76ers Edge the Knicks",
+        },
+        description: {
+          zh: "NBA 揭幕日费城客场 106-100 取胜、6 人上双，詹姆斯还在边线发球助攻杰伦·布朗 1.5 秒压哨三分命中。",
+          en: "Philadelphia won 106-100 on opening night with six in double figures, and James fed Jaylen Brown for a buzzer-beater with 1.5 seconds left.",
+        },
+      },
+      {
+        title: {
+          zh: "中使馆预警，泰方：普通游客不会遭绑架",
+          en: "Thailand: Ordinary Tourists Won't Be Abducted",
+        },
+        description: {
+          zh: "泰国旅游与体育部长素拉沙回应中方旅游安全预警，称政府高度重视游客安全，涉事者多是在出境前已被骗。",
+          en: "Tourism minister Surasak said the government takes safety seriously and that those involved were mostly scammed before leaving China.",
+        },
+      },
+      {
+        title: {
+          zh: "樊振东发文抵制偷拍",
+          en: "Fan Zhendong Speaks Out Against Secret Photography",
+        },
+        description: {
+          zh: "称不管偷拍者什么身份心态目的，都无法改变其不尊重他人、侵犯隐私的本质，即使以爱为名、延迟发布扩散。",
+          en: "He said no motive changes the disrespect and privacy violation, even when framed as love or posted later.",
+        },
+      },
+      {
+        title: {
+          zh: "1991 年给三峡捐款的小学生找到了",
+          en: "The 1991 Three Gorges Donor Has Been Found",
+        },
+        description: {
+          zh: "三峡工程博物馆一张 1991 年 10 元收款单引发寻找，当事人王雨如今在国家电网湖北秭归县供电公司工作。",
+          en: "A 1991 ten-yuan receipt at the Three Gorges museum led to Wang Yu, now at State Grid in Zigui, Hubei.",
+        },
+      },
+      {
+        title: {
+          zh: "易梦玲在巴黎行李被偷",
+          en: "Yi Mengling's Luggage Stolen in Paris",
+        },
+        description: {
+          zh: "登机箱和随身包在机场打印行李票时被偷，相机设备与含签证的旧护照全失，后续工作也受影响。",
+          en: "Her carry-on and bag vanished at the airport check-in counter, taking camera gear and an old passport with visas, disrupting later work.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-20",
     date: "2026-10-20",
     title: {
