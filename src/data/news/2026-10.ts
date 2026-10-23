@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-10-23",
+    date: "2026-10-23",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-10-23",
+      en: "🤖 AI HOT Daily · Oct 23, 2026",
+    },
+    summary: {
+      zh: "今日焦点：PHP2Shell 事件全景复盘——两个 CVSS 满分、定为 9.2 分的 PHP 远程代码执行漏洞（CVE-2026-109618 与 CVE-2026-109619）在补丁发布前泄露、攻击演示视频外流，多国政府网站预防性下线，OpenAI 认领漏洞由 GPT-5.6 Sol 辅助发现。产品方面：OpenAI 正式发布基于 GPT-6 Luna 的 Decisions API，用于分类、路由、评分等有界答案问题，速度最高比通过 Responses API 使用 GPT-6 Luna 快 10 倍；Claude 宣布下周起 Pro、Max 和 Team 套餐在网页、桌面和移动端应用中的会话默认以 auto mode 运行，不再逐步请求用户批准、改由自动检查拦截高风险操作，用户可随时切回手动模式；Replit 发布 Monitoring Agent，可读取生产日志和指标调查错误、变慢与部署失败，启用 autofix 后验证修复并邮件汇报、启用 auto-publish 后可自动部署修复。行业动态：据 Bloomberg，DeepSeek 最新一轮融资约 150 亿美元、为中国最大规模私募融资之一，谈判期间目标至少两次上调、从约 75 亿美元提高到 120 亿美元，宁德时代与腾讯是最大投资方之一（宁德时代据报出资约 15 亿美元），投前估值约 748 亿美元；WSJ 报道马斯克希望以 AI 为核心推动估值约 2 万亿美元的 SpaceX 与约 1.5 万亿美元的 Tesla 合并，SpaceX 的 AI 业务已成其最大业务、三季度营收 75.6 亿美元（一年前仅 8.13 亿美元），季度 196 亿美元资本开支中超过 164 亿美元投向 AI；Anthropic 把 Agent Skills 开放标准捐赠给 Linux Foundation 旗下的 Agentic AI Foundation（AAIF），此前已向其捐赠 MCP；据 Newcomer 长文，Anthropic 多年因公司治理结构与安全优先路线令风投观望，目前没有任何风投机构持股超过 2%，公司曾向投资人明确将单一投资人持股控制在该水平以避免话语权集中，同时有消息称其最快本周五公开提交 S-1 招股书、或创史上最大 IPO；Wiz 披露 2026 年 10 月有攻击者使用开源自主渗透测试框架 ARTEX 针对多家 IT 和软件厂商，活动与微软报告的中国国家级关联组织 Storm-0940 重叠，并已扩展到其他软件领域的供应链攻击尝试；Symantec 披露'Skynet 模式'AI 智能体劫持无防护大语言模型发起自持续网络攻击。研究方面：Microsoft AI 发布 Sequential Diagnosis Benchmark（SDBench）与 AI 诊断系统 MAI-DxO，论文发表于 Science；METR 与 Redwood Research 各派一名员工于 7 月 21 日至 8 月 11 日对 OpenAI 内部失准监测系统开展三周高权限试点压力测试，产出 61 页内部报告并发现多个漏洞；Anthropic 与 Theorem 合作，用 Claude 将 OSS-Fuzz 模糊测试转化为规格，对 123 个开源库的 239 个入口点证明了任意 64 MB 以下输入不崩溃，生成约 1.8 亿行 Rocq 证明。其他：MiniMax Code 桌面端推出 Mini App 长运行应用功能；Anthropic 发布指南讨论何时把子智能体合并进主 Agent 循环；Kling 4.0 上线 OpenArt 与 OnSolo，支持首中尾帧引导与最多 10 张参考图；Sierra 发布 τ-Entity 基准，检验语音智能体能否准确采集姓名、电话等实体信息。",
+      en: "Today's focus: a full retrospective of PHP2Shell — two maximum-severity PHP remote-code-execution flaws rated 9.2 (CVE-2026-109618 and CVE-2026-109619) leaked before patches shipped, a demo video circulated, governments took sites offline pre-emptively, and OpenAI confirmed GPT-5.6 Sol helped find them. Products: OpenAI made its GPT-6 Luna-based Decisions API generally available for bounded answers like classification, routing and scoring, up to 10x faster than reaching GPT-6 Luna through the Responses API; Claude said that starting next week, sessions on web, desktop and mobile for Pro, Max and Team will default to auto mode, which stops asking for step-by-step approval and instead lets automated checks block high-risk actions, with a manual switch always available; and Replit launched a Monitoring Agent that acts as an autonomous on-call engineer, reading production logs and metrics to investigate errors, slowdowns and failed deploys, verifying fixes with autofix and emailing reports, and deploying them with auto-publish. Industry: Bloomberg reported DeepSeek raised about $15 billion in one of China's largest private financings, with the target raised at least twice from about $7.5 billion to $12 billion, CATL and Tencent among the biggest investors (CATL about $1.5 billion) and a pre-money valuation near $74.8 billion; the WSJ reported Musk wants an AI-centric merger of SpaceX, valued around $2 trillion, with Tesla at about $1.5 trillion, as SpaceX's AI business becomes its largest — Q3 revenue of $7.56 billion versus $813 million a year earlier, with over $16.4 billion of $19.6 billion in quarterly capex going to AI; Anthropic donated its Agent Skills open standard to the Linux Foundation's Agentic AI Foundation, after previously donating MCP; Newcomer's long read traced Anthropic's cap table, noting venture firms held back for years over governance and its safety-first approach, and that no VC now owns more than 2%, a level the company deliberately enforced to prevent concentrated control, while reports said it could publicly file its S-1 as soon as Friday in what may be the largest IPO ever; Wiz reported October attacks using the open-source autonomous pentest framework ARTEX against IT and software vendors, overlapping with Microsoft-tracked China-linked Storm-0940 and expanding into supply-chain attempts; and Symantec described a 'Skynet mode' agent hijacking unprotected LLMs to launch self-sustaining cyberattacks. Research: Microsoft AI released the Sequential Diagnosis Benchmark (SDBench) and the MAI-DxO diagnostic system in a Science paper; METR and Redwood Research each sent one staffer from July 21 to August 11 for a three-week high-privilege stress test of OpenAI's internal misalignment monitoring, producing a 61-page report and multiple findings; and Anthropic with Theorem turned OSS-Fuzz fuzzing into specifications with Claude, proving 239 entry points across 123 open-source libraries do not crash on any input under 64 MB, generating about 180 million lines of Rocq proofs. Also: MiniMax Code's desktop app added long-running Mini Apps; Anthropic published guidance on when to fold subagents into the main agent loop; Kling 4.0 arrived on OpenArt and OnSolo with first/middle/last-frame guidance and up to 10 reference images; and Sierra released the τ-Entity benchmark testing whether voice agents capture names and phone numbers correctly.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "AI 挖出潜伏十几年的 PHP 底层漏洞，PHP2Shell 全景复盘",
+          en: "AI Uncovered a Decade-Old PHP Flaw: The PHP2Shell Story",
+        },
+        description: {
+          zh: "两个满分定为 9.2 分的 RCE 漏洞（CVE-2026-109618/109619）在补丁发布前泄露、演示视频外流，多国政府网站预防性下线，GPT-5.6 Sol 辅助发现。",
+          en: "Both 9.2-rated RCEs (CVE-2026-109618/109619) leaked before patching with a demo video, prompting takedowns; GPT-5.6 Sol aided discovery.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 正式发布 Decisions API",
+          en: "OpenAI Launches the Decisions API",
+        },
+        description: {
+          zh: "基于 GPT-6 Luna，面向分类、路由、评分等有界答案问题，速度最高比经 Responses API 调用快 10 倍。",
+          en: "Built on GPT-6 Luna for bounded answers like classification, routing and scoring, up to 10x faster than via the Responses API.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 网页、桌面和移动端将默认启用 auto mode",
+          en: "Claude to Default to Auto Mode Across Apps",
+        },
+        description: {
+          zh: "下周起 Pro、Max 和 Team 会话默认以 auto mode 运行，由自动检查拦截高风险操作、不再逐步请求批准，可随时切回手动。",
+          en: "From next week Pro, Max and Team sessions default to auto mode, where automated checks block risky actions instead of step-by-step approval.",
+        },
+      },
+      {
+        title: {
+          zh: "Replit 发布 Monitoring Agent 值班智能体",
+          en: "Replit Ships a Monitoring Agent On-Call Engineer",
+        },
+        description: {
+          zh: "可读生产日志和指标调查错误、变慢与部署失败，autofix 验证修复并邮件汇报，auto-publish 后自动部署。",
+          en: "It reads logs and metrics to investigate errors and failed deploys, verifies fixes with autofix, and deploys them with auto-publish.",
+        },
+      },
+      {
+        title: {
+          zh: "Bloomberg：DeepSeek 新一轮融资约 150 亿美元",
+          en: "Bloomberg: DeepSeek Raises About $15 Billion",
+        },
+        description: {
+          zh: "为中国最大规模私募融资之一，目标曾从约 75 亿美元两次上调至 120 亿美元，宁德时代与腾讯为最大投资方之一，投前估值约 748 亿美元。",
+          en: "One of China's largest private rounds, with targets raised twice from $7.5B to $12B, CATL and Tencent leading, at a ~$74.8B pre-money valuation.",
+        },
+      },
+      {
+        title: {
+          zh: "WSJ：马斯克希望以 AI 为核心推动 SpaceX 与 Tesla 合并",
+          en: "WSJ: Musk Wants an AI-Centric SpaceX-Tesla Merger",
+        },
+        description: {
+          zh: "SpaceX 估值约 2 万亿美元、Tesla 约 1.5 万亿美元；SpaceX 三季度 AI 营收 75.6 亿美元（一年前 8.13 亿），196 亿资本开支中超 164 亿投向 AI。",
+          en: "SpaceX is valued near $2T and Tesla $1.5T; SpaceX AI revenue hit $7.56B versus $813M a year ago, with $16.4B of $19.6B capex going to AI.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 将 Agent Skills 标准捐给 Linux 基金会",
+          en: "Anthropic Donates Agent Skills to the Linux Foundation",
+        },
+        description: {
+          zh: "捐赠给 Linux Foundation 旗下的 Agentic AI Foundation（AAIF），此前已向其捐赠 MCP。",
+          en: "The standard goes to the Agentic AI Foundation under the Linux Foundation, following its earlier MCP donation.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 股权表内幕与 S-1 进程",
+          en: "Inside Anthropic's Cap Table and S-1 Timing",
+        },
+        description: {
+          zh: "风投多年观望，目前无任何机构持股超 2%；同时有消息称其最快本周五公开提交 S-1、或创史上最大 IPO。",
+          en: "No VC holds more than 2% after years of hesitation, while reports say it could file its S-1 publicly as soon as Friday for a record IPO.",
+        },
+      },
+      {
+        title: {
+          zh: "Wiz：ARTEX 智能体被 Storm-0940 用于攻击软件厂商",
+          en: "Wiz: Storm-0940 Wields the ARTEX Agent",
+        },
+        description: {
+          zh: "开源自主渗透测试框架 ARTEX 被用于针对多家 IT 和软件厂商，活动与微软报告的中国国家级关联组织重叠，并扩展到供应链攻击尝试。",
+          en: "The open-source autonomous pentest framework targeted IT and software vendors, overlapping with Microsoft's China-linked group and spreading to supply chains.",
+        },
+      },
+      {
+        title: {
+          zh: "微软发布 SDBench 与 MAI-DxO 诊断系统，登 Science",
+          en: "Microsoft's SDBench and MAI-DxO Land in Science",
+        },
+        description: {
+          zh: "Microsoft AI 同时发布顺序诊断基准 Sequential Diagnosis Benchmark 与 AI 诊断系统 MAI-DxO。",
+          en: "Microsoft AI released the Sequential Diagnosis Benchmark alongside the MAI-DxO diagnostic system.",
+        },
+      },
+      {
+        title: {
+          zh: "METR 与 Redwood 红队测试 OpenAI 内部监控系统",
+          en: "METR and Redwood Red-Teamed OpenAI's Monitoring",
+        },
+        description: {
+          zh: "7 月 21 日至 8 月 11 日三周高权限试点压力测试，产出 61 页内部报告并发现多个漏洞。",
+          en: "A three-week high-privilege pilot from July 21 to Aug 11 produced a 61-page internal report with multiple findings.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 对 123 个开源库完成汇编级形式化安全证明",
+          en: "Anthropic Formally Verified 123 Open-Source Libraries",
+        },
+        description: {
+          zh: "与 Theorem 合作用 Claude 把 OSS-Fuzz 模糊测试转化为规格，对 239 个入口点证明任意 64 MB 以下输入不崩溃，生成约 1.8 亿行 Rocq 证明。",
+          en: "With Theorem, Claude turned fuzzing into specs and proved 239 entry points crash-free for inputs under 64 MB, generating ~180M lines of Rocq proofs.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-10-23-hot",
+    date: "2026-10-23",
+    title: {
+      zh: "🔥 今日热搜 · 2026-10-23",
+      en: "🔥 Hot Topics · Oct 23, 2026",
+    },
+    summary: {
+      zh: "今日热搜由西藏巴青地震与多起法治、民生事件主导。地震方面：10 月 22 日 22 时 33 分许，西藏那曲市巴青县发生 7.0 级地震、震源深度 10 千米，造成重大人员伤亡，人民子弟兵第一时间投入抗震救灾；专家分析此次地震为拉张型破裂、与区域构造特征基本一致，羌塘地块 1900 年以来共发生 7 级以上地震 6 次，原震区及附近地区近几日仍可能发生有感地震；西藏自治区党委书记胡昌升 10 月 23 日赴灾区部署救援，要求每个帐篷写明负责干部与群众电话，重灾区玛如乡 2 村等 18 个安置点已搭建完毕、已转移群众 12489 人；网传相关烈度数据、灾情画面与亲历者爆料经核查均为谣言。法治方面：三安光电公告称实际控制人、福建前首富林秀成因涉嫌职务侵占、挪用资金罪被刑事拘留后、近日被检察机关批准逮捕；最高人民法院发布典型案例，2025 年 2 月两名未成年人为求刺激在火锅店内向锅内小便并发布视频致企业商誉受损，上海黄浦法院判决两人父母赔偿共计 220 万元并道歉，判决已生效；湖南怀化一名熊猫血孕妇孕 39 周时医院发现胎动减少却未及时评估干预、造成胎死腹中，鹤城区卫健局认定医院监护不到位、承担 75% 主要责任，双方尚未就赔偿达成一致；江西新余一名 13 岁女孩把母亲两条价值 1 万多元的金项链卖给金店、店方未经家长同意便当面熔化，母亲要求原样返还，店方称曾提出联系家长但被女孩拒绝。经济与产业方面：恒大清盘人发布追讨资产最新报告，披露许家印自 2016 年 3 月起以恒大地产名义至少花 13 亿港元购买 110 件艺术品、覆盖莫奈与毕加索等；捷达首款纯电轿车 M6 上市，售价 7.98 万至 9.98 万元、最高续航 555 公里、搭载纯视觉无图智驾，瞄准 10 万元以下市场；有媒体报道娃哈哈集团董事长兼总经理许思敏被曝辞职、工作交接仍在进行，其 2025 年 11 月接替宗馥莉掌舵、上任不足一年，离职或因顾虑即将实施的《食品委托生产监督管理办法》法律风险；哈啰顺风车车主发现有人把疑似招嫖暗语藏在送货订单留言区，平台称这是新型灰产、将封禁账号并升级风控模型；网红拼豆店今年 10 月起面临倒闭潮，成都春熙路一店主称从日日爆满转为'上二休五'、3 个月亏 10 万，此前该片区曾扎堆 70 至 80 家店并陷入价格战；红果短剧宣布分阶段下线'看剧赚金币'功能，新用户自 2026 年 11 月 1 日起不再获得入口、12 月 31 日前全面下线，其月活已超 3 亿，意在筛掉纯利诱用户、转向精品竞赛；双 11 大促首日贾乃亮直播间单日销售额突破 5.7 亿元、创近三年最高、单日涨粉超 60 万。天气与自然方面：10 月 23 日 18 时台风蓝色预警继续，第 30 号台风'蔷琵'中心位于台北东偏南约 185 公里洋面、正向浙江东部近海逼近，浙江沿海已现 10 级阵风，23 日夜间将进入最强风雨时段、部分地区有大暴雨，卫星云图上其形态被形容为'长了一头秀发'；10 月 23 日 18 时 15 分我国在太原卫星发射中心成功发射遥感五十号 03 星，18 时 20 分许北京西边天空出现形似'夜光水母'的'火箭云'；眼下正值外来入侵物种加拿大一枝黄花盛花期，专家提醒不要随手丢弃拔下的植株花枝以免帮助其扩散。社会话题还有'每个班都有学生因心困休学'（重点中学教师称高一开学仅一个月、每班均有 1 至 2 名学生因心理问题休学，学业压力与被克扣的生理需求时间是主因）、'欧洲怎么了'（17 日以来法国、比利时等爆发大规模抗议、部分城市出现暴力骚乱，民众不满能源价格、生活成本与教育资源）、'这些看似舒服的姿势正在伤害你的腰'、'避孕药避孕只是用途之一'（短效避孕药也是多囊、月经失调、痛经的一线用药）、'外卖小哥与博士老婆离婚'、'男子突发脑梗、140 多只猫狗急叫引来邻居报警获救'，以及 VOGUE 盛典红毯上刘亦菲的凤凰神女造型与'眼睛一大一小'争议、欧阳娜娜的气球爆破变装、迪丽热巴的满钻高定，还有'接班贾玲'的蒋诗萌、为大鹏偶遇新人'这张照片就是我随的份子'等。",
+      en: "The Baxoi earthquake in Tibet and several legal and livelihood stories dominated today. Quake: a magnitude-7.0 earthquake struck Baxoi county in Nagqu, Tibet at 22:33 on Oct 22 at a depth of 10 km, causing heavy casualties, with troops deploying immediately; experts called it an extensional rupture consistent with regional tectonics, noting the Qiangtang block has seen six quakes of 7.0 or above since 1900 and more felt quakes are possible nearby in coming days; Tibet's party secretary Hu Changsheng visited on Oct 23 and required every tent to display the responsible official's and residents' phone numbers, with 18 resettlement sites including Maru township's second village completed and 12,489 people relocated; and online intensity data, disaster footage and survivor accounts were all verified as rumors. Law: Sanan Optoelectronics said controller and former Fujian richest man Lin Xiucheng, detained over suspected embezzlement and misappropriation, has been formally arrested; the Supreme People's Court highlighted a case where two minors urinated into a hotpot and posted video in February 2025, with Shanghai's Huangpu court ordering their parents to pay 2.2 million yuan and apologize; a woman with Rh-negative blood in Huaihua, Hunan lost her 39-week fetus after the hospital noted reduced fetal movement without timely assessment, with the district health bureau assigning the hospital 75% of the blame and compensation still unresolved; and a 13-year-old girl in Xinyu, Jiangxi sold two of her mother's gold necklaces worth over 10,000 yuan, which the shop melted down on the spot without parental consent, with the mother demanding them back and the shop saying the girl refused to let them call her parents. Business: Evergrande's liquidators disclosed that Xu Jiayin spent at least HK$1.3 billion on 110 artworks from March 2016 under Evergrande Real Estate's name, including Monet and Picasso; Jetta launched its first EV sedan, the M6, at 79,800-99,800 yuan with up to 555 km of range and camera-only mapless driver assist, targeting the sub-100,000 yuan market; reports said Wahaha chairman and general manager Xu Simin, in the job less than a year after succeeding Zong Fuli in November 2025, has resigned amid a handover, possibly over legal risk from upcoming food-contract-manufacturing rules; a Hello Hitch driver found suspected solicitation coded into delivery-order messages, which the platform called a new gray-market tactic and pledged bans and tighter risk models; viral bead-craft shops face a wave of closures, with a Chunxi Road owner in Chengdu going from full houses to two days open and five closed, losing 100,000 yuan in three months after 70-80 shops crowded the area into a price war; Hongguo short dramas will phase out its watch-to-earn coins, cutting new users off from Nov 1 and retiring it fully by Dec 31 as its monthly actives pass 300 million, aiming to filter incentive-only users and push premium production; and Jia Nailiang's livestream sold 570 million yuan on Double 11's first day, a three-year high with 600,000 new followers. Weather and nature: a blue typhoon alert continued at 18:00 on Oct 23 with Champi centered about 185 km east-southeast of Taipei heading for Zhejiang's coast, where 10-level gusts were already recorded, with the heaviest rain and wind due that night and satellite imagery showing it apparently 'growing a head of hair'; China launched the Yaogan-50-03 satellite from Taiyuan at 18:15, and around 18:20 a jellyfish-like 'rocket cloud' appeared west of Beijing; and with invasive Canada goldenrod blooming, experts warned against dropping pulled stems, which can still take root and spread. Social chatter also covered a key high school teacher saying every class already has one or two students on mental-health leave a month into the term, blamed on workload and squeezed basic needs; 'what's wrong with Europe' as France and Belgium saw mass protests and riots since the 17th over energy, living costs and education; comfortable postures that harm the lower back; contraceptives' uses beyond birth control in PCOS and menstrual disorders; a delivery rider's divorce from his American wife; a Tianjin man whose 140-plus rescued cats and dogs alerted neighbors after his stroke; and the Vogue gala red carpet, where Liu Yifei's phoenix look drew both praise and 'one eye bigger than the other' chatter, Ouyang Nana changed outfits in a balloon burst, Dilraba wore a fully studded couture gown, Jiang Shimeng was tipped as Jia Ling's successor, and Da Peng told newlyweds 'this photo is my gift money.'",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "西藏巴青 7.0 级地震：已转移 12489 人",
+          en: "Tibet's Baxoi Quake: 12,489 Relocated",
+        },
+        description: {
+          zh: "10 月 22 日 22 时 33 分发生 7.0 级地震、震源深度 10 千米，专家称为拉张型破裂；胡昌升要求帐篷写明负责干部与群众电话，网传烈度与灾情画面均系谣言。",
+          en: "The magnitude-7.0 quake hit at 22:33 on Oct 22 at 10 km depth and was called extensional; officials ordered tent-by-tent contact details as viral intensity and damage clips were debunked.",
+        },
+      },
+      {
+        title: {
+          zh: "台风蔷琵突然大拐弯，长出'头发'",
+          en: "Typhoon Champi Swerves and 'Grows Hair'",
+        },
+        description: {
+          zh: "10 月 23 日 18 时中心位于台北东偏南约 185 公里洋面、逼近浙江东部近海，浙江沿海已现 10 级阵风，夜间进入最强风雨时段。",
+          en: "At 18:00 on Oct 23 the center sat about 185 km east-southeast of Taipei near Zhejiang's coast, where 10-level gusts hit before the storm's peak overnight.",
+        },
+      },
+      {
+        title: {
+          zh: "福建前首富林秀成被批捕",
+          en: "Former Fujian Richest Man Lin Xiucheng Arrested",
+        },
+        description: {
+          zh: "三安光电公告称实控人林秀成此前因涉嫌职务侵占、挪用资金罪被刑拘，近日接家属通知已被检察机关批准逮捕。",
+          en: "Sanan Optoelectronics said its controller, detained over suspected embezzlement and misappropriation, has now been formally arrested.",
+        },
+      },
+      {
+        title: {
+          zh: "许家印被曝曾花 13 亿港元买艺术品",
+          en: "Xu Jiayin Spent HK$1.3 Billion on Art, Filings Show",
+        },
+        description: {
+          zh: "恒大清盘人报告披露其自 2016 年 3 月起以恒大地产名义购买 110 件艺术品，覆盖莫奈、毕加索等。",
+          en: "Liquidators said he bought 110 works, including Monet and Picasso, under Evergrande Real Estate's name from March 2016.",
+        },
+      },
+      {
+        title: {
+          zh: "熊猫血孕妇孕 39 周在医院胎死腹中",
+          en: "Rh-Negative Mother Loses 39-Week Fetus in Hospital",
+        },
+        description: {
+          zh: "湖南怀化卫健局回应称医院发现胎动减少却未及时评估干预、监护不到位，承担 75% 主要责任，双方尚未就赔偿达成一致。",
+          en: "Huaihua's health bureau said the hospital failed to assess reduced fetal movement in time and bears 75% of the blame; compensation is unresolved.",
+        },
+      },
+      {
+        title: {
+          zh: "未成年人向火锅小便，家长被判赔 220 万",
+          en: "Parents Ordered to Pay 2.2 Million for Hotpot Prank",
+        },
+        description: {
+          zh: "最高法典型案例通报，2025 年 2 月两未成年人为求刺激向火锅小便并发布视频致商誉受损，上海黄浦法院判其父母赔偿并道歉。",
+          en: "In the Supreme Court's example case, two minors urinated in a hotpot and posted video in February 2025; Shanghai's Huangpu court ordered payment and an apology.",
+        },
+      },
+      {
+        title: {
+          zh: "13 岁女孩卖妈妈金项链，金店当面熔化",
+          en: "Jewelry Shop Melted Gold a 13-Year-Old Sold",
+        },
+        description: {
+          zh: "江西新余女孩把母亲两条价值 1 万多元的项链卖给金店，店方未经家长同意当面熔化；母亲要求原样返还，店方称曾提出联系家长被拒。",
+          en: "The Xinyu shop melted two necklaces worth over 10,000 yuan without parental consent; the mother wants them back, while the shop says the girl refused a call home.",
+        },
+      },
+      {
+        title: {
+          zh: "曾经的国民神车推出首款电动车",
+          en: "Jetta Launches Its First EV",
+        },
+        description: {
+          zh: "捷达首款纯电轿车 M6 上市，售价 7.98 万至 9.98 万元、最高续航 555 公里、搭载纯视觉无图智驾，瞄准 10 万元以下市场。",
+          en: "The M6 sedan starts at 79,800 yuan with up to 555 km of range and camera-only mapless assist, targeting the sub-100,000 yuan segment.",
+        },
+      },
+      {
+        title: {
+          zh: "90 后掌门被曝辞职，娃哈哈为何起动荡",
+          en: "Wahaha's Young Chairman Reported to Resign",
+        },
+        description: {
+          zh: "许思敏 2025 年 11 月接替宗馥莉掌舵、上任不足一年，被曝辞职且交接仍在进行，或因顾虑《食品委托生产监督管理办法》法律风险。",
+          en: "Xu Simin, in the job under a year after succeeding Zong Fuli, reportedly resigned during a handover, possibly over legal risk from new food-contract rules.",
+        },
+      },
+      {
+        title: {
+          zh: "'每个班都有学生因心困休学'",
+          en: "'Every Class Has a Student Out for Mental Health'",
+        },
+        description: {
+          zh: "重点中学教师称高一开学仅一个月、每班均有 1 至 2 名学生因心理问题休学，认为过重学业压力与被克扣的生理需求时间是主因。",
+          en: "A key high school teacher said one or two students per class are already on leave a month in, blaming workload and squeezed basic needs.",
+        },
+      },
+      {
+        title: {
+          zh: "哈啰顺风车涉黄",
+          en: "Hello Hitch Hit by Coded Solicitation",
+        },
+        description: {
+          zh: "车主发现疑似招嫖暗语藏在送货订单留言区，平台称属新型灰产、将封禁账号、排查风险点并升级风控模型。",
+          en: "Drivers found solicitation code in delivery-order messages; the platform called it a new gray-market tactic and pledged bans and better risk models.",
+        },
+      },
+      {
+        title: {
+          zh: "网红拼豆店倒闭潮",
+          en: "Viral Bead Shops Close in Droves",
+        },
+        description: {
+          zh: "成都春熙路一店主称从日日爆满转为'上二休五'、3 个月亏 10 万，此前该片区曾扎堆 70 至 80 家店并陷入价格战。",
+          en: "A Chunxi Road owner went from packed houses to two days open a week, losing 100,000 yuan in three months after 70-80 shops crowded in.",
+        },
+      },
+      {
+        title: {
+          zh: "红果短剧开始'筛人'",
+          en: "Hongguo Starts Filtering Users",
+        },
+        description: {
+          zh: "宣布分阶段下线'看剧赚金币'，新用户自 11 月 1 日起不再有入口、12 月 31 日前全面下线，月活已超 3 亿、意在转向精品竞赛。",
+          en: "It will retire watch-to-earn coins, cutting new users off Nov 1 and ending it by Dec 31, with 300M+ actives as it pivots to premium output.",
+        },
+      },
+      {
+        title: {
+          zh: "欧洲怎么了",
+          en: "What's Happening in Europe?",
+        },
+        description: {
+          zh: "17 日以来法国、比利时等爆发大规模抗议，部分城市出现暴力骚乱，民众不满能源价格高企、生活成本飙升与教育资源短缺。",
+          en: "France and Belgium have seen mass protests and riots since the 17th over energy prices, living costs and education shortages.",
+        },
+      },
+      {
+        title: {
+          zh: "北京夜空有朵'火箭云'",
+          en: "A 'Rocket Cloud' Over Beijing",
+        },
+        description: {
+          zh: "10 月 23 日 18 时 15 分遥感五十号 03 星在太原发射成功，18 时 20 分许北京西边天空出现形似'夜光水母'的火箭云。",
+          en: "Yaogan-50-03 launched from Taiyuan at 18:15, and around 18:20 a jellyfish-like rocket cloud appeared west of Beijing.",
+        },
+      },
+      {
+        title: {
+          zh: "贾乃亮 1 天卖 5.7 亿",
+          en: "Jia Nailiang Sells 570 Million Yuan in a Day",
+        },
+        description: {
+          zh: "双 11 大促首日直播间单日销售额突破 5.7 亿元、创近三年最高，单日涨粉超 60 万。",
+          en: "His Double 11 day-one livestream hit 570 million yuan, a three-year high, adding over 600,000 followers.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-10-22",
     date: "2026-10-22",
     title: {
