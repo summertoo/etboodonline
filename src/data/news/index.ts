@@ -9,9 +9,11 @@ import { newsList as newsList2026_07 } from "./2026-07";
 import { newsList as newsList2026_09 } from "./2026-09";
 import { newsList as newsList2026_08 } from "./2026-08";
 import { newsList as newsList2026_10 } from "./2026-10";
+import { newsList as newsList2026_11 } from "./2026-11";
 
 // 按日期倒序：最新月份在前
 export const newsList: NewsItem[] = [
+  ...newsList2026_11,
   ...newsList2026_10,
   ...newsList2026_09,
   ...newsList2026_08,
