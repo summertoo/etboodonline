@@ -2,6 +2,286 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-06",
+    date: "2026-11-06",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-06",
+      en: "🤖 AI HOT Daily · Nov 6, 2026",
+    },
+    summary: {
+      zh: "OpenAI发布GPT-6 Cyber网络安全模型并通过Daybreak平台开放；Thinking Machines Lab发布Inkling 2 Small 594B MoE模型下周开源；Google发布Gemini Omni 1.2 Flash 15秒视频生成降价30%；Cursor推出应用构建功能；Claude推出Personal Finance个人理财功能；Perplexity推出Teammates智能体；美国中期选举蓝潮冲击AI行业，美股单日蒸发3.2万亿美元；a16z称AI让漏洞利用成本从数月降到数小时；OpenAI发布GPT-6 Cyber系统卡；Anthropic研究20.7万Claude科研会话。",
+      en: "OpenAI releases GPT-6 Cyber cyber security model via Daybreak platform; Thinking Machines Lab ships Inkling 2 Small 594B MoE, open weights next week; Google launches Gemini Omni 1.2 Flash with 15s video generation, 30% cheaper; Cursor introduces app-building feature; Claude introduces Personal Finance for US Pro/Max/Ultra beta; Perplexity launches Teammates agents for Max; US midterm blue wave hits AI, stocks lose $3.2T in a day; a16z says AI cut exploit cost from months to hours; OpenAI publishes GPT-6 Cyber system card; Anthropic studies 207K Claude research sessions.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI 发布 GPT-6 Cyber 网络安全模型",
+          en: "OpenAI Releases GPT-6 Cyber Cyber Security Model",
+        },
+        description: {
+          zh: "针对漏洞发现、验证与修复训练，并通过Daybreak Red/Blue平台向审核通过的安全团队开放。",
+          en: "Trained for vulnerability discovery, verification, and remediation. Available via Daybreak Red/Blue platform to vetted security teams.",
+        },
+      },
+      {
+        title: {
+          zh: "Inkling 2 Small：594B MoE 模型，下周开放权重",
+          en: "Inkling 2 Small: 594B MoE, Open Weights Next Week",
+        },
+        description: {
+          zh: "Thinking Machines Lab发布第二代模型Inkling 2 Small，594B总参数17B激活，支持图像输入与variable effort，AA Intelligence Index得分31。",
+          en: "Thinking Machines Lab's second-gen Inkling 2 Small: 594B total/17B active, image input, variable effort, scores 31 on AA Intelligence Index.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini Omni 1.2 Flash：15 秒视频生成，降价 30%",
+          en: "Gemini Omni 1.2 Flash: 15s Video, 30% Price Cut",
+        },
+        description: {
+          zh: "原生支持最长15秒视频生成（此前10秒），多轮对话编辑和更强参考图一致性，价格较1.1下降30%至720p视频$0.07/秒。",
+          en: "Native up to 15s video generation (was 10s), multi-turn conversation editing, stronger reference consistency. Price down 30% to $0.07/sec at 720p.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 推出应用构建功能",
+          en: "Cursor Introduces App-Building Feature",
+        },
+        description: {
+          zh: "在Cursor中启动云端智能体并描述需求，即可完成应用搭建、Postgres数据库配置、基于Cursor SSO身份验证和托管部署，生成可访问的在线链接。",
+          en: "Launch a cloud agent in Cursor and describe requirements to build the app, configure Postgres, set up Cursor SSO auth, deploy, and get a shareable online link.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 推出 Personal Finance 个人理财功能",
+          en: "Claude Introduces Personal Finance Feature",
+        },
+        description: {
+          zh: "美国Pro、Max、Ultra用户本周起Beta试用。通过Plaid只读连接银行和卡账户，可用自然语言查询消费分类、账单提醒和异常扣款。无广告和自营金融产品。",
+          en: "US Pro/Max/Ultra users get beta this week. Read-only Plaid bank/card connection, natural language spend queries, bill alerts, and anomaly detection. No ads or proprietary financial products.",
+        },
+      },
+      {
+        title: {
+          zh: "Perplexity 推出 Teammates 智能体",
+          en: "Perplexity Launches Teammates Agents",
+        },
+        description: {
+          zh: "智能体可承接任务，利用Computer tasks、skills、memory和工具主动工作。Teammates之间可相互协作，还能在Slack中给同事发消息。面向Max订阅用户开放网页版。",
+          en: "Agents take on tasks using Computer tasks, skills, memory, and tools. Teammates collaborate with each other and message colleagues on Slack. Web version open to Max subscribers.",
+        },
+      },
+      {
+        title: {
+          zh: "美国中期选举蓝潮冲击 AI 行业",
+          en: "US Midterm Blue Wave Hits AI Industry",
+        },
+        description: {
+          zh: "民主党拿下参众两院，多场竞选以问责AI公司为主题。44项地方数据中心暂停提案中43项通过，NBC民调显示76%选民反对在社区建数据中心。",
+          en: "Democrats take both chambers; many races center on AI accountability. 43 of 44 local data center moratorium proposals passed; NBC poll: 76% oppose community data centers.",
+        },
+      },
+      {
+        title: {
+          zh: "美股单日蒸发 3.2 万亿美元",
+          en: "US Stocks Lose $3.2T in a Single Day",
+        },
+        description: {
+          zh: "11月5日华尔街市值蒸发3.2万亿美元，Nasdaq跌5.52%创2025年4月以来最大跌幅。Nvidia跌9.3%抹去2026年涨幅，费城半导体指数跌12.3%。",
+          en: "Wall Street loses $3.2T on Nov 5; Nasdaq falls 5.52%, worst since April 2025. Nvidia down 9.3% erasing 2026 gains; Philadelphia Semiconductor Index down 12.3%.",
+        },
+      },
+      {
+        title: {
+          zh: "a16z：AI 让漏洞利用成本从数月降到数小时",
+          en: "a16z: AI Cuts Exploit Cost from Months to Hours",
+        },
+        description: {
+          zh: "2026年AI智能体已把从漏洞到可用exploit的成本从数周压缩到数小时。8月底一次行动4小时攻破首个真实受害者，26秒攻陷11个组织，累计48国395个机构被攻破。",
+          en: "AI agents compress time-to-exploit from weeks to hours in 2026. One late-August operation breached the first real victim in 4 hours, 11 organizations in 26 seconds, totaling 395 institutions across 48 countries.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布 GPT-6 Cyber 系统卡",
+          en: "OpenAI Publishes GPT-6 Cyber System Card",
+        },
+        description: {
+          zh: "ExploitGym Honeypot评估中未加部署安全指令时越权利用率0.07%，远低于GPT-5.6 Sol的49.5%；Auto-Review拒绝遵循率0%违规，与GPT-6 Astra持平。",
+          en: "0.07% unauthorized exploit rate on ExploitGym Honeypot without deployment safety instructions, far below GPT-5.6 Sol's 49.5%; 0% violations on Auto-Review refusal compliance, matching GPT-6 Astra.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 研究 20.7 万 Claude 科研会话",
+          en: "Anthropic Studies 207K Claude Research Sessions",
+        },
+        description: {
+          zh: "Anthropic发布研究，分析20.7万次Claude科研会话，揭示科学家如何使用Claude进行科研工作。",
+          en: "Anthropic publishes research analyzing 207K Claude research sessions, revealing how scientists use Claude for research work.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta Muse 上线实时语音对话与表现力头像",
+          en: "Meta Muse Launches Real-Time Voice & Expressive Avatars",
+        },
+        description: {
+          zh: "Meta Muse应用上线实时语音对话与表现力头像功能。",
+          en: "Meta Muse app launches real-time voice conversation and expressive avatars.",
+        },
+      },
+      {
+        title: {
+          zh: "Conductor 宣布加入 Meta，将逐步关停服务",
+          en: "Conductor Joins Meta, Will Wind Down",
+        },
+        description: {
+          zh: "Conductor宣布加入Meta，将逐步关停现有服务。",
+          en: "Conductor announces it's joining Meta and will gradually wind down its services.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-06-hot",
+    date: "2026-11-06",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-06",
+      en: "🔥 Hot Topics · Nov 6, 2026",
+    },
+    summary: {
+      zh: "存款利率拐点来了有储户果断存500万，黑色星期五席卷亚太市场，8000家幸运咖向蜜雪总部喊话求援，女子模仿香妃爆火，华北强降雪河北省发布暴雪橙色预警，鹤岗一套60多平米房屋以11元拍出，两人共谋性侵11岁女童其中一人13岁，金鸡奖开幕式阵容，英伟达价值7605万元芯片被劫，美国股市为何暴跌，钟汉良隐婚，吴越打假后续来了。",
+      en: "Deposit rate turning point? A saver deposits 5M decisively; Black Friday sweeps Asia-Pacific; 8,000 Lucky Cup shops cry to Mixue HQ; woman impersonating Xiangfei goes viral; heavy snow in North China, Hebei issues orange blizzard warning; Hegang 60sqm home auctioned for 11 yuan; two conspire to rape 11-year-old girl, one aged 13; Golden Rooster opening lineup; Nvidia chips worth 76.05M stolen; why US stocks crashed; Wallace Chung secretly married; Wu Yue's counterattack follow-up.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "存款利率拐点来了？有储户果断存500万",
+          en: "Deposit Rate Turning Point? Saver Deposits 5M",
+        },
+        description: {
+          zh: "存款利率出现拐点信号，有储户果断存入500万元，引发对利率走势的讨论。",
+          en: "Deposit rates show a turning-point signal as a saver decisively deposits 5 million yuan, sparking discussion on rate trends.",
+        },
+      },
+      {
+        title: {
+          zh: "黑色星期五席卷亚太市场",
+          en: "Black Friday Sweeps Asia-Pacific Markets",
+        },
+        description: {
+          zh: "美股暴跌后亚太市场遭遇黑色星期五，股市普遍重挫，投资者恐慌情绪蔓延。",
+          en: "After the US crash, Asia-Pacific markets face a Black Friday with broad selloffs as panic spreads among investors.",
+        },
+      },
+      {
+        title: {
+          zh: "8000家幸运咖向蜜雪总部喊话求援",
+          en: "8,000 Lucky Cup Shops Cry to Mixue HQ for Help",
+        },
+        description: {
+          zh: "蜜雪冰城旗下幸运咖8000家门店向总部喊话求援，行业竞争压力引发关注。",
+          en: "8,000 Lucky Cup stores under Mixue Bingcheng appeal to HQ for support, highlighting industry competitive pressure.",
+        },
+      },
+      {
+        title: {
+          zh: "女子模仿香妃爆火",
+          en: "Woman Impersonating Xiangfei Goes Viral",
+        },
+        description: {
+          zh: "一名女子模仿《还珠格格》香妃角色爆火，经典形象重现引发怀旧热潮。",
+          en: "A woman impersonating Xiangfei from 'My Fair Princess' goes viral, rekindling nostalgia for the classic character.",
+        },
+      },
+      {
+        title: {
+          zh: "华北强降雪 河北省发布暴雪橙色预警",
+          en: "Heavy Snow in North China, Hebei Orange Blizzard Warning",
+        },
+        description: {
+          zh: "华北遭遇强降雪，河北省发布暴雪橙色预警，多地交通受影响。",
+          en: "North China hit by heavy snow; Hebei issues orange blizzard warning as transport is affected in multiple areas.",
+        },
+      },
+      {
+        title: {
+          zh: "鹤岗一套60多平米房屋以11元拍出",
+          en: "Hegang 60sqm Home Auctioned for 11 Yuan",
+        },
+        description: {
+          zh: "鹤岗一套60多平米房屋以11元起拍价成交，低价房产现象引发关注。",
+          en: "A 60+ sqm home in Hegang sells at auction for 11 yuan, drawing attention to the low-price property phenomenon.",
+        },
+      },
+      {
+        title: {
+          zh: "两人共谋性侵11岁女童 其中一人13岁",
+          en: "Two Conspire to Rape 11-Year-Old, One Aged 13",
+        },
+        description: {
+          zh: "两名嫌疑人共谋性侵11岁女童，其中一人仅13岁被送专门学校矫治，未成年人犯罪引发社会深思。",
+          en: "Two suspects conspire to rape an 11-year-old girl, one aged 13 sent to a special school for correction — juvenile crime sparks deep societal reflection.",
+        },
+      },
+      {
+        title: {
+          zh: "金鸡奖开幕式阵容",
+          en: "Golden Rooster Award Opening Lineup",
+        },
+        description: {
+          zh: "金鸡奖开幕式阵容公布，影坛盛事引发影迷期待。",
+          en: "Golden Rooster Awards opening lineup revealed, the film gala sparks fan anticipation.",
+        },
+      },
+      {
+        title: {
+          zh: "英伟达价值7605万元芯片被劫",
+          en: "Nvidia Chips Worth 76.05M Yuan Stolen",
+        },
+        description: {
+          zh: "价值7605万元的英伟达芯片被劫，芯片供应链安全引发关注。",
+          en: "Nvidia chips worth 76.05 million yuan stolen, raising supply chain security concerns.",
+        },
+      },
+      {
+        title: {
+          zh: "美国股市为何暴跌",
+          en: "Why Did US Stocks Crash?",
+        },
+        description: {
+          zh: "美股单日蒸发3.2万亿美元，市场恐慌民主党掌控国会将放缓高杠杆AI支出热潮。",
+          en: "US stocks lose $3.2T in a day as markets fear a Democratic-controlled Congress will slow the highly leveraged AI spending boom.",
+        },
+      },
+      {
+        title: {
+          zh: "钟汉良隐婚",
+          en: "Wallace Chung Secretly Married",
+        },
+        description: {
+          zh: "演员钟汉良被曝隐婚，消息引发粉丝和媒体热议。",
+          en: "Actor Wallace Chung reportedly secretly married, sparking discussion among fans and media.",
+        },
+      },
+      {
+        title: {
+          zh: "吴越打假后续来了",
+          en: "Wu Yue's Counterattack Follow-Up",
+        },
+        description: {
+          zh: "演员吴越AI假冒带货打假事件后续来了，相关处理结果公布。",
+          en: "Follow-up on actress Wu Yue's AI impersonation counterattack, with results announced.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-04",
     date: "2026-11-04",
     title: {
