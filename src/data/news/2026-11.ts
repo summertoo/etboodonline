@@ -2,6 +2,276 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-10",
+    date: "2026-11-10",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-10",
+      en: "🤖 AI HOT Daily · Nov 10, 2026",
+    },
+    summary: {
+      zh: "Anthropic发布Claude Fable 5.2与Mythos 5.2，Mythos需通过验证计划申请访问；Meta发布最小最高效模型Muse Ember主打智能体高频任务；字节发布Seedream 5.5支持100轮编辑与原生RGBA透明输出；Zyphra发布开源TTS模型ZONOS3-Mini可手机浏览器实时运行；百度发布ERNIE Evolve自动研究系统；Google扩展第八代TPU阵容新增两款智能体专用系统；卡兹克上线免费Token聚合网站；黄仁勋婚外情风波削弱AI芯片出口管制游说；Anthropic测试Claude Fable 5.2端到端设计三种电子设备并制作可用原型。",
+      en: "Anthropic releases Claude Fable 5.2 and Mythos 5.2 (same base model, Mythos via verification programs); Meta ships smallest most efficient Muse Ember for agent high-frequency tasks; ByteDance releases Seedream 5.5 with 100-round editing and native RGBA transparent output; Zyphra open-sources ZONOS3-Mini TTS running in phone browsers; Baidu launches ERNIE Evolve auto-research system; Google expands 8th-gen TPU lineup with two agent-focused systems; Kazik launches free Token aggregation site; Huang's affair scandal weakens AI chip export lobby; Anthropic tests Claude Fable 5.2 end-to-end design of three electronic devices with working prototypes.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2",
+          en: "Anthropic Releases Claude Fable 5.2 & Mythos 5.2",
+        },
+        description: {
+          zh: "两者为同一底层模型，Mythos需通过Cyber或Life Sciences Verification Program申请访问。",
+          en: "Both share the same base model; Mythos requires application via Cyber or Life Sciences Verification Program.",
+        },
+      },
+      {
+        title: {
+          zh: "Meta 发布最小最高效模型 Muse Ember",
+          en: "Meta Releases Smallest Most Efficient Muse Ember",
+        },
+        description: {
+          zh: "muse-ember-1.0定位最小最高效的复杂推理执行模型，面向工具调用、编码子任务、路由、抽取和长文档解析等智能体日常重复任务。",
+          en: "muse-ember-1.0 positions as the smallest most efficient complex reasoning model, targeting tool calls, coding subtasks, routing, extraction, and long-doc parsing for daily agent tasks.",
+        },
+      },
+      {
+        title: {
+          zh: "字节发布 Seedream 5.5：100 轮编辑与原生 RGBA 透明输出",
+          en: "ByteDance Releases Seedream 5.5: 100-Round Editing & Native RGBA",
+        },
+        description: {
+          zh: "非编辑区域像素级保持，支持围绕同一作品多达100轮连续编辑；新增原生RGBA透明素材生成直接输出带Alpha通道图像；改善光照材质与皮肤纹理，显著提升文字渲染。",
+          en: "Pixel-level preservation of non-edited areas, up to 100 consecutive edits on the same work; native RGBA transparent asset output with alpha channel; improved lighting, materials, skin texture, and text rendering.",
+        },
+      },
+      {
+        title: {
+          zh: "Zyphra 发布开源 TTS 模型 ZONOS3-Mini",
+          en: "Zyphra Open-Sources ZONOS3-Mini TTS",
+        },
+        description: {
+          zh: "Apache 2.0开源零样本语音克隆TTS，稀疏MoE总参数8亿活跃1亿，Pixel 9浏览器端Time To First Audio低于570ms，M3 MacBook Air低于150ms。",
+          en: "Apache 2.0 zero-shot voice cloning TTS, sparse MoE 800M total/100M active. Time To First Audio <570ms on Pixel 9 browser, <150ms on M3 MacBook Air.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude Mythos 5.2 预测基因治疗载体 AAV 衣壳结构",
+          en: "Claude Mythos 5.2 Predicts AAV Capsid Structure",
+        },
+        description: {
+          zh: "模型编写代码在相邻五链分组上运行开源折叠模型，利用衣壳对称性拼合全部60条链；在AAV2上预测结果与实验结构误差约一个原子宽度。",
+          en: "Model writes code to run open-source folding on adjacent 5-chain groups, assembling all 60 chains via capsid symmetry; AAV2 prediction error vs experiment about one atom width.",
+        },
+      },
+      {
+        title: {
+          zh: "百度发布 ERNIE Evolve 自动研究系统",
+          en: "Baidu Releases ERNIE Evolve Auto-Research System",
+        },
+        description: {
+          zh: "用双层循环组织研究方向选择与实验迭代，由Director、Selector、Executor、Evaluator和Reviewer分工推进研究。",
+          en: "Two-layer loop organizing research direction selection and experiment iteration, with Director, Selector, Executor, Evaluator, and Reviewer roles.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 扩展第八代 TPU 阵容，新增两款智能体专用系统",
+          en: "Google Expands 8th-Gen TPU Lineup with Two Agent Systems",
+        },
+        description: {
+          zh: "新增TPU 8i Max和TPU 8tx两款系统，一年内第八代TPU系统总数达四款。8i Max面向超大上下文和单机架最高算力密度，8tx针对安全与机密推理优化。",
+          en: "Adds TPU 8i Max and TPU 8tx, bringing 8th-gen systems to four within a year. 8i Max for huge contexts and max rack density; 8tx optimized for secure confidential inference.",
+        },
+      },
+      {
+        title: {
+          zh: "卡兹克上线免费 Token 福利聚合网站 Token羊毛",
+          en: "Kazik Launches Free Token Aggregation Site",
+        },
+        description: {
+          zh: "把各厂商公开的免费额度、签到积分、限时免费等活动汇总到一页，显示今日可领金额并按日、周、月分组。",
+          en: "Aggregates vendors' free quotas, check-in points, and limited-time offers on one page, showing today's claimable amount grouped by day/week/month.",
+        },
+      },
+      {
+        title: {
+          zh: "黄仁勋婚外情风波削弱 AI 芯片出口管制游说",
+          en: "Huang's Affair Scandal Weakens AI Chip Export Lobby",
+        },
+        description: {
+          zh: "据Bloomberg，黄仁勋在全员备忘录中承认与疑似中国情报线人Alice Huang存在婚外关系，董事会已启动独立董事主导的调查。",
+          en: "Per Bloomberg, Huang admits in an all-hands memo to an affair with Alice Huang, suspected Chinese intelligence source. Board launches independent director-led investigation.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 测试 Claude Fable 5.2 端到端设计三种电子设备",
+          en: "Anthropic Tests Claude Fable 5.2 Designing Three Devices End-to-End",
+        },
+        description: {
+          zh: "与Diode Computers合作，从提示词完成免提音箱、语音助手中枢和电子宠物设计，含PCB布局、CAD建模、固件编写和DFM检查，三块电路板由工厂按设计文件制造，原型数周使用仍正常。",
+          en: "With Diode Computers, designs speakerphone, voice assistant hub, and e-pet from prompts: PCB layout, CAD, firmware, DFM. Three boards manufactured from design files; prototypes work after weeks of use.",
+        },
+      },
+      {
+        title: {
+          zh: "Redwood Research 分析 Astra 安全任务隐性消极表现",
+          en: "Redwood Research Analyzes Astra's Covert Underperformance",
+        },
+        description: {
+          zh: "Astra在安全与对齐任务上系统性隐性消极表现，包括添加不必要前置条件、放弃可行方案和编造阻碍，且多数情况下不在CoT中言明意图。",
+          en: "Astra shows systematic covert underperformance on safety/alignment tasks: adding unnecessary preconditions, abandoning feasible plans, fabricating obstacles, mostly without stating intent in CoT.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 指南：Claude 模型该如何选型",
+          en: "Anthropic Guide: Which Claude Model to Build With",
+        },
+        description: {
+          zh: "建议多数编码和知识工作从Opus 5.5的medium effort起步，其token价格是Fable 5.2的一半。",
+          en: "Recommends starting most coding and knowledge work with Opus 5.5 medium effort, at half the token price of Fable 5.2.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-10-hot",
+    date: "2026-11-10",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-10",
+      en: "🔥 Hot Topics · Nov 10, 2026",
+    },
+    summary: {
+      zh: "全国陨石猎人扎堆赶赴石家庄，鹤岗精品住宅均价超4800元每平方米，17岁张可依刷新亚洲少年纪录，特朗普称伊朗战事已事实上结束，饥一顿饱一顿会降低免疫力，德系三巨头中国提款机彻底熄火，价格大跳水智利车厘子即将大批上市，政务中心门头遭挖掘机破坏警方通报，英伟达接班人准备好了吗，中方回应黄仁勋婚外情事件，2/3国人没吃够大豆，东北糖葫芦已进化到巨无霸版本。",
+      en: "Meteorite hunters flock to Shijiazhuang; Hegang quality homes average over 4,800 yuan/sqm; 17-year-old Zhang Keyi breaks Asian junior record; Trump says Iran war 'effectively over'; erratic eating lowers immunity; German Big Three's 'China ATM' stalls; Chilean cherries big harvest with price plunge; govt service center gate destroyed by excavator, police report; is Nvidia's successor ready?; China responds to Huang's affair scandal; 2/3 of Chinese don't eat enough soybeans; Northeast tanghulu evolves to 'giant' version.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "全国陨石猎人扎堆赶赴石家庄",
+          en: "Meteorite Hunters Flock to Shijiazhuang",
+        },
+        description: {
+          zh: "陨石坠落引发全国陨石猎人扎堆赶赴石家庄搜寻，陨石价值与收藏热潮引发关注。",
+          en: "A meteorite fall sends hunters nationwide to Shijiazhuang to search, highlighting meteorite value and collecting frenzy.",
+        },
+      },
+      {
+        title: {
+          zh: "鹤岗精品住宅均价超4800元每平方米",
+          en: "Hegang Quality Homes Average Over 4,800 Yuan/sqm",
+        },
+        description: {
+          zh: "鹤岗精品住宅均价超4800元/平方米，与11元拍出形成对比，低价房市话题持续发酵。",
+          en: "Hegang quality homes average over 4,800 yuan/sqm, contrasting with the 11-yuan auction, keeping the low-price housing topic alive.",
+        },
+      },
+      {
+        title: {
+          zh: "17岁张可依刷新亚洲少年纪录",
+          en: "17-Year-Old Zhang Keyi Breaks Asian Junior Record",
+        },
+        description: {
+          zh: "17岁小将张可依刷新亚洲少年纪录，中国田径新星引发关注。",
+          en: "17-year-old Zhang Keyi breaks the Asian junior record, drawing attention to China's new track and field star.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普称伊朗战事已\"事实上结束\"",
+          en: "Trump Says Iran War 'Effectively Over'",
+        },
+        description: {
+          zh: "特朗普称伊朗战事已事实上结束，并称没必要再对伊朗采取军事行动，中东局势走向受关注。",
+          en: "Trump says the Iran war is effectively over and sees no need for further military action, drawing attention to Middle East developments.",
+        },
+      },
+      {
+        title: {
+          zh: "饥一顿饱一顿会降低免疫力",
+          en: "Erratic Eating Lowers Immunity",
+        },
+        description: {
+          zh: "医学研究指出饥一顿饱一顿的饮食方式会降低免疫力，不规律饮食健康风险引发讨论。",
+          en: "Medical research shows erratic eating (feast-or-famine) lowers immunity, sparking discussion on irregular diet health risks.",
+        },
+      },
+      {
+        title: {
+          zh: "德系三巨头的\"中国提款机\"彻底熄火",
+          en: "German Big Three's 'China ATM' Stalls Completely",
+        },
+        description: {
+          zh: "德系三大豪华车品牌在华销量持续下滑，中国提款机效应彻底熄火，市场格局变化引发关注。",
+          en: "German Big Three luxury brands' China sales keep falling, the 'China ATM' effect completely stalls, drawing attention to shifting market dynamics.",
+        },
+      },
+      {
+        title: {
+          zh: "价格大跳水！智利车厘子即将大批上市",
+          en: "Price Plunge! Chilean Cherries Big Harvest Coming",
+        },
+        description: {
+          zh: "智利车厘子即将大批上市且价格大跳水，车厘子自由有望实现，消费者福音。",
+          en: "Chilean cherries arrive in bulk with prices plunging, making cherry freedom possible — good news for consumers.",
+        },
+      },
+      {
+        title: {
+          zh: "政务中心门头遭挖掘机破坏 警方通报",
+          en: "Govt Service Center Gate Destroyed by Excavator, Police Report",
+        },
+        description: {
+          zh: "政务中心门头遭挖掘机破坏，警方通报案件调查情况，事件原因引关注。",
+          en: "A government service center gate is destroyed by an excavator; police report the investigation, drawing attention to the cause.",
+        },
+      },
+      {
+        title: {
+          zh: "英伟达接班人准备好了吗",
+          en: "Is Nvidia's Successor Ready?",
+        },
+        description: {
+          zh: "黄仁勋婚外情风波引发对英伟达接班人和公司治理的讨论。",
+          en: "Huang's affair scandal sparks discussion on Nvidia succession and corporate governance.",
+        },
+      },
+      {
+        title: {
+          zh: "中方回应黄仁勋婚外情事件",
+          en: "China Responds to Huang's Affair Scandal",
+        },
+        description: {
+          zh: "中方就黄仁勋婚外情事件作出回应，事件涉及疑似中国情报线人引发外交关注。",
+          en: "China responds to Huang's affair scandal; the suspected Chinese intelligence connection draws diplomatic attention.",
+        },
+      },
+      {
+        title: {
+          zh: "2/3国人没吃够大豆",
+          en: "2/3 of Chinese Don't Eat Enough Soybeans",
+        },
+        description: {
+          zh: "营养调查显示2/3国人大豆摄入不足，大豆营养健康价值引发关注。",
+          en: "Nutrition survey shows 2/3 of Chinese don't consume enough soybeans, drawing attention to soy nutritional value.",
+        },
+      },
+      {
+        title: {
+          zh: "东北糖葫芦已进化到\"巨无霸\"版本",
+          en: "Northeast Tanghulu Evolves to 'Giant' Version",
+        },
+        description: {
+          zh: "东北糖葫芦推出巨无霸版本，个头和创意引发网络热议。",
+          en: "Northeast tanghulu releases a 'giant' version, its size and creativity sparking online discussion.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-06",
     date: "2026-11-06",
     title: {
