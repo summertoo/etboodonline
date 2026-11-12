@@ -2,6 +2,286 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-12",
+    date: "2026-11-12",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-12",
+      en: "🤖 AI HOT Daily · Nov 12, 2026",
+    },
+    summary: {
+      zh: "Google发布Gemini Decisions API与Gemini Decision 1模型，150-250ms内评估最多1000个封闭式决策题；百度发布ERNIE 5.5 Flash Preview，280B总参数支持1M上下文，11月25日前开源；Runway开源27B世界动作模型Praxis-1（Apache 2.0）；DeepMind发布AlphaGenome 2预测基因变异影响；OpenAI Q3营收达100亿美元；Grok被指生成儿童色情图像面临多起集体诉讼；94.7%的Grok构建应用可被任意访问；Anthropic修订S1文件披露与Microsoft/Google超100亿美元新算力协议；Anthropic发布MAMUBench基准；WSJ报道Nvidia董事会接近决定是否罢免黄仁勋；Anthropic承销商拟将IPO目标估值上调回1.5万亿美元或更高。",
+      en: "Google launches Gemini Decisions API and Gemini Decision 1, evaluating up to 1000 closed-ended decisions in 150-250ms; Baidu releases ERNIE 5.5 Flash Preview, 280B total params with 1M context, open weights by Nov 25; Runway open-sources 27B world action model Praxis-1 (Apache 2.0); DeepMind releases AlphaGenome 2 for gene variant prediction; OpenAI Q3 revenue hits $10B; Grok faces class actions over child sexual abuse material generation; 94.7% of Grok-built apps publicly accessible; Anthropic's revised S1 discloses $10B+ new compute deals with Microsoft and Google; Anthropic publishes MAMUBench; WSJ reports Nvidia board near deciding whether to oust Huang; Anthropic underwriters plan to raise IPO target to $1.5T+.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Google 发布 Gemini Decisions API 与 Gemini Decision 1 模型",
+          en: "Google Launches Gemini Decisions API & Gemini Decision 1",
+        },
+        description: {
+          zh: "可在150-250ms端到端延迟内对文本、图像、音频、视频和PDF（最多256K tokens）一次性评估最多1000个是/否、多选和评分题。",
+          en: "Evaluates up to 1000 yes/no, multiple-choice, and rating questions on text, images, audio, video, and PDF (up to 256K tokens) in 150-250ms end-to-end latency.",
+        },
+      },
+      {
+        title: {
+          zh: "百度发布 ERNIE 5.5 Flash Preview，11 月 25 日前开源",
+          en: "Baidu Releases ERNIE 5.5 Flash Preview, Open Weights by Nov 25",
+        },
+        description: {
+          zh: "基于此前Base模型的首个后训练版本，总参数280B、激活参数14B，支持1M上下文。API已在千帆平台上线，权重将于11月25日前开源。",
+          en: "First post-trained version of the prior Base model, 280B total/14B active params, 1M context. API live on Qianfan, weights open by Nov 25.",
+        },
+      },
+      {
+        title: {
+          zh: "Runway 开源 27B 世界动作模型 Praxis-1",
+          en: "Runway Open-Sources 27B World Action Model Praxis-1",
+        },
+        description: {
+          zh: "27B参数MoE扩散Transformer，同时预测视频与动作，Apache 2.0许可。在NVIDIA RoboLab-120榜单以46.2%成功率居首，超过FLUX 3 Action（42.9%）、Cosmos3 Nano（36.8%）和π0.5（28.0%）。",
+          en: "27B MoE diffusion Transformer predicting video and actions simultaneously, Apache 2.0. Leads NVIDIA RoboLab-120 at 46.2% success, beating FLUX 3 Action (42.9%), Cosmos3 Nano (36.8%), and π0.5 (28.0%).",
+        },
+      },
+      {
+        title: {
+          zh: "DeepMind 发布 AlphaGenome 2 预测基因变异影响",
+          en: "DeepMind Releases AlphaGenome 2 for Gene Variant Prediction",
+        },
+        description: {
+          zh: "可预测DNA变异如何影响数百种人类细胞类型中的基因表达。条件式架构，训练数据超1.07亿单细胞样本覆盖68种组织，TenK10K数据集上识别的因果变异数接近上一代两倍。",
+          en: "Predicts how DNA variants affect gene expression across hundreds of human cell types. Conditional architecture trained on 107M+ single-cell samples covering 68 tissues; identifies nearly twice as many causal variants on TenK10K vs the previous generation.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI Q3 营收达 100 亿美元",
+          en: "OpenAI Q3 Revenue Hits $10 Billion",
+        },
+        description: {
+          zh: "Q3环比增长约50%至100亿美元，但调整后经营亏损从101亿升至109亿美元，效率仍落后于Anthropic。",
+          en: "Q3 grew ~50% QoQ to $10B, but adjusted operating losses rose from $10.1B to $10.9B, still trailing Anthropic on efficiency.",
+        },
+      },
+      {
+        title: {
+          zh: "Grok 被指生成儿童色情图像，面临多起集体诉讼",
+          en: "Grok Faces Class Actions Over Child Sexual Abuse Material",
+        },
+        description: {
+          zh: "多名未成年受害者就Grok被用于把普通照片篡改成儿童性虐待材料对xAI提起多起集体诉讼，律师估计符合索赔条件的受害者可能多达数千人。",
+          en: "Multiple minor victims file class actions against xAI over Grok being used to alter ordinary photos into child sexual abuse material; attorneys estimate thousands of potential claimants.",
+        },
+      },
+      {
+        title: {
+          zh: "94.7% 的 Grok 构建应用可被任意访问",
+          en: "94.7% of Grok-Built Apps Publicly Accessible",
+        },
+        description: {
+          zh: "安全公司Claroc在37,571个仍在线的Grok构建应用中，发现35,578个（94.7%）无需登录即可访问，原因是发布对话框默认预选\"Anyone with the link\"，独立子域名进入可检索的passive DNS数据库。",
+          en: "Claroc finds 35,578 of 37,571 online Grok-built apps (94.7%) accessible without login, due to a pre-selected 'Anyone with the link' publish dialog and independently searchable subdomains in passive DNS.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 修订 S1 披露超 100 亿美元新算力协议",
+          en: "Anthropic's Revised S1 Discloses $10B+ New Compute Deals",
+        },
+        description: {
+          zh: "与Microsoft和Google达成超100亿美元新协议。Microsoft承诺到2033年6月支出至少472亿至最高492亿美元，Google最低承诺从约1145亿升至约1213亿美元，两笔均不可撤销。",
+          en: "New deals with Microsoft and Google exceeding $10B. Microsoft commits $47.2B-$49.2B by June 2033; Google's minimum commitment rises from ~$114.5B to ~$121.3B. Both irrevocable, payable regardless of usage.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 发布 MAMUBench 多用户多智能体基准",
+          en: "Anthropic Publishes MAMUBench Multi-User Agent Benchmark",
+        },
+        description: {
+          zh: "四个多用户多智能体模拟环境（共享API token预算、诊所日历、团体订餐或旅行预订、合并队列），测试Anthropic、OpenAI和Alibaba的前沿模型，单一智能体协调在四类环境中均胜过每个用户各自的智能体团队。",
+          en: "Four multi-user multi-agent simulation environments (shared API token budgets, clinic calendars, group ordering or travel booking, merge queues). Tests Anthropic, OpenAI, and Alibaba frontier models; single-agent coordination beats per-user agent teams in all four.",
+        },
+      },
+      {
+        title: {
+          zh: "WSJ 报道 Nvidia 董事会接近决定是否罢免黄仁勋",
+          en: "WSJ: Nvidia Board Near Decision on Ousting Huang",
+        },
+        description: {
+          zh: "WSJ报道Nvidia董事会接近决定是否罢免CEO黄仁勋，事件起因于婚外情与情报嫌疑丑闻。",
+          en: "WSJ reports the Nvidia board is close to deciding whether to oust CEO Huang, following the affair and espionage-suspect scandal.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic IPO 目标估值拟上调至 1.5 万亿美元或更高",
+          en: "Anthropic IPO Target Raised to $1.5T+",
+        },
+        description: {
+          zh: "承销商拟将IPO目标估值上调回1.5万亿美元或更高，投资需求火热。",
+          en: "Underwriters plan to raise the IPO target valuation back to $1.5 trillion or higher amid strong investment demand.",
+        },
+      },
+      {
+        title: {
+          zh: "Qwen4 预览版上线千问APP",
+          en: "Qwen4 Preview Lands on Tongyi APP",
+        },
+        description: {
+          zh: "Qwen4预览版上线千问APP，千问Go!会员可抢先体验。",
+          en: "Qwen4 preview goes live on the Tongyi APP, with Go! members getting early access.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-12-hot",
+    date: "2026-11-12",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-12",
+      en: "🔥 Hot Topics · Nov 12, 2026",
+    },
+    summary: {
+      zh: "决不能让一个梗毁掉一个孩子，知情人称腾讯裁员50%说法不属实，深圳准备好了APEC氛围拉满，油价今晚有望大幅下降，羽毛球降价竟然和猪肉有关，8岁女孩被老师用戒尺殴打近20分钟，C罗宣布个人首部剧集开机，13岁女孩确诊癌王全身多处转移，马志明正式收郭德纲为义子，奔驰要变了100%为中国，年轻人扎堆到海南上体校，77万亿存款到期会流向哪里，10元快剪店爆火理发刺客好日子到头。",
+      en: "Don't let a meme destroy a child; Tencent 50% layoffs claim denied as false; Shenzhen ready for APEC; oil prices may drop sharply tonight; shuttlecock price cut tied to pork; 8-year-old girl beaten for 20 minutes by teacher; Ronaldo announces first personal series; 13-year-old diagnosed with pancreatic cancer with metastases; Ma Zhiming formally adopts Guo Degang; Mercedes 100% China-bound; youth flock to Hainan sports schools; where will 77 trillion yuan in maturing deposits flow; 10-yuan quick-cut barbers boom, 'barber assassins' days over.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "决不能让一个梗毁掉一个孩子",
+          en: "Don't Let a Meme Destroy a Child",
+        },
+        description: {
+          zh: "网络梗文化对青少年的伤害引发社会热议，呼吁保护儿童心理健康。",
+          en: "Online meme culture's harm to youth sparks heated debate, calls to protect children's mental health.",
+        },
+      },
+      {
+        title: {
+          zh: "知情人：腾讯\"裁员50%\"说法不属实",
+          en: "Insider: Tencent '50% Layoffs' Claim Is False",
+        },
+        description: {
+          zh: "知情人透露腾讯裁员50%的说法不属实，辟谣引发对互联网行业用人前景的关注。",
+          en: "An insider denies the Tencent 50% layoffs claim, drawing attention to tech industry hiring outlook.",
+        },
+      },
+      {
+        title: {
+          zh: "深圳准备好了！APEC 氛围拉满",
+          en: "Shenzhen Ready! APEC Atmosphere at Full",
+        },
+        description: {
+          zh: "深圳为APEC会议做好准备，会议氛围拉满，城市迎客准备就绪。",
+          en: "Shenzhen is ready for the APEC meeting with the atmosphere at full, city preparations complete.",
+        },
+      },
+      {
+        title: {
+          zh: "油价今晚有望大幅下降",
+          en: "Oil Prices May Drop Sharply Tonight",
+        },
+        description: {
+          zh: "油价今晚有望大幅下降，国际油价波动引发关注。",
+          en: "Oil prices expected to drop sharply tonight, drawing attention to international oil volatility.",
+        },
+      },
+      {
+        title: {
+          zh: "羽毛球降价竟然和猪肉有关",
+          en: "Shuttlecock Price Cut Tied to Pork",
+        },
+        description: {
+          zh: "羽毛球降价竟与猪肉价格相关，鹅毛供应链经济逻辑引发讨论。",
+          en: "Shuttlecock price cuts turn out to be linked to pork prices, sparking discussion on goose-feather supply chain economics.",
+        },
+      },
+      {
+        title: {
+          zh: "8 岁女孩被老师用戒尺殴打近 20 分钟",
+          en: "8-Year-Old Girl Beaten for 20 Minutes by Teacher",
+        },
+        description: {
+          zh: "8岁女孩被老师用戒尺殴打近20分钟，校园体罚问题引发社会关注。",
+          en: "An 8-year-old girl beaten for nearly 20 minutes by a teacher with a ruler, school corporal punishment sparks concern.",
+        },
+      },
+      {
+        title: {
+          zh: "C 罗宣布个人首部剧集开机",
+          en: "Ronaldo Announces First Personal Series",
+        },
+        description: {
+          zh: "C罗宣布个人首部剧集开机，跨界娱乐圈引发关注。",
+          en: "Ronaldo announces the start of his first personal series, cross-industry entertainment move draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "13 岁女孩确诊\"癌王\" 全身多处转移",
+          en: "13-Year-Old Diagnosed with 'Cancer King', Multiple Metastases",
+        },
+        description: {
+          zh: "13岁女孩确诊胰腺癌（癌王）且全身多处转移，儿童癌症引发社会同情与关注。",
+          en: "A 13-year-old girl diagnosed with pancreatic cancer (the 'cancer king') with multiple metastases, child cancer draws sympathy and attention.",
+        },
+      },
+      {
+        title: {
+          zh: "马志明正式收郭德纲为义子",
+          en: "Ma Zhiming Formally Adopts Guo Degang",
+        },
+        description: {
+          zh: "相声大师马志明正式收郭德纲为义子，相声界传承引发关注。",
+          en: "Crosstalk master Ma Zhiming formally adopts Guo Degang as his son, crosstalk lineage draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "奔驰要变了：100% 为中国",
+          en: "Mercedes Changing: 100% for China",
+        },
+        description: {
+          zh: "奔驰宣布全面转向中国市场，100%为中国，战略调整引发关注。",
+          en: "Mercedes announces a full pivot to the China market, 100% for China, strategic shift draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "年轻人扎堆到海南\"上体校\"",
+          en: "Youth Flock to Hainan Sports Schools",
+        },
+        description: {
+          zh: "年轻人扎堆到海南上体校，新型生活方式与体育教育热潮引发关注。",
+          en: "Young people flock to Hainan sports schools, a new lifestyle trend and sports education boom draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "77 万亿存款到期会流向哪里",
+          en: "Where Will 77 Trillion in Maturing Deposits Flow?",
+        },
+        description: {
+          zh: "77万亿存款到期引发对资金流向的关注，居民资产配置与消费前景成焦点。",
+          en: "77 trillion yuan in maturing deposits raises questions about fund flows, with household asset allocation and consumption outlook in focus.",
+        },
+      },
+      {
+        title: {
+          zh: "10 元快剪店爆火 理发刺客好日子到头",
+          en: "10-Yuan Quick-Cut Bars Boom, 'Barber Assassins' Days Over",
+        },
+        description: {
+          zh: "10元快剪店爆火，理发刺客好日子到头，便民服务受到欢迎。",
+          en: "10-yuan quick-cut bars go viral, ending the 'barber assassin' era, affordable service welcomed.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-11",
     date: "2026-11-11",
     title: {
