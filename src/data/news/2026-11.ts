@@ -2,6 +2,296 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-13",
+    date: "2026-11-13",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-13",
+      en: "🤖 AI HOT Daily · Nov 13, 2026",
+    },
+    summary: {
+      zh: "NVIDIA宣布CEO变动：黄仁勋辞任总裁/CEO/董事，CFO Colette Kress出任临时CEO；Google DeepMind发布Gemini 4 Hydrogen主打快速日常编码与智能体工作流；Anthropic推出Claude Meetings以参会者身份加入视频会议；Anthropic建议将Claude Opus 5.5作为知识工作日常主力；Google智能眼镜开放预购12月10日发货；Replit Agent新增代购与Google Ads投放能力；Anthropic官宣启动IPO；民主党对Nvidia对华芯片销售启动调查；Rohan Paul类比乔布斯被逐评NVIDIA放走黄仁勋；OpenRouter详解自纠错网站本地化流水线；OpenRouter实测六模型四层防护解决AI Agent无限循环；Thinking Machines开源Inkling 2 Small模型权重（Apache 2.0）。",
+      en: "NVIDIA announces CEO transition: Huang resigns as President/CEO/Director, CFO Colette Kress becomes interim CEO; Google DeepMind releases Gemini 4 Hydrogen for fast everyday coding and agent workflows; Anthropic launches Claude Meetings, joining video calls as a participant; Anthropic recommends Claude Opus 5.5 as daily driver for knowledge work; Google smart glasses open pre-orders, shipping Dec 10; Replit Agent adds purchasing and Google Ads capabilities; Anthropic officially announces IPO; Democrats launch Nvidia China chip sales investigation; Rohan Paul compares to Jobs' ouster on NVIDIA letting Huang go; OpenRouter details self-correcting localization pipeline; OpenRouter tests six models with four-layer protection against infinite loops; Thinking Machines open-sources Inkling 2 Small weights (Apache 2.0).",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "NVIDIA 宣布 CEO 变动：黄仁勋辞任，Colette Kress 任临时 CEO",
+          en: "NVIDIA Announces CEO Transition: Huang Resigns, Kress Interim CEO",
+        },
+        description: {
+          zh: "黄仁勋即刻辞去总裁、CEO及董事职务，CFO Colette Kress被任命为临时CEO直至选定永久继任者，董事会已启动内外部人选遴选。",
+          en: "Huang immediately resigns as President, CEO, and Director. CFO Colette Kress appointed interim CEO until a permanent successor is chosen; board begins internal/external search.",
+        },
+      },
+      {
+        title: {
+          zh: "Google DeepMind 发布 Gemini 4 Hydrogen",
+          en: "Google DeepMind Releases Gemini 4 Hydrogen",
+        },
+        description: {
+          zh: "定位快速执行日常编码与智能体工作流，面向Gemini API、AI Studio、Gemini应用、Google Search等全层级开放。",
+          en: "Positioned for fast everyday coding and agent workflows, available across Gemini API, AI Studio, Gemini app, and Google Search at all tiers.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 推出 Claude Meetings",
+          en: "Anthropic Launches Claude Meetings",
+        },
+        description: {
+          zh: "Claude可作为可见参会者加入视频通话，在会中回答提问、协作创建文档和白板，并生成笔记和行动项。",
+          en: "Claude joins video calls as a visible participant, answering questions, co-creating documents and whiteboards, and generating notes and action items.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 建议将 Claude Opus 5.5 作为知识工作日常主力",
+          en: "Anthropic Recommends Claude Opus 5.5 as Daily Driver",
+        },
+        description: {
+          zh: "Opus 5.5成为Pro、Max、Ultra和Team套餐的默认模型，并推荐作为研究、分析和写作等知识工作的日常主力。",
+          en: "Opus 5.5 becomes default for Pro, Max, Ultra, and Team plans, recommended as daily driver for research, analysis, and writing knowledge work.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 智能眼镜开放预购，12 月 10 日发货",
+          en: "Google Smart Glasses Open Pre-Orders, Shipping Dec 10",
+        },
+        description: {
+          zh: "用户可在glasses.google下单，12月10日发货。首批用户可到部分Warby Parker、Gentle Monster和Google门店试戴体验。",
+          en: "Order at glasses.google, shipping Dec 10. First users can try at select Warby Parker, Gentle Monster, and Google stores.",
+        },
+      },
+      {
+        title: {
+          zh: "Replit Agent 新增代购能力和 Google Ads 投放功能",
+          en: "Replit Agent Adds Purchasing & Google Ads",
+        },
+        description: {
+          zh: "通过Stripe Link和Visa为企业代购物资，以及在Replit内直接创建和投放Google Ads覆盖Search、YouTube等渠道。",
+          en: "Purchases supplies for businesses via Stripe Link and Visa; creates and runs Google Ads in Replit covering Search, YouTube, and more.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 官宣启动首次公开募股（IPO）",
+          en: "Anthropic Officially Announces IPO",
+        },
+        description: {
+          zh: "公布入口ipo.anthropic.com，已向SEC提交注册声明及招股说明书，证券在注册声明生效前不得出售。",
+          en: "Announces entry point ipo.anthropic.com, has filed registration statement and prospectus with SEC; securities may not be sold until registration becomes effective.",
+        },
+      },
+      {
+        title: {
+          zh: "民主党对 Nvidia 对华芯片销售启动调查",
+          en: "Democrats Launch Nvidia China Chip Sales Investigation",
+        },
+        description: {
+          zh: "Rep. Richard Neal和Sen. Ron Wyden就特朗普政府处理Nvidia对华芯片销售一事开启调查，并致函商务部长Howard Lutnick要求保存相关记录。",
+          en: "Rep. Richard Neal and Sen. Ron Wyden open investigation into the Trump administration's handling of Nvidia's China chip sales, writing Commerce Secretary Howard Lutnick to preserve records.",
+        },
+      },
+      {
+        title: {
+          zh: "Rohan Paul 类比乔布斯被逐，评 NVIDIA 放走黄仁勋",
+          en: "Rohan Paul Compares to Jobs' Ouster on NVIDIA Letting Huang Go",
+        },
+        description: {
+          zh: "Lex Fridman称NVIDIA让黄仁勋离开对美国和人类都是巨大错误，堪比Apple当年解雇Steve Jobs但影响更大。Rohan Paul列举Atari、Apple、Uber、OpenAI历次创始人被逐，称创始人本身就是战略。",
+          en: "Lex Fridman says NVIDIA letting Huang go is a huge mistake for America and humanity, worse than Apple firing Steve Jobs. Rohan Paul lists Atari, Apple, Uber, OpenAI founder ousters — founders themselves are strategy.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 详解自纠错网站本地化流水线",
+          en: "OpenRouter Details Self-Correcting Localization Pipeline",
+        },
+        description: {
+          zh: "上线7种语言Beta本地化，GPT-6.1 Sol翻译16,918条字符串，经代码检查、同模型校验和每日AI审查重试，最坏情况每条约20次模型调用。全站重译约$460，约为Smartling机器翻译牌价的6%。",
+          en: "Launches 7-language Beta localization. GPT-6.1 Sol translates 16,918 strings via code checks, same-model validation, daily AI review retries; worst case ~20 model calls per string. Full-site retranslation ~$460, about 6% of Smartling machine translation list price.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenRouter 实测六模型解决 AI Agent 无限循环",
+          en: "OpenRouter Tests Six Models Against Agent Infinite Loops",
+        },
+        description: {
+          zh: "讲解AI Agent因工具反复失败陷入无限循环的成因，给出四层防护：doom-loop检测、loopKey参数归一化、stopWhen步数与成本上限、API key信用额度。",
+          en: "Explains causes of AI agents looping on repeated tool failures; four-layer protection: doom-loop detection, loopKey normalization, stopWhen step/cost caps, API key credit limits.",
+        },
+      },
+      {
+        title: {
+          zh: "Thinking Machines 开源 Inkling 2 Small 模型权重",
+          en: "Thinking Machines Open-Sources Inkling 2 Small Weights",
+        },
+        description: {
+          zh: "采用Apache 2.0许可开源Inkling 2 Small模型权重。",
+          en: "Open-sources Inkling 2 Small weights under Apache 2.0 license.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-13-hot",
+    date: "2026-11-13",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-13",
+      en: "🔥 Hot Topics · Nov 13, 2026",
+    },
+    summary: {
+      zh: "买来的副主任帽子戴谁头上都是耻辱，发悼念文配朴树图网友已设私密账号，双11为何无感了，刘欢妻子发8000字长文，刘欢录跨年晚会时癌细胞疑已扩散，台湾青年称身份证写的是台湾省，赵露思当导演了，网传商家扬言取消外卖系谣言，拜登称若早知患癌会辞职，零元面馆周边商户称房贷都还不起，上海10人组装手搓电池被抓，耐克中国不打价格战了，意大利3-1法国，男子应聘司机干了6小时倒贴2万。",
+      en: "Bought deputy director hat is shame on whoever wears it; memorial post with Pu Shu image, netizen sets account private; why Double 11 feels 'unremarkable'; Liu Huan's wife posts 8,000-word essay; cancer suspected spread during New Year gala recording; Taiwan youth: our ID card says Taiwan Province; Zhao Lusi becomes director; 'merchant threatens to cancel takeout' rumor debunked; Biden: would have resigned if I knew I had cancer; zero-yuan noodle shop neighbors can't pay mortgages; 10 people caught assembling hand-made batteries in Shanghai; Nike China stops 'price war'; Italy 3-1 France; man works 6 hours as driver, loses 20K yuan.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "买来的副主任帽子 戴谁头上都是耻辱",
+          en: "Bought Deputy Director Hat Is Shame on Whoever Wears It",
+        },
+        description: {
+          zh: "买官卖官现象被曝光，买来的副主任帽子戴谁头上都是耻辱，引发对选人用人腐败的讨论。",
+          en: "Buying and selling official positions exposed; a bought deputy director title is shameful for anyone — sparking discussion on personnel corruption.",
+        },
+      },
+      {
+        title: {
+          zh: "发悼念文配朴树图网友已设私密账号",
+          en: "Memorial Post with Pu Shu Image, Netizen Sets Account Private",
+        },
+        description: {
+          zh: "网友发悼念文误配朴树照片后已设私密账号，配图失误引发讨论。",
+          en: "A netizen's memorial post mistakenly used a Pu Shu image, then set the account private — the image error sparks discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "双11为何\"无感\"了",
+          en: "Why Does Double 11 Feel 'Unremarkable'?",
+        },
+        description: {
+          zh: "双11购物节热度下降，为何无感了引发对消费习惯变化的讨论。",
+          en: "Double 11 shopping festival hype fades; why it feels unremarkable sparks discussion on changing consumption habits.",
+        },
+      },
+      {
+        title: {
+          zh: "刘欢妻子发 8000 字长文",
+          en: "Liu Huan's Wife Posts 8,000-Word Essay",
+        },
+        description: {
+          zh: "歌手刘欢去世后，其妻子发布8000字长文，讲述抗癌历程与生活点滴。",
+          en: "After singer Liu Huan's passing, his wife publishes an 8,000-word essay recounting his cancer battle and life moments.",
+        },
+      },
+      {
+        title: {
+          zh: "刘欢录跨年晚会时癌细胞疑已扩散",
+          en: "Cancer Suspected to Have Spread During NYE Gala Recording",
+        },
+        description: {
+          zh: "刘欢录跨年晚会时癌细胞疑已扩散，生前仍坚持演出令人动容。",
+          en: "Cancer suspected to have already spread when Liu Huan recorded the New Year gala; his dedication to performing is moving.",
+        },
+      },
+      {
+        title: {
+          zh: "台湾青年：我们的身份证写的是台湾省",
+          en: "Taiwan Youth: Our ID Card Says Taiwan Province",
+        },
+        description: {
+          zh: "台湾青年指出身份证写的是台湾省，两岸同属一个中国的认知引发讨论。",
+          en: "A Taiwan youth points out the ID card says Taiwan Province, sparking discussion on the one-China understanding.",
+        },
+      },
+      {
+        title: {
+          zh: "赵露思当导演了",
+          en: "Zhao Lusi Becomes Director",
+        },
+        description: {
+          zh: "演员赵露思跨界当导演，转型引发影视圈关注。",
+          en: "Actress Zhao Lusi crosses over to directing, the transition draws film industry attention.",
+        },
+      },
+      {
+        title: {
+          zh: "网传\"商家扬言取消外卖\"系谣言",
+          en: "'Merchant Threatens to Cancel Takeout' Is Rumor",
+        },
+        description: {
+          zh: "网传商家扬言取消外卖被证实系谣言，官方辟谣澄清。",
+          en: "The rumored merchant threatening to cancel takeout is confirmed false; officials debunk the claim.",
+        },
+      },
+      {
+        title: {
+          zh: "拜登：若早知患癌 我会辞职",
+          en: "Biden: Would Have Resigned If I Knew I Had Cancer",
+        },
+        description: {
+          zh: "拜登称若早知自己患癌会辞职，健康问题引发关注。",
+          en: "Biden says he would have resigned if he'd known he had cancer, health issues draw attention.",
+        },
+      },
+      {
+        title: {
+          zh: "零元面馆周边商户：我们房贷都还不起",
+          en: "Zero-Yuan Noodle Shop Neighbors: We Can't Pay Mortgages",
+        },
+        description: {
+          zh: "零元面馆爆火后周边商户生意受冲击，称房贷都还不起，经营困境引发关注。",
+          en: "After the zero-yuan noodle shop goes viral, neighboring merchants' business suffers; they say they can't pay mortgages, drawing attention to their plight.",
+        },
+      },
+      {
+        title: {
+          zh: "上海 10 人组装手搓电池被抓",
+          en: "10 People Caught Assembling Hand-Made Batteries in Shanghai",
+        },
+        description: {
+          zh: "上海10人因组装手搓电池被抓，黑作坊安全隐患引发关注。",
+          en: "10 people caught assembling hand-made batteries in Shanghai; hidden workshop safety hazards draw attention.",
+        },
+      },
+      {
+        title: {
+          zh: "耐克中国不打\"价格战\"了",
+          en: "Nike China Stops 'Price War'",
+        },
+        description: {
+          zh: "耐克中国宣布不打价格战了，品牌策略调整引发关注。",
+          en: "Nike China announces it's ending the price war, the brand strategy shift draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "意大利 3-1 法国",
+          en: "Italy 3-1 France",
+        },
+        description: {
+          zh: "意大利3-1击败法国，足球赛事结果引发球迷热议。",
+          en: "Italy beats France 3-1, the football result sparks fan discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "男子应聘司机干了 6 小时倒贴 2 万",
+          en: "Man Works 6 Hours as Driver, Loses 20K Yuan",
+        },
+        description: {
+          zh: "男子应聘司机干了6小时反而倒贴2万元，招聘骗局引发关注。",
+          en: "A man works 6 hours as a driver but loses 20K yuan — recruitment scam draws attention.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-12",
     date: "2026-11-12",
     title: {
