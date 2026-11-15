@@ -2,6 +2,246 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-15",
+    date: "2026-11-15",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-15",
+      en: "🤖 AI HOT Daily · Nov 15, 2026",
+    },
+    summary: {
+      zh: "Nathan Lambert分析黄仁勋辞职后美国开源模型生态的真空；马斯克等高管联署请愿要求Nvidia恢复黄仁勋CEO职务，已获超11.5万签名；Cursor披露安全事件调查结果，恶意Claude Code扩展波及最多5000用户；黄仁勋离开后亚洲多地回应，韩国称Nvidia重申供应26万块GPU；美联储金融稳定报告称AI成为华尔街头号金融风险；Thinking Machines Lab发布端到端4-bit训练技术报告；Anthropic CEO Amodei在IPO前承认明年存在巨大不确定性。",
+      en: "Nathan Lambert analyzes the vacuum in US open-source model ecosystem after Huang's resignation; Musk and other executives sign petition urging Nvidia to reinstate Huang as CEO, 115K+ signatures; Cursor discloses security investigation, malicious Claude Code extensions affected up to 5,000 users; Asian governments respond to Huang's exit, Korea says Nvidia reaffirms 260K GPU supply; Fed financial stability report names AI as Wall Street's top financial risk; Thinking Machines Lab publishes end-to-end 4-bit training technical report; Anthropic CEO Amodei admits huge uncertainty next year before IPO.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Nathan Lambert 分析黄仁勋辞职后开源生态真空",
+          en: "Nathan Lambert Analyzes Open-Source Vacuum After Huang's Resignation",
+        },
+        description: {
+          zh: "认为Nvidia对开源模型的资金支持很可能随黄仁勋的离开而干涸，公司首要目标是稳住局面并向客户交付。",
+          en: "Nvidia's funding of open-source models likely dries up with Huang's departure; the company's first priority is stabilizing and delivering to customers.",
+        },
+      },
+      {
+        title: {
+          zh: "马斯克等高管联署请愿要求恢复黄仁勋 CEO 职务",
+          en: "Musk & Execs Petition Nvidia to Reinstate Huang as CEO",
+        },
+        description: {
+          zh: "请愿书已获超11.5万个签名，包括5,965名在职员工、1,108名前员工和63,063名股东。马斯克、Replit CEO Amjad Masad和Epic Games CEO Tim Sweeney均已联署。",
+          en: "Petition exceeds 115K signatures, including 5,965 current employees, 1,108 former employees, and 63,063 shareholders. Musk, Replit CEO Amjad Masad, and Epic Games CEO Tim Sweeney signed.",
+        },
+      },
+      {
+        title: {
+          zh: "Cursor 披露安全事件调查结果",
+          en: "Cursor Discloses Security Incident Investigation",
+        },
+        description: {
+          zh: "攻击者利用Fireworks暴露的访问密钥读取用于模型训练的coding agent trace，恶意Claude Code扩展波及最多5000用户，少于0.01%客户的API凭证暴露。",
+          en: "Attacker used exposed Fireworks access keys to read coding agent traces used for model training; malicious Claude Code extensions affected up to 5,000 users, less than 0.01% of clients' API credentials exposed.",
+        },
+      },
+      {
+        title: {
+          zh: "黄仁勋离开 Nvidia 后，亚洲多地如何回应",
+          en: "Asian Governments Respond to Huang's Exit",
+        },
+        description: {
+          zh: "韩国科技主管部门称Nvidia重申将向韩国供应26万块先进GPU并继续联合AI项目；台湾地区经济部门认为此事不太可能显著改变全球AI产业增长；日本经济产业省表示将密切关注Nvidia。",
+          en: "Korea's science ministry says Nvidia reaffirms supplying 260K advanced GPUs and continuing joint AI projects; Taiwan's economic ministry says unlikely to significantly change global AI growth; Japan's METI will closely watch Nvidia.",
+        },
+      },
+      {
+        title: {
+          zh: "美联储金融稳定报告：AI 成为华尔街头号金融风险",
+          en: "Fed Report: AI Is Wall Street's Top Financial Risk",
+        },
+        description: {
+          zh: "纽约联储调查显示87%的市场人士将AI列为首要金融风险，高于春季的50%。截至10月AI基础设施债务超6800亿美元，约为2023年全年的5倍、占投资级公司借贷约31%。",
+          en: "NY Fed survey shows 87% of market participants rank AI as the top financial risk, up from 50% in spring. AI infrastructure debt exceeds $680B through October, ~5x full-year 2023, ~31% of investment-grade corporate borrowing.",
+        },
+      },
+      {
+        title: {
+          zh: "Thinking Machines Lab 发布端到端 4-bit 训练技术报告",
+          en: "Thinking Machines Publishes End-to-End 4-Bit Training Report",
+        },
+        description: {
+          zh: "在Inkling 2 Small上从预训练到RL rollout统一使用NVFP4前向与MXFP8反向的数值配方。",
+          en: "On Inkling 2 Small, unified NVFP4 forward and MXFP8 backward numeric recipe from pretraining to RL rollout.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic CEO Amodei 承认明年存在巨大不确定性",
+          en: "Anthropic CEO Amodei Admits Huge Uncertainty Next Year",
+        },
+        description: {
+          zh: "Amodei在IPO前承认明年存在巨大不确定性，算力是公司最深的商业两难。",
+          en: "Amodei admits huge uncertainty next year before IPO; compute is the company's deepest business dilemma.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-15-hot",
+    date: "2026-11-15",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-15",
+      en: "🔥 Hot Topics · Nov 15, 2026",
+    },
+    summary: {
+      zh: "见识到秋假的威力了，雷鸟不用退款了，S16总决赛中国战队BLG逆转夺冠，央行重大调整，中国近六成家庭户不超过两个人，30元一斤的牛肉里根本没有牛肉，猪肉价格跌到10年新低，129万元的天价抗癌药有望降至10万，余承东称大折叠已成为千万人的主力机，胖东来羽绒服标注进货价与毛利率，短剧4000元成本做出6000多万热度，文章《麦穗与羊》爆火作者发声，赵本山《慌啥子嘛》第一句就忘词了，美团深圳全城骑手订单超时免责。",
+      en: "Seeing the power of autumn break; Lei Niao no refund needed; S16 finals: Chinese team BLG comeback champions; major PBoC adjustment; nearly 60% of Chinese households have no more than two people; 30-yuan beef has no beef at all; pork prices hit 10-year low; 1.29M cancer drug may drop to 100K; Yu Chengdong: big foldables are main phone for 10M people; Pangdonglai down jackets label cost & margin; short drama 4K cost yields 60M+ heat; 'Wheat and Sheep' article goes viral, author speaks; Zhao Benshan forgets lyrics on first line; Meituan: Shenzhen riders exempt from overtime penalties.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "见识到秋假的威力了",
+          en: "Seeing the Power of Autumn Break",
+        },
+        description: {
+          zh: "多地中小学试行秋假，秋假的威力引发家长和学生对假期的讨论。",
+          en: "Many schools trial autumn breaks; the power of autumn break sparks discussion among parents and students.",
+        },
+      },
+      {
+        title: {
+          zh: "雷鸟不用退款了",
+          en: "Lei Niao No Refund Needed",
+        },
+        description: {
+          zh: "雷鸟品牌宣布无需退款，消费者权益话题引发关注。",
+          en: "Lei Niao brand announces no refund needed, consumer rights topic draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "S16 总决赛：中国战队 BLG 逆转夺冠",
+          en: "S16 Finals: Chinese Team BLG Comeback Champions",
+        },
+        description: {
+          zh: "英雄联盟S16总决赛中国战队BLG逆转夺冠，电竞圈沸腾。",
+          en: "Chinese team BLG completes a comeback to win the League of Legends S16 finals, electrifying the esports scene.",
+        },
+      },
+      {
+        title: {
+          zh: "央行重大调整",
+          en: "Major PBoC Adjustment",
+        },
+        description: {
+          zh: "央行宣布重大政策调整，货币政策动向引发市场关注。",
+          en: "The People's Bank of China announces a major policy adjustment, drawing market attention to monetary policy direction.",
+        },
+      },
+      {
+        title: {
+          zh: "中国近六成家庭户不超过两个人",
+          en: "Nearly 60% of Chinese Households Have No More Than Two People",
+        },
+        description: {
+          zh: "数据显示中国近六成家庭户不超过两个人，家庭结构变化引发社会讨论。",
+          en: "Data shows nearly 60% of Chinese households have at most two people, household structure changes spark societal discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "30 元一斤的牛肉里根本没有牛肉",
+          en: "30-Yuan Beef Has No Beef at All",
+        },
+        description: {
+          zh: "30元一斤的牛肉被曝根本没有牛肉成分，食品安全问题引发关注。",
+          en: "30-yuan beef exposed as containing no beef at all, food safety issue draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "猪肉价格跌到 10 年新低",
+          en: "Pork Prices Hit 10-Year Low",
+        },
+        description: {
+          zh: "猪肉价格跌到10年新低，养殖户承压，市场供需关系引发关注。",
+          en: "Pork prices hit a 10-year low, pressuring farmers; market supply-demand dynamics draw attention.",
+        },
+      },
+      {
+        title: {
+          zh: "129 万元的天价抗癌药有望降至 10 万",
+          en: "1.29M Cancer Drug May Drop to 100K",
+        },
+        description: {
+          zh: "129万元的天价抗癌药有望降至10万元，医保谈判进展引发患者期待。",
+          en: "The 1.29 million yuan cancer drug may drop to 100K, medical insurance negotiations raise patient hopes.",
+        },
+      },
+      {
+        title: {
+          zh: "余承东：大折叠已成为千万人的主力机",
+          en: "Yu Chengdong: Big Foldables Are Main Phone for 10M People",
+        },
+        description: {
+          zh: "余承东称大折叠屏已成为千万人的主力机，折叠屏市场爆发引发关注。",
+          en: "Yu Chengdong says big foldables are the main phone for 10M people, foldable market boom draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "胖东来羽绒服标注进货价与毛利率",
+          en: "Pangdonglai Down Jackets Label Cost & Margin",
+        },
+        description: {
+          zh: "胖东来羽绒服标注进货价与毛利率，价格透明引发消费者好评。",
+          en: "Pangdonglai down jackets label purchase cost and gross margin, price transparency earns consumer praise.",
+        },
+      },
+      {
+        title: {
+          zh: "短剧 4000 元成本做出 6000 多万热度",
+          en: "Short Drama 4K Cost Yields 60M+ Heat",
+        },
+        description: {
+          zh: "一部短剧以4000元成本做出6000多万热度，低成本高回报引发行业关注。",
+          en: "A short drama with 4,000 yuan cost generates 60M+ heat, low-cost high-return draws industry attention.",
+        },
+      },
+      {
+        title: {
+          zh: "文章《麦穗与羊》爆火 作者发声",
+          en: "'Wheat and Sheep' Article Goes Viral, Author Speaks",
+        },
+        description: {
+          zh: "文章《麦穗与羊》爆火，作者发声回应，文学与短视频碰撞引发讨论。",
+          en: "The article 'Wheat and Sheep' goes viral, the author responds, literature meets short video sparking discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "赵本山《慌啥子嘛》第一句就忘词了",
+          en: "Zhao Benshan Forgets Lyrics on First Line",
+        },
+        description: {
+          zh: "赵本山演唱《慌啥子嘛》第一句就忘词了，喜剧效果引发网友讨论。",
+          en: "Zhao Benshan forgets the lyrics on the first line of 'Huang Sha Zi Ma', comedic effect sparks netizen discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "美团：深圳全城骑手订单超时免责",
+          en: "Meituan: Shenzhen Riders Exempt from Overtime Penalties",
+        },
+        description: {
+          zh: "美团宣布深圳全城骑手订单超时免责，恶劣天气配送保障引发关注。",
+          en: "Meituan announces Shenzhen riders exempt from overtime penalties, delivery protection in bad weather draws attention.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-13",
     date: "2026-11-13",
     title: {
