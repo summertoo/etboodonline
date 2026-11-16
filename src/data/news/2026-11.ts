@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-16",
+    date: "2026-11-16",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-16",
+      en: "🤖 AI HOT Daily · Nov 16, 2026",
+    },
+    summary: {
+      zh: "Google Search集成Gemini 4 Hydrogen带来重大升级；OpenAI推出ChatGPT Wallet支付功能；OpenAI推出ChatGPT Businesses商家功能；ChatGPT Enterprise上线AWS Marketplace；OpenAI推出Control Room追踪并停止研究基础设施中的模型工作负载；Google Wallet接入Gemini提供个人财务洞察；Gemini登陆Apple CarPlay；Google发布5个视觉艺术家设计的Flow工具；Google推出Tabletop协作空间；OpenAI向格点定义标准模型迈进一步；Google Cloud分享2027年网络安全预期；Google探讨智能眼镜隐私保护设计；Tor Project发布快速响应DoS防御修复。",
+      en: "Google Search gets major upgrade integrating Gemini 4 Hydrogen; OpenAI launches ChatGPT Wallet for payments; OpenAI launches ChatGPT Businesses; ChatGPT Enterprise available on AWS Marketplace; OpenAI introduces Control Room to track and stop model workloads in research infrastructure; Google Wallet connects to Gemini for personal finance insights; Gemini arrives on Apple CarPlay; Google releases 5 artist-designed Flow tools; Google launches Tabletop collaborative space; OpenAI takes step toward defining the Standard Model on lattice; Google Cloud shares 2027 cyber security outlook; Google explores privacy protections for smart glasses; Tor Project ships rapid-response DoS defense fix.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Google Search 集成 Gemini 4 Hydrogen 重大升级",
+          en: "Google Search Major Upgrade with Gemini 4 Hydrogen",
+        },
+        description: {
+          zh: "Google Search获得重大升级，集成Gemini 4 Hydrogen提供更智能的搜索体验。",
+          en: "Google Search receives a major upgrade integrating Gemini 4 Hydrogen for smarter search experiences.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 推出 ChatGPT Wallet",
+          en: "OpenAI Launches ChatGPT Wallet",
+        },
+        description: {
+          zh: "OpenAI推出ChatGPT Wallet，支持支付相关功能。",
+          en: "OpenAI launches ChatGPT Wallet supporting payment-related features.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 推出 ChatGPT Businesses 商家功能",
+          en: "OpenAI Launches ChatGPT Businesses",
+        },
+        description: {
+          zh: "OpenAI在ChatGPT中推出Businesses商家功能，服务企业用户。",
+          en: "OpenAI launches Businesses in ChatGPT to serve enterprise users.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT Enterprise 上线 AWS Marketplace",
+          en: "ChatGPT Enterprise Available on AWS Marketplace",
+        },
+        description: {
+          zh: "OpenAI宣布ChatGPT Enterprise正式在AWS Marketplace提供。",
+          en: "OpenAI announces ChatGPT Enterprise is now available on AWS Marketplace.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 推出 Control Room 中央系统",
+          en: "OpenAI Introduces Control Room",
+        },
+        description: {
+          zh: "用于跨研究基础设施追踪和停止模型工作负载的中央系统。",
+          en: "Central system for tracking and stopping model workloads across research infrastructure.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Wallet 接入 Gemini 获取个人财务洞察",
+          en: "Google Wallet Connects to Gemini for Financial Insights",
+        },
+        description: {
+          zh: "Google推出将Google Wallet连接到Gemini的功能，提供个人财务洞察。",
+          en: "Google introduces connecting Google Wallet to Gemini for personal finance insights.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 登陆 Apple CarPlay",
+          en: "Gemini Arrives on Apple CarPlay",
+        },
+        description: {
+          zh: "Google宣布Gemini现已支持Apple CarPlay，可在车内语音交互。",
+          en: "Google announces Gemini now supports Apple CarPlay for in-car voice interaction.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布 5 个艺术家设计的 Flow 工具",
+          en: "Google Releases 5 Artist-Designed Flow Tools",
+        },
+        description: {
+          zh: "Google发布5个由视觉艺术家设计的全新Flow工具。",
+          en: "Google releases 5 new Flow tools designed by visual artists.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 推出 Tabletop 协作空间",
+          en: "Google Launches Tabletop Collaborative Space",
+        },
+        description: {
+          zh: "可定制的协作空间，供团队规划、娱乐和协作。",
+          en: "Customizable collaborative space for teams to plan, play, and collaborate.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 向格点定义标准模型迈进一步",
+          en: "OpenAI Steps Toward Defining Standard Model on Lattice",
+        },
+        description: {
+          zh: "OpenAI发布研究，朝向在格点上定义标准模型迈进一步。",
+          en: "OpenAI publishes research taking a step toward defining the Standard Model on a lattice.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Cloud 分享 2027 年网络安全预期",
+          en: "Google Cloud Shares 2027 Cyber Security Outlook",
+        },
+        description: {
+          zh: "Google Cloud负责人分享2027年网络安全领域的预期。",
+          en: "Google Cloud leaders share expectations for cyber security in 2027.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 探讨智能眼镜隐私保护设计",
+          en: "Google Explores Privacy Protections for Smart Glasses",
+        },
+        description: {
+          zh: "Google探讨智能眼镜的隐私保护设计，平衡体验与隐私。",
+          en: "Google explores privacy protection design for smart glasses, balancing experience and privacy.",
+        },
+      },
+      {
+        title: {
+          zh: "Tor Project 发布 DoS 防御修复",
+          en: "Tor Project Ships DoS Defense Fix",
+        },
+        description: {
+          zh: "Tor Project发布快速响应DoS防御修复，应对持续DDoS攻击。",
+          en: "Tor Project ships rapid-response DoS defense fix to counter ongoing DDoS attacks.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-16-hot",
+    date: "2026-11-16",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-16",
+      en: "🔥 Hot Topics · Nov 16, 2026",
+    },
+    summary: {
+      zh: "习近平将同普京特朗普在深圳会晤，不建议小孩玩这个因为我没玩过，看一颗蓝莓的APEC加速度，满大街的银杏树为啥还是濒危树种，久违的赵本山接住了一代人的焦虑，DeepSeek算力不足，研究表明吃对碳水的人不易胖，国家统计局称房地产市场出现积极变化，人民日报评维修刺客变味的业绩考核，2孩非亲生案女方被判赔38万，10月份全国城镇调查失业率为5.1%，第二代iPhone Duo曝光，英美掀起竖屏短剧新淘金热，虞书欣新造型被指擦边，谁还没吃上草垛糖葫芦。",
+      en: "Xi to meet Putin and Trump in Shenzhen; 'don't recommend kids play this because I never played it'; watching a blueberry's APEC acceleration; why gingko trees everywhere are still endangered; long-awaited Zhao Benshan catches a generation's anxiety; DeepSeek compute shortage; study: eating right carbs helps avoid weight gain; NBS: real estate market shows positive changes; People's Daily criticizes repair 'assassins' and distorted performance reviews; 2-child non-paternity case woman ordered to pay 380K; October urban survey unemployment 5.1%; second-gen iPhone Duo exposed; UK/US vertical short drama 'new gold rush'; Yu Shuxin's new look called out; who hasn't tried haystack tanghulu.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "习近平将同普京特朗普在深圳会晤",
+          en: "Xi to Meet Putin and Trump in Shenzhen",
+        },
+        description: {
+          zh: "习近平将同普京、特朗普在深圳会晤，APEC期间重大外交活动引发全球关注。",
+          en: "Xi will meet Putin and Trump in Shenzhen; major diplomatic activity during APEC draws global attention.",
+        },
+      },
+      {
+        title: {
+          zh: "\"不建议小孩玩这个 因为我没玩过\"",
+          en: "'Don't Recommend Kids Play This Because I Never Played It'",
+        },
+        description: {
+          zh: "一句不建议小孩玩这个因为我没玩过的发言引热议，家长教育理念引发讨论。",
+          en: "A remark 'don't recommend kids play this because I never played it' sparks debate on parenting philosophies.",
+        },
+      },
+      {
+        title: {
+          zh: "看一颗蓝莓的 APEC 加速度",
+          en: "Watching a Blueberry's APEC Acceleration",
+        },
+        description: {
+          zh: "从一颗蓝莓看APEC带来的机遇与加速度，贸易合作话题引发关注。",
+          en: "Viewing APEC's opportunities and acceleration through a blueberry, trade cooperation draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "满大街的银杏树 为啥还是濒危树种",
+          en: "Why Gingko Trees Everywhere Are Still Endangered",
+        },
+        description: {
+          zh: "满大街的银杏树为何仍是濒危树种，物种保护话题引发讨论。",
+          en: "Why are gingko trees everywhere still listed as endangered? Species conservation topic sparks discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "久违的赵本山 接住了一代人的焦虑",
+          en: "Long-Awaited Zhao Benshan Catches a Generation's Anxiety",
+        },
+        description: {
+          zh: "久违的赵本山回归舞台，接住了一代人的焦虑，引发集体怀旧与共鸣。",
+          en: "Long-awaited Zhao Benshan returns to stage, catching a generation's anxiety, sparking collective nostalgia and resonance.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepSeek 算力不足",
+          en: "DeepSeek Compute Shortage",
+        },
+        description: {
+          zh: "DeepSeek被曝算力不足，AI大模型算力瓶颈引发行业关注。",
+          en: "DeepSeek reportedly faces compute shortage, AI model compute bottleneck draws industry attention.",
+        },
+      },
+      {
+        title: {
+          zh: "研究表明：吃对碳水的人不易胖",
+          en: "Study: Eating Right Carbs Helps Avoid Weight Gain",
+        },
+        description: {
+          zh: "研究表明吃对碳水的人不易胖，科学饮食建议引发关注。",
+          en: "Study shows people who eat the right carbs are less prone to weight gain, scientific diet advice draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "国家统计局：房地产市场出现积极变化",
+          en: "NBS: Real Estate Market Shows Positive Changes",
+        },
+        description: {
+          zh: "国家统计局称房地产市场出现积极变化，楼市回暖信号引发关注。",
+          en: "NBS says real estate market shows positive changes, housing recovery signals draw attention.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报评维修刺客：变味的业绩考核",
+          en: "People's Daily on Repair 'Assassins': Distorted Performance Reviews",
+        },
+        description: {
+          zh: "人民日报评维修刺客现象，称其源于变味的业绩考核，行业治理引发讨论。",
+          en: "People's Daily criticizes repair 'assassin' phenomenon as stemming from distorted performance reviews, industry governance sparks discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "2 孩非亲生案女方被判赔 38 万 男方发声",
+          en: "2-Child Non-Paternity Case: Woman Ordered to Pay 380K, Man Speaks",
+        },
+        description: {
+          zh: "2孩非亲生案女方被判赔38万元，男方发声回应，婚姻诚信话题引发关注。",
+          en: "In a 2-child non-paternity case the woman is ordered to pay 380K yuan; the man speaks out, marriage integrity draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "10 月份全国城镇调查失业率为 5.1%",
+          en: "October Urban Survey Unemployment Rate 5.1%",
+        },
+        description: {
+          zh: "10月份全国城镇调查失业率为5.1%，就业形势引发关注。",
+          en: "October national urban survey unemployment rate is 5.1%, employment situation draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "第二代 iPhone Duo 曝光",
+          en: "Second-Gen iPhone Duo Exposed",
+        },
+        description: {
+          zh: "第二代iPhone Duo被曝光，折叠屏iPhone传闻引发关注。",
+          en: "Second-gen iPhone Duo exposed, foldable iPhone rumors draw attention.",
+        },
+      },
+      {
+        title: {
+          zh: "英美掀起竖屏短剧\"新淘金热\"",
+          en: "UK/US Vertical Short Drama 'New Gold Rush'",
+        },
+        description: {
+          zh: "英美掀起竖屏短剧新淘金热，中国短剧出海引发行业关注。",
+          en: "UK/US see a 'new gold rush' in vertical short dramas, Chinese short drama going global draws industry attention.",
+        },
+      },
+      {
+        title: {
+          zh: "虞书欣新造型被指擦边",
+          en: "Yu Shuxin's New Look Called Out",
+        },
+        description: {
+          zh: "虞书欣新造型被指擦边，艺人着装尺度引发讨论。",
+          en: "Yu Shuxin's new look accused of being borderline, celebrity dress code sparks discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "谁还没吃上草垛糖葫芦",
+          en: "Who Hasn't Tried Haystack Tanghulu?",
+        },
+        description: {
+          zh: "草垛糖葫芦成网红小吃，谁还没吃上引发网络热潮。",
+          en: "Haystack tanghulu becomes a viral snack; 'who hasn't tried it yet' sparks an online craze.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-15",
     date: "2026-11-15",
     title: {
