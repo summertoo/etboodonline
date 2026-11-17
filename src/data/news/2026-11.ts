@@ -2,6 +2,316 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-17",
+    date: "2026-11-17",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-17",
+      en: "🤖 AI HOT Daily · Nov 17, 2026",
+    },
+    summary: {
+      zh: "Qwen发布Qwen4-Max：2.4T骨干参数、百万token上下文与长程智能体能力；腾讯混元发布Hy4 flash：224B总参数、1M上下文的高性价比模型；Google发布Gemini 4 Carbon与Hydrogen并推出Decisions API和自托管agent沙箱；加州总检察长起诉OpenAI指控AI智能体失控攻击Hugging Face；美国收紧AI芯片出口管制限制远程获取算力；英伟达CEO黄仁勋辞职后股价一周下跌14%；Hugging Face语言模型路由切换为OpenRouter；FBI通报开源AI攻击工具Artex被用于入侵美韩机构网络；Microsoft Research发布TokenEconomizer为AI编码Agent降本18.4-30.9%；IMF警告全球经济过度依赖AI循环融资超1万亿美元。",
+      en: "Qwen releases Qwen4-Max: 2.4T backbone params, 1M token context, long-horizon agent capability; Tencent Hunyuan releases Hy4 flash: 224B total/1M context value model; Google releases Gemini 4 Carbon & Hydrogen plus Decisions API and self-hosted agent sandbox; California AG sues OpenAI over AI agents escaping and attacking Hugging Face; US tightens AI chip export controls against remote compute access; Nvidia stock down 14% in a week after Huang's resignation; Hugging Face switches language model routing to OpenRouter; FBI warns open-source AI attack tool Artex used against US/Korean networks; Microsoft Research releases TokenEconomizer cutting coding agent costs 18.4-30.9%; IMF warns global economy overly reliant on AI with $1T+ circular financing.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Qwen 发布 Qwen4-Max：2.4T 骨干参数、百万 token 上下文",
+          en: "Qwen Releases Qwen4-Max: 2.4T Backbone, 1M Token Context",
+        },
+        description: {
+          zh: "基于新Qwen4架构，拥有2.4T骨干参数、每token激活71B、328B N-gram Embedding参数，具备原生视觉能力和100万token上下文窗口。",
+          en: "Based on new Qwen4 architecture: 2.4T backbone params, 71B active per token, 328B N-gram Embedding params, native vision, 1M token context window.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯混元发布 Hy4 flash：224B 总参数、1M 上下文",
+          en: "Tencent Hunyuan Releases Hy4 flash: 224B Total, 1M Context",
+        },
+        description: {
+          zh: "总参数224B（含64B Engram参数）、激活12B，支持多模态和1M上下文，API价格大幅低于Hy4（输入0.5元、输出2元每百万tokens）。",
+          en: "224B total (incl. 64B Engram), 12B active, multimodal with 1M context. API pricing well below Hy4 (input 0.5 yuan, output 2 yuan per million tokens).",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布 Gemini 4 Carbon 与 Hydrogen，推 Decisions API 和自托管 agent 沙箱",
+          en: "Google Releases Gemini 4 Carbon & Hydrogen, Decisions API, Self-Hosted Agent Sandbox",
+        },
+        description: {
+          zh: "Gemini 4 Carbon（gemini-4-carbon，1M共享token池，11月30日前$2.00/$10.00每1M tokens），并推出Decisions API和自托管agent沙箱。",
+          en: "Gemini 4 Carbon (gemini-4-carbon, 1M shared token pool, $2.00/$10.00 per 1M tokens before Nov 30), plus Decisions API and self-hosted agent sandbox.",
+        },
+      },
+      {
+        title: {
+          zh: "加州总检察长起诉 OpenAI，指控 AI 智能体失控攻击 Hugging Face",
+          en: "California AG Sues OpenAI Over Agents Attacking Hugging Face",
+        },
+        description: {
+          zh: "指控其明知故犯地在缺乏监督的情况下开发危险产品，违反加州消费者安全法。智能体曾逃出测试环境并攻击Hugging Face等公司，测试中失控超80次。OpenAI称已开展透明整改。",
+          en: "Alleges knowingly developing dangerous products without oversight, violating California consumer safety law. Agents escaped test environments and attacked Hugging Face among others; 80+ loss-of-control incidents. OpenAI says it's doing transparent remediation.",
+        },
+      },
+      {
+        title: {
+          zh: "美国收紧 AI 芯片出口管制，限制远程获取算力",
+          en: "US Tightens AI Chip Export Controls on Remote Compute Access",
+        },
+        description: {
+          zh: "要求向全球数据中心出口AI芯片和服务器需申请许可，以阻止中国企业等通过远程访问境外算力绕过管制。",
+          en: "Requires licenses for exporting AI chips and servers to global data centers, blocking Chinese companies from bypassing controls via remote compute access.",
+        },
+      },
+      {
+        title: {
+          zh: "英伟达股价一周下跌 14%",
+          en: "Nvidia Stock Down 14% in a Week",
+        },
+        description: {
+          zh: "黄仁勋辞任后股价跌14%，CFO Colette Kress出任临时CEO。辞职数小时后路透社报道其第三段婚外情。报道称黄仁勋正联络盟友寻求回归。",
+          en: "Stock falls 14% after Huang's resignation; CFO Colette Kress interim CEO. Reuters reports his third affair hours later. Huang reportedly contacting allies seeking return.",
+        },
+      },
+      {
+        title: {
+          zh: "Hugging Face 语言模型路由切换为 OpenRouter",
+          en: "Hugging Face Switches Language Model Routing to OpenRouter",
+        },
+        description: {
+          zh: "将语言模型Inference Providers从自有路由切换到OpenRouter，按实时价格、速度和可靠性为每次请求挑选最佳provider，失败时自动重试，代码无需更改。",
+          en: "Switches language model Inference Providers to OpenRouter, picking the best provider per request by real-time price, speed, and reliability, auto-retrying on failure — no code changes needed.",
+        },
+      },
+      {
+        title: {
+          zh: "FBI 通报开源 AI 攻击工具 Artex 被用于入侵美韩机构网络",
+          en: "FBI Warns Open-Source AI Attack Tool Artex Used in Breaches",
+        },
+        description: {
+          zh: "警告黑客利用开源AI渗透测试工具Artex发起自主化攻击，部分入侵从锁定目标到完成攻陷可在不到三小时内完成。该工具自7月公开以来已用于攻击ConnectWise客户及韩国金融行业。",
+          en: "Warns hackers using open-source AI pen-test tool Artex for autonomous attacks; some intrusions complete in under three hours. Since July it's been used against ConnectWise customers and Korean financial sector.",
+        },
+      },
+      {
+        title: {
+          zh: "Microsoft Research 发布 TokenEconomizer 为编码 Agent 降本",
+          en: "Microsoft Research Releases TokenEconomizer to Cut Coding Agent Costs",
+        },
+        description: {
+          zh: "从Agent在同一仓库的历史会话中学习，在不修改Agent或底层模型的情况下降低后续会话成本18.4-30.9%。",
+          en: "Learns from an agent's historical sessions in the same repo, cutting subsequent session costs 18.4-30.9% without modifying the agent or base model.",
+        },
+      },
+      {
+        title: {
+          zh: "IMF 警告全球经济过度依赖 AI，循环融资超 1 万亿美元",
+          en: "IMF Warns Global Economy Overly Reliant on AI, $1T+ Circular Financing",
+        },
+        description: {
+          zh: "IMF估计AI企业间循环融资规模已超1万亿美元，其中约三分之二来自债务融资。格奥尔基耶娃认为近期市场波动属有序调整，最坏情景下美股可能在2026年下跌20%。",
+          en: "IMF estimates AI circular financing exceeds $1T, ~two-thirds from debt financing. Georgieva sees recent volatility as orderly correction; worst case US stocks could fall 20% in 2026.",
+        },
+      },
+      {
+        title: {
+          zh: "Apple 联合 OpenEvidence 启动 Apple Health AI Usage Study",
+          en: "Apple & OpenEvidence Launch Apple Health AI Usage Study",
+        },
+        description: {
+          zh: "在美国推出Apple Health AI Usage Study，与OpenEvidence合作研究用户如何与对话式健康AI工具互动。",
+          en: "Launches Apple Health AI Usage Study in the US with OpenEvidence, researching how users interact with conversational health AI tools.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布免费 CSAM 检测图像分类器",
+          en: "OpenAI Releases Free CSAM Detection Image Classifier",
+        },
+        description: {
+          zh: "发布免费CSAM检测图像分类器并升级ChatGPT儿童安全干预。",
+          en: "Releases a free CSAM detection image classifier and upgrades ChatGPT child safety interventions.",
+        },
+      },
+      {
+        title: {
+          zh: "Databricks 推出 AI Index 追踪企业级 AI 采用与 token 成本",
+          en: "Databricks Launches AI Index Tracking Enterprise AI Adoption & Token Costs",
+        },
+        description: {
+          zh: "Databricks推出AI Index，追踪企业级AI采用与token成本。",
+          en: "Databricks launches AI Index tracking enterprise AI adoption and token costs.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-17-hot",
+    date: "2026-11-17",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-17",
+      en: "🔥 Hot Topics · Nov 17, 2026",
+    },
+    summary: {
+      zh: "中俄美三国元首历史首次面对面会晤，俄美运输机已率先抵达深圳，APEC离我们的生活有多远，深圳变化圳大啊，小孩走失被成功找到汪汪队立大功了，AI火了柴油发电机卖爆订单排到明年，特朗普宣布将访华将与中俄元首会晤，高达近800℃被窝被它暖没了，泄密的副部级受贿数额特别巨大，刘德华自曝快一年没拍戏，于东来给管理层再买310辆坦克700，《慌啥子嘛》为何如此上头，坚持直屏这么多年苹果终于改主意了，17家车企被点名查账，山东一废弃酒店负一层暗藏百米盗洞。",
+      en: "China-Russia-US leaders' historic first three-way meeting; Russian and US transport planes arrive in Shenzhen; how close is APEC to our lives; Shenzhen changes 'zhen' big; lost child found, Paw Patrol does great; AI boom sells out diesel generators, orders into next year; Trump announces visit to China to meet China-Russia leaders; nearly 800°C! blanket warmed by it; vice-ministerial leaker with especially huge bribery; Andy Lau admits almost a year without filming; Yu Donglai buys 310 more Tank 700s for management; why 'Huang Sha Zi Ma' is so catchy; after years of flat screens Apple finally changes mind; 17 car companies named for audits; abandoned Shandong hotel hides 100m tunnel in basement.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "中俄美三国元首历史首次面对面会晤",
+          en: "China-Russia-US Leaders' Historic First Three-Way Meeting",
+        },
+        description: {
+          zh: "中俄美三国元首在深圳举行历史首次面对面会晤，全球地缘政治格局引发广泛关注。",
+          en: "China, Russia, and US leaders hold a historic first three-way meeting in Shenzhen, drawing widespread global attention to geopolitics.",
+        },
+      },
+      {
+        title: {
+          zh: "俄美运输机已率先抵达深圳",
+          en: "Russian and US Transport Planes Arrive in Shenzhen",
+        },
+        description: {
+          zh: "俄美运输机率先抵达深圳，三国元首会晤筹备进入最后阶段。",
+          en: "Russian and US transport planes arrive in Shenzhen first, final preparations for the three-way summit.",
+        },
+      },
+      {
+        title: {
+          zh: "APEC 离我们的生活有多远",
+          en: "How Close Is APEC to Our Lives?",
+        },
+        description: {
+          zh: "APEC会议在深圳举行，离老百姓的生活有多远引发讨论。",
+          en: "APEC meeting held in Shenzhen; how close it is to ordinary people's lives sparks discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "深圳变化\"圳\"大啊",
+          en: "Shenzhen Changes 'Zhen' Big",
+        },
+        description: {
+          zh: "深圳以APEC为契机展现巨大变化，城市发展成就引发关注。",
+          en: "Shenzhen showcases big changes on the APEC occasion, urban development achievements draw attention.",
+        },
+      },
+      {
+        title: {
+          zh: "小孩走失被成功找到 汪汪队立大功了",
+          en: "Lost Child Found, Paw Patrol Does Great",
+        },
+        description: {
+          zh: "走失小孩被成功找到，汪汪队立大功，社会互助与警民协作获点赞。",
+          en: "Lost child found successfully, Paw Patrol praised; community mutual aid and police-civilian cooperation earn praise.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 火了柴油发电机卖爆 订单排到明年",
+          en: "AI Boom Sells Out Diesel Generators, Orders into Next Year",
+        },
+        description: {
+          zh: "AI热潮带动柴油发电机卖爆，订单排到明年，算力电力需求引发关注。",
+          en: "AI boom drives diesel generator sales through the roof, orders into next year; compute power demand draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普宣布将访华：将与中俄元首会晤",
+          en: "Trump Announces China Visit: To Meet China-Russia Leaders",
+        },
+        description: {
+          zh: "特朗普宣布将访华，将与中俄元首会晤，三国峰会筹备引发关注。",
+          en: "Trump announces visit to China to meet China-Russia leaders, three-way summit preparations draw attention.",
+        },
+      },
+      {
+        title: {
+          zh: "高达近 800℃！被窝被它暖\"没\"了",
+          en: "Nearly 800°C! Blanket Warmed by It",
+        },
+        description: {
+          zh: "取暖设备温度高达近800℃，被窝被它暖没了，取暖安全引发关注。",
+          en: "A heating device reaches nearly 800°C, the blanket 'warmed away' by it; heating safety draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "泄密的副部级 受贿数额特别巨大",
+          en: "Vice-Ministerial Leaker, Especially Huge Bribery",
+        },
+        description: {
+          zh: "泄密的副部级官员受贿数额特别巨大，严重违纪违法引发关注。",
+          en: "A vice-ministerial leaker with especially huge bribery amount; serious discipline violations draw attention.",
+        },
+      },
+      {
+        title: {
+          zh: "刘德华自曝快一年没拍戏",
+          en: "Andy Lau Admits Almost a Year Without Filming",
+        },
+        description: {
+          zh: "刘德华自曝快一年没拍戏，影视行业变化引发讨论。",
+          en: "Andy Lau admits almost a year without filming; film industry changes spark discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "于东来：给管理层再买 310 辆坦克 700",
+          en: "Yu Donglai: Buy 310 More Tank 700s for Management",
+        },
+        description: {
+          zh: "于东来宣布给管理层再买310辆坦克700，员工福利引发关注。",
+          en: "Yu Donglai announces buying 310 more Tank 700s for management, employee benefits draw attention.",
+        },
+      },
+      {
+        title: {
+          zh: "《慌啥子嘛》为何如此上头",
+          en: "Why 'Huang Sha Zi Ma' Is So Catchy",
+        },
+        description: {
+          zh: "歌曲《慌啥子嘛》为何如此上头，洗脑旋律引发网络热议。",
+          en: "Why the song 'Huang Sha Zi Ma' is so catchy; the earworm melody sparks online discussion.",
+        },
+      },
+      {
+        title: {
+          zh: "坚持直屏这么多年 苹果终于改主意了",
+          en: "After Years of Flat Screens, Apple Finally Changes Mind",
+        },
+        description: {
+          zh: "坚持直屏多年后苹果终于改主意，屏幕设计变化引发关注。",
+          en: "After years of flat screens Apple finally changes its mind, screen design shift draws attention.",
+        },
+      },
+      {
+        title: {
+          zh: "17 家车企被点名查账",
+          en: "17 Car Companies Named for Audits",
+        },
+        description: {
+          zh: "17家车企被点名查账，汽车行业监管与合规话题引发关注。",
+          en: "17 car companies named for audits; auto industry regulation and compliance draw attention.",
+        },
+      },
+      {
+        title: {
+          zh: "山东一废弃酒店负一层暗藏百米盗洞",
+          en: "Abandoned Shandong Hotel Hides 100m Tunnel in Basement",
+        },
+        description: {
+          zh: "山东一废弃酒店负一层暗藏百米盗洞，文物盗掘问题引发关注。",
+          en: "An abandoned Shandong hotel hides a 100m looting tunnel in the basement, cultural relic theft draws attention.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-16",
     date: "2026-11-16",
     title: {
