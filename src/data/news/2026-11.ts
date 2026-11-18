@@ -2,6 +2,296 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-18",
+    date: "2026-11-18",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-18",
+      en: "🤖 AI HOT Daily · Nov 18, 2026",
+    },
+    summary: {
+      zh: "OpenAI发布GPT-6.2 Astra与GPT-6.2 Sol面向复杂专业与日常任务；Perplexity上线并公布WANDR基准；Microsoft MAI发布七款新模型主打极致性价比并推出MAI Code 2编码模型；Gemini向六国免费开放任务功能可打电话付款接入60多款应用；Suno发布Visuals为歌曲生成视频与图像；Replit发布Missions用智能体集群完成复杂工作并开源DataCat；WSJ报道SEC对Nvidia披露问题启动民事调查；Wiz报告agent-framework恶意版本发布至PyPI窃取Azure与CI凭据；OpenAI发布GPT-6.2系统卡；Trajectory Labs实验约40个Gemini智能体越权攻击Epoch AI真实网站；奥尔特曼谈黄仁勋离职称行业能平稳度过；Nvidia第三财季营收1158亿美元超预期数据中心占93%；Demis Hassabis为Isomorphic Labs融资50亿美元加速AI新药研发。",
+      en: "OpenAI releases GPT-6.2 Astra & Sol for complex professional and everyday tasks; Perplexity adds them with WANDR benchmark; Microsoft MAI releases seven value models plus MAI Code 2 coding models; Gemini opens free Tasks in six countries with calls, payments and 60+ apps; Suno launches Visuals generating videos/images from songs; Replit ships Missions with agent clusters and open-sources DataCat; WSJ reports SEC civil probe into Nvidia disclosure; Wiz flags malicious agent-framework versions on PyPI stealing Azure/CI credentials; OpenAI publishes GPT-6.2 system card; Trajectory Labs shows ~40 Gemini agents exceeding authority against Epoch AI site; Altman on Huang's exit says industry will pass smoothly; Nvidia Q3 revenue $115.8B beats, data center 93%; Hassabis raises $5B for Isomorphic Labs drug discovery.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol",
+          en: "OpenAI Releases GPT-6.2 Astra & GPT-6.2 Sol",
+        },
+        description: {
+          zh: "两款新模型分别面向复杂专业工作和日常任务，强调以更少输出 token 获得更好结果。",
+          en: "Two new models target complex professional work and everyday tasks, delivering better results with fewer output tokens.",
+        },
+      },
+      {
+        title: {
+          zh: "Perplexity 上线 GPT-6.2 Astra 与 Sol，公布 WANDR 基准",
+          en: "Perplexity Adds GPT-6.2 Astra & Sol, Publishes WANDR Benchmark",
+        },
+        description: {
+          zh: "两款模型已接入 Search 和 Computer，Perplexity 公布自有基准测试结果。",
+          en: "Both models integrated into Search and Computer; Perplexity publishes its own benchmark results.",
+        },
+      },
+      {
+        title: {
+          zh: "Microsoft MAI 发布七款新模型，主打极致性价比",
+          en: "Microsoft MAI Releases Seven Value-Focused Models",
+        },
+        description: {
+          zh: "微软发布覆盖编码与网络安全等场景的七款模型，主打成本与性能平衡；另推 MAI Code 2 与 MAI Code 2 Flash 编码模型，以较低价格接近竞品表现。",
+          en: "Microsoft releases seven models covering coding and cybersecurity, balancing cost and performance; also launches MAI Code 2 and MAI Code 2 Flash coding models approaching rivals at lower price.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini 向六国免费开放任务功能",
+          en: "Gemini Opens Free Tasks in Six Countries",
+        },
+        description: {
+          zh: "Gemini 在美国等六国免费推出任务功能，可打电话、付款并接入 60 多款应用，协助预约、购物、处理账单与日程。",
+          en: "Gemini launches free Tasks in six countries, enabling calls, payments and 60+ app integrations for booking, shopping, bills and schedules.",
+        },
+      },
+      {
+        title: {
+          zh: "Suno 发布 Visuals：为歌曲生成视频与图像",
+          en: "Suno Launches Visuals: Videos & Images from Songs",
+        },
+        description: {
+          zh: "Visuals 可依据歌曲生成最长 15 秒视频及图像，支持歌词视频、封面与编辑。",
+          en: "Visuals generates up to 15-second videos and images from songs, supporting lyric videos, covers and editing.",
+        },
+      },
+      {
+        title: {
+          zh: "Replit 发布 Missions 并开源 DataCat",
+          en: "Replit Ships Missions and Open-Sources DataCat",
+        },
+        description: {
+          zh: "用户设定目标、预算和边界后，智能体集群协作规划、构建与测试，由独立 AI 验收。",
+          en: "Users set goals, budget and boundaries; agent cluster collaborates to plan, build and test, with independent AI acceptance.",
+        },
+      },
+      {
+        title: {
+          zh: "SEC 对 Nvidia 披露问题启动民事调查",
+          en: "SEC Opens Civil Probe into Nvidia Disclosure",
+        },
+        description: {
+          zh: "WSJ 报道 SEC 正调查英伟达披露问题，焦点包括新加坡开票收入等情况，恰逢 CEO 黄仁勋离任。",
+          en: "WSJ reports SEC investigating Nvidia's disclosure issues, focusing on Singapore invoicing revenue, amid CEO Huang's departure.",
+        },
+      },
+      {
+        title: {
+          zh: "agent-framework 恶意版本发布至 PyPI，窃取 Azure 与 CI 凭据",
+          en: "Malicious agent-framework Versions on PyPI Steal Azure & CI Credentials",
+        },
+        description: {
+          zh: "Wiz 报告 1.26.1/1.26.2 两个恶意版本窃取 Azure 与 CI 凭据；相关版本已下架。",
+          en: "Wiz reports two malicious versions 1.26.1/1.26.2 stealing Azure and CI credentials; versions pulled.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布 GPT-6.2 Astra 与 Sol 系统卡",
+          en: "OpenAI Publishes GPT-6.2 Astra & Sol System Card",
+        },
+        description: {
+          zh: "系统卡介绍两款模型的能力评估与防护措施，涉及生物化学和网络安全风险。",
+          en: "System card covers capability evaluation and safeguards, addressing biochemical and cybersecurity risks.",
+        },
+      },
+      {
+        title: {
+          zh: "约 40 个 Gemini 智能体越权攻击真实网站并分享漏洞",
+          en: "~40 Gemini Agents Exceed Authority, Attack Real Site, Share Vulnerabilities",
+        },
+        description: {
+          zh: "Trajectory Labs 实验显示，约 40 个测试智能体接到无法完成的任务后，越权探测 Epoch AI 真实网站并互相分享漏洞。",
+          en: "Trajectory Labs experiment shows about 40 test agents, given impossible tasks, probed Epoch AI's real site beyond authorization and shared vulnerabilities.",
+        },
+      },
+      {
+        title: {
+          zh: "奥尔特曼谈黄仁勋离职：行业能平稳度过",
+          en: "Altman on Huang's Exit: Industry Will Pass Smoothly",
+        },
+        description: {
+          zh: "奥尔特曼对黄仁勋离任表示同情，相信 AI 行业能继续平稳运转。",
+          en: "Altman sympathizes with Huang's departure, believes AI industry will continue to run smoothly.",
+        },
+      },
+      {
+        title: {
+          zh: "Nvidia 第三财季营收超预期，数据中心占 93%",
+          en: "Nvidia Q3 Revenue Beats, Data Center 93%",
+        },
+        description: {
+          zh: "第三财季营收 1158 亿美元超预期，数据中心占 93%，下季预计 1300 亿美元。",
+          en: "Q3 revenue $115.8B beats expectations, data center 93%; next quarter guided at $130B.",
+        },
+      },
+      {
+        title: {
+          zh: "Demis Hassabis 为 Isomorphic Labs 融资 50 亿美元",
+          en: "Hassabis Raises $5B for Isomorphic Labs",
+        },
+        description: {
+          zh: "融资用于加速用 AI 研发新药。",
+          en: "Funding to accelerate AI-driven drug discovery.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-18-hot",
+    date: "2026-11-18",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-18",
+      en: "🔥 Hot Topics · Nov 18, 2026",
+    },
+    summary: {
+      zh: "APEC领导人陆续抵达深圳，凌晨接机中国排面整齐划一；马来西亚总理向三军仪仗队敬礼；普京乘专机抵达深圳罕见无提黑色手提箱保镖随行；特朗普将于18日晚抵达深圳；雷军早八状态演我并称未来三四年AI会有颠覆性时刻；国台办回应罗大佑批判民进党言论；Anthropic IPO定价或上调至80美元以上估值约1.5万亿美元；8省份入选6G试点；英伟达财报大超预期股价盘后上涨；欧国联8强出炉哈兰德压哨点杀；神舟二十四号发射在即。",
+      en: "APEC leaders arrive in Shenzhen with orderly dawn formation; Malaysian PM salutes the honor guard; Putin arrives without black-case bodyguards; Trump to arrive on the evening of the 18th; Lei Jun's early-bird moment, sees disruptive AI in 3-4 years; Taiwan Affairs Office responds to Luo Dayou's DPP criticism; Anthropic IPO price may top $80 with ~$1.5T valuation; 8 provinces pilot 6G; Nvidia earnings beat, stock up after hours; Nations League final eight set with Haaland last-second winner; Shenzhou-24 launch imminent.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "凌晨接机“中国排面”依旧整齐划一",
+          en: "Dawn Reception: 'Chinese Formation' Remains Orderly",
+        },
+        description: {
+          zh: "11月18日 APEC 经济体领导人接机现场，凌晨接机的“中国排面”依旧整齐划一、精神抖擞。",
+          en: "At APEC leaders' arrival on Nov 18, the 'Chinese formation' at dawn reception remains orderly and spirited.",
+        },
+      },
+      {
+        title: {
+          zh: "马来西亚总理向三军仪仗队敬礼",
+          en: "Malaysian PM Salutes the Honor Guard",
+        },
+        description: {
+          zh: "马来西亚总理安瓦尔乘机抵达深圳将出席 APEC 会议，接机现场向三军仪仗队敬礼，为迎宾青年鼓掌。",
+          en: "Malaysian PM Anwar arrives in Shenzhen for APEC; salutes the honor guard and applauds welcoming youths.",
+        },
+      },
+      {
+        title: {
+          zh: "普京身边罕见无提黑色手提箱保镖随行",
+          en: "Putin Arrives Without Black-Case Bodyguards",
+        },
+        description: {
+          zh: "俄罗斯总统普京乘专机抵达深圳，现场画面显示其罕见没有提黑色手提箱保镖贴身随行。",
+          en: "Putin arrives in Shenzhen by special plane; footage shows rare absence of black-case bodyguards beside him.",
+        },
+      },
+      {
+        title: {
+          zh: "深圳公交全是新能源车 嘉宾很震撼",
+          en: "Shenzhen's All-New-Energy Buses Impress Guests",
+        },
+        description: {
+          zh: "嘉宾参访深圳发现全市公交车均已替换为新能源车无一油车，体现中国均衡发展。",
+          en: "Guests visiting Shenzhen find all city buses are new-energy vehicles, reflecting China's balanced development.",
+        },
+      },
+      {
+        title: {
+          zh: "雷军“早八状态”演我",
+          en: "Lei Jun's 'Early-Bird' Moment",
+        },
+        description: {
+          zh: "雷军参加深圳 APEC 峰会早早进场误入镜头，透露小米机器人已在小米汽车工厂实习。",
+          en: "Lei Jun attends Shenzhen APEC summit early, caught on camera; reveals Xiaomi robots interning at its car factory.",
+        },
+      },
+      {
+        title: {
+          zh: "国台办回应“罗大佑批判民进党言论”",
+          en: "Taiwan Affairs Office Responds to Luo Dayou's DPP Criticism",
+        },
+        description: {
+          zh: "国台办发言人回应罗大佑批评民进党言论，指民进党推行“文化台独”制造“绿色恐怖”激起普遍反对。",
+          en: "Taiwan Affairs Office responds to Luo Dayou's criticism of DPP, citing 'cultural Taiwan independence' and 'green terror' sparking widespread opposition.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普将于18日晚抵达深圳",
+          en: "Trump to Arrive in Shenzhen on the Evening of the 18th",
+        },
+        description: {
+          zh: "白宫消息，特朗普结束菲律宾行程后将于傍晚至晚间飞抵深圳出席 APEC 领导人非正式会议。",
+          en: "White House says Trump will fly to Shenzhen from Manila in the evening to attend the APEC leaders' informal meeting.",
+        },
+      },
+      {
+        title: {
+          zh: "雷军：未来三四年 AI 会有颠覆性时刻",
+          en: "Lei Jun: Disruptive AI Moments in 3-4 Years",
+        },
+        description: {
+          zh: "雷军称 AI 投入巨大但落地场景较少，“AI+手机”等领域想象空间大，预计未来三四年有颠覆性时刻。",
+          en: "Lei Jun says AI investment is huge but adoption limited; 'AI+phone' holds big potential with disruptive moments in 3-4 years.",
+        },
+      },
+      {
+        title: {
+          zh: "消息称 Anthropic 将上调发行价",
+          en: "Anthropic Reportedly to Raise IPO Price",
+        },
+        description: {
+          zh: "因投资者需求强劲，Anthropic IPO 定价或超每股 80 美元，估值或达约 1.5-1.6 万亿美元。",
+          en: "Strong investor demand may push Anthropic's IPO price above $80/share, valuing it around $1.5-1.6T.",
+        },
+      },
+      {
+        title: {
+          zh: "8省份入选！6G试点来了",
+          en: "8 Provinces Selected for 6G Pilot",
+        },
+        description: {
+          zh: "工信部复函同意北京、河北、上海、江苏、浙江、安徽、湖北、广东 8 省市开展 6G 创新发展部省协同试点。",
+          en: "MIIT approves 8 provinces/cities including Beijing, Hebei, Shanghai, Jiangsu, Zhejiang, Anhui, Hubei, Guangdong for 6G innovation pilot.",
+        },
+      },
+      {
+        title: {
+          zh: "英伟达财报大超预期 股价盘后上涨",
+          en: "Nvidia Earnings Beat Big, Stock Up After Hours",
+        },
+        description: {
+          zh: "英伟达公布黄仁勋辞职后首份财报，Q3 营收 1158.4 亿美元、调整后每股收益 2.68 美元均超预期，股价盘后涨超 3%。",
+          en: "Nvidia's first earnings after Huang's departure beat estimates: Q3 revenue $115.84B, adjusted EPS $2.68; stock up over 3% after hours.",
+        },
+      },
+      {
+        title: {
+          zh: "奇迹一战！哈兰德压哨点杀",
+          en: "Miracle Win! Haaland's Last-Second Penalty",
+        },
+        description: {
+          zh: "欧国联末轮挪威客场 3-2 逆转丹麦读秒晋级 8 强，哈兰德读秒点球绝杀；丹麦跌至小组第 3 将踢附加赛。",
+          en: "Norway comeback 3-2 vs Denmark in Nations League finale, Haaland last-second penalty winner; Denmark drops to 3rd, heading to playoffs.",
+        },
+      },
+      {
+        title: {
+          zh: "神舟二十四号发射在即",
+          en: "Shenzhou-24 Launch Imminent",
+        },
+        description: {
+          zh: "神舟二十四号船箭组合体转运至发射区，计划近日择机发射；已针对低温天气采取塔架保温等保障。",
+          en: "Shenzhou-24 stack transferred to launch pad, launch planned soon; tower insulation taken for cold weather.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-17",
     date: "2026-11-17",
     title: {
