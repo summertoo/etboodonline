@@ -2,6 +2,236 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-20",
+    date: "2026-11-20",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-20",
+      en: "🤖 AI HOT Daily · Nov 20, 2026",
+    },
+    summary: {
+      zh: "Anthropic登陆纳斯达克开盘涨33%募资超810亿美元市值破2万亿；Mac版Gemini上线计算机操作功能可跨应用执行任务；Google在Gemini API推出Tool Retrieval预览按需加载工具；Nadella解释向6万员工提供买断是转型AI优先组织而非裁员；芯片停运叠加海外云通道关闭中国科技公司面临双重冲击；Nvidia财报强劲但股价较10月高点跌近40%创52周新低；彭博社称黄仁勋离任后日本AI股首当其冲；Perplexity CEO祝贺Anthropic IPO并称Opus 5.5仍是最佳模型；OpenAI详解Codex驱动的Performance Factory自动维护ChatGPT性能；Google在Gemini API与AI Studio上线Genie 4实时世界模型。",
+      en: "Anthropic IPOs on Nasdaq, opening +33% to raise over $81B with a $2T market cap; Mac Gemini app adds computer use for cross-app tasks; Google previews Tool Retrieval in the Gemini API for on-demand tool loading; Nadella says buyouts for 60,000 staff are an AI-first transition, not layoffs; chip shipment halts plus closed overseas cloud channels hit Chinese tech firms doubly; Nvidia stock falls near 40% from its October high despite strong earnings, a 52-week low; Bloomberg says Japanese AI stocks took the first hit after Jensen Huang's exit; Perplexity's CEO congratulates Anthropic's IPO, calling Opus 5.5 the best model; OpenAI details its Codex-powered Performance Factory auto-maintaining ChatGPT; Google launches the Genie 4 realtime world model in Gemini API and AI Studio.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Anthropic 登陆纳斯达克，开盘价高出发行价 33%",
+          en: "Anthropic IPOs on Nasdaq, Opening 33% Above Issue Price",
+        },
+        description: {
+          zh: "开盘几分钟内股价达 111.50 美元，较 83 美元发行价高出 33%，募资超 810 亿美元，按开盘价计算市值超过 2 万亿美元，CEO 在致辞中强调对安全的承诺。",
+          en: "The stock hit $111.50 within minutes of opening, 33% above the $83 issue price; the offering raised over $81B and put the market cap above $2T, with the CEO stressing a commitment to safety.",
+        },
+      },
+      {
+        title: {
+          zh: "Mac 版 Gemini 应用上线计算机操作功能",
+          en: "Mac Gemini App Adds Computer Use",
+        },
+        description: {
+          zh: "Google Labs 副总裁宣布 Mac 版 Gemini 可跨文件夹、应用和网页代用户执行任务，官方演示显示其能把草图变成 Blender 里的绑定 3D 模型，屏幕和光标控制权仍归用户。",
+          en: "Google Labs VP Josh Woodward says the Mac app can act across folders, apps and web pages, turning sketches into rigged 3D models in Blender, while the user keeps screen and cursor control.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 在 Gemini API 推出 Tool Retrieval 预览",
+          en: "Google Previews Tool Retrieval in the Gemini API",
+        },
+        description: {
+          zh: "智能体可按需加载工具参数 schema 而非每次发送完整工具库，以减少输入 token 并在工具数量扩大时保持选择准确。",
+          en: "Agents load tool schemas on demand instead of sending the full tool library each request, cutting input tokens and staying accurate as tool counts grow.",
+        },
+      },
+      {
+        title: {
+          zh: "Nadella 解释向 6 万员工提供买断的原因",
+          en: "Nadella Explains Buyouts Offered to 60,000 Staff",
+        },
+        description: {
+          zh: "微软 CEO 表示 10 月向 6 万名员工提供买断是为让员工在转型中拥有选择权，而非用 AI 取代员工，目标是让所有人都用 AI 工作、转向管理 AI 智能体。",
+          en: "Microsoft's CEO says offering buyouts to 60,000 employees in October gave staff choice in the transition rather than replacing them with AI, aiming for everyone to work with AI and manage agents.",
+        },
+      },
+      {
+        title: {
+          zh: "芯片停运叠加海外云通道关闭，中国科技公司面临双重冲击",
+          en: "Chip Halts and Closed Cloud Channels Hit Chinese Firms Doubly",
+        },
+        description: {
+          zh: "美国收紧 AI 芯片出口管制并关闭第三方国家云算力通道后，Moonshot AI 取消了与印尼云服务商的 1.5 亿美元合同，原计划租用 B300 集群训练 Kimi K4 且已预付约 50%；台积电和三星暂停向中国客户交付部分处理器，小米、Oppo、vivo 等手机芯片同样受波及。",
+          en: "After the US tightened AI chip export controls and closed third-country cloud channels, Moonshot AI dropped a $150M Indonesian cloud contract that had aimed to rent a B300 cluster for Kimi K4 with ~50% prepaid; TSMC and Samsung paused some chip deliveries, also affecting Xiaomi, Oppo and vivo phone processors.",
+        },
+      },
+      {
+        title: {
+          zh: "Nvidia 股价复盘：财报强劲但较 10 月高点跌近 40%",
+          en: "Nvidia Stock Recap: Strong Earnings, Down ~40% From October High",
+        },
+        description: {
+          zh: "第三季度营收同比翻倍至 1158 亿美元、数据中心业务增长 110%，但受芯片股整体抛售、黄仁勋辞职及公司治理调查影响，股价一度报约 150 美元、周四收于 145.98 美元创 52 周新低。",
+          en: "Q3 revenue doubled year over year to $115.8B with data center up 110%, but broader chip selloffs, Jensen Huang's departure and a governance probe pushed the share near $150, closing Thursday at $145.98, a 52-week low.",
+        },
+      },
+      {
+        title: {
+          zh: "彭博社：黄仁勋离任后日本 AI 股首当其冲",
+          en: "Bloomberg: Japanese AI Stocks Take First Hit After Huang's Exit",
+        },
+        description: {
+          zh: "英伟达管理层变动及黄仁勋离任引发全球 AI 概念股新一轮抛售，日本相关股票首当其冲，市场风向从“AI 溢价”转向“AI 折价”。",
+          en: "Nvidia's management change and Jensen Huang's departure sparked a fresh global AI selloff, with Japanese names hit hardest as sentiment shifts from an AI premium to an AI discount.",
+        },
+      },
+      {
+        title: {
+          zh: "Perplexity CEO 祝贺 Anthropic IPO，称 Opus 5.5 仍是业界最佳",
+          en: "Perplexity CEO Congratulates Anthropic IPO, Calls Opus 5.5 the Best",
+        },
+        description: {
+          zh: "Aravind Srinivas 发推祝贺 Anthropic 上市，称其展示了专注、高信念团队能在短时间内达成的成果，并表示 Opus 5.5 以明显优势仍是业界最佳模型。",
+          en: "Aravind Srinivas congratulated Anthropic on its listing, crediting a focused, high-conviction team, and said Opus 5.5 still leads the industry by a clear margin.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 详解 Codex 驱动的 Performance Factory",
+          en: "OpenAI Details Its Codex-Powered Performance Factory",
+        },
+        description: {
+          zh: "Performance Factory 用 Codex 智能体在云端自动排查并修复 ChatGPT 的性能回归，其中 Regression Workflow 在三个多月内跟踪超过 1700 次调查、定位超过 600 个根因，相当于每天约 17 次自动调查。",
+          en: "The Performance Factory uses Codex agents in the cloud to hunt and fix ChatGPT performance regressions; its Regression Workflow tracked over 1,700 investigations and pinpointed 600+ root causes in three months, roughly 17 automatic investigations daily.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 上线 Genie 4 实时世界模型",
+          en: "Google Launches the Genie 4 Realtime World Model",
+        },
+        description: {
+          zh: "Genie 4 实时世界模型在 Gemini API 与 AI Studio 上线，供开发者构建可交互的动态场景。",
+          en: "The Genie 4 realtime world model is now available in the Gemini API and AI Studio for building interactive dynamic scenes.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-20-hot",
+    date: "2026-11-20",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-20",
+      en: "🔥 Hot Topics · Nov 20, 2026",
+    },
+    summary: {
+      zh: "中俄美元首在深圳举行首次三方会晤，普京称感谢中方组织；王毅会后被问深圳办会评分笑着给出100分；APEC工商领导人峰会创办30年来首次以“倡议”形式发布成果文件；特朗普返美途中发文称此次访问成果丰硕意义重大；彭丽媛同与会经济体领导人配偶在深圳湾文化广场集体活动；中国心梗救治日提示起床后四类行为易诱发心梗；中方提出支持成立世界湾区经济合作联盟；证监会辟谣“监管要求上报基金AI敞口”不实；马斯克在24小时中国行中专程从深圳飞抵上海评价超级工厂；东京上万人在国会议事堂前集会抗议高市政权。",
+      en: "China, Russia and the US hold their first trilateral leaders' meeting in Shenzhen, with Putin thanking the hosts; Wang Yi scores the Shenzhen venue a gleeful 100; the APEC CEO Summit releases an 'Initiative' for the first time in 30 years; Trump calls the visit fruitful from his flight home; Peng Liyuan hosts spouses at a group event in Shenzhen; China Heart Attack Rescue Day warns four morning habits can trigger attacks; China backs a new global bay-area economic alliance; the CSRC debunks claims of new AI-exposure reporting rules; Musk flies from Shenzhen to Shanghai in his 24-hour China trip, praising the Gigafactory; tens of thousands rally in Tokyo against the Takaichi administration.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "中俄美元首在深圳举行会晤",
+          en: "China, Russia and the US Hold Leaders' Meeting in Shenzhen",
+        },
+        description: {
+          zh: "11月19日下午，习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤，普京表示三国若在相互尊重、平等和利益平衡基础上开展建设性合作，可为世界安全与稳定作出重要贡献。",
+          en: "On the afternoon of Nov 19, Xi met Putin and Trump in Shenzhen; Putin said constructive cooperation among the three on respect, equality and balanced interests could contribute meaningfully to global security and stability.",
+        },
+      },
+      {
+        title: {
+          zh: "王毅给深圳办会打100分",
+          en: "Wang Yi Scores Shenzhen's Hosting a 100",
+        },
+        description: {
+          zh: "11月19日晚王毅在 APEC 新闻中心向中外媒体介绍会议成果，会后被深圳卫视记者问及深圳办会评分时，笑着给出 100 分。",
+          en: "Briefing reporters on Nov 19 about the meeting's outcomes, Wang Yi replied with a 100 when asked by Shenzhen media to score how well the city hosted it, with a smile.",
+        },
+      },
+      {
+        title: {
+          zh: "APEC 创办30年来首次以“倡议”发布成果",
+          en: "APEC Releases an 'Initiative' for the First Time in 30 Years",
+        },
+        description: {
+          zh: "2026年亚太经合组织工商领导人峰会发布《深圳倡议》，这是峰会创办 30 年来首次以倡议形式发布成果文件。",
+          en: "The 2026 APEC CEO Summit issued the 'Shenzhen Initiative,' the first outcome document in initiative form since the summit began 30 years ago.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普返美途中发文：一次伟大的访问",
+          en: "Trump Posts From His Flight Home: A Great Visit",
+        },
+        description: {
+          zh: "特朗普在回国途中发文表示此次访问成果丰硕、意义重大，并将于次日中午 12 点在白宫召开新闻发布会，还会谈及与泰国、菲律宾等国的贸易协议。",
+          en: "Flying home, Trump called the visit fruitful and significant, saying he would hold a White House press conference the next noon and discuss trade deals with Thailand, the Philippines and others.",
+        },
+      },
+      {
+        title: {
+          zh: "彭丽媛邀请“夫人团”打卡深圳",
+          en: "Peng Liyuan Hosts the 'Spouses' Group in Shenzhen",
+        },
+        description: {
+          zh: "11月19日上午，彭丽媛同出席 APEC 第三十三次领导人非正式会议的经济体领导人或代表配偶在深圳湾文化广场举行集体活动。",
+          en: "On the morning of Nov 19, Peng Liyuan held a group event with the spouses of APEC leaders and representatives at Shenzhen Bay Culture Plaza.",
+        },
+      },
+      {
+        title: {
+          zh: "中国心梗救治日：起床后这4件事易引发心梗",
+          en: "China Heart Attack Rescue Day: Four Morning Habits Can Trigger Attacks",
+        },
+        description: {
+          zh: "11月20日是中国心梗救治日，冬季晨起过猛、晨练过早、排便用力、慢性病患者擅自减药这四类行为易加重心脏负担，需牢记心梗救治两个“120”原则。",
+          en: "Nov 20 is China Heart Attack Rescue Day; getting up too abruptly, exercising too early, straining on the toilet and chronic patients cutting medication on their own all strain the heart, so the two '120' rescue principles matter.",
+        },
+      },
+      {
+        title: {
+          zh: "中国支持成立世界湾区经济合作联盟",
+          en: "China Backs a Global Bay-Area Economic Alliance",
+        },
+        description: {
+          zh: "APEC 工商领导人峰会期间中方提出支持成立世界湾区经济合作联盟，旨在打通不同湾区间的规则接口、打破贸易壁垒，推动亚太区域经济一体化。",
+          en: "During the APEC CEO Summit, China proposed backing a global bay-area economic alliance to align rules across bay areas, break trade barriers and advance Asia-Pacific integration.",
+        },
+      },
+      {
+        title: {
+          zh: "证监会辟谣“监管要求上报基金AI敞口”不实",
+          en: "CSRC Debunks Claim of Mandatory Fund AI-Exposure Reporting",
+        },
+        description: {
+          zh: "网传“监管要求上报产品 AI 敞口”为不实消息，证监会表示公募基金投资遵循法规与基金合同自主决策，并未安排相关报送要求。",
+          en: "The CSRC called online claims of mandatory AI-exposure reporting false, saying public funds invest autonomously under law and their contracts, with no such filing requirement in place.",
+        },
+      },
+      {
+        title: {
+          zh: "马斯克24小时中国行专程从深圳飞抵上海",
+          en: "Musk Flies from Shenzhen to Shanghai in 24-Hour China Trip",
+        },
+        description: {
+          zh: "特斯拉副总裁陶琳发文透露马斯克在 24 小时的中国行里专程从深圳飞抵上海，表示此行是为感谢亚太及中国团队，并高度评价上海超级工厂的制造实力与中国团队的执行力。",
+          en: "Tesla VP Tao Lin said Musk flew from Shenzhen to Shanghai during his 24-hour China trip to thank Asia-Pacific and Chinese teams, praising the Shanghai Gigafactory's manufacturing strength and the team's execution.",
+        },
+      },
+      {
+        title: {
+          zh: "东京万人集会抗议高市政权政策",
+          en: "10,000 Rally in Tokyo Against the Takaichi Administration",
+        },
+        description: {
+          zh: "11月19日晚约 1.3 万人在东京国会议事堂前集会，抗议高市早苗政权的一系列政策动向，抗议者手持“守护宪法”“停止战争准备”等牌子，担忧其修改和平宪法。",
+          en: "Around 13,000 people gathered before Japan's Diet building on the night of Nov 19, protesting the Takaichi administration's policies with placards reading 'Defend the constitution' and 'Stop war preparation.'",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-18",
     date: "2026-11-18",
     title: {
