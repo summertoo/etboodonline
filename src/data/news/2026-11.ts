@@ -2,6 +2,236 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-21",
+    date: "2026-11-21",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-21",
+      en: "🤖 AI HOT Daily · Nov 21, 2026",
+    },
+    summary: {
+      zh: "Thinking Machines Lab发布可跑笔记本的开源权重模型Inkling 2 Mini采用循环Transformer架构；腾讯混元开放Hy4权重原生多模态旗舰MoE总参数770B；Google发布Gemini 4 Hydrogen主打速度与日常任务已上线Gemini应用和Search；ChatGPT推出Space统一管理页面幻灯片图片与文件；browser-use 1.0发布用一个Python REPL工具替代24个浏览器动作；Anthropic数学家Levent Alpöge宣布与Claude合作证明黎曼猜想放出1737万行Lean代码；METR发布11月能力测量更新称AI R&D相关能力约每3.6个月翻倍；MiniMax内部模型MIM实现多项密码分析实用攻击并开源验证轨迹；Runway详解构建智能体驱动软件工厂10月38%合并PR由智能体驱动首次批准等待从2小时降至约5分钟；OpenHands详解用Agent自动修复自家镜像CVE。",
+      en: "Thinking Machines Lab releases open-weight Inkling 2 Mini, a recurrent Transformer runnable on a laptop; Tencent Hunyuan opens Hy4 weights, a 770B native multimodal flagship MoE; Google ships Gemini 4 Hydrogen for speed and everyday tasks in the Gemini app and Search; ChatGPT launches Space to unify pages, slides, images and files; browser-use 1.0 replaces 24 browser actions with one Python REPL tool; Anthropic mathematician Levent Alpöge claims to have proved the Riemann hypothesis with Claude, releasing 17.37M lines of Lean; METR's November update finds AI R&D capabilities roughly doubling every 3.6 months; MiniMax's internal MIM model achieves practical cryptanalysis attacks on multiple schemes and open-sources traces; Runway details an agent-driven software factory where agents drove 38% of merged PRs in October, cutting first-approval wait from over 2 hours to ~5 minutes; OpenHands shows an agent pipeline that auto-fixes its own image CVEs.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Thinking Machines Lab 发布可跑笔记本的开源权重模型 Inkling 2 Mini",
+          en: "Thinking Machines Lab Releases Laptop-Runnable Open-Weight Inkling 2 Mini",
+        },
+        description: {
+          zh: "采用循环 Transformer 架构，中间 12 层每 token 运行三次，总参数 26.4B、激活 3.4B，内存占用约 20GB，可在 32GB 以上内存的 Mac 本地运行。",
+          en: "Using a recurrent Transformer with the middle 12 layers run three times per token, it totals 26.4B parameters with 3.4B active, using ~20GB and running locally on Macs with 32GB+ memory.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯混元开放 Hy4 权重",
+          en: "Tencent Hunyuan Opens Hy4 Weights",
+        },
+        description: {
+          zh: "定位原生多模态旗舰 MoE 模型，总参数 770B、激活 49B，支持 1M 上下文；同步发布含安全评估报告的 Hy4 System Card，并提供 GitHub、Hugging Face 权重与 GGUF 下载。",
+          en: "A native multimodal flagship MoE with 770B total and 49B active parameters and 1M context; it ships a safety-assessment System Card with GitHub, Hugging Face weights and GGUF downloads.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布 Gemini 4 Hydrogen",
+          en: "Google Releases Gemini 4 Hydrogen",
+        },
+        description: {
+          zh: "主打速度和日常任务，现已可在 Gemini 应用和 Search 中使用，面向多样化的智能体工作流设计，强调更紧密遵循指令、更准确调用工具，用更少来回产出可靠结果。",
+          en: "Focused on speed and everyday tasks, now live in the Gemini app and Search; designed for varied agent workflows, it follows instructions more closely and calls tools more accurately with fewer round trips.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT 推出 Space",
+          en: "ChatGPT Launches Space",
+        },
+        description: {
+          zh: "侧边栏中的 Space 成为 pages、slides、images、files 和 uploads 的新家，可写页面、做研究、生成图片并创建交互式图表，把想法变成带图文的幻灯片并邀请他人协作。",
+          en: "Space in the sidebar becomes the new home for pages, slides, images, files and uploads; you can write pages, do research, generate images and build interactive charts, then turn ideas into illustrated slides for collaboration.",
+        },
+      },
+      {
+        title: {
+          zh: "browser-use 1.0 发布",
+          en: "browser-use 1.0 Released",
+        },
+        description: {
+          zh: "用单一 python 持久 REPL 加原生 Chrome DevTools Protocol 访问，替代 0.x 的 24 个浏览器动作。",
+          en: "A single persistent Python REPL with native Chrome DevTools Protocol access replaces the 24 browser actions of 0.x.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 数学家宣布与 Claude 合作证明黎曼猜想",
+          en: "Anthropic Mathematician Claims Riemann Hypothesis Proof With Claude",
+        },
+        description: {
+          zh: "Levent Alpöge 在个人网站宣布与 Claude 合作证明了黎曼猜想，没有论文，只放出 14 个压缩包共 175187 个 Lean 文件、1737 万行代码；证明尚未经独立同行核验。",
+          en: "Levent Alpöge announced proving the Riemann hypothesis with Claude — no paper, only 14 archives totaling 175,187 Lean files and 17.37M lines of code; the proof awaits independent peer verification.",
+        },
+      },
+      {
+        title: {
+          zh: "METR 发布 11 月能力测量更新",
+          en: "METR Publishes November Capability Update",
+        },
+        description: {
+          zh: "截至 Opus 5.5 和 GPT-6 Astra 的评测显示，模型时间视野约每 3.6 个月翻倍，可验证子集翻倍时间约 1.65 个月，AI R&D 相关能力更难测量。",
+          en: "Evaluations through Opus 5.5 and GPT-6 Astra show model time horizons roughly doubling every 3.6 months, with a verifiable subset doubling in ~1.65 months, making AI R&D capability harder to measure.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniMax 内部模型 MIM 实现多项密码分析实用攻击",
+          en: "MiniMax's Internal MIM Model Achieves Practical Cryptanalysis Attacks",
+        },
+        description: {
+          zh: "用内部研究模型 MIM 对现代密码方案做自动化密码分析，在 NIST 候选算法、同行评审方案和公开挑战基准上取得多个此前无实用攻击方案的首个实用破解，并把部分理论攻击变为可执行攻击。",
+          en: "Using the internal research model MIM for automated cryptanalysis of modern schemes, it achieved first practical breaks on NIST candidates, peer-reviewed schemes and public challenge benchmarks, turning some theoretical attacks executable.",
+        },
+      },
+      {
+        title: {
+          zh: "Runway 详解如何构建智能体驱动的软件工厂",
+          en: "Runway Details Building an Agent-Driven Software Factory",
+        },
+        description: {
+          zh: "把软件交付各环节逐步交给智能体：10 月智能体驱动了 38% 的合并 PR（6 月仅 0.1%），首次批准等待中位数从超 2 小时降至约 5 分钟；AI 单独批准的 PR 回滚率约千分之一，低于人工批准约 1/200。",
+          en: "Agents now drive 38% of merged PRs in October (vs 0.1% in June), cutting median first-approval wait from over 2 hours to ~5 minutes; AI-approved PR rollback is ~1/1000, below the ~1/200 of human approval.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenHands 详解用 Agent 自动修复自家镜像 CVE",
+          en: "OpenHands Details Agent-Driven CVE Remediation for Its Own Images",
+        },
+        description: {
+          zh: "把大部分 CVE 修复交给 Agent 流水线：Agent 选择修复、开 PR、合并低风险项并跟踪到部署，人每天只读一条最多 11 行的 Slack 消息和少量 PR。",
+          en: "An agent pipeline handles most CVE fixes — selecting, PR-ing, merging low-risk items and tracking to deploy — leaving a human to read one Slack message of up to 11 lines and a few PRs daily.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-21-hot",
+    date: "2026-11-21",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-21",
+      en: "🔥 Hot Topics · Nov 21, 2026",
+    },
+    summary: {
+      zh: "特朗普在深圳明确表态不支持“台独”引岛内震动岛内网民呼吁两岸统一；Anthropic数学家称借助Claude完成黎曼猜想证明放出1700万行代码数学家高兴不起来；华尔街上演“黑色星期五”美股猛烈抛售标普500道指进入技术性回调纳指涨幅全部回吐；特朗普白宫称中俄美元首会晤“史无前例”“意义重大”会后发表《中俄美元首和平宣言》；高市早苗拍背搭讪特朗普被无视日本网民直言丢人；科技新国货成“深圳特产”AI眼镜智能穿戴成外国游客行李箱新宠；人民日报评“老人拆墙让路遭质疑”呼吁完善防网暴机制；国际金价银价大跳水黄金期货跌4.62%白银跌7.41%；英伟达股价连续第七周下跌累计跌46%市值缩水约2.6万亿美元相当于一个亚马逊；特朗普称赞深圳城市建设“完美无瑕”。",
+      en: "Trump's Shenzhen statement opposing 'Taiwan independence' shakes the island as netizens call for reunification; the Anthropic mathematician's claimed Riemann hypothesis proof with 17M lines of Lean leaves mathematicians uneasy; Wall Street sees a 'Black Friday' rout with the S&P 500 and Dow in technical correction and Nasdaq erasing its yearly gains; Trump calls the China-Russia-US summit 'unprecedented' and 'significant,' with a joint peace declaration; Takaichi's back-tap on Trump is ignored, drawing 'embarrassing' from Japanese netizens; tech new-national products like AI glasses become Shenzhen's new export hit; People's Daily defends the old man who tore down his wall, urging stronger anti-cyberbullying; gold and silver plunge with gold futures down 4.62% and silver down 7.41%; Nvidia falls a seventh straight week, down 46% and losing about $2.6T, an Amazon's worth; Trump praises Shenzhen's cityscape as 'flawless.'",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "特朗普称不支持“台独”引岛内震动",
+          en: "Trump's 'No Taiwan Independence' Stance Shakes the Island",
+        },
+        description: {
+          zh: "特朗普在深圳明确表态不支持“台独”，在台湾引发持续震动，有舆论认为这对民进党当局“倚美谋独”路线是一大警讯，一些台湾网民更直接留言呼吁“两岸统一！”。",
+          en: "Trump's clear stance in Shenzhen against 'Taiwan independence' sent tremors across the island, seen as a warning to the DPP's 'rely-on-US' line, with some Taiwanese netizens directly calling for reunification.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 疑证明黎曼猜想 数学家高兴不起来",
+          en: "AI's Claimed Riemann Proof Leaves Mathematicians Uneasy",
+        },
+        description: {
+          zh: "Anthropic 数学家称借助 Claude 完成黎曼猜想证明，相关代码共 1700 万行，该猜想已困扰数学界 167 年，目前证明尚未经独立同行核验；学界担忧 AI 证明的可靠性与署名权问题，陶哲轩等正尝试验证。",
+          en: "The Anthropic mathematician's claimed Riemann hypothesis proof via Claude involves 17M lines of code for a 167-year-old problem, still unverified by peers; scholars worry about reliability and authorship, with Tao and others attempting verification.",
+        },
+      },
+      {
+        title: {
+          zh: "华尔街上演“黑色星期五”",
+          en: "Wall Street Plays 'Black Friday'",
+        },
+        description: {
+          zh: "11 月 20 日美股遭猛烈抛售，标普 500 与道指进入技术性回调，纳指年内涨幅全部回吐，AI 热门新股 Anthropic 上市后领跌，多位华尔街投资大佬接连发声。",
+          en: "On Nov 20 US stocks were hammered, with the S&P 500 and Dow entering technical correction, Nasdaq erasing all yearly gains, Anthropic leading decliners after its listing, and major investors weighing in.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普：中俄美元首会晤意义重大",
+          en: "Trump: China-Russia-US Summit 'Significant'",
+        },
+        description: {
+          zh: "特朗普在白宫表示中俄美元首会晤“史无前例”“意义重大”；此前三国元首在深圳举行首次三方会晤，围绕维护世界和平深入讨论，会后发表《中俄美元首和平宣言》。",
+          en: "At the White House Trump called the trilateral summit 'unprecedented' and 'significant'; the three leaders held their first meeting in Shenzhen, discussing world peace and issuing a joint peace declaration.",
+        },
+      },
+      {
+        title: {
+          zh: "高市搭讪特朗普被无视 日本网民：丢人",
+          en: "Takaichi's Snub by Trump: Japanese Netizens Say 'Embarrassing'",
+        },
+        description: {
+          zh: "APEC 领导人合影后，高市早苗快步走向特朗普并拍其背部试图搭讪，特朗普仅瞥了一眼便转身离开，高市被晾在一边，这一尴尬瞬间让日本网民直言丢人。",
+          en: "After the APEC leaders' photo, Takaichi hurried over and patted Trump's back to chat; he glanced and walked off, leaving her stranded — an awkward moment Japanese netizens called embarrassing.",
+        },
+      },
+      {
+        title: {
+          zh: "科技新国货成“深圳特产”",
+          en: "Tech New-National Products Become Shenzhen's 'Specialty'",
+        },
+        description: {
+          zh: "深圳各大商圈、专业市场里的 AI 眼镜、智能穿戴等科技感十足的中国产品，已成为外国游客行李箱中深圳的“新特产”，离境退税政策持续释放消费红利。",
+          en: "AI glasses and smart wearables across Shenzhen's malls and markets have become the city's new 'specialty' in foreign tourists' luggage, as tax refunds continue to unlock consumption.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报评“老人拆墙让路遭质疑”",
+          en: "People's Daily on the Old Man Who Tore Down His Wall",
+        },
+        description: {
+          zh: "安徽霍邱一老人主动拆墙让路被赞现代版“六尺巷”，却遭占道纠正等流言攻击；经核查网传说法均不实，文章呼吁完善防网暴机制，别让善意被流言拆掉。",
+          en: "An Huoqiu old man who tore down his wall to yield the road was praised as a modern 'Six-Foot Alley' but hit by rumors of forcing others off the road; checks found them false, and the piece urges stronger anti-cyberbullying safeguards.",
+        },
+      },
+      {
+        title: {
+          zh: "金价银价大跳水",
+          en: "Gold and Silver Prices Plunge",
+        },
+        description: {
+          zh: "11 月 20 日受美联储加息预期等影响，国际金价银价延续跌势大跳水，纽商所 12 月黄金期货跌 4.62%、白银期价跌 7.41%；受中东紧张局势推升供应风险影响，国际油价小幅上涨。",
+          en: "On Nov 20, amid Fed rate-hike expectations, gold and silver slid sharply, with December gold futures down 4.62% and silver down 7.41%; oil edged up on Middle East supply risks.",
+        },
+      },
+      {
+        title: {
+          zh: "英伟达市值掉了一个亚马逊",
+          en: "Nvidia Loses an Amazon's Worth of Market Value",
+        },
+        description: {
+          zh: "英伟达股价连续第七周下跌，创 2008 年金融危机以来最长连续周跌势，期间累计下跌 46%，市值缩水约 2.6 万亿美元，相当于一个亚马逊公司。",
+          en: "Nvidia shares fell a seventh straight week, the longest weekly losing streak since the 2008 financial crisis, down 46% over the period and losing about $2.6T in market value — roughly one Amazon.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普称赞深圳城市建设：完美无瑕",
+          en: "Trump Praises Shenzhen's Cityscape as 'Flawless'",
+        },
+        description: {
+          zh: "特朗普在白宫记者会上称赞深圳城市建设：曾经是个渔村，如今简直完美无瑕。",
+          en: "At a White House press conference Trump praised Shenzhen's urban development: once a fishing village, now simply flawless.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-20",
     date: "2026-11-20",
     title: {
