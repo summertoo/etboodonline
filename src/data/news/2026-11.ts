@@ -2,6 +2,256 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-22",
+    date: "2026-11-22",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-22",
+      en: "🤖 AI HOT Daily · Nov 22, 2026",
+    },
+    summary: {
+      zh: "Anthropic数学家Levent Alpöge宣布与Claude合作完成黎曼猜想及广义黎曼猜想证明以Lean语言分14个数据包发布打印将超25万页斯坦福数小时后发布纯人类竞争草稿；Google发布新一代Gemini 4 Neon；阿里旗舰模型Qwen4 Max上线Together AI单次调用修复Tornado整仓bug；OpenAI详解Codex沙箱在本地安全执行命令；Together AI通报2026年6-7月serverless推理服务提示词泄露事件因编码agent提交私有Hugging Face凭证；研究者向AI供应链埋入200万个金丝雀揭露敏感数据大量外泄；Columbia与MIT论文展示Claude发现的算法在3SUM与全对最短路径上取得多项式改进推翻长期速度上限；OpenAI发布MedChemBench评估模型解读分子结构能力；OpenAI详解从训练到部署的前沿AI风险管理并以分层方法应对对抗性蒸馏；OpenAI研究量化编码智能体加速AI研究但表现不均衡；Google与Blue Origin合作首次重型运载火箭发射Project Suncatcher利用太空资源扩展AI基础设施；Google Quantum AI大规模验证量子上下文性。",
+      en: "Anthropic mathematician Levent Alpöge claims a proof of the Riemann and generalized Riemann hypotheses with Claude, released in 14 Lean packages exceeding 250k printed pages, with Stanford publishing an all-human competing draft hours later; Google ships Gemini 4 Neon; Alibaba's Qwen4 Max lands on Together AI and fixes a Tornado bug in one call; OpenAI details the Codex sandbox for safe local command execution; Together AI discloses a prompt-leak incident for June-July 2026 serverless inference after a coding agent committed private HF credentials; researchers plant 2M canaries in the AI supply chain and find sensitive data leaking at scale; a Columbia-MIT paper shows Claude-discovered algorithms achieving polynomial improvements in 3SUM and APSP, breaking long-standing lower bounds; OpenAI releases MedChemBench for molecular-interpretation evaluation and details frontier-AI risk management with layered anti-adversarial-distillation defenses; OpenAI quantifies coding agents' uneven acceleration of AI research; Google partners with Blue Origin on the first heavy-lift launch of Project Suncatcher to expand AI infrastructure in space; Google Quantum AI verifies quantum contextuality at scale.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Anthropic 数学家称与 Claude 完成黎曼猜想证明",
+          en: "Anthropic Mathematician Claims Riemann Hypothesis Proof with Claude",
+        },
+        description: {
+          zh: "数学家 Levent Alpöge 宣布与 Claude 合作得到黎曼猜想及广义黎曼猜想的证明，以 Lean 语言分 14 个数据包发布，打印将超 25 万页；斯坦福数小时后发布纯人类竞争草稿。",
+          en: "Levent Alpöge announced a proof of the Riemann and generalized Riemann hypotheses with Claude, released in 14 Lean packages exceeding 250k printed pages; Stanford published an all-human competing draft hours later.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 发布 Gemini 4 Neon",
+          en: "Google Releases Gemini 4 Neon",
+        },
+        description: {
+          zh: "Google 推出新一代 Gemini 4 Neon 模型，进一步拓展 Gemini 系列能力。",
+          en: "Google introduces the next-generation Gemini 4 Neon model, extending the Gemini family's capabilities.",
+        },
+      },
+      {
+        title: {
+          zh: "Qwen4 Max 上线 Together AI",
+          en: "Qwen4 Max Launches on Together AI",
+        },
+        description: {
+          zh: "阿里旗舰模型 Qwen4 Max 上线 Together AI Serverless 推理平台（Qwen/Qwen4-Max），1M token 上下文，上线初期 7 折，单次调用即可修复 Tornado 整仓 bug。",
+          en: "Alibaba's flagship Qwen4 Max is live on Together AI's serverless platform (Qwen/Qwen4-Max) with 1M token context at 30% off at launch, fixing a Tornado portfolio bug in a single call.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 详解 Codex 沙箱",
+          en: "OpenAI Details the Codex Sandbox",
+        },
+        description: {
+          zh: "展示 Codex 如何在本地机器上运行命令，同时强制执行用户可控的文件系统与网络限制，覆盖 macOS、Linux 与 Windows。",
+          en: "Shows how Codex runs commands on your machine while enforcing user-controlled filesystem and network limits across macOS, Linux and Windows.",
+        },
+      },
+      {
+        title: {
+          zh: "Together AI 通报 6-7 月提示词泄露事件",
+          en: "Together AI Discloses Prompt-Leak Incident for June-July",
+        },
+        description: {
+          zh: "因 AI 编码 agent 在公开 GitHub 仓库中提交了私有 Hugging Face 凭证，未授权方下载了 2026 年 6-7 月提交给 MiniMax M3、GLM-5.2、Kimi K2.6 等 serverless 推理服务的提示词样本，并搜索其中其他服务凭证。",
+          en: "After an AI coding agent committed private Hugging Face credentials to a public GitHub repo, an unauthorized party downloaded prompt samples submitted to MiniMax M3, GLM-5.2, Kimi K2.6 and other serverless inference services in June-July 2026, and searched for other service credentials.",
+        },
+      },
+      {
+        title: {
+          zh: "研究者向 AI 供应链埋入 200 万金丝雀",
+          en: "Researchers Plant 2M Canaries in the AI Supply Chain",
+        },
+        description: {
+          zh: "研究者在经过 OpenRouter 等 AI 路由的请求中埋入 200 万个金丝雀链接，测试敏感信息是否沿 AI 服务链泄露，结果显示这些数据像筛子一样大量外泄。",
+          en: "Researchers planted 2 million canary links in requests routed through OpenRouter and others, testing whether sensitive data leaks along the AI service chain; the results showed it leaking at alarming rates.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 发现算法突破 3SUM 与 APSP 速度上限",
+          en: "Claude-Discovered Algorithm Breaks 3SUM and APSP Bounds",
+        },
+        description: {
+          zh: "Columbia 与 MIT 论文展示 Claude 发现的算法在 3SUM 和全对最短路径（APSP）上取得多项式改进：3SUM 达 O(n^1.9992)、APSP 达 O(n^2.9995)，推翻相关长期假设。",
+          en: "A Columbia-MIT paper shows Claude-discovered algorithms achieving polynomial improvements in 3SUM (O(n^1.9992)) and all-pairs shortest paths (O(n^2.9995)), overturning long-standing 3SUM and APSP hypotheses.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 发布 MedChemBench",
+          en: "OpenAI Releases MedChemBench",
+        },
+        description: {
+          zh: "用 99 道源自已发表研究的题目评估 AI 模型解读分子结构、解释实验证据并预测化合物性质的能力；xhigh 推理设置下 GPT-6.2 Astra 获 84.5% 可用分。",
+          en: "Using 99 questions from published research, it evaluates models on interpreting molecular structures, experimental evidence and predicting compound properties; at xhigh reasoning GPT-6.2 Astra scores 84.5% usable.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 详解前沿 AI 风险管理与对抗性蒸馏防护",
+          en: "OpenAI Details Frontier-AI Risk and Anti-Distillation Defenses",
+        },
+        description: {
+          zh: "介绍从训练到部署管理前沿 AI 风险的实践，包括模型对齐、沙箱化、阻断式防护与监控；并以分层方法应对对抗性蒸馏，防止能力被抽取。",
+          en: "Details managing frontier-AI risk from training to deployment, including alignment, sandboxing, blocking safeguards and monitoring; and a layered approach to adversarial distillation to prevent capability extraction.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 研究：编码智能体加速 AI 研究但表现不均衡",
+          en: "OpenAI Study: Coding Agents Speed Up AI Research Unevenly",
+        },
+        description: {
+          zh: "OpenAI 量化编码智能体对 AI 研究的加速作用，指出其性能仍不均衡，并探讨对递归式自我改进的意义。",
+          en: "OpenAI quantifies coding agents' acceleration of AI research, notes performance remains uneven, and discusses implications for recursive self-improvement.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 与 Blue Origin 首次发射 Project Suncatcher",
+          en: "Google and Blue Origin Launch Project Suncatcher",
+        },
+        description: {
+          zh: "双方合作进行 Project Suncatcher 首次重型运载火箭发射，该长期计划旨在利用太空资源扩展 AI 基础设施。",
+          en: "The partners conduct the first heavy-lift launch of Project Suncatcher, a long-term plan to use space resources to expand AI infrastructure.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Quantum AI 大规模验证量子上下文性",
+          en: "Google Quantum AI Verifies Quantum Contextuality at Scale",
+        },
+        description: {
+          zh: "研究证明量子上下文性在大规模下驱动量子算法，其处理器在测试中超越经典方案。",
+          en: "The research shows quantum contextuality drives quantum algorithms at scale, with its processor beating classical approaches in tests.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-22-hot",
+    date: "2026-11-22",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-22",
+      en: "🔥 Hot Topics · Nov 22, 2026",
+    },
+    summary: {
+      zh: "央视及研究者揭秘网络女主播真实生态，截至2024年底中国职业主播规模达3880万人；现货黄金贴近3500美元/盎司创近14个月新低，工商银行等多家银行发布紧急提示；APEC第33次领导人非正式会议在深圳举行，21个成员经济体领导人再次聚齐拍下近十年最全全家福；特朗普晒出与普京在深圳会晤的照片并配文“我的朋友”；菲尔兹奖得主邓煜评Anthropic数学家借Claude证明黎曼猜想称25万页不可能可读；Lean与Mathlib社区发联合声明认证该证明命题与证明正确；国内品牌金饰克价较年内高点跌去超650元；特朗普回应深圳乘车时不拉窗帘称深圳的路没有坑洼；墨西哥总统辛鲍姆发布深圳行vlog在返程航班上练习八段锦；墨西哥特种部队在锡那罗亚州抓获美FBI十大通缉要犯“矮子伊西德罗”美方曾悬赏500万美元。",
+      en: "CCTV and researchers reveal the real livestreaming ecosystem, with 38.8M professional streamers in China by end-2024; spot gold nears $3,500/oz, a near-14-month low, and ICBC and other banks issue urgent advisories; the 33rd APEC Economic Leaders' Meeting is held in Shenzhen with leaders of all 21 member economies gathering for the fullest family photo in nearly a decade; Trump posts a photo with Putin from their Shenzhen meeting captioned 'my friend'; Fields medalist Deng Yu says the claimed Claude proof of the Riemann hypothesis can never be readable at 250k pages; Lean and Mathlib communities issue a joint statement certifying the proof; domestic gold-jewelry prices are down over 650 yuan per gram from the year's high; Trump says Shenzhen's roads have no potholes; Mexico's President Sheinbaum posts a vlog practicing Baduanjin on her return flight; Mexican special forces capture FBI most-wanted 'El Chapo Isidro' in Sinaloa, who carried a $5M US bounty.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "央视揭秘网络女主播真实生态",
+          en: "CCTV Reveals the Real Livestreaming Ecosystem",
+        },
+        description: {
+          zh: "截至 2024 年底中国职业主播规模达 3880 万人。央视及研究者揭秘网络直播真实生态，指出主播靠提供情绪陪伴换取打赏，面临苛刻合同及粉丝越界骚扰等风险；行业正通过平台“健康分”机制整治乱象。",
+          en: "China had 38.8M professional streamers by end-2024. CCTV and researchers reveal the real livestreaming ecosystem, noting streamers trade emotional companionship for tips while facing harsh contracts and fan harassment; platforms are cleaning up via 'health score' mechanisms.",
+        },
+      },
+      {
+        title: {
+          zh: "金价跌势凌厉 多家银行发紧急提示",
+          en: "Gold Plunges as Banks Issue Urgent Advisories",
+        },
+        description: {
+          zh: "21 日现货黄金贴近 3500 美元/盎司创近 14 个月新低，工商银行等多家银行发布紧急提示建议合理控制持仓；分析称金价短期下行趋势未逆转，走向取决于 12 月美联储议息会议。",
+          en: "On the 21st spot gold neared $3,500/oz, a near-14-month low; ICBC and other banks issued urgent advisories to control positions; analysts say the short-term downtrend isn't reversed and hinges on December's Fed meeting.",
+        },
+      },
+      {
+        title: {
+          zh: "APEC“中国年”留下这些珍贵瞬间",
+          en: "APEC's 'China Year' Leaves Memorable Moments",
+        },
+        description: {
+          zh: "亚太经合组织第 33 次领导人非正式会议近日在深圳成功举行，21 个成员经济体领导人、代表再次聚齐，拍下近十年来最全的一张“全家福”；中俄美三国元首历史性会晤、工商领导人峰会及一系列双边会谈密集展开。",
+          en: "The 33rd APEC Economic Leaders' Meeting was held in Shenzhen, with leaders and representatives of all 21 member economies gathering for the fullest 'family photo' in nearly a decade; the historic China-Russia-US trilateral meeting, CEO Summit and bilateral talks followed in quick succession.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普晒和普京深圳会晤照片",
+          en: "Trump Posts Photo with Putin from Shenzhen Meeting",
+        },
+        description: {
+          zh: "11 月 21 日特朗普在社交媒体发文，晒出与普京在深圳会晤的照片并配文“我的朋友”；此前两人于 11 月 19 日深圳 APEC 峰会期间举行双边会晤，此举引发欧洲不满。",
+          en: "On Nov 21 Trump posted a photo with Putin from their Shenzhen meeting, captioning it 'my friend'; the two met bilaterally during the Shenzhen APEC summit on Nov 19, drawing European displeasure.",
+        },
+      },
+      {
+        title: {
+          zh: "邓煜谈AI证明黎曼猜想：25万页不可读",
+          en: "Deng Yu on AI Riemann Proof: 250k Pages Unreadable",
+        },
+        description: {
+          zh: "Anthropic 数学家阿尔珀格称借助 Claude 证出广义黎曼猜想，公开 1700 万行 Lean 代码，无可读论文，论证多达 25 万页；菲尔兹奖得主邓煜表示重点是可读性，“25 万页是不可能可读的”，在可读版本出现前不作评论。",
+          en: "Anthropic's Alpöge claims a generalized Riemann hypothesis proof with Claude, releasing 17M lines of Lean with no readable paper and up to 250k pages; Fields medalist Deng Yu says readability is what matters—'250k pages can never be readable'—and will comment only once a readable version appears.",
+        },
+      },
+      {
+        title: {
+          zh: "机构认证：Claude证明黎曼猜想无误",
+          en: "Institutions Certify Claude's Riemann Proof Correct",
+        },
+        description: {
+          zh: "11 月 21 日 Lean 和 Mathlib 社区发联合声明，认证黎曼猜想命题与证明正确；经多个独立工具及检查器验证，该证明获机器确认。",
+          en: "On Nov 21 the Lean and Mathlib communities issued a joint statement certifying the Riemann hypothesis statement and proof correct; verified by multiple independent tools and checkers, the proof received machine confirmation.",
+        },
+      },
+      {
+        title: {
+          zh: "金饰克价年内大跌超650元",
+          en: "Gold Jewelry Prices Fall Over 650 Yuan Per Gram",
+        },
+        description: {
+          zh: "本周现货黄金连跌 5 日区间跌幅近 9%；国内主流品牌金饰克价连续 10 个交易日下跌，较 1 月 29 日年内高点回撤近四成，跌去超 650 元。",
+          en: "Spot gold fell five straight days this week, down nearly 9%; mainstream domestic gold-jewelry prices fell 10 consecutive trading days, retreating ~40% from the Jan 29 high, down over 650 yuan per gram.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普回应深圳乘车时不拉窗帘",
+          en: "Trump on Not Drawing the Curtain in Shenzhen",
+        },
+        description: {
+          zh: "11 月 18 日晚特朗普乘车前往欢迎晚宴，车队经过深圳街头时拉开窗帘看深圳的路，他表示：深圳的路真的没有坑洼，而我们的城市却脏兮兮。",
+          en: "On the evening of Nov 18, riding to the welcome banquet, Trump opened the curtains as the motorcade passed Shenzhen streets, saying: Shenzhen's roads really have no potholes, while our cities are filthy.",
+        },
+      },
+      {
+        title: {
+          zh: "墨西哥总统迷上八段锦",
+          en: "Mexico's President Takes Up Baduanjin",
+        },
+        description: {
+          zh: "11 月 21 日墨西哥总统辛鲍姆发布深圳行 vlog，展示在返程航班上练习八段锦；此前她来深圳参加 APEC 时曾专门提出想找中国老师练习，指导老师评价其功底扎实，至少练了一年。",
+          en: "On Nov 21 President Sheinbaum posted a Shenzhen vlog showing her practicing Baduanjin on the return flight; during APEC she had asked for a Chinese teacher, and her instructor says her fundamentals are solid, practicing at least a year.",
+        },
+      },
+      {
+        title: {
+          zh: "墨西哥大毒枭“矮子伊西德罗”被抓",
+          en: "Mexico Captures Drug Lord 'El Chapo Isidro'",
+        },
+        description: {
+          zh: "11 月 21 日墨西哥国防部宣布特种部队 20 日晚在锡那罗亚州抓获绰号“矮子伊西德罗”的毒枭福斯托·伊西德罗·梅萨-弗洛雷斯；此人被列为美国 FBI 十大通缉要犯之一，美方曾悬赏 500 万美元。",
+          en: "On Nov 21 Mexico's defense ministry said special forces captured drug lord Fausto Isidro Meza-Flores, aka 'El Chapo Isidro', in Sinaloa on the night of the 20th; listed among the FBI's ten most-wanted, he carried a $5M US bounty.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-21",
     date: "2026-11-21",
     title: {
