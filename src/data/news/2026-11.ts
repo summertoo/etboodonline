@@ -2,6 +2,246 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-23",
+    date: "2026-11-23",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-23",
+      en: "🤖 AI HOT Daily · Nov 23, 2026",
+    },
+    summary: {
+      zh: "开源工具 Localcode 让 Mac 单条命令启动智能体编程；面壁智能 MiniCPM 累计下载超 7000 万，8B 成为老挝国家模型、翻译成绩超 GPT-4o；TechCrunch 报道 Notable Capital、GIC 与 Baillie Gifford 在 Anthropic IPO 前的重仓逻辑；OpenAI 提议以困惑度作为跨模型比较与安全标准的共享指标并公开内部预训练数据；用户实测 MiniCPM5-2B 在 Mac 跑通 14 页体检报告分析、58 项化验值逐项对上；卡兹克分享让 Claude Opus 5.5 当总指挥、Gemini 4 Neon 当军师、GPT 负责后端的分工方法；0rwx 提出受 Unix 权限启发的 AI 使用模型；本地 AI 入门指南介绍 Inkling、Qwen 与 Unsloth；哈佛 CS 2881R 公开 AI 安全理论课程材料；菲尔兹奖得主梅纳德谈 Claude 证明黎曼猜想称相信正确但需被理解才可能获认可。",
+      en: "Open-source Localcode starts agentic coding on Mac with one command; MiniCPM downloads top 70M and its 8B model becomes Laos' national model, beating GPT-4o on translation; TechCrunch covers Notable Capital, GIC and Baillie Gifford's big bets before Anthropic's IPO; OpenAI proposes perplexity as a shared cross-developer comparison and safety metric, releasing internal pretraining data; a user runs MiniCPM5-2B on Mac to analyze a 14-page health report, matching all 58 lab values; Kazike shares a division of labor with Claude Opus 5.5 as commander, Gemini 4 Neon as strategist and GPT for backend; 0rwx proposes a Unix-permission-inspired AI usage model; a local-AI guide covers Inkling, Qwen and Unsloth; Harvard CS 2881R publishes AI-safety theory materials; Fields medalist Maynard says the Claude Riemann proof is likely correct but needs to be understood to be accepted.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Localcode：Mac 一键运行的智能体编程工具",
+          en: "Localcode: One-Command Agentic Coding on Mac",
+        },
+        description: {
+          zh: "开源项目 Localcode 让你在 Mac 上单条命令启动智能体编程（agentic coding），面向本地开发场景。",
+          en: "Open-source Localcode lets you start agentic coding on Mac with a single command, for local development scenarios.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniCPM 8B 成为老挝国家模型",
+          en: "MiniCPM 8B Becomes Laos' National Model",
+        },
+        description: {
+          zh: "面壁智能 MiniCPM 累计下载超 7000 万，8B 老挝国家模型接入老挝政府 G-Chat v2，翻译成绩超 GPT-4o；马来西亚用 VoxCPM2 做语音交互，肯尼亚银行跑端侧风控 Agent，小模型之争转向谁真正嵌入日常系统。",
+          en: "MiniCPM downloads exceed 70M; its 8B model serves as Laos' national model in the government's G-Chat v2, beating GPT-4o on translation benchmarks; Malaysia uses VoxCPM2 for voice and a Kenyan bank runs an on-device risk Agent, as small-model competition shifts to embedding in daily systems.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic IPO 前三家机构如何重注押注",
+          en: "How Three Institutions Bet Big Before Anthropic's IPO",
+        },
+        description: {
+          zh: "TechCrunch 报道 Notable Capital、GIC 与 Baillie Gifford 在 Anthropic IPO 前的重仓投资逻辑。",
+          en: "TechCrunch reports how Notable Capital, GIC and Baillie Gifford bet big on Anthropic before its IPO.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 提议以困惑度作为行业共享指标",
+          en: "OpenAI Proposes Perplexity as a Shared Industry Metric",
+        },
+        description: {
+          zh: "OpenAI 撰文提议将 perplexity（交叉熵损失）确立为跨模型开发者比较和安全标准的共享指标，并公开其内部预训练测量数据。",
+          en: "OpenAI proposes perplexity (cross-entropy loss) as a shared metric for cross-developer comparison and safety standards, and releases its internal pretraining measurement data.",
+        },
+      },
+      {
+        title: {
+          zh: "用户实测 MiniCPM5-2B 本地跑通体检报告分析",
+          en: "User Tests MiniCPM5-2B on Local Health-Report Analysis",
+        },
+        description: {
+          zh: "用户在 Mac 上用 llama.cpp 跑 minicpm5-2b 分析 14 页体检报告：首次漏掉 3 页扫描件，截图重传后 58 项化验值逐项对上、20 行映射到 LOINC 编码；问超标指标时 11 步找到全部 5 项，但误判一项血糖超标；接 Claude Code 时改用演示账号避免数据上传。",
+          en: "A user runs minicpm5-2b via llama.cpp on Mac to analyze a 14-page health report: the first pass missed 3 scanned pages, re-uploading screenshots matched all 58 lab values with 20 mapped to LOINC; it found all 5 flagged metrics in 11 steps but misjudged one in-range glucose; a demo account was used with Claude Code to avoid uploading data.",
+        },
+      },
+      {
+        title: {
+          zh: "卡兹克分享 Claude、GPT、Gemini 三模型协同调度方法",
+          en: "Kazike Shares Coordinating Claude, GPT and Gemini",
+        },
+        description: {
+          zh: "自媒体作者卡兹克分享让 Claude、GPT、Gemini 协同工作：Claude Opus 5.5 当总指挥负责沟通、拆解和验收，Gemini 4 Neon 当军师出方案和改界面文案，GPT 负责后端、算法、修 BUG 和代码审查。",
+          en: "Creator Kazike shares coordinating Claude, GPT and Gemini: Claude Opus 5.5 as commander for communication, decomposition and acceptance, Gemini 4 Neon as strategist for plans and UI copy, GPT for backend, algorithms, bug fixes and code review.",
+        },
+      },
+      {
+        title: {
+          zh: "0rwx：受 Unix 权限启发的 AI 使用模型",
+          en: "0rwx: A Unix-Permission-Inspired AI Usage Model",
+        },
+        description: {
+          zh: "0rwx 提出受 Unix 文件权限启发、用读写执行三元组描述 AI 使用方式的概念模型，帮助思考智能体权限边界。",
+          en: "0rwx proposes a conceptual model inspired by Unix file permissions, using read/write/execute triples to describe AI usage and help reason about agent permission boundaries.",
+        },
+      },
+      {
+        title: {
+          zh: "本地 AI 入门指南：Inkling、Qwen 与 Unsloth",
+          en: "Local AI Beginner's Guide: Inkling, Qwen and Unsloth",
+        },
+        description: {
+          zh: "一份面向初学者的本地 AI 指南，介绍如何用 Inkling、Qwen 和 Unsloth 在本地运行大模型。",
+          en: "A beginner's guide to local AI, covering how to run large models locally with Inkling, Qwen and Unsloth.",
+        },
+      },
+      {
+        title: {
+          zh: "Harvard CS 2881R：AI 安全理论课程",
+          en: "Harvard CS 2881R: AI Safety Theory Course",
+        },
+        description: {
+          zh: "哈佛 CS 2881R 课程（AI 安全、机器学习理论研讨）公开课程材料，探讨前沿模型安全的理论基础。",
+          en: "Harvard CS 2881R (AI safety, machine learning theory seminar) releases public course materials on the theoretical foundations of frontier-model safety.",
+        },
+      },
+      {
+        title: {
+          zh: "菲尔兹奖得主梅纳德谈 Claude 证明黎曼猜想",
+          en: "Fields Medalist Maynard on the Claude Riemann Proof",
+        },
+        description: {
+          zh: "菲尔兹奖得主梅纳德谈与 Claude 合作证明黎曼猜想：相信证明正确，但需被理解才可能获认可。",
+          en: "Fields medalist Maynard on the Claude-assisted Riemann hypothesis proof: he believes it is correct, but it needs to be understood to gain acceptance.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-23-hot",
+    date: "2026-11-23",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-23",
+      en: "🔥 Hot Topics · Nov 23, 2026",
+    },
+    summary: {
+      zh: "某部委机关干部因犯间谍罪被判死刑；国际高血压学会新指南将 130~139/80~89 毫米汞柱由\"正常高值血压\"改为\"血压升高\"，不再属健康状态；沪指 11 月 23 日盘中跌破 3500 点；特朗普称若谈不拢倾向于新年后开打；八马茶业被暂停军采资格，控股股东吴小宁系董事长配偶、直接持股 5.24%；原价 129 万元/支的抗癌药首次进医保、谈判后降至 28.86 万元；上交所深交所北交所同步调整融资保证金比例、深交所就创业板做市商征求意见；郑州金店老板囤一吨白银、银价从 35 元跌到不足 10 元亏超千万；赖清德沈伯洋穿日本祭祀服造势引公愤；最高检通报女孩被姑父表兄多次强奸致重度抑郁案、二人分别获刑十五年与十年；特朗普从深圳返回后连发 30 多张 APEC 照片、其中一张配文 GOAT。",
+      en: "A ministry official is sentenced to death for espionage; the ISH 2026 guideline reclassifies 130-139/80-89 mmHg from 'normal-high' to 'elevated' blood pressure, no longer a healthy state; the Shanghai Composite briefly falls below 3,500 intraday; Trump says he leans toward striking after the New Year if talks fail; Bama Tea is suspended from military procurement with controlling shareholder Wu Xiaoning, the chairman's spouse, holding 5.24%; a 1.29M yuan cancer drug enters the medical-insurance catalog, negotiated down to 288.6k yuan; the three exchanges adjust margin ratios with Shenzhen seeking comment on ChiNext market makers; a Zhengzhou gold-shop owner loses over 10M yuan holding one ton of silver as it fell from 35 to under 10 yuan per gram; Lai Ching-te and Shen Po-yang wear Japanese festival coats at a rally, sparking outrage; the SPP reports a girl repeatedly raped by relatives with 15- and 10-year sentences; Trump posts 30+ APEC photos after returning from Shenzhen, one captioned 'GOAT'.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "某部委机关干部因犯间谍罪被判死刑",
+          en: "Ministry Official Sentenced to Death for Espionage",
+        },
+        description: {
+          zh: "保密观披露：某部委干部麻某驻外期间被境外情报人员策反，回国后持续窃取情报、提供多份秘密机密材料，获利百万，法院以间谍罪判处其死刑。",
+          en: "A ministry official, Ma, was recruited by foreign intelligence while posted abroad, continued stealing secrets after returning and provided multiple classified materials for a million yuan profit; the court sentenced him to death for espionage.",
+        },
+      },
+      {
+        title: {
+          zh: "130/80 不再列为\"正常血压\"",
+          en: "130/80 No Longer Counts as 'Normal Blood Pressure'",
+        },
+        description: {
+          zh: "国际高血压学会《2026 版全球高血压实践指南》将 130~139/80~89 毫米汞柱由\"正常高值血压\"改为\"血压升高\"，明确不再属健康状态，需尽早干预。",
+          en: "The ISH 2026 global hypertension guideline reclassifies 130-139/80-89 mmHg from 'normal-high blood pressure' to 'elevated blood pressure', no longer a healthy state and needing early intervention.",
+        },
+      },
+      {
+        title: {
+          zh: "沪指跌破 3500 点",
+          en: "Shanghai Composite Breaks Below 3,500",
+        },
+        description: {
+          zh: "11 月 23 日 A 股走弱，沪指下挫跌逾 1%、盘中跌破 3500 点，深成指跌 0.96%，创业板指跌 0.71%。",
+          en: "On Nov 23 A-shares weakened, with the Shanghai Composite down over 1% and briefly below 3,500 intraday; Shenzhen Component -0.96%, ChiNext -0.71%.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普：如果谈不拢 倾向于新年后开打",
+          en: "Trump: Leaning Toward Striking After New Year If Talks Fail",
+        },
+        description: {
+          zh: "特朗普表示，如果谈判无法达成，倾向于新年后开打。",
+          en: "Trump says that if talks fail, he leans toward striking after the New Year.",
+        },
+      },
+      {
+        title: {
+          zh: "八马茶业被暂停军采资格 吴小宁是谁",
+          en: "Bama Tea Suspended from Military Procurement; Who Is Wu Xiaoning",
+        },
+        description: {
+          zh: "八马茶业被军队采购网暂停军采资格，控股股东吴小宁被列为关联处理人员；其系董事长王文礼配偶，IPO 申报前直接持股 5.24%。",
+          en: "Bama Tea was suspended from military procurement and controlling shareholder Wu Xiaoning listed as a related person; she is the spouse of chairman Wang Wenli and held 5.24% directly before the IPO filing.",
+        },
+      },
+      {
+        title: {
+          zh: "129 万一支抗癌药进医保",
+          en: "A 1.29M Yuan Cancer Drug Enters Medical Insurance",
+        },
+        description: {
+          zh: "原价 129 万元/支的抗癌药首次进入医保目录，经谈判支付标准降至 28.86 万元/支；医保局称该药属临床急需创新药、适用人群少且一次性治疗，药企靠国产替代降本、放量收回成本。",
+          en: "A 1.29M yuan cancer drug enters the national medical-insurance catalog for the first time, with the negotiated price cut to 288.6k yuan; the regulator says it's a clinically urgent innovative drug for few patients and one-time treatment, with the firm cutting costs via domestic substitution and recouping through volume.",
+        },
+      },
+      {
+        title: {
+          zh: "上交所、深交所、北交所打出重磅组合拳",
+          en: "The Three Exchanges Launch a Heavy Policy Package",
+        },
+        description: {
+          zh: "上交所、深交所、北交所同步调整融资保证金比例；深交所就创业板引入做市商制度征求意见，沪深交易所推出新一批降费举措。",
+          en: "The three exchanges simultaneously adjust margin requirements for margin financing; Shenzhen seeks comment on introducing market makers on ChiNext, and the Shanghai/Shenzhen exchanges launch a new round of fee cuts.",
+        },
+      },
+      {
+        title: {
+          zh: "金店老板囤一吨白银直接亏超 1000 万",
+          en: "Gold-Shop Owner Loses Over 10M Yuan Holding One Ton of Silver",
+        },
+        description: {
+          zh: "金价回落带动银价大跌，郑州某金店老板囤一吨白银，银价从 35 元/克跌到不到 10 元，直接亏损超千万。",
+          en: "As gold retreats and silver crashes, a Zhengzhou gold-shop owner holding one ton of silver lost over 10M yuan as the price fell from 35 to under 10 yuan per gram.",
+        },
+      },
+      {
+        title: {
+          zh: "赖清德沈伯洋穿日本祭祀服造势引公愤",
+          en: "Lai and Shen Po-yang Wear Japanese Festival Coats, Sparking Outrage",
+        },
+        description: {
+          zh: "赖清德为民进党台北市长候选人沈伯洋站台，两人身穿日本祭典风格\"法被\"引发争议；学者张亚中指出这是民进党\"去中国化、美化日本殖民历史与文化媚日化\"的公开展现。",
+          en: "Lai Ching-te and Taipei mayoral candidate Shen Po-yang wore Japanese festival 'happi' coats at a rally, sparking outrage; scholar Chang Ya-chung says it publicly shows the DPP's de-Sinicization and glorification of Japanese colonial history.",
+        },
+      },
+      {
+        title: {
+          zh: "女孩被姑父表兄多次强奸重度抑郁",
+          en: "Girl Repeatedly Raped by Relatives, Suffering Severe Depression",
+        },
+        description: {
+          zh: "最高检发布指导性案例：2017 至 2021 年孙某刚（姑父）、孙某飞（表兄）对女孩多次猥亵强奸，致其重度抑郁；检方依法抗诉后表兄获刑十年、姑父获刑十五年。",
+          en: "The Supreme People's Procuratorate releases a guiding case: from 2017-2021 two relatives repeatedly molested and raped a girl, causing severe depression; after prosecution appeals, the cousin got 10 years and the uncle 15.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普发 APEC 合照配文 GOAT",
+          en: "Trump Posts APEC Group Photo Captioned 'GOAT'",
+        },
+        description: {
+          zh: "特朗普从深圳返回美国后连发 30 多张 APEC 相关照片，其中一张配文\"GOAT\"（有史以来最伟大的）。",
+          en: "After returning from Shenzhen, Trump posted 30+ APEC photos, one captioned 'GOAT' (Greatest of All Time).",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-22",
     date: "2026-11-22",
     title: {
