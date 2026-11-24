@@ -2,6 +2,276 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-24",
+    date: "2026-11-24",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-24",
+      en: "🤖 AI HOT Daily · Nov 24, 2026",
+    },
+    summary: {
+      zh: "智谱发布首个 Loop Transformer 架构旗舰模型 GLM-5.4，开启泛 Coding 能力；NVIDIA 宣布黄仁勋即刻复任总裁兼 CEO 并重回董事会，另设国家安全与出口管制委员会；Anthropic 推出 Claude Ship 测试版，自动完成 PR 审查、修复与审批；ChatGPT 推出面向日常对话优化的 GPT-6.2 Sol；Google Search AI Mode 可连接 Google Wallet、Drive 和 Gemini 应用；Claude 将连接器与技能统一为插件、上线超 10000 个插件；特朗普力挺黄仁勋回归称美国政府无不当行为证据；俄勒冈州与弗吉尼亚州起诉 SpaceX 指控 Grok 深伪防护不足；Anthropic 访谈 58 家企业客户发现多数 AI 应用靠扩大产出而非削减成本创造价值；DeepMind 用 Gemini 4 智能体团队结合 Lean 形式化验证改进量子算法；a16z 实测 11307 次 Agent 购物流程总结企业赢得 B2A 经济的五条方法；Wiz 披露 ARTEX 智能体攻击框架的真实云入侵案例。",
+      en: "Zhipu releases GLM-5.4, the first flagship on a Loop Transformer architecture, enabling broad coding; NVIDIA announces Jensen Huang's immediate reinstatement as president, CEO and board member, with a new national-security and export-control committee; Anthropic launches the Claude Ship beta for automated PR review, fixes and approvals; ChatGPT introduces GPT-6.2 Sol optimized for everyday conversation; Google Search AI Mode can connect Google Wallet, Drive and Gemini apps; Claude unifies connectors and skills into plugins with 10,000+ available; Trump backs Huang's return, saying the US has no evidence of wrongdoing; Oregon and Virginia sue SpaceX over inadequate Grok deepfake protections; Anthropic interviews 58 enterprise customers, finding most AI value comes from expanding output rather than cutting costs; DeepMind uses Gemini 4 agent teams with Lean formal verification to improve quantum algorithms; a16z tests 11,307 agent shopping runs and distills five ways to win the B2A economy; Wiz discloses real cloud intrusions via the ARTEX agentic-attack framework.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "智谱发布 GLM-5.4：首个 Loop Transformer 架构旗舰",
+          en: "Zhipu Releases GLM-5.4, First Loop Transformer Flagship",
+        },
+        description: {
+          zh: "智谱发布旗舰模型 GLM-5.4，为第一代采用 Loop Transformer 架构的模型，让 28 层共享权重循环执行两轮，在参数量不变下获得更深推理，智能水平达 2-3T 级模型效果，并开启泛 Coding 能力。",
+          en: "Zhipu releases GLM-5.4, the first flagship on a Loop Transformer architecture that runs 28 shared layers for two cycles, deepening reasoning at the same parameter count to reach 2-3T-class performance and enabling broad coding.",
+        },
+      },
+      {
+        title: {
+          zh: "NVIDIA 宣布黄仁勋复任总裁兼 CEO",
+          en: "NVIDIA Reinstates Jensen Huang as President and CEO",
+        },
+        description: {
+          zh: "NVIDIA 宣布黄仁勋即刻复任总裁、CEO 及董事会成员，临时 CEO Colette Kress 继续担任 CFO；董事会另设国家安全与出口管制委员会并招聘首席合规官，此前的独立董事调查将继续进行。",
+          en: "NVIDIA announces Jensen Huang's immediate reinstatement as president, CEO and board member, with interim CEO Colette Kress staying as CFO; the board adds a national-security and export-control committee and hires a chief compliance officer while the independent-director probe continues.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 推出 Claude Ship 测试版",
+          en: "Anthropic Launches Claude Ship Beta",
+        },
+        description: {
+          zh: "Anthropic 发布 Claude Ship 测试版，由正式可用的 Code Review 及两个 beta 智能体（PR Steward、Claude Approvals）组成，可审查 PR、推送修复并按团队写进仓库的策略文件决定能否合并。",
+          en: "Anthropic releases the Claude Ship beta, made up of the generally available Code Review plus two beta agents (PR Steward and Claude Approvals) that review PRs, push fixes and decide merges per the team's policy file.",
+        },
+      },
+      {
+        title: {
+          zh: "ChatGPT 推出 GPT-6.2 Sol",
+          en: "ChatGPT Launches GPT-6.2 Sol",
+        },
+        description: {
+          zh: "ChatGPT 在 Chat 标签页推出面向日常对话优化的 GPT-6.2 Sol，面向 Plus、Pro、Business 和 Enterprise 开放；更擅长处理复杂请求与在线信息查找，能识别照片中标签文字等细节，并按价格、位置偏好缩小选项范围。",
+          en: "ChatGPT launches GPT-6.2 Sol, optimized for everyday conversation in the Chat tab, available to Plus, Pro, Business and Enterprise; it handles complex requests and online lookups better, reads fine details like label text in photos and narrows options by price and location preferences.",
+        },
+      },
+      {
+        title: {
+          zh: "Google Search AI Mode 支持连接 Wallet、Drive 与 Gemini",
+          en: "Google Search AI Mode Connects Wallet, Drive and Gemini",
+        },
+        description: {
+          zh: "Google 在 Search 的 AI Mode 扩展 Personal Intelligence，用户可选择安全连接 Google Wallet、Drive 和 Gemini 应用；Wallet 即日起开放，Drive 与 Gemini 应用将在未来数周跟进。",
+          en: "Google expands Personal Intelligence in Search's AI Mode, letting users securely connect Google Wallet, Drive and Gemini apps; Wallet is live now, with Drive and the Gemini app following in coming weeks.",
+        },
+      },
+      {
+        title: {
+          zh: "Claude 推出插件统一连接器与技能",
+          en: "Claude Launches Plugins, Unifying Connectors and Skills",
+        },
+        description: {
+          zh: "Claude 官方将连接器和技能合并为插件，提供统一的方式接入工具或教授新技能；已在 Free、Pro、Max 和 Ultra 上线，Team 和 Enterprise 即将支持，可浏览超 10000 个插件。",
+          en: "Claude merges connectors and skills into plugins for a unified way to add tools or teach skills; live on Free, Pro, Max and Ultra, with Team and Enterprise coming, and 10,000+ plugins browsable.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普力挺黄仁勋回归",
+          en: "Trump Backs Huang's Return to Nvidia",
+        },
+        description: {
+          zh: "特朗普在 Truth Social 表态支持 Nvidia 董事会复职黄仁勋为 CEO 兼总裁，称美国政府没有理由认为其回归构成国家安全风险；司法部长已确认政府没有其违法行为的证据。",
+          en: "Trump backs Nvidia's reinstatement of Huang as CEO and president, saying the US has no reason to see his return as a national-security risk; the attorney general has confirmed no evidence of wrongdoing.",
+        },
+      },
+      {
+        title: {
+          zh: "俄勒冈州和弗吉尼亚州起诉 SpaceX",
+          en: "Oregon and Virginia Sue SpaceX",
+        },
+        description: {
+          zh: "两州总检察长分别起诉 SpaceX，指控其忽视行业标准防护并虚假宣传 X 平台和 Grok AI 的安全性；核心指向 Grok Imagine 的 spicy 模式与 2026 年 1 月允许用户无需同意编辑任意图片，导致非自愿色情深伪泛滥。",
+          en: "Oregon and Virginia attorneys general sue SpaceX, alleging it ignored industry-standard protections and misrepresented the safety of X and Grok AI, centered on Grok Imagine's spicy mode and the Jan 2026 change letting users edit any image without consent, fueling non-consensual deepfakes.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 访谈 58 家企业客户",
+          en: "Anthropic Interviews 58 Enterprise Customers",
+        },
+        description: {
+          zh: "Anthropic 对 58 家企业客户进行 66 次访谈，发现多数 AI 应用靠扩大产出而非削减成本创造价值；直接裁员案例很少，但约三分之二公司因 AI 减少招聘，高价值应用通常需要更深度组织重组。",
+          en: "Anthropic interviews 58 enterprise customers across 66 sessions, finding most AI value comes from expanding output rather than cutting costs; direct layoffs are rare but about two-thirds reduce hiring, and high-value use typically needs deeper reorganization.",
+        },
+      },
+      {
+        title: {
+          zh: "DeepMind 用 Gemini 4 智能体团队与 Lean 改进量子算法",
+          en: "DeepMind Uses Gemini 4 Agents and Lean to Improve Quantum Algorithms",
+        },
+        description: {
+          zh: "DeepMind 新论文用多个 Gemini 4 智能体团队结合 Lean 形式化定理证明改进量子算法，生成经数学验证的高效量子电路，并在 GitHub 开源 Lean 库、问题规格和验证解法。",
+          en: "A new DeepMind paper uses teams of Gemini 4 agents with Lean formal proof to improve quantum algorithms, producing mathematically verified efficient quantum circuits and open-sourcing the Lean library, problem specs and verified solutions on GitHub.",
+        },
+      },
+      {
+        title: {
+          zh: "a16z 实测 11307 次 Agent 购物流程",
+          en: "a16z Tests 11,307 Agent Shopping Runs",
+        },
+        description: {
+          zh: "a16z 联合 The Prompting Company 测试 Grok Bot、Muse、Instinct、Dots 等智能体在 1270 条提示词、11307 次完整运行中的购物表现，并比对 YipitData 消费数据，总结企业赢得 B2A 经济的五条方法。",
+          en: "a16z with The Prompting Company tests Grok Bot, Muse, Instinct, Dots and other agents across 1,270 prompts and 11,307 full runs, benchmarked against YipitData consumer data, distilling five ways businesses win the B2A economy.",
+        },
+      },
+      {
+        title: {
+          zh: "Wiz 披露 ARTEX 智能体攻击框架真实案例",
+          en: "Wiz Discloses Real ARTEX Agentic-Attack Cases",
+        },
+        description: {
+          zh: "Wiz Research 披露 ARTEX 智能体攻击框架的真实云入侵案例，展示攻击者如何利用 AI 智能体框架进行实际入侵。",
+          en: "Wiz Research discloses real cloud-intrusion cases using the ARTEX agentic-attack framework, showing how attackers exploit agent frameworks for actual intrusions.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-24-hot",
+    date: "2026-11-24",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-24",
+      en: "🔥 Hot Topics · Nov 24, 2026",
+    },
+    summary: {
+      zh: "神舟二十四号飞行乘组公布，巴基斯坦航天员齐尚·阿里成为首位到访\"天宫\"的外籍航天员；媒体批评 BBC 报道深圳时恶意剪辑加\"阴间滤镜\"、冒犯深圳市民应道歉；特朗普评价黄仁勋复职决定称\"正确且恰当\"；英伟达股价 23 日收盘涨 31.5%、市值增加近 1 万亿美元；外交部就国际刑事法院对以总理及防长发逮捕令表态、支持有助于实现公平正义的努力；甲亢哥在博尔特指导下百米跑出 10 秒 35；加拿大总理卡尼吐槽特朗普是白宫\"新室内设计师\"；永辉超市同意终止与茅台 12 年合资渠道合作、可望分得约 1.16 亿元；上海 30 岁女教师在校猝死、生前每天在校超 15 小时，家属获 113 万余元工亡待遇；人社部就《社会保险基金监督条例》公开征求意见守护\"养老钱\"；金价回调至年内新低、足金首饰每克下跌超 600 元，金店客流爆满；特朗普在私人晚宴手持深圳 APEC 照片向宾客展示。",
+      en: "The Shenzhou-24 crew is announced, with Pakistani astronaut Muhammad Qishan Ali the first foreign astronaut to visit Tiangong; media criticize BBC for maliciously editing its Shenzhen coverage with a dark filter, offending locals and warranting an apology; Trump calls Huang's reinstatement 'correct and appropriate'; Nvidia closes up 31.5% on Nov 23, adding nearly $1T in market cap; the Foreign Ministry responds to the ICC arrest warrants for Israel's PM and defense minister, backing efforts for fairness and justice; IShowSpeed runs 100m in 10.35s under Bolt's guidance; Canadian PM Carney mocks Trump as the White House's new 'interior designer'; Yonghui agrees to end its 12-year JV channel cooperation with Moutai, expecting about 116M yuan; a 30-year-old Shanghai teacher dies at school after 15+ hour days, family gets over 1.13M yuan in work-injury benefits; the Ministry of Human Resources seeks comment on social-insurance fund supervision to protect pensions; gold falls to a yearly low with fine-gold jewelry down over 600 yuan per gram and stores packed; Trump shows guests his Shenzhen APEC photo at a private dinner.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "神二十四乘组：外籍航天员首次入选",
+          en: "Shenzhou-24 Crew: First Foreign Astronaut Selected",
+        },
+        description: {
+          zh: "神舟二十四号飞行乘组由汤洪波、武毅和巴基斯坦航天员穆罕默德·齐尚·阿里组成，阿里将成为首位到访\"天宫\"的外籍航天员。",
+          en: "The Shenzhou-24 crew is Tang Hongbo, Wu Yi and Pakistani astronaut Muhammad Qishan Ali, who becomes the first foreign astronaut to visit Tiangong.",
+        },
+      },
+      {
+        title: {
+          zh: "BBC 应向被冒犯的深圳市民道歉",
+          en: "BBC Should Apologize to Offended Shenzhen Residents",
+        },
+        description: {
+          zh: "媒体批评 BBC 报道深圳时恶意剪辑并加\"阴间滤镜\"、拼凑虚假图景，冒犯深圳市民，呼吁其道歉；此前 BBC 曾因拼接特朗普演讲画面被迫道歉，但在涉华报道上反复抹黑却从未道歉。",
+          en: "Media criticize BBC for maliciously editing its Shenzhen coverage with a dark 'underworld filter' to fabricate a false picture, offending locals and calling for an apology; BBC previously apologized for splicing Trump's speech but has repeatedly smeared China without apologizing.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普评价黄仁勋复职决定",
+          en: "Trump Comments on Huang's Reinstatement",
+        },
+        description: {
+          zh: "特朗普在\"真实社交\"发文支持英伟达董事会恢复黄仁勋担任首席执行官，称该决定\"正确且恰当\"，美国政府没有理由认为其回归构成国家安全风险。",
+          en: "Trump posts on Truth Social backing Nvidia's board reinstating Huang as CEO, calling it 'correct and appropriate' and saying the US has no reason to see his return as a national-security risk.",
+        },
+      },
+      {
+        title: {
+          zh: "英伟达涨 31.5% 市值增加近 1 万亿美元",
+          en: "Nvidia Rises 31.5%, Adding Nearly $1T in Market Cap",
+        },
+        description: {
+          zh: "受黄仁勋复职提振，英伟达股价 23 日收盘上涨 31.5%，推动公司市值增加近 1 万亿美元。",
+          en: "Boosted by Huang's reinstatement, Nvidia closed up 31.5% on Nov 23, adding nearly $1 trillion in market cap.",
+        },
+      },
+      {
+        title: {
+          zh: "中方就以总理等被发逮捕令表态",
+          en: "China Responds to Arrest Warrants for Israel's PM",
+        },
+        description: {
+          zh: "针对国际刑事法院对以色列总理及防长发逮捕令，外交部发言人郭嘉昆回应称中方支持任何有助于实现公平正义的努力，一贯主张国际刑事法院应秉持客观公正立场、依法行使职权。",
+          en: "On the ICC arrest warrants for Israel's PM and defense minister, Foreign Ministry spokesman Guo Jiakun says China backs any effort toward fairness and justice and holds that the ICC should act objectively and impartially.",
+        },
+      },
+      {
+        title: {
+          zh: "甲亢哥百米跑出 10 秒 35",
+          en: "IShowSpeed Runs 100m in 10.35 Seconds",
+        },
+        description: {
+          zh: "甲亢哥发布与短跑传奇博尔特的合作视频，在博尔特现场指导下进行两次 100 米测试，第二次跑出 10.352 秒；博尔特直言认为其有职业潜力。",
+          en: "IShowSpeed releases a video with sprint legend Bolt, running two 100m tests under Bolt's on-site guidance and clocking 10.352s on the second; Bolt says he could go pro.",
+        },
+      },
+      {
+        title: {
+          zh: "卡尼公开吐槽特朗普",
+          en: "Carney Publicly Mocks Trump",
+        },
+        description: {
+          zh: "加拿大总理卡尼在晚宴上吐槽特朗普是白宫\"新室内设计师\"，讽刺其奢装椭圆形办公室；美媒惊呼加美关系紧张之际，加拿大正以刻薄方式向特朗普发出挑战。",
+          en: "Canadian PM Carney mocks Trump at a dinner as the White House's new 'interior designer', satirizing his lavish Oval Office; US media note Canada is challenging Trump sharply amid tense relations.",
+        },
+      },
+      {
+        title: {
+          zh: "永辉超市同意终止茅台 12 年渠道合作",
+          en: "Yonghui Agrees to End 12-Year Moutai Channel Deal",
+        },
+        description: {
+          zh: "永辉公告同意与茅台合作 12 年的合资公司友谊使者解散清算，系茅台渠道改革、配额归集；按净资产测算永辉可分得约 1.16 亿元，这是茅台收拢货权、向 C 端转型的标志性动作。",
+          en: "Yonghui agrees to dissolve and liquidate the Youyishizhe JV after 12 years with Moutai, part of Moutai's channel reform and quota consolidation; Yonghui could receive about 116M yuan on net assets, a landmark move as Moutai reclaims goods control and shifts to the C-end.",
+        },
+      },
+      {
+        title: {
+          zh: "猝死女教师每天在校超 15 小时",
+          en: "Teacher Who Died Was at School Over 15 Hours a Day",
+        },
+        description: {
+          zh: "上海尚德实验学校 30 岁教师徐思凝心源性猝死，生前每天在校超 15 小时、身兼数职长期疲惫；已被认定工亡，家属获 113 万余元工亡待遇，还将延续她资助学生的心愿。",
+          en: "Xu Sixin, a 30-year-old teacher at Shanghai Shangde Experimental School, died of sudden cardiac arrest after 15+ hour days at school juggling multiple roles; deemed a work injury, her family received over 1.13M yuan and will continue her student-support wish.",
+        },
+      },
+      {
+        title: {
+          zh: "关乎\"养老钱\" 人社部公开征求意见",
+          en: "Ministry Seeks Comment on Protecting Pension Funds",
+        },
+        description: {
+          zh: "人社部发布《社会保险基金监督条例（征求意见稿）》，即日起至 12 月 23 日向社会公开征求意见；草案共 37 条，聚焦养老、工伤、失业保险基金安全，明确监督职责及欺诈骗保法律责任。",
+          en: "The Ministry of Human Resources issues a draft social-insurance fund supervision regulation for comment through Dec 23; the 37-article draft focuses on pension, work-injury and unemployment fund safety, clarifying supervisory duties and legal liability for insurance fraud.",
+        },
+      },
+      {
+        title: {
+          zh: "金店挤成年末顶流",
+          en: "Gold Shops Packed as Year-End Top Draw",
+        },
+        description: {
+          zh: "国际金价快速回调、盘中创年内新低，传导至国内足金首饰每克下跌超 600 元，浙江多地珠宝门店客流爆满，年末黄金消费迎来集中选购热潮。",
+          en: "As international gold retreats to a yearly intraday low, fine-gold jewelry falls over 600 yuan per gram domestically and jewelry stores in Zhejiang see packed crowds in a year-end buying spree.",
+        },
+      },
+      {
+        title: {
+          zh: "特朗普手持在深圳照片向众人展示",
+          en: "Trump Shows Guests His Shenzhen Photo",
+        },
+        description: {
+          zh: "特朗普在私人晚宴向宾客展示其在中国深圳参加 APEC 会议的照片，并称此次中国之行\"非常好\"；此前他连发 30 多张 APEC 会议照片。",
+          en: "At a private dinner Trump shows guests his photo from the APEC meeting in Shenzhen, calling the China trip 'very good'; he had earlier posted 30+ APEC photos.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-23",
     date: "2026-11-23",
     title: {
