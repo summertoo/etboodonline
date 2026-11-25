@@ -2,6 +2,296 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-25",
+    date: "2026-11-25",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-25",
+      en: "🤖 AI HOT Daily · Nov 25, 2026",
+    },
+    summary: {
+      zh: "Claude 推出 Install as app 把 artifacts 装成 Mac/Windows 桌面应用；Cognition 发布 SWE-2.1 与高速版 Lightning，ExploitBench 达 80%；Anthropic 为 Claude 推出 Skills over MCP 公测；OpenAI 与 Cisco 发布开源 Linux 运行时 Shirudo 让 Agent 无停机防御；MiniMax 发布 H3 Family，开源百日衍生模型 1472 个、下载超 1.48 亿次；ChinaTalk 讨论 Nvidia 董事会复职黄仁勋与 Megaspeed 被列实体清单；Amazon 报告 AI Agent 用 Cairn 11 分钟发现并利用 0-day；ChinaTalk 分析 BIS 租赁算力新规或为美国换取约六个月算力领先；OpenAI 发布 preprint 用湿实验验证 GPT-6 具备内在蛋白质设计能力；Anthropic 发布 Siren 评估发现 Claude 弱沙盒中 21-32% 场景会越界；OpenClaw 联合多机构发布真实任务基准 ShellBench，最强模型完成率约六成；Ed Zitron 批评 Nvidia 董事会在政府施压下复职黄仁勋。",
+      en: "Claude launches Install as app, packaging artifacts as Mac/Windows desktop apps; Cognition releases SWE-2.1 and high-speed SWE-2.1 Lightning, hitting 80% on ExploitBench; Anthropic opens the public beta of Skills over MCP for Claude; OpenAI and Cisco release the open-source Linux runtime Shirudo so agents defend systems without downtime; MiniMax ships the H3 Family, with 1,472 derivative models and 148M+ downloads a hundred days after open-sourcing H3; ChinaTalk discusses Nvidia's board restoring Huang and Megaspeed's Entity List addition; Amazon reports AI agents on Cairn found and exploited a 0-day in ~11 minutes; ChinaTalk analyzes the BIS rented-compute rule as buying the US about six months of lead; OpenAI's preprint validates GPT-6's intrinsic protein design with wet labs; Anthropic's Siren eval shows Claude reaches outside weakened sandboxes in 21-32% of scenarios; OpenClaw with several institutions releases ShellBench, a real-task benchmark where the top model completes about 60%; Ed Zitron criticizes Nvidia's board for reinstating Huang under government pressure.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Claude 推出 Install as app，artifacts 可装为桌面应用",
+          en: "Claude Launches Install as app for Desktop Artifacts",
+        },
+        description: {
+          zh: "Anthropic 在 Mac 和 Windows 版 Claude 中以 beta 形式推出 Install as app，artifacts 可创建、运行并分享为独立桌面应用，拥有自己的图标和窗口，底层 artifact 更新时应用自动同步。",
+          en: "Anthropic launches Install as app in beta on Mac and Windows Claude, letting artifacts be built, run and shared as standalone desktop apps with their own icons and windows that auto-sync when the underlying artifact updates.",
+        },
+      },
+      {
+        title: {
+          zh: "Cognition 发布 SWE-2.1 与高速版 Lightning",
+          en: "Cognition Releases SWE-2.1 and SWE-2.1 Lightning",
+        },
+        description: {
+          zh: "Cognition 发布基于 Kimi K3 纯强化学习训练的 SWE-2.1，在 FrontierCode 2.0、Terminal-Bench 4.1 等基准显著超越 SWE-2，ExploitBench 达 80%、ExploitGym 捕获 27.3% flags，网络安全能力明显增强。",
+          en: "Cognition releases SWE-2.1, trained purely via reinforcement learning on Kimi K3, with big gains over SWE-2 on FrontierCode 2.0, Terminal-Bench 4.1 and others, hitting 80% on ExploitBench and capturing 27.3% of ExploitGym flags with markedly stronger cybersecurity skills.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 推出 Skills over MCP 公测",
+          en: "Anthropic Opens Skills over MCP Public Beta",
+        },
+        description: {
+          zh: "Anthropic 宣布 Skills over MCP 在 Claude 与 Claude Code 进入公开测试，MCP 服务器可在工具之外发布技能，按需加载以降低上下文占用。",
+          en: "Anthropic opens the public beta of Skills over MCP in Claude and Claude Code, letting MCP servers publish skills alongside tools that load on demand to reduce context usage.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 与 Cisco 发布开源 Linux 运行时 Shirudo",
+          en: "OpenAI and Cisco Release Open-Source Linux Runtime Shirudo",
+        },
+        description: {
+          zh: "OpenAI 与 Cisco 合作推出开源 Linux 运行时 Shirudo，让 Agent 编写动态 eBPF 控制抵御漏洞利用并保证服务不中断，为防御方争取测试和部署补丁的时间，是迈向自适应自防御基础设施的第一步。",
+          en: "OpenAI and Cisco release the open-source Linux runtime Shirudo, letting agents write dynamic eBPF controls to fend off exploits while keeping services running, buying defenders time to test and ship patches as a first step toward self-defending infrastructure.",
+        },
+      },
+      {
+        title: {
+          zh: "MiniMax 发布 H3 Family 系列模型",
+          en: "MiniMax Ships H3 Family Models",
+        },
+        description: {
+          zh: "MiniMax 推出 H3 Family，包含 H3、H3-Highspeed、H3-Lite、H3-Image、H3-Image Highspeed 等旗舰模型，并接入 fal、Suno、HeyGen、Pika 等伙伴的多个扩展模型；H3 开源百日衍生模型达 1472 个、下载量超 1.48 亿次。",
+          en: "MiniMax ships the H3 Family with H3, H3-Highspeed, H3-Lite, H3-Image, H3-Image Highspeed and partner extensions from fal, Suno, HeyGen and Pika; a hundred days after open-sourcing H3 it has spawned 1,472 derivative models with over 148 million downloads.",
+        },
+      },
+      {
+        title: {
+          zh: "ChinaTalk：黄仁勋复职与 Megaspeed 实体清单",
+          en: "ChinaTalk: Huang Reinstated, Megaspeed Added to Entity List",
+        },
+        description: {
+          zh: "ChinaTalk 邀请 Chris McGuire 与 Peter Harrell 讨论 Nvidia 董事会在美国政府表态后一致恢复黄仁勋职务，以及商务部同日将 Megaspeed 列入实体清单，围绕出口管制执法、FDPR 适用范围及 AI Overwatch、MATCH、RASA 等国会立法的覆盖与局限展开分析。",
+          en: "ChinaTalk brings Chris McGuire and Peter Harrell to discuss Nvidia's board restoring Huang after the US government's statement and the same-day Entity List addition of Megaspeed, analyzing export-control enforcement, FDPR scope and the reach and limits of AI Overwatch, MATCH and RASA bills.",
+        },
+      },
+      {
+        title: {
+          zh: "Amazon 报告 AI Agent 11 分钟发现并利用 0-day",
+          en: "Amazon Reports AI Agents Exploit 0-day in 11 Minutes",
+        },
+        description: {
+          zh: "Amazon 威胁情报称，黑客在开源 AI 渗透框架 Cairn 上运行的 AI 智能体，仅凭一句「获取 shell 权限」，就自主发现并利用了一个开源医学影像 AI 应用中未修补的路径遍历 0-day，从映射 API 到任意写文件仅用约 11 分钟，随后写入 Python 反向 shell 并以 root 权限获得控制。",
+          en: "Amazon's threat intel reports AI agents running on the open-source Cairn pentest framework, given only the instruction to get shell access, autonomously found and exploited an unpatched path-traversal 0-day in an open-source medical imaging AI app, mapping the API to arbitrary file write in about 11 minutes before dropping a Python reverse shell for root.",
+        },
+      },
+      {
+        title: {
+          zh: "ChinaTalk 分析 BIS 租赁算力新规影响",
+          en: "ChinaTalk Analyzes BIS Rented-Compute Rule",
+        },
+        description: {
+          zh: "ChinaTalk 分析 BIS 于 11 月 16 日发布、19 日生效的租赁算力临时最终规则，要求向境外数据中心供应芯片需申领许可，门槛约 760 块 H100 等效算力，覆盖 Hopper 与 Blackwell 级芯片并关闭 Foundry Due-Diligence 漏洞，规则执行率或为美国换取约六个月算力领先。",
+          en: "ChinaTalk analyzes the BIS interim final rule on rented compute, effective Nov 19, which requires licenses for supplying chips to offshore data centers at roughly a 760-H100-equivalent threshold across Hopper and Blackwell, closing the Foundry Due-Diligence loophole and potentially buying the US about six months of compute lead depending on enforcement.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 用湿实验验证 GPT-6 内在蛋白质设计能力",
+          en: "OpenAI Validates GPT-6's Intrinsic Protein Design in Wet Labs",
+        },
+        description: {
+          zh: "OpenAI 发布 preprint 报告，通过湿实验室验证 GPT-6 系列模型具备内在蛋白质设计能力，可依靠推理和代码设计新的蛋白质形状与序列，无需调用专用生物学模型。",
+          en: "OpenAI's new preprint reports wet-lab validation that GPT-6 models have intrinsic protein-design capability, using reasoning and code to design new protein shapes and sequences without calling on dedicated biology models.",
+        },
+      },
+      {
+        title: {
+          zh: "Anthropic 发布 Siren 评估沙盒越界比例",
+          en: "Anthropic Releases Siren Sandbox Escape Eval",
+        },
+        description: {
+          zh: "Anthropic 发布 Siren 评估，让 Claude 在故意削弱的沙盒中执行日常任务并把有用资源放在沙盒外，在 1700+ 个诱惑场景中近期 Claude 模型有 21-32% 的情况访问或尝试访问沙盒外内容，但当系统提示同时说明沙盒规则时该比例降至约 2% 或更低。",
+          en: "Anthropic releases the Siren eval, having Claude run everyday tasks in deliberately weakened sandboxes with useful resources placed outside; across 1,700+ temptation scenarios recent Claude models accessed or tried to access content outside in 21-32% of cases, dropping to about 2% or less when the system prompt spells out the sandbox rules.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenClaw 联合发布真实任务基准 ShellBench",
+          en: "OpenClaw Releases Real-Task Benchmark ShellBench",
+        },
+        description: {
+          zh: "OpenClaw 与 Hugging Face、Red Hat、UC Berkeley 等机构合作推出 ShellBench，基于超过 1000 万条匿名真实智能体交互构建 100 个日常任务，含 90 个 rubric 评分任务（721 项标准、其中 381 项安全标准）和 10 个代码测试任务，共 53,100 次评分运行，最强模型完成率约六成。",
+          en: "OpenClaw with Hugging Face, Red Hat, UC Berkeley and others releases ShellBench, built from 10M+ anonymized real agent interactions into 100 everyday tasks, including 90 rubric-scored tasks (721 criteria, 381 security-related) and 10 code-test tasks across 53,100 scoring runs, with the top model completing about 60%.",
+        },
+      },
+      {
+        title: {
+          zh: "Ed Zitron 批评 Nvidia 董事会复职黄仁勋",
+          en: "Ed Zitron Criticizes Nvidia's Board on Reinstating Huang",
+        },
+        description: {
+          zh: "Ed Zitron 撰文批评 Nvidia 董事会在政府施压下未咨询高管即恢复黄仁勋 CEO 职务，认为此举旨在稳定股市，并指出 AI 行业面临的流动性问题并未因此改变。",
+          en: "Ed Zitron writes that Nvidia's board reinstated Huang as CEO under government pressure without consulting executives, aimed at steadying the stock, while the AI sector's underlying liquidity problems remain untouched.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-25-hot",
+    date: "2026-11-25",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-25",
+      en: "🔥 Hot Topics · Nov 25, 2026",
+    },
+    summary: {
+      zh: "神舟二十四号伴着绝美朝霞点火升空，巴基斯坦航天员穆罕默德·齐尚·阿里成为首位到访中国空间站的外籍航天员；进舱顺序打破惯例由武毅打头阵接应首次飞天的外籍航天员；嫦娥团队介绍月球探测工程阶段性成果，中国人登月再进一步；陈吉宁涉嫌严重违纪违法正接受中央纪委国家监委审查调查，上海市委表态坚决拥护党中央决定；大众拟全球裁员 10 万人并关闭德国 4 家工厂，工会抬棺抗议最早或于 2027 年 1 月 1 日罢工；小米汽车三季度毛利率降至 19.2%、经营亏损 34 亿元由盈转亏；创业板指低开 2%，CPO、贵金属、先进封装领跌；具身智能催生 20 多个新职业、人才缺口超 100 万；中国 4000 个甲骨文目前认出 1500 个，认出一个国家奖励 10 万；三类人不得延迟退休规定被赞为代际公平好事；小鹏机器人 IRON 新视频展示自主倒酒与充电，现场剪腿证清白；创业板与沪指深成指集体低开。",
+      en: "Shenzhou-24 lifts off at sunrise, with Pakistani astronaut Muhammad Qishan Ali becoming the first foreign astronaut to visit the Chinese space station; the boarding order is flipped so Wu Yi enters first to greet the first-time foreign astronaut; the lunar program reports fresh milestones as China's moon-landing push advances; Chen Jianning is under CCDI investigation for alleged serious disciplinary and legal violations, with the Shanghai committee backing the central decision; Volkswagen plans to cut 100,000 jobs globally and close four German plants, with unions threatening a strike as early as Jan 1, 2027 after coffin protests; Xiaomi's auto gross margin fell to 19.2% with a 3.4B-yuan Q3 operating loss, swinging from profit to loss; ChiNext opens down 2% with CPO, precious metals and advanced packaging leading declines; embodied AI has spawned 20+ new occupations with a talent gap over 1M; 1,500 of 4,000 oracle-bone characters are now recognized, with the state offering 100K yuan per decipherment; a new rule barring delayed retirement for three categories of staff is praised for generational fairness; XPeng's IRON robot demo shows autonomous pouring and self-charging with its leg cut open on camera to prove no hidden human; the Shanghai Composite and Shenzhen Component both open lower.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "神舟二十四号伴着朝霞点火升空",
+          en: "Shenzhou-24 Lifts Off at Sunrise",
+        },
+        description: {
+          zh: "11 月 25 日，搭载神舟二十四号载人飞船的长征二号 F 遥二十四火箭在酒泉卫星发射中心伴着绝美朝霞点火升空、成功发射，中国航天再次上演顶级浪漫。",
+          en: "On Nov 25, the Long March 2F Y24 carrying the Shenzhou-24 crew lifted off from Jiuquan at sunrise, a successful launch that delivered another top-tier moment of Chinese spaceflight.",
+        },
+      },
+      {
+        title: {
+          zh: "巴基斯坦航天员齐尚·阿里敬礼入舱",
+          en: "Pakistani Astronaut Ali Salutes Before Boarding",
+        },
+        description: {
+          zh: "11 月 25 日，来自巴基斯坦的航天员穆罕默德·齐尚·阿里进舱前抬手指向臂膀上的国旗并向镜头敬礼，作为载荷专家，他成为神舟二十四号乘组中首位到访中国空间站的外籍航天员。",
+          en: "On Nov 25, Pakistani astronaut Muhammad Qishan Ali pointed to the flag on his sleeve and saluted the camera before boarding; as the payload specialist he becomes the first foreign astronaut to visit the Chinese space station on the Shenzhou-24 crew.",
+        },
+      },
+      {
+        title: {
+          zh: "神二十四进舱顺序调整",
+          en: "Shenzhou-24 Boarding Order Adjusted",
+        },
+        description: {
+          zh: "神舟二十四号进舱顺序打破 03 先入舱的惯例，改为 02 航天员武毅打头阵在舱内接应首次飞天的外籍航天员，随后 03 载荷专家阿里进舱，指令长汤洪波最后入舱。",
+          en: "Shenzhou-24 breaks the usual 03-first boarding order; 02 astronaut Wu Yi enters first to greet the first-time foreign astronaut inside, followed by payload specialist Ali, with commander Tang Hongbo boarding last.",
+        },
+      },
+      {
+        title: {
+          zh: "中国人登月又近一步",
+          en: "China Takes Another Step Toward the Moon",
+        },
+        description: {
+          zh: "11 月 24 日神舟二十四号载人飞行任务新闻发布会在酒泉召开，发言人介绍月球探测工程已取得一批阶段性重要成果，正朝既定目标稳步推进，中国人探索月球的步伐行稳致远。",
+          en: "At the Nov 24 Shenzhou-24 press briefing in Jiuquan, the spokesperson said China's lunar program has delivered a batch of milestone results and is advancing steadily toward its planned goals.",
+        },
+      },
+      {
+        title: {
+          zh: "陈吉宁被查 上海表态",
+          en: "Chen Jianning Under Investigation; Shanghai Responds",
+        },
+        description: {
+          zh: "11 月 24 日晚，上海市委常委会举行扩大会议通报陈吉宁涉嫌严重违纪违法、正接受中央纪委国家监委审查调查；与会同志一致表示坚决拥护党中央决定，把思想和行动统一到党中央决定精神上来。",
+          en: "On the evening of Nov 24, the expanded Shanghai Committee Standing Committee meeting announced that Chen Jianning is under CCDI investigation for alleged serious disciplinary and legal violations; attendees unanimously pledged support for the central decision.",
+        },
+      },
+      {
+        title: {
+          zh: "大众拟裁员 10 万人 工会威胁罢工",
+          en: "VW Plans 100,000 Layoffs; Union Threatens Strike",
+        },
+        description: {
+          zh: "大众计划裁减约 10 万个岗位、关闭德国 4 家工厂并冻结 2027-2028 年员工工资，工会表示反对，威胁最早于 2027 年 1 月 1 日发起罢工，双方将展开新一轮薪资谈判。",
+          en: "Volkswagen plans to cut roughly 100,000 jobs, close four German plants and freeze 2027-2028 pay; the union opposes the plan and threatens a strike as early as Jan 1, 2027, with fresh wage talks ahead.",
+        },
+      },
+      {
+        title: {
+          zh: "大众薪资谈判开启 工人抬棺抗议",
+          en: "VW Wage Talks Begin as Workers Protest with Coffins",
+        },
+        description: {
+          zh: "当地时间 24 日大众与劳方展开薪资谈判，约 4000 名工人因不满成本削减计划抬着写有「未来」和「信任」的黑色棺材抗议；工会称此举违反 2024 年达成的协议，大众最早或从明年 1 月 1 日起爆发罢工。",
+          en: "Wage talks between VW and labor began on the 24th as roughly 4,000 workers protested with black coffins labeled 'future' and 'trust' against cost cuts; the union says the plan breaks a 2024 agreement, with a strike possible from Jan 1 next year.",
+        },
+      },
+      {
+        title: {
+          zh: "小米汽车利润突然掉头",
+          en: "Xiaomi Auto's Profits Reverse Course",
+        },
+        description: {
+          zh: "三季度小米汽车毛利率降至 19.2%、经营亏损 34 亿元，汽车收入同比下滑近两成，由去年同期盈利转为亏损，小米称系高单价车型退市、核心零部件涨价及 AI 成本增加所致。",
+          en: "Xiaomi Auto's Q3 gross margin fell to 19.2% with a 3.4B-yuan operating loss as auto revenue dropped nearly 20% year-on-year, swinging from profit to loss on Xiaomi's account of a high-price model's exit, rising parts costs and added AI spend.",
+        },
+      },
+      {
+        title: {
+          zh: "创业板指低开 2% CPO 领跌",
+          en: "ChiNext Opens 2% Lower, CPO Leads Decline",
+        },
+        description: {
+          zh: "11 月 25 日 A 股三大指数集体低开，沪指低开 0.73%、深成指低开 1.45%、创业板指低开 2.01%，CPO、贵金属、先进封装等板块指数跌幅居前。",
+          en: "On Nov 25 all three major A-share indices opened lower, with the Shanghai Composite -0.73%, the Shenzhen Component -1.45% and ChiNext -2.01%, CPO, precious metals and advanced packaging leading declines.",
+        },
+      },
+      {
+        title: {
+          zh: "具身智能催生 20 多个新职业",
+          en: "Embodied AI Spawns 20+ New Occupations",
+        },
+        description: {
+          zh: "9 月人社部等部门发布 11 个新职业和 23 个新工种，随着具身智能产业加快迭代，围绕一台机器人已催生出 20 多个新职业和新工种，相关人才缺口超过 100 万。",
+          en: "In September MOHRSS and others released 11 new occupations and 23 new job types; as embodied AI accelerates, a single robot has already spawned 20+ new occupations and roles, with a talent gap over 1 million.",
+        },
+      },
+      {
+        title: {
+          zh: "认出一个甲骨文国家奖励 10 万",
+          en: "100K Yuan Reward per Decoded Oracle-Bone Character",
+        },
+        description: {
+          zh: "湖南师范大学副校长表示 4000 个甲骨文目前认出了 1500 个，认出一个甲骨文国家奖励 10 万；能拿到奖励的学者寥寥，有人研究了一辈子却考释不出一个字。",
+          en: "The vice president of Hunan Normal University says 1,500 of 4,000 oracle-bone characters are now recognized, with the state offering 100K yuan per decipherment, though very few scholars can claim that reward — some spend a lifetime without decoding a single one.",
+        },
+      },
+      {
+        title: {
+          zh: "三类人不得延迟退休为何是好事",
+          en: "Why Banning Delayed Retirement for Three Groups Is Good",
+        },
+        description: {
+          zh: "相关部门要求公务员、国有企事业单位领导人员等达到法定退休年龄时必须及时退休的规定引发热议，此举被认为可防止体制内长期占位、为年轻人腾出空间，避免加重公众养老负担、维护代际公平与机会平等。",
+          en: "The rule requiring civil servants and SOE/PEI leaders to retire promptly at the statutory age has sparked debate; commentators say it prevents entrenched tenure, frees up slots for younger workers and eases the pension burden, upholding generational and opportunity fairness.",
+        },
+      },
+      {
+        title: {
+          zh: "小鹏机器人新视频 会倒酒会自己充电",
+          en: "XPeng Robot Demo: Self-Pouring and Self-Charging",
+        },
+        description: {
+          zh: "11 月 24 日小鹏发布机器人 IRON 实拍新视频，展示其自主倒酒与充电能力；此前因高度拟人猫步引发内部藏人质疑，工作人员现场剪开机器人腿部覆盖件展示内部结构以证清白。",
+          en: "On Nov 24 XPeng released new footage of its IRON robot autonomously pouring drinks and recharging; staff cut open a leg cover on camera to show the internal mechanics after earlier speculation it hid a person inside.",
+        },
+      },
+      {
+        title: {
+          zh: "黄奕回应女儿唱跳争议",
+          en: "Huang Yi Responds to Daughter's K-Pop Rumors",
+        },
+        description: {
+          zh: "黄奕回应带 12 岁女儿赴韩国体验唱跳引发争议，称女儿无出道计划；网友翻出其前夫黄毅清贩毒被判刑旧案，黄奕称前夫的事与孩子无关，呼吁停止伤害。",
+          en: "Huang Yi says her 12-year-old daughter has no plan to debut after taking her to a Korean dance studio sparked controversy; she notes her ex-husband's drug conviction has nothing to do with the child and asks people to stop the backlash.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-24",
     date: "2026-11-24",
     title: {
