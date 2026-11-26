@@ -2,6 +2,336 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-26",
+    date: "2026-11-26",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-26",
+      en: "🤖 AI HOT Daily · Nov 26, 2026",
+    },
+    summary: {
+      zh: "Anthropic 复盘 Messages API 从 Python 迁移到 Rust，CPU 降约 70%、首 token 中位缩短约 20% 且未停服；Sand.ai 发布 480B 视频模型 MAGI-2，质量近 Seedance 2.3、价格仅其 1/10；腾讯 Hy4 Flash 上线 Fireworks serverless；千问 APP 免费开放千问 Go 打电话服务；Pydantic AI 发布终端编码智能体 Pax 与 Harness beta；OpenClaw 2026.11.10 新增 Deep Research、Knowledge 记忆与 Browser handoff；42 州总检察长介入 Character.AI 破产阻止拍卖 2100 万账户私密聊天；黄仁勋回归后 Nvidia 仍面临 Megaspeed 出口合规调查；矩阵乘法指数被证明精确为 9/4；MIT 与 Microsoft 论文称 Copilot 使初级工程师招聘下降约 40%；Mantic 与 Thinking Machines 训练预测智能体成本降 15 倍；Google AI 用 470 项实验剖析上下文漂移并给出免费 MCP 解法。",
+      en: "Anthropic details its Messages API migration from Python to Rust (CPU -70%, median TTFB -20%, no downtime); Sand.ai releases 480B video model MAGI-2 at quality near Seedance 2.3 for 1/10 the price; Tencent's Hy4 Flash lands on Fireworks serverless; Qianwen app opens Qianwen Go phone-calling for free; Pydantic AI ships terminal coding agent Pax with Harness beta; OpenClaw 2026.11.10 adds Deep Research, Knowledge memory and Browser handoff; 42 state AGs fight Character.AI's plan to auction 21M users' private chats; Nvidia still faces Megaspeed export probes after Huang's return; the matrix multiplication exponent is proven exactly 9/4; MIT & Microsoft find Copilot cut junior engineer hiring ~40%; Mantic & Thinking Machines train a forecasting agent at 15x lower cost; Google AI dissects context drift with 470 experiments plus a free MCP fix.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "Anthropic 复盘 Messages API 从 Python 迁移到 Rust",
+          en: "Anthropic Reviews Python-to-Rust Migration of Messages API",
+        },
+        description: {
+          zh: "Anthropic 复盘将 Messages API 从 Python 迁移到 Rust，并把生产系统当作校验器。该 API 流量从 2024 年初到 2026 年秋增长约 1800 倍，迁移后每请求 CPU 降低约 70%、首 token 中位时间缩短约 20%，且未停服或冻结功能开发。",
+          en: "Anthropic details migrating its Messages API from Python to Rust, treating the production system itself as the validator. Traffic grew about 1800x from early 2024 to fall 2026; after migration per-request CPU dropped about 70% and median time-to-first-token shrank about 20%, with no downtime or feature freeze.",
+        },
+      },
+      {
+        title: {
+          zh: "Sand.ai 发布 480B 视频模型 MAGI-2",
+          en: "Sand.ai Releases 480B Video Model MAGI-2",
+        },
+        description: {
+          zh: "Sand.ai 凌晨发布 480B 全模态视频模型 MAGI-2，作者实测后认为质量达到 Seedance 2.3 左右水准，1080P 下每秒 0.5 元、价格约为 Seedance 2.5 的 1/10。",
+          en: "Sand.ai launched MAGI-2, a 480B full-modality video model, overnight. The author's hands-on found quality near the Seedance 2.3 level at 0.5 yuan/sec in 1080P, roughly 1/10 the price of Seedance 2.5.",
+        },
+      },
+      {
+        title: {
+          zh: "腾讯 Hy4 Flash 上线 Fireworks serverless",
+          en: "Tencent Hy4 Flash Now on Fireworks Serverless",
+        },
+        description: {
+          zh: "腾讯新开源模型 Hy4 Flash 现可在 Fireworks serverless 使用。MoE 架构总参数约 220B、每 token 激活约 12B，Fireworks 上线时为 512K 上下文（完整 1M），支持文本与图像输入，面向文档处理、研究、办公和 Agent 工作流。",
+          en: "Tencent's newly open-sourced Hy4 Flash is available on Fireworks serverless. MoE with about 220B total and about 12B active params per token, 512K context at launch (1M full), text and image input, aimed at document processing, research, office and agent workflows.",
+        },
+      },
+      {
+        title: {
+          zh: "千问 APP 免费开放千问 Go 打电话服务",
+          en: "Qianwen App Opens Qianwen Go Phone-Calling Service for Free",
+        },
+        description: {
+          zh: "千问 APP 宣布千问 Go 打电话服务免费开放，用户告知打给谁、要办什么事并经授权后，AI 可代为拨打电话、沟通需求，示例包括定时来电叫醒、代订包间、询问快递等场景。",
+          en: "Qianwen app made its Qianwen Go phone-calling service free: after the user says who to call, what to do and authorizes it, the AI dials and negotiates, with examples including timed wake-up calls, booking rooms and checking deliveries.",
+        },
+      },
+      {
+        title: {
+          zh: "Pydantic AI 发布终端编码智能体 Pax 与 Harness beta",
+          en: "Pydantic AI Releases Terminal Coding Agent Pax with Harness Beta",
+        },
+        description: {
+          zh: "Pydantic AI 发布终端编码智能体 Pax（pydantic-ai-pax），基于 Harness SDK，全部功能以插件形式组织，可 /plugins 开关 coder、sandbox、mcp、Logfire 观测等，并支持 --agent 换成代码库里任意 Pydantic AI Agent。",
+          en: "Pydantic AI released Pax (pydantic-ai-pax), a terminal coding agent built on the Harness SDK with all features organized as plugins — /plugins toggles coder, sandbox, mcp and Logfire observability — and --agent to swap in any Pydantic AI Agent from the codebase.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenClaw 2026.11.10 发布",
+          en: "OpenClaw 2026.11.10 Released",
+        },
+        description: {
+          zh: "OpenClaw 发布 2026.11.10 版本，新增聊天内 Deep Research、新的记忆系统 Knowledge，以及 Browser handoff 功能。本次版本包含 7,671 个 PR、349 位贡献者。",
+          en: "OpenClaw released 2026.11.10, adding in-chat Deep Research, the new Knowledge memory system and Browser handoff. The release contains 7,671 PRs from 349 contributors.",
+        },
+      },
+      {
+        title: {
+          zh: "42 州总检察长介入 Character.AI 破产程序",
+          en: "42 State AGs Enter Character.AI Bankruptcy",
+        },
+        description: {
+          zh: "42 州总检察长介入 Character.AI 的破产程序，试图阻止拍卖用户私密聊天数据。数据集覆盖超 2100 万美国账户的聊天记录，其中逾 210 万属于未成年人；目前唯一披露的匿名竞拍方为 11 月 13 日注册的 Smirks and Pangs Acquisition LLC，拍卖定于 12 月 1 日。",
+          en: "42 state attorneys general intervened in Character.AI's bankruptcy to block auctioning users' private chats. The dataset covers chats from over 21M US accounts, including more than 2.1M minors; the sole disclosed anonymous bidder is Smirks and Pangs Acquisition LLC, registered Nov 13, with the auction set for Dec 1.",
+        },
+      },
+      {
+        title: {
+          zh: "黄仁勋回归后 Nvidia 仍面临 Megaspeed 出口合规调查",
+          en: "Nvidia Still Faces Megaspeed Export-Compliance Probes",
+        },
+        description: {
+          zh: "黄仁勋回归 Nvidia CEO 后，公司仍面临多方对其 GPU 出口合规问题的调查。新加坡数据中心运营商 Megaspeed 被指违反美国出口管制将先进 GPU 转运至中国，美国司法部 2024 年启动调查、新加坡 2025 年跟进。Nvidia 表示将停止向中国销售许可芯片，并计划设立首席合规官及董事会出口管制委员会。",
+          en: "After Huang returned as Nvidia CEO, the company still faces multiple probes over GPU export compliance. Singapore data-center operator Megaspeed is accused of transshipping advanced GPUs to China under US export controls; the DOJ opened a probe in 2024, Singapore in 2025. Nvidia says it will stop licensed chip sales to China and plans a chief compliance officer plus a board export-control committee.",
+        },
+      },
+      {
+        title: {
+          zh: "矩阵乘法指数被证明精确为 9/4",
+          en: "Matrix Multiplication Exponent Proven Exactly 9/4",
+        },
+        description: {
+          zh: "OpenAI 的 Sebastien Bubeck 宣布，10 月给出的矩阵乘法指数 9/4 新上界经继续研究被证明是紧的，下界此前毫无已知结果。Bubeck 称这是他从未想过有生之年能看到的结果，且据 Yin Tat Lee 等人的旧结果，这也意味着线性规划可在 n^{9/4} 时间内求解。",
+          en: "OpenAI's Sebastien Bubeck announced that after the Oct 6 new upper bound of 9/4 for the matrix multiplication exponent, continued work on the lower bound showed 9/4 is tight, with no prior known lower bound. He says it is a result he never expected to see in his lifetime; by older results of Yin Tat Lee et al., linear programming is also solvable in n^{9/4} time.",
+        },
+      },
+      {
+        title: {
+          zh: "MIT 与 Microsoft 论文：Copilot 使初级工程师招聘下降约 40%",
+          en: "MIT & Microsoft Paper: Copilot Cuts Junior Engineer Hiring ~40%",
+        },
+        description: {
+          zh: "MIT 和 Microsoft 的新论文《AI-Assisted Programming and Labor Demand》利用 5,414 家跨国公司（覆盖 38% 美国程序员）的 GitHub 合同审查时点构造自然实验，估计 Copilot 采用使初级软件工程师的劳动力需求下降约 40%。",
+          en: "MIT and Microsoft's paper 'AI-Assisted Programming and Labor Demand' uses GitHub contract-review timing at 5,414 multinationals covering 38% of US programmers as a natural experiment, estimating Copilot adoption reduced labor demand for junior software engineers by about 40%.",
+        },
+      },
+      {
+        title: {
+          zh: "Mantic 与 Thinking Machines 训练可扩展预测智能体",
+          en: "Mantic & Thinking Machines Train Scalable Forecasting Agent",
+        },
+        description: {
+          zh: "Mantic 与 Thinking Machines 在 Tinker 上对 Inkling 2 Small 做后训练，得到一个端到端完成研究与预测的预测智能体，准确度接近 Fable 5.2 (medium)，单次预测成本降低 15 倍。",
+          en: "Mantic and Thinking Machines post-trained Inkling 2 Small on Tinker into an end-to-end research-and-forecasting agent, with accuracy near Fable 5.2 (medium) at 15x lower cost per forecast.",
+        },
+      },
+      {
+        title: {
+          zh: "上下文漂移如何影响 AI Agent：470 项实验",
+          en: "How Context Drift Affects AI Agents: 470 Experiments",
+        },
+        description: {
+          zh: "Google AI 开发者 Patrick Kelly 通过 470 个任务实测区分 context rot 与 context drift，发现模型在 73% 的运行中内部察觉文件冲突但 0% 会主动告知用户，95%-100% 的情况下任务级 skill 文件会覆盖 AGENTS.md 的严格规则，并给出一个免费的 MCP 解法。",
+          en: "Google AI's Patrick Kelly ran 470 tasks to distinguish context rot from context drift, finding models internally detect file conflicts in 73% of runs but tell users in 0% of cases, and task-level skill files override AGENTS.md's strict rules in 95-100% of cases, with a free MCP fix.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-26-hot",
+    date: "2026-11-26",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-26",
+      en: "🔥 Hot Topics · Nov 26, 2026",
+    },
+    summary: {
+      zh: "蔡磊已进入渐冻症终末期，妻子称上次见面全程无话；「天下第一财神庙」历经半年修缮重新开放；清华北大等多所高校发 Token、将 AI 算力纳入校园公共资源；医保上线「连续用药管理」功能；「购物开箱」风潮让中国好物走红全球；AI 倒查旧账揪出多名受贿干部；人民日报评「小学生只上半天学」为短视内卷、评「遇事就举报」为泄私愤乱象；黄金跌至 2026 年最低价 789 元/克；普京爱吃粤菜离开前还打包上飞机；立陶宛希望台当局承认错误；巴基斯坦航天员抱拳「请不吝赐教」进驻天宫；APEC 礼宾车陆续返还全国车主；13 岁男孩路边摊炒饭忙到凌晨引网友送温暖；婚检发现男友为罕见 46XX 男性综合征；穿袜睡觉入睡平均快 7.5 分钟；58 岁守陵人十余年巡查宋陵；华科教授被烈犬咬伤获赔后全数捐出。",
+      en: "Cai Lei has entered the terminal stage of ALS; the 'No.1 Temple of Wealth' reopens after a half-year renovation; Tsinghua and Peking University hand out free AI tokens as campus public resources; a new medical-insurance continuous-medication feature goes live; the 'China Haul' trend takes Chinese goods global; AI re-audits old bids to catch corrupt officials; People's Daily calls 'half-day school' short-sighted involution and 'report anything' a tool for vendetta; gold falls to a 2026 low of 789 yuan/gram; Putin loves Cantonese food and takes it to go; Lithuania wants Taiwan to admit its mistake; the Pakistani astronaut enters Tiangong saluting 'please teach me'; APEC protocol cars return to owners nationwide; a 13-year-old boy frying rice at a stall until dawn draws warm-hearted help; a pre-marital check-up reveals a rare 46XX male syndrome; sleeping in socks cuts sleep onset by about 7.5 minutes; a 58-year-old man has guarded the Songling mausoleum for over a decade; a HUST professor donates his dog-bite award in full.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "蔡磊已进入渐冻症终末期",
+          en: "Cai Lei Enters Terminal Stage of ALS",
+        },
+        description: {
+          zh: "蔡磊妻子段睿表示蔡磊已进入渐冻症终末期，坦言无法接受其现状，称上次见面全程无话、「一直在哭，根本控制不住」。2019 年 9 月蔡磊被确诊为渐冻症。",
+          en: "Cai Lei's wife Duan Rui said he has entered the terminal stage of ALS and she cannot accept his condition; their last meeting was silent and 'I kept crying, couldn't control it.' Cai was diagnosed with ALS in Sept 2019.",
+        },
+      },
+      {
+        title: {
+          zh: "「天下第一财神庙」重新开放",
+          en: "'No.1 Temple of Wealth' Reopens",
+        },
+        description: {
+          zh: "11 月 26 日，杭州北高峰灵顺寺（天下第一财神庙）历经半年全面封闭修缮后重新开放，建筑、消防等基础设施已全面修缮并验收合格，游客相约「首爬」，山脚下商家也期待客流回暖。",
+          en: "On Nov 26, the Ling Shun Temple on Beigao Peak, Hangzhou ('No.1 Temple of Wealth') reopened after a half-year full closure for renovation, with facilities repaired and passing inspection; visitors are planning a 'first climb' and nearby shops expect foot traffic to recover.",
+        },
+      },
+      {
+        title: {
+          zh: "清华北大发 token 了",
+          en: "Tsinghua & Peking University Hand Out Tokens",
+        },
+        description: {
+          zh: "上海财经大学、清华大学、北京大学、同济大学等多所高校密集推出 AI 算力普惠举措：每周上亿 Token 免费额度、全栈算力资源开放申领、智能模型全员可用，将 Token 算力纳入校园公共教学资源。",
+          en: "Shanghai University of Finance and Economics, Tsinghua, Peking University and Tongji rolled out AI compute access programs: hundreds of millions of free tokens weekly, full-stack compute resources to claim, models available to all staff and students, bringing Token compute into campus public teaching resources.",
+        },
+      },
+      {
+        title: {
+          zh: "医保上线新功能",
+          en: "New Medical Insurance Feature Launches",
+        },
+        description: {
+          zh: "国家医保局加快建设「个人医保云」，依托全国统一医保信息平台开发「连续用药管理」功能，帮助参保人便捷查询个人用药情况、购药记录，范围覆盖全国所有定点医疗机构和定点零售药店。",
+          en: "The National Healthcare Security Administration is building the 'personal medical insurance cloud' and developing a 'continuous medication management' function on the unified national platform, letting insured people query their medications and purchase records at all designated medical institutions and retail pharmacies nationwide.",
+        },
+      },
+      {
+        title: {
+          zh: "「购物开箱」打开认知中国新视角",
+          en: "'Shopping Haul' Opens a New Window on China",
+        },
+        description: {
+          zh: "「China Haul」（中国购物开箱）风潮在全球社交平台持续升温，海外博主纷纷分享来华旅行购物体验，空箱而来、满载而归，各类中国好物通过开箱视频走进全球视野。",
+          en: "The 'China Haul' trend keeps heating up on global social platforms as overseas bloggers share their China shopping trips — arriving with empty suitcases, leaving full — bringing Chinese goods to a global audience.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 正在帮忙抓贪官",
+          en: "AI Helps Catch Corrupt Officials",
+        },
+        description: {
+          zh: "2026 年以来，安徽、上海等地借助 AI 倒查尘封多年的工程项目招投标违规问题，通过关联分析海量历史标书与企业关系主动发现隐藏的腐败线索，已揪出浙江江山、湖南武冈等地多名受贿干部并形成震慑。",
+          en: "Anhui, Shanghai and other places use AI to re-audit long-buried bidding violations in engineering projects, correlating massive historical bid documents with company relationships to proactively find hidden corruption, nabbing officials in Jiangshan (Zhejiang) and Wugang (Hunan) and creating deterrence.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报评「小学生只上半天学」",
+          en: "People's Daily on 'Half-Day School for Pupils'",
+        },
+        description: {
+          zh: "部分家长因焦虑让孩子「只上半天学」以超前学习备考名校引发热议。人民日报评论指出，此举系拔苗助长式的短视内卷，呼吁教育应如水墨画般留白，培养探索兴趣与健康价值观，而非只盯分数。",
+          en: "Some anxious parents have kids attend school only half a day to study ahead for elite schools, sparking debate. People's Daily says it is short-sighted, exam-driven involution, and urges education to leave 'blank space' like ink painting, fostering curiosity and healthy values rather than scores alone.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报评「遇事就举报」",
+          en: "People's Daily on 'Report Anything, Anytime'",
+        },
+        description: {
+          zh: "人民日报评论指出多地频现「恶意举报」乱象，如患者塞 1.9 元汽水给药师后转投举报。此现象因举报成本与收益不对称，沦为泄私愤工具，破坏信任且浪费行政资源。",
+          en: "People's Daily notes a wave of 'malicious reporting,' such as a patient slipping a pharmacist a 1.9-yuan soda then filing a complaint. With reporting cost and reward asymmetric, it becomes a tool for personal vendetta, eroding trust and wasting administrative resources.",
+        },
+      },
+      {
+        title: {
+          zh: "黄金价格下跌迎 2026 年最低价",
+          en: "Gold Falls to 2026 Low",
+        },
+        description: {
+          zh: "11 月 25 日黄金价格再次下跌，每克交易价 789 元，多家金行称迎今年最低交易价，黄金回收商家称每公斤缩水 60 万元。",
+          en: "On Nov 25 gold fell again to 789 yuan per gram; several gold shops call it the year's lowest trading price and gold-recycling merchants say each kilogram shrank 600,000 yuan.",
+        },
+      },
+      {
+        title: {
+          zh: "普京爱吃粤菜 离开前还打包上飞机",
+          en: "Putin Loves Cantonese Cuisine, Takes It to Go",
+        },
+        description: {
+          zh: "普京在 APEC 会议周期间下榻深圳康莱德酒店，因随行团队转达其喜欢中国菜，酒店提供潮粤菜。普京点名要鲜沙姜焗闽东大黄鱼、玫瑰醋汁膏蟹蒸肉饼和红烧牛坑腩等，最后还打包上飞机，并留下亲笔签名和伏特加回赠。",
+          en: "During the APEC week Putin stayed at the Conrad Shenzhen; the team said he likes Chinese food so the hotel served Cantonese-Teochew dishes. He ordered fresh sand-ginger Donghai yellow croaker, rose-vinegar crab meat steamed cake and braised beef brisket, took some on the plane, and left an autograph and vodka as a gift.",
+        },
+      },
+      {
+        title: {
+          zh: "立陶宛：希望台当局承认错误",
+          en: "Lithuania: Wants Taiwan Authorities to Admit Mistake",
+        },
+        description: {
+          zh: "2021 年 8 月立陶宛允许台设立所谓「台湾代表处」致两国关系降至冰点。24 日，立陶宛总统国家安全顾问表示，希望台当局承认错误并更改该机构中文名称以缓和对华关系。",
+          en: "In Aug 2021 Lithuania allowed Taiwan's so-called 'representative office,' freezing relations. On the 24th, Lithuania's national security adviser said it hopes the Taiwan authorities admit the mistake and change the office's Chinese name to ease ties.",
+        },
+      },
+      {
+        title: {
+          zh: "巴基斯坦航天员抱拳：请不吝赐教",
+          en: "Pakistani Astronaut Salutes: 'Please Teach Me'",
+        },
+        description: {
+          zh: "11 月 25 日，巴基斯坦航天员作为首个进入中国空间站的外籍成员进驻「天宫」，表示非常兴奋，未来几天将努力做好每一项工作，并抱拳用中文说「请不吝赐教」。",
+          en: "On Nov 25 the Pakistani astronaut, the first foreign member to enter the Chinese space station, moved into Tiangong, saying he is very excited and will do every task well, saluting with clasped hands and saying in Chinese 'please be generous with your teaching.'",
+        },
+      },
+      {
+        title: {
+          zh: "APEC 礼宾车陆续返还全国各地车主",
+          en: "APEC Protocol Cars Returned to Owners",
+        },
+        description: {
+          zh: "参加 APEC 保障的礼宾车陆续返还到全国各地车主手中，河南车辆重新安装上原车牌。峰会期间近 700 台国宾用车中，350 台由民间贡献，河南、山东车主贡献 170 台。",
+          en: "APEC protocol cars are being returned to owners across the country; Henan vehicles got their original plates back. Of nearly 700 state-guest vehicles during the summit, 350 came from private donors, with Henan and Shandong owners contributing 170.",
+        },
+      },
+      {
+        title: {
+          zh: "13 岁小孩哥摆路边摊炒饭忙到凌晨",
+          en: "13-Year-Old Boy Frying Rice at a Street Stall Till Dawn",
+        },
+        description: {
+          zh: "11 月 23 日晚，浙江杭州临平一名 13 岁男孩在路边摊炒饭引发关注，热心网友送来衣物牛奶和餐车。其父 2020 年因火灾严重烧伤致残，男孩因成绩不好及家庭变故选择摆摊，从傍晚 6 点忙到凌晨三四点。",
+          en: "On Nov 23 evening a 13-year-old boy frying rice at a stall in Linping, Hangzhou drew attention, and netizens sent clothes, milk and a food cart. His father was severely burned and disabled in a 2020 fire; the boy chose to work the stall due to poor grades and family hardship, working from 6pm to 3-4am.",
+        },
+      },
+      {
+        title: {
+          zh: "婚检发现同居多年男友是「女的」",
+          en: "Pre-Marital Check-Up Finds Boyfriend Is Genetically 'Female'",
+        },
+        description: {
+          zh: "南京一女子与男友婚检发现男方患无精症，染色体核型为 46XX，确诊罕见的 46XX 男性综合征。医生指出其无法产生精子，建议将婚检前置至恋爱阶段。",
+          en: "A Nanjing woman's pre-marital exam found her boyfriend has azoospermia with karyotype 46XX — rare 46XX male syndrome. Doctors say he cannot produce sperm and suggest moving check-ups to the dating stage.",
+        },
+      },
+      {
+        title: {
+          zh: "穿上袜子睡觉入睡会快吗",
+          en: "Does Sleeping in Socks Help You Fall Asleep Faster?",
+        },
+        description: {
+          zh: "近期降温，医生提示穿袜睡觉可改善睡眠。研究表明穿袜入睡平均快 7.5 分钟且多睡 32 分钟，原理是脚部保暖促进血液循环、帮助身体散热以降低核心体温，从而加速入睡。",
+          en: "Doctors say wearing socks to sleep can improve sleep. Studies show falling asleep about 7.5 minutes faster and sleeping 32 minutes longer, because warming the feet boosts circulation and helps the body shed heat to lower core temperature.",
+        },
+      },
+      {
+        title: {
+          zh: "58 岁男子在千年皇陵当守陵人",
+          en: "58-Year-Old Man Guards an Ancient Imperial Tomb",
+        },
+        description: {
+          zh: "河南巩义宋陵，58 岁守陵人曹世高和队友一前一后巡逻、两人相隔 6 米，防止被「敲闷棍」，遇到异常能及时报信。十多年来每天巡查陵园 6 次，5000 多天几乎没有缺勤，累计徒步数万公里。",
+          en: "At Songling in Gongyi, Henan, 58-year-old Cao Shigao patrols with a partner 6 meters apart to avoid being 'mugged' and to raise the alarm. For over a decade he has inspected the cemetery 6 times daily, nearly 5,000 days with barely any absence, walking tens of thousands of kilometers.",
+        },
+      },
+      {
+        title: {
+          zh: "教授被烈犬咬掉肉 犬主半年不赔钱",
+          en: "Professor Bitten by Vicious Dog Donates Award to Charity",
+        },
+        description: {
+          zh: "华科教授彭礼堂将 5182.53 元法院判赔款全数捐给麻城公益基金资助山区孩子。此前他在武汉新洲区做公益途中被七旬村民的烈性犬咬伤至肌肉，犬主半年未道歉赔付，随后彭教授坚持起诉获赔，表示此举非为钱，而是示范普通人勇于用法律维权。",
+          en: "HUST professor Peng Litang donated the full 5,182.53-yuan court award to a Macheng public-welfare fund for mountain kids. He was bitten to the muscle by a villager's vicious dog during a charity trip in Xinzhou, Wuhan; the owner never apologized or paid for six months, so Peng sued and won, saying it's not about money but showing ordinary people they can defend their rights by law.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-25",
     date: "2026-11-25",
     title: {
