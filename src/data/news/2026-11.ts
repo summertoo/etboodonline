@@ -2,6 +2,366 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-27",
+    date: "2026-11-27",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-27",
+      en: "🤖 AI HOT Daily · Nov 27, 2026",
+    },
+    summary: {
+      zh: "Nvidia 据报暂停向东南亚四国发运服务器，美国要求先进 AI 芯片申请许可；蚂蚁 inclusionAI 开源 Ming-Image-0.2-Design；OpenAI 测试私有推理、与 Cisco 推出开源运行时 Shirudo，并探讨困惑度与智能、发布 MedChemBench；Google 以「人类首考」测试大模型可靠性；DeepMind 让 AI 智能体掌控部分算力；Calif 披露 Knox DualDAR 与 Tor Browser 漏洞链；Dario Amodei 澄清自由意志立场，Karpathy 用 Claude Code 把美国真实数据做成文明风格游戏地图，卡兹克将人生设计课做成 Prompt，Philipp Schmid 仍看好 MCP。",
+      en: "Nvidia reportedly halts server shipments to four Southeast Asian countries as the US requires licenses for advanced AI chips; Ant inclusionAI open-sources Ming-Image-0.2-Design; OpenAI tests private inference, launches Shirudo with Cisco, explores perplexity and intelligence, and unveils MedChemBench; Google tests LLM reliability with Humanity's First Exam; DeepMind gives AI agents control of part of its compute; Calif discloses Knox DualDAR and Tor Browser exploit chains; Dario Amodei clarifies his free-will stance, Karpathy builds a civilization-style US data map with Claude Code, Kazike turns a life-design course into a prompt, and Philipp Schmid still backs MCP.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "蚂蚁 inclusionAI 开源 Ming-Image-0.2-Design 图像生成模型",
+          en: "Ant inclusionAI Open-Sources Ming-Image-0.2-Design Image Model",
+        },
+        description: {
+          zh: "蚂蚁 inclusionAI 在 Hugging Face 开源 Ming-Image-0.2-Design，改进复杂构图、光照和文字渲染，可用于电商主图、UI 设计稿和空间效果图。",
+          en: "Ant Group's inclusionAI released Ming-Image-0.2-Design on Hugging Face, improving complex composition, lighting and text rendering for e-commerce images, UI mockups and interior renderings.",
+        },
+      },
+      {
+        title: {
+          zh: "GPT-6 模型展现内在蛋白质设计能力",
+          en: "GPT-6 Models Demonstrate Intrinsic Protein-Design Capabilities",
+        },
+        description: {
+          zh: "OpenAI 称 GPT-6 模型可借助推理和代码设计蛋白质结构与序列，实验室测试在五个靶点上观察到结合证据。",
+          en: "OpenAI says GPT-6 models can design protein structures and sequences using reasoning and code, with lab tests finding binding evidence across five targets.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 测试私有推理功能",
+          en: "OpenAI Tests Private Inference Feature",
+        },
+        description: {
+          zh: "OpenAI 开始测试私有推理（机密计算），在模型处理提示词和响应时严格控制数据，现已进入测试阶段。",
+          en: "OpenAI is testing private inference (confidential computing), which tightly controls data while the model processes prompts and responses; the feature is now in testing.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenAI 与 Cisco 推出开源 Linux 运行时 Shirudo",
+          en: "OpenAI and Cisco Introduce Open-Source Linux Runtime Shirudo",
+        },
+        description: {
+          zh: "OpenAI 与 Cisco 联合推出开源 Linux 运行时 Shirudo，帮助团队在推送补丁期间保护正在运行的系统，降低安全窗口风险。",
+          en: "OpenAI and Cisco introduced Shirudo, an open-source Linux runtime that helps teams protect running systems while rolling out patches.",
+        },
+      },
+      {
+        title: {
+          zh: "FT 报道 Nvidia 暂停向东南亚四国发运服务器",
+          en: "FT Reports Nvidia Halts Server Shipments to Four Southeast Asian Countries",
+        },
+        description: {
+          zh: "据 FT 报道，Nvidia 通知 Dell、Supermicro 等伙伴停止向马来西亚、新加坡、泰国和印尼发运服务器，因美国要求这些国家及巴西的先进 AI 芯片需申请许可。",
+          en: "According to the FT, Nvidia told partners including Dell and Supermicro to stop shipping servers to Malaysia, Singapore, Thailand and Indonesia, as the US now requires licenses for advanced AI chips in those countries and Brazil.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 智能体已掌控 DeepMind 部分算力用于 Gemini 实验",
+          en: "AI Agents Now Control Part of DeepMind's Compute for Gemini Experiments",
+        },
+        description: {
+          zh: "DeepMind 已让 AI 智能体控制部分算力用于 Gemini 实验，但递归式自我改进仍很遥远，显示智能体在研发流程中承担更多角色。",
+          en: "DeepMind has let AI agents control part of its compute for Gemini experiments, though recursive self-improvement remains distant, showing agents taking on more roles in the research workflow.",
+        },
+      },
+      {
+        title: {
+          zh: "OEMpocalypse Part 2：利用 Knox DualDAR 漏洞链 root Galaxy S23 与 S26 旗舰机",
+          en: "OEMpocalypse Part 2: Rooting Galaxy S23 and S26 via Knox DualDAR",
+        },
+        description: {
+          zh: "Calif Research 发布系列第二篇，通过 Knox DualDAR 漏洞与内核驱动页 UAF 组成两阶段利用链，可在四款 Galaxy 旗舰机型上从零权限应用获取 root。",
+          en: "Calif Research's second installment chains a Knox DualDAR flaw with a kernel driver page UAF to reliably root four Galaxy flagship models from a zero-permission app.",
+        },
+      },
+      {
+        title: {
+          zh: "Calif 披露 Tor Browser 15.0.22 UAF 漏洞链可致真实 IP 泄露",
+          en: "Calif Discloses Tor Browser 15.0.22 UAF Chain That Can Leak Real IPs",
+        },
+        description: {
+          zh: "Calif 在 OpenAI Patch the Planet 项目下发布研究，展示恶意网站可通过 UAF 漏洞链绕过 Tor Browser 15.0.22 默认防御，泄露用户真实 IP。",
+          en: "Under OpenAI's Patch the Planet project, Calif shows how a malicious site can use a UAF exploit chain to bypass Tor Browser 15.0.22's default defenses and leak a user's real IP.",
+        },
+      },
+      {
+        title: {
+          zh: "Google 推出「人类首考」与 Kaggle 黑客松测试大模型可靠性",
+          en: "Google Launches Humanity's First Exam and Kaggle Hackathon to Test LLM Reliability",
+        },
+        description: {
+          zh: "Google 推出「人类首考」，通过 544 道提示测试大模型可靠性，并配套 Kaggle 黑客松，推动建立可信的能力评估标准。",
+          en: "Google launched Humanity's First Exam, testing LLM reliability across 544 prompts, alongside a Kaggle hackathon to promote a shared approach to evaluating emerging capabilities.",
+        },
+      },
+      {
+        title: {
+          zh: "AI 能否帮助科学家识别有前景的候选药物？",
+          en: "Can AI Help Scientists Identify Promising Drug Candidates?",
+        },
+        description: {
+          zh: "OpenAI 推出 MedChemBench 基准，用于评估 AI 模型解读分子结构、依据实验证据推理并在早期药物发现中筛选化合物的能力。",
+          en: "OpenAI introduced MedChemBench, a benchmark evaluating how well AI models interpret molecular structures, reason from experimental evidence and select compounds in early drug discovery.",
+        },
+      },
+      {
+        title: {
+          zh: "Dario Amodei 澄清不主张向 AI 交出人类自由意志",
+          en: "Dario Amodei Clarifies He Doesn't Advocate Handing Free Will to AI",
+        },
+        description: {
+          zh: "Anthropic 的 Dario Amodei 发长文否认主张向 AI 交出人类自由意志，称 AI 须受合法民主程序治理，并批评部分同行只喊口号而无实质行动。",
+          en: "Anthropic's Dario Amodei published a long post denying he advocates handing human free will to AI, saying AI must be governed by legitimate democratic processes, and criticizing peers who only offer slogans.",
+        },
+      },
+      {
+        title: {
+          zh: "Karpathy 用 Claude Code 和 Opus 5.5 把美国真实数据做成文明风格游戏地图",
+          en: "Karpathy Builds a Civilization-Style Game Map of US Real Data with Claude Code and Opus 5.5",
+        },
+        description: {
+          zh: "Karpathy 用 Claude Code 桌面版加 Opus 5.5 在 7 小时内生成 4.5 万行代码，整合 31 个真实数据源做出美国文明风格游戏地图，含 524 个都市与 3100 多个县。",
+          en: "Karpathy used Claude Code with Opus 5.5 to generate 45,000 lines of code in 7 hours, integrating 31 real data sources into a civilization-style US game map covering 524 metros and over 3,100 counties.",
+        },
+      },
+      {
+        title: {
+          zh: "卡兹克把《人生意义设计课》做成 AI Prompt，帮你设计人生的意义",
+          en: "Kazike Turns Designing Your Life into an AI Prompt",
+        },
+        description: {
+          zh: "公众号作者卡兹克将斯坦福《人生意义设计课》核心方法改编成多轮对话 Prompt，通过四阶段 6 到 9 个问题生成一份个人意义设计手册。",
+          en: "WeChat author Kazike adapted Stanford's Designing Your Life course into a multi-turn prompt that uses 6 to 9 questions across four stages to generate a personal meaning design handbook.",
+        },
+      },
+      {
+        title: {
+          zh: "Philipp Schmid 解释为何在 Skills 与 CLI 兴起后仍更看好 MCP",
+          en: "Philipp Schmid Explains Why He Still Favors MCP After Skills and CLI",
+        },
+        description: {
+          zh: "Philipp Schmid 解释为何在 Skills 和 CLI 流行后仍看好 MCP：Linear 和 Notion 的智能体每周创建约 240 万条 issue 和页面，Atlassian 每天 MCP 工具调用超 500 万次。",
+          en: "Philipp Schmid explains why he still favors MCP after Skills and CLIs: Linear and Notion agents create about 2.4 million issues and pages weekly, and Atlassian logs over 5 million MCP tool calls daily.",
+        },
+      },
+      {
+        title: {
+          zh: "困惑度与智能",
+          en: "Perplexity and Intelligence",
+        },
+        description: {
+          zh: "OpenAI 撰文探讨困惑度如何衡量 AI 模型的进展，以及它为何有助于开发者建立一套评估新兴能力的通用方法。",
+          en: "OpenAI explores how perplexity measures progress in AI models and why it could help developers establish a shared approach to evaluating emerging capabilities.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-27-hot",
+    date: "2026-11-27",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-27",
+      en: "🔥 Hot Topics · Nov 27, 2026",
+    },
+    summary: {
+      zh: "今起电视开机广告被禁、开机看全屏直播；世预赛中国男篮 80-82 负于沙特，换人决定引争议；新一代通信网从建网转向筑智；人民日报评随地直播侵权；三只松鼠就员工宿舍致歉；全球首个乙肝功能性治愈新药在华获批；副热带高压反季节北上带来异常偏暖；U17 国足时隔 21 年再进世界杯淘汰赛；低精力不是懒、体检不得强制项目等民生话题受关注。",
+      en: "TV startup ads are banned as full-screen live TV becomes standard; China's men's basketball team lost 80-82 to Saudi Arabia in World Cup qualifying amid substitution controversy; a new communication network shifts from connectivity to intelligence; People's Daily flags privacy issues with public livestreaming; Three Squirrels apologizes over staff housing; the world's first functional hepatitis B cure is approved in China; an out-of-season subtropical high brings unusual warmth; China's U17 football team reaches the World Cup knockouts for the first time in 21 years, alongside public-health stories on low energy and voluntary checkups.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "今起电视开机广告没了",
+          en: "TV Startup Ads Banned Starting Today",
+        },
+        description: {
+          zh: "11 月 27 日，国家广播电视总局第 17、18 号令施行，明确有线电视不得播放开机广告，须实现开机看全屏直播，并在首页设免费专区、精简收费栏目。",
+          en: "Two new broadcast regulations took effect on Nov 27, barring cable TV providers from playing startup ads, requiring full-screen live TV on boot, and adding a free zone on the home screen while reducing paid sections.",
+        },
+      },
+      {
+        title: {
+          zh: "央视主持人罕见不解质疑郭士强换人",
+          en: "CCTV Host Rarely Questions Guo Shiqiang's Substitution",
+        },
+        description: {
+          zh: "世预赛中国男篮 80-82 负于沙特，末节还剩 3 分 42 秒时郭士强换下状态正佳的李弘权、换上曾凡博，引发网友批评，央视主持人也罕见表示不解。",
+          en: "China lost 80-82 to Saudi Arabia in World Cup qualifying. With 3:42 left, coach Guo Shiqiang substituted in-form Li Hongquan for Zeng Fanbo, drawing criticism from fans and rare public puzzlement from a CCTV host.",
+        },
+      },
+      {
+        title: {
+          zh: "新一代通信网承载「万物智联」",
+          en: "New-Generation Communication Network Powers the Internet of Everything",
+        },
+        description: {
+          zh: "新一代通信网建设思路从「建网」转向「筑智」，从万物互联升级到万物智联，更强的绿色智能底座将支撑中国经济高质量发展。",
+          en: "China's new-generation communication network is shifting from building connectivity to building intelligence, upgrading the Internet of Things to the Internet of Everything with a greener, smarter foundation for high-quality growth.",
+        },
+      },
+      {
+        title: {
+          zh: "人民日报评「随地大小直播」",
+          en: "People's Daily on Indiscriminate Public Livestreaming",
+        },
+        description: {
+          zh: "人民日报刊文指出，公共场所可直播不等于可随便拍人，未经本人同意公开路人肖像涉嫌侵权，平台应简化投诉并及时下架侵权内容。",
+          en: "People's Daily says being allowed to livestream in public does not mean filming strangers at will; publishing passersby's images without consent may infringe privacy, and platforms should simplify complaints and remove violating content promptly.",
+        },
+      },
+      {
+        title: {
+          zh: "走错果园摘走数百斤蜜桔仅留下 10 元",
+          en: "Wrong Orchard: Hundreds of Jin of Tangerines Picked for Just 10 Yuan",
+        },
+        description: {
+          zh: "武汉一果农称数十人采摘团走错果园摘走数百斤蜜桔仅付 10 元，警方认定无违法事实不予立案，果农已提起行政诉讼。",
+          en: "A Wuhan farmer says a group picked hundreds of jin of tangerines in the wrong orchard and paid only 10 yuan. Police found no basis for a case, and the farmer has filed an administrative lawsuit.",
+        },
+      },
+      {
+        title: {
+          zh: "豆瓣 8.0 热播剧被指抄袭韩剧",
+          en: "Douban 8.0 Hit Drama Accused of Copying Korean Series",
+        },
+        description: {
+          zh: "热剧《今天是太阳雨》收官后被指抄袭多部韩剧，分镜、台词等相似元素引发融梗争议；分析认为若「氛围相似」被豁免将助长创作捷径。",
+          en: "Hit drama When the Sun Shines is accused of copying several Korean series after its finale, with similarities in storyboards and dialogue sparking debate; observers warn that excusing similar atmosphere would encourage creative shortcuts.",
+        },
+      },
+      {
+        title: {
+          zh: "女子称因年龄超 40 岁被酒店拒绝入住",
+          en: "Woman Says Hotel Refused Check-In for Being Over 40",
+        },
+        description: {
+          zh: "浙江嘉兴一酒店回应 40 岁以上不能入住是老板规定、平台未醒目提示；57 岁李女士预订后被以超龄为由拒绝，警方称该限制系酒店自主规定。",
+          en: "A hotel in Jiaxing, Zhejiang says its over-40 check-in ban is the owner's rule and was not clearly flagged on booking platforms; a 57-year-old guest was refused, and police say the limit is the hotel's own policy.",
+        },
+      },
+      {
+        title: {
+          zh: "杨蓉自曝患特发性震颤",
+          en: "Actress Yang Rong Reveals Essential Tremor",
+        },
+        description: {
+          zh: "45 岁演员杨蓉自曝患特发性震颤，抖动蔓延全身且无法根治，她希望借自身经历鼓励他人放下无能为力之事。",
+          en: "Actress Yang Rong, 45, revealed she has essential tremor that has spread across her body and cannot be cured; she hopes her experience encourages others to let go of things beyond their control.",
+        },
+      },
+      {
+        title: {
+          zh: "三只松鼠致歉",
+          en: "Three Squirrels Apologizes",
+        },
+        description: {
+          zh: "三只松鼠就员工宿舍脏乱差致歉，称该宿舍为年货节期间临时启用的旺季周转宿舍，已妥善安置相关人员并承诺完善住房保障。",
+          en: "Snack brand Three Squirrels apologized over a messy staff dormitory, saying it was a temporary peak-season housing arrangement for the shopping festival and that staff have been relocated with better housing promised.",
+        },
+      },
+      {
+        title: {
+          zh: "「低精力」不是懒是身体在报警",
+          en: "Low Energy Is a Warning Signal, Not Laziness",
+        },
+        description: {
+          zh: "央视科普指出睡够仍累或是「低精力」，自测标准包括睡足 7-8 小时仍疲惫、久休乏力、对喜爱事物失去兴趣，建议规律作息、晒太阳和午间休息。",
+          en: "CCTV explains that persistent fatigue despite adequate sleep may be low energy rather than laziness; signs include tiredness after 7-8 hours of sleep and loss of interest, with remedies such as regular sleep, sunlight and midday rest.",
+        },
+      },
+      {
+        title: {
+          zh: "求职季 这些风险要避开",
+          en: "Job-Hunting Season: Risks to Avoid",
+        },
+        description: {
+          zh: "2026 北京网络辟谣作品聚焦求职骗局科普，提醒求职者擦亮双眼、远离虚假招聘陷阱。",
+          en: "A 2026 Beijing anti-rumor campaign video warns job seekers about recruitment scams and urges them to stay alert against false job postings.",
+        },
+      },
+      {
+        title: {
+          zh: "49 岁李维嘉家里干净得没有一根头发",
+          en: "Li Weijia, 49, Keeps a Hair-Free Home",
+        },
+        description: {
+          zh: "主持人李维嘉因综艺《家务优等生》展示独居清洁日常登上热搜，他回应称并非病理性强迫症，而是独居养成的爱整洁习惯。",
+          en: "Host Li Weijia trended after showing his immaculate cleaning routine on a variety show; he says it is a tidy habit from living alone, not pathological OCD.",
+        },
+      },
+      {
+        title: {
+          zh: "医院机器人吓人 恐怖谷效应",
+          en: "Hospital Robot Sparks Uncanny Valley Debate",
+        },
+        description: {
+          zh: "江苏省人民医院一台拟用于咨询的仿真机器人因被投诉「恐怖」已撤下，此前有市民称被其关机低头状态吓到，引发恐怖谷效应讨论。",
+          en: "A humanoid robot intended for consultations at a Jiangsu hospital was removed after complaints it was frightening, prompting discussion of the uncanny valley effect.",
+        },
+      },
+      {
+        title: {
+          zh: "2026 年环球小姐冠军诞生",
+          en: "Miss Universe 2026 Crowned",
+        },
+        description: {
+          zh: "第 75 届环球小姐比赛在波多黎各圣胡安落幕，27 岁东道主选手 Jennifer Barreto 夺冠，成为首位赢得该赛事的已婚女性。",
+          en: "The 75th Miss Universe pageant ended in San Juan, Puerto Rico, with 27-year-old local contestant Jennifer Barreto winning as the first married woman to take the crown.",
+        },
+      },
+      {
+        title: {
+          zh: "全球首个乙肝治愈新药中国获批",
+          en: "World's First Functional Hepatitis B Cure Approved in China",
+        },
+        description: {
+          zh: "国家药监局批准全球首个乙肝功能性治愈新药贝普若韦生在华上市，中国亚组数据显示部分患者功能性治愈率达 24% 至 35%。",
+          en: "China's regulator approved bepirovirsen, the world's first drug for functional cure of chronic hepatitis B; Chinese subgroup data show functional cure rates of 24% to 35% in some patients.",
+        },
+      },
+      {
+        title: {
+          zh: "副热带高压反季节北上",
+          en: "Subtropical High Moves North Out of Season",
+        },
+        description: {
+          zh: "月末到下月初全国多地气温偏暖，12 月 1 至 2 日长江中下游最高气温将达 25 度左右，系副热带高压 1979 年来同期最强并反季节北上叠加冷空气偏弱所致。",
+          en: "Much of China will see unusually warm weather into early December, with highs near 25°C in the lower Yangtze region, driven by the strongest subtropical high since 1979 moving north out of season and weak cold air.",
+        },
+      },
+      {
+        title: {
+          zh: "卫健委：不得强制受检者接受体检项目",
+          en: "Health Commission: No Forced Medical Checkup Items",
+        },
+        description: {
+          zh: "国家卫健委发布通知规范健康体检服务，要求遵循知情同意和自愿原则，不得提供无明确意义的项目，不得强制受检者接受体检项目。",
+          en: "China's health commission issued rules for health checkups requiring informed consent and voluntariness, barring meaningless tests and forcing examinees to undergo specific items.",
+        },
+      },
+      {
+        title: {
+          zh: "U17 国足创造历史",
+          en: "China's U17 Football Team Makes History",
+        },
+        description: {
+          zh: "U17 世界杯 H 组末轮，U17 国足大胜斐济，时隔 21 年再度闯入淘汰赛，终结 21 年世少赛正赛不胜并刷新队史进球纪录。",
+          en: "China's U17 side crushed Fiji in their final Group H match at the U17 World Cup, reaching the knockout stage for the first time in 21 years and setting new team scoring records.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-26",
     date: "2026-11-26",
     title: {
