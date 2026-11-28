@@ -2,6 +2,366 @@ import type { NewsItem } from "./types";
 
 export const newsList: NewsItem[] = [
   {
+    id: "2026-11-28",
+    date: "2026-11-28",
+    title: {
+      zh: "🤖 AI HOT 日报 · 2026-11-28",
+      en: "🤖 AI HOT Daily · Nov 28, 2026",
+    },
+    summary: {
+      zh: "支付宝 SkillPay 实测展示 Skill 买断与订阅两种变现方式；谷歌发布 Gemini 4 Hydrogen 创作者案例、Gemini API 文件切片控制、Canvas 用法与个性化搜索，DeepCrossAttention 让同等质量模型速度最高提升三倍；SessionGraph 与 Prospero 带来轻量编码智能体工具；OpenBMB 点赞 Sage-Interaction 全双工语音视频模型，iFood 把编码智能体铺到 1.5 万个仓库，Codex 与 Astra 助力搜寻系外行星；房东 AI 助理的错误承诺引发法律效力争议，Antigravity 汇报技巧、Michael Nielsen 下架经典教材、Intentful 的 AI 助手 Aria 与 MiniMax 提示词隐私调查也受到关注。",
+      en: "A hands-on test of Alipay SkillPay shows how skills can be sold outright or by subscription; Google shares Gemini 4 Hydrogen creator projects, Gemini API file slicing controls, Canvas tips and personalized Search, while DeepCrossAttention reaches comparable model quality up to three times faster; SessionGraph and Prospero bring lightweight coding-agent tools; OpenBMB praises the Sage-Interaction full-duplex speech and video model, iFood scales coding agents to 15,000 repositories, and Codex plus Astra help hunt for exoplanets; a landlord's AI assistant raises questions about legal liability, alongside Antigravity progress-reporting tips, Michael Nielsen taking down his classic textbook, Intentful's assistant Aria and a MiniMax prompt-privacy investigation.",
+    },
+    category: "ai-daily",
+    items: [
+      {
+        title: {
+          zh: "谷歌 Gemini 4 Hydrogen 展示六个创作者项目",
+          en: "Google Shows Six Creator Projects Built with Gemini 4 Hydrogen",
+        },
+        description: {
+          zh: "谷歌公布六位创作者用 Gemini 4 Hydrogen 完成的作品，涵盖雨夜科幻天空、像素锦鲤池和互动飞蛾等创意场景。",
+          en: "Google shared six projects made with Gemini 4 Hydrogen, ranging from rainy sci-fi skies and pixelated koi ponds to an interactive moth.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini API 新增文件切片控制与 Office 文件支持",
+          en: "Gemini API Adds File Slicing Controls and Office Support",
+        },
+        description: {
+          zh: "Gemini API 上线文件切片控制并原生支持 Office 文档，智能体可在 Google AI Studio 与 Vertex AI 中只检查相关片段，降低处理成本。",
+          en: "Gemini API now offers file slicing controls and native Office support, letting agents inspect only relevant slices in Google AI Studio and Vertex AI to cut costs.",
+        },
+      },
+      {
+        title: {
+          zh: "SessionGraph：用一张交互图查看所有编码智能体会话",
+          en: "SessionGraph: See All Coding-Agent Sessions in One Interactive Graph",
+        },
+        description: {
+          zh: "开发者发布 SessionGraph，可把分散的编码智能体会话汇总到一张可交互图谱中，方便回顾任务脉络与协作过程。",
+          en: "SessionGraph aggregates scattered coding-agent sessions into one interactive graph, making it easier to review task history and collaboration.",
+        },
+      },
+      {
+        title: {
+          zh: "Prospero：基于 ImGui 的轻量原生 AI 编码工具",
+          en: "Prospero: A Bloat-Free Native AI Coding Harness Built with ImGui",
+        },
+        description: {
+          zh: "开发者开源 Prospero，一个使用 ImGui 构建、强调轻量与原生体验的 AI 编码工具，避免臃肿的界面与依赖。",
+          en: "Prospero is an open-source AI coding harness built with ImGui that emphasizes a lean, native experience without bloated interfaces or dependencies.",
+        },
+      },
+      {
+        title: {
+          zh: "Gemini Canvas 四项提升效率的隐藏用法",
+          en: "Four Ways to Get More Done with Gemini Canvas",
+        },
+        description: {
+          zh: "谷歌介绍 Gemini Canvas 的四种用法：搭建网页应用、制作定制学习工具、并排润色文字等，帮助用户在对话中直接完成工作。",
+          en: "Google highlights four Gemini Canvas uses: building web apps, creating custom study tools and refining writing side by side within a chat.",
+        },
+      },
+      {
+        title: {
+          zh: "谷歌搜索接入个人智能：可关联钱包、云端硬盘与 Gemini",
+          en: "Google Search Adds Personal Intelligence Across Wallet, Drive and Gemini",
+        },
+        description: {
+          zh: "谷歌在 AI 模式中推出个性化智能，用户可选择关联 Google Wallet、Drive 和 Gemini 应用，让搜索结果更贴合个人情境。",
+          en: "Google's AI Mode can securely connect Wallet, Drive and Gemini so search responses better reflect a user's own context.",
+        },
+      },
+      {
+        title: {
+          zh: "OpenBMB 点评基于 MiniCPM-o 4.5 的 Sage-Interaction",
+          en: "OpenBMB Highlights Sage-Interaction Built on MiniCPM-o 4.5",
+        },
+        description: {
+          zh: "OpenBMB 点赞上海人工智能实验室 InternLM 团队开源的 Sage-Interaction，这款全双工语音视频模型可边听边说，并把复杂任务交给后端模型。",
+          en: "OpenBMB praised InternLM's open-source Sage-Interaction, a full-duplex speech and video model based on MiniCPM-o 4.5 that listens while speaking and delegates complex tasks.",
+        },
+      },
+      {
+        title: {
+          zh: "房东的 AI 助理称可推迟租金，租客仍被驱逐引争议",
+          en: "Landlord's AI Assistant Said Rent Could Wait, but Tenant Was Evicted",
+        },
+        description: {
+          zh: "海外一则案例显示，房东的 AI 助理告诉租客可以延后交租，但租客随后仍被驱逐，引发对 AI 生成承诺法律效力的讨论。",
+          en: "In an overseas case, a landlord's AI assistant told a tenant rent could be delayed, yet the tenant was evicted, raising questions about the legal weight of AI-generated promises.",
+        },
+      },
+      {
+        title: {
+          zh: "iFood 将编码智能体扩展到 1.5 万个代码仓库",
+          en: "iFood Scales Coding Agents Across 15,000 Repositories",
+        },
+        description: {
+          zh: "OpenAI 客户案例显示，巴西外卖平台 iFood 把编码智能体推广到约 1.5 万个代码仓库，探索大规模工程团队的 AI 落地方式。",
+          en: "An OpenAI case study shows Brazilian delivery platform iFood rolling out coding agents across roughly 15,000 repositories in a large engineering organization.",
+        },
+      },
+      {
+        title: {
+          zh: "两位天文爱好者借助 Codex 与 Astra 搜寻系外行星",
+          en: "Two Amateur Astronomers Hunt for Exoplanets with Codex and Astra",
+        },
+        description: {
+          zh: "OpenAI 介绍两位业余天文学家利用 Codex 与 Astra 分析 NASA 开普勒和 TESS 望远镜公开数据，寻找潜在系外行星的过程。",
+          en: "OpenAI describes how two amateur astronomers used Codex and Astra to analyze public Kepler and TESS data from NASA in search of potential exoplanets.",
+        },
+      },
+      {
+        title: {
+          zh: "谷歌 DeepCrossAttention：同等质量速度最高提升三倍",
+          en: "Google's DeepCrossAttention Delivers up to 3x Faster Model Quality",
+        },
+        description: {
+          zh: "谷歌研究团队提出 DeepCrossAttention，通过强化 Transformer 残差连接，在保持模型质量的同时把速度最高提升三倍。",
+          en: "Google researchers introduced DeepCrossAttention, strengthening transformer residual connections to keep model quality while running up to three times faster.",
+        },
+      },
+      {
+        title: {
+          zh: "实测支付宝 SkillPay：Skill 也能挂上去卖钱",
+          en: "Hands-On with Alipay SkillPay: Selling Skills Online",
+        },
+        description: {
+          zh: "作者实测支付宝 SkillPay 的 Skill 变现流程，支持买断与订阅两种模式，买断定价 0.01 至 50 元，订阅按周月季收费并提供免费试用。",
+          en: "A hands-on test of Alipay SkillPay covers selling skills outright or by subscription, with buyout prices from 0.01 to 50 yuan and weekly, monthly or quarterly plans with free trials.",
+        },
+      },
+      {
+        title: {
+          zh: "Antigravity 技巧：在 GEMINI.md 加一句话让模型边干活边汇报",
+          en: "Antigravity Tip: One Line in GEMINI.md Makes Models Report Progress",
+        },
+        description: {
+          zh: "卡兹克分享技巧：在 GEMINI.md 中加一句话，要求模型动手前说明计划、发现或换方向时及时反馈，即可获得实时汇报进度的体验。",
+          en: "Kazike suggests adding one line to GEMINI.md asking the model to state its plan before acting and report progress when it finds something or changes direction.",
+        },
+      },
+      {
+        title: {
+          zh: "Michael Nielsen 下架其经典神经网络教材",
+          en: "Michael Nielsen Takes Down His Classic Neural Networks Book",
+        },
+        description: {
+          zh: "《神经网络与深度学习》作者 Michael Nielsen 将在线书籍下架，引发社区对经典 AI 学习资料存续与新版教程方向的讨论。",
+          en: "Michael Nielsen removed his online book Neural Networks and Deep Learning, prompting debate about classic AI learning resources and future tutorials.",
+        },
+      },
+      {
+        title: {
+          zh: "Intentful 用 AI 助手 Aria 为增长争取时间",
+          en: "Intentful Uses AI Assistant Aria to Make Time for Growth",
+        },
+        description: {
+          zh: "OpenAI 客户案例介绍 Intentful 的 AI 助手 Aria 如何调研网站、撰写提案，并主动标记消息和处理问题，让团队更专注于增长。",
+          en: "An OpenAI case study shows Intentful's assistant Aria researching websites, drafting proposals and flagging messages so the team can focus on growth.",
+        },
+      },
+      {
+        title: {
+          zh: "快讯：MiniMax 被指仍打开提示词中的私有链接",
+          en: "Flash: MiniMax Accused of Opening Private Links in Prompts",
+        },
+        description: {
+          zh: "Dragos 调查称，即使用户请求不存储，MiniMax 仍会打开提示词中的私有链接，引发对提示词隐私处理的关注。",
+          en: "A Dragos investigation claims MiniMax opens private links embedded in prompts even when user requests are not stored, raising prompt-privacy concerns.",
+        },
+      },
+    ],
+  },
+  {
+    id: "2026-11-28-hot",
+    date: "2026-11-28",
+    title: {
+      zh: "🔥 今日热点 · 2026-11-28",
+      en: "🔥 Hot Topics · Nov 28, 2026",
+    },
+    summary: {
+      zh: "国常会首次提出发挥「国家队」稳市作用，A 股随后大幅反弹；超 40 岁被酒店拒入住、初中读一年就学高中课程等话题引发权益与教育讨论。本周中国多项科技工程传捷报，中纪委保持反腐高压；日本可能大规模地震的中使馆提醒、三星堆金面具防腐研究、12 月民生新规与烤红薯升糖提醒也受到关注。文化娱乐方面，李香凝计划用 AIGC 复活李小龙，《黑神话》制作人冯骥谈 AI 对文娱行业的冲击，国产百万级豪车与三只松鼠道歉事件同样热度不低。",
+      en: "China's State Council highlighted a national team to stabilize capital markets, followed by a sharp A-share rebound; a hotel's over-40 check-in rule and a school skipping grades sparked rights and education debates. The week brought breakthroughs in science and engineering, a continued anti-corruption drive, an embassy warning about possible major earthquakes in Japan, research to preserve the Sanxingdui gold mask, new December rules and a warning about roasted sweet potatoes' glycaemic index. In culture, Bruce Lee's daughter plans an AIGC revival, Black Myth's producer Feng Ji discussed AI's impact on entertainment, and domestic luxury cars and a Three Squirrels apology also drew attention.",
+    },
+    category: "hot-news",
+    items: [
+      {
+        title: {
+          zh: "国常会首提「国家队」释放什么信号",
+          en: "What the State Council's First National Team Signal Means",
+        },
+        description: {
+          zh: "国常会研究深化资本市场综合改革，首次提出发挥「国家队」稳市作用，优化平准基金功能并提供充足流动性，引导中长期资金入市。",
+          en: "The State Council called for deeper capital-market reform and, for the first time, a national team to stabilize markets, improve stabilization funds and bring in long-term capital.",
+        },
+      },
+      {
+        title: {
+          zh: "超 40 岁被拒入住酒店，一刀切合法吗",
+          en: "Is a Hotel's Over-40 Check-In Ban Legal?",
+        },
+        description: {
+          zh: "浙江嘉兴一酒店规定床位房仅限 18 至 40 岁客人，律师指出该规定缺乏法律与监管依据，即便履行提示义务仍涉嫌年龄歧视。",
+          en: "A hotel in Jiaxing, Zhejiang limits dorm beds to guests aged 18 to 40; lawyers say the rule lacks legal basis and may amount to age discrimination.",
+        },
+      },
+      {
+        title: {
+          zh: "本周中国多领域捷报频传",
+          en: "China Reports Breakthroughs Across Multiple Fields This Week",
+        },
+        description: {
+          zh: "神舟二十四号成功发射，全球首个高效灵活燃煤发电技术发布，「江海号」盾构机上岸，多项工程与科技成果集中亮相。",
+          en: "Shenzhou-24 launched successfully, the world's first high-efficiency flexible coal-power technology was unveiled, and the Jianghai tunnel-boring machine made landfall.",
+        },
+      },
+      {
+        title: {
+          zh: "中纪委：决不让腐败分子有藏身之地",
+          en: "Anti-Corruption Watchdog Vows No Haven for the Corrupt",
+        },
+        description: {
+          zh: "中央纪委国家监委网站刊文指出，过去一周 5 名中管干部被公布接受审查调查或受到处分，将继续保持惩治腐败高压态势。",
+          en: "China's top anti-corruption body says five centrally managed officials were placed under investigation or punished last week and pledged to maintain high pressure on corruption.",
+        },
+      },
+      {
+        title: {
+          zh: "初中读一年立刻开始高中课程引争议",
+          en: "One Year of Junior High Then High School Sparks Debate",
+        },
+        description: {
+          zh: "浙江绍兴某中学被曝推行初中读一年就学高中课程的「1+5」模式，教育部门严禁提前招生，校长指出抢跑违规且伤害学生。",
+          en: "A Shaoxing school reportedly started high-school classes after one year of junior high; regulators ban early admissions and educators warn the acceleration harms students.",
+        },
+      },
+      {
+        title: {
+          zh: "U17 国足历史首次对阵塞尔维亚",
+          en: "China's U17 Football Team Faces Serbia for the First Time",
+        },
+        description: {
+          zh: "U17 世界杯小组赛全部收官，淘汰赛 32 强产生，中国国少将在 1/16 决赛对阵塞尔维亚 U17，为历史首次交手。",
+          en: "After the U17 World Cup group stage, China's young side will meet Serbia in the round of 32 for the first time in history.",
+        },
+      },
+      {
+        title: {
+          zh: "快扔掉你家那根「光杆」",
+          en: "Discard Bare Broom Handles at Home, Doctors Warn",
+        },
+        description: {
+          zh: "浙江台州一男子滑倒后被失去塑料套的畚箕柄贯穿身体，消防截短外露部分后送医，目前已脱离生命危险。",
+          en: "A man in Taizhou, Zhejiang was impaled by a bare dustpan handle after slipping; firefighters shortened the handle before surgery and he is now out of danger.",
+        },
+      },
+      {
+        title: {
+          zh: "「新版九年级教材多处错误」不实",
+          en: "Rumors of Errors in New Grade-Nine Textbooks Are False",
+        },
+        description: {
+          zh: "网传九年级下册统编教材封面人物六指、有错别字被证实为谣言，相关书籍是盗版，新版教材尚未出版。",
+          en: "Claims that a new grade-nine textbook has a six-fingered cover figure and typos were debunked; the pictured books were pirated and the new edition is not out yet.",
+        },
+      },
+      {
+        title: {
+          zh: "跳槽不是「偷人」",
+          en: "Job-Hopping Is Not Stealing Employees",
+        },
+        description: {
+          zh: "针对董明珠与魏建军称人才被挖走是「偷人」的言论，评论指出员工并非企业私产，企业若求忠诚应反思自身吸引力。",
+          en: "Commentators respond to executives calling poaching stealing: employees are not company property, and firms seeking loyalty should improve their own appeal.",
+        },
+      },
+      {
+        title: {
+          zh: "日本可能发生大规模地震，中使馆提醒",
+          en: "Chinese Embassy Warns of Possible Major Earthquake in Japan",
+        },
+        description: {
+          zh: "中国驻日本大使馆提醒在日公民储备至少一周饮用水、食品与急救用品，并登记「中国领事」信息以便及时获得救助。",
+          en: "The Chinese embassy in Japan urges citizens to stock a week of water, food and emergency supplies and register consular information for timely assistance.",
+        },
+      },
+      {
+        title: {
+          zh: "三星堆金面具正在变脆",
+          en: "Sanxingdui Gold Mask Is Becoming Brittle",
+        },
+        description: {
+          zh: "研究人员用超微探针绘出金面具腐蚀地图，发现金银合金中残存的含铅组织腐蚀活性高，并筛选出正癸酸钠作为缓蚀剂方向。",
+          en: "Researchers mapped corrosion on the Sanxingdui gold mask, finding lead-rich structures drive flaking, and identified sodium caprate as a potential inhibitor.",
+        },
+      },
+      {
+        title: {
+          zh: "李香凝将用 AIGC 复活李小龙",
+          en: "Bruce Lee's Daughter Plans AIGC Revival",
+        },
+        description: {
+          zh: "李小龙女儿李香凝透露将运用 AIGC 工具「复活」李小龙，方向或为微短剧，希望把父亲介绍给新一代影迷。",
+          en: "Li Xiangning says she will use AIGC tools to bring Bruce Lee back, possibly in short dramas, to introduce him to a new generation of fans.",
+        },
+      },
+      {
+        title: {
+          zh: "208 万！国产豪车捅破价格天花板",
+          en: "Domestic Luxury Cars Break the 2.08 Million Yuan Price Ceiling",
+        },
+        description: {
+          zh: "2026 广州车展上，预售价 208 万元的仰望限量版等多款国产百万级豪车亮相，自主品牌借电动智能化重新定义豪华。",
+          en: "At the 2026 Guangzhou Auto Show, Yangwang's limited edition debuted at 2.08 million yuan as Chinese brands redefine luxury through electrification and intelligence.",
+        },
+      },
+      {
+        title: {
+          zh: "12 月起这些新规将影响你我生活",
+          en: "New Rules Taking Effect in December Affect Daily Life",
+        },
+        description: {
+          zh: "12 月 1 日起，食品召回时限压缩、进口小客车新车上牌可网上办理、铁路客运可线上开具电子发票、电动自行车充电器新国标实施。",
+          en: "From December 1, faster food recalls, online registration for imported cars, electronic railway invoices and a new e-bike charger standard take effect.",
+        },
+      },
+      {
+        title: {
+          zh: "冬天爱吃红薯的人注意了",
+          en: "Sweet Potato Lovers Should Take Note This Winter",
+        },
+        description: {
+          zh: "营养师提醒烤红薯升糖指数高达 94，远超煮红薯的 77，血糖高者建议首选煮红薯，减肥人群可选热量较低的红心红薯。",
+          en: "Nutritionists warn roasted sweet potatoes have a glycaemic index of 94 versus 77 for boiled ones; boiling is better for blood sugar, and red-fleshed varieties are lower in calories.",
+        },
+      },
+      {
+        title: {
+          zh: "三只松鼠的道歉只是及格线",
+          en: "Three Squirrels' Apology Is Only the Bare Minimum",
+        },
+        description: {
+          zh: "三只松鼠就员工住简陋 12 人间致歉并称已转移安置，评论认为旺季与临时不能降低居住标准，员工权益应纳入日常管理。",
+          en: "Three Squirrels apologized over cramped staff housing and relocated workers; commentators say peak season is no excuse and worker welfare belongs in daily management.",
+        },
+      },
+      {
+        title: {
+          zh: "《黑神话》制作人发长文谈 AI 冲击",
+          en: "Black Myth Producer Writes at Length on AI's Impact",
+        },
+        description: {
+          zh: "《黑神话：悟空》制作人冯骥认为 AI 将加剧文娱行业两极分化，超级 IP 马太效应更强，创作工具平权但分钱方式尚未平权。",
+          en: "Black Myth: Wukong producer Feng Ji says AI will widen gaps in entertainment, strengthening super-IP effects while creative tools equalize but profit sharing does not.",
+        },
+      },
+    ],
+  },
+  {
     id: "2026-11-27",
     date: "2026-11-27",
     title: {
